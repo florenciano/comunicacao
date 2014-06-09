@@ -1,6 +1,7 @@
 /* reset */
 @import "compass/reset";
 
+// @import "compass/utilities/color/contrast";
 
 /////////////////////////////////////////////////////////////////////
 //	variables
@@ -21,14 +22,58 @@ $red-b: #c4161c;
 //font(s)
 $font: "verdana", "arial", "sans-serif";
 
+//grid
+$grid: 40px;
+$grid-2: 20px;
 
-/* content page */
+/////////////////////////////////////////////////////////////////////
+//	mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin boxSize($boxSize) {
+    box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($borderRadius) {
+	border-radius: $borderRadius;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin bShadow($lenH,$lenV,$blur,$rgba) {
+    box-shadow: $lenH $lenV $blur $rgba;
+    -moz-box-shadow: $lenH $lenV $blur $rgba;
+    -webkit-box-shadow: $lenH $lenV $blur $rgba;
+}
+
+@mixin clearfix() {
+	// zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin font($fstyle, $fsize) { font: $fstyle $fsize $font; }
+
 /////////////////////////////////////////////////////////////////////
 //	icos sprite
 /////////////////////////////////////////////////////////////////////
 
 @import "compass/utilities/sprites";
+// "icos" é o nome da pasta que contém as imgs do sprite
 @import "../img/icos/*.png";
+// defino o nome do sprite igual ao nome da pasta
 @include all-icos-sprites;
 
 /////////////////////////////////////////////////////////////////////
@@ -47,7 +92,228 @@ $font: "verdana", "arial", "sans-serif";
 //	content page
 /////////////////////////////////////////////////////////////////////
 
+* {	@include boxSize(border-box); }
+
 body {
 	font: normal 100%/1.6875 $font;
 	background: $cinza-a url("../img/bg_texture_insper.png") no-repeat center top;
 }
+
+// wrapper
+.wrapper {
+	background-color: #fff;
+	margin: 0 auto;
+	border: 1px solid $cinza-b;
+	@include radius(5px);
+	@include bShadow(0, 0, 10px, rgba(1,1,1,0.1));
+	width: 910px;
+	height: 760px;
+
+	// position center screen
+	position: absolute;
+	left: 50%;
+	margin-left: -455px;
+	top: 50%;
+	margin-top: -380px;
+}
+
+// header
+header[role="banner"] {
+	margin-bottom: $grid-2;
+	padding: $grid-2;
+	.logos {
+		.right { 
+			float: right;
+			max-height: 72px;
+		}
+	}
+	.libraryInsperLogin {
+		@include clearfix();
+		display: block;
+		background: transparent url("../img/bibliotecaInsper.jpg") no-repeat center center;
+		width: 100%;
+		height: $grid * 5;
+	}
+}
+
+//content
+.contentLogin {
+	position: relative;
+	margin-bottom: 190px; // bug fixed
+	.titlePage {
+		margin-top: $grid + 5;
+		background: $cinza-c url("../img/bg_texture_login.png") no-repeat center center;
+		display: block;
+		width: 100%;
+		height: 145px;
+		img { margin: ($grid - 5) 0 0 ($grid * 2); }
+	}
+	
+	// área form
+	.formLogin {
+		width: 325px;
+		background-color: #ffffff;
+		position: relative;
+		@include radius(5px);
+		@include bShadow(0, 0, 20px, rgba(1,1,1,0.3));
+
+		//
+		float: right;
+		margin-top: -190px;
+		margin-right: $grid * 2;
+		h4 {
+			background-color: $red-b;
+			border-radius: 5px 5px 0px 0px; // no-conflit ".formLogin"
+			color: #fff;
+			width: 100%;
+			padding: ($grid-2 / 2) ($grid-2 / 2) ($grid-2 / 2) $grid-2;
+			margin: 0;
+			@include font(normal, 14px);
+			min-height: $grid + 5;
+			line-height: 25px; //paddingBottom+paddingTop
+		}
+		form { padding: $grid-2; }
+		label,
+		input[type="text"],
+		input[type="password"] {
+			display: block;
+			width: 100%;
+		}
+		label {
+			@include font(normal, 14px);
+			color: $cinza-c;
+			margin-bottom: 5px;
+		}
+		input[type="text"],
+		input[type="password"] {
+			border: 1px solid #d2d3d4;
+			color: $cinza-c;
+			padding: $grid-2 / 2;
+			@include font(bold, 12px);
+			@include bShadow(inset 0, 0, 5px, rgba(1,1,1,0.2));
+			@include radius(5px);
+		}
+		input[type="text"]:focus,
+		input[type="password"]:focus { background-color: #f0f0f0; // color: $red-b;
+		}
+		input[type="text"] { margin-bottom: $grid-2 - 5; }
+		#erroArea {
+			border: 1px solid $red-b;
+			background-color: #fff;
+			color: $red-b;
+			margin: $grid-2 0;
+			width: 100%;
+			padding: ($grid-2 / 2) ($grid-2 + 2);
+			@include radius(5px);
+			@include font(normal, 12px);
+			text-align: center;
+		}
+		input[type="submit"] {
+			background-color: $red-b;
+			border: none;
+			color: #ffffff;
+			@include font(400, 12px);
+			@include radius(5px);
+			padding: ($grid-2 / 2) $grid-2 + 5;
+			margin: 0;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover,
+		input[type="submit"]:focus, {
+			background-color: lighten($red-b, 3%);
+			text-shadow: 0 0.2em 1px rgba(1,1,1,0.3);
+		}
+		.forgot {
+			background-color: $cinza-c;
+			border: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			@include radius(5px);
+			position: absolute;
+			right: $grid-2;
+			bottom: $grid-2;
+			a {
+				color: #ffffff;
+				@include font(normal, 12px);
+				padding: ($grid-2 / 2) $grid-2 + 5;
+				text-decoration: none;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.forgot:hover {
+			background-color: lighten($cinza-c, 3%);
+			text-shadow: 0 0.2em 1px rgba(1,1,1,0.3);
+		}
+	}
+}
+
+// links: acesscibility and system
+.linksOut {
+	position: absolute;
+	width: 55%;
+	bottom: -150px;
+	text-align: center;
+	@include font(normal, 11px);
+	a {
+		color: $cinza-c;
+		text-decoration: none;	
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	a.acessibility:after {
+		content: "";
+		display: inline-block;
+		background: transparent url("../img/ico_linkOut.png") no-repeat center center;
+		width: 12px;
+		height: 12px;
+		margin: 0 2px 0 ($grid-2 / 4);
+	}
+}
+
+// footer
+footer[role="contentinfo"] {
+	clear: both;
+	display: block;
+	width: 90%;
+	border-top: 1px solid $cinza-b;
+	padding: $grid-2;
+	margin: 0 auto;
+	@include font(normal, 10px);
+	text-align: center;
+	color: $cinza-c;
+}
+
+// this is class remove from do "main.js"
+.bg-modal {
+	display: block;
+	background-color: rgba(1,1,1,0.25);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+// modal acessibilidade e requisitos sistema
+.containerReqSistema {
+	// formating
+	background-color: #fff;
+	@include radius(5px);
+	@include bShadow(0, 0, 80px, rgba(1,1,1,0.8));
+	
+	// position
+	width: 645px;
+	height: 515px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top: -257px;
+	margin-left: -322px;
+
+}
+
+
+
+
