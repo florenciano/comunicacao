@@ -60,7 +60,7 @@
             </div>
 
             <div class="linksOut">
-                <a href="#" class="acessibility">Informações de acessibilidade</a> | <a href="#" >Requisitos do sistema</a>
+                <a href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx" class="acessibility" target="_blank">Informações de acessibilidade</a> | <a href="#" id="requisitos">Requisitos do sistema</a>
             </div>
         </section>
         <footer class="copyright" role="contentinfo">Copyright &#169; | Insper. Todos os Direitos Reservados</footer>
@@ -69,135 +69,132 @@
     <!-- modais -->
     <div class="bg-modal"></div>
     <div class="containerReqSistema">
-        <div class="close"><span>x</span></div>
+        <div class="close"><span><a href="#" title="Fechar janela" id="close-modal-reqSistema">x</a></span></div>
         <table>
-        <caption>Sistemas operacionais suportados</caption>
-        <tbody>
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <h5>Windows</h5>
-                    <div class="ico"></div>
-                    <div class="description">
-                        Windows <strong>8</strong> (64 bits)
-                        Windows <strong>8</strong> (32 bits)
-                        Windows <strong>7</strong> (64 bits)
-                        Windows <strong>7</strong> (32 bits)
-                        Windows <strong>Vista</strong> (64 bits)
-                        Windows <strong>Vista</strong> (32 bits)
-                        Windows <strong>XP</strong> (32 bits)
-                    </div>
-                </td>
-                <td>
-                    <h5>Mac OS</h5>
-                    <div class="ico"></div>
-                    <div class="description">
-                        Mac OS X <strong>10.8</strong>
-                        Mac OS X <strong>10.8 Lion</strong>
-                        Mac OS X <strong>10.6 Snow Leopard</strong>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Navegadores suportados</td>
-                <td>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Internet Explorer</strong><br>
-                            A partir da versão 8 sem habilitar o modo de  compatibilidade
-                        </div>
-                    </div>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Google Chrome</strong>
-                        </div>
-                    </div>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Mozilla Firefox</strong><br>
-                            A partir da versão 3.6
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Safari</strong><br>
-                            Versoões 4.0, 5.0, 5.1 e 6.0
-                        </div>
-                    </div>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Google Chrome</strong>
-                        </div>
-                    </div>
-                    <div class="browser">
-                        <div class="ico"></div>
-                        <div class="description">
-                            <strong>Mozilla Firefox</strong><br>
-                            A partir da versão 3.6
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Plugins</td>
-                <td>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                    <div class="plugins">
-                        <span>Adobe Acrobat</span>
-                        <div class="ico"></div>
-                    </div>
-                </td>    
-            </tr>
-        </tbody>
-        </table>
-    </div>
-    <div class="perfilUsuario">
-        <div class="close"><span>x</span></div>
-        <table>
-            <caption>Escolha o seu perfil</caption>
+            <caption>Sistemas operacionais suportados</caption>
             <tbody>
                 <tr>
-                    <td>
-                        <div class="perfis professor">
-                            <a href="#">Professor</a>
+                    <td class="col1">&nbsp;</td>
+                    <td class="col2">
+                        <h5>Windows</h5>
+                        <div class="ico icos-windows62x52"></div>
+                        <div class="description">Windows <strong>8</strong> (64 bits)<br>Windows <strong>8</strong> (32 bits)<br>Windows <strong>7</strong> (64 bits)<br>Windows <strong>7</strong> (32 bits)<br>Windows <strong>Vista</strong> (64 bits)<br>Windows <strong>Vista</strong> (32 bits)<br>Windows <strong>XP</strong> (32 bits)
                         </div>
                     </td>
-                    <td>
-                        <div class="perfisa aluno">
-                            <a href="#">Aluno</a>
+                    <td class="col3">
+                        <h5>Mac OS</h5>
+                        <div class="ico icos-macOSX62x52"></div>
+                        <div class="description">Mac OS X <strong>10.8</strong><br>Mac OS X <strong>10.8 Lion</strong><br>Mac OS X <strong>10.6 Snow Leopard</strong>
                         </div>
                     </td>
                 </tr>
+                <tr class="respiro">
+                    <td colspan=3>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan=3>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelBrowser">Navegadores suportados</td>
+                    <td>
+                        <div class="browser">
+                            <div class="icoBrowser icos-ie42x42"></div>
+                            <div class="description">
+                                <strong>Internet Explorer</strong><span>A partir da versão 8 sem habilitar o modo de  compatibilidade</span>
+                            </div>
+                        </div>
+                        <div class="browser">
+                            <div class="icoBrowser icos-crhome42x42"></div>
+                            <div class="description">
+                                <strong class="alinh03">Google Chrome</strong>
+                            </div>
+                        </div>
+                        <div class="browser">
+                            <div class="icoBrowser icos-firefox42x42"></div>
+                            <div class="description">
+                                <strong class="alinh04">Mozilla Firefox</strong>
+                                A partir da versão 3.6
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="browser">
+                            <div class="icoBrowser icos-safari42x42"></div>
+                            <div class="description">
+                                <strong class="alinh04">Safari</strong>
+                                Versoões 4.0, 5.0, 5.1 e 6.0
+                            </div>
+                        </div>
+                        <div class="browser">
+                            <div class="icoBrowser icos-crhome42x42"></div>
+                            <div class="description">
+                                <strong class="alinh03">Google Chrome</strong>
+                            </div>
+                        </div>
+                        <div class="browser">
+                            <div class="icoBrowser icos-firefox42x42"></div>
+                            <div class="description">
+                                <strong class="alinh04">Mozilla Firefox</strong>
+                                A partir da versão 3.6
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="respiro">
+                    <td colspan=3>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan=3>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelBrowser">Plugins</td>
+                    <td>
+                        <div class="plugins">
+                            <span>Adobe Acrobat</span><br>
+                            <div class="icoPlugin icos-acrobat32x32"></div>
+                        </div>
+                        <div class="plugins alinh01">
+                            <span>Flash</span><br>
+                            <div class="icoPlugin icos-flash32x32"></div>
+                        </div>
+                        <div class="plugins alinh02">
+                            <span>Java</span><br>
+                            <div class="icoPlugin icos-java52x32"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plugins">
+                            <span>Adobe Acrobat</span><br>
+                            <div class="icoPlugin icos-acrobat32x32"></div>
+                        </div>
+                        <div class="plugins alinh01">
+                            <span>Flash</span><br>
+                            <div class="icoPlugin icos-flash32x32"></div>
+                        </div>
+                        <div class="plugins alinh02">
+                            <span>Java</span><br>
+                            <div class="icoPlugin icos-java52x32"></div>
+                        </div>
+                    </td>    
+                </tr>
             </tbody>
         </table>
+    </div>
+    <div class="perfilUsuario">
+        <div class="close"><span><a href="#" title="Fechar janela" id="close-modal-perfil">x</a></span></div>
+        <h5>Escolha o seu perfil</h5>
+        <ul>
+            <li>
+                <div class="perfis professor">
+                    <a href="#" title="Recuperar senha: professor" class="icoProfessor"><span>Professor</span></a>
+                </div>
+            </li>
+            <li>
+                <div class="perfis aluno">
+                    <a href="#" title="Recuperar senha: aluno" class="icoAluno"><span>Aluno</span></a>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <!-- Scripts -->
