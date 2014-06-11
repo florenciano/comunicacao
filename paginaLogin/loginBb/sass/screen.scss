@@ -1,7 +1,6 @@
 /* reset */
 @import "compass/reset";
 
-// @import "compass/utilities/color/contrast";
 
 /////////////////////////////////////////////////////////////////////
 //	variables
@@ -124,6 +123,10 @@ header[role="banner"] {
 	margin-bottom: $grid-2;
 	padding: $grid-2;
 	.logos {
+		h1 {
+			display: inline-block;
+			width: 200px;
+		}
 		.right { 
 			float: right;
 			max-height: 72px;
@@ -142,14 +145,14 @@ header[role="banner"] {
 //content
 .contentLogin {
 	position: relative;
-	margin-bottom: 190px; // bug fixed
+	margin-bottom: 170px; // bug fixed
 	.titlePage {
 		margin-top: $grid + 5;
 		background: $cinza-c url("../img/bg_texture_login.png") no-repeat center center;
 		display: block;
 		width: 100%;
-		height: 145px;
-		img { margin: ($grid - 5) 0 0 ($grid * 2); }
+		height: 165px;
+		img { margin: ($grid + 5) 0 0 ($grid * 2); }
 	}
 	
 	// área form
@@ -162,7 +165,7 @@ header[role="banner"] {
 
 		//
 		float: right;
-		margin-top: -190px;
+		margin-top: -210px;
 		margin-right: $grid * 2;
 		h4 {
 			background-color: $red-b;
@@ -172,10 +175,10 @@ header[role="banner"] {
 			padding: ($grid-2 / 2) ($grid-2 / 2) ($grid-2 / 2) $grid-2;
 			margin: 0;
 			@include font(normal, 14px);
-			min-height: $grid + 5;
+			height: $grid + 5;
 			line-height: 25px; //paddingBottom+paddingTop
 		}
-		form { padding: $grid-2; }
+		form { padding: $grid-2; border: 1px solid $cinza-a; }
 		label,
 		input[type="text"],
 		input[type="password"] {
@@ -210,6 +213,9 @@ header[role="banner"] {
 			@include radius(5px);
 			@include font(normal, 12px);
 			text-align: center;
+
+			// visibility
+			visibility: hidden;
 		}
 		input[type="submit"] {
 			background-color: $red-b;
@@ -259,7 +265,7 @@ header[role="banner"] {
 .linksOut {
 	position: absolute;
 	width: 55%;
-	bottom: -150px;
+	bottom: -130px;
 	text-align: center;
 	@include font(normal, 11px);
 	a {
@@ -295,7 +301,8 @@ footer[role="contentinfo"] {
 // this is class remove from do "main.js"
 .bg-modal {
 	display: none;
-	background-color: rgba(1,1,1,0.25);
+	background: transparent url("../img/bg-modal-ie.png") repeat center center; // IE 8 
+	background: rgba(1,1,1,0.25);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -303,16 +310,17 @@ footer[role="contentinfo"] {
 
 // modal acessibilidade e requisitos sistema
 .containerReqSistema, .perfilUsuario {
-	display: none;
 	// formating
 	background-color: #fff;
 	padding: $grid-2;
+	border: 1px solid $cinza-a;
 	@include font(normal, 10px);
 	@include radius(5px);
 	@include bShadow(0, 0, 80px, rgba(1,1,1,0.8));
 }
 
 .containerReqSistema {
+	display: none;
 	width: 645px;
 	height: 505px;
 	position: absolute;
