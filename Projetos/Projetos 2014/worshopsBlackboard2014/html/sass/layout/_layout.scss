@@ -1,0 +1,757 @@
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+$font: "verdana", "sans-serif";
+
+// Cores
+$corRed: #c00026;
+$corOrange: #faa61a;
+$corCinzaClaro: #e6e7e8;
+$corCinzaMedio: #bcbec0;
+$corCinzaEscuro: #414042;
+
+// Grids
+$grid: 40px;
+$meioGrid: $grid / 2;
+
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+@mixin bShadow($lenH,$lenV,$blur,$spread,$rgba) {
+    box-shadow: $lenH $lenV $blur $spread $rgba;
+    -o-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -ms-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -moz-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -webkit-box-shadow: $lenH $lenV $blur $spread $rgba;
+}
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radT,$radR,$radB,$radL) {
+    border-radius: $radT $radR $radB $radL;
+    -o-border-radius: $radT $radR $radB $radL;
+    -ms-border-radius: $radT $radR $radB $radL;
+    -moz-border-radius: $radT $radR $radB $radL;
+    -webkit-border-radius: $radT $radR $radB $radL;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+
+* {
+    @include box-size(border-box);
+    @include transition(all .4s ease);
+    // Trasition removed in all style, it's not a good pratice
+}
+
+/* RULES CSS BEGING HERE */
+
+// Header
+#top {
+    display: block;
+    padding: $grid * 2;
+    background: $corRed url("../img/header/grafismoInsper.png") center center no-repeat;
+    width: 100%;
+    display: block;
+    max-height: 260px;
+    .titleWorkshop { margin-left: 0; }
+    .logo { margin-right: 0; }
+
+}
+
+// #main { background-color: $corCinzaClaro; }
+
+// line divisory with ball
+hr {
+    height: $meioGrid / 2;
+    border: none;
+    background: transparent;
+    margin: 0;
+    display: block;
+    // margin: 0;
+}
+hr.lineCinza { background: url("../img/ui/ballCinza.png") center center repeat-x; }
+hr.lineRed { background: url("../img/ui/ballRed.png") center center repeat-x; }
+hr.lineOrange { background: url("../img/ui/ballOrange.png") center center repeat-x; }
+hr.lineBlack { background: url("../img/ui/ballBlack.png") center center repeat-x; }
+
+hr.lineR-C { background: url("../img/ui/ballR-C.gif") center center repeat-x; }
+hr.lineC-L { background: url("../img/ui/ballC-L.gif") center center repeat-x; }
+hr.lineL-C { background: url("../img/ui/ballL-C.gif") center center repeat-x; }
+hr.lineC-B { background: url("../img/ui/ballC-B.gif") center center repeat-x; }
+
+// aplic color and spaces in sections
+.menuNav, .recebimentoAtiv, .trabColaborativo, .relQuiz,.basicoBb, .boasPraticas, .aplicQuiz {
+    overflow: hidden;
+}
+.menuNav,
+.recebimentoAtiv,
+.trabColaborativo,
+.relQuiz { background: $corCinzaClaro; }
+
+.basicoBb,
+.boasPraticas,
+.aplicQuiz { background: $corOrange; }
+
+
+// menu navigation
+.anchor {
+    padding: ($grid + 10) $grid;
+    display: block;
+    float: left;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            width: 33%;
+            display: inline-block;
+            float: left;
+            margin-bottom: $grid;
+            
+            .respiro { margin-top: $grid; }
+            // area click
+            .areola {
+                height: 225px; //225px = 21.97265%
+                width: 225px;
+                padding-top: $meioGrid; // centralizar vertical
+                text-align: center;
+                margin: 0 auto;
+                cursor: pointer;
+
+                .bgIco, .stroke { @include radius(500px,500px,500px,500px); }
+
+                .bgIco {
+                    width: 190px; //190px = 18.55468%
+                    height: 190px;
+                    margin: 0 auto;
+                    padding-top: $meioGrid / 4; // centralizar vertical
+
+                    .stroke {
+                        width: 180px; // 180px = 17.578125%
+                        height: 180px;
+                        margin: 0 auto;
+                        border: 2px dashed #fff;
+                        position: relative;
+
+                        a {
+                            width: 180px; //180px
+                            height: 180px;
+                            display: block;
+                            color: #fff;
+                            text-decoration: none;
+                            @include font(normal, 1em);
+
+                            .text {
+                                position: absolute;
+                                bottom: $grid - 5;
+                                left: 0;
+                                right: auto;
+                                width: 100%;
+                                line-height: 1.2em;
+                                span {
+                                    @include font(normal, 93.75%);
+                                }
+                            }
+                        }
+                    }
+                }
+                // ícones dos menus de navegação
+                .icoCurso1 { 
+                    background: $corCinzaMedio url("../img/ui/icoBb.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+                .icoCurso2 { 
+                    background: $corCinzaMedio url("../img/ui/icoRecebimento.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+                .icoCurso3 { 
+                    background: $corCinzaMedio url("../img/ui/icoBoasPraticas.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+                .icoCurso4 { 
+                    background: $corCinzaMedio url("../img/ui/icoTrabColaborativo.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+                .icoCurso5 { 
+                    background: $corCinzaMedio url("../img/ui/icoAplicquiz.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+                .icoCurso6 { 
+                    background: $corCinzaMedio url("../img/ui/icoRelQuiz.png") center $meioGrid no-repeat; 
+                    &:hover { background-color: $corOrange; }
+                }
+
+            }
+            // definindo auréolas
+            .link1 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link1.png") center center no-repeat; }
+            }
+            .link2 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link2.png") center center no-repeat; }
+            }
+            .link3 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link3.png") center center no-repeat; }
+            }
+            .link4 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link4.png") center center no-repeat; }
+            }
+            .link5 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link5.png") center center no-repeat; }
+            }
+            .link6 {
+                background: transparent;
+                &:hover { background: url("../img/ui/link6.png") center center no-repeat; }
+            }
+        }
+    }
+}
+
+// Section of the curses
+.content {
+    width: 70%;
+    display: block;
+    padding: $grid 0 $meioGrid 0;
+
+    .title {
+        h2, h3 {
+            text-transform: uppercase;
+            color: $corRed;
+            @include font(bold, 137.5%);
+            margin: 0;
+            padding: ($meioGrid / 4) 0;
+            small { @include font(normal, 1em)}
+        }
+        h3 {
+            font-weight: normal;
+            padding: 0;
+            margin-top: -$meioGrid / 4;
+        }
+        p {
+            margin: -($meioGrid / 4) 0 0;
+            padding: 0;
+            @include font(normal, 87.5%);
+        }
+        padding-left: $grid * 1.5;
+    }
+
+    //icons title
+    .icoCurso1-red { background: url("../img/ui/icoBb-red.png") left center no-repeat; }
+    .icoCurso2-red { background: url("../img/ui/icoRecebimento-red.png") left center no-repeat; }
+    .icoCurso3-red { background: url("../img/ui/icoBoasPraticas-red.png") left center no-repeat; }
+    .icoCurso4-red { background: url("../img/ui/icoTrabColaborativo-red.png") left center no-repeat; }
+    .icoCurso5-red { background: url("../img/ui/icoAplicquiz-red.png") left center no-repeat; }
+    .icoCurso6-red { background: url("../img/ui/icoRelQuiz-red.png") left center no-repeat; }
+
+}
+// .description p:first-child() { background-color: blue; }
+.description {
+    padding: 0 $meioGrid $meioGrid ($grid * 1.5);
+    > p:first-child { margin-top: $meioGrid;}
+    p {
+        line-height: 1.325;
+        margin: $meioGrid 0 0;
+    }
+    h5 {
+        margin: $meioGrid 0 0;
+        @include font(bold, 1em);
+        letter-spacing: -1px;
+    }
+    ul {
+        margin: 0;
+        padding: 0 0 0 ($grid - 10);
+        li {
+            color: $corRed;
+            p {
+                @include font(normal, 93.75%);
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        ul {
+            padding-left: $meioGrid;
+        }
+    }
+}
+
+// aside: data, hora & lugar
+.event {
+    width: 30%;
+    display: block;
+    padding: ($grid * 1.5) 0;
+    text-align: center;
+    > div { 
+        margin: ($meioGrid / 2) 0;
+        display: block;
+        width: 100%;
+    }
+    hr {
+        background: url("../img/squareAside.png") center center repeat-x;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .lineNivel {
+        .graph {
+            width: $grid * 3;
+            height: $grid * 3;
+            @include radius(500px,500px,500px,500px);
+            background-color: $corRed;
+            margin: 0 auto;
+            color: #fff;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
+                left: 50%;
+                margin-left: -50px
+            }
+        }
+    }
+}
+// alerta Bb
+.lineDate {
+    width: 55%;
+    margin: 0;
+    text-align: center;
+    margin-top: $meioGrid;
+    .alert {
+        border: 1px solid $corRed;
+        color: $corRed;
+        @include radius(10px,10px,10px,10px);
+        width: 100%;
+        float: left;
+        > div { 
+            float: left;
+            display: inline-block;
+            min-height: $grid * 2;
+        }
+    .symbol { 
+        width: 25%;
+        @include font(bold, 250%);
+        span {
+            display: block;
+            padding-top: 12px; // medida para alinhamento
+        }
+    }
+    .texto { 
+        width: 75%;
+        @include font(normal, 87.5%);
+        text-align: left;
+        span {
+            display: block;
+            padding-top: 12px;
+            a {
+                color: $corRed;
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+            }
+        }
+    }
+}
+
+}
+
+// voltar ancora
+.voltar {
+    clear: both;
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin: 0;
+    span {
+        float: right;
+        display: inline-block;
+        padding-bottom: $meioGrid / 2;
+        a {
+            display: block;
+            color: $corRed;
+            text-decoration: none;
+            padding: 0.25em .5em;
+            @include font(normal, 93.75%);
+            &:hover {
+                background-color: $corRed;
+                color: #fff;
+            }
+        }
+    }
+}
+// footer
+#footer {
+    background: $corCinzaEscuro;
+    color: #fff; 
+    @include font(normal, 87.5%);
+    overflow: hidden;
+    a { 
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .diagrama, .diagramaMobile {
+        display: block;
+        width: 100%;
+        min-height: 240px;
+        background: transparent url("../img/footer/footer.png") center center no-repeat;
+        position: relative;
+        margin: $meioGrid 0;
+        
+        span { position: absolute; }
+        // position the box: diagrama
+        #point1 { 
+            width: auto;
+            top: 20px;
+            right: auto;
+            bottom: auto;
+            left: 395px;
+        }
+        #point2 { 
+            width: auto;
+            top: auto;
+            right: 480px;
+            bottom: 20px;
+            left: auto;
+            text-align: right;
+        }
+        #point3 { 
+            width: auto;
+            top: 20px;
+            right: 255px;
+            bottom: auto;
+            left: auto;
+        }
+    }
+
+    .diagramaMobile { display: none; }
+
+    .signture {
+        background-color: $corRed;
+        padding: ($meioGrid * 1.5) 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        h4 {
+            margin: 0;
+            padding: 0;
+            @include font(bold, 87.5%);
+        }
+        p { margin: 0; }
+    }
+}
+
+
+/*  $Media Queries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Media query for 960 Screens - sets nested grids to 100%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (max-width:960px) {
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:20px}
+    .row .row > div:last-child{margin-bottom:0 !important}
+    
+}
+
+
+/* Media query for iPad and tablets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ @media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait) {
+    // body{
+    //      background-color: orange !important;
+    // }
+    
+    .row{ margin-bottom:0!important }
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{width:100%;margin-right:0;margin-left:0;margin-bottom:20px}
+
+    #top { 
+        padding: $grid;
+        .titleWorkshop { margin: 0 auto; }
+        .logo { margin: 0 auto; }
+    }
+
+    // section
+    .menuNav, .recebimentoAtiv, .trabColaborativo, .relQuiz,.basicoBb, .boasPraticas, .aplicQuiz {
+        padding: 0 $meioGrid;
+    }
+
+    .anchor {
+        padding: $meioGrid 0;
+        overflow: hidden;
+        ul {
+            li {
+                margin-bottom: $meioGrid;
+            }
+        }
+    }
+
+    .content {
+        padding: $meioGrid 0 0 0;
+        @include font(normal, 93.75%)
+    }
+    // aviso Bb
+    .lineDate {
+        width: 65%;
+        margin: 0;
+        overflow: hidden;
+        .alert { 
+            margin-top: $meioGrid;
+            .symbol {
+                width: 20%;
+                span { text-align: center; }
+            }
+        }
+    }
+
+    // content
+    .description > p:first-child {
+        margin-top: $meioGrid / 2;
+    }
+    .description {
+        ul {
+            li {
+                margin: $meioGrid / 4;
+                p { @include font(normal, 93.75%); }
+            }
+        }
+    }
+
+    // aside
+    .event {
+        padding: $grid 0;
+        hr {
+            margin: 0 auto;
+            width: 98%;
+        }
+    }
+
+    // footer
+    #footer {
+        .diagrama {
+            min-height: 200px;
+            background-size: 90%;
+
+            #point1 {
+                top: 10px;
+                right: auto;
+                bottom: auto;
+                left: 290px;
+            }
+            #point2 {
+                top: auto;
+                right: 360px;
+                bottom: 10px;
+                left: auto;
+                text-align: right;
+            }
+            #point3 {
+                top: 10px;
+                right: 160px;
+                bottom: auto;
+                left: auto;
+            }
+
+        }
+    }
+
+ }
+
+
+/* Media query for 480 Screens - sets for mobile phone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (max-width:480px) {
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ width:100%; margin-bottom:20px }
+    .row .row > div:last-child{ margin-bottom:0 !important }
+    
+
+    #top { 
+        padding: $meioGrid;
+        padding: $meioGrid 0 0 0;
+        background-position: center top;
+        .logo { margin-top: $meioGrid; max-width: 150px; }
+    }
+
+    // nav menu
+    .anchor {
+        ul {
+            li { 
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // conteudo de texto
+    .content {
+        width: 100%;
+        padding: 20px 0;
+        .title {
+            @include font(bold, 75%);
+            h2 {
+                padding: 0;
+                margin: 0;
+            }
+            h3 { margin-top: 0; }
+            p {
+                margin: 0;
+                padding: 0;
+                @include font(normal, 1em);
+            }
+        }
+        .description { 
+            padding: $meioGrid / 2;
+            h5 { margin-top: $meioGrid/2; }
+            ul { padding: 0 0 0 $meioGrid; }
+        }
+        .description > p:first-child { margin-top: $meioGrid / 2; }
+    }
+
+    // aviso Bb
+    .lineDate {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        .alert { 
+            margin-top: $meioGrid;
+            padding-bottom: $meioGrid / 2;
+            .symbol {
+                width: 100%;
+                min-height: $grid;
+                span { 
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+            .texto {
+                width: 100%;
+                text-align: center;
+                min-height: $grid;
+                span {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+
+    // aside
+    .event {
+        width: 100%;
+        padding: 0 0 $meioGrid;
+        hr {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    // footer
+    #footer {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        .diagrama { display: none; } // oculta footer default
+        .diagramaMobile { 
+            display: block;
+            min-height: 520px;
+            background: transparent url("../img/footer/footerMobile.png") center center no-repeat;
+            #point1, #point2, #point3 {
+                background-color: $corCinzaEscuro;
+                text-align: center;
+                padding: $meioGrid / 2;
+                @include radius(5px,5px,5px,5px);
+                border: 1px solid $corCinzaMedio;
+
+                left: 50%;
+                margin-left: -90px;
+                width: 200px;
+            }
+            #point1 {
+                top: 150px;
+                right: auto;
+            }
+            #point2 {
+                bottom: auto;
+                top: 235px;
+                right: auto
+            }
+            #point3 {
+                right: auto;
+                top: 320px;
+                bottom: auto;
+            }
+        }
+    }
+}
+
+
+/* $Helper classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+

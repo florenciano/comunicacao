@@ -1,0 +1,242 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    content
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+$fontFamily: verdana, arial, sans-serif;
+
+// colors
+$verdeEscuro: #009491;
+$verdeClaro: #3cbfae;
+$azulClaro: #3cc2d2;
+$cinzaEscuro: #414042;
+$cinzaMedio: #bcbec0;
+$cinzaClaro: #e6e7e8;
+$laranja: #faa61a;
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin font($fstyle, $fsize) {
+    font-style: $fstyle;
+    font-size: $fsize;
+}
+
+@mixin bShadow($lenH,$lenV,$blur,$spread,$rgba) {
+    box-shadow: $lenH $lenV $blur $spread $rgba;
+    -o-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -ms-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -moz-box-shadow: $lenH $lenV $blur $spread $rgba;
+    -webkit-box-shadow: $lenH $lenV $blur $spread $rgba;
+}
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radT,$radR,$radB,$radL) {
+    border-radius: $radT $radR $radB $radL;
+    -o-border-radius: $radT $radR $radB $radL;
+    -ms-border-radius: $radT $radR $radB $radL;
+    -moz-border-radius: $radT $radR $radB $radL;
+    -webkit-border-radius: $radT $radR $radB $radL;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+
+* {
+    @include box-size(border-box);
+    // @include transition(all .25s ease);
+    // Trasition removed in all style, it's not a good pratice
+}
+
+body { 
+    @include font(normal, 12px);
+    font-family: $fontFamily;
+}
+
+img { max-width: 100% }
+
+::selection {
+    background-color: $laranja;
+    color: #ffffff;
+}
+
+// deletar isto
+.testTouchOver:hover, .testTouchOverEffects {
+    color: red;
+    background-color: orange !important; 
+}
+/////////////////////////////////////////////////////////////////////
+// Content
+/////////////////////////////////////////////////////////////////////
+
+header,
+footer {
+    background-color: $verdeClaro;
+    color: #ffffff;
+}
+
+.wrapper,
+.grid {
+    background-color: #f5f5f5;
+    border: 1px solid #e6e6e6;
+}
+footer {
+    .wrapper {
+        background-color: transparent;
+        border: none   
+    }
+}
+
+/*  $Media Queries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (max-width: 960px) {
+    // .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:20px}
+    // .row .row > div:last-child{ margin-bottom:0 !important }
+    body { color: red; }
+}
+
+
+/* Media query for mobile and tablets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation: portrait) {
+
+    .row { margin-bottom: 0 !important }
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 {
+        width:100%;
+        margin-right:0;
+        margin-left:0;
+        margin-bottom:20px
+    }
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ width:100%; margin-bottom:20px }
+    .row .row > div:last-child { margin-bottom: 0 !important }
+    
+    body { 
+        @include font(normal, 11px);
+        color: orange;
+    }
+
+
+}
+/* $Helper classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+/* $Print Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
