@@ -1,0 +1,752 @@
+/*ASSESSMENT*/
+
+/* @group ASSESSMENT
+----------------------------------------------- */
+
+/*Assessments*/		
+div.instructionData {margin:0 0 12px;}
+ 
+div.instructionData ul {
+  list-style:none;
+  margin:0;
+  padding:0 0 2px;
+  border-bottom:1px solid #ccc;
+  }
+  
+div.instructionData ul li {
+  float:left;
+  list-style:none;
+  margin:0 12px 0 0;
+  padding:0 0 6px;
+  }
+  
+div.instructionData ul li span {
+  color:#555;
+  font-size:90%;
+  }
+  
+div.instructionData ul li h3 {
+  display:inline;
+  font-size:100%;
+  margin:0;
+  }
+
+div.instructionData ul li.instructions {
+  float:right;
+  margin:6px 0 0;
+  padding:0;
+  }
+  
+  div.instructionData ul li.saving {
+  float:center;
+  margin:6px 0 0;
+  padding:0;
+  }
+  
+div.instructionData ul li.instructions a.browse {
+  border:1px solid #ccc;
+  border-bottom:none;
+  font-size:90%;
+  }
+
+.assessmentInstructions {
+  position: relative;
+  margin: 0 0 12px;
+  padding: 3px 12px 6px;
+  background: #f1f1f1;
+}
+
+.assessmentInstructions h3 {
+  margin: 3px 0;
+  padding: 0;
+}
+
+.assessmentPortlet { /*ZUG 2012_10*/
+  z-index: 1;
+  position: fixed;
+  right: 43px;
+  margin: 0 0 0 117px;
+}
+
+
+/* H3 and h4 are category headers inside the assessmentPortlet. */
+.assessmentPortlet h3, .assessmentPortlet div.assessmentPortletBlock h4, .assessmentPortlet div.blockContents h4 {
+	font-size:100%;
+	color:#597298;
+	letter-spacing:1px;
+	/*border-bottom:1px solid #CEE2F2;
+	padding:1px 0 2px 0;*/
+	font-weight:bold;
+	
+}
+
+
+.savingQuestion {
+	display:none;
+	background:none; 
+	color:#CC0033; 
+	font-size:150%;
+	position:relative;
+	padding: 2px;
+}
+
+/* this is purely a dummy style to approximate the spellcheck bar in the VTBE. not for production */
+tr.dummyVTBEFooter td {border:1px solid #666666; background:#eee; padding:2px; text-align:right;}
+
+
+/*Assessments?*/
+.qIncomplete {
+	float: left;
+	display: block;
+	border: 1px solid #999;
+	width: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin: 1px;
+	color:#333;
+	background:#fff;
+	text-decoration:none;
+}
+.qComplete {
+	float: left;
+	display: block;
+	border: 1px solid #999999;
+	width: 30px;
+	text-align: center;
+	color: #003366;
+	background-color: #CCCCCC;
+	color:#888;
+	font-weight: normal;
+	margin: 1px;
+	text-decoration:none;
+}
+
+
+/* @end ASSESSMENT */
+
+
+/* @group SELF AND PEER
+----------------------------------------------- */
+
+div.canvasHead {
+    margin: 0.6em 0;
+    padding: 6px 16px 12px;
+    background: #F6F6F6;
+}
+
+div.canvasHead ul li { border-top: 1px solid #EEEEEE }
+
+div.canvasHead ul li:first-child { border-top: none }
+
+div.canvasHead ul li div.label { color: #555 }
+
+.peer_instructions { margin: 12px 6px }
+
+.peerHelp { color: #555 }
+
+/* for viewSingleMarking.jsp */
+h2.evaluator { margin: 1em 0 .3em }
+
+h2.evaluator span {
+    font-weight: normal;
+    font-size: 90%;
+}
+
+/* for evaluation.jsp - also applies to the Test/Survey Status Bar in Assessments too */
+
+div.peerCriteriaStatus {
+    border: 1px solid #bbb;
+    padding: .3em;
+    background: #fff;
+}
+
+div.peerCriteriaStatus a.itemHeadOpen {
+    display: block;
+    margin: 0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 90%;
+    color: #597298;
+    letter-spacing: 1px;
+}
+
+div.peerCriteriaStatus a.itemHeadOpen:hover { text-decoration: underline }
+
+div.peerCriteriaStatus td.qStatus {
+    padding: 4px 1px;
+    width: 5%;
+}
+
+div.peerCriteriaStatus td.qStatus a span {
+    border: 1px solid #fff;
+    padding: 1px 1px 1px 2px;
+    background: white;
+    font-weight: bold;
+}
+
+div.peerCriteriaStatus td.qStatus a span.qComplete {
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+div.peerCriteriaStatus td.qStatus a.qActive span.qComplete,
+div.peerCriteriaStatus td.qStatus a.qActive span.qIncomplete {
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+div.peerCriteriaStatus a span img {
+    padding: 2px;
+    width: 12px;
+    height: 12px;
+}
+
+.questionNumber,
+.questionType { font-weight: bold }
+
+.questionNumber { color: #aaa }
+
+.questionDiv {
+    margin: -1px 0 6px 0;
+    border: 1px solid #CCC;
+    padding: .6em;
+}
+
+.questionDiv h3 {
+    margin: 0 0 .6em;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 .6em;
+}
+
+.questionDiv p {
+    margin: .6em 1.2em;
+    padding: 0;
+}
+
+.questionDiv div.criteriaText {
+    margin: .6em 1.2em;
+    padding: 0;
+    font-size: 95%;
+}
+
+.questionDiv div.submission_text {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+}
+
+.questionDiv table { width: 98% }
+
+.questionDiv table table { width: auto }
+
+.questionDiv td.label {
+    width: 150px;
+    white-space: nowrap;
+}
+
+#creceipt {
+    padding: 4px;
+    color: red;
+    font-weight: bold;
+}
+
+/* used to show name and metadata of attached files. needs review */
+ul.fileData {
+    clear: both;
+    margin: 3px 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.fileData li {
+    float: left;
+    margin: 0;
+    border-left: 1px solid #ddd;
+    padding: 2px 6px;
+}
+
+/* used for the "label/header" of the tabset - builds on existing containerTabs css */
+ul.containerTabs li.tabhead {
+    background: transparent;
+    border: none;
+    text-align: left;
+}
+
+ul.containerTabs li h3 {
+    border: none;
+    margin: 0;
+    padding: 5px 12px 6px 0;
+    white-space: nowrap;
+    font-size: 100%;
+}
+/* end of styles for evaluation.jsp */
+
+/* styles for studentViewResults.jsp */
+ul.listNav {
+    /* list nav styles the navigation among criteria. a one-off. should be replaced in 9.1. */
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #ddd;
+}
+
+ul.listNav  li {
+    float: left;
+    margin: 1px;
+    background: #ededed;
+    padding: 0;
+    text-align: center;
+    color: #2d2680;
+    white-space: nowrap;
+}
+
+ul.listNav li a {
+    text-decoration: none;
+    display: block;
+    padding: 4px 10px;
+}
+
+ul.listNav li a:hover {
+    background-color: #dedede;
+    text-decoration: underline;
+}
+
+ul.listNav li a.active {
+    border: 2px solid #000;
+    background: #fff;
+    padding: 2px 8px;
+    font-weight: bold;
+    color: #000;
+}
+
+ul.evaluation {
+    /* styles the criteria metadata (text/feedback/points, etc.). another one-off. should be replaced. */
+    margin: .6em 1.2em;
+    padding: 0;
+    background: transparent;
+    list-style: none;
+}
+
+ul.evaluation li {
+    clear: both;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    padding: 4px 0;
+}
+
+ul.evaluation li p {
+    float: left;
+    margin: 1px 0;
+    padding: 0;
+    width: 79%;
+}
+
+ul.evaluation h4 {
+    margin: 1px 0;
+    padding: 0;
+    padding-left: 4px;
+    float: left;
+    width: 20%;
+    font-size: 100%;
+}
+
+ul.evaluation li p span { color: #555 }
+
+/* end of styles for studentViewResults.jsp */
+
+/* viewSingleSubmission.jsp - should be added to data_collection.css line 906 */
+
+div.stepPanel div.user_html {
+    margin: 5px 5px 12px 12px;
+    padding: 0;
+}
+
+ul.stepPanels h4.defaultCursor,
+h4.defaultCursor { cursor: default }
+
+/* For the question completion status in assessments... if we switch away from this then change it, but
+    current req. is to leave this bit as/is */
+
+.qShow { DISPLAY: block }
+
+.qHide { DISPLAY: none }
+
+.completionContainer {
+    OVERFLOW: auto;
+    PADDING-TOP: 6px;
+    PADDING-BOTTOM: 6px;
+	width: 648px; /*ZUG-2012_09*/
+}
+
+.completionContainerLarge {
+    OVERFLOW: auto;
+    HEIGHT: 75px;
+    PADDING-TOP: 6px;
+    PADDING-BOTTOM: 6px;
+}
+
+.completionContainer a img { vertical-align: baseline }
+
+.pagedRumble {
+    margin: 0 0 14px;
+    padding: 4px 2px;
+    border: 0;
+    background: transparent;
+}
+
+/* This style isn't used right now - was for rendering the paged points in a block without the grey bar
+*/
+
+.pagedPointsOutsideBar {
+    background: #FAE7AE none repeat scroll 0% !important;
+    color: #000000 !important;
+    font-weight: bold;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0pt;
+    left: auto;
+    right: 6px;
+    font-size: 110%;
+    letter-spacing: 1px;
+}
+
+.pagedPoints {
+    background: #FAE7AE none repeat scroll 0% !important;
+    color: #000000 !important;
+    font-weight: bold;
+    line-height: 100%;
+    margin: -5px 24px -5px -10px !important;
+    padding: 5px 0px 6px  10px;
+    font-size: 110%;
+    letter-spacing: 1px;
+}
+
+/* @end SELF AND PEER*/
+
+
+/* @group DESIGN CANVAS */
+
+.designAreaHeader,
+.designAreaFooter {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 6px 9px 9px;
+}
+
+.designAreaHeader h3,
+.designAreaFooter h3 {
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+.designAreaHeader .headertext,
+.designAreaFooter .footertext {
+    margin: 0;
+    padding: 0 0 0.4em 12px;
+}
+
+div#emptyText { margin: 0.6em 16px }
+
+
+/* shown when there are no items in the canvas */
+.infoListWrapper {
+    position: relative;
+    border: 1px solid #EEE;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 0 0 6px;
+    padding: 6px;
+    background: #F6F6F6;
+}
+
+#assessmentGradeForm .infoListWrapper { margin: 0 -12px 18px }
+
+.infoListWrapper h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.infoListWrapper h3 a {
+    display: block;
+    padding: 3px 16px;
+    background:transparent url(images/indicators.png) no-repeat 0 -443px;
+}
+
+.infoListWrapper h3 a.open {background:transparent url(images/indicators.png) no-repeat 0 -1040px;}
+
+.infoList { margin: 6px 12px }
+
+.infoList > li {
+    border-top: 1px dotted #ddd;
+    margin: 0 0 3px 0;
+    padding: 3px 0 0 0!important;
+}
+
+.infoListWrapper .infoList > li { border-top: 1px dotted #cdcdcd }
+
+.infoList li:first-child { border-top: none }
+
+.infoList li div h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: #555;
+    font-weight: normal;
+}
+
+.details .infoList { margin-top: 0!important }
+
+
+/* for the Question Block ui in the assess Canvas */
+.infoListFloat { margin: 0 }
+
+.infoListFloat li {
+    float: left;
+    border: none;
+    padding: 3px 10px!important;
+    background: url(images/indicators.png) 0 50% no-repeat;
+    color: #555;
+    font-size: 95%;
+}
+
+/* @end DESIGN CANVAS*/
+
+
+/* @group ASSESSMENT CANVAS */
+
+.copyQuestion,
+.linkQuestion {
+    padding-left: 22px!important;
+    padding-bottom: 2px!important;
+}
+
+.copyQuestion { background: transparent url(/images/ci/icons/file_copy_ti.png) no-repeat scroll 1px center }
+
+.linkQuestion { background: transparent url(/images/ci/icons/file_link_ti.png) no-repeat scroll 1px center }
+
+div.contentListRight {
+    font-weight: normal;
+    position: absolute;
+    z-index: 1000;
+    right: 9px;
+    top: 9px;
+    padding: 4px;
+    text-align: right;
+}
+
+div.contentListRight a {
+    font-weight: bold;
+    margin-left: 4px;
+}
+div.contentListRight span:first-child + span , div.contentListRight span:first-child + span + span {
+   /*background:#aaa;
+   color:#fff;
+   -moz-border-radius:12px;
+   -webkit-border-radius:12px;
+   border-radius:12px;
+   padding:1px 7px;
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);*/
+   font-size: 85%;
+}
+
+div.contentListRight span:first-child + span:before , div.contentListRight span:first-child + span + span:before {
+	content:"("
+}
+
+div.contentListRight span:first-child + span:after , div.contentListRight span:first-child + span + span:after {
+	content:")"
+}
+
+div.contentListRight span:first-child[style*="none"] + span , div.contentListRight span:first-child[style*="none"] + span + span {
+    display:none
+}
+
+div.contentListRight span span {
+    display: block;
+    padding: 9px 0;
+    color: #666666;
+    font-size: 90%;
+}
+
+div.contentListRight strong { padding: 0pt 0.4em 2px }
+
+div.assessmentHeader {
+    border: 1px solid #CCCCCC;
+    padding: 3px 6px 6px;
+}
+
+div.assessmentHeader h3 {
+    margin: 3px 3px 6px;
+    padding: 0;
+}
+
+div.assessmentHeader div {
+    margin: 3px;
+    color: #555;
+}
+
+/* @end ASSESSMENT CANVAS */
+
+
+/* @group KEY:VALUE TABLE */
+
+.questionShell { width: 100% }
+
+.questionShell > tr,
+.questionShell > tbody > tr { border-top: 1px solid #f1f1f1 }
+
+.questionShell > tr:first-child,
+.questionShell > tbody > tr:first-child { border: none }
+
+.questionShell td,
+.questionShell th {
+    padding: 3px;
+    vertical-align: top;
+}
+
+.questionShell th.labelCell,
+.questionShell .labelCell {
+    width: 17%;
+    font-weight: bold;
+    color: #888;
+}
+
+.questionShell td.valueCell { width: 83% }
+
+.questionShell .correctAnswer { width: 2% }
+
+.questionShell .field {
+    padding: 0 15px;
+    position: relative;
+    width: 95%;
+}
+
+.questionShell .field img {
+    left: -2px;
+    top: 52%;
+    position: absolute;
+}
+
+.questionShell .vtbegenerated { width: 95%; }
+
+.questionShell td.valueCell table .vtbegenerated { display: inline!important }
+
+/* @end KEY:VALUE TABLE */
+
+/* @group TAKE QUESTION */
+
+.takeQuestionDiv .stepTitleRight.liveArea,
+#assessmentGradeForm .stepTitleRight.liveArea {
+    border-color: #CCCCCC;
+    -moz-border-radius: 0 0 0 4px;
+    -webkit-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px;
+    border-width: 0 0 1px 1px;
+    padding: 8px 30px 8px 12px;
+    right: 0;
+    top: 0;
+    -moz-box-shadow: 1px -1px 3px rgba(0, 0, 0, 0.05) inset;
+    -webkit-box-shadow: 1px -1px 3px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 1px -1px 3px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* @end TAKE QUESTION*/
+
+/* @group MULTIPLE GROUP ASSIGNMENT
+----------------------------------------------- */
+
+/*---MULTIPLE GROUP ASSIGNMENT---*/
+
+div.multiAssign {margin:3px 0 9px 0;}
+
+div.multiAssign ul {list-style:none;border:0;padding:0;margin:0;}
+div.multiAssign ul li, div.multiAssign ul li.read {
+	line-height:1.3em;
+	text-align:center;
+	width:13em;
+	background:#f6f6f6;
+	clear:none;
+	float:left;
+	margin:0 9px 0 0;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:0;
+	padding:1px 6px 6px 6px;
+	font-size:90%;
+}
+
+div.multiAssign ul li a, div.multiAssign ul li a {
+	font-weight:bold;
+	font-size:100%;
+}
+
+div.multiAssign ul li p {padding:1px 0 2px 0;}
+div.multiAssign ul li.label {
+	line-height:1.1em;
+	border:0;
+	color:#888;
+	background:transparent;
+	font-weight:normal;
+	padding:0;width:12em;
+	white-space:normal;
+	text-align:left;
+}
+
+div.multiAssign ul li p span {
+	color:#888;
+}
+
+div.multiAssign a.buttonMicro, h3 a.buttonMicro {
+	padding:0px 5px;
+	background:#ededed url(images/backgrounds_h.png) repeat-x 0 -50px;
+	 font-size:90%;/**/
+	text-decoration:none;
+	border:1px solid #ccc;
+	color:#666;
+	margin:1px auto 12px auto;
+	white-space:nowrap;
+}
+
+
+div.multiAssign a.buttonMicro:hover, h3 a.buttonMicro:hover,
+div.multiAssign a.buttonMicro:focus, h3 a.buttonMicro:focus {
+	background:#fff;
+	border:1px solid #aaa;
+	color:#333;
+}
+
+div.multiAssign a.simpleLink {
+	font-weight:normal;
+	color:#666;
+	display:block;
+}
+
+h3 span.status a.buttonMicro { 
+	font-size:90%;
+	font-weight:normal;
+	margin-left:6px;
+}
+
+h3 span.status, h3 div.status {
+	font-weight:normal;
+	font-size:80%;
+	margin-left:6px;
+	background:#f3f3f3;
+	padding:3px 6px;
+}
+
+h3 span.status span, h3 div.status span {
+	color:#888;
+}
+
+h3 div.status {display:inline;}
+
+/* @end MULTIPLE GROUP ASSIGNMENT*/
+
+

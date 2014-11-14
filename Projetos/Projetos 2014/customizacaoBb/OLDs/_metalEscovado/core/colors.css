@@ -1,0 +1,126 @@
+
+/*
+ * DEFAULT THEME COLORS
+ */
+ 
+/*
+	Top Frame :
+	Application tabs:
+	Lower frame Body:
+	Primary controls:  
+	Primary controls:
+	Contextual menus:
+ 
+*/
+ 
+/*Top frame colors*/
+#topFrame, .bgBanner {background-color:#8192A8; color:#FFFFFF;}
+.topTabs {border-bottom-color:#333;}
+
+#topTab, .appTabs a {color:#000;background-color:#ccc;}
+.appTabs a:hover, .appTabs a:focus {color:#000; background-color:#bbb;}
+
+#topTabActive, .appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {color:#fff;background-color:#555;}
+
+
+
+/*Background group colors*/
+
+/*Lightest*/
+#contentArea, .container, .path, .simplePath {background-color:#FFFFFF;}
+
+/*Light*/
+.containerLanding, div.landing div.container, body.landingBody div.container {background-color:#DEDEDE;}
+.containerLanding, div.landing div.container, body.landingBody div.container, .navPaletteContent  {background-color:#EDEDED;}
+
+
+
+/*Mid*/
+body {background-color:#aaa;}
+.landingPageColumn ul li p {border-color:1px solid #DDDDDD;}
+
+/*Dark*/
+.path .root, .simplePath .root {background-color:#f0f0f0;}
+.navPalette h2 {background-color:#777; color:#FFFFFF;}
+.modeSwitch, .ineditmode .listCm, .ineditmode #editmodeWrapper {border-color:#444}
+.ineditmode .listCm, .ineditmode #editmodeWrapper {background-color:#444;}
+
+.paneTabs ul li a {background:#bbb;color:#666}
+
+.paneTabs .active a, .paneTabs .active a:hover, .paneTabs .activepersonal a, 
+.paneTabs .activepersonal a:hover, .paneTabs .active h3, .paneTabs .active a:hover, .paneTabs .active a:focus,
+.paneTabs ul li a:hover, .paneTabs ul li a:focus  {background-color:#efefef; color:#000;}
+
+
+/*End background group*/
+
+
+
+/*Instructor component group colors*/
+
+/*Light*/
+
+.controlpanel .navPaletteContent, .discover .navPaletteContent, 
+.singleControl .navPaletteContent {background-color:#A1C94B;}
+
+.nav .sub ul li a, .cmdiv a, .menumini a {background-color:#efefef; border-color:#bbb}
+
+/*Mid*/
+#primaryButton, input.submit[type="submit"], .mainButton > a, .actionBarMicro .mainButton a, .button-1, .button-1-img, .read-on {
+	color:#fff;
+	background-color:#A1C94B;
+	border:1px solid  #3C4A1B;
+}
+.controlpanel h2 {background-color:#617D21;}
+
+/*Portal modules. A bit lighter than mid*/
+#moduleTitle, .portlet h2 {}
+/*Same as border color.*/
+.portlet .reorder {background-color:#aaa}
+
+/*Dark*/
+input.submit[type="submit"]:hover, .mainButton a:hover, .mainButton a:focus, .actionBarMicro .mainButton a:hover, .actionBarMicro .mainButton a:focus, .button-1:hover, .button-1:focus, .button-1-img:hover, .button-1-img:focus;
+a.read-on:hover, a.read-on:focus {
+	background:#3C4A1B;
+  	color:#fff;
+}
+
+.cmdiv {border-color:#555;}
+
+ /*{background-color:#8192A8;}*/
+
+/*End main control group*/
+
+
+
+
+/*Page title group colors*/
+
+/*Light*/
+
+/*Mid*/
+#pageHeader, .pageTitle, .pageTitleSmall, div#lightboxContent h2, .actionBarMicro {background-color:#efefef;}	 	
+#secondaryButton, .secondaryButton a, .button-2, .button-2-img {background-color:#DDDDDD; color:#000000; border-color:#bbb;}
+
+/*Dark*/
+.secondaryButton a:hover, .secondaryButton a:focus, .button-2:hover, .button-2:focus, .button-2-img:hover, .button-2-img:focus {
+	background-color:#efefef;
+	color:#000000;
+	border-color:#aaa;
+}
+.pageTitle, div#lightboxContent h2 {border-color:#DDDDDD}
+ 
+/*End age title group*/
+ 
+/*@branding - do not remove*/
+#courseMenu {background-color:#ededed; border-top:1px solid #ddd; color:#444;}
+
+#schemePreviewBody {background-color:#fff; color:#000000;}  
+
+#schemePreview {background-color:#CDCDCD;color:#000000;}
+#schemePreviewHead {color:#000000; background-color:#FFF1C5;}
+
+
+/*
+ * END DEFAULT THEME COLORS
+ */

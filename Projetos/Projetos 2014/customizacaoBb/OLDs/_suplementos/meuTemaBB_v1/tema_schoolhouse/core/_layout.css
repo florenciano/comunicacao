@@ -1,0 +1,372 @@
+
+/*
+ * LAYOUT
+ */
+ 
+/*Branding image container. Also conatains application tabs.*/
+/*@branding - do not remove*/
+#topFrame,
+/**/
+.bgBanner {background-color:#07477F; background-position: 0 0; background-repeat: no-repeat; color:#FFF;}
+.brandingImgWrap {height:43px; overflow:hidden;}
+.bannerImage {margin:4px 12px 4px 12px; max-height:35px;}
+
+/*Branding image is hidden if compact tabs are used*/
+.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap {display:none;}
+
+ 
+/*Application tab layout (located in the top frame)*/
+table.bouncer {border-collapse: collapse; width: 100%;}
+table.bouncer td {padding:0;}
+
+/*Regular tabs*/
+.topTabs {position:relative; padding:10px 0 0 0; height:76px; border-bottom:3px solid #ffcc33; zoom:1;}
+/*Compact tabs*/
+.topTabs-compact {padding-top:23px; position:relative;border-bottom:2px solid #dedede;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.topTabs  {border-collapse:collapse;}*/
+
+/*Regular tabs and compact tabs*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs div.tabWrapper-left, div.topTabs div.tabWrapper-center, div.topTabs div.tabWrapper-right,
+table.topTabs tr td div.tabWrapper-left, table.topTabs tr td div.tabWrapper-center, table.topTabs tr td div.tabWrapper-right,*/
+/*@since 9.1*/
+.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {width:auto; padding:0 18px 0 24px; position:relative; z-index:5;}
+
+/*Compact tabs
+@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. 
+.topTabs-compact .tabWrapper-left, .topTabs-compact .tabWrapper-center, .topTabs-compact .tabWrapper-right {
+	margin:0;
+	padding:0;
+	width:auto;
+	padding:0 6px;
+	border-bottom:3px solid #dedede;
+}*/
+
+/*Table that contains application tabs*/
+/*Regular tabs*/
+.appTabs {width:auto; position:relative; border-spacing:2px; border-collapse:separate; top:3px; font-size:105%;}
+/*Compact tabs*/
+.topTabs-compact .appTabs {top:2px;}
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.appTabs tbody tr td {margin:0 4px 0 0;padding:0;position:relative;}*/
+
+
+/*Different tab alignment options.*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs div.tabWrapper-center table.appTabs, table.topTabs tr td div.tabWrapper-center table.appTabs,*/
+/*@since 9.1*/
+.topTabs .tabWrapper-center .appTabs, .topTabs-compact .tabWrapper-center .appTabs {margin:0 auto;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs div.tabWrapper-right table.appTabs, table.topTabs tr td div.tabWrapper-right table.appTabs,*/
+/*@since 9.1*/
+.topTabs .tabWrapper-right .appTabs, .topTabs-compact .tabWrapper-right .appTabs {float:right;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.appTabs tbody tr td h2, table.appTabs tbody tr td.active h2 {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	font-weight:normal;
+}
+table.appTabs tbody tr td.active h2 {
+	font-weight:bold;
+}
+div.topTabs-compact table.appTabs tr td {
+	margin:0 4px 0 0;
+	padding:0;
+	position:relative;
+}*/
+
+
+/*safari-only hack to remove gap at the bottom of the tabs. */
+/*\*/
+html*table.appTabs {top:2px; *top:3px;}
+html*table.round1, html*table.round2 {top:4px; *top:3px;}
+html*div.topTabs-compact table.appTabs {top:2px;}
+/**/
+
+/*End top frame application tab layout*/
+ 
+ 
+
+/* Breadcrumb pane */
+.breadcrumbs {margin:0; position:relative; border-bottom:1px solid #555;}
+
+/*Setting proper styles for breadcrumbs in Outcomes. */
+.banner + .breadcrumbs  {margin:0; background-color:inherit; *background-color:transparent;}
+
+.breadcrumbs a.close {
+	position:absolute;
+	top:0px;
+	right:6px;
+	opacity:0.7;
+	*top:3px;
+	*right:5px;
+	_right:20px;
+	filter:alpha(opacity=70);
+	z-index:100;
+}
+/*End breadcrumbs*/
+
+/* Location pane */
+/* Location pane contains all elements below orientation bar.
+ * It is a relative parent to and contains all absolutely positioned 
+ * children navigationPane and contentPane, and	allows for flexible orientation bar height.
+ */
+.locationPane {
+  position:relative;
+  display: inline-block;
+  margin-top: 10px;
+  min-width: 100%; 
+  overflow:visible; 
+  zoom:1; 
+}
+
+/*End location pane*/
+
+/* Navigation pane (contains course menu, control panel, and other navigation palettes.) */
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*#navigationPane,*/
+.navigationPane { 				
+  position:absolute;
+  top:0px;
+  left:0;
+  width:212px;
+  padding:0;
+  margin-top:0px;
+  clear:both;
+  overflow:visible;
+  zoom:1;
+}
+
+/**/
+.menuWrap {position:relative; background-color:transparent; padding:0; width:212px; width:auto;  zoom:1;}
+/*End navigation pane*/
+
+
+
+/*Modifications to collapsed/expanded state*/
+
+/*Navigation pane is collapsed.*/
+.navcollapsed {/*width: 0px!important;*/margin-left:-210px;}
+.navcollapsed .menuWrap {
+	display:block!important;	
+}
+/*Puller location when navigation element is collapsed. */
+.pullcollapsed {left:211px!important;}
+
+.pullcollapsed a {
+	display:block;
+	background:transparent url(images/menu_expand3.gif) no-repeat 0 0 !important;
+	height:29px;
+	width:14px;
+}
+
+/*Content area margin when navigation element is collapsed. */
+.contcollapsed {margin-left: 15px!important;}
+
+/* Navigation pane collapse control. */
+#puller {
+  position:absolute; 
+  left:198px; 
+  margin-top:180px; 
+  _height:1px; 
+  z-index: 3;
+  background-color:transparent!important;
+}
+
+#puller a { 
+	display:block;
+	background:transparent url(images/menu_collapse3.gif) no-repeat 0 0;
+	height:29px;
+	width:14px;
+}
+
+#puller a img {height:29px; width:14px;}
+
+/*End modifications*/
+
+
+
+/* Content pane */
+/*Sets layout and dimensions of the content pane.*/
+/*Deprecated*/
+#contentPane, 
+/*@cleaned 9.1*/
+.contentPane {	
+	margin:0px 14px 0px 212px;
+  	padding:0;
+  	min-width:auto;
+    zoom:1;  	
+	overflow:visible;
+	display:block;
+	height:auto!important;/*icon size changes in course files cause changes in height and copyright appears in the wrong place.*/
+}
+
+
+
+/*Deprecated*/
+#contentPaneWide, 
+/*@cleaned 9.1*/
+.contentPaneWide, .portalPane {	
+	margin:0px 10px 12px 10px;
+  	padding:0 0 12px 0;
+    zoom:1;  	
+	background:transparent url(images/bg_content_shadow.png) repeat-x  right 100%;
+	_background-image:none;
+  	min-width:auto;
+  	display:block;
+}
+
+.shadow {
+	padding:0 0 12px 0;
+	background:transparent url(images/bg_content_shadow.png) repeat-x  right 100%;	
+	*background-position:right bottom;
+}
+
+/*contentBox div contains local view toggles, pagetitle, actionbar, and container.*/
+/*Deprecated*/
+#content, 
+/*@cleaned 9.1*/
+.contentBox {	
+	margin:0;
+	padding:0;
+	min-width:auto;
+	display:block;
+	*margin-top:0;
+	zoom:1;
+	border:1px solid #000;
+}
+
+.portal .content {background-color:inherit!important}
+form#content {border:0!important}
+
+
+
+
+
+/*Content area container (this is what holds all the content)*/
+/*@branding -- do not remove*/
+#contentArea, 
+/*Regular selectors*/
+.container, .containerOptions { 		
+ 	background-color:#fff;
+  	margin:0;
+  	padding:10px 12px 12px 12px;
+	overflow:visible;
+}
+
+/*@since 9.1*/
+.container {min-height:400px;_height:400px;}
+.containerOptions {padding:1px 12px 0 12px; *z-index:10}
+.containerOptions > div, .containerOptions > form, .containerOptions > fieldset, .containerOptions > ol, .containerOptions > ul, .containerOptions > table {*z-index:11;}
+
+/*@since 9.1*/
+/*Iframe for inline display of .doc, .ppt, etc. files in IE */
+.container iframe.cleanSlate {z-index:119; min-height:1200px;}
+
+/** Iframe for stopping the bleeding of pdf's and video files over the toc. The width and left is set
+ *  so that the iframe remains well within the toc. Background-color property is placed as a hack, 
+ *  for a FF bug, in order to deal with the opacity for an iframe. z-index is kept just lower than
+ *  the z-index of the toc. 
+ */
+iframe#emptySlate {position: fixed; z-index:120; filter:alpha(opacity=0); border:none; background-color: #FFFFFF; min-width:600px; left:213px; bottom:0px; width:82%;}
+
+/*If "OK" button is at the bottom of content area*/
+div.okContainer, div.ok div.container {padding-bottom:38px; position:relative;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.containerPortal,*/
+/*@since 9.1*/
+.containerPortal, .portal .container {
+	padding:5px 5px 0 5px;
+	background:#f0f0f0;
+	min-width:600px;
+	_width:;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release.*/
+.contentbottoml, .contentbottomr {display:none;}
+
+/*End content area*/
+
+
+/*Content area columns (reside inside .container.)*/
+/*1 column layout*/
+.column-1 {width:100%; float:left; margin:6px 0px 0px 0px; min-height:400px; height:auto; _height:400px;}
+
+/*2 column layout*/
+.column-2 {width:50%; float:left; margin:6px 0px 0px 0px; min-height:400px; height:auto; _height:400px;}
+
+/*3 column layout*/
+.column-3 {width:33.3%; float:left; margin:6px 0px 0px 0px; min-height:400px; height:auto; _height: 400px;}
+
+/*4 column layout*/
+.column-4 {width:25%; float:left; margin:6px 0px 0px 0px; min-height:400px; height:auto; _height: 400px;}
+
+/*5 column layout*/
+.column-5 {width:20%; float:left; margin:6px 0px 0px 0px; min-height:400px; height:auto; _height: 400px;}
+/*End columns*/
+
+/* End content pane */
+
+/*Lightbox modifications*/
+#lightbox .column-3, #lightbox .column-2 {min-height:200px!important; margin:0;}
+
+
+
+
+
+/*Pane rounders*/
+
+/*General rounding strip attributes.*/
+
+/*Botom rounder modifications. Matches background color of the container.*/
+.landing .container,
+.error .container {background:#EDEDED;}
+
+/*portal page bottom rounder. Matches background color of the container.*/
+.portal .container {background-color:#f0f0f0;}
+
+/* Pane modifications depending on edit/read status */
+
+/*When page is in edit mode*/
+.ineditmode {
+	background-image:url(images/readback.png);
+    padding: 0px 0 0 0;
+}
+
+.noteditmode {padding: 0;}
+
+.ineditmode #editModeButton {
+	background-color:#cdcdcd;
+	background-image:url(images/readback.png);
+}
+
+.ineditmode .listCm, .ineditmode #editmodeWrapper  {border:3px solid #666;}
+
+.ineditmode div.listCm, .ineditmode #editodeWrapper {
+	background-image:none;
+	padding-bottom:0;
+	margin-bottom:9px;
+}
+
+.ineditmode .landing #editmodeWrapper {border:0!important;}
+/*End read/edit status*/
+
+.tallPara {padding:40px 0px;margin:0;}
+span.errorCode {font-weight:bold;font-size:90%;display:block;margin-top:24px;}
+
+
+
+/*Course menu in a popup*/
+body.cmPopup #navigationPane {position:relative; margin:0px; width:auto;}
+.cmWrapper {position:relative; padding-top:12px!important;}
+.cmWrapper div.navPalette {position:relative; margin:0px 14px 12px 14px;}
+
+

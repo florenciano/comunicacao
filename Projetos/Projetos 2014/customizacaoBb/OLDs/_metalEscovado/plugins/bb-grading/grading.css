@@ -1,0 +1,52 @@
+/* Start of styles copied from as_metal/gradebook.css  */
+
+ul.gb_currView li.sub ul li.favorite a {
+  background-image:url(/images/ci/icons/favorite_on_li.png)!important;
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
+  padding:3px 3px 3px 16px!important;
+}
+
+/*================ GRADEBOOK "ORGANIZE COLUMNS" PAGE ==============================================*/
+
+div.staticFooter div.details {
+  margin-left:18px;
+}
+
+div.staticHeader {margin:10px 0 0  0}
+div.staticFooter div.details { border-bottom:1px solid #ddd!important;*padding-bottom:12px;}
+
+.gbColumns_rumble, .gbColumns_rumble_bottom {margin-left:60px!important;border:1px solid #ddd!important;border-bottom:0!important}
+.gbColumns_rumble_bottom {border:1px solid #ddd!important;border-top:0!important}
+
+
+.staticHeader, .staticFooter {clear:both;position:relative;zoom:1}
+.staticHeader div.itemHeaderControl, .staticFooter div.itemHeaderControl, ul.gbCategories li div.itemHeaderControl {right:0;zoom:1}
+
+.staticHeader div.itemHeaderControl, .staticFooter div.itemHeaderControl, ul.gbCategories li div.itemHeaderControl {right:0;zoom:1}
+
+
+
+.staticHeader div.itemHeaderControl a, .staticFooter div.itemHeaderControl a, ul.gbCategories li div.itemHeaderControl a {display:inline-block} 
+
+
+/*safari only hack to remove gap at the bottom of the tabs. */
+
+/*\*/
+html*.staticHeader div.itemHeaderControl, html*.staticFooter div.itemHeaderControl, html*ul.gbCategories li div.itemHeaderControl  {
+top:5px;
+
+}
+/**/
+
+ul.dragableHighlight {background:#fff;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:12px 12px 3px 12px; margin:12px -12px 12px -12px}
+
+ul.gbCategories li h3.item, div.staticHeader h3.item, div.staticFooter h3.item  {padding-left:9px}
+ul.gbCategories li h3.item a.toggleLink, div.staticHeader h3.item a.toggleLink, div.staticFooter h3.item a.toggleLink  {margin-right:6px;margin-top:-2px}
+
+div.areaHighlight div.container {background:#f9f9f9}
+
+ul.dragableHighlight li h3.item, .dragableHighlight div.details {border-color:#999;}
+
+
+/* End of styles copied from as_metal/gradebook.css  */

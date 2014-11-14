@@ -1,0 +1,76 @@
+/*
+ * UTILITIES
+*/
+
+.boldme {font-weight:bold;}
+
+/* Inline stack */
+/* 
+ * Elements inside inline stack behave in a fashion similar to floated ones but allow these elements be of various heights.
+ */
+ 
+/*@since 9.1*/
+.u_inlineStack, .u_inlineStackWrapper > li, .u_inlineStackWrapper > div {
+	display: -moz-inline-stack; 
+	display: inline-block; 
+	vertical-align: top; 
+	zoom: 1;
+	*display: inline;
+}
+
+.u_inlineStack select {
+  max-width: 300px;
+}
+
+/*.u_clearAll {padding: 0!important; margin:100%!important;}*/
+
+.u_resetFont {font-size:100%;}
+
+.u_centerAlign {text-align:center}
+
+.u_normalAlign {text-align:left}
+
+/*Float wrappers*/
+/* Apply to the parent element of children floated right */
+.u_floatThis-right {float: right; margin-left: 5px;}
+
+/* Apply to the parent element of children floated left */
+.u_floatThis-left {float: left; margin-right: 5px;}
+
+/* Floats immediate descendats right */
+.u_floatWrapper-right > div, .u_floatWrapper-right > li {float: right; margin-left: 5px; *display: inline-block;}
+
+/* Floats immediate descendats left */
+.u_floatWrapper-left > div, .u_floatWrapper-left > li, .u_floatWrapper-left > label {float: left; margin-right: 5px; *display: inline-block;}
+
+/* Cleans up after floats */
+.u_floatWrapper-left:after, .u_floatWrapper-right:after, .u_controlsWrapper:after {
+	content: ".";
+	display: block;
+	height:0;
+	clear: both;
+	visibility: hidden;
+}
+
+.u_clearFloatsWrapper > div, .u_clearFloatsWrapper > li {float:none!important;}
+
+.u_indent {margin-left:24px!important;} /* need !important to override specificity applied elsewhere */
+
+.u_scrollPanel-vertical {overflow-y:auto;}
+.u_panel-short {height: 70px; max-height: 100px;}
+.u_panel-medium {height: 70px; max-height: 150px;}
+.u_panel-long {height: 70px; max-height: 200px;}
+
+
+/*Fixes*/
+
+.reset {
+  border: none !important; margin:0 !important; padding:0 !important;	
+}
+ 
+
+ 
+ 
+
+
+

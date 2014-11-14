@@ -1,0 +1,9 @@
+
+.student-preview-control {
+	border-left: 1px solid #ccc;
+	border-right: 0;
+}
+
+.breadcrumb-controls {
+	float: left;
+}

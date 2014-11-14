@@ -1,0 +1,1271 @@
+/*
+ * LISTS
+ */
+
+/*Standard list. Link icons are displayed. */
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.easylist,  .noimg, */
+/*@cleaned 9.1.*/
+.contentList, .buildList, .contentListPlain, .announcementList {margin:10px 0 0 0;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+.easylist, 
+/*@cleaned 9.1.*/
+.contentList li, .buildList li, .contentListPlain li, .announcementList li,
+/*@since 9.1*/
+.contentPageItem {padding:0px 0 9px 0px;margin:0 0 3px 0;position:relative;}
+
+/*@since 9.1*/
+.contentList > li, .buildList > li, .contentListPlain > li, .announcementList > li, .contentPageItem {min-height:50px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+.noimg .item_icon, 
+/*@cleaned 9.1.*/
+.contentListPlain .item_icon {display:none;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.noimg li h3.item, ul.buildList li h3.item, ul.contentListPlain li h3.item, ul.contentList li h3.item,
+ul.announcementList  li h3.item, div.staticHeader h3.item, div.staticFooter h3.item,*/
+/*@since 9.1*/
+.item {font-size:110%;margin:0 0 0 18px;padding:6px 6px 6px 20px;border-top:2px solid #ccc;border-left:2px solid #ccc;cursor:move;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.easylist li h3.item, */
+/*@cleaned 9.1.*/
+.contentList .item  {padding:6px 6px 6px 72px;}
+
+/*List headers displaying list element controls*/
+/*@since 9.1*/
+.gradingList .item {padding-right:120px}
+
+.announcementList .item, .announcementList-read .item, #announcementList .item { 
+	padding-right:13em;
+	overflow-x:hidden;
+	word-break: normal;
+	word-wrap: break-word;
+}
+
+/*@since 9.1*/
+.item:hover, .item:focus {background:#efefef;cursor:move;}
+
+/* Read-mode adjustments. */
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.contentList li.read h3.item,*/
+/*@since 9.1*/
+.read .item, .announcementList-read .item  {border:0!important;padding:6px 12px;margin:0;}
+
+/*@since 9.1*/
+.contentList .read .item   {padding:6px 6px 6px 68px}
+.contentList .read .item_icon {left:0;margin:0 0 0 6px}
+.contentList-slim .read .item {padding-left:48px;} /* adjust for lists that use 32x32 icons */
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.easylist li.read h3.item:hover, ul.noimg li.read h3.item:hover,
+ul.buildList li.read h3.item:hover, ul.contentList li.read h3.item:hover, ul.contentListPlain li.read h3.item:hover,
+ul.announcementList li.read h3.item:hover, ul.announcementList-read li h3.item:hover,
+ul.buildList li.read h3.item:focus, ul.contentList li.read h3.item:focus, ul.contentListPlain li.read h3.item:focus,
+ul.announcementList li.read h3.item:focus, ul.announcementList-read li h3.item:focus, */
+/*@since 9.1*/
+/* Removes focus and hover effects from the content list item in read mode */
+.read .item:hover, .read .item:focus {background:transparent;cursor:default;}
+
+/* List item icon container */
+.contentList .item_icon {position:absolute;left:12px;top:4px;margin:0 8px 0 18px;}
+.contentList .item_icon a  {margin:0;padding:0;}
+
+
+/* Icons only view (WebCT Vista style) list. */
+.iconsOnly {width:80%;margin:0 auto;}
+
+.iconsOnly li {text-align:center;float:left !important;width:49%;margin-right:6px;}
+
+.iconsOnly .item_icon {margin:0 0 0 18px;left:auto;border-top:2px solid #ededed;border-left:2px solid #ededed;min-height:50px;top:0;}
+
+.iconsOnly .item {padding:6px;border:0;margin:0 0 0 18px;border-left:2px solid #ededed; min-height:36px}
+
+.iconsOnly .read .item {padding:6px;margin:0;}
+
+.iconsOnly .item > div, .iconsOnly .item > h3 {float:none!important;display:inline;}
+
+/* Hover and focus effects for icons-only list elements */
+.iconsOnly li:hover .item_icon, .iconsOnly li:hover .item,
+.iconsOnly li:focus .item_icon, .iconsOnly li:focus .item {background:#ededed;}
+
+/* Reorder handle for icons-only version. */
+.iconsOnly .reorder {background-image:url(images/cm_reorder.gif); left:-2px; top:2px; height:28px; width:20px;}
+
+/* Read mode adjustments for icon-only view */
+.iconsOnly .read .item_icon, .iconsOnly .item_icon {position:relative!important; text-align:center!important; display:block!important;}
+
+.iconsOnly .read .item_icon, .iconsOnly .read .item {border:0;}
+
+.iconsOnly .read:hover .item_icon, .iconsOnly .read:hover .item,
+.iconsOnly .read:focus .item_icon, .iconsOnly .read:focus .item {background:transparent;}
+
+/*Misc. list support styles*/
+/* this class targets the checkboxes on a canvas page */
+.buildList li input {float:left; margin:8px 8px 8px 26px;}
+.buildList div.item {padding: 0;}
+.buildList div.item h3{margin: 0.4em; display: inline-block;}
+.buildList div.item input {margin:8px;}
+/* this class targets the "browse buttons" on a canvas page */
+.buildList input.browse, .buildList input.genericButton, .buildList input[type=button] {margin:0 0 6px;}
+
+.contentListRight {position:absolute; right:0; top:3px; z-index:1000; width:10em; padding:6px 0; text-align:right; font-weight:normal;}
+.contentListRightOffset {padding:6px 10.1em 6px 28px;}
+.contentListRight .liveArea {position:absolute; top:6px; right:0; white-space:nowrap;} /* styles the "update points" form on assess canvas */
+.pagedContentListRight {top: 4px;}
+
+/*End misc.*/
+
+
+	
+	
+
+
+
+
+
+/* Container for user-generated contents inside a content list element */
+.details  {padding:1px 0 0 20px; color:#444; border-left:2px solid #ccc; margin:0 0 0 18px; background:inherit;}
+
+.contentList .details {padding:1px 0 12px 72px; overflow-x:auto; word-break: normal; word-wrap: break-word;}
+.contentList .details .attachments { word-wrap: normal; }
+
+/*Modification for details element for build canvas.*/
+.contentListPlain .contentListRight + .details {padding:1px 0 1px 28px; overflow-x:auto;}
+
+.announcementList .details, #announcementList .details {
+	margin-right:12.8em;
+	overflow-x:auto;
+	*overflow:hidden;
+	*overflow-y:visible;
+	_height:1%;
+	_overflow:scroll;
+	_width:70%;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.announcementList-read .details {margin-left:12px!important;padding-left:0;}*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.noimg li.read  div.details, */
+/*@since 9.1*/
+.read .details, .announcementList-read .details  {margin-left:12px; border:0; padding:1px 0 12px;}
+
+.contentList .read .details {margin-left:68px; border:0; padding-left:0;}
+.contentList-slim .read .details {margin-left:48px;} /* adjust for lists that use 32x32 icons */
+
+/*List item styles for Read mode*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. 
+.easylist .read, .noimg .read, */
+/*@since 9.1
+ul.buildList li.read, ul.contentList li.read, ul.contentListPlain li.read, div.read  {
+	border:0;
+	margin:0 0 9px 0;
+}*/
+
+
+
+/* Content list version for staff information*/
+.staffInfoList .hasPhoto .details  {margin-right:160px; min-height:135px;_height:135px;}
+.staffInfoList .hasPhoto .contentListRight {width:150px!important;}
+.staffInfoList .hasPhoto .contentListRightOffset {padding-right:160px!important;}
+
+
+
+.details > p {padding:3px 6px 6px 0; margin:0; font-size:95%;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.container p, .container p.important {
+	padding:6px 12px 6px 12px;
+	margin:0;
+	font-size:95%;
+}*/
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.container p.centered {
+	text-align:center;
+}*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.details > p span.note,*/
+/*@since 9.1*/
+.details .note {font-weight:bold;}
+
+.details > p.important   {font-weight:bold; font-size:90%; padding:0; margin:3px 0 9px 0; }
+
+.details > p.important span {font-weight:normal; color:#888;}
+
+
+/*@clean 9.1*/
+.itemDetails, .announcementInfo  {
+	position:absolute;
+	right:0;
+	top:2px;
+	bottom:8px;
+	width:14em;
+	border-left:1px dotted #ccc;
+	padding:4px 4px 4px 8px;
+	font-size:85%;
+	background-color:#fff;
+	word-wrap:break-word;
+}
+
+.announcementInfo p,  .itemDetails p {padding:2px 4px 0 4px;}
+
+.announcementInfo p span, .announcementInfo span, .itemDetails span {color:#999;}
+
+.announcementInfo p span span {font-size:95%!important;}
+
+.noItems {color:#555; padding:6px 18px; text-align:center; font-weight:normal;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.announcementInfo p {font-size:100%;}*/
+/*.itemDetails span {font-size:95%;}*/
+
+/* list that contains item attachments. */
+.details > p.attachments, .details ul.attachments, p.attachments, ul.attachments {
+	font-weight:normal;
+	font-size:95%;
+	padding:0px;
+	margin:3px 0 0 0;
+	width:98%;
+}
+
+.details ul.attachments, ul.attachments  {
+	list-style-type:none;
+	margin:3px 0 9px 0; 
+}
+
+.container ul.attachments {
+	padding:0;
+	font-size:90%;
+}
+
+.details ul.attachments li, ul.attachments li, ul.attachments li.read {
+	float:left;
+	padding:0 3px;
+	margin:0 6px 0 0;
+	clear:both; 
+}
+
+li.after { content: "\a"; }
+
+ul.attachmentsWideMargins li {
+  float:left;
+  padding:0 3px;
+  margin:12px 36px 12px 36px;
+  *float:none;
+}
+
+.details > p.attachments span, .details ul.attachments li.label, p.attachments span, ul.attachments li.label,
+.details ul.attachments li.read {
+	color:#888;
+	padding:2px 0 2px 0px;
+	margin:0 6px 0 0;
+}
+
+.details > p.attachments span, .details ul.attachments li.label span, p.attachments span, ul.attachments li.label span {
+	display:block;
+	padding:2px 0 2px 0px;
+}
+
+.details > p.attachments a, .details ul.attachments li a, p.attachments a, ul.attachments li a {
+	padding:2px 0 2px 0px;
+}
+
+ul.attachments li a.removeTag {
+	padding:2px 9px 2px 0;
+}
+
+ul.attachments li.addTag {white-space:nowrap;}
+
+ul.attachments li.addTag span {
+	display:inline;
+}
+ul.attachments li.addTag a.browse {
+	padding:0 6px 2px;
+  font-weight:normal;
+  white-space:nowrap;
+}
+ul.attachments li.addTag span.addTagField {
+	padding:6px;
+  background:#eee;
+  float:none;
+  width:auto;
+}
+ul.attachments li.addTag span.addTagField input {
+	float:none;
+  margin:0;
+  vertical-align:middle;
+}
+
+.details > p.attachments a, .details ul.attachments li a span, p.attachments a, ul.attachments li a span {
+	padding-left:3px;
+	text-decoration:none;
+}
+
+/*Shifting details div more to the right as there is no icon.
+ul.noimg li div.details, ul.buildList li div.details, ul.contentListPlain li div.details,
+div.staticHeader div.details, div.staticFooter div.details {
+	margin-left:18px;
+}*/
+
+
+
+
+
+/*================ GRADEBOOK "ORGANIZE COLUMNS" PAGE ==============================================*/
+
+div.staticFooter div.details {
+	margin-left:18px;
+}
+
+div.staticHeader {margin:10px 0 0  0}
+div.staticFooter div.details { border-bottom:1px solid #ddd!important;*padding-bottom:12px;}
+
+.gbColumns_rumble, .gbColumns_rumble_bottom {margin-left:60px!important;border:1px solid #ddd!important;border-bottom:0!important}
+.gbColumns_rumble_bottom {border:1px solid #ddd!important;border-top:0!important}
+
+
+.staticHeader, .staticFooter {clear:both;position:relative;zoom:1}
+.staticHeader div.itemHeaderControl, .staticFooter div.itemHeaderControl, ul.gbCategories li div.itemHeaderControl {right:0;zoom:1}
+
+.staticHeader div.itemHeaderControl, .staticFooter div.itemHeaderControl, ul.gbCategories li div.itemHeaderControl {right:0;zoom:1}
+
+
+
+.staticHeader div.itemHeaderControl a, .staticFooter div.itemHeaderControl a, ul.gbCategories li div.itemHeaderControl a {display:inline-block} 
+
+
+/*safari only hack to remove gap at the bottom of the tabs. */
+
+/*\*/
+html*.staticHeader div.itemHeaderControl, html*.staticFooter div.itemHeaderControl, html*ul.gbCategories li div.itemHeaderControl  {
+top:5px;
+
+}
+/**/
+
+ul.dragableHighlight {background:#fff;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:12px 12px 3px 12px; margin:12px -12px 12px -12px}
+
+ul.gbCategories li h3.item, div.staticHeader h3.item, div.staticFooter h3.item  {padding-left:9px}
+ul.gbCategories li h3.item a.toggleLink, div.staticHeader h3.item a.toggleLink, div.staticFooter h3.item a.toggleLink  {margin-right:6px;margin-top:-2px}
+
+div.areaHighlight div.container {background:#f9f9f9}
+
+ul.dragableHighlight li h3.item, .dragableHighlight div.details {border-color:#999;}
+
+
+
+
+/* Extra text beside/below main title in a caret list page */
+.caretTitleModifier {
+    padding:1px 0 0 3px;
+    color:#444;
+    font-weight:normal;
+	font-size:90%;
+}
+
+div.landingPageColumn h3.hiddenlink .linkStatus {
+   margin:0;
+   font-size:85%;
+   font-weight:normal;
+   display:block;
+   padding:0.4em 0 0 0;
+
+}
+
+/*.caretTitleModifier a.browse, div.landingPageColumn ul li h3.hiddenlink a.browse {
+	white-space:nowrap;	
+	font-size:92%;
+	 color:#444;
+	 padding:0px 6px 1px 6px;
+}
+
+.caretTitleModifier a.browse:hover, div.landingPageColumn ul li h3.hiddenlink a.browse:hover,
+.caretTitleModifier a.browse:focus, div.landingPageColumn ul li h3.hiddenlink a.browse:focus {
+	text-decoration:none;
+}*/
+
+
+
+
+
+
+/*-------------------------------SUBLISTS------------------------------------*/
+
+/*----------------
+	ul.subList is used if ul.buildList and ul.contentListPlain contain nested lists. 
+	Nested lists can be made reorderable.
+---------------*/
+
+.subList, .subList-reorder {margin:3px 0 6px; padding:4px 0 0 6px; border:1px dotted #CCCCCC;border-width:1px 0 0 1px}
+
+.subList-reorder {padding-left:23px;}
+
+.subList li {padding:3px;border:none;font-size:95%;}
+
+.buildList .detailList {margin:0;padding:3px 3px 3px 23px;}
+
+.subList-reorder li {border:0;padding:3px 6px;font-size:95%;}
+
+.subList li a img, .subList-reorder li a img {vertical-align:middle;}
+
+.subList li p, .subList-reorder li p {padding:0; margin:3px 6px 3px 24px; font-size:90%; color:#444; display:none;}
+.subList li p {visibility:hidden;}
+
+.subList li p span, .buildList .detailList li .subList li p span, .subList-reorder li p span {font-weight:bold;display:inline;float:none;}
+
+.subList-reorder .itemDetails, .subList-reorder .details, .subList .details {display:none;}
+
+.itemDetails + .details {margin-right:13em;overflow:visible;}
+
+.subList li p span {font-weight:bold;}
+
+/* subListArtifact is only used for artifact list on OPT canvas page */
+.subListArtifact, .detailList .subListArtifact {clear:both;}
+
+.subListArtifact li, .detailList .subListArtifact li {position:static;} /* corrects layout issue in IE6&7 */
+
+.detailList .subListArtifact, .detailList .subListArtifact li, .detailList .subListArtifact li a {zoom:1;}
+
+
+.buildList .detailList {margin:0 0 0.6em 0.7em;}
+
+/* no need to indent sublists (of attached files/objectives) in a canvas page */
+.buildList .detailList .subList {margin:0 0 6px 0; border:0; padding:0;}
+
+/* survey answers are listed in an ordered subList */
+ul.buildList ul.detailList ol.subList { list-style-type:decimal; list-style-position:inside; }
+
+ul.buildList ul.detailList li {
+	border:none;
+	margin:0 0 0.2em 0;
+	padding:0 0 0.2em 0;
+	display: table-row;
+}
+
+ul.buildList ul.detailList .detail-item-title {
+	float:left;
+	width: 135px;
+	font-weight:bold;
+	display:block;
+}
+
+ul.buildList ul li > div {
+	float:none;
+	padding:0 0 0 0.3em;
+	width:79%;
+	display:block;
+	margin-left: 135px;
+}
+
+/* corrects formatting issue with contextual menu in canvas pages: buildList, noimg list */
+ul.buildList ul li div.contextMenuContainer,
+ul.noimg li div.contextMenuContainer {
+  display:inline;
+  float:none;
+  width:auto;
+  }
+
+.buildList .pageBreak .item, .buildList .sectionBreak .item {background-image:url(images/readback.png);color:#777;border-top:2px dotted #ccc;}
+
+div.itemHeaderControl {position:absolute; right:13.5em; top:9px;}
+div.itemHeaderControl a img {margin:0;padding:0;}
+
+
+
+/*h3 span.reorder {
+	top:2px;
+	left:-2px;
+	position:absolute;
+	background:#ededed url(images/cm_reorder_updown.gif) no-repeat center center;
+	width:20px;
+	height:20px;
+	opacity:1;filter:alpha(opacity=100);
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	height:28px;
+	width:20px;
+}
+
+ul.iconsOnly li  h3.item  span.reorder {	
+		background-image:url(images/cm_reorder.gif);
+		background-repeat: no-repeat;
+		background-position: center center;
+		top:8px;
+}
+*/
+
+
+/*Undimming contextual menu link on hover. May need to make this JS driven.*/
+/*
+ul.easylist li h3.item:hover span.reorder, ul.easylist li h3.item:hover a.cmimg, 
+ul.noimg li h3.item:hover span.reorder, ul.noimg li h3.item:hover a.cmimg,
+
+ul.buildList li h3.item:hover span.reorder, ul.contentList li h3.item:hover span.reorder, 
+ul.contentListPlain li h3.item:hover a.cmimg, ul.contentListPlain li h3.item:hover span.reorder, 
+ul.contentListPlain li h3.item:hover a.cmimg, .contentPageItem h3.item:hover a.cmimg,
+.contentPageItem h3.item a.cmimg:hover, ul.iconsOnly li:hover h3.item span.reorder,
+ul.announcementList li h3.item:hover span.reorder,
+ul.buildList li h3.item:focus span.reorder, ul.contentList li h3.item:focus span.reorder, 
+ul.contentListPlain li h3.item:focus a.cmimg, ul.contentListPlain li h3.item:focus span.reorder, 
+ul.contentListPlain li h3.item:focus a.cmimg, .contentPageItem h3.item:focus a.cmimg,
+.contentPageItem h3.item a.cmimg:focus, ul.iconsOnly li:focus h3.item span.reorder,
+ul.announcementList li h3.item:focus span.reorder   {
+	opacity:1;
+	filter:alpha(opacity=100);
+	cursor:move;
+}*/
+
+
+
+
+/*---MULTIPLE GROUP ASSIGNMENT---*/
+
+div.multiAssign {margin:3px 0 9px 0;}
+
+div.multiAssign ul {list-style:none;border:0;padding:0;margin:0;}
+div.multiAssign ul li, div.multiAssign ul li.read {
+	line-height:1.3em;
+	text-align:center;
+	width:13em;
+	background:#f6f6f6;
+	clear:none;
+	float:left;
+	margin:0 9px 0 0;
+	-moz-border-radius:3px;
+	border:0;
+	padding:1px 6px 6px 6px;
+	font-size:90%;
+}
+
+div.multiAssign ul li a, div.multiAssign ul li a {
+	font-weight:bold;
+	*font-size:95%;
+	font-size:100%;
+}
+
+div.multiAssign ul li p {padding:1px 0 2px 0;}
+div.multiAssign ul li.label {
+	line-height:1.1em;
+	border:0;
+	color:#888;
+	background:transparent;
+	font-weight:normal;
+	padding:0;width:12em;
+	white-space:normal;
+	text-align:left;
+	*font-size:95%;
+}
+
+div.multiAssign ul li p span {
+	color:#888;
+}
+
+div.multiAssign a.buttonMicro, h3 a.buttonMicro {
+	padding:0px 5px;
+	background:#ededed url(images/button3_back.gif) repeat-x scroll 0%;
+	 font-size:90%;/**/
+	text-decoration:none;
+	border:1px solid #ccc;
+	color:#666;
+	margin:1px auto 12px auto;
+	white-space:nowrap;
+}
+
+
+div.multiAssign a.buttonMicro:hover, h3 a.buttonMicro:hover,
+div.multiAssign a.buttonMicro:focus, h3 a.buttonMicro:focus {
+	background:#fff;
+	border:1px solid #aaa;
+	color:#333;
+}
+
+div.multiAssign a.simpleLink {
+	font-weight:normal;
+	color:#666;
+	display:block;
+}
+
+h3 span.status a.buttonMicro { 
+	font-size:90%;
+	font-weight:normal;
+	margin-left:6px;
+}
+
+h3 span.status, h3 div.status {
+	font-weight:normal;
+	font-size:80%;
+	margin-left:6px;
+	background:#f3f3f3;
+	padding:3px 6px;
+}
+
+h3 span.status span, h3 div.status span {
+	color:#888;
+}
+
+h3 div.status {display:inline;}
+
+
+
+
+
+/*------------------------------------------SPLASH PAGE------------------------------------------------------*/
+
+.contentBlock {padding:0.6em 1.4em 1em 1.4em; margin:0 1em 0.6em 1em; border:1px solid #ddd;}
+
+.contentBlock h3 {font-size:110%; margin:0 0 1em 0; padding:0.4em; border-bottom:1px solid #ddd;}
+
+.contentBlock ul {margin:0 0 0 0;padding:0 0 0 1.2em;list-style-type:none;}
+
+.contentBlock ul.threeCol {float:left;width:30%;}
+
+.contentBlock ul.threeCol li {
+	background:transparent url(images/list_bullet.gif) no-repeat 9px 4px;
+	font-weight:bold;
+	font-size:90%;
+	margin:0px;
+	padding:0px 0px 6px 22px;
+	float:none;
+}
+
+.contentBlock ul.threeCol li a {background-image:none;}
+
+.contentBlock ul.threeCol li a:hover, .contentBlock ul.threeCol li a:focus {text-decoration:underline;}
+
+.contentBlock h3 input, .contentBlock h3 select, .contentBlock input, .contentBlock select  {font-size:90%;font-weight:normal;border:1px solid #999;margin-left:6px;padding:1px 2px;vertical-align:middle;}
+
+.contentBlock ol li input[type="checkbox"] {margin-right:6px;vertical-align:middle;}
+
+.contentBlock h3 a.browse, .contentBlock a.browse, .contentBlock input.browse {
+	background:#ededed url(images/button3_back.gif) repeat-x;
+	border:1px solid #ccc;
+	border-bottom:1px solid #aaa;
+	border-right:1px solid #aaa;
+	padding:1px 3px 2px 3px;
+	text-decoration:none;
+	font-size:90%;
+	font-weight:normal;
+	display:inline;
+}
+
+/*fieldset.stepcontent ol li a.browse {
+	border:1px solid #555; 
+	background:white;
+}*/
+
+
+
+
+/*---------------------------------LANDING PAGE--------------------------------*/
+
+div.landingListWrapper {text-align:center; margin:1.6em 0 0 0;}
+
+/*2 column setup*/
+div.landingListWrapper ul.landingList, div.landingListWrapper ul.landingList-2cols {
+	width:90%;
+	margin:0 auto;
+	list-style:none;
+	padding:0;
+}
+
+div.landingListWrapper ul.landingList li {
+	margin:0 0 1.6em 0em;
+	width:50%;
+	text-align:left;
+}
+
+div.landingListWrapper ul.landingList-2cols li {
+	float:left;
+	margin:0 3em 1.6em 0em;
+	width:45%;
+	text-align:left;
+}
+
+div.landingListWrapper ul.landingList li.restart {
+	margin-top:-13.6em;
+}
+
+div.landingListWrapper ul.landingList li a, div.landingListWrapper ul.landingList-2cols li a {
+	text-decoration:none;
+}
+
+div.landingListWrapper ul.landingList li a:hover, div.landingListWrapper ul.landingList-2cols li a:hover,
+div.landingListWrapper ul.landingList li a:focus, div.landingListWrapper ul.landingList-2cols li a:focus {
+	text-decoration:underline;
+}
+
+div.landingListWrapper ul.landingList li p, div.landingListWrapper ul.landingList-2cols li p {
+	padding:0.4em 0.6em 0 1.4em;
+	margin:0;
+	border-top:1px solid #ddd;
+}
+
+div.landingListWrapper ul.landingList li  ul {
+	list-style-type:square;
+	margin:0em 0.4em 0.4em 0.8em;
+}
+
+div.landingListWrapper ul.landingList li ul li {
+	clear:left;
+	padding:0;
+	margin:0;
+	color:#000;
+}
+
+div.landingListWrapper ul.landingList-2cols li ul li {
+	float:none;
+	padding:0;
+	margin:0;
+	color:#000;
+}
+
+div.landingListWrapper ul.landingList li h3, div.landingListWrapper ul.landingList-2cols h3 {
+	margin:0;
+	padding:0.4em 1.2em;
+	font-size:110%;
+	background:transparent url(images/list_bullet.gif) no-repeat  0.1em 0.7em;
+}
+
+/* landing Page list column. */
+
+.containerLanding, div.landing div.container, body.landingBody div.container	{
+	min-height:400px;
+	padding:10px 0 12px 0;
+	margin:0;
+	background:#EDEDED;
+}
+
+div.landingPageColumn {margin:1.2em 0;padding:0;float:left;}
+
+.twoCol {margin:1.2em 0;width:49%;}
+
+.threeCol {margin:1.2em 0;width:32.5%;}
+
+.landingPageColumn ul {margin:0 0 0 2em;padding:}
+
+.landingPageColumn .outcomesLanding {padding:0 0 .4em 0;}
+
+.landingPageColumn ul li {margin:0 0 1.6em 0em;text-align:left;}
+
+.landingPageColumn .outcomesLanding li  {margin:0 0 1.2em 0em;}
+
+.landingPageColumn ul li a {text-decoration:none;}
+.landingPageColumn ul li a:hover {text-decoration:underline;}
+
+.landingPageColumn h3, .landingPageColumn .outcomesLanding li a {
+	margin:0;
+	padding:0.4em 1.2em;
+	font-size:110%;
+	background:transparent url(images/list_bullet.gif) no-repeat  0.1em 0.7em;
+}
+
+.landingPageColumn .outcomesLanding li h3 {
+	background-image:none;
+	padding:0.4em 0;
+	font-size:115%;
+	border-bottom:1px solid #ddd;
+}
+
+.landingPageColumn .outcomesLanding li a {font-weight:bold;font-size:100%;}
+
+.landingPageColumn .outcomesLanding li p {border-top:0!important;}
+
+
+/*If image is used in the header*/
+.landingPageColumn h3 img {margin:0 0 0 -12px}
+
+.landingPageColumn h3.hiddenlink img {
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	position:absolute;
+	top:0;
+	left:1.1em;
+	*left:-3.1em;
+}
+
+.landingPageColumn ul li  ul {list-style-type:square; margin:0em 0.4em 0.4em 0.8em; padding:0 0 0 2.5em;}
+.landingPageColumn ul li  ul li {color:#999!important; float:none; padding:0; margin:0; color:#666;}
+.landingPageColumn ul li  ul li.more {padding-top:3px;}
+.landingPageColumn ul li  ul li.more a {
+	padding:0 9px 0 0;
+	color:#666;
+	background:transparent url(images/list_bullet_single.gif) no-repeat  right 4px;
+}
+
+.landingPageColumn ul li p {padding:0.4em 0.6em 0 1.4em; margin:0;border-top:1px solid #ddd;color:#666;}
+
+/*#contentPaneWide div.gray b, #contentPane div.gray b  {background:#ededed;}*/
+
+
+
+/*Tool management page*/
+/*hidden tool link*/
+.landingPageColumn h3.hiddenlink {position:relative;padding:1em 1.2em  0.6em 4.2em;}
+
+.landingPageColumn h3.hiddenlink a, .landingPageColumn h3.hiddenlink a:hover {color:#777;text-decoration:none;}
+
+
+
+
+/*--- Outcomes styles ---*/
+.subhead_text {color:#333333;font-size:90%;padding:0pt 0pt 2px;}
+
+.list_text {color:#666666; font-size:85%; font-weight:normal; padding:0pt 2px 2px 1.3em;}
+
+.landingPageColumn .outcomesLanding .list_text a {background-image:none;font-weight:normal;margin-left:3px;padding:0pt;}
+
+
+/* os landing pages, cs splash pages */
+div.datalistScroll {
+  margin:0.4em 0 0.4em 1.4em;
+  border:1px solid #ddd;
+  background-color:white;
+  height:360px;
+  overflow:auto;
+}
+
+div.datalist {
+  margin:0.4em 0 0.4em 1.4em;
+  border:1px solid #ddd;
+  background-color:white;
+}
+div.landingPageColumn ul li ul.datalistScroll {
+  margin:0.4em 0 0.4em 1.4em;
+  border:1px solid #ddd;
+  border-top:none;
+  padding:0;
+  background-color:white;
+  height:250px;
+  overflow:auto;
+  list-style:none;
+}
+
+div.landingPageColumn ul li ul.datalistScroll li {
+  padding:2px;
+  background-color:white; 
+  border-top:1px solid #ddd;
+}
+
+div.landingPageColumn ul li ul.datalistScroll li:hover,
+div.landingPageColumn ul li ul.datalistScroll li:focus {
+  background-color:#ffffcc; 
+}
+
+div.datalist table thead tr th,
+div.datalistScroll table thead tr th {
+  background-color:#aaa;
+  color:#fff;
+}
+
+div.datalist table td.overdue {
+  background:url(images/stage_deadline4.gif) left center no-repeat;
+  color:red;
+  font-weight:bold;
+  padding:1px 0pt 1px 20px;
+}
+
+
+.emptylist {
+  margin:6px 0 0 1.4em;
+  background-color:white;
+  border:1px solid #ddd;
+  padding:12px;
+}
+
+div.landingPageColumn ul li ul.subcaret {
+  margin:0.4em 0em 0.4em 1.4em;
+  padding:0;
+  list-style-type:none;
+  border:1px solid #ddd;
+  border-top:none;
+}
+div.landingPageColumn ul li ul.subcaret li {
+  margin:0;
+  padding:2px 1px 2px 2px;
+  list-style-type:none;
+  background:white; 
+  border-top:1px solid #ddd;
+  font-weight:normal;
+}
+div.landingPageColumn ul li ul.subcaret li.complete {
+  padding:2px 1px 2px 20px;
+	background:white url(images/workflow_detail_complete2.gif) 2px 2px no-repeat;
+}
+div.landingPageColumn ul li ul.subcaret li.inprogress {
+  padding:2px 1px 2px 20px;
+	background:white url(images/workflow_detail_active.gif) 2px 2px no-repeat;
+}
+.iconLegendLabel {
+  margin:1px 0 1px 1.6em;
+  font-size:95%;
+}
+
+div.landingPageColumn ul li ul.subcaret li a,
+div.landingPageColumn ul li ul.datalist li a,
+div.landingPageColumn ul li div a,
+div.landingPageColumn ul li table a,
+div.landingPageColumn ul li p a {
+  text-decoration:underline;
+}
+    
+/*---------------------------------------------DESIGN AREA------------------------------------------------------*/
+
+ div#emptyText {margin:0.6em 16px;} /* shown when there are no items in the canvas */
+
+/*@since 9.1*/
+.infoListWrapper,
+.designAreaHeader, .designAreaFooter { /*@since 9.3*/
+  position:relative;
+  border:1px solid #EEE;
+	-moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  margin:0 0 6px;
+  padding:9px 12px;
+  background:#F6F6F6;
+  *zoom:1;
+}
+.designAreaHeader, .designAreaFooter {margin:0.6em 0 0.6em 18px;}
+
+.infoListWrapper h3 {margin:0; padding:0;}
+.infoListWrapper h3 a {
+  display:block;
+  padding:3px 16px;
+  background:transparent url(images/indicators.png) no-repeat 0 -443px;
+}
+.infoListWrapper h3 a.open {background:transparent url(images/indicators.png) no-repeat 0 -1036px;}
+
+.infoList > li {border-top:1px dotted #ddd; margin: 0 0 3px 0; padding:3px 0 0 0!important;}
+.infoListWrapper .infoList > li {border-top:1px dotted #cdcdcd;}
+
+.infoList li:first-child {border-top:none;}
+.infoList li div h3 {margin:0; padding:0; font-size:100%; color:#555; font-weight:normal;}
+.details .infoList {margin-top:0!important;}/* for the Question Block ui in the assess Canvas */
+
+/* extends the .infoList class to display list items horizontally */
+.infoListFloat {margin:0;}
+.infoListFloat li {
+  float:left; 
+  border:none;
+  padding:3px 10px!important; 
+  background: url(images/indicators.png) 0 50% no-repeat;
+  color:#555;
+  font-size:95%;
+}
+
+.designAreaHeader h3, .designAreaFooter h3 {margin:0; padding:0; color:#666;}
+.designAreaHeader .headertext, .designAreaHeader .footerText {margin:3px 6px;}
+
+/*---------------------------------------------SEQUENCE MAP-----------------------------------------------------*/
+.sequenceMapHead {
+  margin:6px 0;
+}
+.sequenceMapHead h3 {
+  margin:12px 0 6px;
+}
+.sequenceMapHead p {
+  margin:0 0 6px;
+  padding:0;
+  color:#666666;
+  font-size:95%;
+}
+div.sequenceMapHead div.actionBar {
+border:none;
+background:#FFF7DE;
+}
+
+
+/*----------------------------------------GENERAL LIST --------------------------------------------------------*/
+/* used in Learning Objects catalog */
+ul.metaDataList {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+ul.metaDataList li {
+  margin:0;
+  padding:2px 0;
+  clear:both;
+}
+ul.metaDataList li h3 {display:inline; margin:0;}
+
+
+/* ------------------------------- styles for new Content List DOM (since 9.1 Sprint 2) -------------------------- */
+.contentListPlain .item h3, 
+.contentList .item h3,
+.contentListPlain .item .contextMenuContainer, 
+.contentList .item .contextMenuContainer {
+  display:inline;
+  margin:0;
+  word-wrap:break-word;
+}
+
+.contentList .item > input[type=checkbox], /* needed for the checkboxes on the Assessment Canvas pages */
+.contentListPlain .item > input[type=checkbox] {
+  position:absolute;
+  left:26px;
+  top:8px;
+}
+
+
+/*Lesson Plans*/
+body#body {padding-bottom:60px;}  
+#loadstatus {position:relative;height:180px;}
+/*.loading {position:absolute; top:30px; left:30%; font-size:32px; border:1px solid #1e90ff;background:#ffffff;padding:10px; }*/
+
+fieldset.highlight {background: #eee;}
+fieldset.highlight div.input {border-color: #ccc;}
+
+.builderItem .item {font-size:100%; padding:12px 9px;background:#fff;}
+.builderItem:hover .item, .builderItem:hover .inputOptions {background:#efefef!important;}
+.builderItem {border:0!important;}
+.builderItem .close {position:absolute; right:5px; top:5px; cursor:pointer}
+.builderItem iframe {width:100%!important}
+div.subheading {font-weight: bold;}
+div.required div.inputField {margin-left: -1.5em;padding-left: 1.5em;background: url(../../images/ci/icons/required.gif) no-repeat left 2px;}
+
+.inputOptions {background:#fff;border-left: 2px solid #ccc;border-top: 1px dotted #ccc;margin-left: 18px;padding: .5em;}
+
+.offscreen {position: absolute;left: -999em;height: 0;}
+
+/* hovering over the edit link on a component should result in a pointer cursor shape, not a move shape */
+.label a:hover {cursor:pointer;}
+
+/*
+div.inputValue {float: left;width: 79%;}
+div.inputField {float: left;width: 20%;}
+div.input {padding: .6em 0;}
+div.input + div.input {border-top: 1px solid #eee;}
+fieldset {margin: 1em 0;padding: 0;border: none;}
+fieldset h3 {margin: 0;padding: .3em .5em;background: #888;font-weight: bold;color: #fff;}
+fieldset h3.item {background: none;color: #000;font-size: 100% !important;font-weight: normal;padding: 0 !important;}
+div.fields {margin: 0 2em;}
+h3.item div.fields {margin: 0 .5em !important;border: none !important;}
+ul.contentListPlain div.fields {margin-left: 18px;border-left: 2px solid #ccc;}
+*/
+
+
+/*Assessment Canvas, Content List */
+div.contentListRight a {font-weight:bold;}
+  
+div.contentListRight span span {display:block;padding:9px 0;color:#666666;font-size:90%;}
+
+div.contentListRight strong {padding:0pt 0.4em 2px;}
+
+/*End Assessment Canvas*/
+
+
+/* ---------------- DISCOVER "CRITERIA SUMMARY" STYLES ------------------- */
+.criteriaSummary {margin:0;}
+.criteriaSummary h3 {margin:6px 0 3px;padding:0;color:#666666;font-size:100%;}
+.criteriaSummary .hidden {display:none; visibility:hidden;}
+.criteriaSummary ul {margin:0; padding:0;}
+.criteriaSummary ul li {float:left; margin:0 1px; padding:2px; font-size:90%; white-space:nowrap;}
+.criteriaSummary ul li:first-child {margin-left:0;}
+.criteriaSummary ul li strong {display:block; float:left; *float:none; *display:inline-block; font-weight:normal; margin:0 0 2px; color:#555;}
+.criteriaSummary span, .criteriaSummary a {display:block; float:left; *float:none; *display:inline-block; background:#eee; padding:0 2px; margin:0 2px; color:#000; white-space:nowrap;}
+.criteriaSummary a {padding-right:18px; text-decoration:none; background:#eee url(../../../images/ci/icons/delete_li.gif) no-repeat 96% 2px;}
+.criteriaSummary .button-4-img {margin-top:-1px; padding:0 2px;  background-image:none;}
+.criteriaSummary ul li span:last-child, .criteriaSummary ul li a:last-child {margin-right:0;}
+
+.randomBlockCriteria ul {font-size:115%;}
+
+.randomBlockCriteria ul li span, .randomBlockCriteria ul li a {
+                padding:1px 7px;
+                border:1px solid #ccc;
+                border-color:#ccc #ddd #ddd  #ccc;
+}
+
+.randomBlockCriteria ul li {margin:0 12px 0 1px;}
+
+.randomBlockCriteria ul li strong {margin:2px 4px 2px 0;}
+
+/* Learning Standards*/
+.alignPanelLightbox {min-height:250px;min-width:650px; padding:10px 12px;}
+.alignHeader {padding:6px 0 0; font-size:95%; font-weight:bold; color:#555;}
+
+.alignPanel table td,
+.alignPanel table th { font-size: 90%; }
+
+.alignPanel table td.descriptionCell {
+	word-break: break-word;
+	word-wrap: break-word;
+	min-width: 120px;
+}
+
+.alignPanel table td.descriptionCell div {
+	width: 250px\9;
+	overflow: hidden\9;
+}
+
+.alignPanel table td.infoCell div,
+.collapseTabs .alignPanel table td.descriptionCell div {
+	width: 123px\9;
+}
+
+.collapseTabs .alignPanel table td.infoCell div {
+	width: 80px\9;
+}
+
+@-moz-document url-prefix() {
+.alignPanel table td.descriptionCell div {
+	max-width: 250px;
+}
+
+.alignPanel table td.infoCell div,
+.collapseTabs .alignPanel table td.descriptionCell div {
+	max-width: 123px;
+}
+
+.collapseTabs .alignPanel table td.infoCell div {
+	max-width: 80px;
+}
+}
+
+.alignPanel thead th.smallCell { padding:4px 0; }
+.alignPanel thead th {white-space:nowrap;}
+.alignPanel td.actionCell {padding:4px 0; white-space:nowrap; width:1%;}
+
+.pageBreadcrumb {background:#FFF;height:1em;padding:6px}
+.pageBreadcrumb ul{list-style:none;margin:0px;padding:0px;font-size:90%;}
+.pageBreadcrumb li {float:left;font-weight:bold; color:#999999; margin-left:3px;}
+ 
+.pageBreadcrumb li a {text-decoration:none;color:#003366;font-weight:bold;margin-right:3px;}
+.pageBreadcrumb li a.active {text-decoration:none;color:#003366;font-weight:bold;}
+ 
+.sStatus {color:#006633;padding:0px;font-size:90%;margin-left:8px;height:14px;} 
+.sStatusI {color:#cc0000;padding:0px;font-size:90%;margin-left:8px;height:14px;} 
+
+/* Start: Admin Standards Management. Since 9.1 */
+.panelList {padding:0; margin:2px 0px 3px; word-wrap:break-word} /* this is the outermost list that contains all panels */
+.panelList > li {margin:0 0 1px;}
+
+.panelNested {background-color:#FFFFFF; margin:4px 0 0; padding:4px; overflow:hidden;} /* a nested list of child panels */
+
+.panelHead {position:relative; margin:0; padding:6px 8px; background:#EFEFEF;} /* a collapsible list item that contains child panels (.panelNested) */
+.panelHead a {text-decoration:none; color:#000; word-wrap:break-word}
+
+.panelItem {position:relative; border-bottom:1px solid #eee; padding:6px 8px 6px;} /* a panel list item that has no children */
+.panelItem:last-child {border-bottom:none!important;}
+
+.panelList_leftCol {position:absolute; left:6px; top:6px;} /* each row is split into three columns: checkbox, text and icon */
+.panelList_rightCol {position:absolute; right:6px; top:6px;}
+.panelList_centerCol {padding:0 18px;}
+
+/* Start: Standard Import Error Log */
+ul.logMessages {list-style: none;margin-left: 0;padding-left: 1em;text-indent: -1em;}
+li.logError {color: red;}
+li.logWarning {color: blue;}
+li.logInfo {}
+li.logMessage {margin-top: 0.1em;}
+/* End: Standard Import Error Log */
+
+/*End Learning standards*/
+
+/* -------------------- SEARCH RESULT LIST STYLES -------------------- */
+
+/**
+ * @since 9.1
+ */
+div.searchResultList-sortOptions
+{
+  border-bottom: 1px solid #bbbbbb;
+  background-color: #eeeeee;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  min-height: 20px;
+}
+/**
+ * @since 9.1
+ */
+div.searchResultList-sortOptionsCount
+{
+  width: auto;
+  float: left;
+}
+
+/* since 9.1SP3: new list for Symbol Picker in the VTBE (select_symbol.jsp) */
+.symbolList {margin:0 0 6px;}
+.symbolList li {display:inline-block; *display:inline; margin:0 1px 2px; padding:0;}
+.symbolList a {display:inline-block; padding:3px 6px; max-height:3.6em; color:#000; text-decoration:none; font-size:130%;}
+.symbolList a:hover {background-color:#fff; -moz-border-radius:2px; -webkit-border-radius:2px; -moz-box-shadow:0 0 4px rgba(0,0,0,.3); -webkit-box-shadow:0 0 4px rgba(0,0,0,.3);}
+
+
+/* -------------------- ADD/REMOVE MODULE LIST STYLES (Added 6/28/10 for SP3) -------------------- */
+
+.moduleList {
+    border-top: 1px solid #ccc;
+    }
+    .moduleItem {
+        border-bottom: 1px solid #ccc;
+        }
+        .module {
+            overflow: hidden;
+            padding: 0 10px;
+            }
+            .moduleHeading {
+                overflow: hidden;
+                padding: 10px 0;
+                }
+                .module h3 {
+                    display: inline;
+                    font-size: 110%;
+                    margin: 0;
+                    }
+            .moduleDescription {
+                width: 90%;
+                }
+                .more {
+                    display: none;
+                    }
+            .moduleAction {
+                margin: 10px 0;
+                }
+                .moduleCategory {
+                    background: #fff7de;
+                    padding: 3px;
+                    }
+                .moduleCategory a {
+                    font-weight: bold;
+                    }
+            .moduleSample {
+                display: none;
+                padding-left: 10px;
+                }
+
+.expandedModule {
+    background-color: #efefef;
+    }
+    .expandedModule .moduleDetails, 
+    .expandedModule .moduleSample {
+        width: 47%;
+        }
+    .expandedModule .more {
+        display: inline;
+        }
+    .expandedModule .moduleSample {
+        display: block;
+        }
+		
+/* Community tab picker styles */		
+ul.tabgrouplist .item:hover, ul.tabgrouplist .item:focus {
+    background-color: #FFFFFF !important;
+    cursor: default !important;
+}
+ul.tabgrouplist ul li {
+    line-height: 27px;
+}
+ul.tabgrouplist .subList, .subList-reorder {
+    border: medium none !important;
+}
+
+/* Building Block List Page */
+img.managedPluginStatusIcon{
+  margin: 1px 7px 3px 0;
+}

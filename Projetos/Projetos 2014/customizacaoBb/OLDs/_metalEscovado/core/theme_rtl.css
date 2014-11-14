@@ -1,0 +1,2770 @@
+/*--------------------------- RIGHT TO LEFT MODIFICATIONS -----------------------------*/
+
+
+.altHideoff1 {
+right:-1000px;
+left:auto;
+}
+
+ul.nav li.sub ul {
+left:auto;
+right:auto;
+top:-10000px;
+}
+
+/*Hack dealing with help flyout positioning and z-index issues in RTL in IE6 and 7*/
+div.topGlobalLinks {
+	*z-index:900;
+}
+
+div.topGlobalLinks ul.nav li.sub ul {
+	zoom:1;
+	position:absolute!important;
+}
+
+div.topGlobalLinks ul.nav li.sub {
+	position:static!important
+}
+
+div.topGlobalLinks ul.nav li.sub:hover {
+	position:relative!important;
+}
+/*End hack*/
+
+/*=================== TOP TABS =========================================*/
+
+/*Global links*/
+.topGlobalLinks a.home,
+.topGlobalLinks a.logout,
+.topGlobalLinks a.help {
+	background-position:99% center;
+	padding: 3px 28px 3px 4px;
+	border-right:1px dotted #555;
+	border-left:none;
+}
+
+.topGlobalLinks ul li:first-child a, .topGlobalLinks ul li:first-child a:hover {
+	border:none;
+}
+
+.topGlobalLinks ul li {float: right;}
+
+.topGlobalLinks ul li img {position:absolute;top:2px;right:3px;left:auto;}
+
+ul.nav li.sub ul.narrow li a, ul.nav li.sub ul.narrow li a:hover {
+text-align:right;
+}
+
+/* @group TOP FRAME HOT ITEMS
+----------------------------------------------- */
+.hotItems {
+    margin: 0 0 0 3px;
+}
+
+.hotSpots {
+    padding: 3px 3px 5px 18px;
+}
+
+.hotSpots a {
+    padding: 0 0 0 6px;
+}
+
+.hotSpots li:after {
+    right: auto;
+    left: 1px;
+}
+/* @end TOP FRAME HOT*/
+
+/* ========================== LAYOUT ========================================== */
+
+#navigationPane, div.navigationPane { 				
+  position:absolute;
+  top:0px;
+  right:0;
+  left:auto;
+  width:212px;
+  padding:0;
+  margin-top:0px;
+  clear:both;
+}
+
+
+div.paneTabs ul li, div.paneTabs ul li.active, div.paneTabs ul li.addbutton {
+  	float:right;
+  	margin:0px 0px 0px 5px;
+}
+
+
+/*--- Navigation pane collapse control. ---*/
+#puller {
+  right:198px; 
+  left:auto;
+}
+
+#puller a { 
+	background:transparent url(images/menu_collapse3_rtl.gif) no-repeat 0 0;
+}
+
+.pullcollapsed a {
+background:transparent url(images/menu_expand3_rtl.gif) no-repeat scroll 0pt !important;
+}
+
+
+.pullcollapsed {/*left:auto !important;right:1px !important*/}
+
+.navcollapsed {
+	margin-right: -198px;
+}
+
+/*Sets layout and dimensions of the content pane.*/
+#contentPane, div.contentPane {	
+	margin:0px 212px 12px 14px;
+}
+
+.contcollapsed {
+	margin-right:15px !important;
+}
+
+/*Inline receipts*/
+.receipt {*height:1%;}
+.receipt p {padding:0;margin:0;_position:auto;}
+
+.infoReceipt .button-1,
+.infoReceipt.bad .button-1,
+.infoReceipt.good .button-1 {
+  float: left;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+.infoAlert span {
+  padding: 5px 0px 5px 140px;
+}
+
+.infoAlert .button-1 {
+  right: auto;
+  left: 0px;
+}
+
+/* Orientation Bar */
+
+.breadcrumb-controls {
+	float: left;
+}
+
+div.path, div.simplePath  {
+  padding:0 0 0 200px;
+  float: right;
+  zoom:1;
+}
+
+div.breadcrumbs div.noToggle
+{
+  padding: 0 0 0 24px;
+}
+
+div.path ol li.contextPath {
+  zoom:1;
+  *position:static; 
+  padding:8px 2px 8px 26px;
+  *padding:6px 2px;
+  }
+
+div.path li.contextPath .contextArrow, 
+.path li.contextPath .contextArrowDown {
+  background-image:url(images/indicators_rtl.png);
+  zoom:1;
+  *position:static;
+  *display:inline;
+  right:auto;
+  left:2px;
+}
+
+.path li.contextPath .contextArrowDown {
+  background-position:50% -1041px;
+}
+
+.path ol li, .simplePath ol li{
+  display: inline-block;
+  zoom:1;
+  background:transparent url(images/indicators_rtl.png) no-repeat 1px 50%;
+  padding:8px 2px 8px 14px;
+}
+
+/*Default breadcrumb link.*/
+div.path a, div.simplePath a {
+	padding-right:0;
+}
+
+/*Floating list elements. Used to allow breadcrumbs without href anchors to render in same manner.*/
+div.path ol li.placeholder, div.simplePath ol li.placeholder { 
+  background-image: none; 
+  padding: 8px 2px 8px 14px;
+}
+
+div.breadcrumbs div.path ol li.root, div.simplePath ol li.root {
+	margin:0px -6px 0px 6px;
+	border:0;
+	border-left:1px dotted #CCCCCC;
+}
+
+/* SP8. allows user to jump to different course from breadcrumb */
+.path .coursePath {
+  padding:8px 12px 8px 26px;
+  position: relative;
+}
+
+.coursePath .courseArrow, .path .coursePath .contextArrowDown { 
+  left:6px; 
+  right:auto;
+  background: url("images/cmlinkoptions.gif") 100% 50% no-repeat;
+}
+
+/*Page Title*/
+.pageTitle h1, .pageTitleError h1  {float:right; margin-left:3px; margin-right:0;}
+/* @since 9.1SP6 (reworked pageTitle DOM and classes) */
+.pageTitle .contextMenuContainer, .pageTitle .titleButtons, .pageTitleEdit, #titleicon {float:right; margin-left:6px; margin-right:0;}
+#pageTitleBar + .pageTitleEdit {margin-right:-4px;}
+#pageTitleBar {float:right;}
+
+/* @since 9.1SP3 */
+.itemIconOverlay {
+  -moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.pageTitle .itemIconOverlay {
+  left: auto;
+  right: 36px;
+}
+.contentList .itemIconOverlay {
+  left: auto;
+  right: 58px;
+}
+.iconsOnly .itemIconOverlay {
+  right: auto;
+  margin: 0 -22px 0 0;
+}
+
+.colophon {float:left; padding:0px 55px 3px 0px;}
+
+.colophon img {right:0;left:auto;}
+
+
+/* View Toggle */
+
+div.viewToggle ul li, div.helpOnlyToggle ul li {
+	float:left;
+	margin:0 3px;
+	position:relative;
+	top:2px;
+}
+
+
+div.viewToggle {
+	top:3px;
+	left:5px;
+	right:auto;
+}
+
+
+/*Read/Edit mode switch*/
+
+.modeSwitchWrap {
+	left:26px;
+	right:auto;
+}
+
+.switcherLabel {
+	float:right;
+	padding:2px 0pt 2px 4px ;
+}
+
+.modeSwitch span {
+	display:block;
+	_display:inline;
+}
+
+div.helpLink {
+	left:4px;
+	right:auto;
+}
+
+
+.vtbeSwitch div.modeSwitchWrap {left:0;right:auto;width:18em;}
+.vtbeSwitch {float:left; *display:inline-block; margin-bottom:3px;}
+.legacy, .lb-content .vtbeSwitchWrap {*text-align:left;}
+.legacy .vtbeSwitch {*float:none;}
+.lb-content .vtbeSwitchWrap .vtbeSwitch {*float:none;}
+.vtbeTable-legacy textarea {width:99%;}
+.htmlarea-active, .htmlarea, .htmlarea iframe, .textboxtable, .lb-content {zoom:1; *height:1%; *position:static;}
+
+
+/* Left side navigation */
+
+#navigationPane, div.navigationPane,
+div.navPalette, .navPaletteContent, .courseMenu {}
+
+div.listCm h3 {
+	margin:2px 14px 0 0;
+	_margin:0 6px 0 0;
+	padding:0 9px 2px 18px;
+}
+
+div.navPalette {
+	margin:0 14px 12px 24px; /*offsets palette from content pane and THE edge of browser and from other palettes*/
+}
+
+div.navDivider {
+  margin:18px 0 4px 12px;
+  zoom:1;
+}
+
+div.navPalette h2 a, div.navPalette h2 a:hover, div.navPalette h2 a.comboLink, div.navPalette h2 a.comboLink:hover,
+div.navPalette a, div.navPalette a:hover, div.navPalette a.comboLink, div.navPalette a.comboLink:hover,
+div.controlpanel ul li a, div.controlpanel ul li a:hover,
+div.navPalette a.comboLink_active, div.navPalette a.comboLink_active:hover,
+div.navPalette a.open, div.navPalette a.open:hover {
+	background-position: 98% 7px;
+}
+
+div.navPalette h2 a.comboLink, div.navPalette h2 a.comboLink_active,div.navPalette h2 a.comboLink:hover, div.navPalette h2 a.comboLink_active:hover {
+margin-left:20px;
+margin-right:0;
+	padding:3px 16px 3px 3px;
+}
+
+.navPalette a {	padding:3px 16px 3px 3px;}
+
+div.navPalette h2 a.comboLink, div.navPalette h2 a.comboLink_active {
+	margin-right:0px;
+	margin-left:20px;
+}
+
+div.navPalette a.submenuLink, div.navPalette a.submenuLink_active {
+border-left:0;
+border-right:1px solid #BBBBBB;
+left:0;
+right:auto;
+}
+
+div.navPalette a.submenuLink {
+	background-image:url(images/list_bullet_white_rtl.gif);
+	background-position: center center;
+	padding:0;
+}
+
+div.navPalette a.submenuLink:hover {
+	background-image:url(images/list_bullet_rtl.gif)!important;
+	background-position: center center;
+	padding:0;
+}
+
+div.navPalette a.submenuLink_active {
+	background-image:url(images/list_bullet_dark_rtl.gif);
+	background-position: center center;
+}
+
+div.navPalette a.submenuLink_active:hover {
+	background-image:url(images/list_bullet_rtl.gif);
+	background-position: center center;
+}
+
+
+/* @since 9.1SP3 For Grade Center favorites in control panel  */
+.navPaletteContent .submenu li.favorite { padding-right:10px; }
+
+
+
+div.controlpanel ul li ul.submenu, ul.submenu {*height:1%;}
+
+/* Reorderable Course Menu in List view. */
+div.listCm ul.courseMenu {
+	*margin:0 -14px 0 0;
+
+}
+
+div.listCm ul.courseMenu li {
+	margin:0 -14px 0 0;
+	*margin:0 0 -3px 0px;
+	*padding-left:0;
+	clear:both;
+
+}
+
+/* Links in a Course Menu are displayed inline to allow list element serve as drag handle.  */
+div.listCm ul.courseMenu li a {
+	margin:0 18px 0 0;
+	*margin:0 18px 0 -14px;
+	*left:0;
+	float:right;
+		*height:;
+}
+
+div.listCm ul li.here {
+	background:transparent url(/images/ci/ng/location_black_5.png) repeat-y -125px 0;
+	*margin:0 0px 0 -14px;
+}
+/* May need another image for rtl. */
+
+div.listCm ul.courseMenu li.subhead h4 {
+	margin:0px 14px 0px 0;
+	*margin:0 14px 0 -14px;
+}
+
+div.listCm ul.courseMenu li.divider {
+	padding:9px 14px 9px 0;
+	*padding:9px 14px  6px 0;
+	_padding:9px 14px 0  0;
+}
+
+div.listCm ul.courseMenu li.divider hr {
+	*margin:0;
+}
+
+
+div.listCm ul.courseMenu li.collapsed {
+	padding:0 14px 0 0 ;
+	
+	_padding:3px 14px 0 3px;
+
+}
+
+
+div.listCm ul.courseMenu li.invisible a span.cmLink-hidden,
+div.listCm ul.courseMenu li.invisible a span.cmLink-empty,
+div.listCm ul.courseMenu li.invisible span.cmLink-hidden,
+div.listCm ul.courseMenu li.invisible span.cmLink-empty {
+	margin:0 3px 0 3px;
+	padding:0 3px 0 3px;
+	vertical-align:middle;
+	width:20px;
+}
+
+div.listCm ul.courseMenu li.invisible a span.cmLink-hidden img,
+div.listCm ul.courseMenu li.invisible a span.cmLink-empty img,
+div.listCm ul.courseMenu li.invisible span.cmLink-hidden img,
+div.listCm ul.courseMenu li.invisible span.cmLink-empty img {
+	padding:0 2px;
+}
+
+div.buttonCm li.invisible a span.cmLink-hidden, div.buttonCm li.invisible span.cmLink-empty {
+	left:5px;
+	right:auto;
+}
+
+div.buttonCm li.invisible span.cmLink-empty {
+	left:17px;
+	right:auto;
+}
+
+/* Menu in the picker pop-up. */
+div.pickerMenu {
+	right:14px;
+	left:auto;
+}
+
+div.controlpanel ul, div.controlpanel ul li,
+div.tools ul, div.tools ul li {*height:1%;}
+
+
+
+div.controlpanel ul li a:hover, div.controlpanel ul li a.open {
+	background-image:url(images/more_options_dark.gif);
+	background-repeat: no-repeat;
+	*text-align:right;
+	
+}
+
+div.tools ul li a:hover, div.tools ul li a.simpleLink:hover, {
+	background-image:url(/images/more_options.gif);
+	background-repeat: no-repeat;
+}
+
+div.pickerMenu ul li a.open, div.pickerMenu ul li a:hover {
+	background-image:url(images/list_bullet_rtl.gif);
+	background-repeat: no-repeat;
+}
+
+div.controlpanel ul li a.open {
+	background-image:url(images/less_options_dark.gif);
+	background-repeat: no-repeat;
+	padding:3px 16px 3px 9px;
+}
+
+div.tools ul li a.open, ul.submenu li a.open {
+	background:#ffffff url(images/less_options_dark.gif) no-repeat 5px center;
+	padding:3px 9px;
+}
+
+div.controlpanel ul li a.open:hover, ul.submenu li a.open:hover {
+	background-image: url(images/less_options.gif);
+}
+
+div.tools ul li a.open:hover {
+	background-image:url(images/less_options_dark.gif);
+}
+
+div.controlpanel ul li a.simpleLink:hover {
+	background-image:url(images/list_bullet_rtl.gif);
+	*height:1%;
+}
+
+div.tools ul li a.simpleLink:hover {
+	background-image:url(images/list_bullet_rtl.gif);
+}
+
+div.controlpanel ul li a.comboLink {
+	padding:3px 16px 3px 20px;
+	margin-left:0px;
+	margin-right:0;
+	*height:1%;
+}
+
+div.controlpanel ul li a.comboLink:hover {
+	/*background-image:url(images/more_options.gif);*/
+}
+
+div.controlpanel ul li a.comboLink_active {
+	padding:3px 16px 2px 20px;
+	margin-left:0px;
+	margin-right:0;
+	*height:1%;
+}
+
+div.controlpanel ul li a.comboLink_active:hover {
+		padding:3px 16px 2px 20px;
+	margin-left:0px;
+	margin-right:0;
+	*height:1%;
+}
+
+div.controlpanel ul li a.submenuLink, div.controlpanel ul li a.submenuLink_active {
+	position:absolute;
+	top:0;
+	left:0;
+	right:auto;
+	border-right:1px dotted #94A8C1;
+	_border-right:1px solid #94A8C1;
+	border-left:none;
+}
+
+
+
+div.controlpanel ul li ul.submenu, ul.submenu {*height:1%;}
+
+div.controlpanel ul li ul.submenu li a {
+	padding:2px 2px 2px 9px ;
+	_height:1%;
+}
+div.controlpanel ul li ul.submenu li a:hover {
+	background:#fff url(images/list_bullet_single_rtl.gif) no-repeat 3px center;
+	padding:2px 2px 2px 9px;
+	_height:1%;
+}
+
+div.tools ul li a, div.pickerMenu ul li a {
+	background-position:5px center;
+		*height:1%;
+}
+
+div.tools ul li a:hover, div.tools ul li a.simpleLink:hover {
+	background-position:5px center;
+	*height:1%;
+}
+
+div.singleControl ul li, div.singleControl ul, div.singleControl ul li a {
+	*height:1%;
+}
+
+ul.submenu li ul li {
+	padding-right:12px;
+	padding-left:12px;
+}
+
+div.tools ul.submenu li a, ul.submenu li a {
+	padding:2px 6px 2px 9px ;
+}
+
+div.tools ul.submenu li a:hover, ul.submenu li a:hover {
+	background:#f6f6f6 url(/images/ci/ng/list_bullet_single_rtl.gif) no-repeat 1px center;
+}
+
+
+div.listCm ul.courseMenu li span.reorder, div.listCm ul.courseMenu li.invisible span.reorder {
+	right:-3px;
+	border-width:1px 1px 1px 0;
+	left:auto;
+}
+
+.navPalette ul.courseMenu li a.cmimg, .navPalette ul.courseMenu li a.cmimg:hover, .navPalette h3 a.cmimg,
+.portlet ul li a.cmimg, .portlet div.portletBlock h4 a.cmimg, .portlet ul.blockGroups li ul.itemGroups li a.cmimg,
+div.buttonCm ul.courseMenu li a.cmimg, div.buttonCm ul.courseMenu li a.cmimg:hover, div.buttonCm h3 a.cmimg {
+	left:4px;
+	right:auto;
+}
+
+
+div.buttonCm ul.courseMenu li a.cmimg:hover {
+	margin:0;
+}
+
+
+div.buttonCm ul.courseMenu li, div.buttonCm ul.courseMenu li.here {
+	background-position:100% 0pt !important;
+	margin:4px 0pt 4px 0px;
+	*margin:4px 0pt 0px 0px;
+}
+
+
+
+div.navPalette a.submenuLink, div.navPalette a.submenuLink_active {
+	border-left:0;
+	border-right:1px dotted #BBBBBB;
+	left:0pt;
+	right:auto;
+}
+
+div.navPalette h2 a.comboLink, div.navPalette h2 a.comboLink_active {
+	margin-right:0px;
+	margin-left:20px;
+
+}
+
+div.treeContainer ul.tree li.subhead h3 a {
+	background-position: 98% 7px;
+	padding:3px 16px 3px 9px;
+}
+
+
+/* --------------------------- Lists --------------------------- */
+
+/*In use:*/
+ul.buildList li, ul.contentListPlain li  {
+	border-left:none;
+}
+
+ul.easylist li.read div.item_icon { /* deprecated */
+	right:0px;
+	left:auto;
+	margin:0pt 12px 0pt 8px;
+}
+
+ul.easylist li div.item_icon, /* deprecated */
+ul.contentList li img.item_icon {
+	right:12px;
+	left:auto;
+	margin:0pt 18px 0pt  8px;
+	position:absolute;
+}
+
+.item {
+	margin: 0 18px 0 0;
+	border-right: 2px solid #CCCCCC;
+	border-left: 0px
+}
+
+ul.easylist li img.item_icon { /* deprecated */
+left:auto;
+right:31px;
+}
+
+ul.easylist li.read h3.item, ul.easylist li.read h3, /* deprecated */
+ul.contentList li.read div.item {
+	padding:6px 72px 6px 6px;
+}
+
+.details ul.attachments li, ul.attachments li, ul.attachments li.read {
+	float:right;
+	position:static;
+}
+
+	/*Edit Mode*/
+ul.easylist li h3.item, /* deprecated */ 
+ul.contentList li div.item {
+	padding:6px 75px 6px 6px ;
+}
+
+ul.noimg li h3.item, 
+ul.buildList li h3.item, 
+ul.contentListPlain li div.item, 
+ul.contentList li div.item,
+ul.iconsOnly li div.item_icon,
+ul.iconsOnly li.read div.item_icon,
+ul.announcementList li h3.item, 
+div.staticHeader h3.item, 
+div.staticFooter h3.item {
+	border:0;
+	border-right:2px solid #CCCCCC;
+	border-top:2px solid #CCCCCC;
+	margin:0 18px 0 0;
+}
+
+ul.iconsOnly li div.item {
+	border-top:0!important;
+	padding:6px!important;
+}
+
+ul.iconsOnly li div.item h3 {float:none;}
+
+ul.noimg li h3.item, ul.buildList li h3.item, ul.contentListPlain li div.item  {
+	padding:6px 20px 6px 6px;
+}
+
+ul.contentList li div.details,
+ul.contentList li.read div.details {
+	margin-left:0;
+	padding-left:0;
+	margin-right:18px;
+	padding-right:72px;
+}
+
+ul.announcementList li div.details, ul#announcementList li div.details {
+margin:0pt 18px 0pt 13em;
+padding:0pt 6px 0pt 0pt ;
+}
+
+ul.announcementList-read li h3.item, ul#announcementList li h3.item {
+	padding:6px 6px 6px 13em ;
+}
+
+ul.noimg li div.details, ul.buildList li div.details, ul.contentListPlain li div.details, div.staticHeader div.details, div.staticFooter div.details {
+	margin-left:0;
+}
+
+.details {
+	border:0;
+	border-right:2px solid #CCCCCC;
+	padding:1px 20px 0 0;
+  margin-right:18px;
+}
+
+.item div.itemDetails, h3.item p.itemDetails, p.itemDetails {
+	left:0pt;
+	right:auto;
+}
+
+div.announcementInfo, p.itemDetails, div.itemDetails {
+	border-right:1px dotted #CCCCCC;
+	border-left:none;
+	padding-right:12px;
+	right:auto;
+	left:0;
+	word-wrap:break-word;
+}
+
+ul.announcementList-read li h3.item, 
+ul.announcementList-read li div.details, 
+ul.iconsOnly li.read div.item_icon {border:0;}
+
+.read .details {margin:0; border:0;}
+
+.contentList .item > input[type=checkbox], /* needed for the checkboxes on the Assessment Canvas pages */
+.contentListPlain .item > input[type=checkbox] {left:auto; right:26px;}
+.contentListRight {right:auto; left:0; text-align:left;}
+.contentListRightOffset {padding:6px 28px 6px 9em!important;}
+.contentListPlain .contentListRight + .details {padding:1px 28px 1px 0;}/*Modification for details element for build canvas.*/
+.contentListRight .liveArea {left:0; right:auto;} /* styles the "update points" form on assess canvas */
+
+ul.contentList-slim li.read div.item {padding-left:0px; padding-right:48px;} /* adjust for lists that use 32x32 icons */
+ul.contentList-slim li.read div.details {margin-left:0px; padding-right:48px;} /* adjust for lists that use 32x32 icons */
+
+/* extends the .infoList class to display list items horizontally */
+.infoListFloat li {
+  float:right; 
+  background: url(/images/ci/icons/list_bullet_singleR.gif) right center no-repeat;
+}
+.infoListWrapper h3 a {background-position:99.5% 4px;}
+
+.designAreaHeader, .designAreaFooter {margin:0.6em 18px 0.6em 0;}
+.designAreaHeader .headertext, .designAreaFooter .footertext {padding:0 12px 0.4em 0;}
+
+/* Content list version for staff information*/
+.staffInfoList .hasPhoto .details  {margin:0 18px 0 160px;}
+.staffInfoList .hasPhoto .contentListRightOffset {padding:6px 72px 6px 160px!important;}
+
+ul.buildList ul.detailList .detail-item-title {
+	float: right;
+}
+
+ul.buildList ul li > div {
+	margin-left: 0;
+	margin-right: 135px;
+	width: auto;
+}
+.currentTags a.closeCloud {
+	text-align: left;
+}
+
+/* --------------------------- End of Lists --------------------------- */
+
+/* --------------------------- Action bar --------------------------- */
+
+.actionBar ul li, .actionBar ul li.mainButton, .actionbar_portal ul li, .actionBar ul li.mainButton-legacy{
+  	float:right;
+  	margin:0 6px 0 0px;
+  	padding-left:1px;
+	padding-right:0;
+}
+
+/*Modifications for IE*/
+.actionBar ul#nav {*padding:0 6px 0;}
+.actionBar ul li.mainButton,  {*float:none;*display:inline;*margin:0;}
+.actionBar ul li.mainButton a {*margin:0 0px 0 6px;}
+
+.actionBar ul li.mainButton.sub a img, .actionBar ul li.secondaryButton.sub a img {
+padding:0 4px 0 0;
+*padding:0; 
+margin:-2px 0 0 0; 
+*margin:-2px 4px 0pt -4px;
+}
+
+.actionBarMicro {position:static;*line-height:0;}
+
+.actionBar ul li.search, .actionBar ul li.secondaryButton, .actionbar_portal ul li.search {
+	float:left;
+	margin:0 0px 0 6px;
+} 
+
+div.navPalette div.actionBarMicro ul li, div.navPalette div.buttons div.actionBarMicro ul li, .portlet div.actionBarMicro ul li, div.actionBarMicro ul li  {
+	float:right;
+}
+
+/*AS-138267 IE floating bug: in RTL pages floated items render outside the floated parent. Removing child float as it is the only element there. */
+div.navPalette div.actionBarMicro ul li.mainButton {*float:none}
+
+.actionBarMicro ul.nav li.sub ul {width:12.4em}
+
+/*AS-138909 Flyout menus are collapsing to the width of parent element causing links to extend beyond the flyout menu.*/
+ul.nav li.sub ul {width:13em}
+
+div.navPalette div.actionBarMicro ul li.secondaryButton, div.navPalette div.buttons div.actionBarMicro ul li.secondaryButton {
+	float:left;
+}
+
+ul.nav li.sub ul li {float:none!important; *line-height:1.2;}
+/* Search bar */
+
+.searchbar fieldset ol li, .searchbarPicker fieldset ol li {
+    float:right;
+}
+
+.searchbar fieldset ol li.options, .searchbarPicker fieldset ol li.options {
+    float:left;
+}
+
+.searchbar div.primaryOptions {float:right;}
+.searchbar div.secondaryOptions {float:rleft;}
+
+/*Landing Pages*/
+
+div.landingPageColumn {
+	float:right;
+}
+
+div.landingPageColumn ul {
+	margin:0pt 2em 0pt 0;
+}
+
+div.landingPageColumn ul li {
+margin:0pt 0pt 1.6em 0em;
+text-align:right;
+}
+
+div.landingPageColumn ul li h3, div.landingPageColumn ul.outcomesLanding li a {
+	background:transparent url(images/list_bullet_rtl.gif) no-repeat scroll right 0.7em;
+}
+ 
+
+/* dynamic elements */
+
+.cmdiv a {
+  background-image:url(images/cm_bullet_single_rtl.gif);
+  background-position:97% 7px;
+}
+
+.cmdiv li.contextmenubar_top, .menumini li.contextmenubar {
+	left:-1px;
+}
+
+a.close {right:auto !important; left:6px;}
+.receipt a.close {right:auto; left:4px; _left:20px;}
+
+/*========================= PORTAL ============================== */
+
+.column-3, .nav .sub .flyout div  {float:right;}
+
+.portlet h2  {
+	padding:2px 12px 4px 52px;
+	*height:1%;
+}
+
+div.edit_controls, span.edit_controls {
+	left:4px;
+	right:auto;
+	padding:0px 4px 0 0;
+}
+
+div.edit_controls a, span.edit_controls a {
+	float:none!important;
+	display:inline!important;
+}
+
+div.edit_controls a img, span.edit_controls a img {
+	padding:0 3px 0 0;
+}
+
+#lightbox ul li, .portlet .portletList li {
+  	background:transparent url(images/list_bullet_single_rtl.gif) no-repeat 99% 3px;
+   	padding:0 14px 0 0;
+}
+
+.portlet ul.courselist li {
+	padding:0 14px 0 0;
+ 	clear:both;
+	background:transparent url(images/list_bullet_single_rtl.gif) no-repeat right 5px;
+}
+
+.portlet .eventList li .event {padding:2px  18px 2px 4px}
+
+.portlet .portletList-img > li {padding:7px  18px 0 0;text-indent:-15px;}
+
+.portlet .courseInformation {text-indent:-16px;padding:0  16px 0 0}
+.portlet .courseDataBlock {text-indent:-4px;padding:0 4px 0 0}
+.portlet .courseDataBlock ul {margin-top:5px}
+.portlet .courseDataBlock ul li {text-indent:0;}
+
+.portlet .courseDataBlock ul li {background:transparent url(images/list_bullet_single_rtl.gif) no-repeat right 5px; padding:0  14px 0 0;}
+
+.portlet .courseDataBlock a, .portlet .courseDataBlock li a {font-weight:normal; text-decoration:none}
+.portlet .courseDataBlock  a:hover , .portlet .courseDataBlock li a:hover  {text-decoration:underline}
+
+ul.tagcloud li {
+	background-image:none;
+}
+
+.portletBlock ul li, .blockContents ul li, ul.memberList li {
+	background-image:none;
+	padding:0;
+	margin:0 0 0 0px;
+}
+
+.portlet h2 a {
+	color:#fff;
+	padding:0 0 0 12px;
+	vertical-align:middle;
+	display:block;
+	float:right;
+	text-align:right;
+}
+
+.portlet h2 a img {
+	vertical-align:middle;
+}
+
+.portlet h2 a:hover {
+	text-decoration:underline;
+	background:transparent url(/images/ci/ng/arrow_white.gif) no-repeat center left;
+}
+
+.portlet h2 span.reorder {
+	right:-1px;
+	left:auto;
+	top:-1px;
+}
+
+/*----------------------------RUMBLE STRIPS---------------------------------*/
+
+div.rumble_top ul li, div.rumble ul li {
+	float:right;
+	position:relative;
+	*padding:0 0 4px 0;
+	margin:0 0 0 3px;
+	*position:;
+}
+
+div.rumble_top ul li a, div.rumble ul li a {
+	display:block;
+}
+
+/* .multiple is used for the tagging ui in discussions and surveys, and the update points ui in assessments */
+div.rumble li.multiple label, 
+div.rumble_top li.multiple label, 
+div.rumble li#addTagActionItem_bottom label, 
+div.rumble_top li#addTagActionItem_top label {
+  float:right;
+  *float:none;
+  *display:inline-block;
+  margin:0 6px 0 3px;
+  border:none;
+  border-right:1px dotted #999;
+  padding:0 6px 0 0;
+  }
+
+div.rumble li.multiple input, 
+div.rumble_top li.multiple input, 
+div.rumble li#addTagActionItem_bottom input, 
+div.rumble_top li#addTagActionItem_top input {
+  margin:0 3px 0 0;
+  }
+  
+div.rumble li.multiple a, 
+div.rumble_top li.multiple a, 
+div.rumble li#addTagActionItem_bottom a, 
+div.rumble_top li#addTagActionItem_top a {
+  float:right;
+  *float:none;
+  *display:inline-block;
+  margin:0 3px 0 0;  
+}   
+
+/* used for the select all/none controls */
+div.rumbleBuildList, div.rumbleBuildListTop {margin-right:18px; margin-left:0;}
+
+div.rumble {	
+	padding-right:34px;
+	padding-left:6px;
+	background-image:url(images/checked_items_rtl.gif);
+  background-position: right bottom;
+}
+
+/* Top inventory action bar. */
+div.rumble_top {	
+	padding-right:34px;
+	padding-left:6px;
+  background-image:url(images/checked_items_top_rtl.gif);
+  background-position: right 3px;
+}
+
+/*----------------------------INVENTORY TABLE---------------------------------*/
+
+caption, th, td {text-align:right;}
+
+
+table.inventory {
+	clear:both;
+}
+
+table.inventory caption {
+  text-align:right;
+}
+
+table.inventory thead tr th {
+	text-align:right;
+}
+
+table.inventory tbody tr th, table.attachments tbody tr th, table.attachments tbody tr td, table.attachments thead tr th {
+	text-align:right;
+}
+
+/*Sorting arrow indicator*/
+table.sortable span.sortarrow { 
+ 	left:0px;
+	right:auto;
+}
+
+.jumptopage {
+  float:left;
+  text-align:right;
+  padding:2px 6px 2px 18px!important;
+}
+
+/*Reorderable inventory table*/
+table.inventory tr {*position:static!important;}
+
+.sortable a.sortheader {
+  padding-left: 17px;
+  padding-right: 0;
+}
+
+.key-valueTable td, .key-valueTable th {padding:2px 0 2px 6px;}
+
+/*----------------------------INVENTORY PAGING CONTROLS---------------------------------*/
+
+div.rumble_top ul li.inventory_paging, div.rumble ul li.inventory_paging {
+	float:left;
+	margin:0 9px 0 0;
+	padding:0 9px 0 0;
+	unicode-bidi:bidi-override;
+}
+
+div.rumble_top ul li.inventory_paging a, div.rumble ul li.inventory_paging a,
+div.rumble_top ul li.inventory_paging a.inactive, div.rumble ul li.inventory_paging a.inactive {
+	display:inline;;
+}
+
+div.rumble_top ul li.secondaryControl, div.rumble ul li.secondaryControl {
+	float:left;
+}
+
+.paging {clear:both;float:none;text-align:left;}
+.paging a {}
+
+.paging span {border-left:1px solid #ccc;border-left:none;}
+
+.pagingprefs {
+	text-align:left;
+}
+
+.pagingprefs span {
+  display: block; float: right;
+}
+
+.pagingprefs a#showAllButton{
+  display: block; float: right;
+}
+
+.pagingprefs a#showAllButtonDisabled{
+  display: block; float: right;
+}
+
+.pagingprefs a#openpaging{
+  display: block; float: right;
+}
+
+.pagingprefs a { margin-right: 2px; }
+
+.pagingform {
+	padding:4px 22px 4px 28px;
+}
+
+.pagingform a.close {
+	left:4px;
+	right:auto;
+	top:4px;
+}
+
+div.jumptopage button, .jumptopage button {
+	position:absolute;
+	left:0 !important;
+	right:auto !important;
+}
+
+/* styles to separate and group controls on the list action bar.*/
+.rumble li.listActionDivider, 
+.rumble_top li.listActionDivider, 
+.selectList .listActionDivider, /* for gradebook */
+.listActionDivider {border:1px dotted #999; border-width:0 0 0 1px; margin:0 0 0 9px; padding:0 0 0 9px;}
+
+/*----------------DATA COLLECTION----------------------------------*/
+
+a.remove {
+	background-position:top right;
+	padding-left:9px;
+	padding-right:20px;
+}
+
+.reqfield {
+	float:right;
+}
+
+
+div.steptitle, h3.steptitle {
+  padding:4px 26px 5px 4px;
+  line-height:1;
+  *height:1%;
+}
+
+div.steptitle span,  h3.steptitle span {
+  right:0;
+	left:auto;
+	*top:0;
+	margin:0  0 0px 8px;
+	_margin:0 0 0 8px;
+	padding:3px 3px 5px 9px;  
+	line-height:95%;
+	*line-height:100%;
+}  
+
+div.label, div.gb_gridCell_inner h3.label {
+float:right;
+*position:static;
+}
+
+/* needed to correct a hasLayout issue in IE7 when a form appears in a lightbox */  
+.lb-content .steptitle {*padding:4px 0 5px 4px;} 
+.lb-content .steptitle span {*padding:3px 0 5px 9px;} 
+
+.label .indicator {margin:0 -18px 0 0;}
+
+div.field {
+	margin:0;
+	border:0;
+	float:right;
+	*height:1%;
+}
+
+
+div.field {width:73%;}
+
+
+
+div.field input {*position:static;}
+
+
+div.noLabelField  {
+	margin:0;clear:both;float:none;
+}
+div.colorChip {
+	float:right;
+}
+
+fieldset.stepcontent, div.stepcontent {
+	margin:0 18px 0 0;
+	padding:6px 16px 12px 4px;
+}
+
+.nestedSubList {margin:6px 30px 6px 6px;}
+
+li.required div.label label img, li.required div.label img {
+margin:-3px 0px 0pt 0;
+*margin:-3px -8px 0pt 0;
+}
+
+fieldset.stepcontent ol li {}
+
+div#texteditor {float:right;}
+
+
+
+
+div#texteditor {
+	float:right;
+	}
+	
+/* Required field flag image. */
+li.required div.label label img {
+	float:right;
+	margin:2px -16px 0 3px;
+	*margin:2px 0 0px 3px ;
+}
+
+.taskbuttondiv, .taskButtonsContent, div.controls, .okbutton {text-align:left!important; *position:static;}
+.taskbuttondiv > input, .taskbuttondiv > a, .taskbuttondiv > button {margin-left:0; margin-right:2px;}
+
+.schemeWrapper {
+	float:right;
+	display:inline-block;
+	margin:0pt 0pt 0pt 12px ;
+	*height:1%;
+	*position:static;
+}
+
+input#colorPaletteDownloadButton {display:inline-block;float:right;}
+
+.modulePreview, .schemePreviewBody {*position:static;}
+
+/*Backlink*/
+
+p.backLink {right:auto;
+left:26px;}
+p.backLink a {display:block;float:left;}
+
+/*Portfolio Creation Steps*/
+div.mapTabs ul {
+	float:right;
+	padding:0 3px 0 0;
+	zoom:1;
+}
+
+ul.containerTabs {*position:static;*height:1%;*width:100%;}
+ul.containerTabs li {
+	float:right;
+	margin-left:3px;
+	margin-right:0;
+	*height:1%;
+	display:inline-block;
+}
+ul.buttonLibrary {
+	padding:6px 6px 6px 0pt ;
+}
+
+ul.buttonLibrary li {
+	float:right;
+}
+
+/* for moving values between adjacent select boxes */
+.userRoleSelect, .selectItems {*float:none!important; *zoom:1;}
+.userSelectedRoles {padding:3px 21px 3px 3px; *zoom:1;}
+.userSelectedRoles .selectArrows {left:auto; right:0;}
+/* for the Edit Calculated column page in gradebook */
+.cumulativeSelectItems .leftSelection > div {margin:3% 0 12px 0!important;}
+.cumulativeSelectItems div.select {float:right!important;}
+.cumulativeSelectItems .cumul_arrows {float:right!important;}
+
+/*---------------- LOGIN ----------------------------------*/
+
+#loginPageContainer {
+  text-align: right;
+}
+
+#loginHeader h1 {
+  float: right;
+}
+
+#loginHeader img.productLogo {
+	float:right;
+	margin:12px 20px 0px 8px ;
+}
+
+#loginHeader ul {
+   float: left;
+}
+
+#loginHeader ul li {
+  float: left;
+  border-right: none;
+  border-left: 1px dotted #999;
+}
+
+#loginHeader ul li:first-child {
+  border-right: none;
+}
+
+#loginLang h3 {
+  float: right;
+}
+
+#loginLang ul {
+
+}
+
+#loginLang ul li {
+  float: right;
+  border-left: none;
+  border-right: 1px dotted #999;
+}
+
+#loginLang ul li:first-child {
+  border-right: none;
+}
+
+#loginBox {
+  float: right;
+  border-right:0;
+  border-left:1px dotted #999999;
+  _border-left-style:solid;
+}
+
+
+#loginBox h2 {
+	margin:10px 10px 10px 0pt ;
+}
+
+#loginBox li label {
+  float: right;
+  padding-right: none;
+  padding-left: 3px;
+}
+
+#loginBox .forgot {
+  margin-left: none;
+  margin-right: 83px;
+}
+
+#loginBox li input[type="submit"] {
+  margin-left: none;
+  margin-right: 83px;
+}
+
+#loginBox li input[type="submit"]:hover {
+  border-left: 2px solid #333;
+}
+
+#loginOptions {
+  float: left;
+}
+
+#loginAnnouncements ul li {
+  margin: 5px 15px 5px 5px;
+  padding: 0;
+}
+
+td.checkbox_cell {
+  border-left: 1px solid #ccc;
+  border-right: medium none;
+}
+
+/*Copyright*/
+
+div.logo, div.productTitle, div.legal, div.additionalInfo {
+	float:right;
+}
+
+div.logo {
+	padding:5px 0pt 0pt 12px ;
+}
+
+div.legal, div.additionalInfo {
+	border-right:1px dotted #EFEFEF;
+	border-left:none;
+	padding:3px 12px 6px 3px ;
+}
+
+.newCopyright img {
+float:none!important;
+}
+
+/*------- OUTCOMES ------- */
+
+.palette h3.alt, .palette h3.top {margin-left:0!important;margin-right:-18px;}
+
+div.buttons_divider {margin-left:12px;margin-right:0!important;}
+
+.unitHomePageTitle a.browse, .caliperTitle a.browse {
+	float:left!important;
+	margin:4px 6px 0 0!important;
+}
+
+.unitHomePageTitle h1, .caliperTitle h1  {
+	width:100%;
+	*height:1%;
+}
+
+.caliperTitle, .discoverTitle  {*top:-11px;*position:relative;}
+
+
+
+div.button, div.button_down {
+	float:right!important;
+	margin-right:0!important;
+	margin-left:12px!important;
+}
+
+div.landingPageColumn ul li h3, div.landingPageColumn ul.outcomesLanding li a {
+	background:transparent url(images/list_bullet_rtl.gif) no-repeat scroll right 0.7em;
+}
+
+div.landingPageColumn ul.outcomesLanding li a {
+	display:block;
+}
+
+/*My Places palette in Outcomes*/
+
+div.myPlaces ul li a, div.myPlaces ul li a:hover {
+	padding:3px 22px 3px 9px;
+}
+
+div.myPlaces ul li a.home {
+	padding-left:20px;
+	padding-right:22px;
+}
+
+div.myPlaces ul li span.homeIconWrap {
+	left:3px;
+	right:auto;
+}
+
+div.button_360 a.icon {
+	left:auto;
+	right:9px;
+}
+
+
+div.button_360 {
+	background-image:url(/images/ci/icons/buttonback_ltgray_rtl.gif)!important;
+	background-repeat: no-repeat!important;
+	background-position: right 0pt!important;
+	float:right;
+	margin-left:0;
+	margin-right:6px;
+	padding:0pt 30px 8px 0px!important;
+		*position:static;
+}
+
+div.button_360 a.label, div.button_360 a {
+	background-image:url(/images/ci/icons/buttonback_ltgray_left.gif)!important;
+	background-repeat: no-repeat!important;
+	background-position: 0 0!important;
+}
+
+div.button_360 a.icon {
+	left:auto!important;
+	right:9px!important;
+	margin:0px 0px 0pt 24pt!important;
+	background-image:none!important;
+}
+
+.sidebar {*position:static;}
+
+/*---------------------- LIGHTBOX ----------------------*/
+
+div#lightbox {text-align:right;}
+
+span.stepTitleRight, .stepTitleRight {
+    right:auto !important;
+    left:6px !important;
+}
+
+
+.pagedControls {
+  margin:-5px -40px -5px -4px !important;
+}
+
+/*  -------------------- SHOPPING CART STYLES -------------------- */
+div.itemTrayContentPane {left:0; right:200px;} /* styles tray when used with navFrame/contentFrame layout */
+#cartSubmit p.taskbuttondiv {float:left;}
+
+/*  -------------------- DISCOVER/CRITERIA SUMMARY STYLES -------------------- */
+.searchbarPositioned, .columnActions, .columnActions a {zoom:1;}
+div.criteriaSummary ul li {float:right;}
+div.criteriaSummary ul li:first-child {margin:0 0 0 1px;}
+div.criteriaSummary ul li strong, div.criteriaSummary ul li span, div.criteriaSummary ul li a {float:right; *float:none; *display:inline-block;}
+div.criteriaSummary ul li a {padding:0 2px 0 18px; background:#eee url(../../../images/ci/icons/delete_li.gif) no-repeat 0 2px;}
+div.criteriaSummary ul li span:last-child, div.criteriaSummary ul li a:last-child {margin:0 0 2px 2px;}
+
+/* -------------------- COLUMN STYLES -------------------- */
+
+.leftColumn-narrow {
+  float:right;
+  margin:0 0 0 1%;
+}
+
+.rightColumn-narrow {
+  float:left;
+  margin:0 1% 0 0;
+}
+
+.rightColumn-wide {
+  float:left;
+}
+
+.leftColumn-wide {
+  float:right;
+}
+
+.leftColumn-narrow a.itemHead,
+.rightColumn-narrow a.itemHead,
+.columnPalette a.itemHead {
+  padding:0 16px 0 60px;
+  background: url(images/more_options.gif) no-repeat scroll 99% center;
+}
+
+/* Give more room for headers without next/prev buttons */
+.contentAreaNav a#aboutBlogLink {
+	padding-left: 0px;
+}
+
+
+.leftColumn-narrow a.itemHeadOpen,
+.rightColumn-narrow a.itemHeadOpen,
+.columnPalette a.itemHeadOpen {
+  background:url(images/less_options_dark.gif) no-repeat scroll 99% center;
+}
+
+ul.paletteItems li label {
+  padding:0 21px 0 0;
+  *zoom:1;
+}
+
+ul.paletteItems li input[type=checkbox],
+ul.paletteItems li input[type=radio] {
+  right:0;
+}
+
+/* -------------------- SEARCH RESULT LIST STYLES -------------------- */
+
+/**
+ * @since 9.1
+ */
+div.searchResultList-sortOptions
+{
+  text-align: left;
+}
+/**
+ * @since 9.1
+ */
+div.searchResultList-sortOptionsCount
+{
+  float: right;
+}
+
+/*---------------------------------------------BLOGS------------------------------------------------------*/
+/* both BLOGS and JOURNALS share blog.jsp. When refactoring the css, please do not remove 
+.blogContainer, .journalContainer, .blogNav or .journalNav from any styles, or the skins will break.*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* wrapper for the left "main" column that contains entries and comments */
+div.blogContainer {
+  float:right; 
+  margin-right:0;
+  margin-left:1%;
+  } 
+
+/* contains blog entry */
+div.blogContainer div.blogEntry { border-width:2px 2px 0 0;}
+  
+div.blogContainer div.blogEntry h4 {
+  padding:3px 18px 0 0; 
+  background-position:100% 2px;
+}
+  
+/* date of entry */
+div.blogContainer div.entryDate {margin:3px 12px 6px 0; }
+  
+div.blogContainer div.entryFooter h4 {float:right; padding:0;}
+  
+div.blogContainer ul.entryComments li p.commentDate {
+  background-position:95% 100%;
+}
+
+/* blog instructions (needed to override "div.blogContainer div.blogEntry h4") */
+div.blogContainer div.blogInstructions h4 {
+  padding:0;
+  background-image:none;
+} 
+  
+/* blogNav is the right column with the EUD portlet ui */
+div.blogNav {float:left; zoom:1;}
+
+div.blogContainer div.commentControls span.newItems,  /* removed from 9.1 */
+div.blogContainer div.u_controlsWrapper span.newItems { /* appears next to the Comments expand/collapse toggle */
+  float:right;
+  margin-right:4px;
+  margin-left:0;
+}
+
+#blogArchive ul {margin:0 18px 9px 9px;}
+
+/*-------------------------------------------END BLOGS----------------------------------------------------*/
+
+
+/*---------------------------------------------JOURNALS------------------------------------------------------*/
+/* wrapper for the left "main" column that contains entries and comments */
+div.journalContainer {
+  float:right; 
+  margin-right:0;
+  margin-left:1%;
+  width:74%;
+  }
+
+/* contains blog entry */
+div.journalContainer div.blogEntry {
+  padding:0 36px 0 0;
+  border-width:3px 0 3px 3px; 
+  background-image:url(images/blog_notebook_paper_rtl.gif);
+  background-position:100% 0;
+  }
+  
+div.journalContainer div.blogEntry h4 {padding:12px 12px 0 24px; }
+
+/* date of entry */
+div.journalContainer div.entryDate {padding:3px 12px 12px 24px;}
+
+/* entry footer is a wrapper for the entire blog comment area */
+div.journalContainer div.entryFooter {
+  margin:0 -31px 0 0;
+  padding:0 43px 12px 12px;
+  zoom:1;
+  }
+  
+div.journalContainer div.entryFooter h4 {
+  float:right;
+  padding:0;/* needed to override "div.journalContainer div.blogEntry h4" */  
+}
+  
+div.journalContainer div.entryFooter a.genericButton {
+  display:block;
+  float:left;
+}
+
+/* entry comments */
+div.journalContainer ul.entryComments li p {
+  margin:4px 18px; 
+  *margin-right:19px; 
+  *margin-left:18px;
+}
+div.journalContainer ul.entryComments li p.commentDate {
+  margin-left:0;
+  margin-right:19px;
+}
+
+/* h5 wrapped around the name of each commentor */
+div.journalContainer ul.entryComments li h5 {
+  padding:3px 18px 0 0; 
+  background-position:100% 3px;
+  zoom:1;
+}
+  
+/* blog instructions: these are needed to override "div.journalContainer div.blogEntry" */
+div.journalContainer div.blogInstructions {
+  border:none;
+  padding:3px 12px 6px;
+  background-image:none;
+  }
+  
+div.journalContainer div.blogInstructions h4 {
+  padding:0;
+  text-align:right;
+  }
+
+/* journalNav is the right column with the EUD portlet ui */
+div.journalNav {
+  float:left; zoom:1;
+  }
+
+div.journalContainer div.commentControls span.newItems,  /* removed from 9.1 */
+div.journalContainer div.u_controlsWrapper span.newItems { /* appears next to the Comments expand/collapse toggle */
+  float:right;
+  margin-left:0;
+  margin-right:4px;
+}
+
+/*-------------------------------------------END JOURNALS----------------------------------------------------*/
+
+/* -------------------- START BLOG/JOURNAL/WIKI 9.1 STYLES -------------------- */
+#blogNavLinks {
+  left:3px;
+  right:auto;
+}
+
+ul#blogArchive ul.blogArchiveList {margin-left:0; margin-right:16px;}
+  
+#gradeWidget span#blogGradeValue {position:relative; padding-left:0; padding-right:6px;}
+#blogGradeValue img {position:absolute; top:0; left:auto; right:0; } /* aligns the "Grade Modified Manually" icon */
+
+div.blogPalette {zoom:1;*height:1%;}
+div#blogNav a#blogListLink {padding-left:48px; padding-right:16px;}
+
+.indentedWikiList {padding:0 22px 0 0!important;}
+.indentedWikiList img {margin:0 -22px 0 3px;}
+/* -------------------- END BLOG/JOURNAL/WIKI 9.1 STYLES -------------------- */
+
+/*--------------------LEARNING MODULE TOC ---------------------*/
+
+.tocActions a, .tocActions span, .tocActions > img {margin:0 0 0 2px;}
+
+ul#tocTree span {padding:0px 0 0 3px;} /* numbering scheme and inActive items */
+.treeNodeIcon {padding:0 0 0 3px;}
+
+.sideTOC, sideTOCMinimize {left:auto;}
+
+/* styles to align the TOC with the course menu */
+.tocBottom_pullExpanded {left:0; right:200px;}
+.tocBottom_pullCollapsed {left:0; right:0;}
+.tocSide_pullExpanded {left:auto; right:212px;}
+.tocSide_pullCollapsed {left:auto; right:14px;}
+
+/* styles applied to the contentPanel to make room for the TOC */
+.sideTOC_panel {padding-left:0; padding-right:220px;}
+.sideTOC_panelMin {padding-left:0; padding-right:24px;}
+.sideTOC_panelMax {padding-left:0; padding-right:370px;}
+
+.sideTOCMinimize .tocActions {
+  left:auto;
+  right:-4px;
+}
+
+/*-------------------- end LEARNING MODULE TOC ---------------------*/
+
+/* -------------- CONTENT COLLECTION HIERARCHY TREE PALETTE -------------- */
+
+div.treeContainer ul.tree, ul.tree {padding:3px 6px 9px 0;}
+div.treeContainer ul.tree ul, ul.tree ul {margin:0px 12px 0px 0px;}
+div.treeContainer ul.tree  li h3 + ul {padding:0 9px 9px 0;}
+
+div.treeContainer ul.tree li, ul.tree li {background-position:100% 0; padding-right:3px!important;}
+
+div.treeContainer ul.tree li a, ul.tree li a {padding:2px 0px 2px 0;}
+div.treeContainer ul.tree li a.open_folder {padding:2px 0px 2px 3px;}
+div.treeContainer ul.tree li a.exp {background-position:100% 0px; padding:0px 0px 0px 21px;}
+div.treeContainer ul.tree li a.collapse {background-position:100% 0px; padding:0px 0px 0px 21px;} 
+div.treeContainer h3.treehead {padding:0px 5px 0px 0px;}
+
+
+div.treeContainer ul.tree li.subhead {background-image:none; margin:0px -6px 0px 0;}
+div.treeContainer ul.tree li.subhead h3 a {
+	padding:3px 18px 3px 9px;
+	background-position: 98% 6px;
+}
+/* -------------- end CONTENT COLLECTION HIERARCHY TREE PALETTE -------------- */
+
+/* -------------------- Start Standards Specific -------------------- */
+div.alignPanel table.attachments th.alignedHeading {
+	padding:6px 0;
+	text-align:right;
+	font-size:100%;
+	color:#444444
+}
+/* Start: Admin Standards Management. Since 9.1 */
+.panelList_leftCol {position:absolute; left:auto; right:6px;}
+.panelList_rightCol {position:absolute; right:auto; left:6px;}
+/* used in the Mapped Standards lightbox on the Standards Document page */
+.connectionWrapper {float:right; padding:0 0 0 30px;}
+.connectionWrapper a {right:auto; left:0;}
+/* used in the key-valueTable on the Maps Standards page */
+.invertItems {margin:0 0 0 26px;}
+.invertItems a {right:auto; left:-33px;}
+/* -------------------- end Standards Specific -------------------- */
+
+/*---------------- GRADEBOOK.CSS ----------------------------------*/
+
+ul.selectList {float:right; *height:1%; display:inline-block; zoom:1; *position:static;}
+
+ul.selectList li {display:inline-block; *height:1%; *position:static;}
+ul.selectList li:hover {*position:relative}
+
+ul.selectList li.sub a, ul.selectList li a {*display:inline-block;}
+
+/* .sub a img, .sub .button-1 img, .sub .button-2 img {
+  margin:-2px 4px 0pt -4px;
+} */
+
+/*copied from rtol.css*/
+/*from gradebook2.css*/
+#table1_container{*position:static;*height:1%}
+.gbtable th{text-align:right;*height:1%;}
+.gbtable_header th, .gbtable thead th {text-align:right;}
+.gbtable div.gbText, .gbtable_header div.gbText{float:right;text-align:right;*position:static;}
+.gbtable td input, .gbtable th input, .gbtable_header th input{float:right;padding:5px 5px 0 0;}
+.gbtable td a.cmimg, .gbtable th a.cmimg, .gbtable_header th a.cmimg{float:left!important;padding:1px 0 0 2px;margin:0 0 0 4px;_margin:0;}
+.gbView, .gbEdit{float:right;*position:static;}
+.gbEdit{float:right;*position:static;*border:1px solid purple;}
+.cmdiv ul li{margin:0;background-position:4px 98%;}
+.cmdiv li.contextmenubar a, .info a.contextmenubar {text-align:left;}
+.comText a.contextmenubar {text-align:left;}
+.navtabs li{float:right;border-right:1px solid #CCC;}
+.navtabs li.last{border-left:1px solid #CCC;}
+.multiAction{clear:right;}
+.ortext a.inlineAction{float:left}
+.criteriaItem a{ float:left;}
+.reporttable table tr th{text-align:right;}
+.info ul li{float:right;}
+dl.gdetail dt {float:right; text-align:left;}
+.gbtablesimple th {text-align:right;}
+dl.gdetail dd {padding:5px 190px 5px 0;}
+dl.gdetail dd.flush {clear:right;padding-right:0;}
+dl.gdetail dt.flush {text-align:right;}
+.statbox h2, .stattable h2{  text-align:right; }
+.statbox table tr th, .stattable table tr th {text-align:right;}
+.viewgrade div.gradeval{ float:right; margin-left:15px;}
+.viewgrade div.viewblock, .editgrade div.editblock{ float:right; margin-left:15px; }
+.saver{clear:right;}
+div.viewgrade a.actionButton {height:1%;}
+div.gradeNav {float:left;}
+
+.viewdiv div, .viewdiv ul.flynav{float:right;}
+.viewdiv ul.flynav li nobr{*display:inline;*height:1%;}
+.viewdiv ul.flynav li{*display:inline;*height:1%;}
+
+/*end copied*/
+
+.secondaryActions {
+	float:left!important;
+	padding-left:9px;
+}
+
+/* -------------- GRADEBOOK STYLES (since 9.1) ----------------*/
+.gradeInfoFooter h3 {margin:0 6px 0 0;}
+.collabContainer .gradeInfoFooter {left:30px; right:auto;}
+div.info h3 a {background-position:4px 98%;}
+
+ul.selectList li.sub ul li.current a, ul.selectList li.sub ul li.current a:hover,
+.nav .sub .current a, .nav .sub .current a:hover {background-position:98% 5px; padding:3px 16px 3px 3px!important;}
+
+
+/* -------------------- Reorder handle -------------------- */
+
+/*@cleaned 9.1 @since 9.1*/
+.reorder {
+	-moz-border-radius:0 3px 3px 0;
+	-webkit-border-radius:0 3px 3px 0;
+}
+
+/*Content list reorder handles.*/
+/*@cleaned 9.1 @since 9.1*/
+.item .reorder {top:2px; left:auto; right:-2px;}
+
+/*Course menu reorder handles.*/
+/*@cleaned 9.1 @since 9.1*/
+.listCm .reorder, .subList-reorder .reorder, .liItem .reorder {
+	left:auto;
+  right:-2px;
+	-moz-border-radius:0 2px 2px 0;
+	-webkit-border-radius:0 2px 2px 0;
+}
+
+.subList-reorder .reorder {left:auto; right:-17px;}
+
+.buttonCm .divider .reorder {left:auto; right:0;}
+
+/* Portal module reorder control.*/
+.portlet .reorder {
+	left:auto;
+  right:-9px;
+}
+
+.nestedReceipt {
+  margin: 0 0 6px 20%;
+  padding: 0px 0px 0px 17px;
+}
+
+.htmlarea .toolbar div > div {float:right;}
+
+/*Utilities (since 9.1.)*/
+/*Reverses LTR float direction.*/
+.u_floatThis-right, .u_floatWrapper-right > div, .u_floatWrapper-right > li {float:left; margin-left:0; margin-right:5px;}
+.u_floatThis-left, .u_floatWrapper-left > div, .u_floatWrapper-left > li, .u_floatWrapper-left > label {float:right; margin-left:5px; margin-right:0;}
+
+.u_normalAlign {text-align:right!important;}
+.u_indent {margin-right:1.4em!important; margin-left:0;} /* need !important to override specificity applied elsewhere */
+
+/*Content System slider wrapper*/
+.sliderWrapper {
+  border-left:1px solid #aaa;
+	border-right:none;
+	float:right;
+	margin:0 -6px 0 0;
+	padding:9px 0 5px 5px;
+}
+
+/*Time picker*/
+.timediv {padding:2px 0 0 0;}
+
+/*Calendar*/
+.calPicker .calHead h3 {*position:absolute; *left:40px; *right:40px;}
+.calPicker .calWrapper {*margin-top:1.6em;}
+.calPicker .previous {right:2px;left:auto;}
+.calPicker .next {left:2px;right:auto;}
+.calPicker a.contextmenubar, .calPicker a.contextmenubar:hover {text-align:left;}
+
+/* "Collapsible Tabs" used to toggle Alignments and Instructions */
+.collapseTabsData {padding:6px 6px 6px 24px;}
+
+
+/* ---------------------------------- RUBRICS ---------------------------------- */
+
+.rubricTable tbody td textarea + script + div {text-align:left;}
+#rubricColSort {margin:0 0 0 60px;}
+#rubricColSort li {
+  padding:0 24px 2px 6px;
+  border:1px dotted #999!important;
+  border-width: 0 0 0 1px;
+}
+#rubricColSort li input {left:auto; right:0;}
+#reorderPanelControls{right:auto; left:0;}
+.rubricGradingTable, .rubricTable {margin:0 -9px 0 0;}
+.rubricGradingTable .radioLabel, 
+.rubricGradingTable .selectedCell .radioLabel, 
+.rubricGradingTable .selectedCell .rubricSelectedValue,
+.rubricGradingTable .selectedCell .description,
+.rubricGradingTable .selectedCell .rubricCellDescription {padding:6px 30px 6px 0;}
+
+.rubricGradingTable .selectedCell, .rubricGradingTable tbody .selectedCell:hover {background-position: 95% 12px;}
+.rubricGradingList h4 span {right: auto; left:0;}
+.alignmentPanel ul.nav span {padding: 0 3px 0 0;}
+
+/* ---------------------------------- END RUBRICS ---------------------------------- */
+
+.noItemsLeftAligned {
+  text-align:right !important;
+}
+
+span.autoQuestionNumber {margin: 0px 10px 0px 0px;}
+
+/* @Since 9.1SP3 */
+.collabViewComments {
+	/* TODO for UI team: If I float:left this, in our sample-2 locale the text for 'grading notes' and 'view full comment'
+	ends up being too wide, pushing the button to the next line, resulting in the actual feedback shrinking down to half the already 
+	small panel.  Need to figure out a better way.  */
+	float: none;
+}
+
+.rubricGradingTable tbody td label input.rubricCellRadio
+{
+  position: absolute;
+  right: -1000em;
+  left: auto;
+}
+
+.rubricGradingList h4 span
+{
+  right: auto;
+  left: 0;
+}
+
+/*
+ * REPORTS
+ */
+ 
+/*Reports Headers*/
+body.reports h2 {margin:6px 14px 6px 18px;}
+body.reports h3 {margin:6px 30px 6px 18px;}
+body.reports h3 a {color:#7d899e; text-decoration:none;}
+body.reports h3 a img {margin-right:0; margin-left:6px;}
+
+/*TOC list modifications*/
+#toc {padding:0 30px 0 0;}
+.toc_div {padding:4px 8px 4px 0; *padding:0px 8px 4px 0;}
+
+.toc_div h2 a img {margin-right:0; margin-left:6px;}
+
+.toc_div a.toggle {
+	float:left;
+	border-width:0 1px 1px 0;
+}
+
+.backtotop, .dateofreport {float:left;}
+
+.dateofreport {margin:6px 0 12px 18px;}
+
+/*Back to top link located at the bottom of a block.*/
+.backtotop {margin-right:0; margin-left:-1px; float:left;}
+
+.backtotop a {padding:3px 8px 3px 12px;}
+
+.backtotop a img {margin-right:0; margin-left:5px;}
+
+/*
+ * END REPORTS
+ */
+
+/* SIS logs @since 9.1 sp6 */
+.latestEntry {float:left!important;}
+.log-summary li {border-left:none; border-right:1px dotted #ccc; padding:0 5px 0 0;}
+.log-summary li:first-child {border-right:none;}
+.log-search > div > div {padding:0 0 0 9px!important; margin:6px 0 0 6px; border-right:none; border-left:1px dotted #bbb;}
+/* end SIS logs */
+
+
+/* Palette Search Styles */
+.paletteSearch {padding:6px 5px 6px 10px; background-color:#E3EFFF; font-size:95%; border-bottom:1px solid #94A8C1; margin-right:0px !important; margin-left:0px !important; }
+.paletteSearch #toolsSearchBox {width:146px !important; margin-bottom:5px; clear:both;}
+.paletteSearch a {text-wrap:none !important; word-wrap:normal !important; margin-right:0px !important; margin-left:0px !important; overflow:visible;}
+
+
+/* Community tab picker styles */
+
+ul.buildList li .itemDetails + div.details, /* selector too sloppy, but is needed to override the default */
+.itemDetails + .details {
+    margin: 0 18px 0 13em;
+}
+.buildList li input {
+    float: right;
+    margin: 8px 26px 8px 8px;
+}
+ul.tabgrouplist .item:hover, ul.tabgrouplist .item:focus {
+    background-color: #FFFFFF !important;
+    cursor: default !important;
+}
+ul.tabgrouplist ul li {
+    line-height: 27px;
+}
+ul.tabgrouplist .subList, .subList-reorder {
+    border: medium none !important;
+}
+
+div.itemHeaderControl {
+    left: 13.5em;
+    right: auto;
+}
+
+/* new styles for Standards Documents */
+
+.column-nav {
+  float: right;
+}
+
+.colspan2 {
+  margin:0 190px 0 0;
+}
+
+.column-inner {
+  padding: 6px 18px 12px 0;
+}
+
+.column-nav-inner {
+  padding: 0 12px 12px 0;
+}
+
+.category-column .column-nav-inner {
+  border: 1px solid #ccc;
+  border-right: none;
+  background: -moz-linear-gradient(right, #eeeeee 31%, #dddddd 93%, #cccccc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, right top, left top, color-stop(31%,#eeeeee), color-stop(93%,#dddddd), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(right, #eeeeee 31%,#dddddd 93%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(right, #eeeeee 31%,#dddddd 93%,#cccccc 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(right, #eeeeee 31%,#dddddd 93%,#cccccc 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+  background: linear-gradient(right, #eeeeee 31%,#dddddd 93%,#cccccc 100%); /* W3C */
+}
+
+.navmenu-list-item {
+	padding: 12px 18px 12px 21px;
+	-moz-border-radius: 0;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-radius:0;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+.navmenu-list .active, .navmenu-list .active:hover {
+	-moz-box-shadow: inset -2px 2px 4px #555, 0px 1px 0px #999;
+  padding: 12px 20px 12px 21px;
+} 
+
+.category-column .navmenu-list-item:hover {
+	background: -moz-linear-gradient(right, #e0e0e0 31%, #dddddd 93%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(31%,#e0e0e0), color-stop(93%,#dddddd), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, #e0e0e0 31%,#dddddd 93%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, #e0e0e0 31%,#dddddd 93%,#cccccc 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(right, #e0e0e0 31%,#dddddd 93%,#cccccc 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+	background: linear-gradient(right, #e0e0e0 31%,#dddddd 93%,#cccccc 100%); /* W3C */
+}
+
+.category-column .navmenu-list .active {
+  margin: 0 0 0 -1px;
+  -moz-border-radius: 0;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-radius:0;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+.standards .groupLabel {
+  padding:2px 0 0 6px;
+}
+
+.navmenu-actions-1 {
+  left:auto;
+  right: 1px;
+}
+
+.active .navmenu-actions-1 {
+  left: auto;
+  right: 4px;
+}
+
+.navmenu-actions-2 {
+  right:auto;
+  left: 2px;
+}
+
+.navmenu-list-item .contextMenuContainer {
+  right: auto;
+  left: 2px;
+}
+
+.standards .column-2 {
+  border: none;
+  border-right:1px solid #ccc;
+}
+
+.standardForm {
+  left: auto;
+  right: 6px;
+}
+
+.docs-column .column-nav-inner {
+  border: 1px solid #777;
+  border-left: none;
+  -moz-border-radius: 0;
+  -moz-border-radius-topright:6px;
+  -moz-border-radius-bottomright:6px;
+  -webkit-border-radius: 0;
+  -webkit-border-top-right-radius:6px;
+  -webkit-border-bottom-right-radius:6px;
+  background: -moz-linear-gradient(right, #999999 0%, #888888 94%, #777 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, right top, left top, color-stop(0%,#999999), color-stop(94%,#888888), color-stop(100%,#777)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(right, #999999 0%,#888888 94%,#777 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(right, #999999 0%,#888888 94%,#777 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(right, #999999 0%,#888888 94%,#777 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#777',GradientType=1 ); /* IE6-9 */
+  background: linear-gradient(right, #999999 0%,#888888 94%,#777 100%); /* W3C */
+} 
+
+
+.iconToggle .fieldHelp {
+  left: auto;
+  right: 0;
+}
+
+.iconToggleWrapper .selectedItem
+{
+  -moz-box-shadow:inset -2px 2px 2px rgba(0,0,0,.3);
+  -webkit-box-shadow:inset -2px 2px 2px rgba(0,0,0,.3);
+  box-shadow:inset -2px 2px 2px rgba(0,0,0,.3);
+}
+
+.pageHead-2 span:first-child {
+  border-right: none;
+  border-left: 1px dotted #aaa;
+}
+
+/* END new styles for Standards Documents*/
+
+/* COURSE WIZARD rtl styles */
+#wizard .accordion_content {
+	text-align: right;
+}
+#wizard .accordion_toggle {
+	background-position: 100% 10px;
+	padding: 10px 20px 10px 45px;
+}
+#wizard .accordion_toggle.collapsed {
+	background-position: 100% 10px;
+}
+#wizard .accordion_toggle .accordionTabLabel {
+	float: right;
+}
+#wizard .accordion_toggle_help .accordionTabLabel {
+	text-align: right;
+}
+#wizard .accordion_toggle_help .number {
+	text-align: right;
+}
+#wizard a.wizard-close {
+	left: 13px;
+	right: auto;
+}
+#wizard .number {
+	float: right;
+	margin-left: 18px;
+}
+#wizard .right-image {
+	left: 8px;
+	right: auto;
+}
+#wizard .previewArea .conclusion {
+	left: 0;
+	right: auto;
+}
+#wizard .helplink .easylist {
+	margin-right: 0px !important;
+	margin-left: 24px !important;
+}
+#wizard .helplink .easylist li {
+	float: right;
+}
+#wizard .gotocourse {
+	text-align: right;
+	padding: 10px 28px 0px 2px;
+}
+#wizard .gotocourse .button-2 {
+	margin-left: 25px;
+	margin-right: 0px;
+}
+#wizard .courseNameAndDescription > .textboxtable {
+    margin-left: 0px;
+    margin-right: 9px;
+}
+/* Course Structures selector styles @since 9.1SP8*/
+
+.courseStructureNameScroller {
+	float: right;
+	border-right: 1px solid #CCC;
+	border-left: 0px;
+}
+.courseStructureNameScroller .current-value {
+	background-position: 100% 20%;
+	padding-right: 17px;
+	padding-left: 0px;
+	right: 15px;
+}
+#wizard .courseStructureNameScroller ol, .courseStructureNameScroller ol {
+	padding: 0px 12px 0px 0px;
+}
+.courseStructureDescription a.unselectStructureButton.existingstructure {
+	margin-left: 39%;
+	margin-right: 0%;
+}
+#wizard .arrow_guide,
+.arrow_guide {
+    background: url('/images/ci/icons/right-arrow-point.png') no-repeat;
+    left: 70%;
+}
+#wizard .courseStructureNameScroller ol li {
+	margin-right: 13px;
+	margin-left: 0px;
+	padding-left: 0;
+	padding-right: 6px;
+}
+.courseStructureChoiceSelected {
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-position: 98% 45%;
+}
+.structure_scrollbar_track {
+	right: 160px;
+	margin: 1px 0;
+}
+
+div.courseStructureDescriptions .structure_scrollbar_track {
+    top:10px;
+    margin: 1px 0 1px 3%;
+    right: auto;
+    left: 0;
+}
+
+#wizard .structure_scrollbar_track {
+    margin: 1px 0;
+}
+
+#wizard .courseStructureDescriptions .structure_scrollbar_track {
+	left: 15px;
+	right: auto;
+}
+.theme_scrollbar_track {
+	left: 2px;
+	right: auto;
+}
+.course_welcome_help_scrollbar_track {  
+	left: 0px;
+	right: auto;
+} 
+#wizard .courseStructureHeader, .courseStructureNameScroller ol li.courseStructureHeader {
+	padding: 12px 0px 4px 15px;
+}
+#wizard .accordion_toggle a#unselectStructure, #wizard .accordion_toggle a#unselectTheme {
+	float: left;
+}
+#wizard .accordion_toggle span#selectedStructureName, #wizard .accordion_toggle span#selectedThemeName {
+	margin-left: 0px;
+	margin-right: 3px;
+}
+.courseStructureChoiceLink {
+	padding: 6px 18px 6px 15px;
+}
+#wizard .courseStructureDescriptions, .courseStructureDescriptions {
+	margin-right: 170px;
+	margin-left: auto;
+}
+.courseStructureDescriptionAndMenu {
+	float: right;
+	padding: 0px 20px 0px 0px;
+}
+.courseStructureMenu {
+	float: left;
+	margin: 0px 20px 0px 0px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.structureIncludeSampleContentCheck {
+	margin-left: 0px;
+	margin-right: -20px;
+	padding-right: 15px;
+	padding-left: 0px;
+	box-shadow: 10px 0 6px #CCCCCC inset;
+}
+#wizard .structureIncludeSampleContentCheck {
+	left: 25px;
+	margin-left: 0px;
+}
+/* End Course Structures selector styles */
+
+.floatedReceipt {
+    padding: 10px 10px 10px 22px !important;
+}
+
+.floatedReceipt#receipt_floated_theme {
+    right: auto;
+    left: 45px;
+}
+
+.floatedReceipt#receipt_floated_courseMenu {
+    left: auto;
+    right: 180px;
+}
+
+.floatedReceipt.pointTop .arrow {
+    left: auto;
+    right: 41%;
+}
+
+.floatedReceipt.pointLeft .arrow {
+    left: auto;
+    right: -30px;
+    border-left-color: #FCFBD1;
+    border-left-style: solid;
+    border-right-color: transparent;
+    border-right-style: dashed;
+    
+}
+
+.statusFilter {
+    padding-left: auto;
+    padding-right: 8px;
+}
+
+/* more tools menu */
+.nav .sub .slideoutLink img {
+  background: url(images/utilicons_arrows_dark.png) 0px 16px;
+  float: left;
+}
+
+.nav .sub .slideoutLink-active {
+  margin: 0 0 0 -1px;
+  border-width:1px 1px 1px 0;
+  box-shadow:3px 0 3px rgba(0,0,0,.3);
+}
+.nav .sub .slideoutLink-active img {
+  background: url(images/utilicons_arrows_dark.png) 16px 16px;
+}
+
+.slideoutOpen {
+  margin: 0 -1px 0 0!important;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.08)), color-stop(5%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+ul.nav li.sub .slideoutOpen ul {
+	width:auto;
+}
+/* end more tools menu */
+
+/* Styles for autocomplete text fields used in Standards Docs. */
+.autocomplete_pos {
+  left: auto!important;
+  right: 0!important;
+}
+
+.bubble ul li {
+    clear: right;
+    float: right;
+}
+
+.bubble ul li span {
+    float: right;
+    margin-right: auto;
+    margin-left: 3px;
+}
+
+.bubble ul li span.icon {
+    float: right;
+}
+
+#wizard .introtext {
+    padding: 1em 0em 1em 2;
+    float: right;
+}
+
+#wizard .introtext label {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+#wizard .introtext .courseNameAndDescription table table {
+    margin-left: auto;
+    margin-right: 7px;
+}
+
+#wizard .introtext input, #wizard .introtext textarea {
+    margin-left: auto;
+    margin-right: 15px;
+    padding: 7px 7px 7px 0px;
+}
+
+#wizard .introtext .courseNameAndDescription {
+    float: right;
+    margin-left: 1em;
+    padding-left: 0.8em;
+    border-left: 3px dotted #666;
+    margin-right: auto;
+    padding-right: auto;
+    border-right: none;
+}
+
+#wizard .introtext p {
+    margin: 55px 0px 0px 20px;
+}
+
+.mceToolbarRow5 {
+  left: 2px !important ; 
+  right: auto !important;
+}
+
+/* Since 9.1SP10 */
+.gradingOptions {
+ margin-left: auto;
+ border-left-style: initial;
+ margin-right: 30px;
+ border-right-style: outset;
+}
+
+/* // start SURVEY RECIPIENT UI // */
+
+/* TABS Style */
+
+/* DIV that holds each tab*/
+div.tab_content {
+  margin: -1px 0px 0px 20px;
+  float: right;
+}
+
+#tabs .arrow:before,#tabs .arrow:after {
+  border-color: -moz-use-text-color transparent #FFF;
+  border-style: none solid solid;
+  border-width: 0 15px 15px;
+}
+
+#tabs .arrow.outer:before,#tabs .arrow.outer:after {
+  border-color: -moz-use-text-color transparent #CCC;
+  border-style: none solid solid;
+  border-width: 0 16px 16px;
+  margin-left: -1px;
+ }
+
+.arrow.firstButton:before,.arrow.firstButton:after {
+  left: auto;
+  right: 9%;
+}
+
+.arrow.secondButton:before,.arrow.secondButton:after {
+  left: auto;
+  right: 35%;
+}
+
+.arrow.thirdButton:before,.arrow.thirdButton:after {
+  left: auto;
+  right: 58%;
+}
+
+/* Tab Bar, created via JS*/
+div#tab-bar {
+  margin: 0px 0px 20px 10px;
+ }
+
+/* Single Tab */
+div#tab-bar div.mt-tab {
+  float: right;
+  margin: -1px 0px 0px -1px;
+ }
+
+/* Single Tab, when active */
+div#tab-bar div.mt-tab-active {
+  margin: -1px 0px 0px -1px;
+  background: url('/images/ci/icons/active_ti.png') no-repeat 7% 50%;
+}
+
+/* CONTENT STYLES */
+.survey-count {
+  right: auto;
+  left: -42px;
+}
+
+.survey-count .right-triangle {
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  left: auto;
+  right: -10px;
+}
+
+.survey-count span img#recipient_count_preview_progress {
+  left: auto;
+  right: 0px;
+}
+
+.survey-count img {
+  right: auto;
+  left: 20px;
+}
+
+.tag-node {
+  margin-right: 0px;
+  margin-left: 10px;
+  padding: 4px 10px 4px 25px;
+}
+
+.tag-node:after {
+  right: auto;
+  left: 9px;
+}
+
+.toggle-button {
+  padding: 7px 15px 7px 0px;
+}
+
+.toggle-button.active {
+	border-radius: 0px 5px 5px 0px;
+}
+
+.toggle-button.active:after {
+  -moz-transform: rotate(3deg);
+  left: 17px;
+  right: 11px;
+}
+
+.toggle-button label {
+  padding: 10px 10px 10px 20px;
+}
+
+.selectButton { /*height: 40px;*/
+  margin-right: 0px;
+  margin-left: 10px;
+  float: right;
+}
+
+.selectButton.active:before,.selectButton.active:after {
+  border-color: #D1EAEF transparent transparent;
+  border-style: solid solid none;
+  border-width: 15px 15px 0px;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.tab_content .formElements {
+  float: right;
+  padding: 17px 17px 17px 180px;
+}
+
+.tab_content .radio-selection {
+  float: right;
+}
+
+/* // end SURVEY RECIPIENT UI // */
+
+/* // start SURVEY ANALYZE REPORT // */
+
+.stepcontent li .response-periods-list li,
+.response-periods-list li {
+    padding: 10px 30px 10px 10px;
+}
+
+.response-periods-list input[type="checkbox"] {
+  left: auto;
+  right: 2px;
+ }
+
+.response-period-description,
+.response-period-data span {
+  float: right;
+}
+
+.response-period-data {
+  float: left;
+}
+
+.secondary-options {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+.tertiary-options {
+  margin-left: 0px;
+  margin-right: 80px;
+}
+
+.floatedReceipt.pointRight .arrow {
+  border-right-color: #FCFBD1;
+  border-right-style: solid;
+  border-left-style: none;
+  right: 167px;
+}
+
+/* // end SURVEY ANALYZE REPORT // */
+
+/* // Item Analysis // */
+.questionDetails .backLink:first-child {
+  left: auto;
+  right: 18px;
+}
+
+/* Resource Picker */
+
+div.resourcePickerContainer div.localViewToggle {
+  float: left;
+}
+
+div.resourcePickerContainer .tabsBar #tabs {
+  float: right;
+}
+
+div.resourcePickerContainer .tabsBar #tabs ul li {
+  float:right;
+}
+
+div.resourcePickerContainer .tabsBar #tabs ul li ul li
+{
+  float: none;
+}
+
+div.resourcePickerContainer ul.dropdown ul
+{
+  right: 0;
+}
+div.resourcePickerContainer ul.dropdown  > li {
+  border-left: solid 1px #666;
+  border-right: none;
+}
+
+div.resourcePickerContainer ul.dropdown > li:first-child {
+ border-left: solid 1px #666;
+ border-right: none;
+}
+
+/* end Resource Picker */
+
+/*Content area toggle (located a top content are title)*/
+.localViewToggle ul li {float:left;}
+
+.localViewToggle .separator {
+  border-left:none; 
+  border-right:1px dotted #D7BB66;
+  margin: 0 6px 0 0;
+  padding: 0 6px 0 0;
+}
+
+.localViewToggle a.miniComboButton {
+	background:#F5E7BD url(images/more_options.gif) no-repeat scroll 3% center;
+	padding: 0 0 0 16px;
+}
+
+/*End content area toggle.*/
+
+/*
+ * styles for grading navigation in pmo-1500
+ */
+
+.gradeInfoHeader h3 {
+    margin: 0 12px 0 4px;
+}
+
+.navStatusButtons {
+  margin: 15px 0px 0px 5px;
+}
+
+.user-navigator {
+  float: right;
+  margin: 0px 15px 0px 0px;
+}
+
+.pager {
+	left: auto;
+ 	right: 0px;
+}
+
+.pager.next {
+  right: auto;
+  left: 0px;
+}
+
+.pager a {
+  margin: 0 0px 0px -4px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.pager.next a {
+  margin: 0 -4px 0px 0px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.pager a span {
+  background: url("/images/ci/gradebook/right.png") no-repeat;
+  left: 9px;
+}
+
+.pager.next a span {
+  background: url("/images/ci/gradebook/left.png") no-repeat;
+  left: 13px;
+}
+
+.students-pager {
+  text-align: right;
+}

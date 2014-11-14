@@ -1,0 +1,194 @@
+﻿
+/*
+ * TABS
+ */
+ 
+ 
+table.bouncer {
+	width: 100%;
+}
+	
+table.bouncer td {
+	padding:0;
+}
+
+.brandingImgWrap {
+	overflow:hidden;
+	height: 58px;
+}
+
+div[class*="tabWrapper-"] {
+	padding: 0 24px;
+}
+
+/*Branding image is hidden when compact tabs are used*/
+.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap {
+	display:none;
+}
+
+/*Regular tabs*/
+.topTabs {
+	position: relative; 
+	overflow-y:hidden;
+	height: 89px;
+	font-family: 'Trebuchet MS', Arial, Verdana, sans-serif;
+	padding: 0;
+}
+
+/*Compact tabs*/
+.topTabs-compact {
+	position:relative;
+	padding-top: 32px;
+}
+
+/*Center aligned tabs*/
+.topTabs .tabWrapper-center .appTabs, .topTabs-compact .tabWrapper-center .appTabs {
+	margin: 0 auto;
+}
+
+/*Right aligned tabs.*/
+.topTabs .tabWrapper-right .appTabs, .topTabs-compact .tabWrapper-right .appTabs {
+	float: right;
+}
+  
+#topFrame /*@branding - do not remove*/,
+/*---*/
+.bgBanner {
+  background-color: #555;
+  background-position: 0 0px;
+  background-repeat: no-repeat;
+  color:#CCCCCC;
+}
+
+
+
+.brandingImgWrap a {
+  display: inline-block;
+  position: absolute;
+}
+
+.brandingImgWrap a:focus {
+  outline-color: #CCC;
+}
+
+.brandingImgWrap img[src*="header_institution"] {
+	left: 12px;
+	max-height: 60px;
+	position: absolute;
+	top: 0;
+	margin-top: 0;
+}
+/*
+ * TABS
+ */
+ 
+ 
+/* APPLICATION TABS (located in the top frame) */
+
+/*Regular tabs*/
+/*@branding - do not remove*/
+#topTab,
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.appTabs tbody tr td a, */
+/*@since 9.1*/
+.appTabs a {
+	font-size:95%;
+  	text-align:center;
+  	display:block;
+  	text-decoration:none; 
+  	padding:0.4em 1.3em 0.4em 1.3em;
+   	color:#000;
+   	background-color:#ccc;
+	background-image: url(images/gradient_black_short_bt.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	_background-image: none;
+	z-index:100;
+	white-space:nowrap;
+}
+
+.appTabs.transparent a, .appTabs.transparent a:hover, .appTabs.transparent a:focus {
+	background:transparent;
+	border-color:transparent;
+}
+
+.appTabs.transparent a:hover, .appTabs.transparent a:focus {
+	text-decoration:underline;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.appTabs tbody tr td a:hover, table.appTabs tbody tr td a:focus,*/
+/*@since 9.1*/
+.appTabs a:hover, .appTabs a:focus {
+	color:#000;
+   	background-color:#bbb;
+}
+
+/*@branding - do not remove*/
+#topTabActive,
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.appTabs tbody tr td.active a, table.appTabs tbody tr td.active a:hover,*/
+/*@since 9.1*/
+.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+  	color:#fff;
+  	background-color:#555;
+	background-position:0 -3px;
+  	font-weight:bold;
+  	z-index:1000;
+  	opacity:1;
+	top:1px;
+}
+
+/*Compact tabs*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs-compact table.appTabs tr td a*/
+/*@since 9.1*/
+.topTabs-compact .appTabs a, .topTabs-compact  .appTabs .active a:hover, .topTabs-compact  .appTabs .active a:focus {
+  	text-align:center;
+  	display:block;
+  	text-decoration:none; 
+  	padding:0.3em 1em 0.25em 1em;
+   	color:#fff;
+	color:#FFFFFF;
+   	background-color:#7C8188;
+	background-image: url(images/gradient_black_short_bt.png);
+	background-repeat: repeat-x;
+	background-position:    0 -3px;
+	_background-image: none;
+   	border:1px solid #65696E;
+	border-bottom:0;
+	z-index:100;
+	font-size:90%;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs-compact table.appTabs tr td a:hover*/
+/*@since 9.1*/
+.topTabs-compact .appTabs a:hover, .topTabs-compact .appTabs a:focus {color:#000; background:#f0930c;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.topTabs-compact table.appTabs tr td.active a, div.topTabs-compact table.appTabs tr td.active a:hover,*/
+/*@since 9.1*/
+.topTabs-compact .appTabs .active a, .topTabs-compact .appTabs .active a:hover, .topTabs-compact .appTabs .active a:focus {
+  	color:#000;
+  	background:#dedede;
+	padding:0.3em 1em 0.2em 1em;
+  	border:2px solid #595C61;
+  	border-bottom:0;
+  	font-weight:bold;
+}
+
+/*Rounding top-right and top-left corners.*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.round1 tbody tr td a, */
+/*@since 9.1*/
+.round1 a {-moz-border-radius:9px 9px 0 0; -webkit-border-radius:9px; 
+-webkit-border-bottom-right-radius:0; -webkit-border-bottom-left-radius:0; -khtml-border-horizontal-spacing:9px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*table.round2 tbody tr td a,*/
+/*@since 9.1*/
+.round2 a {-moz-border-radius:13px 13px 0 0; -webkit-border-radius:13px; 
+-webkit-border-bottom-right-radius:0; -webkit-border-bottom-left-radius:0; -khtml-border-horizontal-spacing:13px;}
+
+/*End application tabs*/

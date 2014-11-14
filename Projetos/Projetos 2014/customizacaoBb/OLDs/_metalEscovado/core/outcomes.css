@@ -1,0 +1,390 @@
+body.other {font-family:Arial,sans-serif;font-size: 0.8em;background:#FFF;
+background-image:url(/images/ci/icons/clphomepage/bg.gif);background-repeat:x;
+}
+
+/* Leftside navigation */
+#leftnav {position:absolute;top:3px;left:3px;width:200px;background:#858585;-moz-border-radius:9px;padding-bottom:6px!important;}
+
+#leftnav h2 {font-size:130%;margin:4px 0 2px 0;color:white;}
+#leftnav h2 a {color:white;text-decoration:none;}
+#leftnav h2 a:hover {text-decoration:underline;}
+/*Style modified in rtol.css*/ #leftnav h2 a.toggle_switch {float:right;margin-right:-3px;margin-top:3px;_margin-top:1px;}
+
+#leftnav div.discover_button {margin:9px 6px 0px 6px;_margin:3px 6px 0px 6px;background:#888 url(/images/ci/icons/discover_back_light.gif) no-repeat;padding:2px 12px 1px 12px;_padding:6px 12px 0 12px;height:32px;_height:34px;}
+#leftnav div.discover_button h2 {padding:0px;}
+#leftnav div.discover_button h2 a {color:#444;;text-decoration:none;}
+#leftnav div.discover_button h2 a:hover {text-decoration:underline}
+#leftnav div.discover_button h2 a img {margin-top:-3px;margin-left:-2px;margin-right:4px;}
+
+#leftnav ul {padding:3px 0 12px 0;margin:0 9px 6px 9px;background:#fff; -moz-border-radius:6px;width:170px;word-wrap:break-word;overflow:hidden;}
+/*Style modified in rtol.css*/ #leftnav ul li.unit, #leftnav ul li.course, #leftnav ul li.ee, #leftnav ul li.program, #leftnav ul li.workspace  {padding:0 0 0 20px;margin:0;list-style-type:none;background-repeat:no-repeat;background-position:2px 1px;} 
+#leftnav ul li.unit {background-image:url(/images/ci/icons/clp_unit_ti.gif);}
+#leftnav ul li.course {background-image:url(/images/ci/icons/clp_course_ti.gif);}
+#leftnav ul li.ee {background-image:url(/images/ci/icons/clp_ee_ti.gif);}
+#leftnav ul li.program {background-image:url(/images/ci/icons/clp_program_ti.gif);}
+#leftnav ul li.workspace {background-image:url(/images/ci/icons/clp_workspace_ti.gif);}
+#leftnav ul li.home {border-bottom:1px dotted #CCCCCC;}
+#leftnav ul li.home img {margin-left:3px; vertical-align:middle;}
+
+#leftnav div.category {margin:6px 6px 0 6px;background:#f0f0f0 url(/images/ci/icons/clphomepage/palette-top.gif);background-repeat:no-repeat;background-position:top center;padding:1px 0 1px 0;}
+#leftnav div.categoryheadtop {background:url(/images/ci/icons/clphomepage/categoryhead-full4.gif);background-repeat:no-repeat;height:23px;margin:0 3px 0 3px;padding:1px 6px 4px 8px;}
+#leftnav div.categorybottom {line-height:3px;margin:0 6px 6px 6px;background-color:#f0f0f0;background-image:url(/images/ci/icons/clphomepage/palette-bottom.gif);background-repeat:no-repeat;background-position:center top;color:#858585;}
+#leftnav div.categorybottom img {vertical-align:baseline;}
+#leftnav div.mycategory {margin:6px 6px 0 6px;background:#F3EFD2 url(/images/ci/icons/clphomepage/palette-top2.gif);background-repeat:no-repeat;background-position:top center;padding:1px 0 1px 0;}
+#leftnav div.mycategorybottom {line-height:3px;margin:0 6px 0px 6px!important;background-color:#F3EFD2;background-image:url(/images/ci/icons/clphomepage/palette-bottom2.gif);background-repeat:no-repeat;background-position:center top;color:#858585;}
+#leftnav div.mycategorybottom img {vertical-align:baseline;}
+#leftnav ul#my_units {margin-top:6px;}
+#leftnav div#system {margin-top:6px;}
+
+#leftnav a {color:#003366;}
+/*#leftnav a:focus  {outline:none;}*/
+
+/*Style modified in rtol.css*/ #leftnav h2.currentlocation {font-size:95%;padding:4px 2px 4px 18px;background:#777777 url(/images/ci/icons/clphomepage/currentnode.gif);background-repeat:no-repeat;color:white;font-weight:bold;margin:0 9px 0 9px;overflow:hidden;word-break:break-all;}
+#leftnav h2.currentlocation a {text-decoration:none}
+#leftnav h2.currentlocation a:hover {text-decoration:underline}
+
+#leftnav ul.features {padding:4px 0 6px 0;margin:0 9px 0 9px;background:#FFFFFF url(/images/ci/icons/clphomepage/hierfeatures_back.gif); background-repeat:no-repeat;background-position:bottom;-moz-border-radius:0;}
+/*Style modified in rtol.css*/ #leftnav ul.features li {padding:0 0 0 0;margin:0;list-style-type:none;background-image:url(/images/ci/icons/clphomepage/features_bullet.gif);background-repeat:no-repeat;background-position:16px 5px; }
+ 
+#leftnav ul.subunits {padding:4px 0 6px 0;margin:0 9px 6px 9px;background:#FFFFFF url(/images/ci/icons/clphomepage/hiersubunits_back.gif);background-repeat:no-repeat;background-position:bottom;}
+/*Style modified in rtol.css*/ #leftnav ul.subunits li {padding:0 0 0 0;margin:0;list-style-type:none;background-image:url(/images/ci/icons/list_bullet_single.gif);background-repeat:no-repeat;background-position:16px 3px; }
+  
+/*Style modified in rtol.css*/ #leftnav ul.subunits li span, #leftnav ul.subunits li a:link,  #leftnav ul.subunits li a:active, #leftnav ul.subunits li a:visited, #leftnav ul.features li a:link,  #leftnav ul.features li a:active, #leftnav ul.features li a:visited {display:block;padding:0 1px 0 23px;margin:0 6px;text-decoration:none;font-size:95%;}
+  
+/*Style modified in rtol.css*/ #leftnav ul.subunits li a:hover {padding:0 1px 0 23px;background:#ffffcc url(/images/ci/icons/list_bullet_single.gif);background-repeat:no-repeat;background-position:10px 3px;text-decoration:underline;}
+/*Style modified in rtol.css*/ #leftnav ul.features li a:hover {padding:0 1px 0 23px;background:#e8e8e8 url(/images/ci/icons/clphomepage/features_bullet.gif);background-repeat:no-repeat;background-position:10px 5px;text-decoration:underline;margin:0 6px;}
+  
+#leftnav ul.prev {padding:4px 0 4px 0;margin:0 9px 0 9px!important;background:#dedede url(/images/ci/icons/clphomepage/prev_back.gif)!important; background-repeat:no-repeat;background-position:top!important;border-bottom:0;margin-bottom:0;}
+/*Style modified in rtol.css*/ #leftnav ul.prev li {padding:0;margin:0;list-style-type:none;background-image:url(/images/ci/icons/list_bullet_up.gif);background-repeat:no-repeat;background-position:7px 3px;}
+/*Style modified in rtol.css*/ #leftnav ul.prev li a:link,  #leftnav ul.prev li a:active, #leftnav ul.prev li a:hover, #leftnav ul.prev li a:visited {display:block;padding:0 1px 0 14px;margin:0 4px;text-decoration:none;font-size:95%;}
+/*Style modified in rtol.css*/ #leftnav ul.prev li a:hover {background:#ededed;display:block;background-image:url(/images/ci/icons/list_bullet_up.gif);background-repeat:no-repeat;background-position:3px 3px;text-decoration:underline;}
+/*Style modified in rtol.css*/ #leftnav ul.prev li.uplink {font-size:100%;padding:3px 6px 5px 9px;margin:2px 0;}
+
+#leftnav a.actionbutton:link, #leftnav a.actionbutton:active, #leftnav a.actionbutton:visited {font-size:95%;padding:1px 4px;margin:auto;background:#ededed url(/images/ci/icons/clphomepage/header_back.gif);background-repeat:repeat-x;border:1px solid #ccc;text-decoration:none}
+#leftnav a.actionbutton:hover {border:1px solid #666;}
+#leftnav div.emptytext {padding:12px 0px 12px 0px;margin:0 9px 0px 9px;}
+
+.centerme {text-align:center;padding:3px;margin-bottom:3px;}
+
+a img {border:0px;}
+table {font-size:100%;}
+table a {color:#003399;}
+table tr th span.colHeader {font-size:90%}
+h1.pageTitle {padding:6px 4px 9px 0;font-size:150%;margin:0;}
+h1.pageTitle a.inlineAction{font-size:.7em;}
+
+/*END Leftside navigation */
+
+/* Content Area  Styles */
+
+#contentdiv {
+    margin:0px 6px 0 210px;
+    padding:0;
+	_padding-top:1px;
+    min-width:400px;
+    _width:100%;
+  }
+
+/*#puller{position:absolute; left:200px; margin-top:180px; height:1px;} */
+/* End Content Area  Styles */
+
+/* This is a fix which solves floating issues. To be used when containing div allows childeren to hang outside */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+
+/* HOMEPAGE STYLES */
+
+/*a:focus {outline:none;}  Removes focus outline in Firefox (Mozilla) */  
+img {vertical-align:middle;border:0px;} /* Centers images verticaly and sets borders to 0 */  
+
+#contentdiv div.breadcrumbs {width:99%;font-size:85%;margin-top:6px;padding-bottom:6px;}
+
+
+.banner {width:100%;}
+#contentdiv a {color:#003366;}
+#contentdiv h1 {padding:6px 4px 9px 0;font-size:150%;margin:0;} /*Style modified in rtol.css*/
+#contentdiv div.helptext {padding:0 0 12px 0;font-size:95%;}
+#contentdiv div.features_divider {-moz-border-radius:6px;background:#efefef;margin-left:-2px;padding-left:3px;}
+#contentdiv table tr td.unitfeatures table tr td {border:0;width:50%;padding:0 2px 0 2px;}
+#contentdiv div.innerdiv{background:#FFF;margin:0px;padding:0px 10px 10px 10px;}
+#contentdiv .top {margin-top:0!important;}
+
+.palette {margin:6px 18px 0px 18px;}
+.palette h3.top {font-size:120%;border:0;padding:6px 6px 4px 6px;background-image:none;color:#C0272D;margin-left:-18px;_margin-left:0px;} /*Style modified in rtol.css*/
+.palette ul {padding:0 12px 0 0;margin:0 0 6px 30px;} /*Style modified in rtol.css*/
+/*Style modified in rtol.css*/
+.palette ul li {margin:0;padding:0 0 4px 22px;list-style-type:none;background-image:url(/images/ci/icons/list_bullet.gif);background-repeat:no-repeat;background-position:9px 4px;font-weight:bold;}
+.palette ul li span {font-size:95%;font-weight:normal;}
+.palette ul li a {font-weight:bold;}
+.palette img {float:left;} /*Style modified in rtol.css*/
+/*Style modified in rtol.css*/
+.palette h3.alt {font-size:120%;margin-top:4px;padding:6px 6px 4px 6px;color:#C0272D;border-top:2px solid #ddd;background-image:none;background-color:none;margin-left:-18px;_margin-left:0px;}
+
+.mainColumn {width:75%;padding-bottom:40px;position:relative;}
+
+
+
+/*Style modified in rtol.css*/
+a.customize:link, a.customize:active, a.customize:visited {float:right;font-size:70%;font-weight:normal;padding:1px 4px;background:#ededed url(/images/ci/icons/clphomepage/header_back.gif);background-repeat:repeat-x;border:1px solid #ccc;margin-top:0;text-decoration:none;margin: 4px 0px 4px 6px;}
+a.customize:hover {border:1px solid #666}
+  
+a.ok_button:link, a.ok_button:active, a.ok_button:visited {font-weight:bold;font-size:120%;padding:2px 8px 1px 8px;background:#ededed url(/images/ci/icons/clphomepage/header_back.gif);background-repeat:repeat-x;border:1px solid #ccc;margin:12px 30px!important;text-decoration:none;}
+a.ok_button:hover {border:1px solid #666}
+  
+/*Style modified in rtol.css*/ a.more:link, a.more:active, a.more:visited {font-size:85%;font-weight:normal;padding:1px 2px 1px 5px;margin-top:0;text-decoration:underline;float:right;}
+
+#maincont{background:#FFF;}
+#maincont .listings {}
+#maincont .unitfeatures {width:280px; text-align:center;}
+#maincont .unitfeatures {height:auto;width:310px;padding:8px 2px 0 2px;border-right:none;}
+#maincont .unitfeatures .leftcol {width:150px;float:left;text-align:left;}
+#maincont .unitfeatures .rightcol {margin-left:160px;text-align:left;}
+#maincont .unitfeatures div.unit_channels {width:260px; margin:0 auto 6px auto;-moz-border-radius:0;}
+#maincont .unitfeatures div.unit_channels img {margin:0 4px;}
+#maincont .unitfeatures div {font-size:100%;margin-left:8px;-moz-border-radius:9px;}
+#maincont .unitfeatures h2 {font-size:110%;padding:3px 4px 3px 6px;color:white;letter-spacing:10px;text-align:center;-moz-border-radius:6px;background:#bababa;padding-left:3px;margin:0 0 9px 0;}
+#maincont .unitfeatures h3 {font-size:95%;margin:12px 0 0 0;padding:1px 4px 1px 6px;color:#C0272D;}
+#maincont .unitfeatures h4 {font-size:95%;margin:0;padding:4px 6px 0 18px;color:#333;}
+#maincont .unitfeatures ul {padding:0;margin:0 0 6px 12px;}
+#maincont .unitfeatures ul li {padding:2px 0 0 16px;margin:0;font-size:95%;list-style-type:none;background-image:url(/images/ci/icons/clphomepage/features_bullet.gif);background-repeat:no-repeat;background-position:6px 7px;}
+#maincont .unitfeatures #channel1{
+  float:left;
+  min-width:45%;
+  _width:45%;
+  padding:0;
+  text-align:center;
+  cursor:hand;
+}
+#maincont .unitfeatures #channel1 a, #maincont .unitfeatures #channel2 a {
+  display:block;
+  letter-spacing:0;
+  color:#fff;
+  margin:0;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+
+} 
+
+#maincont .unitfeatures #channel1{
+	margin: 3px 5px;
+	background: url(/images/ci/icons/clphomepage/channel_but_tr.gif) no-repeat top right;
+}
+#maincont .unitfeatures #channel1 #channel1img{
+	text-align:center;
+	margin: auto 0 3px auto;
+	background: url(/images/ci/icons/clphomepage/channel_but_tl.gif) no-repeat top left;
+}
+#maincont .unitfeatures #channel1 #channel1text{
+	margin: 0;
+	padding:0;
+	background: url(/images/ci/icons/clphomepage/channel_but_br.gif) no-repeat bottom right;
+	word-wrap:break-word;
+}
+#maincont .unitfeatures #channel1 #channel1text h2{
+	margin: 0;
+	padding:0 5px 5px 5px;
+	background: url(/images/ci/icons/clphomepage/channel_but_bl.gif) no-repeat bottom left;
+}
+
+table.contentarea {width:auto;font-size:100%;border-collapse:collapse;}
+table.contentarea tr td.unitfeatures {border-left:1px solid #ccc;width:200px;vertical-align:top;background:#FFF url(/images/ci/icons/clphomepage/dropshadow.gif);background-repeat:no-repeat;background-position:left top;padding:3px;}
+table.contentarea tr td.centerchannel {vertical-align:top;padding:3px 12px 3px 0;}
+
+.emptypalettetext {padding:0 12px 0 0;margin:0 0 6px 38px;font-weight:normal;} /*Style modified in rtol.css*/
+.explanation {padding:0 12px 0 0;margin:0 0 6px 38px;font-size:90%;_font-size:85%;font-weight:normal;} /*Style modified in rtol.css*/
+
+.unithp_div {zoom:1;_height:1%;}
+table.unithp_table {width:100%;font-size:100%;border-collapse:collapse;}
+/*Style modified in rtol.css*/ table.unithp_table tr td.left_cell {padding:0px 10px 0px 9px;vertical-align:top;width:73%;border-right:2px solid white;}
+/*Style modified in rtol.css*/ table.unithp_table tr td.right_cell {padding:0px  6px 0px 10px;vertical-align:top;width:27%;}
+/*Style modified in rtol.css*/ table.unithp_table tr td div.categoryhead {background-image:url(/images/ci/icons/clphomepage/categoryhead-full9.gif);background-repeat:no-repeat;height:24px;_height:30px;margin:4px 3px 9px 0px;padding:1px 0px 4px 9px;_padding:1px 0px 2px 9px;}
+table.unithp_table tr td div.categoryhead img#rightimage, table.discover_table tr td div.categoryhead img#rightimage {float:right;margin-top:-1px;_margin-right:-3px;}
+table.unithp_table tr td h2 {font-size:130%;margin:5px 0 2px 0;color:white;}
+/*Style modified in rtol.css*/ div.sidebar  h4 {padding:3px  6px 0px 6px;vertical-align:top;margin:2px 0px 4px 0px;font-size:90%;_font-size:85%;color:#444}
+table.unithp_table tr td div.categoryhead img#rightimage {float:l;e;margin-top:-1px;_margin-right:-3px;}
+
+/* Collaboration site and Content Collection buttons */
+div.centerme {text-align:center;}
+div.buttons_divider {clear:both;border-top:2px solid #ccc;padding:12px 24px 9px 24px;background:#f0f0f0}
+
+.landing div.buttons_divider {background:inherit;*background:transparent;}
+
+div.wrapper {}
+.landing div.wrapper {}
+div.button, div.button_down {float:left;margin-right:12px;background:url(/images/ci/icons/buttonback_ltgray.gif) no-repeat;padding:0 0px 8px 0;_padding:0 0px 4px 0px;font-size:120%;text-align:center;}
+div.button a {text-decoration:none;padding:8px 12px 8px 12px;_padding:7px 12px 7px 12px;white-space:nowrap;display:block!important;background:url(/images/ci/icons/buttonback_ltgray_right.gif) no-repeat 100% 0;font-weight:bold;}
+div.button a img {margin-right:6px;-moz-opacity:0.8;}
+div.button a:hover {text-decoration:underline;}
+
+/* End Collaboration site and Content Collection buttons */
+
+/*Style modified in rtol.css*/
+/* 360 button */
+div.button_360 {float:left;margin-left:6px;margin-right:auto;background:url(/images/ci/icons/buttonback_ltgray.gif) no-repeat;padding:0 0px 8px 0;_padding:0 0px 4px 0px;font-size:120%;white-space:nowrap;position:relative;padding-left:22px;min-width:120px;}
+div.button_360 a.icon {padding:0;margin:0;vertical-align:baseline;display:inline;position:absolute;background:none;top:4px;left:9px;}
+div.button_360 a.label, div.button_360 a {font-weight:bold;text-decoration:none;padding:8px 12px;_padding:8px 12px 12px 12px;display:block!important;background:url(/images/ci/icons/buttonback_ltgray_right.gif) no-repeat 100% 0;white-space:nowrap;}
+div.button_360 a.label:hover, div.button_360 a:hover {text-decoration:underline;}
+div.button_360 img.right {float:right;margin-top:-5px;_margin-top:-3px;_margin-right:-3px}
+/* end 360 button */
+
+.more_wrapper {padding:0px 0px 3px 0px;}
+ 
+ul.caret2 {padding:0px 12px 0px 0px;margin:0px 0px 6px 6px;} /*Style modified in rtol.css*/
+/*Style modified in rtol.css*/ ul.caret2 li {font-size:90%;_font-size:85%;margin:0px;padding:0px 0px 3px 20px;list-style-type:none;background-image:url(/images/ci/icons/list_bullet.gif);background-repeat:no-repeat;background-position:5px 4px;font-weight:normal;}
+ul.caret2 li span {font-size:95%;font-weight:normal;}
+ul.caret2 ul li a {font-weight:normal;}
+
+/*Style modified in rtol.css*/div.sidebar div.categoryhead3 {height:16px;_height:19px;margin:4px 3px 3px 0px;padding:1px 0px 4px 9px;_padding:1px 0px 2px 9px;}
+div.sidebar  h3 { 
+	background-image:none;
+	border-bottom:1px solid #DDDDDD;
+	font-size:110%;
+	padding:0.3em 0pt 0.3em 6px;
+	margin:0 0 4px 0
+}
+
+/*Style modified in rtol.css*/ .hplist_div {}
+table.hplist_table {width:100%;font-size:100%;border-collapse:collapse;}
+/*Style modified in rtol.css*/ table.hplist_table tr td.left_cell {padding:6px 20px 12px 9px;vertical-align:top;width:50%;border-right:2px solid white;}
+/*Style modified in rtol.css*/ table.hplist_table tr td.right_cell {padding:6px  6px 12px 24px;vertical-align:top;width:50%;}
+/*Style modified in rtol.css*/ table.hplist_table tr td.single_cell {padding:6px  6px 12px 9px;vertical-align:top;width:100%;}
+table.hplist_table tr td.button_cell {padding: 0px; text-align: center;}
+
+table.hplist_table tr td.noborder {border:none;}
+/*Style modified in rtol.css*/ table.hplist_table tr td.top360 {border-right:none;border-bottom:2px solid white;}
+/*Style modified in rtol.css*/ table.hplist_table tr td div.categoryhead {background-image:url(/images/ci/icons/clphomepage/categoryhead-full9.gif);background-repeat:no-repeat;height:24px;_height:30px;margin:4px 3px 12px 0px;padding:1px 0px 4px 9px;_padding:1px 0px 2px 9px;}
+/*Style modified in rtol.css*/ table.hplist_table tr td div.categoryhead img#rightimage {float:right;margin-top:-1px;_margin-right:-3px;}
+table.hplist_table tr td h2 {font-size:130%;margin:5px 0 2px 0;color:white;}
+table.hplist_table tr td.single_cell div.categoryhead {width:50%;}
+
+ul.caret {padding:0px 12px 0px 0px;margin:0px 0px 6px 0px;}
+/*Style modified in rtol.css*/ ul.caret li {margin:0px;padding:0px 0px 10px 22px;list-style-type:none;background-image:url(/images/ci/icons/list_bullet.gif);background-repeat:no-repeat;background-position:9px 4px;font-weight:bold;}
+ul.caret li span {font-size:95%;font-weight:normal;}
+ul.caret ul li a {font-weight:bold;}
+
+ul.caret img {float:left;}
+table.hplist_table tr td.single_cell ul.caret {width:50%;}
+
+table.hplist_table tr td div.unit_channels {width:260px; margin:0 auto 6px auto;-moz-border-radius:0;font-size:80%}
+table.hplist_table tr td div.unit_channels #channel1, table.hplist_table tr td div.unit_channels #channel2 {
+  float:left;
+  width:121px;
+  padding:0 0 5px 0;
+  margin:0 3px;
+  background:url("/images/ci/icons/clphomepage/collaboration_button_bottom.gif") bottom left no-repeat;
+  text-align:left;
+}
+table.hplist_table tr td div.unit_channels #channel1 a {background:url("/images/ci/icons/clphomepage/collaboration_button_top.gif") top left no-repeat;} 
+table.hplist_table tr td div.unit_channels #channel2 a {background:url("/images/ci/icons/clphomepage/datalib_button_top.gif") top left no-repeat;} 
+table.hplist_table tr td div.unit_channels #channel1 a, table.hplist_table tr td div.unit_channels #channel2 a {
+  display:block;
+  letter-spacing:0;
+  color:#fff;
+  margin:0;
+  padding:40px 2px 0 0;
+  color:#fff;
+  text-decoration:none;
+  font-size:120%;
+  font-weight:bold;
+  text-align:center;
+}
+
+/*with white background*/
+div.hp_buttons {margin:6px auto 6px auto;-moz-border-radius:6px;font-size:70%;background:#FFF;text-align:center!important;padding:12px 12px 12px 12px;}
+.hp_buttons div.container {margin:auto;width:300px;}
+.hp_buttons #channel1 a, .hp_buttons #channel2 a {
+  display:block;
+  letter-spacing:0;
+  color:#fff;
+  margin:0;
+  padding:0 6px 3px 6px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+}
+.hp_buttons  #channel1{
+  float:left;
+  min-width:45%;
+  _width:125px;
+  padding:0;
+  text-align:center;
+  cursor:hand;
+}
+.hp_buttons  #channel1 a, .hp_buttons  #channel2 a {
+  display:block;
+  letter-spacing:0;
+  color:#fff;
+  margin:0;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+} 
+.hp_buttons  #channel1{
+	margin: 3px 5px;
+	background: url(/images/ci/icons/clphomepage/channel_but_tr.gif) no-repeat top right;
+}
+.hp_buttons  #channel1 #channel1img{
+	text-align:center;
+	margin: auto 0 3px auto;
+	background: url(/images/ci/icons/clphomepage/channel_but_tl.gif) no-repeat top left;
+}
+.hp_buttons  #channel1 #channel1text{
+	margin: 0;
+	padding:0;
+	background: url(/images/ci/icons/clphomepage/channel_but_br.gif) no-repeat bottom right;
+	word-wrap:break-word;
+}
+.hp_buttons  #channel1 #channel1text h2{
+	margin: 0;
+	padding:0 5px 5px 5px;
+	background: url(/images/ci/icons/clphomepage/channel_but_bl.gif) no-repeat bottom left;
+}
+
+/* END HOMEPAGE STYLES */
+/* Discover Page */
+
+.discover_div {background:#f0f0f0;-moz-border-radius:6px;padding:12px 6px 18px 6px;margin-bottom:12px;}
+
+table.discover_table {width:auto;font-size:100%;border-collapse:collapse;}
+/*Style modified in rtol.css*/ table.discover_table tr td {padding:0 6px 2px 9px;vertical-align:top;width:33%;border-right:2px solid white;}
+table.discover_table tr td.noborder {border:none;}
+table.discover_table tr td.learn {border:none;height:auto;padding:10px 10px 3px 10px;}
+table.discover_table tr td div#learning {border-top:2px solid white;}
+table.discover_table tr div#learning h2 {font-size:130%;margin:0px 0 2px 0;color:#000;padding:6px 0 0 9px;}
+table.discover_table tr td div#learning ul li a {font-weight:normal;}
+
+/*Style modified in rtol.css*/ table.discover_table tr td div.categoryhead {background-image:url(/images/ci/icons/clphomepage/categoryhead-full9.gif);background-repeat:no-repeat;height:24px;_height:30;margin:4px 3px 0 0;padding:1px 0px 4px 12px;_padding:1px 0px 2px 9px;}
+table.discover_table tr td h2 {font-size:130%;margin:4px 0 2px 0;color:white;}
+/*Style modified in rtol.css*/ ul.outcomesLanding  h4 {font-size:100%;margin:0;padding:3px 6px 0 0;}
+table.discover_table tr td ul {display:block;background:none;-moz-border-radius:none;padding:3px 0 3px 0;margin:0 0px 6px 0px;}
+/*Style modified in rtol.css*/ table.discover_table tr td ul li {font-weight:bold;padding:0 0 3px 12px;margin:0;list-style-type:none;background-image:url(/images/ci/icons/list_bullet.gif);background-repeat:no-repeat;background-position:0 4px; }
+/*Style modified in rtol.css*/ table.discover_table tr td ul li.active {-moz-border-radius:6px;background:#FFFFFF url(/images/ci/icons/list_bullet.gif);background-repeat:no-repeat;background-position:0 4px;margin-bottom:3px;color:#000;}
+/*Style modified in rtol.css*/ .subhead_text {padding:0 0 2px 9px;font-size:90%;_font-size:85%;color:#333;}
+/*.list_text {padding:0 2px 2px 2px;font-size:90%;_font-size:85%;font-weight:normal;color:#333;}*/
+
+table.discover_table tr td ul li.active div.list_text {color:#555;font-size:95%;padding-bottom:9px;}
+table.discover_table tr td ul li.active div.list_text a, table.discover_table tr td ul li div.list_text a {margin-left:9px;}
+.subhead_text {padding:0 0 2px 0;font-size:90%;_font-size:85%;color:#333;}
+.list_text {padding:0 2px 2px 1.3em;font-size:85%;_font-size:85%;font-weight:normal;color:#666;}
+div.landingPageColumn ul.outcomesLanding li .list_text a {font-weight:normal;padding:0;margin-left:3px;background-image:none;}
+/* End Discover Page */
+
+
+.sidebar {
+	background:#f0f0f0;
+
+}
+
+.sidebar div.paddingWrap {
+	padding:12px;
+
+}
+
+.sidebar div {clear:both}

@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {font-family: "arial", "sans-serif";}
+.wrapper {
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	width: 450px;
+	}
+.containerManuais {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display: block;
+	float: left;
+	height: 100%;
+	min-height: 100%;
+	padding: 10px;
+	width: 100%;
+}
+h3 {
+	border-bottom: 1px solid #cf1432;
+	color: #cf1432;
+	font-size: 18px;
+	padding-bottom: 3px
+}
+hr {
+	background-color: #cccccc;
+	border: #ccc;
+	clear: both;
+	display: block;
+	height: 1px;
+	zoom: 1;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.formSearch {
+	display: block;
+	width: 100%;
+	padding: 20px 0 15px;
+}
+.formSearch input[type="text"],
+.formSearch input[type="button"] {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #999;
+	font-size: 11px;
+	height: 32px;
+}
+.formSearch input[type="text"] {
+	border: 1px solid #ccc;
+	margin-left: 2px;
+	padding: 10px 0 10px 11px;
+	width: 386px;
+}
+.formSearch input[type="text"]:hover, .formSearch input[type="text"]:focus {
+	border: 1px solid #cf1432;
+}
+.formSearch input[type="button"] {
+	background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -1px -1px no-repeat;
+	border: 1px solid transparent;
+	cursor: pointer;
+	margin: 1px 0 0 6px;
+	padding: 10px 0;
+	width: 32px;
+}
+.formSearch p.legenda {margin-top: 4px;}
+.formSearch span {
+	color: #646464;
+	font-size: 9px;
+	margin-left: 12px;
+	font-weight: bold;
+}
+.formSearch span.abreFecha {
+	display: inline-block;
+	float: right;
+	margin: 6px 5em 0 0;
+	text-align: right;
+}
+.formSearch span.abreFecha a {
+	color: #cf1432;
+	text-decoration: none;
+}
+.formSearch span.abreFecha a:hover,
+.formSearch span.abreFecha a:focus {
+	text-decoration: underline;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.listTopicos {
+	border-top: 1px solid #ccc;
+	display: block;
+	float: left;
+	padding: 18px 0;
+	width: 100%;
+}
+.listTopicos:last-child {padding-bottom: 9px}
+.listTopicos .ico-comunicacao,
+.listTopicos .ico-compartilhamento,
+.listTopicos .ico-copia,
+.listTopicos .ico-rubric,
+.listTopicos .ico-teste,
+.listTopicos .ico-recebimento,
+.listTopicos .ico-cartilha,
+.listTopicos .content {
+	display: inline-block;
+	float: left;
+	padding: 9px 0 0 3px;
+	width: 355px;
+}
+.listTopicos .ico-comunicacao,
+.listTopicos .ico-comunicacao,
+.listTopicos .ico-compartilhamento,
+.listTopicos .ico-copia,
+.listTopicos .ico-rubric,
+.listTopicos .ico-teste,
+.listTopicos .ico-recebimento,
+.listTopicos .ico-cartilha {
+	margin: -9px 0 0 6px;
+	text-align: center;
+	width: 40px;
+}
+.listTopicos .ico-comunicacao span,
+.listTopicos .ico-compartilhamento span,
+.listTopicos .ico-copia span,
+.listTopicos .ico-teste span,
+.listTopicos .ico-rubric span,
+.listTopicos .ico-recebimento span,
+.listTopicos .ico-cartilha span {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display: block;
+	height: 32px;
+	text-indent: -9999px;
+	width: 32px;
+}
+.ico-comunicacao span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -40px -1px no-repeat}
+.ico-compartilhamento span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -80px -1px no-repeat}
+.ico-copia span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -120px -1px no-repeat}
+.ico-teste span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -160px -1px no-repeat}
+.ico-rubric span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -200px -1px no-repeat}
+.ico-recebimento span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -240px -1px no-repeat}
+.ico-cartilha span {background: transparent url("https://inspertest.blackboard.com/bbcswebdav/xid-7876_1.png") -280px -1px no-repeat}
+
+.listTopicos .content {
+	display: inline-block;
+	float: left;
+	padding-left: 3px;
+	padding-top: 9px;
+	width: 355px;
+}
+.listTopicos .content p {font-size: 12px;}
+.listTopicos .content p a {
+	color: #666;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+.listTopicos .content p a.arrowDown,
+.listTopicos .content p a.arrowLeft {
+	display: inline-block;
+	height: 15px;
+	text-indent: -9999px;
+	width: 15px;
+}
+
+.listTopicos .content p a.arrowDown,
+.listTopicos .content p a.arrowLeft {
+	/*-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	-ms-transition: all 400ms ease-in;
+	-o-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;*/
+}
+.listTopicos .content p a.arrowLeft {
+	background: url("https://inspertest.blackboard.com/bbcswebdav/xid-7877_1") center center no-repeat;
+}
+.listTopicos .content p a.arrowDown {
+background: url("https://inspertest.blackboard.com/bbcswebdav/xid-7878_1") center center no-repeat;
+}
+.listTopicos .content p a:visited,
+.listTopicos .content p a:hover,
+.listTopicos .content p a:focus {
+ 	color: #666666;
+ 	text-decoration: underline;
+ }
+.listTopicos .content p a span.total {
+	color: #cf1432;
+	font-size: 12px;
+ 	font-weight: bold;
+ 	text-indent: 0;
+ }
+.topicos {display: none;}
+.listTopicos .topicos {
+ 	margin-left: 35px;
+	margin-top: 20px;
+ }
+.listTopicos .topicos ul {
+	color: #cf1432;
+	list-style: square;
+	margin: 0 0 0 5px;
+ }
+.listTopicos .topicos ul li {
+	font-size: 12px;
+	margin: 0 0 12px -2px;
+	margin-left: -2px
+}
+.listTopicos .topicos ul li a {
+	color: #cf1432;
+	font-size: 12px;
+ 	text-decoration: none;
+}
+.listTopicos .topicos ul li a:hover,
+.listTopicos .topicos ul li a:focus {
+	text-decoration: underline;
+}

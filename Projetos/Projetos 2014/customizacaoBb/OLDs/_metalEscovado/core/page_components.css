@@ -1,0 +1,860 @@
+
+/*
+ * PAGE COMPONENTS
+ */
+
+
+/* Breadcrumbs */
+
+.path, .simplePath  {
+/* 	float: left; */ /*Student Preview fix*/
+	font-size:90%; 
+  	font-weight:bold; 
+  	color:#000; 
+	background:#fff;
+	margin:0px;
+	padding:0 200px 0 0;
+	position:relative;
+	_height:1px;
+}
+
+.simplePath {background:transparent; padding:4px 12px 0px 12px;}
+
+.breadcrumbs .noToggle {padding: 0;}
+
+/*Floating breadcrumb elements. Floating is necessary due to RTL rendering issues.*/
+.path li, .simplePath li {
+/* 	display: inline-block; */ /*Student Preview fix*/
+	float:left; /*Remove for student preview*/
+	padding:8px 14px 8px 2px;
+  	background:transparent url(images/breadcrumb_arrow.gif) no-repeat 98% center;
+  	font-weight:normal;
+  	color:#444;
+}
+
+/*Used to allow breadcrumbs without href anchors to render in same manner.*/
+.path .placeholder, .simplePath .placeholder { 
+	background-image: none; 
+	padding:8px 14px 8px 2px;
+	font-weight:bold;
+	color:#000;
+}
+
+/*Optional breadcrumb label style.*/
+.path .label, .simplePath .label {padding:0 6px 0 6px; color:#444; font-weight:normal;}
+
+/*Default breadcrumb link.*/
+.path a, .simplePath a {font-weight:normal; color:#000000; text-decoration:none;}
+.path a:hover, .simplePath a:hover { color:#000; text-decoration:underline; }
+
+
+/*First element in the breadcrumbs.*/
+.path .root, .simplePath .root {
+	background:transparent url(images/gradient_black_long_bt.png) repeat-x  right 5px !important;
+	_background-image:none;
+	margin:0 12px 0 0;
+	padding:8px 12px 8px 12px;
+	border-right:1px dotted #ccc;
+  	font-weight:bold;
+}
+
+.path .root a, .simplePath .root a {
+	font-weight:bold;
+    color:#444;
+	text-decoration:none;
+	padding:1px 1px 2px 1px;
+}
+
+
+/*Course menu button (displayed when orientation bar is placed in its own frame)*/
+.path .button, .simplePath .button {
+	padding:0 1px 2px 1px;
+	margin:-2px 8px -2px -2px;
+	*margin-right:6px;
+	background-color:#f6f6f6;
+}
+
+.path .button a, .simplePath .button a {background-image:none; padding:1px 1px 2px 1px;}
+
+/* Added styles for breadcrumb menu */
+.path .contextPath {
+	background-image:none;
+	padding:8px 26px 8px 2px;
+  *padding-top:6px;
+	position:relative;
+}
+
+.contextPath .contextArrow, .contextPath  .contextArrowDown { 
+	position: absolute; 
+	top:6px; 
+  right:2px;
+  background-image:url(images/indicators.png);
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  padding:0;
+}
+ 
+.path li .contextArrowDown {background-position:50% -1626px;}
+
+.contextPath .contextArrow .contextMenuContainer a.cmimg,
+.contextPath .contextArrowDown .contextMenuContainer a.cmimg,
+.coursePath .cmimg { 
+	background: none;
+  margin:0;
+}
+
+.contextPath .contextArrow, 
+.contextPath  .contextArrowDown,
+.contextArrow .contextMenuContainer { 
+  width:14px;
+  height:14px;
+  padding:0;
+}
+
+/* SP8. allows user to jump to different course from breadcrumb */
+.path .coursePath {
+  padding:8px 26px 8px 12px;
+  position: relative;
+}
+
+.coursePath .courseArrow, .path .coursePath .contextArrowDown { 
+  position: absolute; 
+  top:0; 
+  right:6px;
+  bottom: 0;
+  background: url("images/cmlinkoptions.gif") 1px 50% no-repeat;
+}
+/*End breadcrumbs*/
+
+
+/*Content area title (aka Page Title)*/
+/*Branding hooks*/
+#pageHeader, 
+/*Regular selectors*/
+.pageTitle, .pageTitleSmall, #lightboxContent h2 {
+	margin:0;
+	padding:6px 12px 6px 12px;
+	background-color:#efefef;
+	color:;
+	zoom:1;
+	color:#000;
+}
+/* @since 9.1SP3 (added for icon overlay effect used to flag Published items) */
+.pageTitle {position:relative;}
+
+.pageTitle, #lightboxContent h2 {border-bottom:1px solid #EEDD99;}
+.pageTitle h1, .pageTitleError h1  {float:left; margin:6px 3px 6px 0; padding:0; font-size:150%;}
+.pageTitleSmall h1  {padding:0;font-size:135%;margin:0;}
+/* @since 9.1SP6 (reworked pageTitle DOM and classes) */
+.pageTitle .contextMenuContainer, .pageTitle .titleButtons, .pageTitleEdit {display:block; float:left; margin:6px 6px 6px 0;}
+.pageTitleIcon .contextMenuContainer {margin-top:15px;}
+.pageTitleIcon h1, .pageTitleIcon .contextMenuContainer, .pageTitleIcon .titleButtons, .pageTitleIcon + .pageTitleEdit {margin-top:12px;}
+#titleicon {/*width:36px; height:36px;*/margin:0 6px 0 0; float:left;}
+#pageTitleBar {float:left;}
+
+/*since 9.1*/
+.pageTitle h2 {
+  clear:both;
+  margin:0;
+  font-size:100%;
+  color:black; /* in case it sits in div.helphelp */
+}
+.pageTitle h2 span {font-weight:normal;}
+
+/*since 9.1*/
+/*Page context, usually comes before page title and is appended with ":"*/
+.contextString, .pageTitle .label {color:#777;font-weight:normal}
+
+.error .pageTitle {background:red;}
+.error .pageTitle h1 {color:#fff;}
+
+#titleicon + *, #titleicon + a.cmimg {margin-top:12px;}
+
+.customBanner, .currentBannerWrapper {overflow:hidden;text-align:center;margin:0;background-color:transparent;}
+
+/*Removing top padding if local toggle is present*/
+div.localViewToggle + div.pageTitle {padding-top:0;}
+
+/*  Outcomes page header styles -- Temporary fix */
+h1.pageTitle, .caliperTitle, .discoverTitle {margin:-11px 0 5px 0;padding-top:0;}
+.discoverTitle,  .caliperTitle {*position:relative;*top:-11px;}
+
+.unitHomePageTitle {margin:-11px -12px 5px -12px;padding-top:0;}
+.caliperTitle h1 {padding:0;float:none;margin:0}
+.unitHomePageTitle h1 {padding:0;margin:0;float:none;}
+.discoverTitle h1 {padding:0 12px}
+
+.unitHomePageTitle a.browse, .caliperTitle a.browse {float:right;font-size:60%;font-weight:normal;margin:4px 0 0 6px;padding-top:2px;padding-bottom:1px;}
+
+.unitHomePageTitle a.browseNoImg {padding-top:2px;padding-bottom:3px;}
+/*  End Outcomes page header styles */
+
+/*Lightbox header*/
+#lightboxContent h2 {position:relative;}
+
+/*Page-level help text*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.helphelp, p.helphelp, div.pageTitle p,*/
+/*@since 9.1*/
+.helphelp, .pageTitle p{ 
+	color:#666666;
+  	margin:0 0 4px 0;
+  	padding:4px 4px 0px 0;
+	clear:both;
+}
+
+/*div.helphelp p.helphelp {font-size:100%}*/
+div.helphelp ul {margin:6px 0}
+
+
+/*Instalation details (displayed in admin panel page title)*/
+/*Colophon that details installation details in the admin panel.*/
+
+h1 span.version {font-size:75%}
+
+.colophon {
+	float:right;
+	width:30em;
+	padding:0px 0 3px 55px;
+	margin:0 0 0 14px;
+	background:transparent;
+	font-size:85%;
+	overflow:visible;
+	*font-size:90%;
+	position:relative;
+}
+
+.colophon img {position:absolute;left:0;}
+.installation {color:#000;*font-size:95%;line-height:1.3em;}
+.installation span.label {font-weight:bold;}
+
+/*End installation details*/
+
+/* @since 9.1SP3 overlay for published items */
+.itemIconOverlay {
+  top:32px;
+  position:absolute;
+  background-color:#FFD739;
+  padding:2px;
+  border:1px solid #555; 
+  -moz-box-shadow:-1px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:-1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+.pageTitle .itemIconOverlay {left:32px; top:33px;}
+.contentList .itemIconOverlay {left:54px;}
+.iconsOnly .itemIconOverlay {
+  left:auto;
+	top:28px;
+	margin-left:-25px;
+}
+/* end overlay */
+
+/*End page title*/
+
+
+
+/*Action bars*/
+/*Content area action bar*/
+/*Branding hooks*/
+#actionBarBrand,
+/*/branding*/
+.actionBar {
+	margin:-1px 0 0 0;
+	padding:6px 6px 6px 6px;
+	border-bottom:1px solid #ddd;
+	*padding:4px 6px 6px 6px;
+  background-color:#efefef;
+	zoom:1;
+	z-index:110;
+}
+
+/*@since 9.1*/
+.actionBar ul li {z-index:111;zoom:1; position:relative;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li, .actionbar_portal ul li,*/
+/*@since 9.1*/
+.actionBar .mainButton {float:left; margin:2px 0 0 4px; padding-right:1px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li.search, .actionbar_portal ul li.search,*/
+/*@since 9.1*/
+.actionBar .secondaryButton {float:right; margin:2px 4px 0 0;}
+
+/*@since 9.1*/
+.actionBar ul li {zoom:1; position:relative;}
+.actionBar ul li.mainButton {z-index:110;}
+.actionBar ul li.secondaryButton {z-index:109;}
+.actionBar ul li.mainButton:hover {z-index:1001;}
+.actionMenuItem {z-index:123;zoom:1; position:relative;}
+
+/*Tab level action bar*/
+.tabActionBar {margin:-1px 0 0; padding:6px 0; z-index:110;}
+.tabActionBar ul li {zoom:1; position:relative;}
+.tabActionBar ul li.mainButton {z-index:110;}
+.tabActionBar ul li.secondaryButton {z-index:109;}
+.tabActionBar ul li.mainButton:hover {z-index:112;}
+.tabActionBar .mainButton {float:left; margin:2px 0 0 0; padding-right:1px;}
+.tabActionBar .secondaryButton {float:right; margin:2px 0 0 4px ;}
+
+/*Course menu palette action bar*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette div.actionBarMicro, .portlet div.actionBarMicro,*/
+/*@since 9.1*/
+.actionBarMicro {padding:4px 5px;*padding:0px 5px 4px 5px;background:#ffcc33;border:1px solid #555;border-bottom:0;}
+.portlet .actionBarMicro {padding:4px 4px 4px 4px; margin:0;}
+.portlet .actionBarMicro ul {margin:2px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.navPalette div.actionBarMicro ul li, div.navPalette div.buttons div.actionBarMicro ul li, .portlet div.actionBarMicro ul li,*/
+/*@since 9.1*/
+.actionBarMicro ul li {padding:0; position:relative; float:left; margin:0 0 0 3px; *margin:1px 0 1px 3px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette div.actionBarMicro ul li.mainButton, .navPalette div.buttons div.actionBarMicro ul li.mainButton, .portlet div.actionBarMicro ul li.mainButton,*/
+/*@since 9.1*/
+.actionBarMicro .mainButton {margin:0 3px 0 0; z-index:1000;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.navPalette div.actionBarMicro ul li.secondaryButton, div.navPalette div.buttons div.actionBarMicro ul li.secondaryButton,*/
+/*@since 9.1*/
+.actionBarMicro .secondaryButton {float:right; z-index:10;}
+
+/*End Action bars*/
+
+
+
+
+/*Top frame elements*/
+
+.topGlobalLinks ul {padding:0 3px 2px 3px; z-index:1001; margin:0 auto;}
+
+.topGlobalLinks  ul li {float:left; position:relative; zoom:1; _height:1%; *z-index:499;}
+
+.topGlobalLinks  ul li img {position:absolute;top:1px;left:-14px;}
+
+.topGlobalLinks a {
+	display:block;
+	margin:0;
+	text-decoration:none;
+	color:#FFF;
+	text-align:left;
+	border-left:1px dotted #555;
+	padding: 3px 8px 3px 28px;
+	zoom:1;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+}
+
+/*Styles added for the new area added to top global links to display logged in user name and observee details*/
+.topGlobalLinks ul li span.observing {
+  background:transparent url(/images/console/icons/observing.gif) no-repeat scroll 4px -3px;
+  display:inline;
+  padding:3px 1px 3px 30px;
+  top:-5px;
+  *top:-3px;
+  *display:inline-block;
+  *vertical-align:top;
+  *position:relative;
+}
+
+.topGlobalLinks a:hover, .topGlobalLinks a:focus  {text-decoration:underline;}
+
+.topGlobalLinks ul li:first-child a {border:none;}
+
+
+/*safari only hack to reduce font size further */
+/*\*/
+html*.topGlobalLinks a, html*.topGlobalLinks a {font-size:80%;*font-size:85%;}
+/**/
+
+/*End top frame links*/
+
+/* @group TOP FRAME HOT ITEMS
+----------------------------------------------- */
+
+.hotItems {
+    position: relative;
+    margin-right: 3px;
+    width: 240px;
+    min-height: 28px;
+    text-align: center;
+    background: transparent;
+    color: #f9f9f9;
+}
+
+.topTabs-compact .hotItems {
+    display: none
+}
+
+.hotSpots {
+    max-height: 46px;
+    overflow: auto;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 3px 3px 5px;
+}
+
+.hotSpots li {
+    display: inline-block;
+    display: inline\9;/*IE8*/
+    padding: 0 0 2px;
+}
+
+.hotSpots a {
+    text-decoration: underline;
+    color: #fff;
+    display: inline-block;
+    padding: 0 6px 0 0;
+}
+
+.hotSpots li:after {
+    content: "\2022";
+    color: #ddd;
+    position: relative;
+    right: 1px;
+}
+
+.hotSpots li:last-child:after {
+    content: none
+}
+
+.hotSpots a:hover {
+    text-shadow: 0 0 2px #000;
+    text-decoration: none;
+}
+
+/* @end TOP FRAME HOT*/
+
+
+
+/*End top frame elements*/
+
+
+/*Navigation pane components*/
+/*Course menu image*/
+div.cmImg {overflow:hidden; text-align:center; margin:0px 0px 6px 12px; width:180px;}
+div.cmImg img{width: 180px;}
+
+/* Navigation Pane divider */
+h2.navDivider {
+	padding:9px;
+	border-top:3px double #ddd;
+	margin:18px 0 4px 0;
+	color:#555;
+	font-weight:bold;
+	font-size:85%;
+	*font-size:80%;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	text-align:center;
+	background:transparent url(images/gradient_black_short_tb.png) repeat-x   0 -16px;
+	_background-image: none;
+}
+/*End navigation pane components*/
+
+
+
+/*Copyright*/
+#copyright {display:block; width:495px; font-size:85%; color:#444; margin:12px auto; position:relative;}
+.loginCopyright { width:580px!important;}
+
+.logo, .productTitle , .legal, .additionalInfo {float:left;min-height:4em;}
+.productTitle {padding:9px 12px 0px 9px;min-height:auto;}
+.logo {padding:0 13px 0 0}
+.logo img {width:44px}
+.legal, .additionalInfo {border-left:1px dotted #555; padding:3px 3px 6px 12px}
+.legal {width:20.5em;}
+.additionalInfo {width:15em}
+.loginCopyright  .legal, .loginCopyright  .additionalInfo {width:24em;min-height:2.5em;	}
+.loginCopyright .legal {border-left:none;padding:3px 12px 6px 12px;width:24.5em;}
+
+.legal p, .additionalInfo p {margin:0;padding:0}
+
+.productTitle a  {font-size:125%;font-weight:bold;text-decoration:none;line-height:1.2em;color:#333;text-align:right;display:block;}
+.productTitle a:hover {text-decoration:underline;}
+#copyright a {color:#111; text-decoration:none;}
+#copyright a:hover {color:#000;text-decoration: underline;}
+
+.additionalInfo p:first-child a {
+	padding-right:12px;
+}
+.additionalInfo p:first-child a:hover {
+	background:url(images/micro_popup.png) right 2px no-repeat;
+}
+
+div.copyrightDetailContents {
+	display:none;
+	padding: 6px 6px 9px 20px;
+	position: absolute;
+	top:-.2em;
+	left:5.2em;
+	width:42em;
+	min-height:5em;
+	background-color:  #404040;
+	color:#fff;
+	clear:left;
+}
+
+.productImg {float:left;margin-top:5px;}
+
+.copyrightDetailContents ul {margin:0 0 0 12px;float:left}
+.copyrightDetailContents ul li span {font-weight:bold}
+
+a.closeCopyright {float:right;}
+
+/*End Copyright*/
+
+
+/*Additional Info above CS inventory table*/
+.additional {padding:2px 3px 3px 3px;margin:0 0 6px 0;zoom:1;*height:1%;}
+.additional .left {float:left;}
+.additional .right {float:right;padding:2px 3px;color:#777;}
+.additional .right span.size {font-weight:bold;color:#000;}
+.additional .left span.suboption {display:block}
+/*End additional info*/
+
+
+/*Shopping cart */
+body.cartMode {padding-bottom:49px}
+.addedRow, table.sortable tbody tr.addedRow  th label a, .addedRow td a {color:#999;}
+.addedRow {background:;}
+.addedRow img {opacity:0.5; filter:alpha(opacity=50);}
+#datatable2 tr td, #datatable2 tr th {padding:1px 3px;font-size:85%;}
+#datatable2 thead th {padding:3px 3px}
+
+.itemSelector {width:20px;height:20px;margin:0 auto;}
+.itemSelector  input {opacity:0; filter:alpha(opacity=0);}
+.remove {background:transparent url(../../../images/ci/ng/remove_ti.png) no-repeat 0 0;}
+
+.itemTray {
+	position:fixed;
+	height:40px;
+	bottom:0;
+	left:0;	
+	right:0;
+	background:#666!important;
+	opacity:0.95;
+	/*filter:alpha(opacity=95);*/
+	z-index:100;
+	border:3px solid #333;
+	border-bottom:0;
+	margin:0 4px;
+	padding:4px 9px;
+}
+
+div.itemTrayContentPane {left:200px;} /* styles tray when used with navFrame/contentFrame layout */
+div.itemTrayContentPaneWide {left:0;} /* styles tray when used with navFrame/contentFrameWide layout */
+.itemTray h3 {font-size:125%;padding:6px 0; background:transparent; margin:0;color:#fff;}
+.itemTray h3 span.listToggle {color:#eee; font-weight:normal;}
+.itemTray h3 span.listToggle a {color:#eee; text-decoration:none; border-bottom:1px dotted #ccc;}
+.itemTray h3 span.listToggle a:hover {border-bottom:1px solid #ccc;}
+.itemTray div.noItems {color:#fff;}
+.itemTray #cartList {padding:9px 0;}
+.itemTray #selectedItemsWrapper {background:#777; padding:4px;}
+.itemTray .cartTableWrapper {max-height:130px; overflow-y:auto; border:1px solid #555; background:#fff;}
+
+#count, .itemTray #numberOfElements {background:#666;padding:0 6px;text-align:center;}
+
+#progress {display:none; position:absolute; width:100px; margin:300px 50%; z-index:300;}
+#progress div {margin-left:-100%;}
+
+#cartSubmit {z-index:200;}
+
+/* styles a form within the tray. example: used for question discovery */
+#cartList fieldset {margin:0 12px 0;padding:3px 3px 12px; color:#f6f6f6;}
+
+/*#cartList fieldset ul {list-style:none; margin:0; padding:0;}
+#cartList fieldset ul li {list-style:none; margin:0; padding:0;}*/
+#cartList fieldset ul li input[type=text] {border:1px solid #666666; padding:0px; width:2.3em;}
+
+/*End shopping cart*/
+
+/*Content area columns*/
+.leftColumn-narrow {float:left; margin-right:1%; width:24%;overflow: auto;}
+.rightColumn-narrow {float:right; margin-left:1%; width:24%;}
+
+.rightColumn-wide {float:right; width:74%;}
+.leftColumn-wide {float:left;width:74%;}
+
+.leftColumn-narrow h3, .rightColumn-narrow h3 {position:relative; margin:6px 0 3px; padding:0; color:#666666; font-size:100%;}
+
+.leftColumn-narrow h4, .rightColumn-narrow h4, .columnPalette h4 {display:block; margin:0; padding:0; word-wrap:break-word;}
+
+.leftColumn-narrow a.itemHead, .rightColumn-narrow a.itemHead, a.itemHead {
+  display:block;
+  padding-left:16px;
+  background: url(images/more_options.gif) no-repeat scroll 3px center;
+  color:#597298;
+  letter-spacing:1px;
+  text-decoration:none;
+}
+
+.leftColumn-narrow a.itemHead:hover, .rightColumn-narrow a.itemHead:hover, a.itemHead:hover {text-decoration:underline;}
+
+.leftColumn-narrow a.itemHeadOpen, .rightColumn-narrow a.itemHeadOpen, a.itemHeadOpen {
+  background:url(images/less_options_dark.gif) no-repeat scroll 3px center;
+  color:#333;
+}
+
+.paletteGroup, .columnPalette {position:relative; margin:0 0 6px; padding:6px; background:#f6f6f6;}
+
+.paletteGroup div.columnPalette { /* remove borders from grouped palettes */
+  position:relative;
+  margin:0 0 6px;
+  border:none;
+  padding:0;
+  background:transparent;
+}
+
+.paletteItems {margin:0 0 4px; padding:3px; font-size:90%; zoom:1;}
+.paletteItems input[type=text] {display:inline-block; border:1px solid #666666; padding:1px;}
+.paletteItems li {position:relative; margin:0; border-bottom:1px dotted #ccc; padding:3px 0pt 5px; list-style:none;  line-height:110%;}
+.paletteItems li label {display:inline-block;padding-left:21px;}
+.paletteItems li:last-child {border:none;}
+.paletteItems li input[type=checkbox], .paletteItems li input[type=radio] {position:absolute; left:0; top:0;}
+.paletteItems li:hover, .paletteItems li.selectedItem:hover {background-color:#fff;}
+.paletteItems li.selectedItem {background:#FFF7DE; color:#333;}
+.paletteItems li.focus {background:#FFF;}
+
+/* since 9.1 sp6 styles for the category palette */
+.palettePath {margin:3px 0 0; padding:0;}
+.palettePath li {background:url(../../../images/ci/icons/nlstree/line.gif) repeat-y 0 0; border:none; padding:0;}
+.palettePath li:first-child, .palettePath li:last-child {background-image:none;}
+.palettePath li label {display:block; padding:3px 3px 7px 21px; background:url(../../../images/ci/icons/nlstree/node_bg.gif) no-repeat 0 0; cursor:pointer;}
+.palettePath li:first-child label {background-image:url(../../../images/ci/icons/nlstree/node_top_bg.gif);}
+.palettePath li input[type=radio] {left:-1000px;}
+.palettePath li.selectedItem label {background:#fff7de url(images/current.png) no-repeat 3px 50%; color:black; font-weight:bold; border:1px solid #999;}
+                
+.subPalette {margin:0; padding:0 3px 3px 12px;}
+.subPalette li input[type="radio"] {position:absolute; left:-1000px;}
+.subPalette li label {display:block; padding:3px 3px 7px 21px; background:url(../../../images/ci/icons/nlstree/lineints.gif) no-repeat -2px 0px; cursor:pointer;}      
+.subPalette li {background:url(../../../images/ci/icons/nlstree/line.gif) repeat-y -2px 0; border:none; padding:0;}
+.subPalette li:last-child {background-image:none;}
+.subPalette li:last-child label {background:url(../../../images/ci/icons/nlstree/lineang.gif) no-repeat -2px 0;}
+
+.palettePath img, .subPalette img {display:block; position:absolute; right:4px; top:6px;}
+/* actionbar for column styles. prevents wrapping and gap btw text and icon when background color applied */
+.columnActions ul li a {display:block;} 
+
+/*End content area columns*/
+
+
+
+/*Item Gallery View */
+.itemGallery div {zoom:1;}
+.itemGallery {padding: 0; margin: 0; zoom:1}
+.itemGallery > li {margin: 5px 5px 20px 5px; _height: 130px; text-align: center; vertical-align: top; width: 1.2em; padding-top: 0.06em;zoom:1}
+.itemGallery .stackFix {height: auto; width: 100%;zoom:1;*height:1%}
+.itemIconHolder {padding: 0px ;height: 1em; width: 100%; position: relative; margin:0 auto .05em auto;zoom:1}
+
+.itemIconHolder a {display: block; overflow: hidden; border:1px solid #ccc;zoom:1}
+.itemIconHolder a:hover {border-color: #777}
+
+.itemIconWrapper {border:0.026em solid #f1f1f1; position: absolute; bottom: 0; margin: 0 50%; width: auto;}
+
+/*Thumbnail size control*/
+.x-small li  {font-size: 70px; width: 1.8em}
+.small li  {font-size: 100px}
+.normal li  {font-size: 140px}
+.large li  {font-size: 180px}
+.x-large li {font-size: 220px}
+
+.u_resetFont-px {font-size:12px;}
+
+.itemIconLink-vertical a {width: .78em; height: .9em;}	 
+.itemIconLink-square a {width: .78em; height: .78em;}	
+.itemIconLink-horizontal a {width: 1em; height: .78em;}    
+.itemIconLink-vertical img {width: .8em; height: .9em; vertical-align: top;}	 
+.itemIconLink-square img {width: .8em; height: .8em; vertical-align: top;}	
+.itemIconLink-horizontal img {width: 1em; height: .8em; vertical-align: top;}
+
+.itemIconLink-vertical .itemIconWrapper, .itemIconLink-square .itemIconWrapper {left: -0.39em;}
+.itemIconLink-horizontal .itemIconWrapper {left: -0.5em;}
+ 	 
+.itemInfo {padding:.2em 0 0 0; margin: 0; font-size: 12px; width: 100%; border-top: 1px solid #bbb;}
+.itemInfo li {font-size: 95%; margin: 0; text-align: center; border: 0; width: auto; line-height: 1.25em; width: 100%; }
+.itemInfo li span {/*width: 49%; display: inline-block;*/ vertical-align: top;}
+.itemInfo li .label {text-align: right;}
+.itemInfo .cmimg, .itemInfo .cmimg img {width:18px}
+.itemInfo .title {margin-left: 0px; font-size: 100%; line-height:1.15em; text-align: center; padding:1px 0 3px 0; overflow-x:hidden; word-break:normal; word-wrap:break-word}
+.itemInfo input[type="text"] {width:100%}
+
+/*Item metadata in the lightbox*/
+.lb-content .itemInfo {font-size: 95%; background-color: #f0f0f0; padding:3px 0 6px 0;}
+.lb-content .itemInfo li {line-height: 1.45em; }
+.lb-content .itemInfo .title {padding:3px 0; border-bottom: 1px dotted #ccc;}
+
+/*Icon gallery modifications*/
+.iconGallery > li {width: 75px;margin:5px 5px 12px!important;}
+.iconGallery  .itemIconHolder {height: 60px;border:0;}
+.iconGallery .itemIconHolder a {border:0;overflow:visible;width:auto;height:auto;}
+.iconGallery .itemIconHolder a img {}
+.iconGallery .itemTitle {font-size:85%;color:#666;}
+.iconGallery  .itemIconWrapper {left:-30px;background:#ffffff;padding:4px;border:1px solid #ccc;border-color:#fff #ccc #ccc #fff;width:auto}
+
+/*End Gallery*/
+
+/*Item Counter*/
+.itemCounter {background:#cdcdcd; padding:1px 4px; font-size:115%; text-align:center; border:1px solid #bbb;}
+
+
+/*@since 9.1*/
+/*outcomes recipients page mesage containers*/
+.messageContainer h6 {margin:0;padding:0;font-size:95%;}
+.messageContainer p {margin:0;padding:6px 0;}
+.messageVariable {color:#000; background-color:#fff1c5; font-size:100%;font-weight:normal;padding:0px 3px; border: 1px solid #eedd99;display:inline}
+
+
+/*@since 9.1*/
+.sliderWrapper {
+	float:left;
+	background:#FFFFFF;
+	border:1px solid #aaa;
+	margin:0 0 0 -6px;
+	*margin:0 0 0 -2px;
+	padding:9px 8px 5px 0;
+	*padding:8px 4px 8px 0;
+	border-left:0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.sliderWrapper {
+		padding:9px 8px 3px 0;
+	}
+}
+
+#sliderHandle { 
+	background:#999999;
+	border:1px solid #555555;
+	cursor:ew-resize;
+	display:block;
+	height:4px;
+	margin:-2px 0 0;
+	width:4px;
+}
+  
+#sliderTrack {
+    background:#EDEDED;
+    border:1px solid #CCCCCC;
+    display:inline-block;
+    height:2px;
+    margin:0 0 0 6px;
+    width:60px;
+	position:relative;
+	top:-3px;
+	*top:0px;
+}
+
+.csPicker {padding:0 12px 0 6px; min-width:300px;}
+.csPicker .contentPaneWide {font-size:90%;}
+.csPicker .actionBar, .csPicker .localViewToggle {font-size:110%;}
+.csPicker .contentPaneWide, .csPicker .breadcrumbs {margin-left:0; margin-right:0;}
+.csPicker .itemTray {z-index:1000}
+.csPicker .itemTray  .taskbuttondiv {margin:0; font-size:105%}
+.csPicker .itemTray  h3 {font-size:115%}
+.csPicker #titleicon + h1 {margin-top:2px;}
+.csPicker .itemTray #numberOfElements {padding:0 2px;}
+
+/* ---------------- TOC (@since 9.1) ---------------- */
+.tocWrapper {
+	position:fixed;
+	bottom:0;
+	left:0;	
+	right:0;
+	z-index:121; /* Make sure it is more than the z-index of iframe. */
+	margin:0 4px;
+	border:3px solid #333;
+	border-bottom:0;
+	padding:4px 9px;
+  background:#666666;
+  height:40px;
+}
+.tocHidden {top:-10000px!important;}
+
+.tocHead {margin:1px 0; color:#fff;}
+.tocHead h2, .tocActions {margin-top:0; margin-bottom:3px!important;}/* side margins are applied via .u_floatThis-left */
+.sideTOC h2 {float:none!important;*width:98%;}/* creates a line break */
+.tocActions {white-space:nowrap;}
+.tocActions a, .tocActions span, .tocActions > img {display:inline-block; margin:0 2px 0 0;}
+.tocActions span {padding:0 3px;}
+
+.tocTreeWrapper {overflow-y:auto; border:1px solid #555; padding:2px 0 0; background:#fff;}
+.sideTOC .tocTreeWrapper {overflow:auto;}
+
+#tocTree li {padding:1px 0 2px; *padding:0 0 1px;}
+#tocTree a.itemActive {
+  font-weight: bold;
+  text-decoration:none;
+}
+#tocTree span {color:#555; padding:0px 3px 0 0;} /* numbering scheme and inActive items */
+.treeNodeIcon {padding:0 3px 0 0;}
+
+.sideTOC {
+	position:absolute;
+	top:0;
+	right:auto;
+  bottom:auto;
+	width:200px;
+  margin:0;
+	padding:4px;
+	border:3px solid #333; 
+	background:#666666;
+}
+
+.sideTOCMinimize {
+  position:absolute;
+  top:0;
+	right:auto;
+  bottom:auto;
+  margin:0;
+	padding:0px;
+	width:12px;
+	border:none;
+  background:#555;
+}
+
+.sideTOCMinimize .tocActions {
+  background:#555;
+  position:relative;
+  top:6px;
+  left:-4px;
+  padding:1px;
+}
+
+.sideTOCMinimize .tocActions a {
+  display:block;
+  margin:1px 0;
+}
+
+/* styles to align the TOC with the course menu */
+.tocBottom_pullExpanded {left:200px;}
+.tocBottom_pullCollapsed {left:0;}
+.tocSide_pullExpanded {left:212px;}
+.tocSide_pullCollapsed {left:14px;}
+
+/* styles applied to the contentPanel to make room for the TOC */
+.sideTOC_panel {padding-left:220px;}
+.sideTOC_panelMin {padding-left:24px;}
+.sideTOC_panelMax {padding-left:370px;}
+.tocBottom_min {padding-bottom:30px;}
+.tocBottom_max {padding-bottom:330px;}
+.tocBottom_open {padding-bottom:160px;}
+
+/* ---------------- END TOC ---------------- */
+
+/* ---------------- START STANDARDS ---------------- */
+/* used in the Mapped Standards lightbox on the Standards Document page */
+.connectionWrapper {position:relative; margin-top:1px; padding-right:30px;}
+.connectionWrapper a {position:absolute; right:0; top:50%; margin-top:-14px;}
+/* used in the key-valueTable on the Maps Standards page */
+.invertItems {margin-right:26px; position:relative; display:block!important;}
+.invertItems a {position:absolute; right:-33px; top:-14px;}
+/* ---------------- END STANDARDS ---------------- */
+
+/* ---------------- COURSE CATALOG --------------- */
+.subcategories {padding:6px 11px!important;}
+.subcategories h3 {margin:0; padding:0; font-size:100%;}
+/*
+ * END PAGE COMPONENTS
+ */

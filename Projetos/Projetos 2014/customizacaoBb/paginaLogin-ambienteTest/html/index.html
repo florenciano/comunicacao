@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackboard Learn - Insper</title>
+    <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/js/libs/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body style="min-height:800px">
+    <div class="wrapper" role="main">
+        <header class="headerLogin" role="banner">
+            <div class="logos">
+                <h1><img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/logoInsper.png" alt="Logo Insper" title="Insper" class="left"></h1>
+                <img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/NewlogoBlackboard.png" alt="Logo Blackboard" class="right">
+            </div>
+            <div class="libraryInsperLogin"></div>
+        </header>
+        <section class="contentLogin">
+            <div class="titlePage"><img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/titleForm.png" alt="Ambiente Virtual de Aprendizagem" title="Ambiente Virtual de Aprendizagem"></div>
+            
+            <!-- container do form de login -->
+            <div class="formLogin" id="loginInsper">
+                <h4>Acesso ao ambiente</h4>
+                <!-- html expirrado do Bb -->
+                <noscript>
+                    &lt;div class="receipt bad editmode"&gt;Ative o JavaScript no seu navegador para que o aplicativo Blackboard funcione.&lt;/div&gt;
+                </noscript>
+
+                
+                <!-- action="https://insper.blackboard.com/webapps/login/" -->
+                <form action="" method="POST" name="login">
+                    <div id="loginFormFields" class="clearfix">
+                        <ul id="loginFormList" class="clearfix">
+                            <li class="clearfix">
+                            <label for="user_id">Nome de usuário:</label>
+                            <input type="text" name="user_id" id="user_id" size="25" maxlength="50" tabindex="1" autofocus>
+                            </li>
+                            <li class="clearfix">
+                                <label for="password">Senha:</label>
+                                <input size="25" name="password" id="password" type="password" autocomplete="off" tabindex="2">
+                            </li>
+                            <li class="clearfix">
+                                <input type="submit" value="Logon" name="login" class="submit button-1" tabindex="3">
+                            </li>
+                            <li class="clearfix">
+                                <span class="forgot"><a href="#" tabindex="4">Esqueceu sua senha?</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <!-- área da mensagem de erro -->
+                <div id="erroArea" hidden>
+                    <div id="loginErrorMessage" class="receipt bad editmode" role="alert">O nome de usuário ou senha fornecido é inválido. Tente novamente.</div>
+                </div>
+            </div>
+
+            <div class="linksOut">
+                <a href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx" class="acessibility" target="_blank">Informações de acessibilidade</a> | <a href="requisitos-sistemas/" class="acessibility" id="requisitos" target="_blank">Requisitos do sistema</a>
+            </div>
+        </section>
+        <footer class="copyright" role="contentinfo">Copyright &#169; | Insper. Todos os Direitos Reservados</footer>
+    </div>
+
+    <!-- modais -->
+    <div class="bg-modal">&nbsp;</div>
+
+    <div class="perfilUsuario">
+        <div class="close"><span><a href="#" title="Fechar janela" id="close-modal-perfil">x</a></span></div>
+        <h5>Escolha o seu perfil</h5>
+        <ul>
+            <li>
+                <div class="perfis professor">
+                    <a href="#" title="Recuperar senha: professor" class="icoProfessor"><span>Professor</span></a>
+                </div>
+            </li>
+            <li>
+                <div class="perfis aluno">
+                    <a href="http://portaldoaluno.insper.edu.br/gestaocadastral/RecuperarSenha.aspx" title="Recuperar senha: aluno" class="icoAluno"><span>Aluno</span></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/libs/jquery-1.9.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

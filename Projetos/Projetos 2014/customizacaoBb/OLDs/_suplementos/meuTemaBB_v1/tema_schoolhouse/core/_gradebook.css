@@ -1,0 +1,343 @@
+/*
+ * GRADEBOOK
+ */
+
+
+
+/*.subActionBar {
+	font-size:95%;
+	padding:0px 3px 0 3px;
+	*padding:0px 12px 6px 12px;
+	background:#EDDCA5 url(images/gradient_black_short_tb.png) repeat-x  0 -18px;
+	border:1px solid #D7BB66;
+	border-left:none;
+	border-right:none;
+	margin:-1px 0 0 0;
+	_background-image:none;
+}
+
+.subActionBar fieldset {border:0;}
+
+.subActionBar fieldset legend {line-height:0;visibility:hidden;height:0;}
+*/
+.subActionBar {*z-index:500;}
+.subActionBar:hover {z-index:1000;}
+
+.subActionBar div.block, .subActionBar div.button {
+	float:left;
+	margin:0;
+	padding:2px 9px 4px;
+	border-left:1px dotted #999;
+	_border-left:none;
+}
+
+.subActionBar span.block, .subActionBar span.button {
+	float:none;
+}
+
+.subActionBar li.sub { position: relative; }
+
+.subActionBar fieldset legend + div.block {border-left:0!important;}
+
+.subActionBar select {
+	max-width:180px;
+	vertical-align:middle;
+}
+
+.subActionBar div.button {
+	padding:6px 12px;
+}
+
+.subActionBar div.last {
+	border-right:none;
+}
+
+.subActionBar fieldset {
+	padding:0;
+	margin:0;
+}
+
+.subActionBar optgroup {
+	font-style:normal;
+	font-weight:normal;
+	color:#777;
+	border-top:1px solid #ddd;
+	margin-top:6px;
+}
+
+.subActionBar optgroup option {
+	color:#000;
+}
+
+.subActionBar ul li.sortableSelector a {
+	padding-left:18px;
+}
+
+
+.navPageHeader {margin:1em 0;text-align:center;}
+.navPageHeader h3 {margin-left:12px;display:inline;}
+.navPageHeader span {
+	color:#888;
+	margin:0 6px 0 0;
+	font-weight:normal;
+}
+
+/*h3.navPageHeader {
+	text-align:center;
+}
+
+h3.navPageHeader span.headerBlock {
+	margin:0 0px 0 18px;
+}
+
+h3.navPageHeader span.headerBlock span {
+	color:#888;
+	margin:0 6px 0 0;
+	font-weight:normal;
+}*/
+
+fieldset.secondaryActions, div.secondaryBlock {
+	float:right;
+}
+
+/*Grade information bar.*/
+.cellInfoPanel {border:1px solid #eee; border-bottom:2px solid #999;}
+.cellStatus {border:0; background:#f6f6f6; font-size:85%;}
+.cellStatus div {float:left; padding:2px 8px;}
+.statusTitle {background:#eee; color:#666666;}
+.statdata {color:#000;overflow:hidden;}
+.cellStatus div.gbTableTimeStamp {float:right; padding:2px 3px; color:#666666; white-space:nowrap;}
+
+.sortImage {
+	position:absolute;
+	top:9px;
+	left:6px;
+}
+
+
+/*Informational bubbles*/
+
+.bubble {
+	display: none;
+	padding:0pt;
+	position:absolute;
+	width:190px;
+	z-index:1000;
+}
+
+.bubble ul, .bubble .detailComments {
+	background-color:#E2EEFE;
+	border:1px solid #ACC2DF;
+	border-bottom:1px solid #5577bb;
+	border-right:1px solid #5577bb;
+	list-style-type:none;
+	margin:0;
+	padding:6px 6px 6px 6px;
+	z-index:1000;
+	overflow:hidden;
+}
+
+.bubble ul li {
+	clear:left;
+	color:#666666;
+	float:left;
+	font-size:90%;
+	font-weight:bold;
+	margin:0pt 0pt 4px;
+	padding:0pt;
+	width:174px;
+}
+
+.bubble ul li span {color:#666666;
+	display:block;
+	float:left;
+	font-weight:normal;
+	margin-right:3px;
+	width:80px;
+}
+
+.bubble ul li span.icon {
+	float:left;
+	width:20px;
+    overflow: hidden;
+}
+
+.bubble ul li span.label {
+	font-size:100%;
+	font-weight:normal;
+	width:147px;
+}
+
+.bubbleStem {
+	height:14px;
+	position:relative;
+	width:190px;
+}
+
+
+.bottom .bubbleStem {
+	bottom:4px;
+}
+
+.top .bubbleStem {
+	top:-2px;
+}
+
+.left .bubbleStem {
+	padding-left:24px;
+}
+
+.right .bubbleStem {
+	right:24px;
+	text-align:right;
+}
+
+
+/*-- PULLDOWN MENUS IN A SECONDARY ACTION BAR ON GRADE CENTER'S MAIN PAGE---*/
+ul.selectList {
+  list-style:none;
+  margin:0 6px 0 0;
+  padding:0;
+  float:left;
+}
+
+ul.selectList li {
+  float:left;
+  margin:0 4px 0 0;
+  z-index:99;
+}
+
+ul.selectList li.sub a {
+  display:block;
+  /*padding:1px 3px 1px 0;*/
+  text-decoration:none;
+}
+
+ul.selectList li.sub:hover ul {
+  left:0;
+  /*top:20px!important;*/
+}
+
+
+ul.selectList li.sub ul li {
+  float:none;
+  position:static!important;
+  margin:0;
+  padding:0;
+}
+
+ul.selectList li.sub ul li h4 {
+  color:#888;
+  margin:0;
+  padding:6px 0 0 3px;
+  font-weight:bold;
+  font-size:90%;
+  display:block;
+  border-bottom:1px solid #ccc; 
+}
+
+ul.selectList li.sub ul li h4 {
+  width:152px;
+}
+
+ul.selectList li.sub ul li a, ul.selectList li.sub ul li a:hover {
+  border:none!important;
+  background-image:none!important;  
+  padding:2px 3px 2px 14px;
+ /* width:128px!important;*/
+}
+
+ul.selectList li.sub ul li a:hover {
+  background-color:#FFFFFF;
+}
+
+ul.selectList li.sub a span#currentView, ul.selectList li.sub a span#currentSortBy,
+ul.selectList li.sub a span#currentColSortDir {
+  background-image:none;
+}
+
+ul.selectList li.sub ul li.current a, ul.selectList li.sub ul li.current a:hover,
+.nav .sub .current a, .nav .sub .current a:hover,
+.nav .sub .current.favorite a, .nav .sub .current.favorite a:hover {
+  background-image:url(images/current.png)!important;
+  background-repeat:no-repeat;
+  background-position:2px 5px;
+  padding:3px 3px 3px 16px!important;
+}
+
+div.gradeDetails {font-size:90%;padding:6px 0 0 12px}
+div.gradeDetails div.label  {width:15%;}
+
+/* sometimes span are used as simple locator for DHTML, in which case using a span should not imply a style - this is a work around */
+span.unstyled { font-size: 100%; display: inline; color: #000000; padding: 0; }
+
+@media print {
+	div.hideOnPrint { display: none; }
+}
+ 
+div.gradeDetailsStep {
+	overflow-x: auto;
+	overflow-y: visible;
+	border-bottom: 2px solid #CCCCCC;
+	margin:0 0 6px;
+}
+
+
+
+/* -------------- GRADEBOOK STYLES (since 9.1 Attempts Grading, Smart Views) ----------------*/
+.gradeInfoHeader {padding:3px;}
+
+.gradeInfoFooter {margin:9px 0 0; padding:0;}
+.collabContainer .gradeInfoFooter {position:absolute; bottom:24px; right:26px; margin:0;}
+
+.gradeInfoHeader h3 {
+  display:inline-block;
+  *display:inline;
+  margin:0 6px; 
+  padding:3px 0;
+  font-weight:normal; 
+  color:#666666;
+}
+
+.gradeInfoFooter h3 {margin:0 0 0 6px;}
+
+.gradeInfoHeader h3 span {
+  font-weight:bold; 
+  color:#000; 
+}
+.navStatusButtons {margin:0 6px;}
+
+ul.gb_currView li.sub ul li.favorite a {
+  background-image:url(/images/ci/icons/favorite_on_li.png)!important;
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
+  padding:3px 3px 3px 16px!important;
+}
+
+span.gradeContainer {
+  position: relative;
+}
+
+span.gradeContainer .grade {
+  padding:2px 2px;
+}
+
+span.gradeContainer img.override {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.gexempt {
+  position:absolute;
+  top:2px;
+  left:2px;
+  z-index:1;
+  opacity:.5;
+  filter:alpha(opacity=70);
+}
+
+/*
+ * END GRADEBOOK
+ */
+

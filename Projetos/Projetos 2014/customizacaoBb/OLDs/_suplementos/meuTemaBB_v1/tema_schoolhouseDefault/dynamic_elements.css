@@ -1,0 +1,1175 @@
+
+/*
+ * DYNAMIC ELEMENTS
+ */
+
+
+/*modal overlay for flyout forms.*/
+.modalOverlay{
+	display:none;
+	background-color:#000;
+	opacity:.01;
+	filter: alpha(opacity=1);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:90;
+	right:0;
+	bottom:0;
+	height:100%;
+	width:100%;
+	_position:absolute;
+}
+
+/*Contextual menu  and mini menu containers. Hidden until called.*/
+.cmdiv,.menumini,div.quickAddPal,div.keyboardAccess {
+ zoom: 1;
+}
+/* keep div width from exploding on IE7 */
+div.keyboardAccess {*width:200px;}
+
+/* Default flyoutmenu, contextual menu, live area attributes. */
+ul.nav li.sub ul, .menumini ul, div.quickAddPal, div.keyboardAccess, span.currentTags, .liveArea, .liveArea-slim, .liveAreaTab, .previewArea, .jumptopage,
+/*Remove .actionBar ul li.mainButton a.liveAreaTab and .actionBar ul li a.liveAreaTab:focus and a.liveAreaTab and a.liveAreaTab:focus after refactoring*/
+a.liveAreaTab, a.liveAreaTab:hover, a.liveAreaTab:focus,
+.actionBar ul li a.liveAreaTab:focus,
+.actionBar ul li.mainButton a.liveAreaTab,
+.actionBar ul li.secondaryButton a.liveAreaTab,
+.panelTabs li.active a.edit, .panelTabs li.active a.edit:hover, .panelTabs li.active a.edit:focus, .flyout {
+	background-color:#ddd;
+	border:1px solid #555;
+	zoom:1;
+	_width:138px;
+}
+
+/*@since 9.1*/
+/*Live area and preview area for editable areas */
+.liveArea, .previewArea {padding:9px 14px; margin:0; width:auto; position:relative;}
+
+.containerOptions .liveArea {top:-2px;margin:0 -2px;}
+
+/*Tool-specific liveArea modifications*/
+/*@since 9.1*/
+/*Lesson Plans form builder*/
+.builderItem .liveArea {position:absolute; top:3px; left:22px; z-index:100;}
+
+.previewArea {border:2px solid #ddd; background: #FFF; margin-top:0px;}
+
+/* cs paging controls */
+.jumptopage {padding:2px 18px 2px 6px; text-align:left; position:relative;}
+
+/* cs paging controls */
+.rumble .jumptopage, .rumble_top .jumptopage {*padding-top:1px;}
+
+/*Is applied to the .liveArea trigger if it is to be turned into a tab. */
+.liveAreaTab,
+/*Remove .actionBar ul li.mainButton a.liveAreaTab and .actionBar ul li a.liveAreaTab:focus and a.liveAreaTab and a.liveAreaTab:focus after refactoring*/
+a.liveAreaTab, a.liveAreaTab:hover, a.liveAreaTab:focus,
+.actionBar ul li a.liveAreaTab:focus,
+.actionBar ul li.mainButton a.liveAreaTab,
+.actionBar ul li.secondaryButton a.liveAreaTab,
+.panelTabs li.active a.edit, .panelTabs li.active a.edit:hover, .panelTabs li.active a.edit:focus {
+	top: 9px;
+	position: relative;
+	padding: 4px 9px;
+	background-image:none;
+	color: #000;
+	border-bottom: none;
+	z-index:2;
+	top:2px;
+}
+
+.actionBar ul li.mainButton a.liveAreaTab, .actionBar ul li.secondaryButton a.liveAreaTab {
+    overflow:hidden;
+}
+
+/*tab level action bar*/
+.tabActionBar ul li a.liveAreaTab:focus,
+.tabActionBar ul li.mainButton a.liveAreaTab,
+.tabActionBar ul li.secondaryButton a.liveAreaTab {
+	top: 4px;
+	*top: 8px;
+	position: relative;
+	padding: 4px 9px;
+	background-image:none;
+	color: #000;
+	border-bottom: none;
+	-moz-border-radius: 2px 2px 0 0;
+	-webkit-border-radius: 2px 2px 0 0;
+	z-index:2;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+.tabActionBar ul li.mainButton a.liveAreaTab, .tabActionBar ul li.secondaryButton a.liveAreaTab {top:8px; *top:9px; *z-index:200}
+
+.liveArea-slim {padding:3px 5px 0!important;}
+
+.smallControls {font-size:90%;margin-top:3px!important;min-width:19em;}
+.smallControls .stepHelp {font-size:100%!important;padding:0}
+.smallControls input[type="text"], .smallControls select {padding:0!important;width:100%;}	
+.smallControls .label {width:29%;}	
+.smallControls .field {width:70%;}	
+
+/*End live area*/
+
+
+
+.columnActions .nav .sub ul {margin-top:0;}
+
+/*Flyout menus*/
+/*Default location*/
+.nav .sub ul, .nav .sub .flyout {position: absolute; display: none; *z-index:1000;}
+.nav .sub ul li {margin:0; padding:0; float:none; zoom:1;}
+.nav .sub ul ul, .nav .sub .flyout ul { display: block; }
+
+/*show the submenus on hover or mouseover (except IE where it's done with javascript)*/
+.nav .sub:hover ul, .actionBarMicro .nav .sub:hover ul, .nav .sub:hover .flyout   {top:22px;left:0px;z-index:101;}
+
+/*Reducing top position for smaller menus*/
+.actionBarMicro .nav .sub:hover ul, .rumble_top .nav .sub:hover ul, .rumble .nav .sub:hover ul {top:18px;}
+
+
+/*Position adjustment for IE browsers in RTL*/
+ul.nav li.sub {*position:static;}
+ul.nav li.sub:hover {position:relative;}
+ul.nav li.sub:hover, ul.nav li.sub:hover ul {*z-index:1010!important;}
+
+/*IE6 and IE7 hack forcing parent of the flyout down the z-index*/
+.topGlobalLinks .nav .sub {*z-index:1000!important; zoom:1;}
+
+/*.quickAddPal is a miniatiure data collection element.*/
+.quickAddPal {width:auto; *width:19em;}
+
+.keyboardAccess {font-size:95%}
+
+/*.pinnedModule is a pinned option element on AX reordering control*/
+.pinnedModule {
+  color:#666666;
+  background:#ededed;
+}
+
+/* color picker palette - uses a grid of swatches which is wider than 19em */
+.quickAddColor {width:311px;}
+.quickAddColor a.genericButton {float:left; margin:2px 0;}
+
+
+
+/*Contextual menu*/
+.cmdiv {
+ border: 1px solid #555;
+ background: #DDD;
+}
+
+.cmdiv ul {
+ border-bottom: 0;
+ border-top: 1px solid #aaa;
+ padding: 0;
+}
+
+.cmdiv ul:first-child,.menumini ul:first-child {border-top:none;}
+
+
+
+
+
+
+
+
+
+
+/* Links inside the flyout menu and a contextual menu.. */
+.nav .sub ul li a, .cmdiv a, .menumini a   {
+	width:140px;
+  	background-color:#ddd;
+	color:#444;
+  	font-weight:normal;
+	text-decoration:none;
+  	padding: 3px 9px 3px 9px;
+	border:0;
+	border-top:1px solid #bbb;
+}
+
+/* Contextual menu link specific attributes */
+.cmdiv a {
+ font-size: 95%;
+ border: none;
+}
+
+.nav .sub ul li a:hover, .nav li.sub ul li a:focus, 
+.cmdiv a:hover, .cmdiv a:focus, 
+.menumini a:hover, .menumini a:focus  {
+	color:#000; 
+	  padding: 3px 9px 3px 9px;
+	background-color:#FFF;
+}
+
+.actionBarMicro .nav .sub ul li a:hover, .paneTabs .nav .sub ul li a:hover, 
+.actionBarMicro .nav li.sub ul li a:focus, .paneTabs .nav .sub ul li a:focus {
+  	background:#FFF;
+	color:#000;
+	border:0;
+	border-top:1px solid #bbb;
+}
+
+
+
+.nav .sub ul li:first-child a, .nav .sub ul li:first-child a:hover, .nav .sub ul li:first-child a:focus {border:0;}
+
+
+
+
+/*Tabbed pane tabs*/
+.paneTabs .nav .sub ul li a {text-align:left;}
+
+
+/*Time selection div*/
+.timediv ul li a:hover, .timediv ul li a:focus {padding: 3px 6px; } 
+.timediv ul li a:focus {background-color: #E2EEFE; color: #444444;} 
+.timediv ul li a:hover:focus {background-color:#fff; color:#000;} 
+
+
+.topGlobalLinks  .nav .sub:hover ul {top:0px;left:0px;z-index:101;}
+
+.topTabs-compact .topGlobalLinks  .nav .sub:hover ul {top:0px;right:0px;left:auto;z-index:101;}
+
+
+
+/*List element with "close" link*/
+.cmdiv li.contextmenubar_top, .menumini li.contextmenubar  {
+  	background-image:none;
+	width:182px;
+	top:-17px;
+	right:0px;
+	background:none;
+	border-bottom:none;
+	border:none;
+}
+
+
+
+/*.menumini li.contextmenubar  {	
+	width:122px;
+	top:-16px;
+	*top:-17px;
+}
+
+.cmdiv li.contextmenubar_top a, .cmdiv li.contextmenubar_top a:hover,
+.cmdiv li.contextmenubar_top a, .cmdiv li.contextmenubar_top a:focus {
+	background:#C8DBF4;
+	padding:0px 2px 2px 2px;
+	border:1px solid #5577BB;
+	border-left:1px solid #ACC2DF;
+	border-top:1px solid #ACC2DF;
+	border-bottom:none!important;
+}*/
+
+.cmdiv li.contextmenubar_top a, 
+.cmdiv li.contextmenubar_top a:focus, 
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud, 
+.currentTags a.closeCloud:hover, 
+.currentTags a.closeCloud:focus, 
+.calPicker a.contextmenubar {
+	background:#bbb;
+	padding:0px 2px 2px 2px;
+	border:1px solid #555;
+	border-bottom:0;
+}
+
+.cmdiv li.contextmenubar_top a:focus, 
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud:hover, 
+.currentTags a.closeCloud:focus, 
+.calPicker a.contextmenubar:hover, 
+.calPicker a.contextmenubar:focus {background-color:#ababab}
+
+.currentTags a.closeCloud {border:0!important;}
+
+.cmdiv li.contextmenubar_top {width:182px;right:-1px}
+
+
+/*Dynamic data collection palettes*/
+/* Wrapping container for keyboard-accessibility and  quick-add palettes is the same as that for cmdiv above.
+	See "div.quickAddPal, div.keyboardAccess" above. */
+.quickAddPal h3, .keyboardAccess h3, .quickAddPal .quickAddPalHeader {
+	margin:0 0 4px 0;
+	padding:3px 6px;
+	background:#bbb;
+	_background-image:none;
+	border-bottom:1px solid #aaa;
+	font-size:100%;
+	font-weight:bold;
+}
+
+.quickAddPal .controls, .keyboardAccess .controls, .comText .controls, .e_expandArea .controls {
+	border-top:1px solid #aaa;
+	margin:2px;
+	padding:7px;
+	text-align:right;
+	clear:both;
+}
+
+/*comText div.controls {margin:3px 0 0 0;padding:6px 0px 3px 0px;}*/
+
+/*div.keyboardAccess div.minicolumn  {float:left;}
+div.keyboardAccess div.minicolumn  {margin:0 9px 0 9px}*/
+
+.keyboardAccess p.paletteHelp {
+	margin:6px 9px;
+	padding:3px 6px;
+	white-space:normal;
+	background:#fff1c5;
+	border:1px solid #ffcc00;
+	font-size:90%;
+}
+
+/*div.keyboardAccess p.colspan-1	{width:120px;}
+div.keyboardAccess p.colspan-2	{width:260px;}
+div.keyboardAccess p.colspan-3	{width:390px;}*/
+
+
+/*Multi-colum flyout*/
+
+.bcMenuDiv-1 {width:190px;}
+.bcMenuDiv-2 {width:380px;}
+.bcMenuDiv-3 {width:570px;}
+.bcMenuDiv-4, .bcMenuDiv-5 {width:570px;}
+
+.flyout {padding:1px 2px 0 !important;}
+.nav .sub .flyout div {position:static;padding-bottom:6px;margin:0;min-height:1px;float:left;} 
+
+.flyout h3 {font-size:85%;}
+
+.nav .sub .flyout ul {position:static; background:transparent; padding:2px 0px; margin:0px 6px; border:0; border-top:1px dotted #ACC2DF; -moz-border-radius:0; -webkit-border-radius:0; zoom:1;z-index:1000}
+.nav .sub .flyout div h3 + ul, .nav .sub .flyout div ul:first-child {border-top:0}
+
+.nav .sub .flyout a, .nav .sub .flyout a:hover, .nav .sub .flyout a:focus {background-color:transparent; width:auto; border:0; font-size:95%; padding:3px 6px 3px 13px; background-position:3px 6px}
+.nav .sub .flyout a:hover {background-color:#fff;}
+
+
+
+
+/*---------------------------KEYBOARD-ACCESSIBLE REORDERING CONTROLS------------------------------------------------*/
+
+div.orderingControls-ns {
+	text-align:center;
+	padding:9px 3px 3px 25px;
+	display:block;
+	float:none;
+}
+
+div.orderingControls-ew  {
+	float:left;
+	padding:40px 0 0 0;
+}
+	
+div.orderingControls-ns a, div.orderingControls-ew a {
+	border:1px solid #ccc;
+	display:inline;
+	margin:0 2px 0 0;
+}
+div.orderingControls-ew a {
+	border:1px solid #ccc;
+	display:block;
+	margin:0  0 2px 0;
+}
+
+div.orderingControls-ns a img, div.orderingControls-ew a img {
+	width:16px;
+	height:16px;
+}
+
+div.orderingControls-ns a.up {
+	background: url(images/small_up.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ns a.down {
+	background: url(images/small_down.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ns a.top {
+	background: url(images/small_top.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ns a.bottom {
+	background: url(images/small_bottom.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ew a.first {
+	background: url(images/small_rewind.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ew a.next {
+	background: url(images/small_next.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ew a.previous {
+	background: url(images/small_previous.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ew a.last {
+	background: url(images/small_ffwd.gif) no-repeat 0 0;
+	background-color:#ededed;
+}
+
+div.orderingControls-ns a:hover, div.orderingControls-ew a:hover {
+	background-color:#fff;
+	border:1px solid #aaa;
+}
+	
+/*Messages and receipts*/
+
+.container .receipt {
+    border: 0 none;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0 0 6px;
+    padding: 6px 12px;
+    z-index: 0;
+}
+
+.receipt, .warning {
+	margin:0 0px 6px 0px;
+	padding:6px 9px;
+	position:relative;
+	*margin:0 3px 6px 3px;
+	border: 1px solid #bbb;
+}
+
+.inlineReceipt {margin:6px 0px;padding:6px 9px;position:absolute;*margin:0 3px 6px 3px;display:none;}
+
+
+/*Floating receipt used with selection elements in the drawer*/
+.miniReceipt {position:absolute;color:#fff;z-index:300;padding:2px 12px; border: 1px solid #bbb;}
+
+.bad, .good, .removing, .adding, .brokenFileLink, .portlet span.due.warning, .good a.areceipt, .bad a.areceipt {font-weight:bold; color:#fff;}
+
+.bad, .removing, .brokenFileLink, .portlet span.due.warning {background:#DF201B;border-color: #BF1B17;}
+.brokenFileLink, .portlet span.due.warning {border:1px solid #BF1B17;display:inline-block;*position:static;}
+.good, .adding {background:#6B9F27;border-color: #4F7F0F;}
+.infoReceipt {background:#6D8AAF; border-color:#62758F; color:#fff;}
+.infoReceipt a {font-weight:bold; color:#d2e5fe;}
+.infoReceipt .button-1,
+.infoReceipt.bad .button-1,
+.infoReceipt.good .button-1 {
+  color: #FFFFFF;
+  float: right;
+  display: block;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+.attention, .warningReceipt, .warningReceipt a.areceipt {background:#FFFF99; border-color:#FFCC33; color:#000000; font-weight:normal;}
+.warningReceipt {font-weight:bold;}
+.infoAlert {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 6px 5px;
+  position: relative;
+  background-color: #F0F0F0;
+  margin-bottom: 6px;
+}
+
+.infoAlert span {
+  display: block;
+  min-height: 20px;
+  position: relative;
+  padding: 5px 140px 5px 0px;
+  border-top: 1px solid #CCC;
+}
+
+.infoAlert a {
+  color: #036;
+}
+
+.infoAlert .button-1 {
+  color: #FFFFFF;
+  margin-top: -10px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+}
+
+.removing, .adding, .brokenFileLink, .portlet span.due.warning {font-weight:normal;}
+.brokenFileLink, .portlet span.due.warning {-moz-border-radius:2px;-webkit-border-radius:2px;border:1px solid #BF1B17;display:inline-block;*position:static}
+
+.infoBox {text-align: center; border: 1px solid #AFDF61; margin: 6px 0; padding:6px 9px;}
+.infoBox > .message {display:block; margin-bottom:4px;}
+.info-ok {background: #D9EFA4;  border-color: #AFDF61; color: #336600}
+
+.nestedReceipt { /* used to position a receipt within a random block in assessments */
+  margin: 0 20% 6px 0;
+  padding: 0px 17px 0px 0px;
+  z-index:1001;
+}
+
+.receiptCollapsed {margin:0 0 6px; text-align:right; font-size:90%; color:#aaa;} /* used for the "Next Steps" wrapper */
+
+/*Notifications settings page bubbles.*/
+.columnMsgWrapper {margin-left:60%;}
+.columnMsgWrapper .column-2 {min-height:1px;}
+.smsIssue, .t2vIssue {margin:3px 3px 9px;position:relative;}
+
+
+/*Info bubble stems*/
+.bubbleStem-bottom-center {width:0px;height:0px;border-left:10px solid transparent;border-right:10px solid transparent;border-top:12px solid #FFCC33;border-bottom:0;position:absolute;bottom:-12px;left:50%;margin-left:-8px}
+
+/* next steps receipt */
+.nextStepsReceipt {
+	margin: 10px 0 15px 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	color: #545454;
+	border: 1px solid #d2d1be;
+	position: relative;
+	padding: 0px;
+	line-height: 1.4;
+	background: rgba(0,0,0,.04);
+}
+.nextStepsText {
+	padding: 6px 12px;
+}
+.nextStepsText h5 {
+	color: #545454;
+	text-shadow:1px 1px 1px #fff;
+	display: inline-block;
+  *display:inline;
+	line-height: 2em;
+  min-width:6em;
+}
+.receiptCollapsed {
+	font-size:90%;
+	position:relative;
+}
+
+/*------------------------------------TAB PREVIEW ON THE SYSTEM TAB GROUPING PAGE----------------------------------------------------*/
+
+div.tabPreview {
+	position:relative;
+	border:12px solid #cdcdcd;
+	width:auto;
+	z-index:1;
+	margin:0 6px 6px 6px;
+	background:#cdcdcd;
+}
+
+div.tabPreview div.paneTabs {margin-top:12px;}
+
+
+
+
+
+
+/*-----------------------------------STATUS INDICATORS IN THE INVENTOTY TABLE----------------------------------------*/
+
+div.status {
+	color:#000;
+	font-size:90%;/**/
+	text-align:left;
+	padding:1px 6px 3px 6px;
+	margin:0;
+	background:#f9f9f9;
+	display:block;
+}
+  
+/*div.stopped strong, span.stopped {color:red; font-weight:bold;}*/
+div.status a img {vertical-align:middle;}
+
+div.status p {
+	padding:1px;
+	border:1px solid #ccc;
+	font-size:90%;
+	color:#444444;
+	margin:2px auto 4px auto;
+	text-align:left !important;
+	line-height:10%;
+	*height:12px!important;
+	*padding:0 2px;
+	background:#fff;
+}
+ 
+div.status p img {margin:0px !important; background-color:#8DAFAF; height:8px; padding:0;}
+div.stopped p img {background:#fff url(images/progress_stopped.gif);}
+
+div.status a.buttonMicro {
+	padding:0px 5px;
+	background:#ededed url(images/button3_back.gif) repeat-x scroll 0%;
+	font-size:90%;/**/
+	text-decoration:none;
+	border:1px solid #ccc;
+	color:#666;
+	margin:1px auto;
+}
+
+div.status div {position:relative; text-align:center;}
+
+div.status a.buttonMicro:hover {background:#fff; border:1px solid #aaa; color:#333;}
+
+
+
+
+
+
+/*Searchbar*/
+/*Permananetly displayed searchbar (has no action bar based button to show/hide it).*/
+
+.searchbar, .searchbarPicker, .subActionBar{
+	margin:9px 0 0 0;
+	padding:2px;
+	position:relative;
+	_height:1%;
+	border:1px solid #EEE;
+	background:#F6F6F6;
+}
+
+.subActionBar {font-size:95%;}
+.searchbar, .searchbarPicker table {*margin:0 -9px 0 0}
+.searchbar table td, .searchbar table td table td {padding:1px;}
+.searchbar table fieldset {padding:3px 4px;*padding:3px 0;*height:1%;}
+.searchbar table div {display:inline-block;padding:0;}
+.searchbar form {padding:0;margin:0}
+
+.searchbarPicker {border:none;font-size:90%;}
+
+.searchbar:after, .searchbarPicker:after {content:"."; display: block; height:0; clear: both; visibility:hidden;}
+
+a.close {position:absolute; right:6px; top:3px; opacity:0.8;}
+.receipt a.close {position:absolute; top:1px; right:4px; opacity:0.7; _right:20px; filter:alpha(opacity=70);}
+
+.slideshowControls {font-size:100%; margin:8px auto 12px auto; text-align:center;}
+
+.searchbar fieldset, .searchbarPicker fieldset, .subActionBar fieldset {
+  	padding:6px 9px 6px 9px;
+}
+
+.searchbar h2, .searchbarPicker h2 {margin:0; padding:1px 6px; font-size:110%; font-weight:bold;}
+
+/*.searchbar fieldset input, .searchbar fieldset select,
+.searchbarPicker fieldset input, .searchbarPicker fieldset select {
+  	border:1px solid #666;
+  	vertical-align:middle;
+  	margin:3px 0;
+  	padding:1px;
+}*/
+
+/*.searchbar *input[type="radio"], .searchbarPicker *input[type="radio"],
+.searchbar *input[type="checkbox"], .searchbarPicker *input[type="checkbox"] {
+	border:none;
+}*/
+
+/*.searchbar fieldset label, .portlet fieldset label, .searchbarPicker fieldset label, {
+	font-size:100%;
+}*/
+
+
+/*In case list is used in the searchbar.
+.searchbar fieldset ol, .searchbarPicker fieldset ol {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}*/
+
+.searchbar .groupLabel, .searchbarPicker .groupLabel, .liveArea fieldset .groupLabel {font-weight:bold; padding:5px 3px 0 0;}
+
+/*@since 9.1*/
+/*.searchbar div {padding:3px 5px;}*/
+
+.searchbar ol li, .searchbarPicker ol li, .liveArea fieldset ol li {float:left; margin:5px;}
+
+.searchbar ol li.options, .searchbarPicker ol li.options,  .liveArea fieldset ol li.options {float:right;}
+
+.searchbarPicker span {display:inline;}
+
+.searchbar .spacer { margin: 0 4px; font-size: 70%;}
+
+.searchbar .u_floatThis-left {
+  margin-bottom:4px;
+}
+
+.filterGroup select {
+  width: 100%;
+  max-width: 200px;
+}
+
+.filterGroup p {
+  margin: 2px 0 -4px;
+}
+/*End searchbar*/
+
+
+
+
+
+/*Preview Panel*/
+.tabGroupsPreview {margin:-11px -12px 24px -12px; font-size:100%;}
+
+.previewContent {
+	position:relative;
+	width:auto;
+	padding:14px;
+	z-index:1;
+	margin:0;
+	background:#aaa url(images/dcp_block_bg.png) no-repeat right bottom;
+}
+
+.previewContent iframe {height:300px;width:100%;}
+
+.tabGroupsPreview table div {display:block}
+
+
+.previewOverlay {	
+	top:130px;
+	width:100%;
+	text-align:center;
+	position:absolute;
+	color:#555;
+	font-size:300%;
+	text-transform:uppercase;
+	letter-spacing:10px;
+	font-weight:bold;
+	filter:alpha(opacity=30)
+}
+
+.tabGroupsPreview  .previewOverlay {top:25px;}
+
+.previewOverlay span {background-color:white;opacity:.30;filter:alpha(opacity=30);padding:6px 12px 6px 24px}
+
+p.warning {padding:9px 18px; background-color:#CF1D19; margin:12px 0 24px 0; color:#fff; font-size:100%;}
+
+b.shadow {display:block;height:9px;margin:0 1px;overflow:hidden;background:transparent url(images/bg_content_shadow.png) repeat-x 0 -3px ;}
+/*End Preview panel*/
+
+/*Date selector*/
+
+/*Safari fix*/
+/*\*/
+html*div.calPicker {overflow:auto; width:30em; max-width:60%; padding:0 0 21px;}
+/*end*/
+
+.calPicker {
+	z-index:1500!important;
+  *overflow:visible !important;
+  *padding:0!important;
+  *width:auto!important;
+  *max-width:none!important;
+}
+
+.calPicker .calHead {position:relative; padding:6px 4px 4px;}
+
+.calPicker h3 {margin:0 40px; border:none; padding:0; background:none; text-align:center;}
+
+.calPicker .previous {position:absolute; top:2px; left:2px;}
+.calPicker .next {position:absolute; top:2px; right:2px;}
+
+.calPicker div.calFoot {clear:both; padding:6px 3px; text-align:center;}
+
+.calPicker a.contextmenubar {
+  display: block;
+  border: none;
+	padding:2px;
+  text-align:right;
+  width: auto;
+}
+
+/* calendar month styles */
+.pickerMonth {
+  position:relative;
+  margin:0 4px;
+  *border:1px solid #bbb;
+  border-collapse:collapse;
+  /*width:100%;*/
+  font-size:95%; 
+  min-width:200px; 
+}
+      
+    .pickerMonth thead th {
+      border:1px solid #aaa; 
+      border-top:1px solid #bbb;
+      border-bottom:1px solid #a0a0a0; 
+      padding:2px;
+      background:#ddd url(images/cal_year_head_bg.gif) repeat-x bottom;
+      width:23px;  
+      color:#333; 
+      font-weight:bold; 
+      text-align:center; 
+      vertical-align:top;
+    }
+    
+    .pickerMonth tbody td {
+      width:23px;  
+      background:white; 
+      border:1px solid #bbb; 
+      padding:2px; 
+      text-align:right;
+      white-space:nowrap;
+    }
+      .pickerMonth td a {
+        display:block;
+        position:relative; 
+        text-decoration:none; 
+        width:100%; 
+      }
+        .pickerMonth td a img {
+          float:left;
+        }  
+
+    .pickerMonth td:hover,
+    .pickerMonth td:focus,
+    .pickerMonth td:active {
+      background:url(images/cal_year_cell_hover_bg.gif) repeat-x bottom left;
+    }
+  
+    .pickerMonth th:hover,
+    .pickerMonth th:focus, 
+    .pickerMonth th:active {
+      background-image:url(images/cal_year_head_hover_bg.gif);
+      }
+  
+    .pickerMonth .today {background:#F9E091;}
+    
+    .pickerMonth .today:hover,
+    .pickerMonth .today:focus {background:#F9E091 url(images/cal_year_today_bg.gif) repeat-x 0 0;}
+    
+      .pickerMonth .today a {font-weight:bold; color:black;}
+      
+      .pickerMonth .today a:hover,
+      .pickerMonth .today a:active,
+      .pickerMonth .today a:focus {background-image:none;}
+    
+    .pickerMonth .offday,
+    .pickerMonth .offday:hover,
+    .pickerMonth .offday:focus {
+      border:1px solid #bbb; 
+      background:#eee;
+      color:#444444; 
+      text-decoration:none;
+    }
+    
+    .pickerMonth .offday a {
+      display: none;
+    }
+
+/* end of calendar month styles */
+
+/*End calendar picker*/
+
+
+/*Time picker*/
+.timediv {padding:2px 0 0 4px;}
+.timediv ul {width:8em; height:200px; overflow:auto;}
+
+.timediv ul li.contextmenubar_top {width:8.50em; top:-15px;}
+
+.timediv ul li a {padding:3px 6px;background-image:none;}
+/*End time picker*/
+  
+
+/*Tagging*/
+.buildList .detailList .hidden {display: none;}
+
+.buildList .detailList .tagContainer {position:relative;}
+
+.buildList .detailList .tagContainer .hidden {display:none;}
+
+.buildList .detailList .tagContainer,
+.buildList .detailList .tagContainer span {
+  float:none; 
+  display:inline; 
+  padding:2px 2px 2px 0; 
+  width:auto;
+  font-weight:normal;
+}
+
+.buildList .detailList .tagContainer input, .tagContainer input {
+  float:none;  
+  display:inline; 
+  margin:0;
+  border:1px solid #555;
+  font-size:95%;
+  vertical-align:middle;
+}
+
+.tagContainer .newTagForm {margin-left:6px;border-left:1px dotted #999;}
+
+.tagContainer .newTagForm label {padding-left:6px;}
+
+.currentTags {
+  display:none;
+  position:absolute;
+  top:1.2em;
+  right:0;
+  width:16em;
+  line-height:1.8;
+  zoom:1;
+  z-index:100;
+  overflow:hidden;
+}
+
+.currentTags span {display:block;padding:18px 6px 6px;}
+
+.currentTags a {font-weight:bold;}
+
+.currentTags a.closeCloud {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0 2px 1px;
+  width:98%;
+  text-align:right;
+  line-height:1;
+}
+
+/* styles for the "auto-complete-tag" feature in the listActionBar of Surveys */
+.auto_complete {
+  width:12em;
+  border:1px solid #5577BB;
+	border-top:1px solid #ACC2DF;
+	border-left:1px solid #ACC2DF;
+  background: #E2EEFE;
+  z-index: 1000;
+}
+
+.auto_complete ul {
+  margin:0;
+  padding:0;
+  width:100%;
+  list-style-type:none;
+}
+
+.auto_complete ul li {
+  margin:0;
+  padding:2px 1% 2px 3%; /* Need to coordinate padding and width to accomodate IE box calucations */
+  width:96%;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.auto_complete ul li.selected { background-color:#fff; }
+
+.auto_complete ul strong.highlight { margin:0;padding:0;} 
+
+/* Tag Cloud*/
+.freq1 {font-size:90%; padding:0 1px;}
+.freq2 {font-size:105%; padding:0 1px;}
+.freq3 {font-size:120%; padding:0 1px;}
+.freq4 {font-size:135%; padding:0 1px;}
+.freq5 {font-size:150%; padding:0 1px;}
+.freq6 {font-size:165%; padding:0 1px;}
+.freq1:hover,.freq2:hover,.freq3:hover,.freq4:hover,.freq5:hover,.freq6:hover {text-decoration:none; background:white;}
+.currentTags a.tagDisabled {opacity:0.7; filter:alpha(opacity=70); text-decoration:none; font-weight:normal;}
+.currentTags a.tagDisabled:hover {background:transparent;}
+/*End tagging*/
+/*End tagging*/
+
+
+/** Drag and drop dropzone */
+div.dropzone {border: 2px dashed #333333;margin: 5px;}
+
+
+/*Lightbox*/
+
+/*Styles for lightbox.js*/
+div.lb-overlay {
+ _position: absolute; /* IE 6 doesn't support fixed positioning */
+ background-color: #000000;
+}
+
+div.lb-wrapper {
+ _position: absolute; /* IE 6 doesn't support fixed positioning */
+}
+
+div.lb-wrapper div.lb-header a img {
+ border: none;
+}
+
+div.lb-wrapper div.lb-content {
+ background-color: #FFFFFF;
+ padding: 0 0 0 0; 
+}
+
+div.lb-wrapper div.lb-content div.lb-loading { background: transparent url(/images/ci/misc/progress/progress_learningSystem.gif) no-repeat scroll center center; }
+
+/*End styles for lightbox.js*/
+
+
+
+/*Generic lighbox styles*/
+/*lightboxWrapper is positioned absolutely within a browser window. 
+It allows lighbox hover over other items on the page */
+#lightboxWrapper {position:absolute; top:0; left:0; right:0; z-index:1001;}
+
+/*lightboxWrapper-inner is positioned relatively and it's text alignment is set to center.*/
+#lightboxWrapper-inner {position:relative; top:0; left:0; text-align:center; width:100%; z-index:1002;}
+
+#lightbox {display:block; margin:40px 0 0 0; position:relative; top:auto; left:auto; z-index:1003; text-align:left;}
+
+#lightbox #lightboxContent {padding:0; width:600px; margin:0 auto; position:relative; background:#ffcc33;border:2px solid #07477F; padding:3px;}
+
+/*#lightbox #lightboxContent .lbContainer {background:#ffffff; max-height:300px;}
+#lightbox #lightboxContent .lbContainer:after {content: "."; display: block;height:0;clear: both;visibility: hidden;}*/
+
+/* used to wrap around lightbox content (if necessary) */
+.lb-container, .lb-content .container {padding:10px 12px 12px; min-height:0!important;}
+
+#overlay{
+	display:none;
+	background-color:#000;
+	opacity:.30;
+	filter: alpha(opacity=30);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	right:0;
+	bottom:0;
+	height:100%;
+	width:100%;
+	_position:absolute;
+}
+
+/*Load messages*/
+#lightbox.done #lbLoadMessage{display:none;}
+#lightbox.done #lbContent{display:block;}
+#lightbox.loading #lbContent{display:none;}
+#lightbox.loading #lbLoadMessage{display:block;}
+#lightbox.done img {}
+
+.avatar {margin:auto; border:1px solid #ccc; padding:4px;}
+
+.myavatar {	overflow:hidden; max-height:150px;}
+
+#lightbox .tallPara {padding:14px 10px;margin:0;}
+
+#lightbox ul {margin:4px 4px 12px;}
+
+#lightbox ul li {background:transparent url(images/list_bullet_single.gif) no-repeat 5px 3px;padding:0 0  0 14px;margin:0 0 2px 0;}
+
+div.lbContainer p.taskButtonsContent {margin:12px 0px 6px 0px;}
+/*End generic*/
+
+/*End lightbox*/
+
+
+/*Item states*/
+/*-----------ITEM STATES---------------*/
+.toBeRemoved, .toBeRemoved > th, .toBeRemoved > td {background:#f0f0f0;text-decoration:line-through;color:#666;}
+.unsavedItem, .unsavedItem td:first-child {padding-left:18px;background-image:url(../../../images/ci/ng/unsaved_changes.gif);background-repeat:no-repeat;background-position:0 50%;background-color:#fff1c5}
+.unsavedItem td {background-image:none}
+a.selectedItem, a.selectedItem:focus {
+	background: #eff6ff;
+	border: 2px solid #9bb4cf;
+	color: #000;
+	border-bottom: none;
+	padding: 3px 4px;
+	top: 3px;
+	position:relative;
+	zoom:1;
+	z-index:10001;
+	*left:-3px;
+	*top:-2px;
+}
+
+tr.inEditMode-row {border:0; }
+tr.inEditMode-row td  {padding:6px 0!important;border:solid #ccc!important; border-width:2px 0 2px 0!important;}
+
+/*End item stats*/
+
+/* Youtube AX Controls */
+.playerControls {
+  position: relative;
+  padding: 6px !important;
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+
+/* CS Metadata */
+div.md_linear {
+	margin: 6px 0;
+	font-family: arial, helvetica, sans-serif;
+  border-left: 1px solid rgb(101, 124, 163); 
+  border-bottom: 1px solid rgb(101, 124, 163); 
+  display: inline;
+  padding-left: 3px;
+  border-left: 1px solid rgb(101, 124, 163); 
+  border-bottom: 1px solid rgb(101, 124, 163); 
+  display: inline;
+  padding-left: 3px;
+}
+
+div.md_linear a {
+	font-style: italic;
+	font-family: arial, helvetica, sans-serif;
+}
+
+div.md_linear p {
+	display: inline;
+	font-size: 95%;
+}
+
+div.md_linear p span {
+	display: none;
+}
+
+div.md_tabular {
+	margin: 6px 0;
+	font-family: arial, helvetica, sans-serif;
+  border-left: 1px solid rgb(101, 124, 163); 
+  margin: 0pt 0pt 6px 12px; 
+  padding-left: 3px;
+}
+
+div.md_tabular a {
+	font-style: italic;
+	font-family: arial, helvetica, sans-serif;
+}
+
+div.md_tabular p {
+	margin: 0;
+	padding: 1px 0;
+	font-size: 95%;
+}
+
+div.md_tabular p span {
+	font-style: italic;
+	color: #444;
+}
+
+div.sample_data {
+	margin: 0 0 0 24px;
+}
+
+div.sample_data div {
+	float: left;
+}
+
+div.sample_data div.sample_head {
+	font-weight: bold;
+	border: none;
+	margin: 6px 10px 2px 1px;
+}
+
+/* Email Items UI Customization (LRN-35721) */
+/*Flyout Areas */
+.e_expandArea {
+    margin-top: 25px;
+}
+
+/* Hidden Menu CSS */
+#e_groups_menu {
+    background: #ddd;
+    border: 1px solid #555;
+    border-radius:0!important;
+    top: 5px;
+}
+/*
+ * END DYNAMIC ELEMENTS
+ */
+

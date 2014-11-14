@@ -1,0 +1,919 @@
+
+/*
+ * DATA COLLECTION
+ */
+
+/*Ensures correct text sizing in IE
+input, select {*font-size:100%;vertical-align:middle;}*/
+
+
+/* Step Title */
+.steptitle {position:relative; margin:9px 0 0 0; padding:4px 4px 5px 26px;  font-size: 105%; letter-spacing:2px; line-height:1; color: #000; 
+			text-transform:uppercase; font-weight:bold; border-bottom:2px solid #555;}
+
+/* Span within steptitle to display step number */
+.steptitle span {position:absolute; top:0; *top:1px; bottom:0; left:0; margin:0 8px 0 0px; color:#aaa; _margin:0 0 0 -40px;
+					padding:3px 9px 5px 3px; *padding:0px 9px 4px 3px; font-size: 130%; line-height:100%; font-weight:normal;} 
+          
+/* needed to correct a hasLayout issue in IE7 when a form appears in a lightbox */  
+.lb-content .steptitle {*position:static; *padding-left:0;} 
+.lb-content .steptitle span {*position:static; *padding-right:0;} 
+
+/*Step title in case if there's  no step number.*/
+h3.noNumber {padding:4px 16px 5px 16px;}
+/*End step title */
+
+/*Step Content*/
+/* Fieldset groups related controls within a step */
+.stepcontent {padding:6px 4px 12px 16px; margin:0 0px 0 18px; border:none;}
+
+/* Spacing list elements and giving the bottom border */
+.stepcontent li {margin-bottom:4px; padding-bottom:4px; border-bottom:1px solid #eee; *height:1%;}
+
+.stepcontent li li {border:0!important;}
+
+.stepcontent li.sub {padding-bottom:0;}
+
+/*recovering from issue caused by the floated 'columns'*/
+.stepcontent li:after {content: "."; display: block; height:0; clear: both; visibility: hidden; _height:1%;}
+
+/*Help text following step header. */
+.stepcontent .stepHelp, .stepHelp {color:#666666; margin:0 0 6px; padding:0 0 4px; border-bottom:none;}
+
+/* Inline help next to user input elements. */
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset ol li span, fieldset ol li ol li span, .contentBlock ol li span,*/
+/*.stepcontent span,*/
+/*@since 9.1*/
+.stepcontent .fieldHelp {color:#666666; font-size:90%; padding:2px 0 8px; display:block;}
+
+/* Style to be used in case text next to input is not an inline help. */
+.stepcontent  .nonHelp {font-size:95%; color:#000;}
+
+
+
+/*Nested lists*/
+.stepcontent .nestedList li {border:0; padding:1px 0; margin:0;}
+.nestedListSmall li {font-size:90%;}
+.nestedSubList {margin:6px 6px 6px 30px;}
+
+
+/*Lite step content. Used when step content contains no fieldset element.*/
+.stepLite {padding:6px 16px 12px 16px;}
+
+/*Step containing columns*/
+.columnStep .column-3 {min-height:200px;}
+.columnStep .column-3 table.attachments {font-size:90%;}
+.columnStep div h3 {margin:6px;}
+.columnStep div div {padding:6px;}
+
+
+
+
+
+
+
+
+
+/*FILE NAME AND "REMOVE" CONTROLS ON THE BRANDING PAGE */
+ol.nestedList li div.imgLabel {width:auto;}
+ol.nestedList li div.imgLabel span.fileName {font-weight:bold; padding:0 6px 0 0; display:inline; color:#000;}
+ol.nestedList li div.imgLabel span.control {display:inline;}
+ol.nestedList li div.imgLabel span a {}
+#title_color_value {padding-top:6px;}
+
+
+
+
+
+
+/* used to indent a nested list - needed for a list of child form elements */
+
+
+
+
+
+
+
+
+
+
+/*--------------------LIVE-SAVE ELEMENTS WITHIN A DATA COLLECTION PAGE------------------------------*/
+/*Used for submittable individual step content elements.*/
+
+/*Making individual step element text larger (Grade Center).*/
+.largeText div.label, .largeText div.field {font-size:130%; font-weight:bold;}
+
+/*Reducing button text size.*/
+.largeText a.browse {font-size:75%!important; font-weight:normal; margin:0 0 0 3px;}
+
+.field a.browse {font-size:95%; margin:0 0 0 3px;}
+
+div.editBlock {float:left; margin-right:12px}
+
+.largeText div.field div.editBlock label {font-size:80%;font-weight:normal; }
+
+.largeText div.field div.exemptdiv label {font-size:65%;}
+
+.largeText textarea {font-size:80%;}
+
+/*list element in edit mode.*/
+li.inEditMode {border:2px solid #444!important; -moz-border-radius:6px; background:#ededed; padding:3px 9px;}
+	
+	
+	
+	
+/*---------------------ERRORS AND  SPECIAL CONDITIONS------------------------------------------*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset.stepcontent ol li.fieldError, li.fieldError,*/
+/*@since 9.1*/
+.stepcontent li.fieldError {background:#fff1c5; border-bottom:1px solid #fff; padding:2px 0 0 2px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset.stepcontent ol li.fieldError span.fieldErrorText, span.warningMsg,*/
+/*@since 9.1*/
+.stepcontent li.fieldError .fieldErrorText, span.warningMsg {color:red;font-weight:bold;}
+
+span.warningMsg  {display:inline;margin-left:0px;}
+
+
+/*--------------------- MODIFICATION FOR REQUIRED FIELDS --------------------------------*/
+
+/* Required field indicator legend. */
+.reqfield {float:left; color:#666;}
+
+.requiredField {background: url(../../../images/ci/icons/required.gif) no-repeat 0 center; padding:6px 0 6px 16px; display:inline-block;}
+
+/* Required field flag image.
+li.required div.label label img, li.required div.label img {margin:-3px 0 0 -18px; _margin:0;} */
+
+.label .indicator {margin-left:-18px;}
+
+/*li.required input {clear:both; *clear:none;}*/
+
+
+
+/*------------------STEP CONTENT MODIFICATIONS-------------------------------------------------*/
+
+
+/* fieldset or a div in a step that display read-only information. */
+fieldset.info, div.info {background:#f6f6f6; margin:0;}
+
+/* Modifying read-only labels */
+fieldset.info div.label {color:#666;}
+
+
+
+/*-----------------------DATA COLLECTION PAGE STEP ELEMENT LAYOUT------------------------------------*/
+
+/*Setting up a two-column layout*/
+div.label, div.gb_gridCell_inner h3.label {float:left; width:20%;max-width: 15em; min-width:6em; margin:0 0px 3px; word-wrap:break-word;}
+
+div.label-stack {
+  display: block;
+  float: none;
+  width: auto;
+  max-width: none;
+}
+
+div.field, div.noLabelField  {float:left; width:79%; margin:0 0px 3px; word-break: normal; word-wrap: break-word;
+    overflow: visible; /* Should be auto but our silktest scripts need to be fixed in conjunction with this (and further testing shows odd displays on many other pages such as the popup add content area) */
+}
+
+div.noLabelField {width:100%;}
+
+div.label span.contextMenuContainer {display:inline;}
+
+
+
+
+/*-------------------------- STEP ELEMENT MODIFICATIONS FOR QUICK ADD PALETTE ----------------------------------------------------*/
+
+/* div.liveArea styles are since 9.1 - used in Blogs */
+div.liveArea fieldset.stepcontent {}
+div.liveArea fieldset.stepcontent ol li { border:none;}
+div.liveArea fieldset.stepcontent textarea {}
+div.liveArea fieldset.stepcontent span.inlineHelp {}
+
+#gradeDetailsFormList,
+#editGradeActionList {
+	width: 100% !important;
+}
+
+
+.quickAddPal .stepcontent {margin:0; padding:3px 9px 3px 6px;}
+
+.quickAddPal .stepcontent li{ margin:0 2px;	padding:1px 1px 0 1px; border:0;}
+
+.quickAddPal .stepcontent .label {width:30%; padding-right:2px; overflow:visible;}
+
+.quickAddPal .stepcontent .field {width:68%;*width:65%;}
+
+/* Required field flag image. 
+div.quickAddPal fieldset.stepcontent ol li.required div.label label img,
+div.quickAddPal fieldset.stepcontent ol li.required div.label  img {
+
+}*/
+
+/*Field Error text in DTP and QuickAdd palette*/
+.quickAddPal li.fieldError .fieldErrorText {
+	color:red;
+	display:block;
+	margin-left:74px;
+	font-weight:normal;
+	font-size:85%;
+}
+
+div.quickAddPal div.field input[type=text], 
+div.quickAddPal div.field select, 
+div.quickAddPal div.field textarea {width:100%;*font-size:100%;border:1px solid #666;} 
+
+div.quickAddPal div.field input[type=checkbox]  {_width:auto;} 
+
+div.quickAddPal li.stepHelp, div.quickAddPal li div span {width:auto;}
+
+div.field span.fileName {font-weight:bold;padding:0 6px 0 0;display:inline;}
+div.field span.control {display:inline;}
+
+
+div.quickAddPal div.field input.datePickerInput,
+div.quickAddPal div.field input.timePickerInput {width:8em;}
+.dtpickerEndDiv{padding-top:10px;}
+
+/*-------------------------USER INPUT ELEMENTS-------------------------------------*/
+
+#texteditor {margin:0; padding:3px; float:left;}
+#texteditor textarea {width:450px; display:block; margin-left:0; }
+#texteditor a.textBoxItem {display:block; width:80%; text-align:right; padding:2px;}
+
+/* Giving uniform appearance to various types of controls 
+fieldset.stepcontent ol li input[type="text"], select, textarea {
+	border:1px solid #666;
+	padding:1px;
+	vertical-align:middle;
+}*/
+
+select.survey_question {max-width:100%; /*FF*/}
+	
+/*safari & IE hack to remove gap at the bottom of the tabs. */
+/*\*/
+html*select.survey_question {width:100%;}
+
+
+
+/**/
+
+/*textarea {font-size:100%;}
+
+
+textarea {font-size:100%;}*/
+
+
+/*input:focus, textarea:focus, #loginBox input[type="text"]:focus, #loginBox input[type="password"]:focus,
+.portlet #loginBoxFull li input[type="text"]:focus, .portlet #loginBoxFull li input[type="password"]:focus {
+  background: #fff1c5;
+  border-color:#000;
+} */
+
+
+
+
+/* Browse control styles. 
+fieldset.stepcontent ol li input.browse, input.browse {
+	font-family:"Lucida Grande",Arial, Verdana, sans-serif; 
+	background:#ededed url(images/button3_back.gif) repeat-x;
+	border:1px solid #ccc;
+	border-bottom:1px solid #aaa;
+	border-right:1px solid #aaa;
+	*overflow:visible;
+	*padding:0 9px; 
+}*/
+ 
+ 
+/*fieldset.stepcontent ol li a.browse, 
+.stepcontent a.browse, 
+div.blogEntry div.entryFooter a.browse, 
+div.portlet div.portletBlock a.browse,
+a.browse*/
+
+/*a.browse {
+	font-family:"Lucida Grande", Arial, Verdana, sans-serif; 
+	background:#ededed url(images/button3_back.gif) repeat-x right bottom;
+	border:1px solid #ccc;
+	border-bottom:1px solid #aaa;
+	border-right:1px solid #aaa;
+  padding:0 6px 2px;
+  text-decoration:none;
+  *font-size:95%;
+}*/
+
+/* for browse links that use icons, not text 
+fieldset.stepcontent ol li a.browseIcon, 
+.stepcontent a.browseIcon,
+div.portlet div.portletBlock a.browseIcon, 
+a.browseIcon {
+	background:#ededed url(images/button3_back.gif) repeat-x;
+	border:1px solid #ccc;
+	border-bottom:1px solid #aaa;
+	border-right:1px solid #aaa;
+  	padding:0 1px 2px;
+  	text-decoration:none;
+}*/
+	
+/*fieldset.stepcontent ol li a.browse:hover, a.browse:hover,
+fieldset.stepcontent ol li a.browseIcon:hover, .stepcontent a.browseIcon:hover, a.browseIcon:hover,
+fieldset.stepcontent ol li a.browse:focus, a.browse:focus,
+fieldset.stepcontent ol li a.browseIcon:focus, .stepcontent a.browseIcon:focus, a.browseIcon:focus*/
+
+/*a.browse:hover, a.browseIcon:hover, a.browse:focus, a.browseIcon:focus {
+	border:1px solid #555; 
+	background:white;
+} 
+
+ div.details a.browse,  div.details a.browse:hover  {
+ 	padding:0 6px 1px 6px;
+	margin:0 auto;
+}*/ 
+  
+
+/*Submit buttons*/
+.taskbuttondiv, .taskButtonsContent, .okbutton {padding:6px 0; margin:9px 0 0 0; text-align:right; min-height:16px;}
+
+.container .taskbuttondiv:first-child {margin-top:0;}
+
+.taskbuttondiv > input, .taskbuttondiv > a, .taskbuttondiv > button {margin-left:2px;}
+
+/* adjusts margin on sequence map "build/canvas" page */
+#dataCollectionContainer .taskbuttondiv:first-child, 
+#dataCollectionContainer .reqfield + .taskbuttondiv,
+#containerdiv .mapCanvasForm .taskbuttondiv:first-child {margin-top:12px;}
+
+#dataCollectionContainer .taskbuttonhelp + .taskbuttondiv {padding-top:0;margin-top:0;}
+
+.stepTitleRight .taskbuttondiv, .contentListRight .taskbuttondiv {
+    margin: -2pt 0 -2pt 0 !important; 
+    padding: 0px 0px 0px 0px !important; 
+    font-size: 80% !important;
+}
+
+/* Backlink is used on pages that need to display an "ok" button.*/
+.backLink {position:absolute; bottom:12px; right:26px; margin:0;}
+/* backlink by itself puts the button way too far down and out of the content area on some pages - closeToContentBackLink*/
+.closeToContentBackLink {
+  margin-top: 10px;
+  bottom: auto;
+}
+
+.tocBottom_min .backLink {bottom:48px;}
+.tocBottom_max .backLink {bottom:348px;}
+.tocBottom_open .backLink {bottom:178px;}
+.shortDoc .backLink { position: relative; bottom: 0px; right: 0px; text-align: left; margin-top: 15px; }
+
+.backLink a {
+	background:#bbb;
+	padding:2px 8px;
+	text-decoration:none;
+	color:#fff;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	font-size:90%;
+	font-weight:bold;
+	display:inline-block;
+}
+
+
+
+.taskButtonsContent {padding:9px 12px 0 12px; margin:24px -12px 0 -12px; border-top:1px solid #ddd;}
+ 
+
+
+/*.taskbuttondiv button, .taskbuttondiv input,
+.taskButtonsContent button, .taskButtonsContent input,
+div.controls button, div.controls input, p.okbutton input,
+
+button.secondary, input.secondary, a.secondary {
+	margin:0 2px;
+	vertical-align:middle; 
+	font-weight:normal;
+	font-size:105%;
+  	text-decoration:none;
+  	padding:1px 9px;
+  	color:#444;
+  	background:#FFF1c5 url(images/gradient_black_short_bt.png) repeat-x 0 10%;
+	_background-image:none;
+  	border:1px solid #EDD999;
+	border-bottom:2px solid #D7BB66;
+  	border-right:2px solid #D7BB66;
+  	border-collapse:collapse;
+
+}*/
+
+.okbutton input {font-size:100%;padding:1px 6px;}
+
+
+/*.taskbuttondiv button.submit, .taskbuttondiv input.submit,
+.taskButtonsContent button.submit, .taskButtonsContent input.submit, 
+div.controls button.submit, div.controls input.submit, .taskbuttondiv button.disabled, .taskbuttondiv input.disabled,
+.taskButtonsContent button.disabled, .taskButtonsContent input.disabled,
+div.controls button.disabled, div.controls input.disabled,
+#loginBox li input.submit,
+
+button.submit, input.submit, a.submit {
+	font-weight:bold;
+  	color:#fff;
+	background:#819AC0 url(images/gradient_black_short_bt.png) repeat-x 0 center;
+	_background-image:none;
+	border:1px solid #566E94;
+  	border-bottom:2px solid #344A6C;
+  	border-right:2px solid #344A6C; 
+}*/
+
+/*Login page submit button
+#loginBox li input[type="submit"] {
+	font-weight:bold;
+  	color:#fff;
+	background:#819AC0 url(images/gradient_black_short_bt.png) repeat-x 0 center;
+	_background-image:none;
+	border:1px solid #566E94;
+  	border-bottom:2px solid #344A6C;
+  	border-right:2px solid #344A6C; 
+}*/
+
+
+
+/*#loginBox li input[type="submit"]:hover, .portlet input.submit:hover {
+	background-color: #344A6C;
+}
+
+.quickAddPal div.controls input {
+	font-size:100%;
+	padding:1px 6px;
+	margin:0 1px;
+}*/
+
+.taskbuttonhelp {  
+	color:#777777;
+  	font-size:95% !important;
+  	line-height:135%;
+  	padding:0 4px 0px 36px;;
+  	margin:9px 0 0 0;
+}
+
+/*.container p.taskbuttonhelp {
+	padding-left:36px;
+}*/
+	
+#taskbuttondiv p {
+	text-align:left; 
+	font-size:90%; 
+	display:block; 
+	font-style:italic; 
+	margin:6px 0;
+  	border:1px solid red;
+}
+
+.stepTitleRight {
+  font-weight:normal;
+  position:absolute;
+  right:6px !important;
+  left:auto !important;
+  top: 0px;
+  padding:4px 9px 2px 9px; 
+  *padding:3px 9px 4px 9px; 
+  background:#FAE7AE; 
+  font-size: 110%;
+  letter-spacing:1px;
+  font-weight:bold;
+  color: #000; 
+  line-height:1;
+}
+
+
+
+
+/*	Not sure if this is going to be used.	*/
+
+/*.saver {
+	clear:left;
+}
+
+
+.exemptdiv {font-size:60%;}
+
+table .exemptdiv {
+  	clear:left;
+  	font-size:100%;
+}
+
+.gbtablesimple .exemptdiv { 
+  	margin-top:5px;
+  	font-size:90%;
+  	padding-left:20px;
+}
+
+div .editgrade table.resizeCommentsTable textarea {
+	font-size:130%;
+}
+
+.gc_info ul {
+	text-align:left!important
+}
+
+.gbtablesimple .exemptdiv input {
+  	margin-left:-20px;
+}
+
+div.field table tbody tr td table label, div.field table tbody tr td table select {font-size:110%;}
+
+*/
+
+/* end text-area resizing */
+
+
+
+
+
+/*Color swatch palette*/
+.quickAddPal .colorlist {margin:6px 0 9px 6px; width:288px;}
+
+.quickAddPal .colorlist li {
+	margin:0; 
+	padding:0; 
+	float:left; 
+	border:1px solid #333!important; 
+	width:14px; 
+	height:14px; 
+	overflow:hidden; 
+  	cursor:pointer;
+}
+
+.quickAddPal .colorlist li a, .quickAddPal .colorlist li a:link {
+	display:block;
+	width:14px; 
+	height:14px; 
+	overflow:hidden; 
+}
+
+.quickAddPal .colorlist li a:hover {
+  	border:1px solid #333;
+  	width:12px; 
+	height:12px; 
+}
+
+.quickAddPal .colorlist li a:active, .quickAddPal .colorlist li a:focus {
+	border:2px solid #fff;
+	width:10px; 
+	height:10px; 
+}
+
+.quickAddPal .colorlist li a.whiteSwatch:active, .quickAddPal .colorlist li a.whiteSwatch:focus {
+	border:2px solid #ddd;
+	width:10px; 
+	height:10px; 
+}
+
+.quickAddPal .colorPreview {padding:3px;background:white;}
+
+.quickAddPal .colorPreview img {
+	background:black; 
+	width:42px; 
+	height:42px; 
+	border:1px solid #444; 
+	display:block;
+	margin:3px; 
+	float:left;
+}
+
+.quickAddPal .colorPreview div {float:left;margin-left:3px;width:66%;}
+
+.quickAddPal .colorPreview span {
+	*display:inline-block;
+	margin:0;
+	padding:0;
+	*width:100%;
+	color:black;
+	font-size:100%;
+}
+
+span.title_color_name {color:#666666;}
+/*End color swatch palette*/
+
+
+
+
+
+/*Collapsible data collection page panels*/
+.stepPanels {padding:6px 0px 12px 0px; margin:0px; border:none;}
+
+.stepPanels li {border-bottom:none;}
+
+.panelTitle {
+  margin: 4px 0 0 0;
+  padding: 3px 5px;
+  background: #ddd;
+  position:relative;
+  cursor:pointer;
+  zoom:1;
+}
+
+.mdHead a, .panelTitle a {color: #000;text-decoration: none;}
+
+.panelTitle a {display:block; width:100%;}
+
+.panelTitle .date {
+  color: #666;
+  font-weight:normal;
+  font-size:95%;
+  text-decoration: none;
+  position:absolute;
+  right:6px;
+  top:2px;
+}
+
+.panelTitle a span {
+  display:inline;
+  padding:2px 0; 
+  color:black; 
+  font-size:100%;
+  *font-size:95%;
+}
+
+.mdHead a span.date {font-weight: normal;}
+
+.mdList, .stepPanel {margin:0 0 9px 0; background: #f6f6f6; padding:9px 18px;}
+
+.stepPanel p span {color:#666;}
+
+.mdList h4, .stepPanel h5 {margin: 0; padding: 0; font-size:95%;}
+
+.mdList p, .stepPanel p {margin: 5px 5px 5px 12px; padding: 0; font-size:95%;}
+
+.stepPanelControls {font-size:90%;}
+
+.contentAreaBlock {
+	border:1px solid #aaa;
+	background:url(images/dcp_block_bg.png) no-repeat bottom right;
+	_background-image:none;
+	border-top:0;
+	padding:12px;
+	margin:0 0 24px 0;
+}
+/*End collapsible data collection page panels*/
+
+
+
+/*button library has been restyled using inline stack. Will leave this in case it is used elsewhere. (LL 5/18/2009).
+To be removed before 9.1*/
+/*--------------------IMAGE SELECTION IN THE DTP STEP-------------------------------------*/
+.buttonLibrary {
+	list-style:none;
+	margin:9px 0 9px 0;
+	padding:6px 0 6px 6px;
+	max-height:300px;
+	overflow:auto;
+	border:1px solid #bbb;
+	background:#f6f6f6;
+}
+
+.buttonLibrary li {float:left;border:none!important;}
+
+.buttonLibrary li a {
+	display:block;
+	padding:3px 7px 3px 7px;
+	text-align:center;
+	text-decoration:none;
+	font-size:105%;
+	color:#777;
+}
+
+.buttonLibrary li a.selected {text-decoration:none;font-weight:bold;}
+
+.buttonLibrary li a:hover {text-decoration:underline;}
+
+/**/
+
+
+/* ACTION MENU IN THE DATA COLLECTION PAGE */
+
+div.menuStyleStep {float:left;margin:9px 40px 0pt 0pt;width:212px;}
+
+div.menuDefaultStyleStep {margin:9px auto;width:212px;}
+
+
+
+
+/*--------------------------- COLOR SCHEME PREVIEWS ------------------------------------*/
+
+.schemeWrapper {float:left;margin:0pt 12px 0pt 0pt;}
+
+.buttonLibrary li .schemeWrapper {margin:0;padding:5px;background:#fff;border:solid #ccc;border-width:0 1px 1px 0}
+
+.schemeWrapper span {font-size:95%;text-align:center;}
+
+ul.buttonLibrary li.selected {background:#555555 url(images/dcp_block_bg.png) no-repeat right bottom;}
+ul.buttonLibrary li.selected a.selected, ul.buttonLibrary li.selected a.selected span,
+ul.buttonLibrary li.selected a, ul.buttonLibrary li.selected a span {font-weight:bold;color:#ffffff!important}
+ul.buttonLibrary li .schemeWrapper {float:none;margin-right:6px;}
+ul.buttonLibrary li {padding:6px!important;margin:0 4px 4px 0;}
+
+.schemePreview {width:160px;padding:12px 0px 0px 16px;border:solid #ededed;border-width:0 1px 1px 0}
+
+.modulePreview {
+	width:140px;
+	padding:0px;
+	font-size:85%;
+	margin:6px 0 0 auto;
+	position:relative;
+	bottom:0;
+	right:0;
+	left:auto;
+	border-width:2px 0 0 2px;
+	border-style:solid;
+}
+
+.schemePreviewHead {padding:3px 9px;font-weight:bold;font-size:110%;}
+
+.modulePreviewHead {font-weight:bold;padding:2px 6px;background:url(images/gradient_black_short_bt.png) repeat-x 0pt center;}
+
+.schemePreviewBody {padding:3px 0px 0px 9px;position:relative;}
+
+.modulePreviewBody {padding:2px 6px 3px 6px;}
+
+
+
+/* renders the font preview blocks on the Edit Portfolio Styles pages */
+div.fontPreview { 
+  display:block;
+  float:left;
+  margin:3px 0;
+  background:#fff;
+  border:1px solid #000;
+  padding:4px;
+}
+
+/* toolbar that appears above textareas */
+.textareaDiv {padding-bottom:6px;}
+.textareaDiv table {width:98%;}
+.textareaDiv table table, .textareaDiv table table table {width:100%;}
+.textareaDiv textarea {
+  width:100%; 
+  border-top:2px solid #666;
+  }
+
+div.textToolbar {
+  width:97.7%; 
+  border:1px solid #ccc; 
+  background:#f6f6f6; 
+  padding:4px 0;
+  }
+div.textToolbar a {
+  white-space:nowrap;
+  font-size:90%;
+}
+div.textToolbar label {
+  font-size:90%; 
+  vertical-align:middle; 
+  padding-left:4px;
+  }
+div.textToolbar select {
+  font-size:90%; 
+  vertical-align:middle;
+  }
+
+.previewTextArea {
+  display:none;
+  border:2px solid #999;
+  padding:0px;
+  width:459px;
+  height:112px;
+  background:#fff;
+  overflow:auto;
+}
+
+.previewTextArea div.previewTitle {
+  margin:0 0 4px;
+  border-bottom:2px solid #eee;
+  padding:2px;
+  background: #eee;
+}
+
+.previewTextArea div.previewTitle a {float:right;}
+.previewTextArea div.previewTitle h6 {
+  float:left; 
+  margin:0; 
+  font-size:90%;
+  }
+.previewTextArea div.previewContent {padding:3px;}
+
+
+
+
+
+
+/*Hierarchical list for data collection page*/
+
+.stepcontent .hierarchy {padding:0; margin:0; list-style:none; color:#999;}
+
+.stepcontent .hierarchy li, ol.hierarchy li ol li {
+	padding:0px 0 9px 0px;
+	margin:0;
+	border:0;
+	border-top:1px solid #ddd;
+	background-color:#fff;
+}
+
+ol.hierarchy li ol {
+	padding:0px 0 0 0px;
+	margin:8px 0 0 30px;
+	color:#999;
+}
+
+	 
+ol.hierarchy li h5 {	
+	position:relative;
+	font-size:100%;
+	margin:0;
+	padding:8px 11em 3px 3px;
+	color:#000;
+	background-color:#fff;
+}
+
+ol.hierarchy li h5 span {
+	display:inline;
+	color:#888;
+	font-size:100%;
+	border-bottom:none;
+}
+
+ol.hierarchy li h5 a {
+	position:absolute;
+	right:0;
+	top:9px;
+	font-weight:normal;
+	font-size:90%;
+}
+
+ol.hierarchy li div {
+	font-size:95%;
+	vertical-align:middle;
+	padding:9px 2px 2px 12px;
+	text-align:right;
+}
+
+ol.hierarchy li div.gbData span {
+	display:inline;
+	font-size:100%;
+	padding:2px 0px 2px 9px;
+	margin:0 0 0 9px;
+	border-left:1px dotted #ccc;
+	color:#000;
+}
+	 
+ol.hierarchy li div.gbData  span:first-child {
+	border-left:none;
+	margin-left:0;
+	padding-left:0;
+}
+
+ol.hierarchy li div input.points, ol.hierarchy li div input {vertical-align:middle;}
+
+ol.hierarchy li div input.points {width:2em;}
+
+ol.hierarchy li div input.name {width:16em;}
+	
+li.parent {padding-bottom:0!important;}
+	
+ol.hierarchy li.parent ol li h5 {background-image:none;}
+
+
+/*Modifications for "Add" and "Remove" versions*/
+
+a.add {background-color:#B3EFB3; border-color:#42AF41}
+a.add:hover {background-color:#E4FFDF; border-color:#42AF41}
+a.remove {background-color:#FFC4BF; border-color:#EF3B3B;padding-left:20px;}
+a.remove:hover {background-color:#FFD2CF; border-color:#EF3B3B;}
+
+
+
+/*Label/field modifications for minified layout*/
+.smallControls {font-size:90%;margin-top:3px!important;min-width:19em;}
+.smallControls .label {width:29%;}	
+.smallControls .field {width:70%;}
+.smallControls .stepHelp {font-size:100%!important;padding:0}
+/*End modifications*/
+
+.listColumnHead {/* since 9.1. used on a "two column" list. visually mimicks a <th scope="col"></th>.  this likely violates best practices. consider removing. TB.*/
+  margin-bottom:3px; 
+  border-bottom:1px dotted #ccc!important; 
+  color:#555; 
+  font-weight:bold; 
+  font-size:90%;
+}
+
+/* custom form - label used by Edit Lesson Plan. Since 9.1. TB */
+.customFormBuilderLabel {
+  display:block;
+  width:88%;
+  word-wrap:break-word;
+}

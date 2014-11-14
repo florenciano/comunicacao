@@ -1,0 +1,981 @@
+/*INTERACTIVE*/
+
+/* @group DISCUSSION BOARD
+----------------------------------------------- */
+	
+.dbThreadInfo dl {
+  margin: 1em;
+}
+
+.dbThreadInfo dt {
+  float: left;
+  clear: left;
+  margin: 0;
+  padding: 0.1em;
+  width: 8em;
+  font-weight: bold;
+  color: #999;
+}
+
+.dbThreadInfo dd {
+  margin: 0 0 0 9em;
+  padding: 0.1em;
+}
+
+/* star rating code - use lists because its more semantic */
+/* all the stars are contained in one matrix to solve rollover problems with delay */
+/* the background position is just shifted to reveal the correct image. */
+/* the images are 16px by 16px and the background position will be shifted in negative 16px increments */
+/*  key:  B=Blank : O=Orange : G = Green * /
+/*..... The Matrix ....... */
+/* colours ....Background position */
+/* B B B B B - (0 0)*/
+/* G B B B B - (0 -16px)*/
+/* G G B B B - (0 -32px)*/
+/* G G G B B - (0 -48px)*/
+/* G G G G B - (0 -64px)*/
+/* G G G G G - (0 -80px)*/
+/* O B B B B - (0 -96px)*/
+/* O O B B B - (0 -112px)*/
+/* O O O B B - (0 -128px)*/
+/* O O O O B - (0 -144px)*/
+/* O O O O O - (0 -160px)*/
+
+/* the default rating is placed as a background image in the ul */
+/* use the background position according to the table above to display the required images*/
+.rating {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 16px;
+  background: url(images/controls.png) no-repeat 0 -20px;
+  list-style: none;
+}
+
+/* add these classes to the ul to effect the change to the correct number of stars */
+.star0 { background-position: 0 -20px; }
+.star1 { background-position: 0 -36px; }
+.star2 { background-position: 0 -52px; }
+.star3 { background-position: 0 -68px; }
+.star4 { background-position: 0 -84px; }
+.star5 { background-position: 0 -100px; }
+
+ul.rating li {
+  cursor: pointer;
+  text-indent: -999em;
+}
+
+ul.rating li a {
+  z-index: 200;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  text-decoration: none;
+}
+
+ul.rating li.one a { left: 0; }
+ul.rating li.two a { left: 16px; }
+ul.rating li.three a { left: 32px; }
+ul.rating li.four a { left: 48px; }
+ul.rating li.five a { left: 64px; }
+
+ul.rating li a:hover {
+  z-index: 2;
+  width: 80px;
+  height: 16px;
+  overflow: hidden;
+  left: 0;
+  background: url(images/controls.png) no-repeat -90px -36px;
+}
+
+ul.rating li.one a:hover { background-position: -90px -36px; }
+ul.rating li.two a:hover { background-position: -90px -52px; }
+ul.rating li.three a:hover { background-position: -90px -68px; }
+ul.rating li.four a:hover { background-position: -90px -84px; }
+ul.rating li.five a:hover { background-position: -90px -100px; }
+/* end rating code */
+
+div.collectionViewReadMessageBorder {
+  border-left: 1px solid #ccc;
+  margin-left: 30px;
+}
+
+div.collectionViewUnreadMessageBorder {
+  border: 3px solid #999;
+  margin-left: 30px;
+}
+
+table.treeframe tr td, table.tree_view tr td img  {vertical-align:middle;}
+table.treeframe {margin: 0px;}
+table.treeframe tbody tr td, table.treeframe thead tr th { padding: 1px; }
+table.treeframe tr.high { background-color: transparent; }
+
+tr.thread td  {border-top:1px solid #ccc;vertical-align:middle;}
+tr.thread td img {vertical-align:middle;}
+
+table.unreadmessageborder
+{
+  border: 3px solid rgb(102, 102, 102);
+}
+table.readmessageborder
+{
+  border: 1px solid rgb(204, 204, 204);
+}
+tr.show
+{
+  display: table-row;
+}
+tr.hide
+{
+  display: none;
+}
+.loadingelipse
+{
+  display:     block;
+  padding:     4px 14px;
+  font-weight:bold;
+  font-size:   90%;
+  text-align:  center;
+  border:      1px solid #ccc;
+  background:  #ffffcc;
+  width:       140px;
+  margin:      auto;
+}
+
+.gradefield {
+        overflow:visible;
+        padding:4px 12px;
+        margin:9px 0 9px 0;
+        color:#000;
+        font-size:120%;
+        vertical-align:middle;
+        text-align:center;
+}
+
+.gradefield input {
+        padding:1px 3px 0 3px;
+        margin:0px;
+        border:2px solid #666;
+        font-weight:bold;
+        font-size:110%;
+        vertical-align:middle;
+        font-family:arial,sans-serif;
+        background:#ffffff;
+        line-height:100%;
+}
+
+.gradefield input.inputtypebutton {
+        display:inline; 
+        overflow: visible;
+        padding:2px 6px 1px 6px;
+        padding:2px 8px 1px 8px;
+        font-size:80%;
+        font-weight:normal;
+        width:auto;
+        height:auto;
+        border:1px solid #ccc;
+        background:#ededed;
+}
+
+.gradefield a {
+        font-weight:bold;
+        font-size:120%;
+}
+
+.gradefield span {
+        font-size:80%;
+        padding:0 9px;
+        color:#555;
+}
+
+.overridegrade {
+        margin:3px 0 3px 9px;
+        font-size:80%;
+        padding:0px 12px 0px 12px;
+        display:inline;
+        border-left:1px solid #ccc;
+        vertical-align:middle;
+}
+
+.overridegrade input.inputtypebutton {
+        font-size:70%;
+        font-weight:normal;
+        vertical-align:middle;
+        margin-top:-3px;
+}
+
+div.parentmessage {
+        clear: both; 
+        border-right: #ccc 1px solid; 
+        padding-right: 6px; 
+        border-top: #ccc 1px solid; 
+        padding-left: 6px; 
+        font-size: 90%; 
+        background: #ededed; 
+        padding-bottom: 9px; 
+        margin: 6px; 
+        border-left: #ccc 1px solid; 
+        padding-top: 3px; 
+        border-bottom: #ccc 1px solid
+}
+.availability {
+        padding-right: 3px; 
+        padding-left: 3px; 
+        font-size: 85%; 
+        padding-bottom: 1px; 
+        margin: 6px 0px; 
+        width: auto; 
+        padding-top: 1px; 
+        font-style: italic
+}
+
+td.tag_controls {background:#cad7e7;border-bottom:1px solid #ccc;padding:3px 3px 3px 6px;}
+td.msg_controls {background:#cad7e7;border-bottom:1px solid #ccc;padding:3px 3px 3px 0;} 
+td.checkbox_cell {padding:6px 6px 0 6px; vertical-align:top; border-right: 1px solid #cccccc} /*style modified in rtol.css*/
+
+td.prevnextpostarea{
+        white-space: nowrap;
+        text-align: center;
+        padding: 2px 5px 3px 5px;
+        background: #fff;
+        border: 1px solid #ccc;
+}
+
+h3.dbheading { /* inserted to counteract margins in discussion board. */
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  display: inline;
+}
+
+
+
+/* ------------- Collection and Thread Detail pages -----------------------------*/
+
+.dbThread {
+    position: relative;
+    border: 1px solid #aaa;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-shadow: 0 3px 6px #ccc;
+    -webkit-box-shadow: 0 3px 6px #ccc;
+    background: #eee;
+    margin: 24px 30px;
+}
+
+.dbThreadCheckbox {
+    position: absolute
+}
+
+.dbThreadCheckbox input {
+    margin: 10px
+}
+
+.dbThread .dbThreadInfo {
+    padding: 1em 2em;
+    color: #555;
+}
+
+.dbThreadInfo dl {
+    float: left;
+    margin: 0;
+    width: 50%;
+    font-size: 95%;
+}
+
+.dbThreadBody {
+    padding: 2em;
+    background: #fff;
+}
+
+p.dbAttachment,
+.dbParentPost p.dbAttachment {
+    padding: 1.2em .6em 0 0
+}
+
+.dbThreadHeader {
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 0 2em;
+}
+
+.dbThreadFooter {
+    padding: 0 1em 0 2em
+}
+
+.dbThreadFooter .navButtons,
+.dbThreadHeader .navButtons {
+    border-right: 1px solid #CCCCCC;
+    display: inline-block;
+    float: left;
+    padding: 12px 12px 12px 0;
+    width: 49%;
+}
+
+.dbThreadFooter .threadButtons,
+.dbThreadHeader .threadButtons {
+    float: right;
+    text-align: right;
+    display: inline-block;
+    padding: 1em 0;
+}
+
+div.spacerDiv {
+    clear: both
+}
+
+
+.threadButtons .browse,
+.threadButtons .reply,
+.dbThreadInfo .reply {
+    padding: 2px 12px
+}
+
+.threadButtons .reply,
+.dbThreadInfo .reply {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* thread detail page */
+
+.dbThreadInfo p {
+    padding: .6em
+}
+
+.dbThreadInfo p.detailButtons {
+    float: right
+}
+
+.dbThreadTree {
+    border: 1px solid #ccc;
+    max-height: 200px;
+    min-height: 80px;
+    overflow:auto;
+}
+
+#threadArea {
+    padding: 18px 30px;
+    margin: 0 -30px 0px;
+}
+
+#message {
+    border-top: 1px solid #ccc;
+    margin: 0 -30px -20px;
+}
+
+#message_upper {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1px;
+    margin: -20px -30px 0;
+}
+
+#message:empty,
+#message_upper:empty {
+    border: 0;
+    padding: 0;
+}
+
+/* "message frame" of thread detail page (message_frame.jsp) */
+
+.dbParentPost {
+    margin: -.6em 0 1.2em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px dashed #bbb;
+    padding: .6em .6em 0;
+    font-size: 95%;
+    color: #444;
+}
+
+.dbParentPost h4 {
+    margin: 0 0 .6em
+}
+
+.dbParentPost h4 a {
+    display: block;
+    width: 100%;
+}
+
+.dbParentPost p {
+    margin: 0;
+    padding: 0 0 1.2em;
+    font-size: 100%;
+}
+
+.dbParentPostBody {
+    clear: both;
+    margin-bottom: .6em;
+    background: #fcfcfc;
+    padding: 0.6em;
+}
+
+.loadingElipse {
+    display: block;
+    padding: 4px 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #FFF7DE;
+    width: 140px;
+    margin: 12px auto;
+}
+
+.unreadmessage,
+h3.unreadmessage {
+    font-weight: bold
+}
+
+.dbheading.unreadmessage {
+    font-size: 100%
+}
+
+.unread-count {
+    /*background: #128FA8;*/
+	background: #A10207;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    padding: 2px 6px;
+    color: #fff;
+}
+
+
+#threadArea div.checked, #threadArea div.checked_top {background-color:#eee}
+
+#threadArea div.checked {
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+	border: 1px solid #ccc;
+	border-top: 0;
+	
+}
+
+#threadArea div.checked_top {
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+
+
+/* @end DISCUSSION BOARD*/
+
+
+/* @group BLOGS AND JOURNALS
+
+/*Blogs*/	
+/* Both Blogs and Journals share blog.jsp. The classes .blogContainer and .journalContainer are conditionally applied to the 
+main column, and .blogNav and .journalNav are conditionally applied to the side column. When refactoring the css, please do not 
+remove .blogContainer, .journalContainer, .blogNav or .journalNav from any styles, or the skins will break. */
+
+div.blogContainer {
+    float: left;
+    width: 74%;
+}
+
+/* date separators/headers */
+div.blogContainer h3.blogHead {
+    margin: 0 0 12px 0;
+    padding: 3px 15px;
+    background: #aaa;
+    font-size: 100%;
+    color: #fff;
+}
+
+/* contains blog entry */
+div.blogContainer div.blogEntry {
+    margin: 12px 0;
+    padding: 0;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+div.blogContainer div.blogEntry h4 {
+    padding: 9px 12px 0 30px;
+    font-size: 110%;
+    background: url(images/small_discussions.gif) no-repeat 8px 9px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+div.blogContainer div.blogEntry div.entryText {
+    margin: 3px 12px 12px;
+    padding: 9px 0 18px;
+    overflow-x: auto;
+}
+
+/* date of entry */
+div.blogContainer div.entryDate {
+    font-size: 95%;
+    color: #444;
+}
+
+div.blogContainer div.entryDate a { font-weight: bold }
+
+/* entry footer is a wrapper for the entire blog comment area */
+
+div.blogContainer div.entryFooter {
+    padding: 6px 12px 0;
+    margin: 0;
+    background: #eaeaea;
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+}
+
+/* action bar for the entry footer - contains the Add Comment control, and comments expander/collapser */
+div.blogContainer div.entryFooter h4 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: 100%;
+}
+
+div.blogContainer div.entryFooter a.genericButton {
+    display: block;
+    float: right;
+}
+
+/* contains the Add Comment form - overrides positioning assigned to form by .quickAddPal */
+
+div.blogContainer div.entryFooter div.addBlogComment table { width: 98% }
+
+div.blogContainer div.entryFooter div.addBlogComment textarea { width: 99.5% }
+
+div.blogContainer div.entryFooter div.addBlogComment {
+    display: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 0 -12px 0;
+}
+
+div.blogContainer div.entryFooter div.addBlogComment h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.addBlogComment .stepcontent ol,
+.addBlogComment .stepcontent ol li { width: 100% }
+
+div.blogContainer div.entryFooter div.addBlogComment div.controls { border: none }
+
+/* entry comments */
+
+div.blogContainer ul.entryComments {
+    margin: 0;
+    padding: 0;
+    background: #eaeaea;
+}
+
+div.blogContainer ul.entryComments li {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+}
+
+div.blogContainer ul.entryComments li p {
+    margin: 0px 0 4px;
+    padding: 12px;
+    background: #FFF;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+div.blogContainer ul.entryComments li p.commentDate {
+    position: relative;
+    z-index: 10;
+    margin: 2px 0 -1px;
+    padding: 0 0 4px;
+    border: none;
+    background: transparent url(images/bubble_top_thin.gif) no-repeat 15px 100%;
+    text-align: right;
+    font-size: 90%;
+    color: #444;
+}
+
+/* h5 wrapped around the name of each commentor */
+div.blogContainer ul.entryComments li h5 {
+    display: inline;
+    margin: 0;
+    padding: 3px 0 0;
+    color: #444;
+    font-size: 100%;
+}
+
+div.blogContainer ul.entryComments li.newComment h5 { font-weight: bold }
+
+/* blog instructions */
+div.blogContainer div.blogInstructions {
+    position: relative;
+    margin: 0 0 12px;
+    padding: 3px 12px 6px;
+    background: #f1f1f1;
+}
+
+div.blogContainer div.blogInstructions h4 {
+    margin: 3px 0 3px;
+    padding: 0;
+    font-size: 100%;
+    background-image: none;
+}
+
+/* blogNav is the right column with the EUD portlet ui */
+div.blogNav,
+div.journalNav,
+div.contentAreaNav {
+    float: right;
+    width: 25%;
+    margin: -20px -30px -20px 0!important;
+    border-left: 4px double #ccc;
+    padding-bottom: 12px;
+}
+
+.messageCollectionContainer { float: left }
+
+div.blogNav ul,
+div.blogNav ul li { background: transparent }
+
+div.blogNav ul li {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+div.blogNav ul.blogArchiveList li a {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.indentedWikiList { padding: 0 0 0 22px!important }
+
+.indentedWikiList img { margin: 0 3px 0 -22px }
+
+.blogNav #gradeDetailsForm,
+.journalNav #gradeDetailsForm { margin: 0 6px 0 -18px }
+
+.blogNav #gradeDetailsForm .liveArea,
+.journalNav #gradeDetailsForm .liveArea {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 6px;
+}
+
+div.blogNav li.currentBlog { font-weight: bold }
+
+div.blogNav li.currentBlog span { font-weight: normal }
+
+/* new entry/post styles for blog.htm */
+div.blogContainer .newItems {
+    background: #FFF1C5;
+    padding: 0 3px;
+    font-weight: normal;
+    color: #000;
+}
+
+div.blogNav .newItems,
+div.blogNav .gradeStatus {
+    margin: 0 4px 0 0;
+    padding: 0 0 0 2px;
+    text-align: center;
+}
+
+div.blogContainer div.u_controlsWrapper span.newItems {
+    /* appears next to the Comments expand/collapse toggle */
+    display: block;
+    float: left;
+    margin-left: 4px;
+}
+
+/* icon legend in the blog nav bar */
+
+div.blogNav ul.iconLegend,
+div.journalNav ul.iconLegend {
+    margin: 12px 0 0 24px;
+    padding: 0;
+}
+
+div.blogNav ul.iconLegend li,
+div.journalNav ul.iconLegend li {
+    margin: 0;
+    padding: 0 0 4px;
+    font-size: 82%;
+    color: #666;
+}
+
+div.blogNav ul ul { margin-left: 9px }
+
+div.blogNav ul#blogArchive ul { margin: 0 9px 9px 18px }
+
+/*Journals*/
+
+div.journalContainer {
+    float: left;
+    margin-right: 1%;
+    width: 74%;
+}
+
+/* date separators/headers */
+
+div.journalContainer h3.blogHead {
+    margin: 0 0 12px 0;
+    padding: 3px 15px;
+    background: #aaa;
+    font-size: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+/* contains blog entry */
+
+div.journalContainer div.blogEntry {
+    margin: 12px 0;
+    padding: 0 0 0 36px;
+    border: 3px solid #eee;
+    border-width: 3px 3px 3px 0;
+    position: relative;
+    background: #fff url(images/blog_notebook_paper.gif) repeat-y 0 0;
+}
+
+div.journalContainer div.blogEntry h4 {
+    padding: 12px 24px 0 12px;
+    margin: 0;
+    background: #fff;
+    text-align: center;
+    font-size: 110%;
+    overflow: hidden;
+}
+
+/* date of entry */
+div.journalContainer div.entryDate {
+    margin: 0;
+    padding: 3px 24px 12px 12px;
+    background: #fff;
+    font-size: 95%;
+    color: #444;
+    text-align: center;
+    border-bottom: 1px solid #C0DACE;
+    z-index: 100;
+}
+
+div.journalContainer div.entryDate a { font-weight: bold }
+
+div.journalContainer div.blogEntry div.entryText {
+    margin: 0;
+    padding: 12px 12px 18px 12px;
+    background: #fff;
+    overflow-x: auto;
+}
+
+/* entry footer is a wrapper for the entire blog comment area */
+div.journalContainer div.entryFooter {
+    margin: 0 0 0 -31px;
+    padding: 0 12px 12px 43px;
+    background: url(images/blog_notebook_paper_bot.gif) repeat-x bottom center;
+    zoom: 1;
+}
+
+/* action bar for the entry footer - contains the Add Comment control, and comments expander/collapser */
+
+div.journalContainer div.entryFooter h4 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: 100%;
+}
+
+div.journalContainer div.entryFooter a.genericButton {
+    display: block;
+    float: right;
+}
+
+/* contains the Add Comment form - overrides positioning assigned to form by .quickAddPal */
+div.journalContainer div.entryFooter div.addBlogComment table { width: 98% }
+
+div.journalContainer div.entryFooter div.addBlogComment textarea {  width: 99.35%; }
+
+
+/* allows comment field to resize with window */
+
+div.journalContainer div.entryFooter div.addBlogComment {
+    display: none;
+    margin-bottom: 6px;
+}
+
+/* entry comments */
+
+div.journalContainer ul.entryComments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+div.journalContainer ul.entryComments li {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    border-top: 1px solid #C0DACE;
+}
+
+div.journalContainer ul.entryComments li p {
+    margin: 4px 18px;
+    *margin-left: 19px;
+    padding: 0;
+}
+
+div.journalContainer ul.entryComments li p.commentDate {
+    font-size: 90%;
+    color: #444;
+    margin-left: 19px;
+}
+
+/* h5 wrapped around the name of each commentor */
+div.journalContainer ul.entryComments li h5 {
+    display: inline;
+    margin: 0;
+    padding: 3px 0 0 18px;
+    background: url(images/small_blog_comment.gif) no-repeat 0px 3px;
+    color: #000;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+div.journalContainer ul.entryComments li.newComment h5 { font-weight: bold }
+
+/* blog instructions */
+div.journalContainer div.blogInstructions {
+    position: relative;
+    margin: 0 0 12px;
+    padding: 3px 12px 6px;
+    background: #f1f1f1;
+}
+
+div.journalContainer div.blogInstructions h4 {
+    margin: 3px 0 3px;
+    padding: 0;
+    font-size: 100%;
+    background: transparent;
+    text-align: left;
+}
+
+div.journalContainer div.blogInstructions p {
+    margin: 0;
+    padding: 0;
+}
+
+div.journalNav ul,
+div.journalNav ul li { background: transparent }
+
+div.journalNav ul li { overflow: hidden }
+
+div.journalNav li.currentBlog { font-weight: bold }
+
+div.journalNav li.currentBlog span { font-weight: normal }
+
+
+/* removed from 9.1 */
+
+/* new entry/post styles for blog.htm */
+
+.newItems {
+    background: #FFF1C5;
+    padding: 0 3px;
+    font-weight: normal;
+    color: #000;
+}
+
+div.journalNav .newItems { padding: 0 2px 2px }
+
+div.journalContainer div.u_controlsWrapper span.newItems {
+    display: block;
+    float: left;
+    margin-left: 4px;
+}
+
+div.journalNav ul ul { margin-left: 9px }
+
+div.journalNav ul#blogArchive ul { margin: 0 9px 9px 18px }
+
+/*Blogs*/
+
+#blogNavLinks {
+    padding: 0;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+.contentAreaPalette ul#aboutBlog li.currentBlogView {
+    margin-bottom: 3px;
+    border: 2px solid #0078cb;
+    padding: 2px 4px;
+    background: #EFF6FF;
+}
+
+.currentBlogView a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.blogArchiveList { margin-left: 16px }
+
+ul.blogArchiveList li { padding-bottom: 4px }
+
+#gradeWidget span#blogGradeValue {
+    position: relative;
+    padding-left: 6px;
+}
+
+#blogGradeValue img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* aligns the "Grade Modified Manually" icon */
+.contentAreaNav a.itemHead {
+    display: block;
+    margin: 0pt;
+    padding: 6px 9px 6px 24px;
+    text-decoration: none;
+}
+
+.contentAreaPalette {
+    position: relative;
+    border-top: 2px groove rgba(255, 255, 255, 0.3);
+    padding: 4px 0;
+}
+
+div.blogNav .contentAreaPalette:first-child,
+div.journalNav .contentAreaPalette:first-child,
+.rightColumn-narrow .contentAreaPalette:first-child { border-top: 0 }
+
+.contentAreaPalette ul {
+    padding: 0px;
+    margin: 0 0 0 24px;
+    list-style: none;
+}
+
+.contentAreaPalette li {
+    padding: 0 0 6px;
+    font-size: 90%;
+}
+
+.contentAreaPalette li li { font-size: 100% }
+
+div.iconLegendBlog { border: none }
+
+.contentAreaNav a#blogListLink { padding-right: 48px }
+
+/* @end BLOGS AND JOURNALS*/

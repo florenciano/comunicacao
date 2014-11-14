@@ -1,0 +1,65 @@
+.global-nav-bar a.logout-link, .global-nav-bar a.logout-link:hover, .global-nav-bar a.logout-link:focus {
+    background-image: url("/images/ci/mybb/mybb_nav_logout.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+#global-nav .global-top-avatar {
+    height: 16px;
+    left: 6px;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+}
+
+.nav-link {
+    -moz-user-select: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    color: #EEEEEE;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 49px 0 28px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.tabbedPane .receipt a.close, .contentPane .receipt a.close, .contentPaneWide .receipt a.close {
+	text-decoration:none;
+}
+
+.locationPane { 
+	/*width:990px;*/ 
+}
+.contentPaneWide, .portalPane {
+    margin: auto !important;
+    max-width: 990px;
+}
+
+.breadcrumbs {
+	padding: 10px 9px 12px 16px;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	max-width: 97%;
+	
+	border-top:1px solid #999999;
+	
+	background: -moz-linear-gradient(top,  rgba(205,205,205,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(205,205,205,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(205,205,205,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(205,205,205,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(205,205,205,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(205,205,205,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdcdcd', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.path .root a:before, .simplePath .root a:before {
+	-webkit-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;
+}
+
+.containerPortal, .portal .container {
+	 padding: 27.5px !important;
+}

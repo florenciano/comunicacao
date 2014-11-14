@@ -1,0 +1,422 @@
+/* star rating code - use lists because its more semantic */
+/* No javascript required */
+/* all the stars are contained in one matrix to solve rollover problems with delay */
+/* the background position is just shifted to reveal the correct image. */
+/* the images are 16px by 16px and the background position will be shifted in negative 16px increments */
+/*  key:  B=Blank : O=Orange : G = Green * /
+/*..... The Matrix ....... */
+/* colours ....Background position */
+/* B B B B B - (0 0)*/
+/* G B B B B - (0 -16px)*/
+/* G G B B B - (0 -32px)*/
+/* G G G B B - (0 -48px)*/
+/* G G G G B - (0 -64px)*/
+/* G G G G G - (0 -80px)*/
+/* O B B B B - (0 -96px)*/
+/* O O B B B - (0 -112px)*/
+/* O O O B B - (0 -128px)*/
+/* O O O O B - (0 -144px)*/
+/* O O O O O - (0 -160px)*/
+
+/* the default rating is placed as a background image in the ul */
+/* use the background position according to the table above to display the required images*/
+.rating {
+ position: relative;
+ margin: 0;
+ padding: 0;
+ width: 80px;
+ height: 16px;
+ background: url(images/star-matrix.gif) no-repeat 0 0;
+ list-style: none;
+}
+
+/* add these classes to the ul to effect the change to the correct number of stars */
+.star0 {
+ background-position: 0 0;
+}
+
+.star1 {
+ background-position: 0 -16px;
+}
+
+.star2 {
+ background-position: 0 -32px;
+}
+
+.star3 {
+ background-position: 0 -48px;
+}
+
+.star4 {
+ background-position: 0 -64px;
+}
+
+.star5 {
+ background-position: 0 -80px;
+}
+
+ul.rating li { /*ie5 mac doesn't like it if the list is floated\*/
+ float: left;
+ /* end hide*/
+ cursor: pointer;
+ text-indent: -999em;
+}
+
+ul.rating li a {
+ z-index: 200;
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 16px;
+ height: 16px;
+ text-decoration: none;
+}
+
+ul.rating li.one a {
+ left: 0;
+}
+
+ul.rating li.two a {
+ left: 16px;
+}
+
+ul.rating li.three a {
+ left: 32px;
+}
+
+ul.rating li.four a {
+ left: 48px;
+}
+
+ul.rating li.five a {
+ left: 64px;
+}
+
+ul.rating li a:hover,
+ul.rating li a:focus {
+ z-index: 2;
+ width: 80px;
+ height: 16px;
+ overflow: hidden;
+ left: 0;
+ background: url(images/star-matrix.gif) no-repeat 0 0;
+}
+
+ul.rating li.one a:hover,
+ul.rating li.one a:focus {
+ background-position: 0 -96px;
+}
+
+ul.rating li.two a:hover,
+ul.rating li.two a:focus {
+ background-position: 0 -112px;
+}
+
+ul.rating li.three a:hover,
+ul.rating li.three a:focus {
+ background-position: 0 -128px;
+}
+
+ul.rating li.four a:hover,
+ul.rating li.four a:focus {
+ background-position: 0 -144px;
+}
+
+ul.rating li.five a:hover,
+ul.rating li.five a:focus {
+ background-position: 0 -160px;
+}
+/* end rating code */
+
+div.collectionViewReadMessageBorder {
+ border-left: 1px solid #ccc;
+ margin-left: 30px;
+}
+
+div.collectionViewUnreadMessageBorder {
+ border: 3px solid #999;
+ margin-left: 30px;
+}
+
+div.collectionViewPrintPreview {
+ margin-left: 0px !important;
+ margin-right: 0px !important;
+}
+
+.gradefield {
+ overflow: visible;
+ padding: 4px 12px;
+ margin: 9px 0 9px 0;
+ color: #000;
+ font-size: 120%;
+ vertical-align: middle;
+ _height: 1%;
+ text-align: center;
+}
+
+.gradefield input {
+ padding: 1px 3px 0 3px;
+ margin: 0px;
+ border: 2px solid #666;
+ font-weight: bold;
+ font-size: 110%;
+ vertical-align: middle;
+ font-family: arial, sans-serif;
+ background: #ffffff;
+ line-height: 100%;
+ _line-height: 120%;
+}
+
+.gradefield input.inputtypebutton {
+ display: inline;
+ overflow: visible;
+ padding: 2px 6px 1px 6px;
+ padding: 2px 8px 1px 8px;
+ font-size: 80%;
+ font-weight: normal;
+ width: auto;
+ height: auto;
+ border: 1px solid #ccc;
+ background: #ededed;
+ _width: auto;
+}
+
+.gradefield a {
+ font-weight: bold;
+ font-size: 120%;
+}
+
+.gradefield span {
+ font-size: 80%;
+ padding: 0 9px;
+ color: #555;
+}
+
+.overridegrade {
+ margin: 3px 0 3px 9px;
+ font-size: 80%;
+ padding: 0px 12px 0px 12px;
+ display: inline;
+ border-left: 1px solid #ccc;
+ vertical-align: middle;
+}
+
+.overridegrade input.inputtypebutton {
+ font-size: 70%;
+ font-weight: normal;
+ vertical-align: middle;
+ margin-top: -3px;
+}
+
+div.parentmessage {
+ clear: both;
+ border-right: #ccc 1px solid;
+ padding-right: 6px;
+ border-top: #ccc 1px solid;
+ padding-left: 6px;
+ font-size: 90%;
+ background: #ededed;
+ padding-bottom: 9px;
+ margin: 6px;
+ border-left: #ccc 1px solid;
+ padding-top: 3px;
+ border-bottom: #ccc 1px solid
+}
+
+.availability {
+ padding-right: 3px;
+ padding-left: 3px;
+ font-size: 85%;
+ padding-bottom: 1px;
+ margin: 6px 0px;
+ width: auto;
+ padding-top: 1px;
+ font-style: italic
+}
+
+td.tag_controls {
+ background: #cad7e7;
+ border-bottom: 1px solid #ccc;
+ padding: 3px 3px 3px 6px;
+}
+
+td.msg_controls {
+ background: #cad7e7;
+ border-bottom: 1px solid #ccc;
+ padding: 3px 3px 3px 0;
+}
+
+td.checkbox_cell {
+ padding: 6px 6px 0 6px;
+ vertical-align: top;
+ border-right: 1px solid #cccccc
+}
+
+td.prevnextpostarea {
+ white-space: nowrap;
+ text-align: center;
+ padding: 2px 5px 3px 5px;
+ background: #fff;
+ border: 1px solid #ccc;
+}
+
+h3.dbheading { /* inserted to counteract margins in discussion board. */
+ margin-top: 0;
+ margin-bottom: 0;
+ font-weight: normal;
+ display: inline;
+}
+
+/* ------------- Grade Listing Page ------------------------------*/
+
+/* icon legend at the bottom of the listing page */
+div.dbGradeIconLegend {
+ float: right;
+}
+
+div.dbGradeIconLegend ul {
+ list-style-type: none;
+ margin: 9px 0;
+ padding: 0;
+ color: #666666;
+}
+
+div.dbGradeIconLegend ul li {
+ margin: 0;
+ padding: 0 0 2px;
+ font-size: 90%;
+ font-weight: normal;
+}
+
+tr.notGroupMember {
+ font-style: italic;
+ color: #666666;
+}
+
+/* ------------- Collection and Thread Detail pages -----------------------------*/
+div.messageCollectionContainer {
+ float: left;
+ margin-right: 1%;
+ width: 74%;
+}
+
+/* this is the right column only shown when grading is involved */
+div.messageCollectionNav {
+ float: right;
+ width: 25%;
+ margin: 0 !important;
+}
+
+div.dbThread {
+ position: relative;
+ margin: .9em 0;
+ border: 1px solid #ccc;
+}
+
+div.dbThreadCheckbox {
+ position: absolute;
+}
+
+div.dbThreadCheckbox input {
+ margin: 10px;
+}
+
+div.dbThreadBody {
+ padding: 1.2em .6em;
+}
+
+p.dbAttachment,div.dbParentPost p.dbAttachment {
+ padding: 1.2em .6em 0 0;
+}
+
+div.spacerDiv {
+ clear: both;
+} /* not sure what this does. the clear property was hard coded on an empty div in both pages, so I put it in here. */
+div.threadButtons a.reply,div.dbThreadInfo p a.reply {
+ font-weight: bold;
+ text-decoration: none;
+ padding: 0 6px 2px;
+ color: #fff;
+ background-color: #819AC0;
+ background-image: url(images/gradient_black_short_bt.png);
+ background-position: 0 center;
+ background-repeat: repeat-x;
+ border: 1px solid #666E94;
+ border-bottom: 2px solid #444A6C;
+ border-right: 2px solid #444A6C;
+}
+
+div.threadButtons a.reply:hover,div.dbThreadInfo p a.reply:hover {
+ background: #444A6C;
+ color: #fff;
+ border: 1px solid #444A6C;
+ border-bottom: 2px solid #444A6C;
+ border-right: 2px solid #444A6C;
+}
+
+/* thread detail page */
+div.dbThreadInfo p {
+ padding: .6em;
+}
+
+div.dbThreadInfo p.detailButtons {
+ float: right;
+}
+
+div.dbThreadTree {
+ border: 1px solid #ccc;
+ height: 200px;
+ overflow: auto;
+}
+
+div.dbThreadMessage {
+ margin-top: 10px;
+}
+
+div.dbParentPost {
+ background: #eee;
+}
+
+.profileCardAvatarThumb {
+ position: relative;
+ font-weight: 600;
+}
+
+.db-message .profileCardAvatarThumb img {
+ left: -80px;
+}
+
+.db-message-wrapper {
+ 
+}
+
+.profileCardAvatarThumb {
+ font-weight: bold;
+ font-size: 120%;
+}
+
+.db-message-wrapper .dbThreadFooter .threadButtons,.db-message-wrapper .dbThreadHeader .threadButtons,.db-message-wrapper .dbThreadFooter .navButtons,.db-message-wrapper .dbThreadHeader .navButtons
+ {
+ float: none;
+}
+
+.thread-detail-page .actionBar {
+ opacity: 1!important;
+ filter: alpha(opacity=100)!important;
+}
+
+/*List Action element modifications*/
+.thread-detail-page .rumble_top,.thread-detail-page .rumble {
+ padding: 3px 6px;
+ border: 0;
+ background: transparent;
+}
+
+.rumble a,.rumble_top a {
+ margin: 0 0 0 4px;
+}
+
+.reply-lvl-0 .message-wrapper-inner {
+ border-width: 2px;
+ border-color: #333;
+}

@@ -1,0 +1,34 @@
+/* BBLEARN 2012
+================================================*/
+
+/*Core styles*/
+@import url("core.css");
+
+
+/*Theme-specific styles*/
+@import url("theme_specific.css");
+
+/*Caixinhas*/
+@import url("caixinhas.css");
+
+/*Tools*/
+@import url("assessment.css");
+@import url("gradebook.css");
+@import url("interactive.css");
+@import url("login.css");
+@import url("outcomes.css");
+@import url("wizard.css");
+
+
+/*Service Packs*/
+@import url("sp6.css");
+@import url("sp8.css");
+
+/*Temporary external stylesheet*/
+@import url("external.css");
+@import url("theme_sfc.css");
+@import url("caixinhas.css");
+
+
+/* /BBLEARN 2012
+================================================*/

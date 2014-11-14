@@ -1,0 +1,29 @@
+PARA INSERIR / EXCLUIR BANNER NA PÁGINA DE INÍCIO DO BLACKBOARD
+
+
+CRIANDO MÓDULO
+Ao receber uma demanda pedir ao solicitante uma data para exclusão do conteúdo;
+
+1- System Admin
+2- Gerenciar módulos
+3- Defina o título, e marca a opção de "ocultar título do módulo";
+	3.1- Não personalizar o módulo
+	3.2- Disponibilidade no sistema: SIM
+	3.3- Defina uma data para sair do ar
+	3.4- As demais opção é sussa
+
+GERENCIAR AS GUIAS
+Esta etapa permite configurar em qual das guias será incluída o módulo recém criado
+
+1- System Admin
+2- Gerenciar guias
+3- Na guia início procurar a guia início e dentro da 'sub-aba' escolher a opção "conteúdo padrão"
+	3.1- Dentro desta página procurar o módulo criado e marcar as duas opções.
+4- Retornando à tela anterior agora novamente na 'sub-aba' escolher a opção "esquema padrão"
+	4.1- Preencha os dados conforme desejar. Esta etapa é responsável por indicar qual a localidade de visualização do módulo. Preferencialmente no topo da coluna a esquerda.
+
+
+PARA INSERIR UM MÓDULO CONTENDO SOMENTE TEXTO
+
+Para este caso já existe um padrão que é uma área simulando um post-it
+Segue os mesmos passos das etapas descritas acima, só que inicia pesquisando o módulo chamado 'biblioteca' lá já tem todo o html pronto. Substitui apenas o texto da mensagem.

@@ -1,0 +1,44 @@
+.tool-menu {
+	margin: -11px -12px 30px;
+}
+
+.tool-menu .option-links {
+	background-color: #DEDEDE;
+}
+
+.filter-header {
+	background-color: transparent;
+}
+
+.filter-header a {
+	text-decoration: none;
+}
+
+.filter-header a span {
+	position: relative;
+	background: transparent;
+}
+
+.filter-header a.selected:before, 
+.filter-header a.selected:after {
+	bottom: -11px;
+}
+
+.filter-header a.selected:before {
+	bottom: -10px;
+}
+
+
+/* Data Collection */
+.onOffToggleWrap ~ .contextual-options {
+	margin-top: 25px;
+}
+
+/* Launch page */
+.container .container {
+	margin: 0;
+}
+
+div.leftColumn-wide[id*="step"] {
+	width: 70%;
+}

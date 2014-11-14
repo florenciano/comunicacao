@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+.student-preview-control {
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	margin: -3px 0 -4px;
+	position: relative;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.student-preview-control:hover, 
+.student-preview-control:focus {
+	box-shadow: none;
+}
+
+.student-preview-control a {
+	display: block;
+	line-height: 1.3;
+	overflow: hidden;
+	padding: 0px 10px;
+	box-sizing: border-box;
+}
+
+
+
+
+
+/*Breadcrumb element modifications*/
+.breadcrumbs {
+	background: #fff;
+}
+
+
+.path, .simplePath  {
+  	float:left;
+}
+
+.path li, .simplePath li {
+	float: none;
+	display: inline-block;
+}
+
+.breadcrumb-controls {
+	float: right;
+}
+
+.theme-switch-wrapper {
+	display: none;
+}
+
+.modeSwitchWrap {
+	position: static;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: 1px dotted transparent;
+	padding: 0 6px;
+}

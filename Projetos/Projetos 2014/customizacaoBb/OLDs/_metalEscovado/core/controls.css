@@ -1,0 +1,818 @@
+/*
+ * CONTROLS
+ */
+
+/* Buttons */
+
+/*@cleaned 9.1*/
+.mainButton a, .actionBarMicro .mainButton a, .secondaryButton a, .mainButton a, .genericButton, .genericButtonImg, .browse, .browseIcon,
+input[type="submit"].submit,
+.rumble a, .rumble_top a, .paging a, .itemHeaderControl a, .actionMenuButton,
+/*@since 9.1*/
+.button-1, .button-1-img, .button-2, .button-2-img, .button-3, .button-3-img, .button-4, .button-4-img, .backLink a, .treeContainer .tree li a.button-4-img,
+.rumble .abutton, .rumble_top .abutton {
+  	padding:2px 9px 2px 9px;
+	text-decoration:none;
+	_background-image:none;
+	vertical-align:middle;
+}
+
+.mainButton h2, .secondaryButton h2 {
+	margin: 0;
+  font-size: 100%;
+}
+
+/* Primary button */
+
+/*Branding hooks*/
+#primaryButton, 
+#primaryActionBrand,
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li a, .actionBar ul li.mainButton a,  .actionbar_portal ul li a, div.tabPreview div.actionBar ul li.mainButton a, div.tabPreview div.actionBar ul li.mainButton a:hover, .navPalette div.actionBarMicro ul li.mainButton a, 
+.navPalette div.buttons div.actionBarMicro ul li.mainButton a, .portlet div.actionBarMicro ul li.mainButton a,*/
+input[type="submit"].submit,
+/*@cleaned 9.1*/
+.mainButton a,
+.actionBarMicro .mainButton a,
+.rumble .mainButton > a, .rumble_top .mainButton > a,
+/*@since 9.1*/
+.button-1, .button-1-img  {
+	font-size:105%;
+	font-weight:bold;
+	background-position: 0 center;
+	color:#fff;
+	background-color:#A1C94B;
+	border:1px solid #3C4A1B;
+	background-image:url(images/gradient_black_long_bt.png);
+	font-size: 101%;
+ }
+ 
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li a:hover, .actionBar ul li.mainButton a:hover, .actionBar ul li.mainButton a:focus, .actionbar_portal ul li a:hover, .navPalette div.actionBarMicro ul li.mainButton a:hover, 
+.navPalette div.actionBarMicro ul li.mainButton a:focus, .navPalette div.buttons div.actionBarMicro ul li.mainButton a:hover, .portlet div.actionBarMicro ul li.mainButton a:hover,
+.taskButtonsContent button.submit, .taskButtonsContent input.submit, div.controls button.submit, div.controls input.submit, .taskbuttondiv button.disabled, .taskbuttondiv input.disabled,
+.taskButtonsContent button.disabled, .taskButtonsContent input.disabled, div.controls button.disabled, div.controls input.disabled, #loginBox li input.submit,*/
+input[type="submit"].submit:hover,
+/*@cleaned 9.1*/
+.mainButton a:hover, .mainButton a:focus,
+.actionBarMicro .mainButton a:hover, .actionBarMicro .mainButton a:focus,
+.rumble .mainButton > a:hover, .rumble_top .mainButton > a:hover, .rumble .mainButton > a:focus, .rumble_top .mainButton > a:focus,
+/*@since 9.1*/
+.button-1:hover, .button-1:focus, .button-1-img:hover, .button-1-img:focus  {
+  	background:#3C4A1B;
+  	color:#fff;
+}
+ 
+ 
+/* Secondary button */
+ 
+/*Branding hooks*/
+#secondaryButton, 
+#secondaryActionBrand,
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li.search a, .actionBar ul li.secondaryButton a, .actionBar_portal ul li.search a,div.tabPreview div.actionBar ul li.secondaryButton a, div.tabPreview div.actionBar ul li.secondaryButton a:hover, .pageTitle h1 a.secondaryButton,*/
+/*@cleaned 9.1*/
+.secondaryButton a,
+/*@since 9.1*/
+.button-2, .button-2-img {
+	background-color:#DDDDDD;
+	color:#000000; /*@palette*/
+	border:1px solid #bbb;
+	font-weight:normal;
+	font-size: 101%;
+ } 
+ 
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li.search a:hover, .actionBar_portal ul li.search a:hover, .actionBar ul li.secondaryButton a:hover, 
+.actionBar ul li.secondaryButton a:focus, .actionBar_portal ul li.secondaryButton a:hover, .pageTitle a.secondaryButton:hover,*/
+/*@cleaned 9.1*/
+.secondaryButton a:hover, .secondaryButton a:focus,
+/*@since 9.1*/
+.button-2:hover, .button-2:focus, .button-2-img:hover, .button-2-img:focus {
+	background-color:#FFF7DF; /*@palette*/ 
+  	border-color:#AF9441; /*@palette*/ 
+}
+ 
+ 
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar .mainButton a img, .actionBar .secondaryButton a img,*/
+/*@cleaned 9.1*/
+.secondaryButton a img,
+/*@since 9.1*/
+.secondaryButton .button-2 img {margin: -2px -4px 0 -4px;}
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar .sub a img,*/
+/*@cleaned 9.1*/
+.sub a img, 
+/*@since 9.1*/
+.sub .button-1 img, .sub .button-2 img {margin: -2px -4px 0 4px;}
+
+
+
+/*Action bar links have to be displayed as blocks*/
+/*@cleaned 9.1*/
+.mainButton a, .secondaryButton a,
+/*@since 9.1*/
+.actionBar button-1, .actionBar button-2 {display: block;}
+
+/*@cleaned 9.1*/
+.secondaryButton a,
+/*@since 9.1*/
+.actionBar button-2 {border-width: 1px;}
+
+/*Tab level action bar*/
+.tabActionBar button-1, .tabActionBar button-2 {display: block;}
+.tabActionBar button-2 {border-width: 1px;}
+
+/* Tertiary and quatral buttons*/
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset.stepcontent ol li a.browseIcon, .stepcontent a.browseIcon, div.portlet div.portletBlock a.browseIcon, a.browseIcon,*/
+/*@cleaned 9.1*/
+.genericButton, .genericButtonImg, .browse, .browseIcon, input[type="submit"].genericButton,
+.rumble a, .rumble_top a, .paging a, .itemHeaderControl a, .actionMenuButton,
+/*@since 9.1*/
+.button-3, .button-3-img, .button-4, .button-4-img, .backLink a, .treeContainer .tree li a.button-4-img,
+.controlpanel .submenu .button-4,
+.rumble .abutton, .rumble_top .abutton   {
+	background-color: #ededed;
+	border: 1px solid #ccc; 
+	border-bottom: 1px solid #aaa; 
+	border-right: 1px solid #aaa;
+	color:#333;
+	font-weight: normal;
+	display:inline-block;
+}
+
+#blogList .genericButton { white-space: nowrap; }
+input[type="button"][disabled],
+input[type="button"][disabled]:hover {
+	color: #999;
+	border-color: #CCC;
+	background: -moz-linear-gradient(100% 100% 90deg, #f0f0f0, #f0f0f0);
+	background: -webkit-gradient( linear, center top, right bottom, color-stop (0%, #f0f0f0), color-stop (100%, #f0f0f0));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#f0f0f0";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#f0f0f0);
+	box-shadow: 0 0 0;
+}
+input.genericButton, input.button-1, input.button-2, input.button-3, input.button-4, .browse,  input[type="submit"].genericButton, input[type="submit"].button-1, .actionMenuButton {padding:1px 6px;}
+.genericButtonImg, .button-3-img, .button-4-img, .itemHeaderControl a, .browseIcon, .treeContainer .tree li a.button-4-img {padding:0 2px 2px!important;}
+.genericButtonImg {display:inline-block!important;}
+input[type="submit"].genericButton, .button-3 {font-weight:bold}
+#editGradeActionList.u_reverseAlign a.genericButton { display: inline-block; margin-bottom: 5px; }
+
+.searchbar input[type="submit"].genericButton {font-weight:normal}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset.stepcontent ol li a.browseIcon:hover, .stepcontent a.browseIcon:hover, div.portlet div.portletBlock a.browseIcon:hover, a.browseIcon:hover,
+fieldset.stepcontent ol li a.browseIcon:focus, .stepcontent a.browseIcon:focus, div.portlet div.portletBlock a.browseIcon:focus, a.browseIcon:focus,*/
+/*@cleaned 9.1*/
+.genericButton:hover, .genericButtonImg:hover, .browse:hover, .browseIcon:hover,
+.genericButton:focus, .genericButtonImg:focus, .browse:focus, .browseIcon:focus,
+input[type="submit"].genericButton:hover, input[type="submit"].genericButton:focus, 
+.rumble a:hover, .rumble a:focus,  .rumble_top a:hover, .rumble_top a:focus,
+.paging a:hover, .paging a:focus, .itemHeaderControl a:hover, .itemHeaderControl a:focus,
+.actionMenuButton:hover, .actionMenuButton:focus,
+/*@since 9.1*/
+.button-3:hover, .button-3:focus, .button-4:hover, .button-4:focus, 
+.button-3-img:hover, .button-3-img:focus, .button-4-img:hover, .button-4-img:focus, 
+.backLink a:hover, .backLink a:focus,
+.treeContainer .tree li a.button-4-img:hover, .treeContainer .tree li a.button-4-img:focus,
+.controlpanel .submenu .button-4:hover, .controlpanel .submenu .button-4:focus {
+	background-color:#FFFFFF;
+	border:1px solid #555555;
+	text-decoration:none!important;
+}
+
+.controlpanel .submenu .button-4:hover, .controlpanel .submenu .button-4:focus {
+	background-image:none !important;
+	padding:2px 6px;
+}
+
+/* Quintal button*/
+.button-5, .button-5-img {display:inline-block; border: 1px solid #ccc; background:white;padding:0 0.4em 2px;text-decoration:none; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.button-5:hover, .button-5-img:hover {background:#ededed; color:black;}
+
+/*Not sure if this is used*/
+button.imageButton {border: 0; padding: 0; background: transparent;}
+
+/*List action buttons*/
+.rumble a, .rumble_top a {display:block; padding:1px 4px;}
+.rumble .sub a img, .rumble_top .sub a img {margin:-2px -1px 0 3px}
+.paging a, .rumble_top .inventory_paging .gotolink, .rumble .inventory_paging .gotolink {padding:1px 4px;display:inline-block}
+
+
+.disabled, .disabled:hover, a.disabled, a.disabled:hover, a.disabled:focus {
+  	opacity:0.4;
+  	filter:alpha(opacity=40);
+	border-color:#ccc;
+	background:#ededed;
+	cursor:default;
+}
+.disabledText {opacity:0.6; filter:alpha(opacity=60);}
+
+/*Select All/None controls for inventory actions*/
+.listItemSelect {background:transparent; color:#555; margin:0;}
+  
+.rumble_top .listItemSelect, .rumble .listItemSelect {padding:0 0 3px; margin:0 0 4px; border-bottom:1px solid #eee;}
+
+.rumble .listItemSelect a,
+.rumble_top .listItemSelect a {
+  display:inline; 
+	margin:0; 
+	border:none; 
+  padding:0 3px 2px;
+	background:none;
+  color:#003399;
+  text-decoration:underline; 
+}
+
+.rumble .listItemSelect a:hover, .rumble_top .listItemSelect a:hover {background:#fff;text-decoration:none;}
+  
+.listItemSelect label {display:inline; border-left:1px dotted #999; padding:0 6px;}
+.listItemSelect select {font-size:95%;}
+
+.rumble_top .listItemSelectAll {padding:2px 0 1px; border:none; margin:0;}
+.listItemSelectAll .receipt, .listItemSelectAll .warningReceipt {display:inline-block; margin:0;}
+.rumble_top .listItemSelectAll a {display:inline; border:none; padding:0 2px; background:none; vertical-align:baseline;}
+
+/*@since 9.1*/
+/*Calculator buttons*/
+input.calcButton {width:2em;display:inline-block;margin:2px 0;}
+
+
+/*@since 9.1*/
+/*Special file actions*/
+input#width, input#height, select#border, select#controls,
+.smallControls input[type="text"].width, .smallControls input[type="text"].height {width:5em}
+.smallControls select.quality, .smallControls select.controls, .smallControls select.border {width:auto;}
+
+  
+/* temporary styles for rob's user test. positions select all/clear all when there are no controls in the list action bar. not sure if this will make it into development. */
+.noBatchActions .listItemSelectTop {margin-left:-31px; margin-top:-21px;}
+.noBatchActions div.listItemSelectBottom {margin-left:-31px; margin-bottom:-21px;}
+
+
+
+/*Palette action bar buttons*/
+ 
+/*@cleaned 9.1*/
+.actionBarMicro .mainButton a, .actionBarMicro .secondaryButton a,
+/*@since 9.1*/
+.actionBarMicro .button-1, .actionBarMicro .button-2 {padding:0 1px 2px 1px; *padding:1px 1px 0 1px; font-weight:normal;}
+
+/*@cleaned 9.1*/
+.actionBarMicro .mainButton a img, .actionBarMicro .secondaryButton a img {margin: 0;}
+
+/*@cleaned 9.1*/
+.actionBarMicro .mainButton a, .actionBarMicro .secondaryButton a,
+.actionBarMicro .mainButton a:hover, .actionBarMicro .secondaryButton a:hover
+.actionBarMicro .mainButton a:focus, .actionBarMicro .secondaryButton a:focus  {border-width: 1px;}
+
+/*@cleaned 9.1*/
+.actionBarMicro .secondaryButton a {border-color: transparent; background:transparent; padding:0 1px 2px; display:block}
+.actionBarMicro .secondaryButton a:hover, .actionBarMicro .active a  {border:1px solid #aaa;background:#fff;}
+
+
+
+/* Modified actionBarMicro. Extending the class to work with new Column markup. */
+.actionBarMicro.columnActions {margin:0 0 3px; padding:3px 0;background:transparent;}
+
+.columnActions ul {margin:0 0 2px;}
+
+.columnActions .mainButton a {padding:1px 4px;text-decoration:none;} 
+.columnActions .mainButton a:hover {padding:1px 4px;text-decoration:none;}
+/*End Modified actionBarMicro.*/
+
+/* On/Off toggle switch. Located in: 
+ *    -My Blackboard Settings
+ */
+
+.onOffToggleWrap {
+  right:26px; 
+  top:5px; 
+  left:auto; 
+  font-size:90%; 
+  font-size:85%; 
+  font-weight:bold;
+}
+
+.onOffToggleWrap div {float: left;}
+/* End On/Off toggle switch */
+
+
+/* Mode switch control. Located in:
+ * 		- orientation bar,
+ *		- above vtbe applet.
+ */
+ 
+.modeSwitchWrap {
+/*
+	position:absolute;
+	right:26px; 
+	top:4px; 
+	left:auto; 
+	font-size:90%; 
+	font-size:85%; 
+	font-weight:bold;
+*/
+
+font-size: 90%;
+font-weight: bold;
+display: inline-block;
+vertical-align: middle;
+border-right: 1px dotted transparent;
+}
+
+.modeSwitchWrap div {float: left;}
+
+.modeSwitch {
+	position:relative;
+	text-transform:uppercase;
+	padding:1px 0 2px 0;
+	display:block;
+	color:#fff;
+	text-decoration:none;
+	border:1px solid #666;
+	overflow:hidden;
+}
+
+.read-on {
+	padding-right:16px;
+	margin-right:0px;
+	background:url(images/mode_toggle_bg.gif) repeat-y 100% 0;
+	background-color:#8091A7; /*@palette*/
+}
+
+a.read-off {
+	background-color:#fafafa; /*@palette*/
+	color:#444;
+	padding-left:16px;
+	background:url(images/mode_toggle_bg.gif) repeat-y 0 0;
+}
+
+a.read-on:hover, a.read-on:focus {background-color:#3C4A1B; /*@palette*/}
+a.read-off:hover, a.read-off:focus {background-color:#ccc;}
+
+a.read-off img {position:absolute; left:0px; bottom:0px; _left:-17px; _right:auto;}
+a.read-on img {position:absolute; right:0px; bottom:0px; _right:-1px;}
+
+/*safari-only hack to fine tune the switch alignment. */
+/*\*/
+html*.modeSwitch  {padding:3px 0 2px 0;*padding:1px 0 1px 0;}
+html*a.read-off {padding-left:16px;}
+html*.read-on  {padding-right:16px;}
+/**/
+
+
+.modeSwitch span {padding:0 9px!important;background:url(images/gradient_black_short_tb.png) repeat-x 0 -16px;_background-image:none;}
+
+.switcherLabel {color:#444; padding:2px 4px 2px 0!important; font-weight:normal; float:left;}
+
+.helpLink {position:absolute; top:4px; right:4px; border:0; margin:0; font-weight:normal;}
+.helpLink a.browseIcon {padding:0px 1px; display:inline-block;}
+
+
+
+/*VTBE on/off switch*/
+.vtbeSwitch {position: relative; float: right; top:2px}
+.vtbeSwitch span {display:inline-block;*display: inline;}
+.legacy .vtbeSwitch {height: 2.2em;}
+.vtbeSwitch div.modeSwitchWrap {position: static; right: 0; background-color: #eeeeee; border:1px solid #CCCCCC; border-bottom: 0; padding: 4px 6px;}
+.vtbeSwitch div.modeSwitchWrap a {_width: 4em;}
+.vtbeSwitch div.modeSwitchWrap a span#statusText {_width: 2.7em;padding:0 9px!important;}
+.vtbeSwitch div.modeSwitchWrap a.read-off {background-color: #eee;}
+.vtbeSwitch div.modeSwitchWrap a.read-off:hover {background-color: #fff;}
+.vtbeSwitch div.modeSwitchWrap a.read-on span#statusText {color: #FFFFFF;}
+.vtbeSwitch div.modeSwitchWrap a.read-off:hover span#statusText  {color:#000;}
+table.vtbeTable-legacy {width:100%;}
+.vtbeTable-legacy textarea {width:100%;*width:99%;}
+/*end VTBE on/off switch*/
+
+/*End mode switch*/
+
+
+
+/* Reorder handle */
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.actionBar ul li.search a, .actionBar ul li.secondaryButton a, .actionBar_portal ul li.search a,div.tabPreview div.actionBar ul li.secondaryButton a, div.tabPreview div.actionBar ul li.secondaryButton a:hover, .pageTitle h1 a.secondaryButton,*/
+/*@cleaned 9.1 @since 9.1*/
+.reorder {
+	position: absolute;
+	background: #ededed url(images/cm_reorder_updown.gif) no-repeat center center;
+	border:1px solid #ddd;
+	border-width:1px 0 1px 1px;
+	opacity: 1;
+	cursor:move;
+}
+
+/*Content list reorder handles.*/
+/*@cleaned 9.1 @since 9.1*/
+.item .reorder {top:3px; left:-3px; height:28px; width:20px;}
+
+/*Icon-only list reorder handles.*/
+/*@cleaned 9.1 @since 9.1*/
+.iconsOnly .item .reorder {background-image:url(images/cm_reorder.gif);background-repeat: no-repeat;background-position: center center;top:8px;}
+
+/*Course menu reorder handles.*/
+/*@cleaned 9.1 @since 9.1*/
+.listCm  .reorder, .subList-reorder .reorder {
+	left:-2px;
+	top:2px;
+	width:16px;
+	height:18px;
+	border:1px solid #777;
+	border-width:1px 0 1px 1px;
+}
+
+.subList-reorder .reorder {left:-17px;top:1px}
+
+.listCm .subhead .reorder {top:4px;}
+
+.reorder img {opacity: 0; filter:alpha(opacity=0);}
+
+.item .reorder > img {margin:6px 3px}
+
+.buttonCm .reorder {top:3px;padding:0;opacity:0.6;filter:alpha(opacity=60);width:14px;}
+.buttonCm .subhead .reorder {top:0px;}
+.buttonCm .divider .reorder {top:-4px;*top:0px;left:0;}
+
+/* Portal module reorder control.*/
+.portlet .reorder {
+	left:-9px;
+	top:-9px;
+	background:#bbb url(images/small_reorder_white.gif) no-repeat center center ;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+
+.portlet .reorder > img {width:18px;height:18px;}
+
+/* Setting reorder control opacity back to 1. Will not work in ie6. */
+.portlet h2:hover .reorder {opacity:1; filter:alpha(opacity=1);} 
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*
+ul.easylist li h3.item:hover span.reorder, ul.easylist li h3.item:hover a.cmimg, ul.noimg li h3.item:hover span.reorder, ul.noimg li h3.item:hover a.cmimg,
+ul.buildList li h3.item:hover span.reorder, ul.contentList li h3.item:hover span.reorder, ul.contentListPlain li h3.item:hover a.cmimg, ul.contentListPlain li h3.item:hover span.reorder, 
+ul.contentListPlain li h3.item:hover a.cmimg, .contentPageItem h3.item:hover a.cmimg, .contentPageItem h3.item a.cmimg:hover, ul.iconsOnly li:hover h3.item span.reorder,
+ul.announcementList li h3.item:hover span.reorder, ul.buildList li h3.item:focus span.reorder, ul.contentList li h3.item:focus span.reorder, 
+ul.contentListPlain li h3.item:focus a.cmimg, ul.contentListPlain li h3.item:focus span.reorder, ul.contentListPlain li h3.item:focus a.cmimg, .contentPageItem h3.item:focus a.cmimg,
+.contentPageItem h3.item a.cmimg:focus, ul.iconsOnly li:focus h3.item span.reorder, ul.announcementList li h3.item:focus span.reorder 
+*/
+
+/* End Reorder handle */
+
+
+/* Contextual menu link */
+
+.contextMenuContainer {display:inline;zoom:1}
+
+/* Default contextual menu link (large). */
+a.cmimg {
+	background:transparent url(images/cm_arrow.gif) no-repeat -1px -1px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	padding:0 0 1px 0;
+	*padding:0 0 2px 0;
+	margin:0 0 0 3px;
+	font-size:12px;
+}
+
+a.cmimg.cmMore {
+ background: none;
+}
+
+a.cmimg.cmMore img {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+a.cmimg:hover,a.cmimg:focus {
+}
+
+a.cmimg img {
+}
+
+/*@cleaned 9.1*/
+.listCm .courseMenu a.cmimg, .buttonCm .courseMenu a.cmimg, .portlet a.cmimg,
+/*@since 9.1*/
+a.cmimg-small {
+	position:absolute;
+	right:4px;
+	_right:0px;
+	top:5px;
+	margin:0;
+	padding:0;
+	background-image:url(images/cmlinkoptions.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	display:inline-block;
+	height:13px;
+	overflow:hidden;
+}
+
+.listCm .courseMenu a.cmimg:hover, .portlet a.cmimg:hover,
+.listCm .courseMenu a.cmimg:focus, .portlet a.cmimg:focus,
+.buttonCm .courseMenu a.cmimg:hover, .buttonCm .courseMenu a.cmimg:focus,
+/*@since 9.1*/
+.cmimg-small:focus, .cmimg-small:hover {	
+	opacity:1;
+	filter:alpha(opacity=100);
+	background:transparent url(images/cmlinkoptions.gif) no-repeat 0 0;
+	zoom:1;
+}
+
+.courseMenu .subhead a.cmimg {top:7px;}
+
+/*Contextual menu control in the button version af the course menu*/
+.buttonCm .courseMenu .subhead .cmimg {top:2px;}
+.buttonCm .courseMenu .divider .cmimg{top:-2px;*top:0;}
+
+.portlet a.cmimg {position:relative;right:0;top:2px;*position:static;}
+
+.listCm  .courseMenu a.cmimg img, .portlet a.cmimg img {width:13px;height:13px;opacity:0;filter:alpha(opacity=0);}
+
+/* Form elements */
+/*@cleaned 9.1*/
+input[type="text"], input[type="password"], select, textarea {border:1px solid #666; padding:1px; vertical-align:middle;}
+
+/*@cleaned 9.1*/
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus {background: #fff1c5; border-color:#000;} 
+
+.submenu input[type="text"] {border-color:#999999 #DDDDDD #DDDDDD #999999; padding:2px 4px; width:80px}
+.submenu input[type="text"]:focus {border-color:#666666 #AAAAAA #AAAAAA #666666; color:#333333;}
+
+/*Controls for minified elements*/
+.smallControls input[type="text"], .smallControls select {padding:0!important; width:100%;}	
+
+.textareaWrapper textarea, .textareaWrapper table {width:100%;}
+
+
+/* Course menu link inline renaming */
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.listCm .courseMenu input, .listCm .courseMenu li input[type="text"],
+.renameCourseToc input,*/
+/*@since 9.1*/
+.courseMenu input, .courseMenu input[type="text"], .renameCourseToc input {margin-left:18px; width:120px;}
+
+.renameCourseToc input {margin-left:0;}
+
+#calculatorValue {width:9em; margin:3px 0; background:#f6f6f6;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.listCm ul.courseMenu li a.microControl, div.renameCourseToc a.microControl,*/
+/*@since 9.1*/
+a.microControl  {border:0; margin:0 0 0 2px; padding:0; float:none; display:inline;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.listCm ul.courseMenu li a.microControl img,
+div.renameCourseToc a.microControl img, */
+/*@since 9.1*/
+a.microControl img {width:12px; height:12px;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.listCm ul.courseMenu li a.save, div.renameCourseToc a.save,*/
+/*@since 9.1*/
+a.save {background:transparent url(images/micro_save.gif) no-repeat 0 0;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*div.listCm ul.courseMenu li a.cancel, div.renameCourseToc a.cancel,*/
+/*@since 9.1*/
+a.cancel {background:transparent url(images/micro_cancel.gif) no-repeat 0 0;}
+
+
+
+
+/*Content area toggle (located a top content are title)*/
+.localViewToggle {zoom:1; background-color:#efefef; margin:0; padding:2px 0;}
+.localViewToggle ul {margin:0 4px 0 4px;}
+.localViewToggle ul li {float:right;}
+.localViewToggle a {display:block; padding:2px 9px; font-size:85%; text-decoration:none; margin:1px 0 0 0;}
+.localViewToggle a:hover {text-decoration:underline;}
+
+.localViewToggle a.active, div.localViewToggle h2 {
+	background:#FFF;
+	font-weight:bold;
+	padding:2px 9px 2px 9px;
+	border:1px solid #aaa;
+	margin:0;
+  	font-size:85%;
+}
+
+.localViewToggle .separator {border-left:1px dotted #D7BB66; margin-left:6px;padding-left:6px;}
+
+.localViewToggle a.miniComboButton {
+	background:#F5E7BD url(images/more_options.gif) no-repeat scroll 97% center;
+	padding-right:16px;
+	border:1px solid #D7BB66;
+	text-decoration:none!important;
+	color:#444;
+}
+
+/*End content area toggle.*/
+
+
+/* Color chip: indicates color and opens color picker */
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*fieldset.stepcontent ol li a.colorChip, */
+/*@since 9.1*/
+a.colorChip {padding:1px 0 1px 2px; display:inline-block;}
+
+a.colorChip span {display:inline-block; padding:2px; background:url(images/cm_arrow.gif) no-repeat 0 1px; vertical-align:middle;}
+
+a.colorChip span img {width:16px; height:16px; opacity:0; filter:alpha(opacity=0);}
+
+/*Color placeholder*/  
+a.colorChip img.chipSwatch {border:1px solid #ccc; border-bottom:1px solid #aaa; border-right:1px solid #aaa; width:16px;height:16px;}
+
+span.colorChipName {display:inline-block!important; vertical-align:middle;padding:0!important}
+/*end color chip*/
+
+/*Tagging*/
+fieldset ol li span.tagContainer input,
+fieldset ol li span.tagContainer a.browse {font-size:95%;}
+
+fieldset ol li span.tagContainer,
+fieldset ol li span.tagContainer span,
+fieldset ol li ol li span.tagContainer,
+fieldset ol li ol li span.tagContainer span {
+ float:none;
+ display:inline;
+ padding:2px 2px 2px 0;
+ width:auto;
+ font-weight:normal;
+ font-size:100%;
+}
+
+fieldset ol li span.tagContainer span.hidden,
+fieldset ol li ol li span.tagContainer span.hidden {display: none;}
+
+fieldset ol li span.hidden,
+fieldset ol li ol li span.hidden,
+.contentBlock ol li span.hidden {display: none;}
+ /*End tagging*/
+ 
+ /*VTBE*/
+.vtbe_footer {background-color:#eee;font-size:90%;*font-size:70%;color:#666;padding:2px 6px;border:1px solid #ccc;border-top:0;}
+.vtbe_footer span {font-size:100%;}
+.vtbe_footer input[type=button] {font-size:95%;}
+.vtbe_footer a {margin:0 0 0 3px}
+/*End Vtbe*/
+
+/*VTBE resize handle*/
+.resize_handle { height: 12px; background: #ccc url(images/drag_texture.gif) no-repeat 50% 0; cursor: n-resize; text-align:center;border-top:1px solid #ddd;border-bottom:1px solid #bbb;}
+.resize_handle:hover {background-color: #bbb;border-bottom-color:#999;border-top-color:#ccc}
+.resize_handle img {width:100%;height:8px}
+ 
+/* for moving values between adjacent select boxes. used by multiselect.vm and userRoleSelect.vm */
+.selectItems {padding:6px; border:1px solid #ccc; background:#eee; display:none; width:660px;}
+.selectItems select {display:block; margin:6px 0 0; width:300px; max-width:300px;} /* max-width required for IE, to override max-width:100%, which is set in theme_defaults.css */
+.selectItems input[type=button] {margin:6px 0 0; max-width: 140px; white-space: normal; font-size: 90%;}
+.selectItems input[type=text] {display:block; margin:6px 0; width:260px;}
+.selectArrows {margin-top:60px;}
+.selectArrows a, .selectArrows button {display:block; margin:0 0 3px; border:none; padding:0px; background-color:transparent;}
+.selectItems h4 {margin:0; padding:0;}
+/* extends multiselect widget for selecting user roles: userRoleSelect.vm */
+.userRoleSelect {width:auto;}
+.userSelectedRoles {position:relative; padding:3px 0 6px 21px;}
+.userSelectedRoles .selectArrows {position:absolute; left:0; top:24px; margin:0;}
+/* end of select boxes styles */
+ 
+/*Legacy controls. To make sure that 3rd party building blocks look good.*/
+
+/*Action bar*/
+/*Legactinventory control actions: move, copy delete.*/
+.actionBar .mainButton-legacy {float:left;border-right:0;padding:0;margin:2px 0 0 6px;font-weight:normal;font-size:95%;}
+.reverseButtons .mainButton-legacy {float:right}
+
+.actionBar .mainButton-legacy a {font-size:100%;display:block;text-decoration:none;padding:3px 7px 3px 7px;color:#444;
+	border:1px solid #ACC2DF;background:#D3E2F5;} 
+
+.actionBar .mainButton-legacy a:hover {border:1px solid #ACC2DF;border-bottom:1px solid #5577bb;
+	border-right:1px solid #5577bb;
+	background:#e3efff url(images/rumble_button_back.gif) repeat-x 0 0;}
+
+/*Inline action controls appearing in tables*/
+a.inlineAction-legacy {text-decoration:none;padding:1px 5px 2px 5px;border:1px solid #ACC2DF;background:#D3E2F5;color:#000;font-size:95%;}
+
+a.inlineAction-legacy:hover {text-decoration:none;padding:1px 5px 2px 5px;border:1px solid #ACC2DF;border-bottom:1px solid #5577bb;
+	border-right:1px solid #5577bb;background:#e3efff url(images/rumble_button_back.gif) repeat-x 0 0;
+	color:#000;font-size:95%;}
+/*End Legacy*/
+
+
+/*Multiselect widget*/
+.multiSelect {padding:0 0 12px 0}
+.multiSelect > div {width:46%;float:left;margin:0;padding:3px;}
+.multiSelect select {width:100%;}
+.multiSelect div.selectArrows {text-align:center;width:5%;margin:40px 0;}
+/*End multiselect widget*/
+
+
+/*@since 9.1.  Widget-like wrapper to keep associated controls appear consistently regardless of context.*/
+.widget {background: #EEEEEE; border: 1px solid #CCCCCC; margin: 6px 0; padding: 1px 6px;}
+.widgetControls, table .widgetControls {font-size:90%;}
+.widget .spellCheck, .widget .textBoxItem {float:right}
+/*End widget*/
+
+
+.divider {border-bottom:1px dotted #aaa;}
+.listCm .divider {border-bottom:0;} /* removes the border in the Course Menu divider */
+
+/*@since 9.1*/
+/*Handle used in UI pane resizing*/
+#resizeHandle {position:absolute;background:#ddd;left:200px;bottom:0;top:0;border:1px solid #999;margin-top:0;width:3px;-moz-border-radius:1px;-webkit-border-radius:1px;}
+
+#resizeHandle:hover {background: #aaa; cursor: e-resize;}
+
+#resizeHandle .collapseControl, #resizeHandle .pullcollapsed {
+	margin-top:200px;
+	position:relative;
+	width:11px;
+	height:22px;
+	left:-5px;
+	font-size:8px;
+	background:transparent url(images/menu_collapse3.gif) no-repeat scroll -2px -3px;
+	display:block;
+	-moz-border-radius:2px;
+	border:1px solid #999;
+}
+
+.collapseControl:hover {cursor:pointer}
+
+/*.pullcollapsed a {background:transparent url(images/menu_expand3.gif) no-repeat scroll -2px -3px!important;}
+.pullcollapsed {left:3px !important}*/
+
+/*VTBE*/
+.htmlarea .toolbar div > div {float:left; padding:0 1px; height:22px;}
+.htmlarea iframe {min-width:300px!important}
+.htmlarea .toolbar a.wikiButton, .htmlarea .toolbar a.wikiButton img {width:auto!important}
+/*End VTBE*/
+
+/* -------------------- ADD/REMOVE MODULE CONTROLS STYLES (Added 6/28/10 for SP3) -------------------- */
+
+.addModule a, 
+.removeModule a {
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    min-width: 50px;
+    padding-left: 28px;
+    }
+.addModule a {
+    background-image: url(../../images/ci/icons/plus_ti.png);
+    color: #529214;
+    }
+    .addModule a:hover {
+        background-color: #e6efc2;
+        border-color: #c6d880;
+        color: #529214;
+        }
+    .addModule a:active {
+        background-color: #529214;
+        border-color: #529214;
+        color: #fff;
+        }
+.removeModule a {
+    background-image: url(../../images/ci/icons/minus_ti.png);
+    color: #d12f19;
+    }
+    .removeModule a:hover {
+        background-color: #fbe3e4;
+        border-color: #fbc2c4;
+        color: #d12f19;
+        }
+    .removeModule a:active {
+        background-color: #d12f19;
+        border-color: #d12f19;
+        color: #fff;
+        }
+.requiredModule {
+    background-color: #ededed;
+    border: 1px solid #ccc; 
+    border-bottom: 1px solid #aaa; 
+    border-right: 1px solid #aaa;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #333;
+    cursor: not-allowed;
+    display: inline-block;
+    font-weight: normal;
+    min-width: 68px;
+    padding: 2px 9px;
+    }
+
+/* // END AX Quick Links // */
+
+/*
+ * END CONTROLS
+ */

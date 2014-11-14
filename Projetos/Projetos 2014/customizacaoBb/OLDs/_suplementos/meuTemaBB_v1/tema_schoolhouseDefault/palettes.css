@@ -1,0 +1,730 @@
+
+/*
+ * COURSE MENU PALETTES
+ */
+
+/*Course menu palette preview wrapper to contstrain width.*/
+.cmPreviewWrapper {width:212px;}
+
+.navPalette{margin:0 24px 12px 14px;zoom:1;}
+
+/* Content System menu alette */
+.csMenuFrame .navPalette {margin:0 6px 12px 12px;}
+
+.navPaletteContent {background:#ededed; zoom:1; border:1px solid #000000;}
+
+/* Palette header */
+.navPaletteTitle { position: relative; }
+.navPalette h3 { 
+	padding:0;
+	margin:0;
+	font-size:105%;
+	color:#fff;
+	background:#074BD2 url(images/gradient_black_long_bt.png) repeat-x top center;
+	_background-image: none;
+	zoom:1;
+	*z-index:1;
+}
+
+/* Palette category head */
+.navPalette h4 {margin:0; font-size:100%;}
+
+/* Palette content list */
+.navPalette ul {zoom:1;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette ul li,*/
+/*@since 9.1*/
+.navPaletteContent ul li {
+	zoom:1; 
+	position:relative; 
+	*height:1%;
+	white-space:nowrap; }
+
+/* Discover button needs to wrap for Sample 1/2 Language Pack */
+.navPalette.discover .navPaletteContent ul li {
+	white-space: normal;
+}
+
+/*Palette content area links*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette a,*/
+/*@since 9.1*/
+.navPaletteContent a {
+	margin:0;
+  	padding:3px 9px 3px 16px;
+  	font-weight:normal;
+ 	text-decoration:none;
+  	display:block;
+	zoom:1;
+	background:transparent url(images/more_options_dark.gif) no-repeat 4px 7px;
+	color:#333;
+	border-top:1px solid #ddd;
+	overflow-x:hidden;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette a:hover, .navPalette a:focus*/
+/*@since 9.1*/
+.navPaletteContent a:hover, .navPaletteContent a:focus {
+	background-color:#FFFFFF;
+	background-image:url(images/more_options.gif);
+	cursor:pointer;
+}
+
+/* Combo link is used together with submenu link.*/
+.navPaletteContent a.comboLink, .navPaletteContent a.comboLink_active {padding-right:20px;margin-right:20px;}
+
+/* comboLink open state.*/ 
+.navPaletteContent a.comboLink_active, .navPaletteContent a.open {
+	background-image: url(images/less_options_dark.gif);
+	background-color: #FFFFFF;
+}
+
+.navPaletteContent a.comboLink_active:hover, .navPaletteContent a.open:hover,
+.navPaletteContent a.comboLink_active:focus, .navPaletteContent a.open:focus {
+	background-image: url(images/less_options.gif);
+}
+
+
+/* Submenu Link*/ 
+.navPaletteContent a.submenuLink, .navPaletteContent a.submenuLink_active {
+	position:absolute;
+	top:0;
+	right:0;
+	padding:0;
+	zoom:1;
+	border-left:1px dotted #bbb;
+	_border-left-style:solid;
+}
+
+.navPaletteContent a.submenuLink, .navPaletteContent a.submenuLink_active {
+	background-image:url(images/list_bullet_dark.gif);
+	background-position:center center;
+}
+
+
+.navPaletteContent a.submenuLink:hover, .navPaletteContent a.submenuLink_active:hover,
+.navPaletteContent a.submenuLink:focus, .navPaletteContent a.submenuLink_active:focus {
+	background-image: url(images/list_bullet.gif);
+}
+
+.navPaletteContent a.submenuLink img, 
+.navPaletteContent a.submenuLink_active img {
+	width:20px;
+	height:22px;
+	opacity:0;
+  filter:alpha(opacity=0);
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette ul li:first-child h4 a, .navPalette ul li:first-child a,*/
+/*@since 9.1*/
+.navPaletteContent ul li:first-child h4 a, .navPaletteContent ul li:first-child a {border-top:none;}
+
+
+/* Palette links */
+
+/*Palette header links*/
+#courseMenuPalette h3 a,
+#previewCourseMenu h3 a,
+.navPaletteContent h3 a {
+	background:transparent url(images/less_options_white.gif) no-repeat 4px 7px;
+	color:#fff!important;
+	font-weight:bold;
+	border-top:0;
+}
+
+.navPaletteContent h3 a:hover, .navPaletteContent h3 a:focus {
+	background-image:url(images/less_options.gif);
+	background-color:transparent;
+	text-decoration:none;
+	color:#fff;
+}
+
+.navPaletteContent h3 a.submenuLink {
+	background-image: url(images/list_bullet_white.gif);
+	background-color:transparent;
+}
+
+.navPaletteContent h3 a.submenuLink:hover, .navPaletteContent h3 a.submenuLink:focus {
+	background-image: url(images/list_bullet.gif);
+	background-color:transparent;
+}
+
+
+/*@branding - do not remove*/
+#courseMenu {
+  background-color:#FFF;
+  color:#003366;
+}
+
+
+/* Palette variations */
+
+/* Control palette  */
+.controlpanel h3 {background-color:#074BD2;;}
+.controlpanel .navPaletteContent  {background-color:#237BD2;}
+
+/*Fix for weird spacing in the course menu palette lists in IE*/
+.controlpanel ul li:first-child {*margin-top:0px;}
+.controlpanel ul li {*margin-top:-1px;}
+
+/* Control palette links*/
+.controlpanel a {border-top-color:#074BD2;color:#ffcc33;font-weight:bold;}
+
+.controlpanel a.submenuLink, .controlpanel a.submenuLink_active {border-color:#074BD2;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*.navPalette a:hover, .navPalette a:focus*/
+/*@since 9.1*/
+.controlpanel a:hover, .controlpanel a:focus,
+.controlpanel a.comboLink_active, .controlpanel a.open {background-color:#ffcc33;color:#07477f;}
+
+.controlpanel a.comboLink_active, .tools a.comboLink_active, .controlpanel h4 a.open {font-weight:bold;}
+
+/*overwrite the GO Button styles*/
+.controlpanel a.button-4 {background:#ddd !important; padding-left:10px !important;}
+
+/* Content System palette */
+.treeViewCs .navPaletteContent  {background-color:;}
+
+/* Explore palette in Outcomes */
+.explore .navPaletteContent  {background-color:#FFFFFF;}
+
+
+.explore a {background-color:#ededed; background-image: url(images/list_bullet_up.gif)}
+.explore a:hover, .explore a:focus {background-color:#f0f0f0; background-image: url(images/list_bullet_up.gif);}
+
+.explore h4 {border-top:2px solid #999;}
+
+.explore h4 a, .explore h4 a:hover, .explore h4 a:focus {background:transparent; font-weight:bold; border:0;}
+
+
+/*My Places palette in Outcomes*/
+.myPlaces .navPaletteContent  {background-color:#FFFFFF;}
+
+.myPlaces a {background-color:transparent; padding-left:22px; color:#003399; border:0;}
+.myPlaces a:hover, .myPlaces a:focus {text-decoration:underline;}
+
+.myPlaces a.home {padding-right:20px; border-bottom:1px solid #ddd;}
+
+.myPlaces span.homeIconWrap {
+	background: url(/images/ci/icons/clphomepage/home_ti.gif) no-repeat 0 0;
+	position:absolute;
+	top:3px;
+	right:3px;
+}
+
+.myPlaces span.homeIconWrap img {width:16px; height:16px;}
+
+
+.myPlaces a.unit, .myPlaces a.course, .myPlaces a.ee, .myPlaces a.program, .myPlaces a.workspace  {
+	margin:0;
+	list-style-type:none;
+	background-repeat:no-repeat;
+	background-position:3px 3px;
+} 
+
+.myPlaces a.unit, .myPlaces a.unit:hover {background-image:url(/images/ci/icons/clp_unit_ti.gif);}
+.myPlaces a.course, .myPlaces a.course:hover  {background-image:url(/images/ci/icons/clp_course_ti.gif);}
+.myPlaces a.ee, .myPlaces a.ee:hover  {background-image:url(/images/ci/icons/clp_ee_ti.gif);}
+.myPlaces a.program, .myPlaces a.program:hover {background-image:url(/images/ci/icons/clp_program_ti.gif);}
+.myPlaces a.workspace, .myPlaces a.workspace:hover  {background-image:url(/images/ci/icons/clp_workspace_ti.gif);}
+
+
+
+
+/* Links in the reorderable course menu palette section */
+
+/* Reorderable Course Menu in List view. */
+.listCm .courseMenu {
+	*margin-left:-14px;
+	_height:1%;
+	_width:176px;
+	padding:0;
+	_margin-right:-14px;
+}
+
+.listCm .courseMenu li {
+	padding:3px 0 4px 0;
+	_padding:2px 0 3px 0;
+	margin:0 0 0 -14px;
+	position:relative;
+	*margin:0 0 -3px 0px;
+	*height:1%;
+	zoom:1;
+	_width:178px;
+	_overflow:visible;
+}
+
+.listCm .courseMenu a {
+	margin:0 18px 0 14px;
+	_margin:0 0 0 6px;
+	*right:0;
+	_height:1%;
+  	padding:0px 0 0 9px;
+	border:0;
+	background:transparent;
+	color:#003366;
+	word-break: normal;
+	overflow-x:hidden;
+	_overflow:visible;
+	_word-break: break-all;
+}
+
+.listCm .courseMenu a:hover, .listCm .courseMenu a:focus {
+	text-decoration:underline;
+	_background-image:none;
+}
+
+.listCm .courseMenu h3 {
+	margin:2px 0 0 14px;
+	_margin:0 0 0 6px;
+	padding:1px 18px 1px 9px;
+  *right:0;
+	_height:1%;
+  overflow-x:hidden;
+}
+
+.listCm .courseMenu a span {zoom:1;}
+
+.listCm .courseMenu .here a, .listCm .courseMenu .here a:hover, .listCm .courseMenu .here a:focus  {
+	background:#999 url(images/list_bullet_single_white.gif) no-repeat 98% center;
+	color:#fff;
+	text-decoration:none;
+	padding:1px 16px 2px 4px;
+	margin:0 0px 0 19px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.listCm .courseMenu .here a.cmimg, .listCm .courseMenu .here a.cmimg:hover {
+	background-color:transparent;
+	padding:0;
+	margin:0;
+}
+
+.listCm h4 {
+	padding:3px 9px 1px 9px;
+	margin:0px 0 0px 14px;
+	font-size:100%;
+	border-top:1px solid;
+	border-color:inherit;
+	*height:1%;
+}
+
+/* In case we have a link in an h4 header. */
+.navPaletteContent .subhead h4 a, .navPaletteContent .subhead h4 a:hover {
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	font-weight:bold;
+	background-color:transparent;
+}
+
+/* List element containg a menu divider. */
+.listCm .courseMenu .divider {
+	padding:9px 0 9px 14px;
+	*padding:9px 0  6px 14px;
+	_padding:9px 0  0 14px;
+	height:2px;
+	position:relative;
+	*line-height:1%;
+	_width:162px;
+}
+
+.listCm .courseMenu .divider hr {
+	background-color:#ccc;
+	vertical-align:middle;
+	margin:0;
+	border-width:0;
+	height:2px;
+	position:relative;
+	*line-height:1%;
+	*top:-9px;
+}
+
+/*	Collapsed class is dynamically assigned whe course menu is in Read mode.
+ 	element padding is removed.
+*/
+.listCm .courseMenu .collapsed {
+	padding:0 0 0 14px;
+	_padding:3px 0 3px 14px;
+	height:2px;
+	*line-height:1px;
+}
+
+.listCm .courseMenu .collapsed hr {
+	*position:relative;
+	*margin:0;
+	_top:0px;
+}
+
+
+/* Special styles for the link that is hidden from students. */
+.listCm .courseMenu .invisible a {
+	color:#777;
+	*margin-right:2px;
+	_margin-right:0;
+}
+
+
+
+/* Button version of course menu palette */
+.buttonCm .navPaletteContent {background:transparent;}
+
+/* List width is set to accommodate button image width. 
+ * the width of the button course menu is 176px;
+ * the width of the button images are 175px.
+ */
+
+.buttonCm .courseMenu  {width:176px;*width:190px;}
+
+.buttonCm li {
+	margin:4px 0 4px -14px;
+	*margin:4px -14px 4px -14px;
+	position:relative;
+	background-color:transparent;
+	background-position:14px 0!important;
+	background-repeat:no-repeat;
+}
+ 
+.buttonCm .subhead {
+	background:transparent;
+	background-image:none!important;
+	*height:1%;
+}
+
+.buttonCm .subhead h3 {
+	padding:0px 16px 0px 6px;
+	margin:0pt 0pt 0pt 14px;
+	font-size:100%;
+	font-weight:bold;
+	*height:1%;
+}
+
+.buttonCm .divider {
+	padding:4px 0 4px 14px;
+	*padding:0px 0 0px 14px ;
+	margin:0 0 0 -14px;
+	background:transparent;
+	background-image:none!important;
+}
+
+.buttonCm .divider hr {
+	background-color:#777;
+	vertical-align:middle;
+	margin:0;
+	border:0;
+	height:1px;
+	position:relative;
+	*line-height:1%;
+}
+
+.buttonCm .courseMenu a {
+	display:block;
+	font-weight:normal;
+	margin:0 20px 0 14px;
+	*margin:0 0 0 14px;
+	padding:4px 6px 6px 6px;
+	text-decoration:none;
+	position:relative;
+	overflow:hidden;
+	background-color:transparent;
+	background-image:none;
+	border-top:0;
+}
+
+
+/* --- Additional styling for the current location. --- */
+
+.buttonCm .courseMenu .here a, .buttonCm .courseMenu .here a:hover {
+	text-decoration:underline;
+	background-color:transparent;
+}
+
+
+
+/* Hidden and Empty Link indicators. */
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.tree a span.cmLink-hidden, ul.tree a span.cmLink-empty,
+li.invisible a span.cmLink-hidden, li.invisible a span.cmLink-empty,
+li.invisible span.cmLink-hidden, li.invisible span.cmLink-empty, */
+/*@since 9.1*/
+.cmLink-hidden, .cmLink-empty { margin:0 0 0 3px;vertical-align:middle;}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.tree a span.cmLink-hidden img, ul.tree a span.cmLink-empty img,
+li.invisible a span.cmLink-hidden img, li.invisible a span.cmLink-empty img,
+li.invisible span.cmLink-hidden img, li.invisible span.cmLink-empty img,*/
+/*@since 9.1*/
+.cmLink-hidden img, .cmLink-empty img {
+	width:11px;
+	height:11px;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.tree a span.cmLink-empty, li.invisible a span.cmLink-empty, li.invisible span.cmLink-empty,*/
+/*@since 9.1*/
+.cmLink-empty {
+	background:transparent url(images/empty_link.gif) no-repeat 0 0;
+	display:inline;
+}
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*ul.tree a span.cmLink-hidden, li.invisible a span.cmLink-hidden, li.invisible span.cmLink-hidden,*/
+/*@since 9.1*/
+.cmLink-hidden {
+	background:transparent url(images/hidden_link.gif) no-repeat 0 0;
+	display:inline;
+	display:inline-block;
+}
+
+
+/*Invisible link indicators for button mode*/
+.buttonCm .invisible .cmLink-hidden, 
+.buttonCm .invisible .cmLink-empty {
+	position:absolute;
+	right:4px;
+	top:7px;
+}
+
+.buttonCm .invisible .cmLink-empty {right:18px;}
+
+/*End empty/invisible indicators*/
+
+
+
+
+/*Fix for weird spacing in the course menu palette lists in IE
+.tools ul li:first-child {*margin-top:0px;}
+.tools ul li {*margin-top:-1px;}*/
+
+
+
+/* Menu in the picker pop-up. */
+.pickerMenu {
+	position:absolute;
+	top:0;
+	left:14px;
+	width:150px;
+	margin:0;
+}
+
+/* Picker Menu */
+.pickerMenu ul li a, div.pickerMenu a.simpleLink {
+	background-image:none;
+}
+
+.pickerMenu a.open, .pickerMenu a:hover, .pickerMenu a:focus {
+	background:#fff url(images/list_bullet.gif) no-repeat 97% center;
+}
+
+
+/* Stand-alone control. */
+.discover .navPaletteContent, .singleControl .navPaletteContent {
+	background-color:#237BD2;
+	color:#ffcc33;
+}
+
+.singleControl a, .discover a {
+	background-image:none;
+	text-align:center;
+	background-color:transparent;
+	border-top:none;
+	zoom:1;
+	padding:3px 9px;
+	color:#ffcc33;
+}
+
+.discover a {
+	padding:0 9px;
+	font-weight:bold;
+	font-size:105%;
+	color:#000;
+}
+
+.singleControl a:hover, .discover a:hover, .singleControl a:hover,
+.singleControl a:focus, .singleControl a:focus, .discover a:focus {
+	background-color:#ffcc33;
+	background-image:none;
+	color:#07477f;
+}
+
+.discover a img {margin:-1px 3px 0 0}
+
+
+
+
+/*Palete submenus*/
+/* Used in:
+ *  - controlpanel palette
+ *  - tools palette
+ *  - explore palette in Outcomes (modified)
+ */
+
+.navPaletteContent .submenu {
+	padding:2px 9px 9px 9px;
+	font-size:85%;
+	margin:0;
+}
+
+.explore .submenu {margin-left:7px;font-size:90%;}
+
+.navPaletteContent .submenu li {background-image:none;}
+
+.navPaletteContent .submenu li ul li {padding-left:12px;*height:1%;}
+
+.navPaletteContent .submenu li a {
+	padding:2px 9px 2px 6px;
+	margin:0;
+	background:transparent;
+	background-image:none;
+	border:0;
+}
+
+.controlpanel .submenu a, .explore .submenu a  {
+	padding:2px 9px 2px 6px;
+	margin:0;
+	background:transparent;
+	border:0;
+	color:#07477F;
+	font-weight:normal;
+  overflow:hidden;
+}
+
+.explore .submenu a {
+	color:#003366;
+	padding:2px 0px 2px 0px;
+}
+
+.explore .submenu .emptyMsg {color:#777;}
+
+.controlpanel .submenu a:hover, .controlpanel .submenu a.here,
+.controlpanel .submenu a:focus {
+	background:#fff url(images/list_bullet_single.gif) no-repeat 99% center;
+	padding:2px 9px 2px 6px;
+}
+
+.explore .submenu a:hover, .explore .submenu a:focus {
+	text-decoration:underline;
+	background-color:#fff;
+}
+
+.tools .submenu {background:#fff;}
+
+.tools .submenu a:hover, .submenu a:hover, .tools .submenu a:focus, .submenu a:focus {
+	background:#f6f6f6 url(images/list_bullet_single.gif) no-repeat 99% center;
+}
+
+.controlpanel .submenu, .controlpanel .submenu li ul {background-color:#ffcc33;}
+
+.paletteSearch {padding:6px 5px 6px 10px; background-color:#E3EFFF; font-size:95%; border-bottom:1px solid #94A8C1; margin-right:0px !important; margin-left:0px !important; }
+.paletteSearch #toolsSearchBox {width:146px !important; margin-bottom:5px; clear:both;}
+.paletteSearch a {text-wrap:none !important; word-wrap:normal !important; margin-right:0px !important; margin-left:0px !important; overflow:visible;}
+
+.paletteSearchElement {border-top:1px dotted #CCCCCC; margin-top:3px; padding:6px 0px 6px 3px;}
+
+/* Simple link is used where there is no submenu. Clicking it loads another page. */
+.navPalette a.simpleLink, .controlpanel a.simpleLink  {
+	padding:3px 9px 3px 9px;
+	background-image:none;
+}
+
+.navPalette a.simpleLink:hover, .navPalette a.simpleLink:focus, .controlpanel a.simpleLink:hover, .controlpanel a.simpleLink:focus {
+	background-image: url(images/list_bullet_single.gif);
+	 background-repeat: no-repeat;
+	 background-position: 97% center;
+}
+
+
+
+/* Modifications for palette in a collapsed state. */
+.navPaletteCol h3 a, .navPaletteCol h3 a.comboLink {background-image:url(images/more_options_white.gif);}
+
+.navPaletteCol h3 a:hover, .navPaletteCol h3 a:focus,
+.navPaletteCol h3 a.comboLink:hover, .navPaletteCol h3 a.comboLink:focus {
+	background-image:url(images/more_options.gif);
+}
+
+.navPaletteCol .navPaletteContent h3 {background-image:none;}
+
+.navPaletteCol .actionBarMicro {display:none;}
+
+/* Course menu palette links in the button mode. */
+
+/*Content system palette in shortcut mode*/
+.shortcutViewCs ul li a {border-top:1px solid #ededed;} 
+.shortcuts li a {border-top:1px solid #ccc; background:#ededed;} 
+.shortcuts li a:hover, .shortcuts li a:focus {background:#fff url(images/list_bullet_single.gif) no-repeat 99% center;} 
+/*End content system palette in shortcut mode*/
+
+
+
+
+/*Hierarchy tree*/
+div.treeContainer ul.tree, ul.tree {list-style:none; margin:0px; padding:0px 0 6px 0px;}
+div.treeContainer > ul.tree, div.treeContainer ul.tree > ul {padding:0}
+div.treeContainer ul.tree ul, ul.tree ul {list-style:none; margin:0px 0px 0px 20px; padding:0;  background:transparent;}
+div.listCm div.treeContainer ul.tree  {overflow-x:auto;zoom:1;*position:relative;*overflow:hidden;*padding:0 0 18px 0}
+div.buttonCm div.treeContainer ul.tree  {overflow-x:auto;zoom:1;*position:relative;*overflow:hidden;*padding:0 0 18px 0}
+div.treeContainer ul.tree  li h4 + ul, div.classFiles ul.tree > li {overflow-x:auto; margin:0; padding:8px 0 18px 9px;zoom:1;*overflow:hidden;*position:relative;background-color:#fff;}
+
+div.treeContainer ul.tree li, ul.tree li {margin:0px; padding:0px; background:transparent url(/images/ci/icons/nlstree/line.gif) repeat-y 0 0; white-space:nowrap;}
+ul.tree > li {/*overflow-x:auto;*/*min-height:23px;}
+.sideTOC ul.tree > li {overflow-x:visible;}/* override for the Learning Unit Table of Contents, which applies a single scrollbar to the list wrapper */
+
+div.treeContainer ul.tree li.last, ul.tree li.last {background-image:none;}
+div.treeContainer ul.tree li.here a, ul.tree li.here a {background-color:#ededed;;}
+div.treeContainer ul.tree li a, ul.tree li a { padding:2px 1px 2px 0px; background:none; display:inline; border-top:none;color:#003399;font-weight:normal;}
+div.treeContainer ul.tree li a.open_folder { padding:2px 3px 2px 0px; background:#ebeffa; display:inline; border-top:none; font-size:95%;}
+div.treeContainer ul.tree li a.exp {background:transparent url(/images/ci/icons/nlstree/folder.gif) no-repeat 18px 0px; padding:0px 21px 0px 0px;}
+div.treeContainer ul.tree li a.collapse {background: url(/images/ci/icons/nlstree/folderopen.gif) no-repeat 18px 0px; padding:0px 21px 0px 0px;} 
+div.treeContainer h4.treehead {margin:8px 0 2px 0; padding:0px 0px 0px 5px; font-size:105%; font-weight:bold; font-size:95%;}
+div.treeContainer h4.first {margin:0 0 2px 0;}
+div#userTreeDiv{background:#fff; margin:0; padding:0px;}
+
+
+div.treeContainer ul.tree li.subhead {background-image:none;margin:0px 0 0px 0px}
+div.treeContainer ul.tree li.subhead h4 {margin:0;padding:0;*font-size:95%;}
+div.treeContainer ul.tree li.subhead h4.first a {border-top:none}
+div.treeContainer ul.tree li.subhead h4 a {
+	padding:3px 9px 3px 16px;
+	background-color:transparent;
+	background-image: url(images/less_options.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 6px;
+	border-top:1px solid #ddd;
+	display:block;
+	text-decoration:none;
+}
+
+div.treeContainer ul.tree li.subhead:first-child {margin-top:0}
+div.treeContainer ul.tree li.subhead:first-child a {border-top:0;}
+
+div.treeContainer ul.tree li.subhead h4.treeSubhead-collapsed a {background-image: url(images/more_options.gif);background-color:transparent!important;font-weight:normal;}
+#pickerPalette .tree
+#pickerPalette .tree, #pickerPalette .tree h4.treeSubhead-collapsed {background:#ededed;}
+#pickerPalette .tree li:first-child {background:#ffffff;}
+#pickerPalette .tree h4 {background-color:#ffffff;}
+#pickerPalette .tree h4.treeSubhead-collapsed a {background-color:transparent!important;}
+
+#pickerPalette .tree > li {overflow-x: auto;}
+#pickerPalette .tree > li.subhead {overflow:visible;}
+
+.tree .treeNodeIcon { width: 16px; height: 16px; }
+
+div.treeScrollable { margin:0px !important; overflow:auto; }
+div.treeScrollable ul.tree li a { white-space:nowrap; }
+/*End hierarchy tree*/
+
+
+
+/* 
+ * END COURSE MENU PALETTES 
+ */

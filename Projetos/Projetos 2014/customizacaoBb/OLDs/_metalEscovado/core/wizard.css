@@ -1,0 +1,109 @@
+/* styles for course setup wizard */
+
+body.wizardBody {_margin-top:10px;}
+
+/* wizard content pane */
+.wizardBody #contentPanel {
+  margin-bottom:10px;
+  margin-left:207px;
+}
+
+.wizardBody #pageTitleDiv img {display:none;}
+
+body.wizardBody div.reqfield {
+  float:none;
+  margin:0 0 6px -6px;
+  }
+
+div.wizardHead {
+  background:#fff;
+  padding:0 0 2px;
+}
+
+div.wizardHead h2 {
+  margin:0;
+}
+
+div.wizardHead p.helphelp {
+  padding:4px 4px 0 0;
+}
+
+body.wizardBody div.container {min-height:80%;}
+
+body.wizardBody div.containerWizard {
+  margin:0 -12px;
+  padding:3px 0 14px;
+  border:1px solid #bbb;
+  background:#cdcdcd;
+  /*overflow:auto;*/
+}
+
+body.wizardBody div.containerWizard div.locationPane {*width:99%;}
+body.wizardBody ul.contentList li div.details {overflow-x:visible;}
+
+p.wizardFinishText {margin:6px 0px 150px;}
+
+/* submit controls */
+p.wizardSubmit {
+  margin:0;
+  padding:12px 0 6px;
+  }
+p.wizardSubmit input[type=image] {padding:2px 3px 3px;}
+
+p.wizardSubmit input.submit {
+  _background:#819AC0;
+  _border-color:#566E94; 
+  _color:#fff; 
+}
+
+p.wizardSubmit span {font-size:95%;}
+
+p.wizardSubmit span strong {color:#000;}
+
+/* progress tracker (wizard nav pane) */
+div.navigationPaneWizard {
+  margin-top:45px;
+  _margin-top:55px;
+  width:207px;
+}
+
+div.navigationPaneWizard div.navPalette {
+  margin:0 0 12px 12px;
+}
+
+div.navigationPaneWizard div.navPalette div.navPaletteContent h2 {padding:3px 9px;}
+
+div.navigationPaneWizard div.navPalette span {
+  display:block;
+  padding:6px 9px;
+  background-color:#ededed;
+}
+
+div.navigationPaneWizard div.navPalette ul {/* amends style from nav_location.css (line 74)*/
+  margin:0;
+  padding:0;
+  background-color:#ededed;
+  list-style:none!important;
+}
+
+div.navigationPaneWizard div.navPalette ul li {/* amends style from nav_location.css (line 81)*/
+  margin:0;
+  border-top:1px solid #cdcdcd;
+  border-left:1px solid #cdcdcd;
+  padding:4px 9px 4px 24px;
+  background:url(images/bullet_off_ia.gif) no-repeat 0 0;
+  color:#444;
+}
+
+div.navigationPaneWizard div.navPalette ul li:first-child {
+  border-top:none;
+}
+
+div.navigationPaneWizard div.navPalette ul li.currentStep {
+  background:white url(images/bullet_active_ia.gif) no-repeat 0 0;
+  font-weight:bold;
+} 
+
+div.navigationPaneWizard div.navPalette ul li.visitedStep {
+  background:url(images/bullet_inactive_ia.gif) no-repeat 0 0;
+} 

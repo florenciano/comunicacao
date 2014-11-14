@@ -1,0 +1,123 @@
+
+/*
+ * REPORTS
+ */
+
+body.reports {background:#f0f0f0;}
+body.reports .navigationPane, body.reports .locationPane, body.reports .contentPaneWide, body.reports .container {padding:0;margin:0;background:transparent;}
+
+/*Reports list. Somwe styles from data_collection.css are used here as well.*/
+body.reports ul {margin:12px;}
+
+body.reports .stepcontent {margin:0; padding:0;}
+
+body.reports ul li {clear:both;padding:0 12px 6px 12px;}
+
+body.reports .label {color:#777;}
+
+body.reports ul li:after {content: "."; display: block; height:0; clear: both; visibility: hidden;}
+
+ 
+/*Reports Headers*/
+body.reports h1 {font-size:160%; padding:9px 18px; margin:0; background:#555 url(images/gradient_black_short_bt.png) repeat-x bottom right; _background-image:none; color:#fff;}
+
+body.reports h2 {font-size:150%; padding:3px 6px; margin:6px 18px 6px 14px; color:#000;}
+
+body.reports h3 {font-size:140%; padding:3px 6px; margin:6px 18px 6px 30px;}
+body.reports h3 a {color:#7d899e; text-decoration:none;}
+body.reports h3 a img {margin-right:6px; vertical-align:middle;}
+
+.reports .steptitle {background:#aaa!important; color:#FFF!important; font-size:115%; margin:0 0 12px!important; padding:4px 12px; letter-spacing:0; border:none;}
+
+body.reports h4 {font-size:115%; color:#fff; background:#bbb;margin:0 10px;padding:3px 12px;*height:1%;}
+
+body.reports ul li h5 {margin:12px -12px 0 -12px; padding:0 0 6px 0; font-size:100%; border-bottom:1px solid #ccc;}
+
+body.reports table.attachments {width:auto; margin:0;}
+body.reports table.wide {width:100%; margin:0;}
+
+/*TOC modifications*/
+
+/*TOC list modifications*/
+#toc {margin:12px 0; list-style-type:decimal; padding:0 0 0 30px; list-style-position:outside;}
+#toc ul  {margin:0 24px 24px}
+
+.toc_div {margin:6px 18px 18px 18px; clear:both; padding:4px 0 4px 8px; *padding:0px 0 4px 8px; border:2px solid #ccc; -moz-border-radius:4px; -webkit-border-radius:4px;}
+
+.toc_div ol li ul li {padding:0;margin:0;} 
+
+body.reports .toc_div h2 {margin:0;padding:0;background:none;}
+.toc_div h2 a {text-decoration:none;font-size:85%;}
+.toc_div h2 a img {margin-right:6px;}
+
+.toc_div a.toggle {
+	text-decoration:none;
+	background:#f6f6f6;
+	font-size:95%;
+	float:right;
+	font-weight:normal;
+	border:1px solid #ccc;
+  border-width:0 0 1px 1px;
+	padding:8px 10px 8px 10px;
+	*padding:6px 10px 7px 10px;
+	*margin-top:2px;
+	position:relative;
+	top:-4px;
+	_top:-2px;
+	_*padding:5px 10px 6px 10px;
+	 -moz-border-radius:0 4px 4px 0;
+	 -webkit-border-radius:0 4px 4px 0;
+}
+
+.toc_div a.toggle:hover {background:#fff;}
+
+.backtotop, .dateofreport {float:right;}
+
+.dateofreport {margin:6px 18px 12px 0;}
+
+/*Collapsible block*/
+body.reports .block {border:1px solid #ccc; margin:0 36px 24px 36px; background:#fff; -moz-border-radius:4px 4px 0 4px; -webkit-border-radius:4px 4px 0 4px;}
+
+/*Back to top link located at the bottom of a block.*/
+.backtotop {margin-bottom:-40px; margin-right:-1px; float:right;position:relative;}
+
+.backtotop a {text-decoration:none; background:#f6f6f6; font-size:95%; padding:3px 12px 3px 8px; border:1px solid #ccc; border-top:none; display:block;
+				-moz-border-radius:0 0 4px 4px; -webkit-border-radius:0 0 4px 4px;}
+
+.backtotop a:hover {background:#fff;}
+
+.backtotop a img {margin-right:5px;}
+
+/* SIS logs @since 9.1 sp6 */
+#logDetail {overflow-y:auto; height:300px;}
+.totalMsgs {color:#555; font-weight:bold; font-size:120%; padding:2px 6px!important;}
+.latestEntry {font-weight:normal; font-size:85%; color:#666666; float:right!important;}
+.log-summary {
+	border:1px solid #ccc;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-box-shadow:0 0 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 0 4px rgba(0,0,0,0.3);
+	padding:6px;
+}
+.log-summary a {display:inline-block; margin:0 3px;}
+.log-summary li, .sis-seperator {border-left:1px dotted #ccc; padding:0 0 0 5px; vertical-align:middle;}
+.log-summary li:first-child {border-left:none;}
+.log-type {color:#fff; text-decoration:none; padding:2px 6px; -moz-border-radius:4px; -webkit-border-radius:4px; font-weight:bold; display:inline-block;}
+.log-summary .log-type {font-size:120%;}
+.log-error {background:#ef3e36;}
+.log-warning {background:#fcb040;}
+.log-message {background:#0b9444;}
+.log-debug {background:#00aeef;}
+.log-header {margin:0 0 3px;}
+
+.attachments .log-type {font-weight:normal; text-transform:uppercase; font-size:90%; letter-spacing:.1em; min-width:6em; text-align:center;}
+.table-scroll-wrapper {border:1px solid #eee; border-top:none;}
+.table-scroll-wrapper table {margin:0;}
+.table-scroll-wrapper tbody {height:200px;overflow: hidden;overflow-y:auto;}
+.row-selected {background-color:#e2eefe!important;}
+.log-search > div > div {display:inline-block; padding:0 9px 0 0!important; margin:6px 6px 0 0; border-right:1px dotted #bbb;}
+/* end SIS logs */
+/*
+ * END REPORTS
+ */

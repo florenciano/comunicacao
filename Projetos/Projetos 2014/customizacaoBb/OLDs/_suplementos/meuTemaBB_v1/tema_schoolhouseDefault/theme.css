@@ -1,0 +1,114 @@
+
+/*
+
+BEGIN BB LEARN THEME
+
+*/
+
+
+/*---Do not edit stylesheets below this line unless necessary.---*/
+
+/*Setting theme defaults*/
+	@import url("theme_defaults.css");
+
+/*Layout (holds together application layout panes)*/
+	@import url("layout.css");
+	
+/*---Do not edit stylesheets above this line unless necessary.---*/
+
+
+	
+	
+	
+/*---Elements---*/
+
+/*Controls*/
+	@import url("controls.css");
+	
+/*---End elements---*/
+
+
+
+
+/*---Components---*/
+
+
+/*Core page components*/
+	@import url("page_components.css");
+	
+/*Tabs*/
+	@import url("tabs.css");
+	
+/*Navigation Palettes*/
+	@import url("palettes.css");
+	
+/*Modules*/
+	@import url("modules.css");
+	
+/*Lists*/
+	@import url("lists.css");
+	
+/*Tables*/
+	@import url("inventory_tables.css");
+	
+/*Dynamic elements*/
+	@import url("dynamic_elements.css");
+	
+/*---End components---*/
+
+
+
+
+/*---Screen type-specific components and elements---*/
+
+/*Data collection*/
+	@import url("data_collection.css");
+
+/*Blogs*/	
+	@import url("blogs.css");
+
+/*Gradebook*/		
+	@import url("gradebook.css");
+	
+/*Reports*/		
+	@import url("reports.css");
+	
+/*Discussions*/
+	@import url("discussion_board.css");
+	
+/*Outcomes*/
+	@import url("outcomes.css");
+
+/*Course creation wizard*/
+	@import url("wizard.css");	
+	
+/*Login*/
+	/*@import url("login.css");*/
+  
+/*Rubrics*/
+	@import url("rubrics.css");
+	
+/*---End screen type tweaks---*/
+
+
+
+/*Utilities (frequently used attributes, fixes for browser rendering bugs)*/
+	@import url("utilities.css");
+	
+	
+/*Colors */
+	@import url("colors.css");	
+  
+/*Temporary*/
+	@import url("temporary.css");
+
+/*Service Pack styles.*/
+  @import url("sp8.css");
+  @import url("sp10.css");
+  
+  /*Responsive*/
+@import url("responsive_temp.css")
+
+/*
+ * END BB LEARN THEME
+ */

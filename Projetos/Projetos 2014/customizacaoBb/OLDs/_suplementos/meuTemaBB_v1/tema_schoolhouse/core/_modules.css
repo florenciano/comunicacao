@@ -1,0 +1,492 @@
+
+/*
+ * MODULES
+ */
+ 
+ 
+ 
+ 
+/*Portlet*/
+/*@branding -- do not remove*/
+#moduleBody, #moduleBorder,
+.portlet {background-color:#ccc; border:1px solid #999; margin:0 4px 10px 4px; padding:3px; _height:1%; _z-index:500; position:relative;}
+
+/*Portlet headers*/
+/*@branding -- do not remove*/
+#moduleTitle,
+.portlet h2  {
+	color: #000;
+	padding: 3px 52px 3px 12px;
+	background-color: transparent;
+	_background-image:none;
+	margin: -3px -3px 0 -3px;
+	font-size:95%;
+	font-weight:bold;
+	position:relative;
+	vertical-align:middle;
+	overflow:visible;
+	overflow:visible;
+	*height:1%;
+}
+
+.portlet h2.dragHandle:hover {background:#aaa; cursor:move;}
+
+.portlet h2 a {color:#fff; padding:0 12px 0 0; vertical-align:middle;}
+.portlet h2 a:hover {text-decoration:underline; background:transparent url(images/arrow_white.gif) no-repeat center right;}
+
+.portlet h2 a img {vertical-align:middle;}
+
+/*If title display is set to false. */
+.portlet h2.noTitle  {margin:0; padding:0; background:transparent; height:1.4em; *height:1%;}
+.portlet h2.noTitle:hover  {background:#ededed; *height:1%;}
+
+/*  Edit controls. */ 
+/*Located in the portlet header. */
+.edit_controls {position:absolute; right:4px; top:0px; height:20px; padding:0px 0px 0 4px; *top:2px; z-index: 1; }
+
+.edit_controls a {margin-left:1px; verical-align:top; opacity:0.6!important; padding:0;background-image:none!important; text-decoration:none;}
+.edit_controls a:hover {opacity:1!important;}
+
+/* Collapsible area of the portlet. Holds all the content. */
+.collapsible {
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	overflow:auto;
+	zoom:1;
+	_overflow:scroll;
+	border:1px solid #999;
+}
+
+/*@since 9.1*/
+.collapsible table {border-spacing:3px 2px; border-collapse:separate;}
+/*.collapsible p,*/ .collapsible .help {margin:4px 6px 6px;font-size:90%;}
+
+/*Manages module overflow in the event it contains an oversized image*/
+.imgWrapper {overflow:auto;_overflow:scroll;_width:100%;margin:6px auto;text-align:center;}
+.imgWrapper img {_height:1%;}
+
+/* H3 and h4 are category headers inside the portlet. */
+.portlet h3, #lightbox h3, .portlet div.portletBlock h4, .portlet div.blockContents h4, .flyout h3 {
+	margin:4px 7px;
+	font-size:90%;
+	color:#074BD2;
+	letter-spacing:1px;
+	border-bottom:1px solid #074BD2;
+	padding:1px 0 2px 0;
+	font-weight:bold;
+}
+
+.portlet h4 {
+	margin:4px 7px 0px 7px;
+	font-size:95%;
+	color:#000;
+	padding:1px 0 2px 0;
+	font-weight:normal;
+}
+
+
+
+/*--- Portlet lists ---*/
+/*@since 9.1*/
+.portlet .portletList, .portlet .portletList-img, .portlet .eventList {margin:4px 4px 12px;}
+
+.portlet .portletList li {background:transparent url(images/list_bullet_single.gif) no-repeat 5px 3px;padding:0 0  0 14px;margin:0 0 2px 0;}
+
+.portlet .courseListing li > a {font-weight:bold}
+.portlet .courseRole, .portlet .dataBlockLabel, .portlet .eventDate {color:#777;}
+
+.portlet .eventList li {padding:0;margin:0 0 2px 0;}
+.portlet .eventList li .date {font-weight:bold;background:#f0f0f0;color:#597298;padding:2px 6px; -moz-border-radius:1px; -webkit-border-radius:1px;}
+.portlet .eventList li .event {padding:2px 4px 2px 18px}
+.portlet .eventList li .description, .portlet .eventDate {font-size:90%;}
+.portlet .eventList li .event a {font-weight:bold;}
+
+.portlet .portletList-img > li {padding:7px 0 0 18px; margin:0 0 7px 0; text-indent:-15px; border-top:1px dotted #ccc;}
+.portlet .portletList-img > li:first-child {border-top:none;padding-top:0;}
+
+.portlet .courseInformation {text-indent:-16px;margin:4px 0;padding:0 0 0 16px}
+.portlet .courseDataBlock {text-indent:-4px;margin:4px 0;padding:0 0 0 4px}
+.portlet .courseDataBlock ul li {text-indent:0;}
+
+.portlet .calculatorModule {text-align:center;}
+.portlet .calculator {width:10em;margin:0 auto;padding:6px}
+
+.portlet .portletPath {background:#f0f0f0; -moz-border-radius:1px; -webkit-border-radius:1px; font-size:90%; margin: 4px }
+.portlet .portletPath span {display:inline-block; background:#ddd; color:#666; -moz-border-radius:1px 0 0 1px; -webkit-border-radius:1px 0 0 1px;padding:1px 3px 1px 6px; font-weight:bold;}
+.portlet .courseDataBlock ul {margin-top:5px}
+.portlet .courseDataBlock ul li {
+	background:transparent url(images/list_bullet_single.gif) no-repeat scroll 5px 3px;
+	margin:0 0 1px;
+	padding:0 0 0 14px;
+}
+
+.portlet .courseDataBlock a, .portlet .courseDataBlock li a {font-weight:normal;text-decoration:none}
+.portlet .courseDataBlock  a:hover , .portlet .courseDataBlock li a:hover  {text-decoration:underline}
+
+/* Formats help text in CS Splash Page portals */
+.portletHelp {margin:4px 7px 4px 7px;font-size:95%;color:#688BA8;padding:1px 0 2px 0;}
+
+
+/* styles for workflows module on My Institution page (I put these here b/c workflows uses the caliper styles above) */
+div.module_actions {margin:4px 0; padding:2px; line-height:1.8em;}
+div.module_actions a:link {
+  background-color:#EEEEEE;
+  border:1px outset #CCCCCC;
+  color:#003366;
+  font-size:90%;
+  font-weight:normal;
+  margin-bottom:5px;
+  padding:0 5px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+div.module_actions a:hover, div.module_actions a:active {border:1px inset #EEEEEE;}
+div.module_actions img {vertical-align:middle; margin:0 3px;}
+div.module_actions select {vertical-align:middle; font-size:90%;}
+div.module_actions label {font-weight:bold;}
+/* end styles for workflows module */
+
+
+
+/*Submissions in the outcomes palette*/
+div.scroll_div {overflow:auto;max-height:300px;_height:300px;}
+		
+.submission_list {margin:0; padding:4px 6px;}
+.submission_list li {padding:3px 0; border-bottom:1px dotted #ccc; font-weight:bold;}
+.submission_list li a {font-size:90%; font-weight:normal; margin-left:6px;}
+			
+.submission_list li a.label {font-size:100%; font-weight:bold; margin-left:0px;}
+.submission_list li div.button {margin:4px 0 0 0; float:right; _padding:1px;}
+.submission_list li span {font-size:90%; margin-left:6px; font-weight:normal;}
+/*End Submissions in the outcomes palette*/
+
+
+
+
+
+/*EUD Module (styles moved from nautilus.css)*/
+
+
+.eudModule {
+	background-color:#EDEDED;
+	background-image:url(images/dcp_block_bg.png);  
+	_background-image:none;  
+	background-position:50% 50%;
+	padding:0 0 33px 0;
+	border:1px solid #f9f9f9;
+	border-width:1px 0 0 1px ;
+	margin:0;
+	_padding:0;
+}
+
+.eudModule .eudModule-inner {overflow-y:auto; min-height:250px; max-height: 500px; border-bottom:1px solid #f9f9f9; _border-bottom:none;}
+
+.moduleActions {padding:10px 6px 0 6px;} 
+.actionMenuButton {margin-top:-2px; display: inline-block;}
+
+.portlet .portletBlock {margin:6px 6px 0px 6px;background:#fff;border:1px solid  #888;font-size:100%;}
+
+.portlet  .memberList {margin:0 0 5px 0;}
+.itemGroups {margin:4px 9px 12px; padding:0;}
+.itemGroups .itemGroups {margin-left:0;margin-bottom:4px}
+.portlet  .blockGroups li {font-size:100%;}
+.portlet  .itemGroups li {padding:0 0 7px 0;line-height:120%;overflow-x:hidden;_width:100%;}
+.portlet  .memberList li {padding:0;margin-left:14px!important;}
+
+.portlet span.course, .portlet  ul.memberList, .portlet span.refresh {font-size:85%;display:block;}
+.portlet span a {color:#777;}
+
+.portlet span.noIndent, .portlet .whatsNew span.course, .portlet span.course {margin-left:0!important;}
+
+/*Hierarchical list inside EUD module*/
+.portlet ul.hierarchyList {margin-left:22px;}
+.portlet ul.hierarchyList li {text-indent:-18px;*border:1px solid transparent;overflow-x:visible}
+.portlet ul.hierarchyList li h3, .portlet ul.hierarchyList li div, .portlet ul.hierarchyList li.childless, .portlet ul.hierarchyList li a, .portlet ul.hierarchyList li li {text-indent:0;}
+
+
+.portlet ul li ul li span.warning, .portlet ul li ul li span.due, .portlet ul li ul li span.newItemCount {color:#777777;font-size:85%;white-space:nowrap;display:inline;}
+/*.portlet ul li ul li span.warning {color:#FF0000;}*/
+
+.flag {color:#cc3300; font-size:90%; display:inline;  background: #FFE4DF; font-weight:bold; border:1px solid #EFA495; padding:0 4px; margin:0 0 0 3px}
+
+.portlet  ul.memberList span, .portlet  ul.memberList span.newItemCount {font-size:100%;}
+
+.portletInfoFooter {font-size:90%;color:#555;position:absolute;bottom:2px;right:0;padding:2px 9px;_position:static;_text-align:right;_margin-top:4px;}
+
+.dateSelector {background:#f1f1f1;padding:2px 9px 4px 9px; border-bottom:1px solid #888}
+
+.blockGroups li span.itemHeadOpen  {border-bottom:1px solid #EEEEEE;}
+
+.blockGroups li span.itemHead a:hover {background-color:transparent;text-decoration:underline;}
+
+
+.portlet .portletBlock h4 a:hover, .portlet .portletBlock h4.blockTitle a:hover {background:#EEEEEE;}
+
+.portlet .portletBlock h4 {background:#F1F1F1; border:0; color:#444444; display:block; letter-spacing:0px; margin:0pt;padding:4px 9px;text-decoration:none;}
+
+.portlet .subCategories li a, .blockGroups .itemHead {
+  background:#E3EFFF url(/images/ci/ng/more_options.gif) no-repeat scroll 3px center;
+  border-top:1px solid #777777;
+  color:#597298;
+  display:block;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin:0pt;
+  padding:4px 4px;  
+  padding:4px 5px 4px 16px;
+  text-decoration:none;
+}
+.blockGroups .itemHead:hover {text-decoration:underline;cursor: pointer;}
+
+.blockGroups .itemHeadOpen {background:#FFFFFF url(/images/ci/ng/less_options_dark.gif) no-repeat scroll 3px center;}
+.blockGroups .itemHeadOpen:hover {background-color:#FFFFFF; text-decoration:underline; cursor:pointer;}
+
+.blockGroups li img.spacer {height: 0px;width: 50px;}
+.blockGroups li span.headerText {*float:left;}
+.blockGroups li span.headerText:hover {text-decoration:underline; cursor:pointer;}
+
+
+
+.viewHeader {background:#F1F1F1; border:0pt none; border-bottom:1px solid #888; color:#444444; display:block; font-weight:bold; padding:4px 4px 4px 7px;}
+.viewHeader h3 {margin:0; padding:0; border:none; background:transparent; color:#444; font-size:100%; letter-spacing:0;} /* overrides .portlet h3 styles */
+
+/* defines the style for the waiting frame that appears as nautilus modules are loading */
+div.waitingFrame {background: #FFFFFF;}
+/*End EUD module contents.*/
+
+
+
+
+/*Login Module*/
+.portlet #loginBoxFull {margin:0; padding: 9px 0 6px; background:#fff1c5;}
+    
+.portlet #loginBoxFull p { margin: 0 10px 10px; font-size: 0.95em; color: #444; padding-left: 0;}
+  
+.portlet #loginBoxFull p.welcome {margin: 10px;padding: 0;font-weight: bold;background: none;color:#000000;font-size: 1.0em;}
+  
+.portlet #loginBoxFull ul {margin: 6px 12px; padding: 0; list-style: none;}
+.portlet #loginBoxFull li {margin: 0; padding: 2px 0; background-image: none; clear: both;}
+    
+.portlet #loginBoxFull li label {font-weight: bold; width: 80px; margin-top: 3px; margin-right: 3px; float: left;}
+.portlet #loginBoxFull input[type="text"], .portlet #loginBoxFull input[type="password"] {float: left;}
+  
+.portlet #loginBoxFull .forgot {margin-left: 83px; float: left;}
+  
+.portlet #loginBoxFull a {font-size: .9em;}
+.portlet #loginBoxFull p a, .portlet #loginBoxFull p.welcome a {font-size: 1.0em;}
+  
+.portlet #loginBoxFull li input.submit {margin-left: 83px;}
+
+.portlet #loginPaneShort {border:1px solid #ccc;margin:9px} 
+
+.portlet #loginFooter {margin:0; padding: 0px 0pt 9px 0; background-image: none; font-size: 0.9em; color: #444444;}
+
+.portlet #loginFooter ul {margin: 0; padding: 0; list-style: none;}
+  
+.portlet #loginFooter ul li {float: left; padding: 0 10px; border-left: 1px dotted #999; background-image: none;}
+.portlet #loginFooter ul li:first-child {border-left: none;}
+  
+.portlet #loginFooter ul li :link.active {color: #666;text-decoration: none;}
+/*End login Module*/
+
+/*Begin Channel Module*/
+
+.moduleChannel{
+        padding:6px;
+}
+.moduleChannel li {
+      padding:4px;
+}
+.moduleChannelContent{
+      font-family:arial,verdana,helvetica;
+      font-size:75%;
+}
+.moduleChannelIframe{
+      margin:6px 0px;
+      border:1px dotted;
+}
+/*End Channel Module*/
+
+
+
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*
+
+#portalPane, div.portalPane {margin:3px 14px 0 14px;padding:0;background-image:none;min-width:auto;display:block;*margin:3px 14px 0 14px;*width:auto;}
+
+div.palette_tabs ul li.active span {font-weight:bold;margin:3px 4px 0px 4px;_margin:3px 4px 2px 4px;padding:1px 9px 4px 10px;_padding:0px 9px 5px 8px;font-size:160%;background:url(../images/active_step.gif);background-repeat:no-repeat;color:#fff;}
+div.palette_tabs .active a{text-decoration:none; display:inline;}
+div.palette_tabs .active a:hover{background-color:#fff;text-decoration:underline;}
+div.palette_tabs ul li.last{border-right:1px solid #999;}
+div.palette_tabs ul li.last a{border:none;}
+div.palette_tabs .linediv{display:inline; float:left; border-left:1px solid #999;padding:4px 0 5px 0;}
+div.palette_tabs .filterdiv{border-bottom:2px solid #999;text-align:right;vertical-align:middle;padding-bottom:3px; height:22px;}*/
+/*End Small tabs in the outcomes palette*/
+
+
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*
+.portlet ul.courselist {margin:6px 6px 9px 6px;}
+.portlet ul.courselist li {padding:0 0  0 14px;margin:0 0 6px 0;font-weight:bold;clear:both;background:transparent url(images/list_bullet_single.gif) no-repeat 4px 5px;}
+.portlet ul.courselist li a {	font-size:110%;}
+.portlet ul.courselist li a:hover {text-decoration:underline;}
+.portlet ul.courselist li p {font-size:90%;font-weight:normal;margin:4px;}
+.portlet ul.scholar {margin:2px 6px;}
+.portlet ul.scholar li {margin-bottom:4px; border-top:1px solid #ddd;padding:6px 6px 4px 24px;background:transparent  url(images/small_scholar.gif) no-repeat 0 6px;}
+.portlet ul.scholar li:first-child {border-top:none;}
+
+
+ul.tagcloud {margin:4px 6px 12px 6px;padding:0pt;}
+ul.tagcloud li {display:inline;list-style-type:none;margin:0pt;padding:3px;vertical-align:baseline;background-image:none;}
+li.freq1 a {font-size:90%;}
+li.freq2 a {font-size:105%;}
+li.freq3 a {font-size:120%;}
+li.freq4 a {font-size:135%;}
+li.freq5 a {font-size:155%;}
+li.freq6 a {font-size:165%;}
+li.freq7 a {font-size:175%;}
+li.freq8 a {font-size:195%;}
+*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*--- Form elements inside portlet ---*/
+/*.portlet fieldset {border:0; margin:0; padding:6px 9px 6px 9px;}*/
+/*.portlet fieldset legend {visibility:hidden;line-height:0;height:0px;}*/
+/*div.portlet fieldset a.browse {font-size:90%;padding:1px 4px 1px 4px;color:#666;}
+div.portlet fieldset label {display:block;}
+div.portlet input[type="text"], div.portlet select  {border:1px solid #999;font-size:95%; vertical-align:middle; margin:1px 0;padding:0;}
+div.portlet input[type="button"] {border:1px solid #999; font-size:90%; background:#ddd; padding:0 2px; vertical-align:baseline; margin:1px 0;}
+div.portlet input[type="button"]:hover {border:1px solid #999; font-size:90%; background:#fff;
+}
+*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/* Portlet content formatting. 
+.portlet ul li div.location, .portlet_cust ul li div.location {padding:0;font-size:90%;color:#999;}
+.portlet ul li a {}
+.portlet ul li span.post_date, .portlet ul li span.info_byline, .portlet ul li span.time {float:right;color:#999;margin-left:3px;}
+.portlet ul.disc li span {float:right;padding:0 0 0 6px;}
+*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*
+.portlet .portletTabs {background:#ededed;padding:4px 0px 0 0px;margin:0 6px 0 6px;border-bottom:1px solid #ccc;}
+.portlet ul.portletTabs li {float:left;background-image:none;padding:0;margin:0;}
+.portlet ul.portletTabs li a {display:block;padding:3px 12px;background-image:none;font-size:90%;text-decoration:none;}
+.portlet ul.portletTabs li a:hover {text-decoration:underline;}
+.portlet ul.portletTabs li.active {position:relative;top:1px;}
+.portlet ul.portletTabs li.active a {background-color:#fff;border:1px solid #ccc;border-bottom:none;font-weight:bold;}
+.portlet div.tabbedPortlet {background:#ededed;padding-top:9px}
+.portlet div.portletTabBlock {background:#fff;margin:0 6px 6px 6px;padding:6px 0 6px 0;border:1px solid #ccc;border-top:none;}
+.blockContents {margin:2px 0px 2px 0px;background:#fff;}
+*/
+
+/*@deprecated 9.1 - not in use in 9.1 markup, may be removed entirely in the next release. */
+/*This css is currently used for the following caliper modules: 
+ * My Outcomes Evaluations: webapps.caliper/web/module/view_reviewermodule.jsp
+ */
+
+/*Small tabs in the outcomes palette
+.palette_tabs {margin:0px 0px 0px 0px;padding:4px 0px 0px 4px;_padding:4px 0px 0px 4px;background:#dedede;border:1px solid #ccc;border-bottom:1px solid #666;}
+.palette_tabs ul {list-style-type:none;font-size:90%;}
+.palette_tabs ul li {
+	float:left;
+	margin:0 0px 0 0px;
+	background:#ededed;
+	border-left:1px solid #666;
+	border-top:1px solid #666;
+	padding:2px 9px 3px 9px;
+	_padding:1px 4px 1px 4px;
+	text-align:center;
+	color:#666;
+}
+div.palette_tabs ul li a{text-decoration:none; display:block;}
+div.palette_tabs ul li a:hover{text-decoration:underline;}
+div.palette_tabs ul li a:focus{outline:none;}
+div.palette_tabs ul li.active {font-weight:bold;border-left:1px solid #666;border-top:1px solid #666;background:white;padding:3px 9px 3px 9px;
+			_padding:1px 4px 2px 4px;text-align:center;font-weight:bold;color:#000;margin-bottom:-2px;_top:-1px;}
+*/
+
+
+
+/* Portlet Block is used when there's a need to have collapsible blocks within a portlet */
+
+/*
+.portlet .portletBlock h4, .portlet .portletBlock h4.blockTitle {padding:0;margin:0;border:0;}
+
+.portlet .portletBlock h4 a, 
+.portlet .portletBlock h4.blockTitle a {display:block;font-size:110%;text-decoration:none;letter-spacing:0px;background:#f1f1f1;color:#444;margin:0;padding:4px 9px;border:0;}
+
+.portlet .portletBlock h4 a:hover, .portlet div.portletBlock h4.blockTitle a:hover {background:#eee;}*/
+
+/* Span within the block title. Used to display total item count.
+.portlet .portletBlock h4 a span, .portlet div.portletBlock h4.blockTitle a span {color:#ddd;font-weight:normal;}*/
+
+
+/* Portlet block groups. Contains Item Groups.
+.portlet ul.subCategories, ul.blockGroups {list-style:none;margin:0;padding:0;}
+.portlet div.portletBlock  ul.subCategories li, ul.blockGroups li {padding:0;margin:0;} */
+
+/*.portlet ul.subCategories li a, ul.blockGroups li a.itemHead {
+	padding:4px 16px;
+  	background:#e3efff url(images/more_options.gif) no-repeat 3px center;
+	display:block;
+	margin:0;
+	text-decoration:none;
+	border-top:1px solid #777;
+	font-weight:bold;
+  	font-size:90%;
+	color:#597298;
+	letter-spacing:1px;
+}
+
+ul.blockGroups li a.itemHead:hover {background-color:#e3efff;text-decoration:underline;}
+
+ul.blockGroups li a.itemHeadOpen {background:#fff url(images/less_options_dark.gif) no-repeat 3px center;}
+ul.blockGroups li a.itemHeadOpen:hover {background-color:#fff;text-decoration:underline;}
+
+.portlet ul.subCategories li:first-child a, ul.blockGroups li:first-child a {border-top:none;}
+.portlet ul.subCategories li a:hover, ul.blockGroups li a:hover {background-color:#fff;opacity:1;filter:alpha(opacity=100);}
+.portlet ul.subCategories li a span, ul.blockGroups li a span {color:#777;font-weight:normal;}
+.portlet ul.itemGroup li a, ul.blockGroups li ul.itemGroups li a {display:inline;padding:0;font-weight:bold;border:0;background-color:transparent;}
+.portlet ul.itemGroup li a:hover, ul.itemGroups li a:hover {text-decoration:underline;}
+
+ul.itemGroups li  ul.items {padding:2px 9px;display: block; margin: 0; }
+ul.blockGroups li ul.itemGroups li a, ul.itemGroups li ul.items li a {font-weight:normal;}
+.portlet div.portletBlock h3 {border:none;font-weight:bold;letter-spacing:0;margin:0;padding:0;font-size:100%;}
+.portlet div.portletBlock h3 a {display:block; padding:3px 12px;margin:0;text-decoration:none;background:#E3Efff url(images/more_options.gif) no-repeat 99% center;}
+.portlet div.portletBlock h3 a:hover {text-decoration:underline;}
+.portlet div.portletBlock:first-child h3 a {border-top:none;}
+.portlet div.portletBlock h3 a.open {display:block; padding:3px 12px;margin:0;text-decoration:none;background:#E3Efff url(images/less_options.gif) no-repeat 99% center;}
+.portlet ul.objectList li  {background-image:none;margin:0;padding:0;}
+.portletBlock ul li, .blockContents ul li, ul.memberList li {background-image:none;padding:0;margin:0 0 0 0px;}
+.portlet .blockContents ul li ul li span, .portlet .blockContents ul li span, .portlet ul li ul li span {color:#888;margin:0 0 0 4px;}
+
+
+*/
+/* Default flyout and contextual menu attributes.
+ul.actionMenuList {
+  position: absolute;
+  top: 23px;
+  left: 0px;
+  margin:0;
+  padding:0;
+  background-color:#E2EEFE;
+  border:1px solid #5577BB;
+  border-top:1px solid #ACC2DF;
+  border-left:1px solid #ACC2DF;
+  z-index:1001;
+}*/
+
+
+
+
+
+
+/*
+ * END MODULES
+ */

@@ -1,0 +1,267 @@
+/*
+ * TEMPORARY STYLESHEET
+ * Developers: place styles for new features/modifications here and annotate them with "@since [release number]." 
+ * All styles are to be moved to permanent stylesheets prior to release.
+ */
+ 
+ 
+/* ---------------- BEGIN: Evaluation widget (@since 9.1 SP1) ---------------- */
+
+.gradeWrapper {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:111;
+  margin:0 4px;
+  border:3px solid #555;
+  border-bottom:0;
+  -moz-border-radius:9px 9px 0 0;
+  -webkit-border-top-left-radius:9px;
+  -webkit-border-top-right-radius:9px;
+  padding:4px 9px;
+  background:#888;
+  height:40px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); 
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  zoom:1;
+}
+
+.gradeSide h2 {}/* creates a line break */
+.gradeActions {
+  white-space:nowrap; 
+  position:absolute; 
+  top:-23px; 
+  right:12px;
+  border:2px solid #555;
+  border-bottom:0;
+  -moz-border-radius:3px 3px 0 0;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-top-right-radius:3px;
+  padding:3px;
+  background:#888; 
+}
+
+.gradeItemsWrapper {overflow-y:auto; padding:6px 12px; background:#fff;}
+.gradeItemsWrapper .paletteItems {font-size:100%;}
+.gradeSide .tocTreeWrapper {overflow:auto;}
+ 
+.gradeSide {
+  position:absolute;
+  top:0;
+  right:-12px;
+  bottom:auto;
+  left:auto;
+  margin:0;
+  padding:4px;
+  border:3px solid #555;
+  -moz-border-radius:9px;
+  -webkit-border-radius:9px;
+  background:#888;
+}
+
+/* styles to align the TOC with the course menu */
+.gradeBottom_pullExpanded {left:200px;}
+.gradeBottom_pullCollapsed {left:0;}
+.gradeSide_pullExpanded {}
+.gradeSide_pullCollapsed {}
+
+/* styles applied to the contentPanel to make room for the TOC */
+.gradeSide_panel .container {padding-right:42.5%; position:relative;}
+.gradeSide_panelMax .container {padding-right:370px; position:relative;}
+.gradeSide_panelMax #tocCart {left:-12px;}
+.gradeBottom_min {padding-bottom:30px;}
+.gradeBottom_max {padding-bottom:330px;}
+.gradeBottom_open {padding-bottom:160px;}
+
+/* ---------------- END: Evaluation widget (@since 9.1 SP1) ---------------- */
+ 
+/* @Since 9.1SP3 */
+.disabledQuestionRow {background-color:#D3D3D3}
+
+/* @Since 9.1SP3 */
+li div.contentListRight span.extraCredit {display:block;}
+li.hideQuestionDetails {min-height:30px;}
+/* add opposite text-align version to rtl */
+li.hideQuestionDetails div.contentListRight{width:19em;text-align:left;}
+li.hideQuestionDetails div.contentListRight span.extraCredit {display:inline!important;}
+li.hideQuestionDetails div.contentListRight span span {display:inline!important;}
+.hideQuestionDetails .contentListRightOffset  {padding:6px 19.1em 6px 28px;}
+
+/* @Since 9.1SP3 */
+div.referringCanvases {border-top: 1px solid rgb(238, 238, 238);}
+   
+/* @Since 9.1SP3
+The automatically generated question numbers on the canvas need padding for surveys but not on tests: 
+*/
+span.autoQuestionNumber {margin: 0px 0px 0px 10px;}
+div.contentListRightOffset h3 span.autoQuestionNumber {margin: 0px; }
+
+/* @Since 9.1SP3 */
+div.viewGradeAttempt {border: 2px solid #ccc}
+div.viewGradeAttempt h3 a {
+	background: transparent;
+	color: #000; 
+	margin: 9px 0px 0px 0px;
+	padding:4px 4px 5px 26px;;
+	}
+
+/* For Grade Center favorites in control panel  */
+.navPaletteContent .submenu li.favorite { padding-left:10px; }
+
+/* @Since 9.1sp3 */
+div ul li div.collabComments {
+	overflow:auto !important;
+	background-color: white;
+}
+
+/* @Since 9.1sp3 */
+div.comments div div.collabComments {
+	overflow:auto !important;
+	max-height: 100px;
+	background-color: white;
+}
+
+/* @Since 9.1sp3 */
+div.editBlock table.textboxtable {
+	background: none;
+}
+
+/* @Since 9.1sp3 */
+div.editBlock table.textboxtable tbody tr th,
+div.editBlock table.textboxtable tbody tr td,  
+div.editBlock table.textboxtable tbody tr,
+div.editBlock table.textboxtable table {
+	padding: 0px;
+	border-top: none;
+	background: none;
+}
+
+/* @Since 9.1sp3 */
+div.editgrade div.editBlock {
+	float: none;
+}
+
+/* @Since 9.1sp3 */
+.collabViewComments {
+	/* This doesn't work 'nicely' in all browsers float: right; */
+}
+
+/* @Since 9.1sp3 */
+h3 a.questionExpander {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(images/indicators.png) no-repeat scroll 0 -744px !important;
+color:#FFFFFF;
+display:block;
+padding:3px 16px;
+}
+
+/* @Since 9.1sp3 */
+h3 a.questionExpander.open {
+background:transparent url(images/indicators.png) no-repeat scroll 0 -1338px !important;
+}
+
+/* @Since 9.1sp3 */
+div.studentGradesCommentPreview {overflow:auto !important; width:200px; height:110px; }
+div.grdDetEditTabCommentPreview {overflow:auto !important;  height:110px; }
+div.grdDetHistTabCommentPreview {overflow:auto !important; width:200px; height:110px; }
+
+
+/* @Since 9.1sp6 - NOTE: This is the same as .genericButton, .genericButtonImg, .browse, .browseIcon, input[type="submit"].genericButton,... in controls.css but put here
+ * to separate it out as new functionality here. */
+.u_floatThis-left .pagelink, 
+.u_floatThis-right .pagelink {
+    background-color: #ededed;
+    border: 1px solid #ccc; 
+    border-bottom: 1px solid #aaa; 
+    border-right: 1px solid #aaa;
+    color:#333;
+    font-weight: normal;
+    background-position:0 -45px;
+    *display:inline-block;  
+}
+
+/* @Since 9.1sp6 */
+.attemptNavContainer {
+  padding: 10px 12px 45px !important;
+}
+
+/* @Since 9.1sp6 */
+.collabContainer {
+  padding: 10px 12px 32px;
+  position: relative;
+}
+
+/* @Since 9.1sp6 */
+.overtimeStyle {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+/* @Since 9.1sp6 */
+.blogNav a {
+  display:inline-block;
+  margin: 2px;
+}
+
+@media print {
+  .donotprint {
+    display:none;
+  }
+}
+
+/*Modifications to support 2011 theme related markup changes */
+.modeSwitchWrap, .helpLink { z-index: 1; }              		
+
+/* @Since 9.1sp8 */
+div.checkListActions {
+  padding-bottom: 10px;
+}
+
+/* 
+The following are hacks used by the contentplayer
+*/
+/*
+Used by content player view attempt for <td> font sizing.  Can be removed after 
+plugins-contentplayer/web/grading/viewAttempt.jsp has been re-written without tables  
+*/
+.bb-cpgbtd {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:10pt;
+}
+/*
+Used by content player view attempt for <th> font sizing.  Can be removed after 
+plugins-contentplayer/web/grading/viewAttempt.jsp has been re-written without tables  
+*/
+.bb-cpgbth {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:10pt;
+}
+
+/*
+Used by content player modify grade for <td> font sizing.  Can be removed after 
+plugins-contentplayer/web/grading/modifygrade.jsp has been re-written without tables  
+*/
+.bb-cpmgtd {
+    font-family:Arial,Helvetica,sans-serif;
+    color:#000000;
+    font-size:9pt;
+}
+/*Used by content player modify grade for <th> font sizing.  Can be removed after 
+plugins-contentplayer/web/grading/modifygrade.jsp has been re-written without tables  
+*/
+.bb-cpmgth {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9pt;
+    font-weight:bold;
+}
+
+/* end content player hacks */
+
+/*
+ * END TEMPORARY 
+ */
+ 

@@ -1,0 +1,148 @@
+/* @override http://rshehadeh2003/webapps/blackboard/nautilus/views/nautilus_view.css?v=9.0.198.0 */
+
+
+
+
+
+
+/*.portlet div.portletBlock h4 a:hover, .portlet div.portletBlock h4.blockTitle a:hover {
+  background:#EEEEEE none repeat scroll 0% 0%;
+}
+
+
+
+.portlet div.portletBlock h4 {
+  background:#F1F1F1 none repeat scroll 0% 0%;
+  border:0pt none;
+  color:#444444;
+  display:block;
+  letter-spacing:0px;
+  margin:0pt;
+  padding:4px 9px;
+  text-decoration:none;
+}
+
+
+
+.portlet ul.subCategories li a, ul.blockGroups li a.itemHead {
+  background:#E3EFFF url(/images/ci/ng/more_options.gif) no-repeat scroll 3px center;
+  border-top:1px solid #777777;
+  color:#597298;
+  display:block;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin:0pt;
+  padding:4px 4px;
+  text-decoration:none;
+}
+
+
+
+ul.blockGroups li a.itemHeadOpen {
+  background:#FFFFFF url(/images/ci/ng/less_options_dark.gif) no-repeat scroll 3px center;
+}
+
+ul.blockGroups li a.itemHead:hover {
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+
+ul.blockGroups li a.itemHeadOpen:hover {
+  background-color:#FFFFFF;
+  text-decoration:underline;
+  cursor: pointer;
+}
+  */
+
+/************************/
+
+/*
+.portlet ul.subCategories li span, ul.blockGroups li span.itemHead {
+  background:#E3EFFF url(/images/ci/ng/more_options.gif) no-repeat scroll 3px center;
+  border-top: 1px solid #888;
+  color:#597298;
+  display:block;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin:0pt;
+  padding:4px 5px 4px 16px;
+  text-decoration:none;
+}
+
+
+
+ul.blockGroups li span.itemHeadOpen {
+  background:#FFFFFF url(/images/ci/ng/less_options_dark.gif) no-repeat scroll 3px center;
+}
+
+
+
+ul.blockGroups li img.spacer {
+  height: 0px;
+  width: 50px;
+}
+
+
+ul.blockGroups li span.headerText:hover {
+  text-decoration:underline;
+  cursor: pointer;
+}
+*/
+
+/* Default flyout and contextual menu attributes. */
+
+/*
+ul.actionMenuList {
+  list-style-type: none;
+  position: absolute;
+  top: 23px;
+  left: 0px;
+  margin:0;
+  padding:0;
+  background-color:#E2EEFE;
+  border:1px solid #5577BB;
+  border-top:1px solid #ACC2DF;
+  border-left:1px solid #ACC2DF;
+  z-index:1001;
+}
+
+
+
+.actionMenuButton {
+  background:#D3E2F5 none repeat scroll 0% 0% !important;
+  border: 1px solid #ACC2DF !important;
+  color:#000000 !important;
+  font-weight: normal !important;
+  font-size: 12px !important;
+  padding: 1px 5px 1px 5px !important;
+  text-decoration:none !important;
+  cursor: pointer !important;
+  margin-top: -2px;
+  display: inline-block;
+}
+
+
+.viewHeader {
+  background:#F1F1F1;
+  border:0pt none;
+  border-bottom: 1px solid #888;
+  color:#444444;
+  display:block;
+  letter-spacing:0px;
+  font-weight:bold;  
+  margin:0pt;
+  padding:4px 4px 4px 7px;
+  text-decoration:none;
+}
+
+*/
+
+/* defines the style for the waiting frame that appears as nautilus modules are loading */
+/*
+
+div.waitingFrame {
+	background: #FFFFFF none repeat scroll 0 0
+}
+*/

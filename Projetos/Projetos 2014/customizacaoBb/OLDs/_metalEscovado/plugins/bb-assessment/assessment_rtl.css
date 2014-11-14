@@ -1,0 +1,17 @@
+.assessmentPortlet {
+  left: 26px;
+  right: auto;
+}
+
+.copyQuestion {
+  background-position:100% 0px;
+  padding-right:22px !important;
+  padding-left:0px !important;
+}
+
+.linkQuestion {
+  background-position:100% 0px;
+  padding-right:22px !important;
+  padding-left:0px !important;
+}
+

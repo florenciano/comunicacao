@@ -1,0 +1,109 @@
+/*
+ * LOGIN PAGE
+ */
+
+#loginPageContainer {
+  position: relative;
+  width: 716px;
+  min-height: 100%; /* For Modern Browsers */
+  height: auto !important; /* For Modern Browsers */
+  height: 100%; /* For IE */
+  margin: 0 auto;
+  text-align: left;
+}
+
+#loginPane {margin:40px 0 12px; padding:0 0 12px 0; background:transparent url(images/bg_content_shadow.png) repeat-x  right 100%;}
+
+#loginPane div.loginBack b {background: #94b3de;}
+
+#loginContainer {margin:0 auto; border:2px solid #07477F; background:#fff; zoom:1;}
+
+#loginHeader {background:#fff; font-size: 0.85em; color: #444;}
+
+#loginHeader img.productLogo {float:left; margin:16px 6px 6px 24px; _margin: 9px 6px 9px 24px; _width:60px;_height:58px;}
+
+#loginHeader ul {float: right; margin: 10px 0; }
+
+#loginHeader ul li {float: left;padding: 0 10px; border-left: 1px dotted #999;}
+#loginHeader ul li:first-child {border-left: none;}
+
+#loginHeader ul li :link .active {color: #666;text-decoration: none;}
+
+#loginLang {font-size: 0.85em; color:#444; margin:0 auto; padding:6px; background:#FFF;clear: both;}
+
+#loginLang h2 {margin: 1em 0 0.1em 0;}
+#loginLang h3 {float: left; margin: 6px;}
+
+#loginLang ul {margin: 6px 0;}
+#loginLang ul li {float: left; margin: 0 0 2px 0; padding: 0 6px; border-left: 1px dotted #999; white-space: nowrap; min-height:1.45em;}
+#loginLang ul li:first-child {border-left: none;}
+
+#loginLang ul li :link .active {color: #666;text-decoration: none;}
+
+div.loginBody {background-color: #ffcc33; padding:0;border-top:2px dashed #f0930c;}
+
+#loginBox {float:left; width:49.5%; background:#ffcc33; border-right:2px dashed #f0930c;}
+
+#loginBox h2 {margin: 10px;}
+
+#loginBox p {margin: 10px; font-size: 0.85em; color: #444;}
+
+#loginBox ul {margin: 6px 12px;}
+#loginBox li {padding: 2px 0;clear:both;}
+
+#loginBox li label {font-weight: bold; width: 90px; float: left; padding-right: 3px;}
+#loginBox li input {float: left;}
+
+#loginBox input[type="text"], #loginBox input[type="password"] {border-width: 2px;*width:160px}
+
+#loginBox .forgot {margin-left: 93px; font-size: 85%;}
+
+#loginBox li input[type="submit"] {margin-left: 93px;}
+#loginBox li input.submit {margin-left: 94px;}/*IE6*/
+
+
+#loginOptions {float: right;width: 49%;background-color: #ffcc33; margin-right:6px;}
+
+#loginOptions h2 {margin: 10px;}
+
+#loginOptions p {margin: 10px; font-size: 0.85em; color: #444;}
+
+#loginOptions ul li a {display: block;padding: 9px 12px;background: transparent;color: #52637b;text-decoration: none;font-weight:bold;}
+
+#loginOptions ul li a:hover {background: #f0930c;color: #000;}
+
+#loginOptions ul li.subOption a {background: transparent; font-weight:bold;}
+
+#loginOptions ul li.subOption a:hover {background: #f0930c;}
+
+
+#loginText {padding: 12px 80px 18px 80px; background:#237BD2; border-top:1px solid #777; text-align:center}
+
+#loginText p span {font-weight:bold; font-size:105%; color:#fff;}
+
+#loginText p {margin:0; font-size:115%; color: #ededed; font-weight:bold;}
+
+#loginImage {text-align: center;background-color:#fff;padding:0;  overflow:hidden;}
+
+#loginImage img { margin: 0 auto;
+}
+
+#loginAnnouncements {clear: both; background: #ddd; padding:0 0 7px 0; border-top:1px solid #eee; }
+
+#loginAnnouncements h3 {margin: 0 9px 0 9px; padding: 6px 3px; font-size:110%; color:#555; border-bottom:1px solid #bbb;}
+
+#loginAnnouncements ul {margin: 0 9px 0px 9px; padding: 1px 12px  8px 12px; background:#ebebeb; list-style-image: url(/images/ci/ng/list_bullet_single.gif);}
+#loginAnnouncements ul li {margin: 5px 5px 5px 15px;padding: 4px 0 0 0; font-size:90%; border-top:1px dotted #999;}
+
+#loginAnnouncements ul li:first-child {border-top:0;}
+
+#loginAnnouncements ul li a {font-size: 95%;color: #495a71;}
+
+#loginRedirectProviders { border-top: 2px dashed #f0930c; }
+#loginRedirectProviders h3 {margin: 10px;}
+#loginRedirectProviderList li {display: inline-block; margin: 0 10px 5px 0; }
+#loginRedirectProviderList li img { width: 16px; height: 16px; }
+
+/*
+ * END LOGIN PAGE
+ */
