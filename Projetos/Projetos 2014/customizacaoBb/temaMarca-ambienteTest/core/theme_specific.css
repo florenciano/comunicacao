@@ -407,8 +407,8 @@ body.picker .locationPane {
 }
 /* logo insper */
 .bannerImage {
-  max-height: 34px;
-  min-width: 56px; /* manual marca Insper [redução máxima] */
+  /*max-height: 34px;
+  min-width: 56px; // manual marca Insper [redução máxima] */
 }
 
 /*Branding image, hot spots and hot links are hidden when compact tabs are used*/

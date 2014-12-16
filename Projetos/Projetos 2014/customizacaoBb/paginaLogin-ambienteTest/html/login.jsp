@@ -18,7 +18,7 @@
 --%>
 <html lang="pt-br">
 <head>
-    <title>Blackboard Learn - Insper</title>
+    <title>Blackboard Learn | Ensino Superior e Pesquisa em Negócios, Economia e Direito | Insper</title>
 
 <%-- 
   If you need to customize styles defined in login.css, you can place your changes

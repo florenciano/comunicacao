@@ -21,7 +21,7 @@ $(function(){
 
 	// banner: replacement random imagens
 	function replacementImgBanner () {
-		var numbTotalImg = 6;
+		var numbTotalImg = 7;
 		var num = Math.ceil(Math.random() * numbTotalImg);
 		$( ".libraryInsperLogin" ).css( "background-image", "url(https://inspertest.blackboard.com/bbcswebdav/institution/DEA/pagLogin/img/campus" + num + ".jpg)" );
 	}
@@ -61,7 +61,7 @@ $(function(){
 	/////////////////////////////////////////////////////////////////////
 	//	custom message of the alert in error login
 	/////////////////////////////////////////////////////////////////////
-	$( "loginErrorMessage" ).text( "Dados inválidos. Tente novamente." );
+	$( "#loginErrorMessage" ).html( "Dados inválidos. Tente novamente." );
 });
 
 
