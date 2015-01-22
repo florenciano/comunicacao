@@ -1,0 +1,457 @@
+/*GRADEBOOK*/
+
+
+/* @group GRADEBOOK
+ ----------------------------------------------- */
+ 
+.gbtable_header div.gbText,
+.gbtable thead div.gbText { text-shadow: 0 -1px 0 #777 }
+
+.subActionBar:hover { z-index: 1000 }
+
+.subActionBar div.block,
+.subActionBar div.button {
+    float: left;
+    margin: 0;
+    padding: 2px 9px 4px;
+    border-left: 1px dotted #999;
+}
+
+.subActionBar span.block,
+.subActionBar span.button { float: none }
+
+.subActionBar li.sub { position: relative }
+
+.subActionBar fieldset legend + div.block { border-left: 0!important }
+
+.subActionBar select {
+    max-width: 180px;
+    vertical-align: middle;
+}
+
+.subActionBar div.button { padding: 6px 12px }
+
+.subActionBar div.last { border-right: none }
+
+.subActionBar fieldset {
+    padding: 0;
+    margin: 0;
+}
+
+.subActionBar optgroup {
+    font-style: normal;
+    font-weight: normal;
+    color: #777;
+    border-top: 1px solid #ddd;
+    margin-top: 6px;
+}
+
+.subActionBar optgroup option { color: #000 }
+
+.subActionBar ul li.sortableSelector a { padding-left: 18px }
+
+.navPageHeader {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.navPageHeader h3 {
+    margin-left: 12px;
+    display: inline;
+}
+
+.navPageHeader span {
+    color: #888;
+    margin: 0 6px 0 0;
+    font-weight: normal;
+}
+
+fieldset.secondaryActions,
+div.secondaryBlock { float: right }
+
+/*Grade information bar.*/
+
+.cellInfoPanel {
+    border: 1px solid #eee;
+    border-bottom: 2px solid #999;
+}
+
+.cellStatus {
+    border: 0;
+    background: #f6f6f6;
+    font-size: 85%;
+}
+
+.cellStatus div {
+    float: left;
+    padding: 2px 8px;
+}
+
+.statusTitle {
+    background: #eee;
+    color: #666666;
+}
+
+.statdata {
+    color: #000;
+    overflow: hidden;
+}
+
+.cellStatus div.gbTableTimeStamp {
+    float: right;
+    padding: 2px 3px;
+    color: #666666;
+    white-space: nowrap;
+}
+
+.sortImage {
+    position: absolute;
+    top: 9px;
+    left: 6px;
+}
+
+/*Informational bubbles*/
+
+.bubble {
+    display: none;
+    padding: 0pt;
+    position: absolute;
+    width: 190px;
+    z-index: 1000;
+}
+
+.bubble ul {
+    background-color: #E2EEFE;
+    border: 1px solid #ACC2DF;
+    border-bottom: 1px solid #5577bb;
+    border-right: 1px solid #5577bb;
+    list-style-type: none;
+    margin: 0;
+    padding: 6px 6px 6px 6px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.bubble ul li {
+    clear: left;
+    color: #666666;
+    float: left;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 0pt 0pt 4px;
+    padding: 0pt;
+    width: 174px;
+}
+
+.bubble ul li span {
+    color: #666666;
+    display: block;
+    float: left;
+    font-weight: normal;
+    margin-right: 3px;
+    width: 80px;
+}
+
+.bubble ul li span.icon {
+    float: left;
+    width: 20px;
+    overflow: hidden;
+}
+
+.bubble ul li span.label {
+    font-size: 100%;
+    font-weight: normal;
+    width: 147px;
+}
+
+.bubbleStem {
+    height: 14px;
+    position: relative;
+    width: 190px;
+}
+
+.bottom .bubbleStem { bottom: 4px }
+
+.top .bubbleStem { top: -2px }
+
+.left .bubbleStem { padding-left: 24px }
+
+.right .bubbleStem {
+    right: 24px;
+    text-align: right;
+}
+
+/*-- PULLDOWN MENUS IN A SECONDARY ACTION BAR ON GRADE CENTER'S MAIN PAGE---*/
+
+.selectList {
+    list-style: none;
+    margin: 0 6px 0 0;
+    padding: 0;
+    float: left;
+    z-index: 100;
+}
+
+#viewList { z-index: 1000!important }
+
+.selectList li {
+    float: left;
+    margin: 0 4px 0 0;
+    z-index: 101;
+}
+
+.selectList .sub a {
+    display: block;
+    text-decoration: none;
+}
+
+.selectList .sub:hover ul {
+    left: 0;
+    top: 20px!important;
+}
+
+.selectList .sub ul li {
+    float: none;
+    position: static!important;
+    margin: 0;
+    padding: 0;
+}
+
+.selectList .sub ul li h4 {
+    color: #888;
+    margin: 0;
+    padding: 6px 0 0 3px;
+    font-weight: bold;
+    font-size: 90%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.selectList .sub ul li h4 { width: 152px }
+
+.selectList .sub ul li a,
+.selectList .sub ul li a:hover,
+.selectList .sub ul li a:focus {
+    background-image: none;
+    padding-left: 18px!important;
+}
+
+.selectList .sub a #currentView,
+.selectList .sub a #currentSortBy,
+.selectList .sub a #currentColSortDir { background-image: none }
+
+ul.selectList li.sub ul li.current a,
+ul.selectList li.sub ul li.current a:hover,
+.nav .sub .current a,
+.nav .sub .current a:hover,
+.nav .sub .current.favorite a,
+.nav .sub .current.favorite a:hover {
+    background-color: #f9f9f9;
+    background-image: url(/images/ci/icons/current_li.png)!important;
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+div.gradeDetails {
+    font-size: 90%;
+    padding: 6px 0 0 12px;
+}
+
+div.gradeDetails div.label { width: 15% }
+
+/* sometimes span are used as simple locator for DHTML, in which case using a span should not imply a style - this is a work around */
+
+span.unstyled {
+    font-size: 100%;
+    display: inline;
+    color: #000000;
+    padding: 0;
+}
+
+@media print { 
+    div.hideOnPrint { display: none }
+}
+
+div.gradeDetailsStep {
+    overflow-x: auto;
+    overflow-y: visible;
+    border-bottom: 2px solid #CCCCCC;
+    margin: 0 0 6px;
+}
+
+.gradeInfoHeader {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 0 -12px 12px;
+    padding: 3px;
+}
+
+.gradeInfoHeader h3 {
+    margin: 0 4px 0 12px;
+    padding: 3px 0;
+    font-weight: normal;
+    color: #666666;
+}
+
+.gradeInfoHeader h3 span {
+    font-weight: bold;
+    color: #000;
+}
+
+.gradeInfoHeader h3.root {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 3px;
+    background: #888888;
+    color: #FFFFFF;
+}
+
+.gradeInfoHeader h3.root span { color: #FFFFFF }
+
+ul.gb_currView li.sub ul li.favorite a,
+ul.gb_currView li.sub ul li.favorite a:hover {
+    background-image: url(/images/ci/icons/favorite_on_li.png)!important;
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+}
+
+.navStatusButtons  .taskbuttondiv { padding: 0 } 
+ 
+ /* @end GRADEBOOK*/
+ 
+ 
+ /* @group ORGANIZE COLUMNS (Gradebook)
+ ----------------------------------------------- */
+ 
+ /*================ GRADEBOOK "ORGANIZE COLUMNS" PAGE ==============================================*/
+ 
+ div.staticFooter div.details,
+ div.staticHeader div.details { margin-left: 18px }
+ 
+ div.staticHeader { margin: 10px 0 0  0 }
+ 
+ div.staticFooter div.details { border-bottom: 1px solid #ddd!important }
+ 
+ .gbColumns_rumble,
+ .gbColumns_rumble_bottom {
+     margin-left: 38px!important;
+     border: 1px solid #ddd!important;
+     border-bottom: 0!important;
+ }
+ 
+ .gbColumns_rumble_bottom {
+     border: 1px solid #ddd!important;
+     border-top: 0!important;
+ }
+ 
+ .staticHeader,
+ .staticFooter {
+     clear: both;
+     position: relative;
+     zoom: 1;
+ }
+ 
+ .staticHeader div.itemHeaderControl,
+ .staticFooter div.itemHeaderControl,
+ ul.gbCategories li div.itemHeaderControl { right: 0 }
+ 
+ .staticHeader div.itemHeaderControl,
+ .staticFooter div.itemHeaderControl,
+ ul.gbCategories li div.itemHeaderControl {
+     right: 0;
+     top: 0;
+ }
+ 
+ .staticHeader div.itemHeaderControl a,
+ .staticFooter div.itemHeaderControl a,
+ ul.gbCategories li div.itemHeaderControl a { display: inline-block }
+ 
+ ul.dragableHighlight {
+     background: #fff;
+     border-top: 1px dashed #999;
+     border-bottom: 1px dashed #999;
+     padding: 12px 12px 3px 12px;
+     margin: 12px -30px;
+ }
+ 
+ ul.gbCategories li h3.item,
+ div.staticHeader h3.item,
+ div.staticFooter h3.item { padding: 6px  6px 18px 0 }
+ 
+ ul.gbCategories li h3.item a.toggleLink,
+ div.staticHeader h3.item a.toggleLink,
+ div.staticFooter h3.item a.toggleLink {
+     margin-right: 6px;
+     margin-top: -2px;
+ }
+ 
+ div.areaHighlight div.container { background: #f9f9f9 }
+ 
+ ul.dragableHighlight li h3.item,
+ .dragableHighlight div.details { border-color: #999 }
+ 
+ /* @end ORGANIZE COLUMNS*/
+ 
+
+
+/* @group RUBRICS
+----------------------------------------------- */
+
+#theGrid {position:relative;}
+
+.gridOverflowControl {*overflow:hidden; overflow-x:auto; padding-bottom:24px; zoom:1; *position:static; *height:1%;}
+
+.rubricTable tbody td textarea {
+	width: 99%;
+  *width:auto;
+  min-width:9em;
+	height: 6em;
+	color: #555;
+	border: 1px solid #ccc;
+}
+.rubricTable tbody td textarea + script + div {text-align:right;}
+
+.rubricTable tbody td div input[type="text"] {/* overrides a stepItems-reorder class in line 667 of inventory_tables.css */
+	border: 1px solid #ccc;
+	width: 4em;
+}
+
+/* Reorder Panel*/
+#rubricRowReorder {
+	position: absolute;
+	top: 5em;
+	z-index: 100;
+}
+#rubricColReorder {
+	position: absolute;
+	top:3em;
+	left: 15%;
+	z-index: 100;
+  *width:auto;
+}
+#rubricColReorder fieldset {position:relative;white-space:nowrap;}
+#rubricColSort {
+  margin-right:60px;
+  white-space:nowrap;
+}
+#rubricColSort li {
+  display:inline-block;
+  *display:inline;
+  position:relative;
+  margin:0 1px;
+  padding:0 6px 2px 24px;
+  border-right:1px dotted #999!important;
+  white-space:nowrap;
+}
+#rubricColSort li input {
+  position:absolute;
+  left:0;
+  top:0;
+}
+#reorderPanelControls{
+  position:absolute;
+  right:0;
+  top:0;
+}
+#reorderPanelControls a {text-decoration:none;}
+
+/* @end RUBRIC */

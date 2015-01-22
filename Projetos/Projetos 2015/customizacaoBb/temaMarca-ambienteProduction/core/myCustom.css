@@ -1,0 +1,67 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	RETIRANDO ESTILOS INADEQUADOS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+* {
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Centralizando imagem do banner da tela de início
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.vtbegenerated img {
+	display: inline-block;
+	margin: 0 auto;
+}
+.vtbegenerated p { margin-bottom: 0;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Acrescentando os estilos "inadequados" em regras específicas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.portlet {
+	-webkit-box-shadow: 0px 0px 20px rgba(0,0,0,.3) !important;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.3) !important;
+}
+
+div.dbThreadCheckbox {
+	border-bottom: 1px solid #bcbec0 !important;
+}
+
+.selectItems div.u_floatThis-left {	max-width: 300px; }
+
+/* aplicando background nos heads das áreas de conteúdo */
+.pageTitle { background: #E6E7E8 !important; }
+.pageTitle > * { background-color: #e6e7e8 !important; }
+
+/* 	box pontuação de prova */
+#dataCollectionContainer {
+	margin: 0;
+}
+.stepTitleRight {
+	right: 2px;
+	top: -6px;
+	/*top: -92px;*/
+}
+.rumble_top {
+	margin-bottom: 18px;
+	font-size: 125%;
+}
+/* 	FÓRUM DE DISCUSSÃO */
+.messageCollectionContainer {
+	float: left;
+	width: 75%;
+}
+div.contentAreaNav { 
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+/* Retirando aquele pixel a mais embaixo dos botões que são menus */
+.actionBar .sub a .chevron {
+	height: 15px;
+	width: 15px;
+}
+/* Corrigindo tamanho do logo */
+img.bannerImage {
+	height: 50px;
+	margin-top: 10px;
+}
