@@ -68,6 +68,22 @@ img.bannerImage {
 /* texto com tamanho diferentes nos botões: corrigindo  */
 .rumble_top { font-size: 100%; }
 
+.inventory>tbody tr td,
+.inventory>tbody tr th {
+	vertical-align: middle;
+}
+
+/* Fazendo os previews das imgs maiores: carômetro; 
+.inventory>tbody tr:hover .profileCardAvatarThumb img {
+	width: 7em;
+	height: 7em;
+}
+*/
+.profileCardAvatarThumb img:hover {
+	width: 7em;
+	height: 7em;
+}
+
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
