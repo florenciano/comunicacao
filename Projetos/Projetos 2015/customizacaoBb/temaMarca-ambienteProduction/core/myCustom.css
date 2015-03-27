@@ -15,6 +15,11 @@
 }
 .vtbegenerated p { margin-bottom: 0;}
 
+/* corrigingo bugs em testes/provas */
+.vtbegenerated {
+  overflow-x: initial !important;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 	Acrescentando os estilos "inadequados" em regras específicas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
