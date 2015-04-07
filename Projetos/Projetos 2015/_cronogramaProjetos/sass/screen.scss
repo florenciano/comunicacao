@@ -1,0 +1,400 @@
+@import "compass/reset";
+
+/////////////////////////////////////////////////////////////////////
+//	variables
+/////////////////////////////////////////////////////////////////////
+
+// colors
+$cinza-1: rgba(245,245,245,1);
+$cinza-2: rgba(240,240,240,1);
+$cinza-3: rgba(235,235,235,1);
+$overColor: #fcf8e3;
+
+$red: #FA2500;
+$green: #08EF14;
+$yellow: #FFDF00;
+$blue: #008BFF;
+$grey: #C8C8C8;
+
+// institucionais
+$cinza-a: #e6e7e8;
+$cinza-b: #bcbec0;
+$cinza-c: #414042;
+
+$red-a: #c00026;
+$red-b: #c4161c;
+
+//font(s)
+$font: "helvetica", "arial", "verdana";
+
+//grid
+$grid: 40px;
+$grid-2: 20px;
+
+/////////////////////////////////////////////////////////////////////
+//	mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin boxSize($boxSize) {
+    box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($borderRadius) {
+	border-radius: $borderRadius;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin bShadow($lenH,$lenV,$blur,$rgba) {
+    box-shadow: $lenH $lenV $blur $rgba;
+    -moz-box-shadow: $lenH $lenV $blur $rgba;
+    -webkit-box-shadow: $lenH $lenV $blur $rgba;
+}
+
+@mixin clearfix() {
+	// zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin font($fstyle, $fsize) { font: $fstyle $fsize $font; }
+
+/////////////////////////////////////////////////////////////////////
+//	stillus starts here
+/////////////////////////////////////////////////////////////////////
+
+// resets defaults
+* {	@include boxSize(border-box); }
+
+body {
+	font: normal 14px/1.25 $font;
+	background-color: $cinza-1;
+	color: $cinza-c;
+}
+strong { font-weight: 700; }
+p {
+	margin: 1em 0;
+	line-height: 1.25em;
+}
+.wrapper {
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid $cinza-2;
+	padding: 3em 1em 1em;
+}
+
+/////////////////////////////////////////////////////////////////////
+//	index.html
+/////////////////////////////////////////////////////////////////////
+
+header[role="banner"] {
+	h1 { 
+		@include font(700, 170%);
+		border-bottom: 1px solid $cinza-3;
+		padding-bottom: $grid-2 / 2;
+		margin-bottom: $grid-2 / 2;	
+	}
+}
+
+.listProject {
+	h6 { 
+		@include font(normal, 87.5%);
+		border-bottom: 1px solid $cinza-3;
+		padding-bottom: $grid-2 / 2;
+		margin-bottom: $grid-2 / 4;
+		a { position: relative; }
+		.mailLink:after {
+			content: "";
+			background: transparent url("../img/mail.png") center center no-repeat;
+			width: 1.5em;
+			display: inline-block;
+			height: 1em;
+			margin-left: .25em;
+			position: absolute;
+		}
+	}
+	ol.historyObs {
+		list-style-type: decimal;
+		padding-left: $grid-2;
+		li {
+			border-bottom: 1px solid $cinza-a;
+			padding: 0 0 .25em;
+			margin: 0 0 .25em;
+			&:last-child { 
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			&::after {
+				content: "";
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				margin: 0 .5em;
+			}
+			ol {
+				li {
+					display: block;
+					padding-left: $grid-2;
+				}
+			}
+		}
+		li.concluido::after { background: transparent url("../img/1.png") no-repeat center center; }
+		li.andamento::after { background: transparent url("../img/2.png") no-repeat center center; }
+		li.naoIniciado::after { background: transparent url("../img/3.png") no-repeat center center; }
+	}
+}
+// tabela principal
+.planilha {
+	margin: 3em 0 0;
+	padding: 0;
+	width: 100%;
+	border: 1px solid $cinza-b;
+  	border-collapse: collapse;
+    border-spacing: 0;
+}
+.cronogramaTable { margin: 0; }
+thead th { background-color: $cinza-1; }
+tr td, tr th {
+	vertical-align: middle;
+	border: 1px solid $cinza-b;
+	border-width: 0 1px 1px 0;
+	padding: ($grid-2 / 2);
+}
+tr td { width: 16.65%;
+	img { display: block; }
+	.departamento {
+		display: block;
+		font-style: italic;
+		margin: 0 0 .125em 0;
+		color: rgb(150,150,150);
+		span {
+			font-size: 87.5%;
+		}
+	}
+}
+tr td:first-child { 
+	width: 25%;
+	font-weight: bold;
+	span {
+		display: block;
+		margin-top: .25em;
+		img {
+			display: inline-block;
+			margin-right: .125em;
+		}
+	}
+}
+tr td:last-child { width: 25%; }
+tr th { @include font(bold, 100%); }
+tbody tr:hover td { background-color: $overColor; }
+tfoot.obs td { @include font(normal, 87.5%); }
+tfoot.obs .legend {
+	text-align: center;
+	img {
+		display: inline-block;
+		margin: 0 ($grid/2 / 4) 0 $grid-2;
+	}
+}
+
+footer[role="contentinfo"] {
+	margin: 3em 0;
+	padding: 1em 1em 2em;
+	border: 1px solid $cinza-b;
+	border-radius: 5px;
+	h6 {
+		@include font(bold, 116.67%);
+		margin-bottom: 1em;
+	}
+	.content {
+		display: block;
+		width: 100%;
+		text-align: center;
+		ul {
+			li {
+				display: inline-block;
+				width: 19.5%;
+				padding: 1em;
+				line-height: 1.125em;
+				vertical-align: top;
+				strong {
+					margin-top: 6em;
+					display: block;
+					font-weight: bold;
+					margin-bottom: .25em;
+					span {
+						
+					}
+				}
+				p {	font-size: 92.5%; }
+			}
+			li.history01 { background-image: url("../img/h-01.png"); }
+			li.history02 { background-image: url("../img/h-02.png"); }
+			li.history03 { background-image: url("../img/h-03.png"); }
+			li.history04 { background-image: url("../img/h-04.png"); }
+			li.history05 { background-image: url("../img/h-05.png"); }
+
+			li.history01,
+			li.history02,
+			li.history03,
+			li.history04,
+			li.history05 {
+				background-position: center ($grid-2 + 10);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////////
+//	historico.html
+/////////////////////////////////////////////////////////////////////
+.listProject {
+	.anoVigente {
+		font-size: 180%;
+		display: block;
+		margin: 2em 0 0 0;
+	}
+	.mesVigente {
+		margin-top: .5em;
+			font-size: 92.5%;
+			color: #6e6e6e;
+	}
+	.listHistory {
+		list-style-type: decimal;
+		margin: 1em 0 1em 2em;
+		width: calc(100% - 4em);
+		li {
+			border-bottom: 1px dotted $cinza-b;
+			padding: 1em;
+				h3 {
+				font-size: 132.5%;
+				font-weight: 700;
+			}
+			.details { display: block; }
+			.departamentoLine {
+				font-style: italic;
+				color: rgb(150,150,150);
+			}
+			&:last-child { border-bottom: none; }
+			&:hover { background-color: $overColor; }
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////////
+//	_projeto1.html
+/////////////////////////////////////////////////////////////////////
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	font-style: italic;
+	width: 90%;
+	margin: 0 auto;
+	color: rgb(105,105,105);
+	&:before {
+		color: $cinza-b;
+		content: open-quote;
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+}
+
+.cronograma {
+	display: block;
+	max-width: 100%;
+	margin: 3em 0;
+	h3 { font-size: 1.5rem; }
+	.cronogramaTable {
+		.dates { color: rgb(150,150,150); }
+		tr td:first-child { width: 100%; }
+		tr td { width: auto; }
+		tr td:first-child { 
+			// text-indent: 1em;
+			font-weight: normal;
+		}
+		tr td.etapas { 
+			font-weight: bold;
+			text-indent: 0;
+		}
+		tr.etapas { 
+			background-color: rgb(245,245,245);
+			&:hover td { background-color: rgb(245,245,245); }
+		}
+		thead tr td {
+			text-align: center;
+		}
+		.celRed { background: $red; }
+		.celGreen { background: $green }
+		.celYellow { background: $yellow; }
+		.celBlue { background: $blue; }
+		.celGrey { background: $grey; }
+		.label {
+			display: inline-block;
+			position: relative;
+			margin-right: 3em;
+			&:last-child { margin-right: 0; }
+			&:before {
+				content: "";
+				display: inline-block;
+				height: 16px;
+				width: 16px;
+				background-color: $cinza-a;
+				position: absolute;
+				top: -4px;
+				left: -22px;
+			}
+		}
+		.label:nth-of-type(1) {
+			&:before {  background-color: $blue; border: 1px solid darken($blue, 5%); }
+		}
+		.label:nth-of-type(2) {
+			&:before {  background-color: $green; border: 1px solid darken($green, 5%); }
+		}
+		.label:nth-of-type(3) {
+			&:before {  background-color: $yellow; border: 1px solid darken($yellow, 5%); }
+		}
+		.label:nth-of-type(4) {
+			&:before {  background-color: $red; border: 1px solid darken($red, 5%); }
+		}
+	}
+}
+footer[role="contentinfo"] {
+	.contentCronograma {
+		ul {
+			li {
+				width: 24.55%;
+			}
+			li.steps01 { background-image: url("../img/c-01.png"); }
+			li.steps02 { background-image: url("../img/c-02.png"); }
+			li.steps03 { background-image: url("../img/c-03.png"); }
+			li.steps04 { background-image: url("../img/c-04.png"); }
+			li.steps05 { background-image: url("../img/c-05.png"); }
+
+			li.steps01,
+			li.steps02,
+			li.steps03,
+			li.steps04,
+			li.steps05 {
+				background-position: center ($grid-2 + 10);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

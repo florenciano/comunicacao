@@ -14,10 +14,13 @@
 	margin: 0 auto;
 }
 .vtbegenerated p { margin-bottom: 0;}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Corrigingo bugs em testes/provas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
 
-/* corrigingo bugs em testes/provas */
 .vtbegenerated {
-  overflow-x: initial !important;
+  overflow-x: inherit !important;
+  overflow-y: inherit !important;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
