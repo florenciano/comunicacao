@@ -57,8 +57,17 @@ body {
 }
 
 
-// YOUR CODE HERE...
-
+// TEMP
+section.months {
+    // lista dos casos mais baixados no mês
+    .listCases {
+        display: none;
+    }
+}
+// definindo uma largura fixa do container do gráfico ao carregar a página
+.graph {
+    div { width: 1040px; max-width: 100% }
+}
 
 /*  $Media Queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
