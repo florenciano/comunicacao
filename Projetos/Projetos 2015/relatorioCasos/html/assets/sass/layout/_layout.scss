@@ -2,8 +2,18 @@
 // Vars
 /////////////////////////////////////////////////////////////////////
 
-$font: Verdana;
+$font: Verdana, sans-serif;
+
 $grid: 20px;
+
+$verde: rgba(0,205,205,1);
+$cinza250: rgba(250,250,250,1);
+$cinza235: rgba(235,235,235,1);
+$cinza190: rgba(190,190,190,1);
+$cinza90: rgba(90,90,90,1);
+$cinza60: rgba(60,60,60,1);
+$cinza30: rgba(30,30,30,1);
+
 
 /////////////////////////////////////////////////////////////////////
 // Mixin
@@ -38,6 +48,15 @@ $grid: 20px;
     -webkit-transition: $transition;
 }
 
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
 /////////////////////////////////////////////////////////////////////
 // Resets
 /////////////////////////////////////////////////////////////////////
@@ -56,19 +75,319 @@ body {
     @include font(normal, 100%);
 }
 
+.wrapper {
+    background-color: $cinza250;
+    border: 1px solid $cinza235;
+    padding: ($grid * 2) 0;
+}
 
-// TEMP
-section.months {
-    // lista dos casos mais baixados no mês
-    .listCases {
-        display: none;
+body {
+    > .wrapper { border-bottom: none; }
+}
+
+// header
+header[role="banner"] {
+    text-align: center;
+    h1 {
+        margin: 0;
+        font-size: 225%;
+        font-weight: normal;
+        letter-spacing: -0.030em;
+    }
+    p {
+        color: $cinza90;
+        line-height: 125%;
+        margin: ($grid/2) auto;
+        font-size: 87.5%;
+        width: 38.75em;
+        a {
+            color: $verde;
+            &:hover { color: darken( $verde, 5% )  }
+        }
     }
 }
-// definindo uma largura fixa do container do gráfico ao carregar a página
-.graph {
-    div { width: 1040px; max-width: 100% }
+
+//article
+header.year { 
+    padding: 0 ($grid/2);
+    h2 {
+        margin: ($grid*2) 0 0 0;
+        padding: ($grid/2);
+        border-bottom: 1px solid $cinza190;
+        text-align: center;
+        color: $cinza90;
+        font-weight: normal;
+        font-size: 225%;
+        letter-spacing: -0.075em;
+    }
 }
 
+section.months {
+    padding-bottom: ($grid*2);
+    // list
+    .list-in-months {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include transition(none !important);
+        li { 
+            padding: 0 ($grid/2) $grid ($grid/2);
+            margin: $grid 0;
+        }
+        a {
+            background-color: $verde;
+            display: block;
+            width: 100%;
+            height: 180px; // layout
+            text-align: center;
+            color: #fff;
+            border: 1px solid $verde;
+            text-decoration: none;
+            position: relative;
+            span { display: block; }
+            .nameMonth {
+                font-size: 150%;
+                font-weight: normal;
+                padding-top: ($grid*2);
+            }
+            .valueMonth {
+                font-weight: bold;
+                font-size: 412.5%;
+                margin-top: -($grid/2);
+            }
+            .icoMore {
+                position: absolute;
+                bottom: -$grid;
+                left: 50%;
+                width: ($grid*2);
+                height: ($grid*2);
+                background-color: #fff;
+                margin-left: -$grid;
+                @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.25));
+                img { padding: 14px; } // 40px[span]-12px[img] = 14
+            }
+        }
+        .activeMonth {
+            background-color: #fff;
+            color: $verde;
+        }
+        a:hover {
+            @extend .activeMonth;
+        }
+        // top cases
+        .listCases {
+            display: none; // default é ficar escondido
+            @include transition(none !important);
+            background-color: #fff;
+            padding: $grid/2;
+            @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.25));
+            &:hover {
+                @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.5));
+            }
+            h3 {
+                color: $cinza60;
+                font-size: 75%;
+                margin: $grid 0 0;
+                text-align: center;
+            }
+            .list-in-listCases {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    background-image: url("../img/ui/li.png");
+                    background-repeat: no-repeat;
+                    background-position: 0px 6px; // font-size/2 
+                    padding-left: $grid/2;
+                    position: relative;
+                    // reset margin e padding das heranças das li's acima
+                    padding-bottom: $grid/2;
+                    margin: ($grid/2) 0 0 0;
+                    // border
+                    border-bottom: 1px dotted rgb(217,217,217);
+                    &:last-child { border-bottom: none; }
+                    span { display: inline-block; }
+                }
+                a {
+                    background-color: #fff;
+                    display: inline-block;
+                    color: $verde;
+                    height: auto;
+                    text-align: left;
+                    border: none;
+                    &:hover {
+                        text-decoration: underline;
+                        color: darken( $verde, 5% );
+                    }
+                }
+                .nameCase {
+                    color: $cinza90;
+                    font-size: 75%;
+                    line-height: 1.45em;
+                    display: inline-block;
+                    width: 85%;
+                }
+                .numberCase {
+                    color: $cinza90;
+                    text-align: center;
+                    font-size: 87.5%;
+                    font-weight: bold;
+                    max-width: $grid*2;
+                    display: inline-block;
+                    width: 15%;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+section.graph {
+    padding: $grid;
+    .container-graph {
+        background-color: #fff;
+        border: 1px solid rgb(245,245,245);
+        padding: $grid;
+        @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.25));
+    }
+    h3 {
+        color: $cinza90;
+        font-size: 125%;
+        font-weight: normal;
+        margin: 0 0 $grid 0;
+    }
+    .area-graph {
+        max-width: 1000px; // subtraindo padding's dos containers
+        position: relative;
+        canvas { padding: $grid; }
+    }
+}
+
+section.topList {
+    padding-bottom: $grid*2;
+    h3 {
+        color: $cinza90;
+        font-size: 125%;
+        font-weight: normal;
+        margin: 0 0 ($grid/2) ($grid/2);
+    }
+    .column { padding-left: $grid/2; padding-right: $grid/2; }
+    .list-topList {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            background-color: #fff;
+            border: 1px solid rgb(245,245,245);
+            margin: $grid 0;
+            padding: $grid/2;
+            position: relative;
+            @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.25));
+            &:hover {
+                @include bShadow(0px,1px,1px,0px,rgba(0,0,0,0.5));
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            div { display: inline-block; }
+        }
+        .numbCase-topList { width: 10%; }
+        .nameCase-topList { width: 75%; }
+        .valueCase-topList { width: 10%; }
+        .numbCase-topList {
+            background-color: $verde;
+            color: #fff;
+            width: 32px; // medidas do layout
+            height: 32px; // medidas do layout
+            line-height: 32px;
+            border-radius: 50%;
+            font-size: 100%;
+            text-align: center;
+            // position vertical
+            position: absolute;
+            top: 50%;
+            margin-top: -16px; // metade do tamanho do elem
+        }
+        .nameCase-topList {
+            font-size: 87.5%;
+            line-height: 1.35em;
+            padding: ($grid/2) ($grid/4);
+            margin-left: 42px;
+        }
+        .valueCase-topList {
+            color: $cinza90;
+            font-weight: bold;
+            font-size: 137.5%;
+            text-align: right;
+            // position vertical
+            position: absolute;
+            top: 50%;
+            margin-top: -14px; // metade do tamanho do elem
+        }
+        a {
+            background-color: #fff;
+            display: inline-block;
+            color: $verde;
+            height: auto;
+            text-align: left;
+            outline: none;
+            &:hover {
+                text-decoration: underline;
+                color: darken( $verde, 5% );
+            }
+        }
+    }
+}
+
+div.sum {
+    text-align: center;
+    span { 
+        line-height: 32px;
+        height: 32px;
+        display: inline-block;
+    }
+    .btn {
+        color: #fff;
+        background-color: $verde;
+        display: inline-block;
+        position: relative;
+    }
+    .ico-sum {
+        background: #fff url("../img/ui/sum.png") center center no-repeat;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px; // layout
+        position: absolute;
+        top: 50%;
+        left: $grid/2;
+        margin-top: -16px; // metade da altura
+    }
+    .txt-sum {
+        margin: $grid ($grid*4.5) $grid ($grid*2.5);
+    }
+    .value-sum {
+        font-weight: bold;
+        font-size: 150%;
+        position: absolute;
+        top: 50%;
+        right: $grid/2;
+        margin-top: -16px;
+        text-align: right;
+    }
+}
+
+// footer
+footer[role="contentinfo"] {
+    .wrapper { border-top: none; }
+    text-align: center;
+    .signature {
+        font-size: 75%;
+        color: $cinza90;
+        margin: ($grid*2) 0 0 0;
+    }
+}
 /*  $Media Queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -76,9 +395,8 @@ section.months {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (max-width:960px) {
     .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ width: 100%; margin-bottom: $grid }
-    .row .row > div:last-child{ margin-bottom: 0 !important }
+    .row .row > div:last-child { margin-bottom: 0 !important }
     
-    body{ background: #e24304 !important; }
 }
 
 
@@ -86,15 +404,64 @@ section.months {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait) {
     
-    body{
-        font-size: 90%;
-    }
+    body { font-size: 90%; }
     
-    .row{ margin-bottom: 0!important }
+    .row { margin-bottom: 0!important }
     
     .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{ width:100%; margin-right: 0; margin-left: 0; margin-bottom: $grid }
 
-    // YOUR CODE HERE...
+    a.active { color: $verde }
+    
+    header[role="banner"] {
+        p { 
+            width: 100%;
+            padding: 0 $grid;
+        }
+    }
+
+    section.graph {
+        h3 { text-align: center; }
+    }
+
+    section.months {
+        .list-in-months {
+            li {
+                margin-top: 0;
+            }
+            a {
+                height: 140px;
+                .nameMonth { padding-top: $grid; }
+                &:focus {
+                    background-color: #fff;
+                    color: $verde;
+                }
+            }
+            .listCases {
+                h3 {
+                    font-size: 100%;
+                    margin-bottom: $grid;
+                }
+                a { font-size: 112.5%; }
+                .list-in-listCases {
+                    li { padding-left: $grid; }
+                    .nameCase { width: 90%; }
+                    .numberCase { font-size: 112.5%; }
+                }
+            }
+        }
+    }
+
+    section.topList {
+        h3 { text-align: center; }
+        .column { margin-bottom: 0; }
+    }
+
+    footer[role="contentinfo"] {
+        .signature {
+            font-size: 87.5%;
+            margin-top: $grid;
+        }
+    }
 
 }
 
@@ -105,10 +472,69 @@ section.months {
     .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ width:100%; margin-bottom: $grid; }
     .row .row > div:last-child{ margin-bottom:0 !important }
     
-    body { color: #000; }
+    .wrapper { padding: ($grid/2) 0; }
 
-    // YOUR CODE HERE...
+    header[role="banner"] {
+        h1 {
+            margin: $grid/2;
+            font-size: 125%;
+            font-weight: bold;
+        }
+        p { 
+            width: 100%;
+            padding: 0 $grid;
+            color: #000;
+        }
+    }
 
+    header.year {
+        h2 { 
+            margin-top: $grid;
+            color: #000;
+        }
+    }
+
+    section.graph {
+        padding: $grid/2;
+        .container-graph { padding: $grid/2; }
+        h3 {
+            color: #000;
+            font-size: 100%;
+            text-align: center;
+        }
+        .area-graph {
+            canvas {  padding: 0; }
+        }
+    }
+
+    section.months {
+        padding-bottom: $grid;
+    }
+
+    section.topList {
+        padding-bottom: $grid;
+        h3 {
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+        .c12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .list-topList {
+            .nameCase-topList { width: 65%; }
+            .valueCase-topList { 
+                width: 20%;
+                color: #000;
+            }
+        }
+    }
+
+    footer[role="contentinfo"] {
+        h3 { margin-top: $grid*2; }
+        img { max-width: 180px; }
+    }
 
 }
 /* $Helper classes

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
+<html class="no-js" lang="pt-br" ng-app="relDownloadsCasos">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,8 +27,17 @@
                 <header class="row year">
                     <h2>2015</h2>
                 </header>
-                <section class="row months">
-                    <div class="row fix">
+                <section class="row fix graph">
+                    <div class="c12 container-graph">
+                        <h3>Quantidades de Casos Insper baixados no mês</h3>
+                        <!-- graphic here -->
+                        <div class="area-graph">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+                <section class="row months" ng-controller="topCasosMeses">
+                    <div class="wfull fix">
                         <ul class="list-in-months">
                             <!-- jan -->
                             <li class="c3 jan">
@@ -37,21 +46,12 @@
                                     <span class="valueMonth">368</span>
                                     <span class="icoMore"><img src="assets/img/ui/icoMore.png" alt="+"></span>
                                 </a>
-                                <!-- list of cases -->
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosJan">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -66,17 +66,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosFev">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -91,17 +83,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosMar">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -116,24 +100,16 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosAbr">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="row fix">
+                    <div class="wfull fix">
                         <ul class="list-in-months">
                             <!-- mai -->
                             <li class="c3 mai">
@@ -145,17 +121,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosMai">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -170,17 +138,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosJun">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -195,17 +155,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosJul">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -220,24 +172,16 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosAgo">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="row fix">
+                    <div class="wfull fix">
                         <ul class="list-in-months">
                             <!-- set -->
                             <li class="c3 set">
@@ -249,17 +193,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosSet">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -274,17 +210,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosOut">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -299,17 +227,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosNov">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -324,17 +244,9 @@
                                 <div class="listCases">
                                     <h3>Casos mais baixados</h3>
                                     <ul class="list-in-listCases">
-                                        <li>
-                                            <span class="nameCase">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios.</span>
-                                            <span class="numberCase">99</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Cacau Show: marketing estratégico para o crescimento sustentável</span>
-                                            <span class="numberCase">82</span>
-                                        </li>
-                                         <li>
-                                            <span class="nameCase">Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.</span>
-                                            <span class="numberCase">56</span>
+                                        <li ng-repeat="n in topCasosDez">
+                                            <span class="nameCase"><a href="{{n.linkCaso}}" title="Acessa a página do caso no portal Insper">{{n.nameCaso}}</a></span>
+                                            <span class="numberCase">{{n.numbCaso}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -342,79 +254,36 @@
                         </ul>
                     </div>
                 </section>
-                <div class="row fix graph">
-                    <!-- graphic here -->
-                    <canvas id="myChart" width="1040" height="400"></canvas>
-                </div>
                 <section class="row fix topList">
-                    <div class="row">
+                    <div class="c12">
                         <h3>Nome dos Casos mais baixados neste ano</h3>
-                        <div class="c6">
-                            <ol class="c12" id="listE-topList">
-                                <li>
+                        <div class="c6 column">
+                            <ol class="wfull list-topList" id="listE-topList" ng-controller="top1-5">
+                                <li ng-repeat="n in listEsq">
                                     <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Cacau Show: marketing estratégico para o crescimento sustentável</div>
-                                    <div class="valueCase-topList">1259</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Zetrasoft: como melhorar o clima organizacional?</div>
-                                    <div class="valueCase-topList">1076</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">A.R. Mineira: quanto vale a empresa?</div>
-                                    <div class="valueCase-topList">963</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Sucesso e continuidade do Habibs</div>
-                                    <div class="valueCase-topList">834</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Braskem: a construção de uma petroquímica de porte global</div>
-                                    <div class="valueCase-topList">798</div>
+                                    <div class="nameCase-topList"><a href="{{n.linkCaso}}" title="Lorem ipsum">{{n.nameCaso}}</a></div>
+                                    <div class="valueCase-topList">{{n.valueCaso}}</div>
                                 </li>
                             </ol>
                         </div>
-                        <div class="c6">
-                            <ol class="c12" start="6" id="listD-topList">
-                                <li>
+                        <div class="c6 column">
+                            <ol class="wfull list-topList" start="6" id="listD-topList" ng-controller="top6-10">
+                                <li ng-repeat="n in listDir">
                                     <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Meu UDB: um funcionário, uma idéia e sua luta para implementá-la</div>
-                                    <div class="valueCase-topList">657</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Cooxup e a indústria mundial do café: estratégias para aumentar a receita do produtor</div>
-                                    <div class="valueCase-topList">524</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Mextra Engenharia Extrativa de Metais (A): uma nova liderança reinventa o modelo de negócios</div>
-                                    <div class="valueCase-topList">310</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">The Biocultural Diversity Conservancy: Identificando Caminhos para Retribuir Comunidade</div>
-                                    <div class="valueCase-topList">209</div>
-                                </li>
-                                <li>
-                                    <div class="numbCase-topList"></div>
-                                    <div class="nameCase-topList">Martima Seguros: oferta pública inicial ou outra alternativa?</div>
-                                    <div class="valueCase-topList">78</div>
+                                    <div class="nameCase-topList"><a href="{{n.linkCaso}}" title="Lorem ipsum">{{n.nameCaso}}</a></div>
+                                    <div class="valueCase-topList">{{n.valueCaso}}</div>
                                 </li>
                             </ol>
-                            <div class="row fix sum">
-                                <div class="btn">
-                                    <span class="txt-sum">Total Geral</span>
-                                    <span class="value-sum" id="value-sum"></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
+                <div class="row fix sum">
+                    <div class="btn">
+                        <span class="ico-sum"></span>
+                        <span class="txt-sum">Total dos Casos mais baixados</span>
+                        <span class="value-sum" id="value-sum"></span>
+                    </div>
+                </div>
             </article>
         </div>
     </div>
@@ -431,6 +300,10 @@
     <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-2.1.4.min.js"><\/script>')</script>
     <!-- plugins -->
     <script src="assets/js/libs/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- code: controlles AngularJs -->
+    <script src="assets/js/rel.js"></script>
+    <!-- <script src="assets/js/top10Geral.js"></script> -->
 
     <!-- code project -->
     <script src="assets/js/main.js"></script>
