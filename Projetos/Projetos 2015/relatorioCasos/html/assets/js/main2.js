@@ -10,11 +10,11 @@ $(function(){
 		labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
 		datasets: [
 			{
-				fillColor: "rgba(0,205,205,0.75)",
-				strokeColor: "rgba(0,180,180,0.75)",
-				highlightFill: "rgba(0,205,205,0.9)",
-				highlightStroke: "rgba(0,180,180,0.75)",
-				data: ["134","254","552","476","488","0","0","0","0","0","0","0",]
+				fillColor: "rgba(235,175,20,0.75)",
+				strokeColor: "rgba(205,145,5,0.75)",
+				highlightFill: "rgba(235,175,20,0.9)",
+				highlightStroke: "rgba(205,145,5,0.75)",
+				data: ["368","442","573","610","547","329","484","511","602","883","743","202",]
 			}
 		]
 	};
