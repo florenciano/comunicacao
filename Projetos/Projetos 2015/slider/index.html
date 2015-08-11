@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+		.containerModulo { 
+			width: 500px;
+			height: 290px;
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="containerModulo">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		<ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		    <li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+
+		  <!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <a href="#" title="placehold-1"><img src="https://placehold.it/500x290?text=Comunicacao+DEA+1" alt="img-1"></a>
+		    </div>
+
+		    <div class="item">
+		      <a href="#" title="placehold-2"><img src="https://placehold.it/500x290?text=Comunicacao+DEA+2" alt="img-2"></a>
+		    </div>
+
+		    <div class="item">
+		      <a href="#" title="placehold-3"><img src="https://placehold.it/500x290?text=Comunicacao+DEA+3" alt="img-3"></a>
+		    </div>
+
+		    <div class="item">
+		      <a href="#" title="placehold-4"><img src="https://placehold.it/500x290?text=Comunicacao+DEA+4" alt="img-4"></a>
+		    </div>
+		</div>
+
+		<!-- Left and right controls 
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		</a>
+		-->
+		</div>	
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+	$('.carousel').carousel({
+		interval: 5000, // 5 segundos
+	})
+	</script>
+</body>
+</html>
