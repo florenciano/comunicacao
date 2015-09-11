@@ -24,3 +24,140 @@ footer {
 // // // // // // // // // // // // // // // // // // // // // // //
 // HOME
 // // // // // // // // // // // // // // // // // // // // // // //
+
+// // variables // //
+// grid
+$grid30: 30px;
+$grid40: 40px;
+// color
+$amarelo: #f1c40f;
+$verde: #30bc9c;
+$azul: #34485d;
+// typography
+//  default size: 16px // 
+
+div[role="main"] {
+	section.options-home {
+		padding-top: $grid30*2;
+		div { 
+			text-align: center;
+			margin-bottom: $grid30*2;
+		}
+		h2 {
+			margin-top: $grid40/2;
+			margin-bottom: $grid40/4;
+			font-size: 1.25em;
+			font-weight: 700;
+		}
+		p { margin-bottom: $grid30; }
+		.btn-primary {
+			background-color: #00acc9;
+			border-color: transparent;
+			font-size: .875em;
+			&:hover {
+				background-color: #029BB5;
+			}
+		}
+		.btn-lg { padding: 1em 2em; }
+	}
+}
+
+// MENU GLOBAL
+// // // // // // // // // // // // // // // // // // // // // // //
+
+
+// sprite icons - menu global
+@import "ico-menu/*.png";
+@include all-ico-menu-sprites;
+// // result: .ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul // //
+
+
+div[role="main"] {
+	.menu-global {
+		nav[role="navigation"] {
+			.active-amarelo { border-bottom: 3px solid $amarelo; }
+			.active-verde { border-bottom: 3px solid $verde; }
+			.active-azul { border-bottom: 3px solid $azul; }
+			li { padding: 0 0 5px 5px; }
+			a {
+				display: block;
+				color: #414042;
+				width: 100%;
+				height: $grid40+1;
+				text-decoration: none;
+				line-height: 2.5em; // alignh text vertical. Not apply in itens with more 2 lines.
+				overflow-y: hidden; // eliminate text over 2 lines
+				&:hover { text-decoration: underline; }
+				span { 
+					margin-left: $grid40+15;
+					display: block;
+					border-right: 1px solid #e6e7e8;
+				}
+			}
+			li:last-child {
+				span { border-right: none; }
+			}
+			.ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul { background-position-x: 5px; }
+			a.ico-menu-verde { line-height: 1.3em; }
+		}
+	}
+}
+
+.content { margin-top: $grid40; }
+
+@media (max-width: 768px) {
+	div[role="main"] {
+		.menu-global {
+			margin-top: $grid40;
+			nav[role="navigation"] {
+				.active-amarelo { border-bottom: none; background-color: #F5F5F5; }
+				.active-verde { border-bottom: none; background-color: #F5F5F5; }
+				.active-azul { border-bottom: none; background-color: #F5F5F5; }
+				li {
+					padding: .5em;
+					margin-bottom: 5px;
+				}
+				a {
+					span { border-right: none; }
+				}
+				a.ico-menu-verde { line-height: 2.5em; }
+			}
+		}
+	}
+}
+
+// MENU LATERAL
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// sprite icons - menu lateral
+@import "ico-menuzinho/amarelo/*.png";
+@include all-amarelo-sprites;
+
+div[role="main"] {
+	.menu-lateral {
+		h5 {
+			margin: ($grid30/2) 0 ($grid30/3) 0;
+			height: $grid30;
+    		padding-top: 0.275em;
+			span {
+				margin-left: $grid40;
+				display: block;
+			}
+		}
+		.active { font-weight: 700; }
+		ul {
+			margin-left: 1em;
+			li {
+				margin-bottom: $grid30/6;
+				a {
+					color: #9b3336;
+					&:hover { color: #82292C; }
+				}
+			}
+		}
+	}
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// CONTRATACAO
+// // // // // // // // // // // // // // // // // // // // // // //
