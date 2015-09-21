@@ -11,17 +11,16 @@
     <title>Guia de ambientação - Portal do Professor</title>
     <!-- Bootstrap -->
     <link href="../assets/css/main.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../favicon-16.png">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="questoes-operacionais">
     <div class="container">
         <header role="banner" id="top">
-            <img src="../assets/img/--header--.png" alt="{header}" class="center-block">
+            <img src="../assets/img/--header--.png" alt="{header}" class="center-block img-responsive">
         </header>
 
         <div class="row">
@@ -29,63 +28,165 @@
                 <div class="menu-global clearfix">
                     <nav role="navigation">
                         <ul class="list-inline">
-                            <li class="col-sm-4 active-amarelo"><a href="#" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
-                            <li class="col-sm-4 active-verde"><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
-                            <li class="col-sm-4 active-azul"><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+                            <li class="col-xs-12 col-sm-4"><a href="#" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
+                            <li class="col-xs-12 col-sm-4 active-verde"><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
+                            <li class="col-xs-12 col-sm-4"><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="content clearfix">
-                    <div class="menu-lateral col-md-4 hidden-sm hidden-xs">
-                        <h5 class="active">Programas</h5>
-                        <ul>
-                            <li><a href="#" title="Graduação">Graduação</a></li>
-                            <li><a href="#" title="Pós-Graduação">Pós-Graduação</a></li>
-                            <li><a href="#" title="Educação Executiva">Educação Executiva</a></li>
+                    <div class="menu-lateral hidden-sm hidden-xs">
+                        <div class="container-menu">
+                            <h5 class="verde-programas active" id="iten0"><span>Programas</span></h5>
+                            <ul>
+                                <li><a href="#graduacao-g" title="Graduação">Graduação</a></li>
+                                <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
+                                <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
+                            </ul>
+                        </div>
+                        <ul class="list-inline add-itens-mg">
+                            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span style="padding-top:0.65em">Da contratação à sala de aula</span></a></li>
+                            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span style="padding-top:0.65em">Consulta rápida</span></a></li>
                         </ul>
                     </div>
                     <!-- article beging here -->
-                    <div class="content col-md-8 clearfix">
-                        <!-- admissao -->
-                        <h2 name="graduacao">Graduação</h2>
-                        <p>As páginas dos cursos de Administração e Economia e Engenharias do Portal do Professor contêm as seguintes informações, específicas dos cursos:</p>
-                        <ul>
-                            <li>Grades Horárias e Calendários: calendários acadêmicos do professor e do aluno</li>
-                            <li>Modelos de Arquivos: modelo de capa de provas, modelo de Plano de Ensino, regras de uso da marca</li>
-                            <li>Informações do Curso: ementas, quadro de disciplinas, carga horária dos cursos, atividade</li>
-                            <li>Manuais e Regulamentos: Manual de Procedimentos Acadêmicos do Professor, Manual do Aluno e Regimento da Faculdade</li>
-                            <li>Coordenação</li>
-                        </ul>
-                        <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (<a href="$" title="xxx">Administração e Economia</a> e <a href="#" title="xxx">Engenharias</a>). Ele contém informações sobre:</p>
-                        <ul>
-                            <li>Aulas, horários de atendimento e monitorias</li>
-                            <li>Troca de aulas, cancelamentos e reposições</li>
-                            <li>Avaliação de desempenho escolar</li>
-                            <li>Critérios de aprovação</li>
-                            <li>Critérios de avaliação</li>
-                            <li>Semana de provas</li>
-                            <li>Prova substitutiva</li>
-                            <li>Divulgação de notas e entrega de provas</li>
-                            <li>Revisão de provas</li>
-                            <li>Exportação de notas</li>
-                            <li>Controle de frequência</li>
-                            <li>Diário de classe</li>
-                            <li>etc.</li>
-                        </ul>
-                        <div class="well well-contratacao">
-                            <p>O Apoio Acadêmico da Graduação é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
-                            <ul class="list-inline">
-                                <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
-                            </ul>
+                    <div class="content-text col-md-8 col-md-offset-4 clearfix">
+                        <div class="button-menu-lateral">
+                            <button type="button" class="" id="btnMenu">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </button>
                         </div>
-                        <h3 name="graduacao-adm">ADM</h3>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
-                        <h3 name="graduacao-eco">ECO</h3>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
-                        <h3 name="graduacao-eco">Engenharias</h3>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                        
+                        <!-- graduacao -->
+                        <div data-name="g">
+                            <h2 name="graduacao">Questões operacionais que você precisa conhecer</h2>
+                            <p>Conheça detalhes do dia a dia operacional e procedimentos específicos de cada programa ou curso.</p>
+                            <h3 name="graduacao-g">Graduação</h3>
+                            <p>As páginas dos cursos de Administração e Economia e Engenharias do Portal do Professor contêm as seguintes informações, específicas dos cursos:</p>
+                            <ul>
+                                <li>Grades Horárias e Calendários: calendários acadêmicos do professor e do aluno</li>
+                                <li>Modelos de Arquivos: modelo de capa de provas, modelo de Plano de Ensino, regras de uso da marca</li>
+                                <li>Informações do Curso: ementas, quadro de disciplinas, carga horária dos cursos, atividade</li>
+                                <li>Manuais e Regulamentos: Manual de Procedimentos Acadêmicos do Professor, Manual do Aluno e Regimento da Faculdade</li>
+                                <li>Coordenação</li>
+                            </ul>
+                            <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (<a href="$" title="xxx">Administração e Economia</a> e <a href="#" title="xxx">Engenharias</a>). Ele contém informações sobre:</p>
+                            <ul>
+                                <li>Aulas, horários de atendimento e monitorias</li>
+                                <li>Troca de aulas, cancelamentos e reposições</li>
+                                <li>Avaliação de desempenho escolar</li>
+                                <li>Critérios de aprovação</li>
+                                <li>Critérios de avaliação</li>
+                                <li>Semana de provas</li>
+                                <li>Prova substitutiva</li>
+                                <li>Divulgação de notas e entrega de provas</li>
+                                <li>Revisão de provas</li>
+                                <li>Exportação de notas</li>
+                                <li>Controle de frequência</li>
+                                <li>Diário de classe</li>
+                                <li>etc.</li>
+                            </ul>
+                            <div class="well well-questoes-operacionais">
+                                <p>O Apoio Acadêmico da Graduação é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <div class="container-h4">
+                                <h4 name="graduacao-adm">ADM</h4>
+                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+                                <h4 name="graduacao-eco">ECO</h4>
+                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+                                <h4 name="graduacao-eco">Engenharias</h4>
+                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>    
+                            </div>
+                        </div>
+
+                        <!-- pós-graduacao -->
+                        <div data-name="p">
+                            <h3 name="pos-graduacao">Pós-graduação</h3>
+                            <div class="container-h4">
+                                <h4 name="pos-graduacao-ls">Lato Sensu</h4>
+                                <p>A página dos cursos de <a href="http://portaldoprofessor.insper.edu.br/?page_id=249" title="Pós-Graduação Lato Sensu">Pós-Graduação Lato Sensu</a> do Portal do Professor contém as seguintes informações, específicas do programa:</p>
+                                <ul>
+                                    <li>Cartilha de Plágio Acadêmico</li>
+                                    <li>Modelos de Arquivos: modelos de capas de prova e apresentações em Powerpoint</li>
+                                    <li>Manual de Procedimentos</li>
+                                </ul>
+                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (não existe online). Ele contém informações sobre:</p>
+                                <ul>
+                                    <li>Sistema de avaliação e critério para aprovação</li>
+                                    <li>Controle de frequência</li>
+                                    <li>Procedimentos e prazos para:</li>
+                                    <ul>
+                                        <li>Plano de Aula</li>
+                                        <li>Prova Final e Parcial</li>
+                                        <li>Prova Substitutiva</li>
+                                        <li>Quizzes e trabalhos </li>
+                                        <li>Casos e simuladores</li>
+                                        <li>Faltas e atrasos</li>
+                                        <li>Cancelamento de aula</li>
+                                    </ul>
+                                    <li>Etc.</li>
+                                </ul>
+                                <p>Confira <a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2013/02/Calend%C3%A1rio-Professores-2014.pdf">aqui</a> o calendário de eventos e prazos da PGLS.</p>
+                                <h5 name="pos-graduacao-c">Certificates</h5>
+                                <p>Lorem ipsum dolor sit.</p>
+                                
+                                <h5 name="pos-graduacao-mba">MBA</h5>
+                                <p>Lorem ipsum dolor sit.</p>
+                                
+                                <h5 name="pos-graduacao-d">Direito</h5>
+                                <p>Lorem ipsum dolor sit.</p>
+
+                                <h4 name="pos-graduacao-ss">Stricto Sensu</h4>
+                                <p>A página dos cursos de <a href="http://portaldoprofessor.insper.edu.br/?page_id=301">Pós-Graduação Stricto Sensu</a> do Portal do Professor contém as seguintes informações, específicas do programa:</p>
+                                <ul>
+                                    <li>Grades e Calendários</li>
+                                    <li>Modelos de Arquivos: modelos de capas de prova e apresentações em Powerpoint</li>
+                                    <li>Dissertação: formulário de agendamento de banca, orientações sobre documentos, cronogramas e prazos de entrega e ficha de orientação</li>
+                                    <li>Manual do Aluno e do Professor</li>
+                                    <li>Regulamento do programa</li>
+                                    <li>Coordenação</li>
+                                    <li>Dúvidas Frequentes</li>
+                                </ul>
+                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do item <a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2013/04/Duvidas_Frequentes_Mestrados.pdf">Dúvidas frequentes</a>. Ele contém informações sobre:</p>
+                                <ul>
+                                    <li>Frequência dos alunos</li>
+                                    <li>Faltas e reposições</li>
+                                    <li>Solicitação de casos</li>
+                                    <li>Aplicação e regras do Exame</li>
+                                    <li>Entrega de notas</li>
+                                </ul>
+                                <div class="well well-questoes-operacionais">
+                                    <p>O Apoio Acadêmico do Mestrado é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                                    <h5 name="stricto-sensu-m">Mestrado</h5>
+                                    <p>Lorem ipsum dolor sit.</p>
+
+                                    <h5 name="stricto-sensu-d">Doutorado</h5>
+                                    <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+
+                        <!-- educação executiva -->
+                        <div data-name="ee">
+                            <h3 name="educacao-executiva">Educação Executiva</h3>
+                            <p>Lorem ipsum dolor sit.</p>
+                            <div class="container-h4">
+                                <h4 name="educacao-executiva-pa">Programas abertos</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                                <h4 name="educacao-executiva-pc">Programas customizados</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,16 +194,30 @@
 
         <!-- footer -->
         <footer role="contentinfo" id="footer">
-            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block">
+            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block img-responsive">
         </footer>
     </div>
+    <!-- menu-lateral small device-->
+    <div class="menu-lateral-sd menu-l-sd-verde">
+        <h4></h4>
+        <h5><span>Programas</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#graduacao-g" title="Graduação">Graduação</a></li>
+            <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
+            <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
+        </ul>
+        <ul class="list-inline add-itens-mg-sd">
+            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span style="padding-top:0.65em">Da contratação à sala de aula</span></a></li>
+            <li class=""><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span style="padding-top:0.65em">Consulta rápida</span></a></li>
+        </ul>
+    </div>
+    <div class="bg-menu-lateral-sd"></div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
     <!-- plugins -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <!-- code project -->
     <script src="../assets/js/main.js"></script>
 </body>

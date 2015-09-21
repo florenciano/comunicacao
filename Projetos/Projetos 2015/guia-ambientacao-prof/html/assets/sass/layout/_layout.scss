@@ -20,9 +20,8 @@ footer {
   height: 91px;
 }
 
-
 // // // // // // // // // // // // // // // // // // // // // // //
-// HOME
+// PRESETS
 // // // // // // // // // // // // // // // // // // // // // // //
 
 // // variables // //
@@ -33,44 +32,26 @@ $grid40: 40px;
 $amarelo: #f1c40f;
 $verde: #30bc9c;
 $azul: #34485d;
+$vermelho : #9b3336;
+$vermelhoEscuro: #82292C;
 // typography
 //  default size: 16px // 
 
-div[role="main"] {
-	section.options-home {
-		padding-top: $grid30*2;
-		div { 
-			text-align: center;
-			margin-bottom: $grid30*2;
-		}
-		h2 {
-			margin-top: $grid40/2;
-			margin-bottom: $grid40/4;
-			font-size: 1.25em;
-			font-weight: 700;
-		}
-		p { margin-bottom: $grid30; }
-		.btn-primary {
-			background-color: #00acc9;
-			border-color: transparent;
-			font-size: .875em;
-			&:hover {
-				background-color: #029BB5;
-			}
-		}
-		.btn-lg { padding: 1em 2em; }
-	}
+// selection color
+#contratacao {
+	::-moz-selection { background-color: #F9E594; }
+	     ::selection { background-color: #F9E594; }
 }
+
+.content { margin-top: $grid40; position: relative; }
 
 // MENU GLOBAL
 // // // // // // // // // // // // // // // // // // // // // // //
-
 
 // sprite icons - menu global
 @import "ico-menu/*.png";
 @include all-ico-menu-sprites;
 // // result: .ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul // //
-
 
 div[role="main"] {
 	.menu-global {
@@ -103,9 +84,7 @@ div[role="main"] {
 	}
 }
 
-.content { margin-top: $grid40; }
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	div[role="main"] {
 		.menu-global {
 			margin-top: $grid40;
@@ -116,11 +95,28 @@ div[role="main"] {
 				li {
 					padding: .5em;
 					margin-bottom: 5px;
+					display: block;
+					width: 100%;
 				}
 				a {
+					font-size: .925em;
+					overflow-y: visible;
 					span { border-right: none; }
 				}
-				a.ico-menu-verde { line-height: 2.5em; }
+				a.ico-menu-verde { 
+					span { padding-top: 0.7em; }
+				}
+			}
+		}
+	}
+}
+@media (max-width: 375px) {
+	div[role="main"] {
+		.menu-global {
+			nav[role="navigation"] {
+				a.ico-menu-verde {
+					span { padding-top: 0.2em; }
+				}
 			}
 		}
 	}
@@ -133,31 +129,305 @@ div[role="main"] {
 @import "ico-menuzinho/amarelo/*.png";
 @include all-amarelo-sprites;
 
+@import "ico-menuzinho/verde/*.png";
+@include all-verde-sprites;
+
 div[role="main"] {
 	.menu-lateral {
+		position: absolute;
+		top: 0;	
+		min-width: 320px;
+		width: 25%;
+		max-width: 345px;
+		font-size: 0.875em;
+		padding-left: $grid40/4;
 		h5 {
-			margin: ($grid30/2) 0 ($grid30/3) 0;
+			font-size: 1.075em;
+			margin: 0;
 			height: $grid30;
-    		padding-top: 0.275em;
+    		padding-top: 0.375em;
 			span {
 				margin-left: $grid40;
 				display: block;
 			}
 		}
-		.active { font-weight: 700; }
 		ul {
 			margin-left: 1em;
 			li {
 				margin-bottom: $grid30/6;
 				a {
-					color: #9b3336;
-					&:hover { color: #82292C; }
+					color: $vermelho;
+					&:hover { color: $vermelhoEscuro; }
 				}
+			}
+		}
+		// itens: menu global
+		.add-itens-mg {
+		    margin: 1em 0 0 0;
+		    border-top: 1px solid #f3f3f3;
+		    padding: 1em 0;
+		    display: none;
+		    li { 
+		    	margin: 0 0 1em 0;
+		    	padding: 0;
+		    	a {
+			    	display: block;
+		    		min-height: $grid40+1;
+		    		color: #414042;
+		    		&:hover { color: #414042; }
+		    		span {
+	    			    margin-left: 3.5em;
+	    				display: block;
+		    		}
+			    }
+		    }
+		}
+	}
+	// fixed menu in scroll
+	.fixed-menu { 
+		position: fixed;
+		top: $grid40/4;
+		z-index: 999;
+	}
+}
+
+// class for used while scroll page
+.active { font-weight: 700; letter-spacing: -0.04em; }
+
+// hide menu/components in medium devices
+@media (min-width: 992px) {
+	.menu-lateral-small-device,
+	.button-menu-lateral,
+	.bg-menu-lateral-sd { display: none; }
+}
+
+// MENU LATERAL : small device
+// // // // // // // // // // // // // // // // // // // // // // // 
+.menu-lateral-sd {
+    background-color: #fff;
+    font-size: .875em;
+    padding: 3em 1em 1em 1em;
+    position: fixed;
+    width: 280px;
+    border-top: 5px solid transparent;
+    overflow: auto;
+    z-index: 10001;
+    top: 0;
+    left: -279px;
+    height: 100%;
+    display: none;
+	-webkit-box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
+        	box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
+    h4 {
+	    font-size: 1.125em;
+	    margin-bottom: 1em;
+	    border-bottom: 1px solid #676767;
+	    padding-bottom: .25em;
+    }
+    h5 {
+		font-size: .875em;
+    	margin: 0 0 .25em 0;
+    	font-weight: 700;
+	}
+	ul {
+		margin-bottom: $grid40/2;
+		li {
+			a {
+				display: block;
+				font-size: .875em;
+				padding: .5em 0;
+				color: $vermelho;
+				line-height: 1.25em;
+				&:hover { color: $vermelhoEscuro; }
+			}
+		}
+	}
+	// itens: menu global
+	.add-itens-mg-sd {
+	    margin: 0;
+	    border-top: 1px solid #f3f3f3;
+	    padding: 1em 0;
+	    li { 
+	    	margin: 0 0 1em 0;
+	    	padding: 0;
+	    	a {
+		    	display: block;
+	    		min-height: $grid40+1;
+	    		color: #414042;
+	    		&:hover { color: #414042; }
+	    		span {
+    			    margin-left: 4em;
+    				display: block;
+	    		}
+		    }
+	    }
+	}
+}
+.menu-l-sd-amarelo { border-color: $amarelo }
+.menu-l-sd-verde { border-color: $verde }
+.menu-l-sd-azul { border-color: $azul }
+
+// BACKGROUND: MODAL
+// // // // // // // // // // // // // // // // // // // // // // //
+.bg-menu-lateral-sd {
+	background-color: rgba(0,0,0,.1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 1000;
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// HOME
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	section.options-home {
+		padding-top: $grid30*2;
+		div { 
+			text-align: center;
+			margin-bottom: $grid30*2;
+		}
+		h2 {
+			margin-top: $grid40/2;
+			margin-bottom: $grid40/4;
+			font-size: 1.25em;
+			font-weight: 700;
+		}
+		p { margin-bottom: $grid30; }
+		.btn-primary {
+			background-color: #00acc9;
+			border-color: transparent;
+			font-size: .875em;
+			&:hover {
+				background-color: #029BB5;
+			}
+		}
+		.btn-lg { padding: 1em 2em; }
+	}
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// CONTRATACAO
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	.content-text {
+		margin-bottom: $grid30;
+		.button-menu-lateral {
+		    position: fixed;
+		    right: 20px;
+		    top: 50%;
+		    margin-top: -1em;
+			button {
+		       	background-color: #000;
+			    border: 1px solid #EFEFEF;
+			    padding: .375em .5em;
+			    font-size: 1em;
+			    span { 
+	    	        font-size: 1.5em;
+					color: #EFEFEF;
+			    }
+			}
+		}
+		a {
+			color: $vermelho;
+			&:hover { color: $vermelhoEscuro; }
+		}
+		h2 {
+			font-size: 1.5em;
+			font-weight: 700;
+			border-bottom: 1px solid #F3F3F3;
+    		padding-bottom: 5px;
+    		color: #414042;
+    		margin-top: $grid40;
+		}
+		h2.first { margin-top: 0; }
+		h3 { font-size: 1.25em; }
+		h4 {
+		    font-size: 1em;
+		    font-weight: 700;
+		    margin-bottom: 0;
+		}
+		h5 {
+			font-weight: 700;
+		    margin-bottom: 0;
+		}
+		.container-h4 { margin-left: 1em }
+		.well {
+			margin: ($grid40/2) 0;
+			background-color: #fff;
+   			-webkit-box-shadow: none;
+   			        box-shadow: none;
+    		padding: $grid40/4;
+			.list-inline { margin-bottom: 0; }
+			li { margin-bottom: 0; }
+			ul + p { margin-top: 1em; }
+			.no-p li { margin-top: 0; }
+		}
+		.well-contratacao { border-left: 5px solid #f0c40f; }
+		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
+		.well-consulta-rapida { border-left: 5px solid #3a99d9; }
+		li {
+			margin: ($grid40/4) 0;
+			span {
+				color: #5a5a5a;
+				font-size: 1.5em;
+				margin-right: .25em;
 			}
 		}
 	}
 }
 
+@media (min-width: 992px) {
+	div[role="main"] {
+		.content-text {
+			h2 { margin-top: $grid40/2; }
+			h2.first { margin-top: 0; }
+		}
+	}
+}
+
 // // // // // // // // // // // // // // // // // // // // // // //
-// CONTRATACAO
+// QUESTOES OPERACIONAIS
 // // // // // // // // // // // // // // // // // // // // // // //
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// CONSULTA RAPIDA
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	.content-text {
+		.table-consulta-rapida {
+			margin-top: $grid30;
+			caption { 
+				width: 34em;
+    			margin: 0 auto;
+				text-align: center;
+			}
+			thead > tr { background-color: #6bb3e3; }
+			thead > tr th { 
+				padding: 1em .25em;
+				color: #fff;
+				text-align: center;
+				font-weight: 400;
+			}
+			tbody tr:nth-child(even) { background-color: #f9f9f9; }
+			tbody tr:nth-child(odd) { background-color: #fff; }
+			td { 
+			    width: 25%;
+			    vertical-align: middle;
+			    text-align: center;
+			}
+		}
+	}
+}
+
+
+

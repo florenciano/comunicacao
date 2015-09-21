@@ -11,17 +11,16 @@
     <title>Guia de ambientação - Portal do Professor</title>
     <!-- Bootstrap -->
     <link href="../assets/css/main.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../favicon-16.png">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="contratacao">
     <div class="container">
         <header role="banner" id="top">
-            <img src="../assets/img/--header--.png" alt="{header}" class="center-block">
+            <img src="../assets/img/--header--.png" alt="{header}" class="center-block img-responsive">
         </header>
 
         <div class="row">
@@ -36,73 +35,385 @@
                     </nav>
                 </div>
                 <div class="content clearfix">
-                    <div class="menu-lateral col-md-4 hidden-sm hidden-xs">
-                        <h5 class="active amarelo-admissao"><span>Admissão, benefícios e afins</span></h5>
-                        <ul>
-                            <li><a href="#" title="Processo admissional">Processo admissional</a></li>
-                            <li><a href="#" title="Dados de acesso">Dados de acesso</a></li>
-                            <li><a href="#" title="Pagamentos, férias e benefícios">Pagamentos, férias e benefícios</a></li>
-                        </ul>
-                        <h5 class="amarelo-gestao-aprendizagem"><span>Gestão da Aprendizagem</span></h5>
-                        <ul>
-                            <li><a href="#" title="No que acreditamos">No que acreditamos</a></li>
-                            <li><a href="#" title="Princípio do Aprendizado Centrado no Aluno">Princípio do Aprendizado Centrado no Aluno</a></li>
-                            <li><a href="#" title="Desenvolvimento do corpo Docente">Desenvolvimento do corpo Docente</a></li>
-                        </ul>
-                        <h5 class="amarelo-recurso"><span>Recursos didáticos e Tecnologias</span></h5>
-                        <ul>
-                            <li><a href="#" title="Estrutura das salas de aula">Estrutura das salas de aula</a></li>
-                            <li><a href="#" title="Recursos e tecnologias de aprendizagem">Recursos e tecnologias de aprendizagem</a></li>
-                            <li><a href="#" title="Base de dados e acervo da Biblioteca">Base de dados e acervo da Biblioteca</a></li>
-                        </ul>
-                        <h5 class="amarelo-ajudar"><span>Quem pode te ajudar</span></h5>
-                        <ul>
-                            <li><a href="#" title="item 1">item 1</a></li>
-                            <li><a href="#" title="item 2">item 2</a></li>
-                            <li><a href="#" title="item 3">item 3</a></li>
-                        </ul>
-                        <h5 class="amarelo-gestao-corpo-docente"><span>Gestão do corpo docente</span></h5>
-                        <ul>
-                            <li><a href="#" title="Vínculo">Vínculo</a></li>
-                            <li><a href="#" title="Qualificação e Engajamento">Qualificação e Engajamento</a></li>
-                            <li><a href="#" title="Atualização do currículo">Atualização do currículo</a></li>
+                    <div class="menu-lateral hidden-sm hidden-xs">
+                        <div class="container-menu">
+                            <h5 class="amarelo-admissao active" id="iten0"><span>Admissão, benefícios e afins</span></h5>
+                            <ul>
+                                <li><a href="#admissao-pa" title="Processo admissional">Processo admissional</a></li>
+                                <li><a href="#admissao-da" title="Dados de acesso">Dados de acesso</a></li>
+                                <li><a href="#admissao-pfb" title="Pagamentos, férias e benefícios">Pagamentos, férias e benefícios</a></li>
+                            </ul>
+                            <h5 class="amarelo-gestao-aprendizagem" id="iten1"><span>Gestão da Aprendizagem</span></h5>
+                            <ul>
+                                <li><a href="#gestao-aprendizagem-nqa" title="No que acreditamos">No que acreditamos</a></li>
+                                <li><a href="#gestao-aprendizagem-paca" title="Princípio do Aprendizado Centrado no Aluno">Princípio do Aprendizado Centrado no Aluno</a></li>
+                                <li><a href="#gestao-aprendizagem-dcd" title="Desenvolvimento do corpo Docente">Desenvolvimento do corpo Docente</a></li>
+                            </ul>
+                            <h5 class="amarelo-recurso" id="iten2"><span>Recursos didáticos e Tecnologias</span></h5>
+                            <ul>
+                                <li><a href="#gestao-aprendizagem-esa" title="Estrutura das salas de aula">Estrutura das salas de aula</a></li>
+                                <li><a href="#recurso-tecnologia-aprendizagem-rta" title="Recursos e tecnologias de aprendizagem">Recursos e tecnologias de aprendizagem</a></li>
+                                <li><a href="#gestao-aprendizagem-bdab" title="Base de dados e acervo da Biblioteca">Base de dados e acervo da Biblioteca</a></li>
+                            </ul>
+                            <h5 class="amarelo-ajudar" id="iten3"><span>Quem pode te ajudar</span></h5>
+                            <ul>
+                                <li><a href="#quem-pode-me-ajudar-at" title="Atendimento ao Professor">Atendimento ao Professor</a></li>
+                                <li><a href="#quem-pode-me-ajudar-aa" title="Apoios Acadêmicos">Apoios Acadêmicos</a></li>
+                                <li><a href="#quem-pode-me-ajudar-sd" title="Service Desk">Service Desk</a></li>
+                                <li><a href="#quem-pode-me-ajudar-reprografia" title="Reprografia">Reprografia</a></li>
+                                <li><a href="#quem-pode-me-ajudar-dea" title="DEA">DEA – Desenvolvimento de Ensino e Aprendizagem</a></li>
+                                <li><a href="#quem-pode-me-ajudar-nid" title="NID/SAVI">NID/SAVI</a></li>
+                                <li><a href="#quem-pode-me-ajudar-dp" title="Departamento Pessoal">Departamento Pessoal</a></li>
+                            </ul>
+                            <h5 class="amarelo-gestao-corpo-docente" id="iten4"><span>Gestão do corpo docente</span></h5>
+                            <ul>
+                                <li><a href="#gestao-corpo-docente-v" title="Vínculo">Vínculo</a></li>
+                                <li><a href="#gestao-corpo-docente-qe" title="Qualificação e Engajamento">Qualificação e Engajamento</a></li>
+                                <li><a href="#gestao-corpo-docente-ac" title="Atualização do currículo">Atualização do currículo</a></li>
+                            </ul>
+                        </div>
+                        <ul class="list-inline add-itens-mg">
+                            <li><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
+                            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span style="padding-top:0.65em">Consulta rápida</span></a></li>
                         </ul>
                     </div>
                     <!-- article beging here -->
-                    <div class="content-text col-md-8 clearfix">
-                        <!-- admissao -->
-                        <h2 name="admissao">Admissão, benefícios e afins</h2>
-                        <p>Conheça os principais benefícios oferecidos e saiba onde tirar dúvidas sobre essa e outras questões contratuais.</p>
-                        <h3 name="admissao-pa">Processo admissional</h3>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                        <h3 name="admissao-da">Dados de acesso</h3>
-                        <p>Ao entrar no Insper você recebe um usuário de rede para acessar os computadores da escola, os sistemas administrativos e o ambiente virtual de aprendizagem - Blackboard.</p>
-                        <p>Assim que o processo admissional é concluído, os dados de login e senha são enviados para o e-mail pessoal fornecido durante o período de contratação.</p>
-                        <p>Esses dados devem ser informados sempre que for solicitada autenticação de usuário.</p>
-                        <p>Atenção! Uma vez finalizado o processo de contratação, as comunicações via e-mail são feitas pela conta do Insper.</p>
-                        <div class="well well-contratacao">
-                            <p>Caso não tenha recebido ou não se lembre de seus dados de acesso, entre em contato com o Service Desk:</p>
-                            <ul class="list-inline">
-                                <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
-                            </ul>
+                    <div class="content-text col-md-8 col-md-offset-4 clearfix">
+                        <div class="button-menu-lateral">
+                            <button type="button" class="" id="btnMenu">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </button>
                         </div>
-                        <h3 name="admissao-pfb">Pagamentos, férias e benefícios</h3>
-                        <ul>
-                            <li>O pagamento salarial ocorre no último dia útil do mês e não há adiantamento.</li>
-                            <li>O Insper oferece aos seus colaboradores o programa “Vida com Qualidade”, com uma série de benefícios. Confira a relação completa na <a href="http://corporativo.insper.edu.br/" title="Intranet Corporativa - Insper">Intranet Corporativa</a>.</li>
-                            <li>As férias são coletivas, conforme convenção coletiva.</li>
-                            <li>Informações relacionadas à área de Recursos Humanos como dados cadastrais, dados de admissão, informe de rendimentos e demonstrativo de pagamento estão disponíveis no <a href="https://portalrm.insper.edu.br/corpore.net/Login.aspx" title="Portal Pessoas - Insper">Portal de Pessoas</a> (utilize o navegador Internet Explorer). Para conhecer mais sobre o portal, leia as <a href="#" title="XXXX">orientações</a>.</li>
-                        </ul>
-                        <div class="well well-contratacao">
-                            <p>Para mais informações sobre remuneração e benefícios, acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/">Manual do Corpo Docente</a>.</p>
-                            <p>Em caso de dúvidas sobre o processo de admissão, benefícios e outros assuntos relacionados a Recursos Humanos, entre em contato com a área de Pessoas:</p>
-                            <ul class="list-inline">
-                                <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                        
+                        <!-- admissao -->
+                        <div data-name="a">
+                            <h2 name="admissao" class="first">Admissão, benefícios e afins</h2>
+                            <p>Conheça os principais benefícios oferecidos e saiba onde tirar dúvidas sobre essa e outras questões contratuais.</p>
+                            <h3 name="admissao-pa">Processo admissional</h3>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <h3 name="admissao-da">Dados de acesso</h3>
+                            <p>Ao entrar no Insper você recebe um usuário de rede para acessar os computadores da escola, os sistemas administrativos e o ambiente virtual de aprendizagem - Blackboard.</p>
+                            <p>Assim que o processo admissional é concluído, os dados de login e senha são enviados para o e-mail pessoal fornecido durante o período de contratação.</p>
+                            <p>Esses dados devem ser informados sempre que for solicitada autenticação de usuário.</p>
+                            <p>Atenção! Uma vez finalizado o processo de contratação, as comunicações via e-mail são feitas pela conta do Insper.</p>
+                            <div class="well well-contratacao">
+                                <p>Caso não tenha recebido ou não se lembre de seus dados de acesso, entre em contato com o Service Desk:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="admissao-pfb">Pagamentos, férias e benefícios</h3>
+                            <ul>
+                                <li>O pagamento salarial ocorre no último dia útil do mês e não há adiantamento.</li>
+                                <li>As férias são coletivas, conforme convenção coletiva.</li>
+                                <li>O Insper oferece aos seus colaboradores o programa “Vida com Qualidade”, com uma série de benefícios. Confira a relação completa na <a href="http://corporativo.insper.edu.br/" title="Intranet Corporativa - Insper">Intranet Corporativa</a>.</li>
+                                <li>Informações relacionadas à área de Recursos Humanos como dados cadastrais, dados de admissão, informe de rendimentos e demonstrativo de pagamento estão disponíveis no <a href="https://portalrm.insper.edu.br/corpore.net/Login.aspx" title="Portal Pessoas - Insper">Portal de Pessoas</a> (utilize o navegador Internet Explorer). Para conhecer mais sobre o portal, leia as <a href="http://corporativo.insper.edu.br/wp-content/uploads/2012/11/Manual-do-Professor-Portal-de-Pessoas_vf_novembro20121.pdf" title="Orientações gerais do uso do Portal Pessoas" rel="help">orientações</a>.</li>
                             </ul>
+                            <div class="well well-contratacao">
+                                <p>Para mais informações sobre remuneração e benefícios, acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/">Manual do Corpo Docente</a>.</p>
+                                <p>Em caso de dúvidas sobre o processo de admissão, benefícios e outros assuntos relacionados a Recursos Humanos, entre em contato com a área de Pessoas:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- gestao da aprendizagem -->
+                        <div data-name="ga">
+                            <h2 name="gestao-aprendizagem">Gestão da Aprendizagem</h2>
+                            <p>Conheça o princípio educacional que norteia todas as nossas ações.</p>
+                            <h3 name="gestao-aprendizagem-nqa">No que acreditamos</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum soluta cupiditate aspernatur dolore quae doloribus hic pariatur reprehenderit consequatur eos, consectetur id ipsam.</p>
+                            <h3 name="gestao-aprendizagem-paca">Princípio do Aprendizado Centrado no Aluno</h3>
+                            <p>A visão educacional do Insper é orientada pelo princípio de Aprendizado Centrado no Aluno para transmitir conhecimento, desenvolver habilidades e transformar atitudes.</p>
+                            <p>Centrar o aprendizado no aluno significa criar condições para que ele chegue por si mesmo a conclusões ou à construção de determinados conceitos. O professor, antes de expor esses conceitos ou formular determinada teoria, deve estimular a intuição e o pensamento crítico do aluno por meio de exemplos, questionamentos, casos ou simulações. Para o aluno, ser o centro de seu próprio aprendizado significa responsabilizar-se dentro e fora da sala de aula pela apreensão do conhecimento que lhe é apresentado pelo professor. Nesse processo, os alunos devem participar ativamente da aula, contribuindo também para o aprendizado do grupo e para o sucesso do projeto pedagógico da escola.</p>
+                            <div class="well well-contratacao">
+                                <p>Acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=138" title="Manual do Corpo Docente - Portal dos professores">Manual do Corpo Docente</a> e conheça as condutas recomendadas ao aluno e ao professor e também os resultados esperados do processo de ensino e aprendizagem quando baseado no princípio do Aprendizado Centrado no Aluno.</p>
+                                <p>Em caso de dúvidas sobre nossa visão educacional, entre em contato do DEA – Desenvolvimento de Ensino e Aprendizagem:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="gestao-aprendizagem-dcd">Desenvolvimento do corpo docente</h3>
+                            <p>Somado à gestão da qualificação acadêmica e profissional de seus docentes, o Insper possui um calendário permanente de iniciativas voltadas ao desenvolvimento pedagógico dos seus professores, cujas pautas são definidas a partir de necessidades identificadas nos sucessivos ciclos de gestão da aprendizagem junto às coordenações dos programas.</p>
+                            <p>Além de oferecer workshops, cursos e palestras, constantemente são promovidas ações de desenvolvimento do corpo docente por meio de instrumentos específicos para aprimorar a dinâmica da sala de aula. Dentre os instrumentos, destacam-se:</p>
+                            <ul>
+                                <li><strong>VEP</strong>: Para capturar o alinhamento das práticas pedagógicas da sala de aula com a visão educacional centrada no aluno, o Insper oferece ao professor o programa de Observação e Feedback de Aulas por meio do instrumento <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/wp-content/uploads/2013/08/Anexo-22-VEP-Vis%C3%A3o-Educacional-na-Pr%C3%A1tica.pdf" title="Conheça um pouco mais do VEP" rel="help">VEP</a> (Visão Educacional na Prática).</li>
+                                <li><strong>Programa de Mentoria</strong>: Consiste em professores referências em didática (mentores) assistirem aulas de outros professores (mentorados), fornecendo feedback de acordo com o protocolo de observação de aulas VEP.</li>
+                                <li><strong>Curso de Formação e Aperfeiçoamento do Corpo Docente</strong>: Buscando dar continuidade ao processo de desenvolvimento do corpo docente foi desenvolvido internamente um curso de formação e aperfeiçoamento. Em formato híbrido (parte presencial, parte a distância), o curso é composto por módulos temáticos com o objetivo de fortalecer o princípio do Aprendizado Centrado no Aluno em diferentes práticas pedagógicas. Todos os módulos são fortemente pautados no trabalho colaborativo e na troca de experiência entre os docentes participantes.</li>
+                                <li><strong>Avaliação dos Alunos</strong>: Na dimensão ensino, a <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=43">avaliação de desempenho</a> é feita inicialmente pelos próprios alunos, quando preenchem o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=146">formulário de avaliação</a>. Dependendo do programa de ensino, esta avaliação pode ocorrer no meio do período letivo e ao seu final ou apenas ao final.</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <p>Consulte o <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/calendario-formacao-docentes/index.html" title="Veja as principais iniciativas de formação e aperfeiçoamento oferecidas no ano">calendário</a> de Formação e Aperfeiçoamento do Corpo Docente e confira os principais eventos e cursos disponíveis. Algumas iniciativas são comuns a todo o corpo docente, outras são específicas de cada programa.</p>
+                                <p>Para conhecer melhor as diferentes iniciativas de desenvolvimento, entre em contato com o DEA – Desenvolvimento de Ensino e Aprendizagem ou fale diretamente com seu coordenador!</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- recursos didáticos e tecnólogicos -->
+                        <div data-name="rdt">
+                            <h2 name="recurso-tecnologia-aprendizagem">Recursos didáticos e tecnologias</h2>
+                            <p>Da infraestrutura das salas de aula, passando pelos recursos didáticos que subsidiam o processo de ensino e aprendizagem até o acervo e serviços da biblioteca, o Insper conta com uma série de iniciativas para apoiar o professor em sua prática docente. Conheça as principais.</p>
+                            <h3 name="gestao-aprendizagem-esa">Estrutura das salas de aula</h3>
+                            <p>Todas as salas de aula são equipadas com notebook, telão, projetor, DVD/Blue-Ray Player, caixas de som e microfones. Algumas salas também possuem recursos automatizados para controlar os equipamentos.</p>
+                            <p>Somada à infraestrutura fixa das salas de aula, existe também o recurso de <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/" title="Conheça os que são os votadores eletrônicos">votadores eletrônicos</a> (clickers). Por meio de respostas simultâneas, o professor verifica o nível de compreensão dos alunos em tempo real, podendo adaptar a dinâmica da aula de acordo com o ritmo da turma, além de comparar o desempenho dos alunos ao longo das aulas, uma vez que os resultados das votações são armazenados.</p>
+                            <div class="well well-contratacao">
+                                <p>Para conhecer os recursos disponíveis em sala de aula ou tirar dúvidas, entre em contato com a equipe de Service Desk.</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="recurso-tecnologia-aprendizagem-rta">Recursos e tecnologias de aprendizagem </h3>
+                            <p>Além dos recursos e tecnologias para uso exclusivo em sala de aula, uma série de outros XXX está à disposição do corpo docente para apoiar e enriquecer a experiência de aprendizado dos alunos dentro e fora da sala de aula.</p>
+                            <div class="container-h4">
+                                <h4 name="recurso-tecnologia-aprendizagem-c">Casos</h4>
+                                <p>O <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/sobre-recursos/" title="Conheça um pouco mais sobre os estudos de casos">estudo de caso</a> é um instrumento pedagógico que apresenta um problema mal estruturado, ou seja, aquele que não tem uma solução pré-definida, exigindo empenho do aluno para identificar o problema, analisar evidências, desenvolver argumentos lógicos, avaliar e propor soluções. Por meio de uma parceria com Harvard os professores têm acesso a uma ampla coleção de casos, além dos casos escritos pelos próprios professores do Insper.</p>
+                                <h4 name="recurso-tecnologia-aprendizagem-s">Simuladores</h4>
+                                <p>Os <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/sobre-recursos/" title="Conheça um pouco mais sobre os simuladores">simuladores</a> de Harvard trazem situações reais em que os alunos devem analisar os cenários e tomar decisões, contribuindo para uma aprendizagem dinâmica em sala de aula.</p>    
+                                <h4 name="recurso-tecnologia-aprendizagem-cat">Catme</h4>
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Catme/sobre-a-ferramenta/" title="Conheça um pouco mais sobre o Catme">Catme</a> é uma ferramenta que permite ao professor avaliar a competência de trabalho em equipe dos alunos. Concebida por pesquisadores de diferentes instituições norte-americanas, a ferramenta possibilita entender a dinâmica de funcionamento das equipes, analisando a contribuição de cada aluno para o andamento do time.</p>
+                                <h4 name="recurso-tecnologia-aprendizagem-bb">Blackboard</h4>
+                                <p>O <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/conhecendo-o-ambiente/o-que-e-blackboard/" title="Conheça um pouco mais sobre o Blackboard">Blackboard</a> é um ambiente que apoia todas as ações em sala de aula. Ele permite ao professor compartilhar materiais, se comunicar com os alunos, receber trabalhados individuais ou em grupo, disponibilizar atividades de autoestudo, além de promover debates e discussões assíncronas. Também é o ambiente usado para lançar as notas e fornecer feedback aos alunos.</p>
+                                <div class="well well-contratacao">
+                                    <p>Para conhecer os recursos que apoiam a prática em sala de aula ou tirar dúvidas, entre em contato com a equipe DEA – Desenvolvimento de Ensino e Aprendizagem.</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 name="gestao-aprendizagem-bdab">Bases de dados e acervo da Biblioteca</h3>
+                            <p>A Biblioteca Telles é especializada em Economia, Administração e áreas correlatas e fornece suporte informacional às atividades de ensino e pesquisa do Insper. Dentre os produtos e serviços da biblioteca destacam-se:</p>
+                            <ul>
+                                <li>Acervo físico e online com milhares de materiais disponíveis para consulta, empréstimo e download.</li>
+                                <li>Serviço de orientação à pesquisa com uma equipe de bibliotecários que orienta a seleção de fontes de informação, o uso dos recursos de busca e a elaboração de trabalhos acadêmicos.</li>
+                                <li>Empréstimo de materiais disponíveis no acervo e entre bibliotecas.</li>
+                                <li>Reservas e renovações, que podem ser feitas pela internet.</li>
+                                <li>Guias, tutoriais e treinamentos ao usuário.</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <p>Explore a <a href="http://www.insper.edu.br/biblioteca-telles/" title="Biblioteca Telles">página da Biblioteca</a> e conheça em detalhes todos os produtos e serviços disponíveis.</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- quem pode me ajudar -->
+                        <div data-name="qpa">
+                            <h2 name="quem-pode-me-ajudar">Quem pode me audar?</h2>
+                            <p>Diversas equipes possuem interface com o corpo docente, oferecendo orientação e suporte em suas diferentes áreas de atuação. Conheça as principais.</p>
+                            <h3 name="quem-pode-me-ajudar-at">Atendimento ao Professor</h3>
+                            <p>A área de Atendimento ao Professor fica localizada no Lounge dos Professores. Dentre suas principais atividades estão:</p>
+                            <ul>
+                                <li>Apoiar os professores nas atividades diárias, como entrega e solicitação de material impresso (provas, textos, quizzes) e correspondências diversas.</li>
+                                <li>Monitorar e acompanhar prazos e recebimentos de: provas (impressão, envio, devolução, divulgação de notas e arquivamento), plano de aula, lista de frequência etc.</li>
+                                <li>Fazer a impressão, organização, distribuição, recolhimento e conferência diária das listas de frequência das aulas.</li>
+                                <li>Confeccionar o Diário de Classe através da organização das pautas de professores e monitores (assinadas a cada aula), horários de atendimento e monitorias e da compilação de todas as listas de frequência.</li>
+                            </ul>
+                            <h3 name="quem-pode-me-ajudar-aa">Apoios Acadêmicos</h3>
+                            <p>Cada programa do Insper possui seu próprio apoio acadêmico, que oferece serviços distintos a depender do programa. Confira o suporte que cada apoio pode oferecer.</p>
+                            <div class="container-h4">
+                                <h4 name="quem-pode-me-ajudar-aa-apoio-graduacao">Apoio Graduação (ADM, ECO e Engenharia)</h4>
+                                <p><em>Ex.: A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</em></p>
+                                <div class="well well-contratacao">
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="XXX">Graduação (ADM e ECO)</a>, entre em contato com a área:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                                <h4 name="quem-pode-me-ajudar-aa-apoio-pgls">Apoio Pós-Graduação Lato Sensu</h4>
+                                <p><em>Ex.: A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</em></p>
+                                <div class="well well-contratacao">
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="XXX">PGLS</a>, entre em contato com a área:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                                <h4 name="quem-pode-me-ajudar-aa-apoio-pgss">Apoio Pós-Graduação Stricto Sensu</h4>
+                                <p><em>Ex.: A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</em></p>
+                                <div class="well well-contratacao">
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="XXX">PGSS</a>, entre em contato com a área:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                                <h4 name="quem-pode-me-ajudar-aa-apoio-eepa">Apoio Educação Executiva Programas Abertos</h4>
+                                <p><em>Ex.: A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</em></p>
+                                <div class="well well-contratacao">
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="XXX">Educação Executiva</a>, entre em contato com a área:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                                <h4 name="quem-pode-me-ajudar-aa-apoio-eepc">Apoio Educação Executiva Programas Customizados</h4>
+                                <p><em>Ex.: A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</em></p>
+                                <div class="well well-contratacao">
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="XXX">Educação Executiva - Programas Customizados</a>, entre em contato com a área:</p>
+                                    <ul class="list-inline">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-sd">Service Desk</h3>
+                            <p>O Service Desk é uma área de suporte que agrega diversos serviços de apoio ao professor. Procure essa área para esclarecer dúvidas relacionadas a:</p>
+                            <ul>
+                                <li>Equipamentos ou infraestrutura em sala de aula</li>
+                                <li>Senha e acesso à rede e aos sistemas do Insper</li>
+                                <li>Configuração de máquinas, instalação e utilização de softwares e sistemas</li>
+                                <li>Reserva de salas ou equipamentos para uso em sala de aula</li>
+                                <li>Etc.</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <p>Para abrir um chamado junto ao Service Desk você pode ir direto ao balcão no 2º andar ou contatá-los por e-mail ou telefone:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                                <p>Se estiver na sala de aula, digite 1 no telefone.</p>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-reprografia">Reprografia</h3>
+                            <p>Procure a Reprografia para solicitar:</p>
+                            <ul>
+                                <li>Serviços de cópia e impressão de documentos</li>
+                                <li>Encadernações</li>
+                                <li>Digitalização de imagens</li>
+                                <li>Plastificação </li>
+                                <li>Envio de fax</li>
+                            </ul>
+                            <p>O Insper atende rigorosamente às leis de proteção ao direito autoral (ABIGRAF). Por essa razão, a Reprografia não atende pedidos de cópias xerográficas de livros, casos, artigos ou qualquer outro material cuja reprodução seja proibida.</p>
+                            <div class="well well-contratacao">
+                                <p>Entre em contato com a Reprografia:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                                <p>A impressão de materiais didáticos pode ser solicitada diretamente à área de Atendimento ao Professor. Consulte os prazos e condições na <a href="#" title="XXX">seção específica de cada programa</a> ou entre em contato com a área:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-dea">DEA – Desenvolvimento de Ensino e Aprendizagem</h3>
+                            <p>O propósito do DEA é apoiar o aprimoramento contínuo do aprendizado por meio de ações que consolidem a visão educacional do Insper.</p>
+                            <p>Procure o DEA para conhecer ou tirar dúvidas relacionadas aos seguintes itens:</p>
+                            <ul>
+                                <li>Princípio do Aprendizado Centrado no Aluno: o que é e como funciona na prática.</li>
+                                <li>Iniciativas de formação e aperfeiçoamento do corpo docente (workshops, cursos e instrumentos específicos para aprimorar a dinâmica da sala de aula - VEP, Mentoria, Avaliação dos Alunos etc.).</li>
+                                <li>Processo de avaliação do aprendizado, que verifica se os alunos aprenderam o que era esperado conforme a definição dos objetivos de aprendizado de cada programa de ensino (Assessment).</li>
+                                <li>Treinamento e boas práticas de uso dos recursos e tecnologias de aprendizagem, tais como o ambiente virtual de aprendizagem – Blackboard, uso de Estudos de Caso e Simuladores, ferramenta Catme para avaliação da competência de trabalho em equipe etc.</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <p>Saiba mais sobre o papel do DEA e suas iniciativas no <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=112" title="Manual do Corpor Docente">Manual do Corpo Docente</a>.</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-nid">NID/SAVI</h3>
+                            <p>O Núcleo de Informação Docente é a área que visa subsidiar a gestão institucional de docentes como alocações, acompanhamento de indicadores, concessão de benefícios e incentivos e políticas de desenvolvimento.</p>
+                            <p>Entre em contato com o NID/Savi para conhecer e esclarecer dúvidas relacionadas aos seguintes itens:</p>
+                            <ul>
+                                <li>Políticas, documentos e procedimentos voltados ao corpo docente.</li>
+                                <li>Atualização de dados acadêmicos, profissionais e institucionais dos professores.</li>
+                                <li>Processo de recrutamento e seleção, admissão, ambientação, alocação e avaliação de desempenho dos professores.</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <p>Saiba mais sobre a atuação do NID no <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=105" title="Manual do Corpor Docente">Manual do Corpo Docente</a>.</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-dp">Departamento Pessoal</h3>
+                            <p>Área responsável pelas atividades relacionadas à administração de pessoal, de acordo com políticas, normas internas e legislação vigente. Entre em contato com a área para tirar dúvidas relacionadas a:</p>
+                            <ul>
+                                <li>Admissão</li>
+                                <li>Desligamento</li>
+                                <li>Férias</li>
+                                <li>Benefícios</li>
+                                <li>Programa de Vida com Qualidade</li>
+                                <li>Folha de Pagamento</li>
+                            </ul>
+                            <div class="well well-contratacao">
+                                <ul class="list-inline no-p">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="quem-pode-me-ajudar-oa">Outras áreas de interface</h3>
+                            <p>Confira no Manual do Corpo Docente a relação completa de <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=104">áreas com interface permanente</a> com o professor, além de <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=124">outras áreas</a> que também têm interface com o corpo docente.</p>
+                        </div>
+
+                        <!-- gestao do corpo docente -->
+                        <div data-name="gcd">
+                            <h2 name="gestao-corpo-docente">Gestão do Corpo Docente</h2>
+                            <p>Entenda seu vínculo com o Insper, como se manter qualificado acadêmica e profissionalmente e como a atualização do seu currículo impacta diferentes ações da escola.</p>
+                            <h3 name="gestao-corpo-docente-v">Vínculo</h3>
+                            <p><em>Escrever...</em></p>
+                            <div class="well well-contratacao">
+                                <p>Acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=19">Manual do Corpo Docente</a> e conheça em detalhes os diferentes perfis de vínculo.</p>
+                                <p>Em caso de dúvidas, entre em contato com a coordenação do seu programa, ou com o NID/SAVI:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="gestao-corpo-docente-qe">Qualificação e Engajamento</h3>
+                            <p><em>Escrever...</em></p>
+                            <div class="well well-contratacao">
+                                <p>Acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=535">Manual do Corpo Docente</a> e conheça em detalhes as premissas de qualificação e engajamento do corpo docente.</p>
+                                <p>Em caso de dúvidas, entre em contato com a coordenação do seu programa, ou com o NID/SAVI:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
+                            <h3 name="gestao-corpo-docente-ac">Atualização do currículo</h3>
+                            <p>Para que seja possível o acompanhamento e avaliação anual do corpo docente é fundamental que as informações relacionadas à qualificação e desenvolvimento de cada professor (formação acadêmica, experiência profissional, contribuições intelectuais, contribuições institucionais, entre outras) estejam atualizadas.</p>
+                            <p>A escola pede que a atualização seja feita ao menos duas vezes por ano, nos meses de maio e outubro. Além disso, é muito importante que em dezembro haja uma verificação/complementação dos dados.</p>
+                            <p>Mantenha seu cadastro sempre atualizado acessando o <a href="http://portaldoprofessorapp.insper.edu.br/cadastro/">Portfólio do Professor</a>.</p>
+                            <div class="well well-contratacao">
+                                <p>A área responsável pelo acompanhamento e avaliação do Portfólio é o NID/SAVI. Em caso de dúvidas, entre em contato:</p>
+                                <ul class="list-inline">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,17 +422,59 @@
 
         <!-- footer -->
         <footer role="contentinfo" id="footer">
-            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block">
+            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block img-responsive">
         </footer>
     </div>
+    <!-- menu-lateral small device-->
+    <div class="menu-lateral-sd menu-l-sd-amarelo">
+        <h4></h4> <!-- via js -->
+        <h5 class=""><span>Admissão, benefícios e afins</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#admissao-pa" title="Processo admissional">Processo admissional</a></li>
+            <li><a href="#admissao-da" title="Dados de acesso">Dados de acesso</a></li>
+            <li><a href="#admissao-pfb" title="Pagamentos, férias e benefícios">Pagamentos, férias e benefícios</a></li>
+        </ul>
+        <h5 class=""><span>Gestão da Aprendizagem</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#gestao-aprendizagem-nqa" title="No que acreditamos">No que acreditamos</a></li>
+            <li><a href="#gestao-aprendizagem-paca" title="Princípio do Aprendizado Centrado no Aluno">Princípio do Aprendizado Centrado no Aluno</a></li>
+            <li><a href="#gestao-aprendizagem-dcd" title="Desenvolvimento do corpo Docente">Desenvolvimento do corpo Docente</a></li>
+        </ul>
+        <h5 class=""><span>Recursos didáticos e Tecnologias</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#gestao-aprendizagem-esa" title="Estrutura das salas de aula">Estrutura das salas de aula</a></li>
+            <li><a href="#recurso-tecnologia-aprendizagem-rta" title="Recursos e tecnologias de aprendizagem">Recursos e tecnologias de aprendizagem</a></li>
+            <li><a href="#gestao-aprendizagem-bdab" title="Base de dados e acervo da Biblioteca">Base de dados e acervo da Biblioteca</a></li>
+        </ul>
+        <h5 class=""><span>Quem pode te ajudar</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#quem-pode-me-ajudar-at" title="Atendimento ao Professor">Atendimento ao Professor</a></li>
+            <li><a href="#quem-pode-me-ajudar-aa" title="Apoios Acadêmicos">Apoios Acadêmicos</a></li>
+            <li><a href="#quem-pode-me-ajudar-sd" title="Service Desk">Service Desk</a></li>
+            <li><a href="#quem-pode-me-ajudar-reprografia" title="Reprografia">Reprografia</a></li>
+            <li><a href="#quem-pode-me-ajudar-dea" title="DEA">DEA – Desenvolvimento de Ensino e Aprendizagem</a></li>
+            <li><a href="#quem-pode-me-ajudar-nid" title="NID/SAVI">NID/SAVI</a></li>
+            <li><a href="#quem-pode-me-ajudar-dp" title="Departamento Pessoal">Departamento Pessoal</a></li>
+        </ul>
+        <h5 class=""><span>Gestão do corpo docente</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#gestao-corpo-docente-v" title="Vínculo">Vínculo</a></li>
+            <li><a href="#gestao-corpo-docente-qe" title="Qualificação e Engajamento">Qualificação e Engajamento</a></li>
+            <li><a href="#gestao-corpo-docente-ac" title="Atualização do currículo">Atualização do currículo</a></li>
+        </ul>
+        <ul class="list-inline add-itens-mg-sd">
+            <li class=""><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
+            <li class=""><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span style="padding-top:0.65em">Consulta rápida</span></a></li>
+        </ul>
+    </div>
+    <div class="bg-menu-lateral-sd"></div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
     <!-- plugins -->
-    <script src="../assets/js/bootstrap.min.js"></script>
-
-    <!-- code project -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- code project -->
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
