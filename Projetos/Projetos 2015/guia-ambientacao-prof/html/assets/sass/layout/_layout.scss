@@ -42,6 +42,14 @@ $vermelhoEscuro: #82292C;
 	::-moz-selection { background-color: #F9E594; }
 	     ::selection { background-color: #F9E594; }
 }
+#questoes-operacionais {
+	::-moz-selection { background-color: #40E8C3; }
+	     ::selection { background-color: #40E8C3; }
+}
+#consulta-rapida {
+	::-moz-selection { background-color: #34BEF3; }
+	     ::selection { background-color: #34BEF3; }
+}
 
 .content { margin-top: $grid40; position: relative; }
 
@@ -218,9 +226,16 @@ div[role="main"] {
     display: none;
 	-webkit-box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
         	box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
+	.place {
+	    font-size: .75em;
+	    color: #A7A7A7;
+	    margin: 0;
+	    padding: 0;
+	}
     h4 {
 	    font-size: 1.125em;
-	    margin-bottom: 1em;
+	    margin-bottom: 2em;
+	    margin-top: 0;
 	    border-bottom: 1px solid #676767;
 	    padding-bottom: .25em;
     }
@@ -319,19 +334,22 @@ div[role="main"] {
 div[role="main"] {
 	.content-text {
 		margin-bottom: $grid30;
+		.button-menu-lateral-cr { display: none; }
 		.button-menu-lateral {
 		    position: fixed;
 		    right: 20px;
-		    top: 50%;
-		    margin-top: -1em;
+		    top: 80%;
+		    z-index: 300;
 			button {
-		       	background-color: #000;
-			    border: 1px solid #EFEFEF;
-			    padding: .375em .5em;
-			    font-size: 1em;
+		       	background-color: #fff;
+			    border: 1px solid #ea0863;
+			    padding: .5em .5em .375em .5em;
+			    border-radius: 4px;
+			    cursor: pointer;
 			    span { 
-	    	        font-size: 1.5em;
-					color: #EFEFEF;
+	    	        font-size: 2em;
+	    	        text-align: center;
+					color: #ea0863;
 			    }
 			}
 		}
@@ -339,15 +357,20 @@ div[role="main"] {
 			color: $vermelho;
 			&:hover { color: $vermelhoEscuro; }
 		}
+		h1 {
+			font-size: 2em;
+			margin: 0 0 ($grid40/8) 0;
+			color: #414042;
+			letter-spacing: -1px;
+		}
 		h2 {
 			font-size: 1.5em;
 			font-weight: 700;
-			border-bottom: 1px solid #F3F3F3;
+			border-bottom: 1px solid #bebebe;
     		padding-bottom: 5px;
     		color: #414042;
-    		margin-top: $grid40;
+    		margin-top: $grid40/2;
 		}
-		h2.first { margin-top: 0; }
 		h3 { font-size: 1.25em; }
 		h4 {
 		    font-size: 1em;
@@ -372,7 +395,7 @@ div[role="main"] {
 		}
 		.well-contratacao { border-left: 5px solid #f0c40f; }
 		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
-		.well-consulta-rapida { border-left: 5px solid #3a99d9; }
+		.well-consulta-rapida { border-left: 5px solid #3a99d9; margin-top: $grid40; }
 		li {
 			margin: ($grid40/4) 0;
 			span {
@@ -387,8 +410,7 @@ div[role="main"] {
 @media (min-width: 992px) {
 	div[role="main"] {
 		.content-text {
-			h2 { margin-top: $grid40/2; }
-			h2.first { margin-top: 0; }
+			h2 { margin-top: $grid40; }
 		}
 	}
 }
@@ -406,8 +428,9 @@ div[role="main"] {
 	.content-text {
 		.table-consulta-rapida {
 			margin-top: $grid30;
+			// max-width: 870px;
 			caption { 
-				width: 34em;
+				width: 90%;
     			margin: 0 auto;
 				text-align: center;
 			}
@@ -429,5 +452,17 @@ div[role="main"] {
 	}
 }
 
+@media (max-width: 767px) {
+	div[role="main"] {
+		.content-text {
+			.table-consulta-rapida {
+				td { 
+					padding: 4px 2px;
+				}
+				p { margin: 0; }
+			}
+		}
+	}
+}
 
 
