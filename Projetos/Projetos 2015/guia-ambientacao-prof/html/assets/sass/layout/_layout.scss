@@ -31,7 +31,7 @@ $grid40: 40px;
 // color
 $amarelo: #f1c40f;
 $verde: #30bc9c;
-$azul: #34485d;
+$azul: #3a99d9;
 $vermelho : #9b3336;
 $vermelhoEscuro: #82292C;
 // typography
@@ -52,6 +52,22 @@ $vermelhoEscuro: #82292C;
 }
 
 .content { margin-top: $grid40; position: relative; }
+
+@media screen {
+	a[href^="http://"]:after,
+	a[href^="https://"]:after {
+		// font-family: "Glyphicons Halflings";
+	 	// 	content: "\e164";
+	 	// font-size: .825em;
+		content: "";
+		width: .875em;
+		height: .875em;
+		display: inline-block;
+		background: url("../img/link-blank.png") center center no-repeat;
+	 	margin-left: .25em;
+	 	background-size: 100%
+	}
+}
 
 // MENU GLOBAL
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -140,6 +156,9 @@ div[role="main"] {
 @import "ico-menuzinho/verde/*.png";
 @include all-verde-sprites;
 
+@import "ico-menuzinho/azul/*.png";
+@include all-azul-sprites;
+
 div[role="main"] {
 	.menu-lateral {
 		position: absolute;
@@ -165,7 +184,8 @@ div[role="main"] {
 				margin-bottom: $grid30/6;
 				a {
 					color: $vermelho;
-					&:hover { color: $vermelhoEscuro; }
+					&:hover, &:focus { color: $vermelhoEscuro; }
+					&:focus { text-decoration: none; }
 				}
 			}
 		}
@@ -184,7 +204,7 @@ div[role="main"] {
 		    		color: #414042;
 		    		&:hover { color: #414042; }
 		    		span {
-	    			    margin-left: 3.5em;
+	    			    margin-left: $grid40+10;
 	    				display: block;
 		    		}
 			    }
@@ -233,14 +253,14 @@ div[role="main"] {
 	    padding: 0;
 	}
     h4 {
-	    font-size: 1.125em;
+	    font-size: 1.25em;
 	    margin-bottom: 2em;
 	    margin-top: 0;
 	    border-bottom: 1px solid #676767;
 	    padding-bottom: .25em;
     }
     h5 {
-		font-size: .875em;
+		font-size: 1em;
     	margin: 0 0 .25em 0;
     	font-weight: 700;
 	}
@@ -249,7 +269,6 @@ div[role="main"] {
 		li {
 			a {
 				display: block;
-				font-size: .875em;
 				padding: .5em 0;
 				color: $vermelho;
 				line-height: 1.25em;
@@ -271,7 +290,7 @@ div[role="main"] {
 	    		color: #414042;
 	    		&:hover { color: #414042; }
 	    		span {
-    			    margin-left: 4em;
+    			    margin-left: $grid40+10;
     				display: block;
 	    		}
 		    }
@@ -366,12 +385,14 @@ div[role="main"] {
 		h2 {
 			font-size: 1.5em;
 			font-weight: 700;
-			border-bottom: 1px solid #bebebe;
+			border-bottom: 2px solid #414042;
     		padding-bottom: 5px;
     		color: #414042;
-    		margin-top: $grid40/2;
+    		margin-top: $grid40;
 		}
-		h3 { font-size: 1.25em; }
+		h3 { 
+			font-size: 1.25em;
+		}
 		h4 {
 		    font-size: 1em;
 		    font-weight: 700;
@@ -383,11 +404,12 @@ div[role="main"] {
 		}
 		.container-h4 { margin-left: 1em }
 		.well {
-			margin: ($grid40/2) 0;
+			margin: ($grid40/2) 0 $grid40 0;
 			background-color: #fff;
-   			-webkit-box-shadow: none;
-   			        box-shadow: none;
+   			-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+   			        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
     		padding: $grid40/4;
+    		display: block;
 			.list-inline { margin-bottom: 0; }
 			li { margin-bottom: 0; }
 			ul + p { margin-top: 1em; }
@@ -443,7 +465,8 @@ div[role="main"] {
 			}
 			tbody tr:nth-child(even) { background-color: #f9f9f9; }
 			tbody tr:nth-child(odd) { background-color: #fff; }
-			td { 
+			tbody { font-size: 87.5%; }
+			tr td { 
 			    width: 25%;
 			    vertical-align: middle;
 			    text-align: center;
@@ -465,4 +488,56 @@ div[role="main"] {
 	}
 }
 
+// // // // // // // // // // // // // // // // // // // // // // //
+// IMPRESSAO
+// // // // // // // // // // // // // // // // // // // // // // //
 
+@media print {
+
+	@page { margin: 1,5cm; }
+
+	body { line-height: 1.55em; }
+
+	img { max-width: 100%; }
+	
+	.breadcrumb {
+		display: block !important;
+	    border-bottom: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	    padding: 5px;
+	    margin: 1em 0 6em 0;
+	    font-size: .75em;
+	}
+
+	.content { margin-top: $grid40/2 }
+
+	div[role="main"] {
+		width: 100%;
+		margin: 0;
+		float: none !important;
+		p a,
+		li a { word-wrap: break-word; }
+		.content-text {
+			h2 {
+				border: none;
+				margin-bottom: 0;
+			}
+			.well { 
+				page-break-inside: avoid;
+				width: 90%;
+				margin: ($grid40/2) auto;
+				border-radius: 0;
+			}
+			.well-contratacao { border: 1px solid $amarelo; border-left-width: 5px; }
+			.well-questoes-operacionais { border: 1px solid $verde; border-left-width: 5px; }
+			.well-consulta-rapida { border: 1px solid $azul; border-left-width: 5px; }
+			li { margin: 0; }
+		}
+		table {
+			thead { 
+				font-weight: 700;
+				display: table-header-group;
+			}
+		}
+	}
+}

@@ -72,6 +72,7 @@ $(function(){
 			titles_small = [],
 			_height = $(window).height(),
 			li_small = $( ".container-menu li a" ),
+			titles_menu = $( ".menu-lateral h5" ),
 			i = 0;
 
 		$( ".content-text h2" ).each( function() {
@@ -87,15 +88,23 @@ $(function(){
 
 				for (i in titles_big) {
 					if(titles_big[i] < pos && titles_big[i] > pos - _height){
-						$( ".menu-lateral h5" ).removeClass( "active" );
+						titles_menu.removeClass( "active" );
 						$( "#iten" + i ).addClass( "active" );
 					}
-				}
+				};
 				for (i in titles_small) {
 					if(titles_small[i] < pos && titles_small[i] > pos - _height){
 						li_small.removeClass( "active" );
 						li_small.eq(i).addClass( "active" );
 					}
+				};
+				titles_menu.each(function() { // removed ".active" titles normal
+					if(!$(this).hasClass("active")) {
+						$(this).next().find( "a" ).removeClass( "active" );
+					}
+				});
+				if(pos < 100) { // removed ".active" when scroll beging window
+					titles_menu.removeClass( "active" );
 				}
 		});
 	}
@@ -108,7 +117,7 @@ $(function(){
 	function scrollAnchor (ancora) {
         var link = $( ".content-text h3[name=" + ancora + "]" );
         $( "html, body" ).animate({
-            scrollTop:  link.offset().top
+            scrollTop:  link.offset().top + 1
         }, "slow" );
     }
     function btn_scrollAnchor (btn) {
@@ -124,9 +133,8 @@ $(function(){
 	btn_scrollAnchor(linkMenu);
 
 	// // aply class 'active' on click in list small device
-	var l = $( ".menu-lateral-sd .list-unstyled a" );
-	l.on( "click", function(e) {
-		l.removeClass( "active" );
+	linkMenu_sd.on( "click", function(e) {
+		linkMenu_sd.removeClass( "active" );
 		$(this).addClass( "active" );
 	});
 
