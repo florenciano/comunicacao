@@ -1,0 +1,255 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Code project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PRESET & VARIABLES
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// GRID //
+$grid40: 40px;
+$grid30: 30px;
+
+// COLOR //
+$azul: rgb(0,185,205);
+$verde: rgb(0,215,100);
+$roxo: rgb(140,70,170);
+$cinza: #414042;
+
+// MIXIN'S //
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    		transition: $transition;
+}
+@mixin gradient() {
+	background: -webkit-linear-gradient(top, $azul , $verde); // For Safari 5.1 to 6.0 //
+	background: -o-linear-gradient(top, $azul, $verde); // For Opera 11.1 to 12.0 //
+	background: -moz-linear-gradient(top, $azul, $verde); // For Firefox 3.6 to 15 //
+	background: linear-gradient(to bottom, $azul , $verde); // Standard syntax //
+}
+
+@mixin make_link() {
+	color: $azul;
+	display: inline-block;
+	&:visited { color: $azul; }
+	&:hover, &:active, &:focus { color: darken($azul, 10%); }
+	&[href^="http://"]:after,
+	&[href^="https://"]:after {
+		content: "";
+		width: .825em;
+		height: .825em;
+		background: url("../img/a/blank.png") center center no-repeat;
+	 	background-size: 100%;
+		display: inline-block;
+	 	margin-left: .25em;
+	}
+}
+
+// PRESET //
+// // // // // // // // // // // // // // // // // // // // // // //
+
+* {
+	@include transition(all .20s ease);
+}
+body { color: $cinza; }
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// TP/TI/index.html
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	h1 {
+		color: $cinza;	
+		font-size: 2.25em;
+	    font-weight: 700;
+		line-height: 1.125em;
+		margin: ($grid40/4) 0 ($grid40/2) 0;
+	}
+	a:not(.no-link-blank) { @include make_link() }
+	.txt-space { margin: ($grid40/2) 0; }
+	// section:strands
+	.itens {
+		@include make-md-column(4);
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: $grid40;
+		> img {
+			display: block;
+			margin: 0 auto; 
+		}
+		> h2 {
+			color: $azul;
+			font-size: 2em;
+			margin: ($grid40/4) 0 ($grid40/2);
+			text-align: center;
+		}
+	}
+	//section: steps
+	.media {
+		.media-body {
+			position: relative;
+			h4 {
+				font-size: 1.625em;
+				color: $azul;
+				margin-top: $grid40+5;
+			}
+			.description {
+				border-left: 2px solid $verde;
+				display: block;
+				padding-left: $grid40/8;
+				margin-bottom: $grid40/2;
+				h5 {
+					font-weight: 700;
+					margin: 0;
+					& + h5 { margin-top: $grid40/8; }
+				}
+				p { margin: ($grid40/8) 0 0; }
+			}
+			.one { margin-top: $grid40; }
+		}
+	}
+	.steps-tp {
+		margin-top: $grid40/2;
+		ul {
+			padding-left: $grid40/2;
+			li { margin-bottom: $grid40/4 }
+		}
+	}
+	footer {
+		margin-top: $grid40/2;
+		h4 {
+			font-weight: 700;
+			font-size: 1em;
+			margin: 0;
+		}
+		p { margin: 0; }
+		li { 
+			@include make-sm-column(6);
+			margin-bottom: $grid40/2;
+			a {
+				color: $cinza;
+				display: block;
+				padding-top: .25em;
+				&:before {
+					content: "";
+					width: 1.75em;
+					height: 1em;
+					background: url("../img/a/email.png") center center no-repeat;
+				 	margin-right: .25em;
+				 	display: inline-block;
+				}
+			}
+		}
+		.logo { padding: ($grid30*2) 0 ($grid40/2); }
+	}
+}
+
+// Responsive: tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[role="main"] {
+		.break-sm, .break-md { display: block; }
+		.itens {
+			&:first-child{ margin-top: $grid40/2; }
+			p {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		footer {
+			li { 
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.logo { clear: both; }
+		}
+	}
+}
+
+// Responsive: desktop | large desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	.container { border: 1px solid rgb(215,215,215); }
+	div[role="main"] {
+		header,
+		footer,
+		.txt,
+		.txt-space,
+		.media {
+			width: 83.66%;
+			margin-left: auto;
+			margin-right: auto;
+			.media-body {
+				.one:last-child { margin-bottom: 0; }
+			}
+		}
+		h1, .logo { text-align: center; }
+		.steps {
+			border-radius: 3px;
+			margin-left: -($grid30/2);
+			margin-right: -($grid30/2);
+			@include gradient();
+			.white-md {
+				border-radius: 3px;
+			    background-color: #fff;
+				margin: 5px;
+				padding: $grid40/2;
+			}
+		}
+		.itens {
+			margin-top: $grid40/2;
+			padding-left: $grid30/2;
+			padding-right: $grid30/2;
+			p { width: 100%; }
+		}
+	}
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// CRITERIOS DE EXCELENCIA EM ENSINO
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	// section: strands (cee)
+	.strands-cee {
+		.itens { @include make-md-column(3); margin-top: $grid40/2; }
+	}
+	.table-criterio {
+		margin: $grid40/2 0;
+		table {
+			ul {
+				padding-left: $grid40/2;
+				margin-bottom: 0;
+				li {
+					margin-bottom: $grid40/4;
+					&:last-child{ margin-bottom: 0; }
+				}
+			}
+		}
+	}
+}
+
+// Tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+
+}
+
+// Desktop | large desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	div[role="main"] {
+		.table-criterio {
+			table {
+				width: 83.66%;
+				margin-left: auto;
+				margin-right: auto;
+				tr {
+					td:first-child { width: 12em; }
+				}
+			}
+		}
+	}
+}
