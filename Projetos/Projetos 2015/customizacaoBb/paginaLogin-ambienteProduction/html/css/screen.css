@@ -117,7 +117,7 @@ footer[role="contentinfo"] { clear: both; display: block; width: 90%; border-top
 
 .alinh04 { margin-top: 1.2em; display: block; }
 
-.perfilUsuario { display: none; width: 312px; height: 220px; position: absolute; top: 50%; left: 50%; margin-top: -110px; margin-left: -156px; }
+.perfilUsuario { display: none; width: 40em; position: absolute; top: 40%; left: 50%; margin-left: -20em; }
 .perfilUsuario h5 { text-align: center; color: #414042; font: bold 16px "verdana", "arial", "sans-serif"; margin: 30px 20px 20px; }
 .perfilUsuario ul { margin-top: 20px; padding: 0 20px; }
 .perfilUsuario ul li { width: 49%; display: inline-block; text-align: center; }
@@ -130,6 +130,9 @@ footer[role="contentinfo"] { clear: both; display: block; width: 90%; border-top
 .perfilUsuario ul li .perfis:hover, .perfilUsuario ul li .perfis:focus { background-color: #414042; transition: all 0.4s linear; -moz-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; }
 .perfilUsuario ul li .perfis:hover .icoProfessor, .perfilUsuario ul li .perfis:focus .icoProfessor { background-image: url("../img/perfis/professor_hover.png"); }
 .perfilUsuario ul li .perfis:hover .icoAluno, .perfilUsuario ul li .perfis:focus .icoAluno { background-image: url("../img/perfis/aluno_hover.png"); }
+.perfilUsuario .alert { display: none; background-color: #fcf8e3; border-color: #e8d7b5; padding: 10px; margin-top: 20px; line-height: 1.425em; font-size: 125%; }
+.perfilUsuario .alert, .perfilUsuario .alert a { color: #8a6d3b; }
+.perfilUsuario .alert a, .perfilUsuario .alert strong { font-weight: 700; }
 
 strong { font-weight: bold; }
 

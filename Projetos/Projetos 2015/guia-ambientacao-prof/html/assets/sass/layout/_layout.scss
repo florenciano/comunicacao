@@ -198,16 +198,24 @@ div[role="main"] {
 		    li { 
 		    	margin: 0 0 1em 0;
 		    	padding: 0;
+		    	width: 100%;
 		    	a {
 			    	display: block;
 		    		min-height: $grid40+1;
 		    		color: #414042;
+		    		position: relative;
 		    		&:hover { color: #414042; }
 		    		span {
 	    			    margin-left: $grid40+10;
 	    				display: block;
+	    				position: absolute;
+	    				top: 50%;
+	    				margin-top: -.8em;
 		    		}
 			    }
+			    .ico-menu-verde { 
+	    			span { margin-top: -1.2em; }
+    			}
 		    }
 		}
 	}
@@ -284,16 +292,24 @@ div[role="main"] {
 	    li { 
 	    	margin: 0 0 1em 0;
 	    	padding: 0;
+	    	width: 100%;
 	    	a {
 		    	display: block;
 	    		min-height: $grid40+1;
 	    		color: #414042;
+	    		position: relative;
 	    		&:hover { color: #414042; }
 	    		span {
     			    margin-left: $grid40+10;
     				display: block;
+    				position: absolute;
+    				top: 50%;
+    				margin-top: -.8em;
 	    		}
 		    }
+		    .ico-menu-verde { 
+    			span { margin-top: -1.2em; }
+			}
 	    }
 	}
 }
@@ -411,19 +427,23 @@ div[role="main"] {
     		padding: $grid40/4;
     		display: block;
 			.list-inline { margin-bottom: 0; }
-			li { margin-bottom: 0; }
 			ul + p { margin-top: 1em; }
-			.no-p li { margin-top: 0; }
+			// .no-p li { margin-top: 0; }
 		}
 		.well-contratacao { border-left: 5px solid #f0c40f; }
 		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
 		.well-consulta-rapida { border-left: 5px solid #3a99d9; margin-top: $grid40; }
 		li {
-			margin: ($grid40/4) 0;
+			margin: 0 0 1em 0;
+		    padding-left: 2.25em;
 			span {
 				color: #5a5a5a;
 				font-size: 1.5em;
-				margin-right: .25em;
+				&:before {
+					position: absolute;
+				    left: -1.375em;
+    				top: -16px;
+				}
 			}
 		}
 	}

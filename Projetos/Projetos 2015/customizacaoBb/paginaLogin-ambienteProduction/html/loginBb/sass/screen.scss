@@ -470,13 +470,13 @@ footer[role="contentinfo"] {
 // modal perfis de usuários
 .perfilUsuario {
 	display: none;
-	width: 312px;
-	height: 220px;
+	width: 40em;
+	// height: 220px;
 	position: absolute;
-	top:50%;
-	left:50%;
-	margin-top: -110px;
-	margin-left: -156px;
+	top: 40%;
+	left: 50%;
+	// margin-top: -110px;
+	margin-left: -20em;
 	h5 {
 		text-align: center;
 		color: $cinza-c;
@@ -519,6 +519,17 @@ footer[role="contentinfo"] {
 			}
 		}
 	}
+	.alert {
+		display: none;
+		background-color: #fcf8e3;
+		border-color: #e8d7b5;
+		padding: $grid-2 / 2;
+		margin-top: $grid-2;
+		line-height: 1.425em;
+		font-size: 125%;
+	}
+	.alert, .alert a { color: #8a6d3b; }
+	.alert a, .alert strong { font-weight: 700; }
 }
 
 /////////////////////////////////////////////////////////////////////

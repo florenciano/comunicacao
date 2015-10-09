@@ -19,7 +19,6 @@
 <html lang="pt-br">
 <head>
     <title>Blackboard Learn | Ensino Superior e Pesquisa em Negócios, Economia e Direito | Insper</title>
-
 <%-- 
   If you need to customize styles defined in login.css, you can place your changes
   within the following <style> block.  The JSP comment markers surrounding the <bbNG:cssBlock> element
@@ -123,7 +122,7 @@
       .alinh04 { margin-top: 1.2em; display: block; }
       .alinh04 { margin-top: 1.2em; display: block; }
 
-      .perfilUsuario { display: none; width: 312px; height: 220px; position: absolute; top: 50%; left: 50%; margin-top: -110px; margin-left: -156px; }
+      .perfilUsuario { display: none; width: 40em; position: absolute; top: 40%; left: 50%; margin-left: -20em; }
       .perfilUsuario h5 { text-align: center; color: #414042; font: bold 16px "verdana", "arial", "sans-serif"; margin: 30px 20px 20px; }
       .perfilUsuario ul { margin-top: 20px; padding: 0 20px; }
       .perfilUsuario ul li { width: 49%; display: inline-block; text-align: center; }
@@ -136,6 +135,9 @@
       .perfilUsuario ul li .perfis:hover, .perfilUsuario ul li .perfis:focus { background-color: #414042; transition: all 0.4s linear; -moz-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; }
       .perfilUsuario ul li .perfis:hover .icoProfessor, .perfilUsuario ul li .perfis:focus .icoProfessor { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/professor_hover.png"); }
       .perfilUsuario ul li .perfis:hover .icoAluno, .perfilUsuario ul li .perfis:focus .icoAluno { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/aluno_hover.png"); }
+      .perfilUsuario .alert { display: none; background-color: #fcf8e3; border-color: #e8d7b5; padding: 10px; margin-top: 20px; line-height: 1.425em; font-size: 125%; }
+      .perfilUsuario .alert, .perfilUsuario .alert a { color: #8a6d3b; }
+      .perfilUsuario .alert a, .perfilUsuario .alert strong { font-weight: 700; }
 
       @-moz-document url-prefix() { .containerReqSistema { height: 535px; margin-top: -267px; }
         .containerReqSistema .description span { font-size: 8.75px !important; }
@@ -201,7 +203,8 @@
     <ul>
         <li>
             <div class="perfis professor">
-                <a href="http://noc.insper.edu.br/servicosderedead/mudarsenhacolaborador.aspx" title="Recuperar senha: professor" class="icoProfessor"><span>Professor</span></a>
+                <!-- http://noc.insper.edu.br/servicosderedead/mudarsenhacolaborador.aspx -->
+                <a href="#" title="Recuperar senha: professor" class="icoProfessor"><span>Professor</span></a>
             </div>
         </li>
         <li>
@@ -210,10 +213,12 @@
             </div>
         </li>
     </ul>
+    <div class="alert">
+        <strong>Caro Professor</strong>, para recuperar sua senha entre em contato com o Help Desk. Telefone: <strong>4504-2550</strong> ou email: <a href="mailto:helpdesk@insper.edu.br?subject=Recuperar%20senha%20do%20Blackboard">helpdesk@insper.edu.br</a>.
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!-- <script src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/js/libs/jquery-1.9.1.min.js"></script> -->
 <script src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/js/main.js"></script>
 </body>
 </html>

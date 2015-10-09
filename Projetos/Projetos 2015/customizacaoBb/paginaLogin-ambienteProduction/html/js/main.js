@@ -45,6 +45,11 @@ $(function(){
 	//	events
 	/////////////////////////////////////////////////////////////////////
 
+	$( ".icoProfessor" ).on( "click", function(ev) {
+		$( ".alert" ).toggle();
+		ev.preventDefault();
+	});
+
 	$( "#close-modal-perfil" ).on( "click", function(ev) {
 		hideModal( ".perfilUsuario, .bg-modal" );
 		ev.preventDefault();
