@@ -169,7 +169,7 @@ div[role="main"] {
 		article {
 			width: 100%;
 		}
-		.txt {
+		.txt, .container-table {
 			width: 75%;
 		    margin-left: auto;
 		    margin-right: auto;
@@ -264,11 +264,11 @@ div[role="main"] {
 // // // // // // // // // // // // // // // // // // // // // // //
 div[role="main"] {
 	.content {
+		.first-title{ margin-top: 0; }
 		h3 {
 			font-size: 1.25em;
 		    margin: $grid40 0 ($grid40/8);
 		    font-weight: 700;
-		    &:first-child{ margin-top: $grid40/2; }
 		}
 		figure {
 			margin: ($grid40/4) 0;
@@ -318,11 +318,14 @@ div[role="main"] {
 @media (min-width: 768px) {
 	div[role="main"] {
 		.content {
-			figure figcaption,
-			.caution {
+			figure figcaption {
 				width: 75%;
 				margin-left: 12.5%;
 				
+			}
+			.caution {
+				width: 60%;
+				margin-left: 20%;
 			}
 			figure {
 				img { 
