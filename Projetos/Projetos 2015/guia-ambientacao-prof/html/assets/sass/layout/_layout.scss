@@ -37,6 +37,7 @@ $vermelhoEscuro: #82292C;
 // typography
 //  default size: 16px // 
 
+/*
 // selection color
 #contratacao {
 	::-moz-selection { background-color: #F9E594; }
@@ -50,15 +51,13 @@ $vermelhoEscuro: #82292C;
 	::-moz-selection { background-color: #34BEF3; }
 	     ::selection { background-color: #34BEF3; }
 }
+*/
 
 .content { margin-top: $grid40; position: relative; }
 
 @media screen {
 	a[href^="http://"]:after,
 	a[href^="https://"]:after {
-		// font-family: "Glyphicons Halflings";
-	 	// 	content: "\e164";
-	 	// font-size: .825em;
 		content: "";
 		width: .875em;
 		height: .875em;
@@ -80,29 +79,25 @@ $vermelhoEscuro: #82292C;
 div[role="main"] {
 	.menu-global {
 		nav[role="navigation"] {
-			.active-amarelo { border-bottom: 3px solid $amarelo; }
-			.active-verde { border-bottom: 3px solid $verde; }
-			.active-azul { border-bottom: 3px solid $azul; }
-			li { padding: 0 0 5px 5px; }
+			>.list-inline { margin-bottom: 0; }
+			.active-amarelo { border-top: 2px solid $amarelo; }
+			.active-verde { border-top: 2px solid $verde; }
+			.active-azul { border-top: 2px solid $azul; }
+			li { 
+				padding: ($grid40/8) 0;
+				text-align: center;
+			}
 			a {
 				display: block;
+				margin-top: $grid40/8;
 				color: #414042;
 				width: 100%;
-				height: $grid40+1;
 				text-decoration: none;
-				line-height: 2.5em; // alignh text vertical. Not apply in itens with more 2 lines.
-				overflow-y: hidden; // eliminate text over 2 lines
 				&:hover { text-decoration: underline; }
-				span { 
-					margin-left: $grid40+15;
-					display: block;
-					border-right: 1px solid #e6e7e8;
-				}
 			}
 			li:last-child {
 				span { border-right: none; }
 			}
-			.ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul { background-position-x: 5px; }
 			a.ico-menu-verde { line-height: 1.3em; }
 		}
 	}
@@ -113,33 +108,15 @@ div[role="main"] {
 		.menu-global {
 			margin-top: $grid40;
 			nav[role="navigation"] {
-				.active-amarelo { border-bottom: none; background-color: #F5F5F5; }
-				.active-verde { border-bottom: none; background-color: #F5F5F5; }
-				.active-azul { border-bottom: none; background-color: #F5F5F5; }
+				.active-amarelo { border-bottom: 2px solid $amarelo; }
+				.active-verde { border-bottom: 2px solid $verde; }
+				.active-azul { border-bottom: 2px solid $azul; }
 				li {
 					padding: .5em;
 					margin-bottom: 5px;
 					display: block;
 					width: 100%;
-				}
-				a {
-					font-size: .925em;
-					overflow-y: visible;
-					span { border-right: none; }
-				}
-				a.ico-menu-verde { 
-					span { padding-top: 0.7em; }
-				}
-			}
-		}
-	}
-}
-@media (max-width: 375px) {
-	div[role="main"] {
-		.menu-global {
-			nav[role="navigation"] {
-				a.ico-menu-verde {
-					span { padding-top: 0.2em; }
+					border-bottom: 1px solid #ddd;
 				}
 			}
 		}
@@ -179,9 +156,14 @@ div[role="main"] {
 			}
 		}
 		ul {
-			margin-left: 1em;
+			margin: 0;
+			list-style: none;
 			li {
 				margin-bottom: $grid30/6;
+				margin: ($grid40/8) 0;
+			    border-bottom: 1px solid #ddd;
+			    padding-bottom: ($grid40/8);
+			    &:last-child { border-bottom: none; }
 				a {
 					color: $vermelho;
 					&:hover, &:focus { color: $vermelhoEscuro; }
@@ -192,16 +174,17 @@ div[role="main"] {
 		// itens: menu global
 		.add-itens-mg {
 		    margin: 1em 0 0 0;
-		    border-top: 1px solid #f3f3f3;
+		    border-top: 1px solid #ddd;
 		    padding: 1em 0;
 		    display: none;
 		    li { 
 		    	margin: 0 0 1em 0;
 		    	padding: 0;
 		    	width: 100%;
+		    	border-bottom: none;
 		    	a {
 			    	display: block;
-		    		min-height: $grid40+1;
+		    		min-height: $grid40;
 		    		color: #414042;
 		    		position: relative;
 		    		&:hover { color: #414042; }
@@ -224,6 +207,7 @@ div[role="main"] {
 		position: fixed;
 		top: $grid40/4;
 		z-index: 999;
+		overflow-y: auto;
 	}
 }
 
@@ -287,7 +271,7 @@ div[role="main"] {
 	// itens: menu global
 	.add-itens-mg-sd {
 	    margin: 0;
-	    border-top: 1px solid #f3f3f3;
+	    border-top: 1px solid #ddd;
 	    padding: 1em 0;
 	    li { 
 	    	margin: 0 0 1em 0;
@@ -295,7 +279,7 @@ div[role="main"] {
 	    	width: 100%;
 	    	a {
 		    	display: block;
-	    		min-height: $grid40+1;
+	    		min-height: $grid40;
 	    		color: #414042;
 	    		position: relative;
 	    		&:hover { color: #414042; }
@@ -428,14 +412,13 @@ div[role="main"] {
     		display: block;
 			.list-inline { margin-bottom: 0; }
 			ul + p { margin-top: 1em; }
-			// .no-p li { margin-top: 0; }
+			li { padding-left: 2.25em; }
 		}
 		.well-contratacao { border-left: 5px solid #f0c40f; }
 		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
 		.well-consulta-rapida { border-left: 5px solid #3a99d9; margin-top: $grid40; }
 		li {
 			margin: 0 0 1em 0;
-		    padding-left: 2.25em;
 			span {
 				color: #5a5a5a;
 				font-size: 1.5em;

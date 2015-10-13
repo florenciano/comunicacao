@@ -11,8 +11,8 @@ $grid40: 40px;
 $grid30: 30px;
 
 // COLOR //
-$azul: rgb(0,185,205);
-$verde: rgb(0,215,100);
+$azul: rgb(192,0,38); // novo vermelho
+$verde: rgb(192,0,38); // novo vermelho também, ó é vermelho também!
 $roxo: rgb(140,70,170);
 $cinza: #414042;
 
@@ -31,7 +31,7 @@ $cinza: #414042;
 @mixin make_link() {
 	color: $azul;
 	&:visited { color: $azul; }
-	&:hover, &:active, &:focus { color: darken($azul, 10%); }
+	&:hover, &:active, &:focus { color: darken($azul, 7%); }
 	&[href^="http://"]:after,
 	&[href^="https://"]:after {
 		content: "";
@@ -102,6 +102,11 @@ div[role="main"] {
 			text-align: center;
 			font-weight: 700;
 		}
+	}
+	.itens-tp {
+		@include make-md-column(6);
+		padding-left: 0;
+		padding-right: 0;
 	}
 	//section: steps
 	.steps {

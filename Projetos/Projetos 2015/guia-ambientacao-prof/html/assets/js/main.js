@@ -10,14 +10,18 @@ $(function(){
 
 	// // pin menu-lateral in scrool
 	var menuLateral = $( ".menu-lateral" ),
-		itensMenuGlobal = $( ".add-itens-mg" );
+		itensMenuGlobal = $( ".add-itens-mg" ),
+		_heightX = $(window).height();
 	$( document ).bind( "ready scroll", function() {
-		if( $(this).scrollTop() >= 220 ) {
+		if( $(this).scrollTop() >= 125 ) { // ----> alterar valor qdo for para o portalDoProfessor
 			menuLateral.addClass( "fixed-menu" );
 			itensMenuGlobal.fadeIn( 400 );
 		} else {
 			menuLateral.removeClass( "fixed-menu" );
 			itensMenuGlobal.fadeOut( 400 );
+		}
+		if($(".fixed-menu").css("display","block")) {
+			$( ".fixed-menu" ).css( "height",_heightX );
 		}
 	});
 	// // show menu-lateral-small-device
@@ -56,7 +60,7 @@ $(function(){
 	bg.on( "click", function() { _hide() });
 
 	// // Add title from menu global
-	var t = $( "nav" ).find( "span" ),
+	var t = $( "nav" ).find( "a" ),
 		r = $( ".menu-lateral-sd h4" );
 	function _replaceTitle(key) {
 		$(r).text( t.eq(key).text() );
