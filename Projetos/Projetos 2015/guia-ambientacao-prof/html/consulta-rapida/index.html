@@ -4,14 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Estudo em bootstrap">
-	<meta name="keywords" content="word1, word2, word3">
-	<meta name="author" content="Rodrigo Florenciano">
     <title>Guia de ambientação - Portal do Professor</title>
-    <!-- Bootstrap -->
     <link href="../assets/css/main.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -19,32 +13,50 @@
 </head>
 <body id="consulta-rapida">
     <div class="container">
-        <header role="banner" id="top">
-            <img src="../assets/img/--header--.png" alt="{header}" class="center-block img-responsive">
-        </header>
-
         <div class="row">
             <div id="main" role="main">
                 <div class="breadcrumb visible-print-block">
                     DEA / Guia de Ambientação de novos docentes: ênfase em Ensino
                 </div>
                 <div class="menu-global clearfix hidden-print">
-                    <nav role="navigation">
+                    <nav>
                         <ul class="list-inline">
-                            <li class="col-xs-12 col-sm-4"><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
-                            <li class="col-xs-12 col-sm-4"><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
-                            <li class="col-xs-12 col-sm-4 active-azul"><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+                            <li class="col-xs-12 col-sm-4">
+                                <img src="../assets/img/ico-menu/amarelo.png" alt="ico-contratacao">
+                                <a href="../contratacao/" title="Da contratação à sala de aula">Da contratação à sala de aula</a>
+                            </li>
+                            <li class="col-xs-12 col-sm-4">
+                                <img src="../assets/img/ico-menu/verde.png" alt="ico-operacionais">
+                                <a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer">Questões operacionais que você precisa conhecer</a>
+                            </li>
+                            <li class="col-xs-12 col-sm-4 active-azul">
+                               <img src="../assets/img/ico-menu/azul.png" alt="ico-consulta">
+                                <a href="../consulta-rapida/" title="Consulta rápida">Consulta rápida</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="content clearfix">
                     <div class="menu-lateral hidden-sm hidden-xs hidden-print">
                         <div class="container-menu">
-                            <h5 class="azul-item active" id="iten0"><span>Item sub-menu</span></h5>
+                            <h5 class="azul-aonde active" id="iten0"><span>Aonde ir e com quem falar</span></h5>
                             <ul>
-                                <li><a href="#" title="Item1">Item 1</a></li>
-                                <li><a href="#" title="Item2">Item 2</a></li>
-                                <li><a href="#" title="Item3">Item 3</a></li>
+                                <li><a href="#aidcqf-lista-geral" title="Dependências e contatos úteis">Dependências e contatos úteis</a></li>
+                            </ul>
+                            <h5 class="azul-documentos" id="iten1"><span>Documentos, ferramentas e sistemas</span></h5>
+                            <ul>
+                                <li><a href="#dfs-portal-professor" title="Portal do Professor">Portal do Professor</a></li>
+                                <li><a href="#dfs-manual-corpo-docente" title="Manual do Corpo Docente">Manual do Corpo Docente</a></li>
+                                <li><a href="#dfs-intranet-corporativa" title="Intranet Corporativa">Intranet Corporativa</a></li>
+                                <li><a href="#dfs-portal-pessoas" title="Portal de Pessoas">Portal de Pessoas</a></li>
+                                <li><a href="#dfs-webmail" title="WebMail">WebMail</a></li>
+                                <li><a href="#dfs-mudanca-senha" title="Mudança de senha">Mudança de senha</a></li>
+                                <li><a href="#dfs-portfolio-professor" title="Portfólio do Professor">Portfólio do Professor</a></li>
+                                <li><a href="#dfs-docente-online" title="Docente-Online">Docente-Online</a></li>
+                                <li><a href="#dfs-portal-sistema-noc" title="Portal de Sistemas (NOC)">Portal de Sistemas (NOC)</a></li>
+                                <li><a href="#dfs-biblioteca-telles" title="Biblioteca Telles">Biblioteca Telles</a></li>
+                                <li><a href="#dfs-blackboard" title="Blackboard">Blackboard</a></li>
+                                <li><a href="#dfs-cuca" title="CUCA">CUCA</a></li>
                             </ul>
                         </div>
                         <ul class="list-inline add-itens-mg">
@@ -53,179 +65,340 @@
                         </ul>
                     </div>
                     <div class="content-text col-md-8 col-md-offset-4 clearfix">
-                        <div class="button-menu-lateral hidden-print"> <!-- button-menu-lateral-cr -->
+                        <div class="button-menu-lateral hidden-print">
                             <button type="button" class="" id="btnMenu">
                                 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                             </button>
                         </div>
-                    
-                    <h1 class="first">Consulta rápida</h1>
-                    <p>Encontre rapidamente contato e localização das principais áreas de interface, dependências do Insper e principais documentos, ferramentas e sistemas.</p>
-                    <div class="table-consulta-rapida"> <!-- col-sm-12  col-md-10 col-md-offset-1 -->
-                        <!-- <h3 name="aonde">Aonde ir e com quem falar (dependências e contatos úteis)</h3> -->
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <caption>Aonde ir e com quem falar (dependências e contatos úteis)</caption>
-                                <thead>
-                                    <tr>
-                                        <th>Área</th>
-                                        <th>Localização</th>
-                                        <th>Contato</th>
-                                        <th>Horário</th>
-                                    </tr>    
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Departamento Pessoal</td>
-                                        <td>8º andar</td>
-                                        <td><a href="mailto:dpsp@insper.edu.br">dpsp@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2685</td>
-                                        <td>Segunda à Sexta<br>(9h às 19h)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alimentação</td>
-                                        <td><p>Restaurante<br>(5º andar)</p>
-                                            <p>Lanchonete<br>(1º subsolo e 2º andar)</p>
-                                            <p>Refeitório<br>(térreo e 5º andar)</p>
-                                            <p>Copas<br>(1º, 3º, 4º, 5º, 6º, 7º e 8º andares)</p>
-                                        </td>
-                                        <td><span class="glyphicon glyphicon-asterisk"></span></td>
-                                        <td>
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estacionamento</td>
-                                        <td>1º, 2º e 3 º subsolos</td>
-                                        <td><span class="glyphicon glyphicon-asterisk"></span></td>
-                                        <td>
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Biblioteca</td>
-                                        <td>Térreo e 1º andar</td>
-                                        <td><a href="mailto:biblioteca@insper.edu.br">biblioteca@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2360</td>
-                                        <td>
-                                            <p>Segunda à Sexta<br>(9h às 19h)</p>
-                                            <p>Sábado<br>(9h às 14h)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reprografia</td>
-                                        <td>Térreo</td>
-                                        <td><a href="mailto:reprografia-sp@insper.edu.br">reprografia-sp@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2411</td>
-                                        <td>
-                                            <p>Segunda à Sexta<br>(7h às 22h)</p>
-                                            <p>Sábado<br>(8h às 17h)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Service Desk</td>
-                                        <td>2º andar</td>
-                                        <td><a href="mailto:servicedesk@insper.edu.br">servicedesk@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2550<br>Sala de aula: Disque 1</td>
-                                        <td>
-                                            <p>Segunda à Sexta<br>(7h às 22h)</p>
-                                            <p>Sábado<br>(8h às 17h)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Salas de reunião</td>
-                                        <td>6º e 7º andares</td>
-                                        <td><a href="mailto:reservas@insper.edu.br">reservas@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> <span class="glyphicon glyphicon-asterisk"></span></td>
-                                        <td>
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lounge dos Professores e Atendimento ao professor</td>
-                                        <td>7º andar</td>
-                                        <td><a href="mailto:atendimentoprofessor@insper.edu.br">atendimentoprofessor@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2347</td>
-                                        <td>
-                                            <p>Segunda à Sexta<br>(7h às 22h)</p>
-                                            <p>Sábado<br>(7h às 16h)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Salas Professores Tempo Integral (TI)</td>
-                                        <td>7º andar</td>
-                                        <td><span class="glyphicon glyphicon-asterisk"></span></td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>DEA</td>
-                                        <td>8º andar</td>
-                                        <td>
-                                            <p>Dúvidas gerais:<br><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></p>
-                                            <p>Dúvidas sobre Casos e Simuladores:<br><a href="mailto:casos@insper.edu.br">casos@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2670/2674</p>
-                                            <p>Dúvidas sobre Blackboard:<br><a href="mailto:blackboard@insper.edu.br">blackboard@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2670/2674</p>
-                                        </td>
-                                        <td>
-                                            <p>Segunda à Sexta<br>(7h às 20h)</p>
-                                            <p>Sábado<br>(8h às 17h)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>NID/SAVI</td>
-                                        <td>8º andar</td>
-                                        <td><a href="mailto:nidocente@insper.edu.br">nidocente@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2724</td>
-                                        <td>
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Diretorias, Coordenações e Apoios Acadêmicos</td>
-                                        <td>8º andar</td>
-                                        <td>
-                                            <p>Graduação ADM e ECO (8º andar)<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>Graduação Engenharia (8º andar)<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>Pós-Graduação Stricto Sensu (8º andar)<br><a href="apoioacademicomestrado@insper.edu.br">apoioacademicomestrado@insper.edu.br</a><br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>Educação Executiva Programas Abertos (8º andar)<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>Educação Executiva Programas Customizados (8º andar)<br><span class="glyphicon glyphicon-asterisk"></span></p>
-
-
-                                        </td>
-                                        <td>
-                                            <p>&nbsp;<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>&nbsp;<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>&nbsp;<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>&nbsp;<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                            <p>&nbsp;<br><span class="glyphicon glyphicon-asterisk"></span></p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>    
+                        <h1 class="first">Consulta rápida</h1>
+                        <p>Encontre rapidamente contato e localização das principais áreas de interface, dependências do Insper e principais documentos, ferramentas e sistemas.</p>
+                        <!-- aonde ir e quem falar -->
+                        <div data-name="aicqf">
+                            <h2 id="aonde">Aonde ir e com quem falar <small>(dependências e contatos úteis)</small></h2>
+                            <h3 class="invisible" id="aidcqf-lista-geral">(dependências e contatos úteis)</h3>
+                            <div class="table-consulta-rapida">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered"> 
+                                        <thead>
+                                            <tr>
+                                                <th>Área</th>
+                                                <th>Localização</th>
+                                                <th>Contato</th>
+                                                <th>Horário</th>
+                                            </tr>    
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Departamento Pessoal</td>
+                                                <td>8º andar</td>
+                                                <td><a href="mailto:dpsp@insper.edu.br">dpsp@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2685</td>
+                                                <td>Segunda à Sexta<br>(8h às 19h)</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4">Alimentação</td>
+                                                <td>Restaurante<br>(5º andar)</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lanchonete (1º subsolo e 2º andar)</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Refeitório (térreo e 5º andar)</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Copas (1º, 3º, 4º, 5º, 6º, 7º e 8º andares)</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Estacionamento</td>
+                                                <td>1º, 2º e 3 º subsolos</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td>
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Biblioteca</td>
+                                                <td>Térreo e 1º andar</td>
+                                                <td><a href="mailto:biblioteca@insper.edu.br">biblioteca@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2360</td>
+                                                <td>
+                                                    <p>Atendimento:<br>Segunda a Sexta (7h às 22h) Sábado (8h às 17h)</p>
+                                                    <p>Áreas de estudo:<br>Segunda a Sexta (7h às 22h45) Sábado (8h-17h)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reprografia</td>
+                                                <td>Térreo</td>
+                                                <td><a href="mailto:reprografia-sp@insper.edu.br">reprografia-sp@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2411</td>
+                                                <td>
+                                                    <p>Segunda à Sexta<br>(7h às 22h)</p>
+                                                    <p>Sábado<br>(8h às 17h)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Service Desk</td>
+                                                <td>2º andar</td>
+                                                <td><a href="mailto:servicedesk@insper.edu.br">servicedesk@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2550<br>Sala de aula: Disque 1</td>
+                                                <td>
+                                                    <p>Segunda à Sexta<br>(7h às 22h)</p>
+                                                    <p>Sábado<br>(8h às 17h)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Salas de reunião</td>
+                                                <td>6º e 7º andares</td>
+                                                <td><a href="mailto:reservas@insper.edu.br">reservas@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> <span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td>
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lounge dos Professores e Atendimento ao professor</td>
+                                                <td>7º andar</td>
+                                                <td><a href="mailto:atendimentoprofessor@insper.edu.br">atendimentoprofessor@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2347</td>
+                                                <td>
+                                                    <p>Segunda à Sexta<br>(7h às 22h)</p>
+                                                    <p>Sábado<br>(7h às 16h)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Salas Professores Tempo Integral (TI)</td>
+                                                <td>7º andar</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">DEA</td>
+                                                <td rowspan="3">8º andar</td>
+                                                <td>Dúvidas gerais:<br><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></td>
+                                                <td rowspan="3">
+                                                    <p>Segunda a Sexta<br>(7h às 22h)</p>
+                                                    <p>Sábado<br>(8h às 17h)</p>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dúvidas sobre casos e simuladores:<br><a href="mailto:casos@insper.edu.br">casos@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2670/2674</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dúvidas sobre Blackboard:<br><a href="mailto:blackboard@insper.edu.br">blackboard@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2670/2674</td>
+                                            </tr>
+                                            <tr>
+                                                <td>NID/SAVI</td>
+                                                <td>8º andar</td>
+                                                <td><a href="mailto:nidocente@insper.edu.br">nidocente@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> 4504-2724</td>
+                                                <td>
+                                                    Segunda a Sexta<br>(9h30 às 18h30)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">Diretorias, Coordenações e Apoios Acadêmicos</td>
+                                                <td>8º andar</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Graduação<br>(8º andar)</td>
+                                                <td><a href="mailto:apoioacademico@insper.edu.br">apoioacademico@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2724</td>
+                                                <td>Segunda a Sexta<br>(8h às 18h)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pós-Graduação Lato Sensu<br>(8º andar)</td>
+                                                <td><a href="mailto:apoioacadposlatosensu@insper.edu.br">apoioacadposlatosensu@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2711</td>
+                                                <td>Segunda a Sexta<br>(8h às 18h)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pós-Graduação Stricto Sensu<br>(8º andar)</td>
+                                                <td><a href="mailto:apoioacademicomestrado@insper.edu.br">apoioacademicomestrado@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2711</td>
+                                                <td>Segunda a Sexta<br>(8h às 18h)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Educação Executiva Programas Abertos<br>(8º andar)</td>
+                                                <td><a href="mailto:OperacionalCurtaDuracao@insper.edu.br">OperacionalCurtaDuracao@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2721</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                            <tr>
+                                               <td>Educação Executiva Programas Customizados<br>(8º andar)</td>
+                                                <td><a href="mailto:OperacionalCorp@insper.edu.br">OperacionalCorp@insper.edu.br</a><br><span class="glyphicon glyphicon-earphone"></span> (11) 4504-2643</td>
+                                                <td><span class="glyphicon glyphicon-asterisk"></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                </div>
+                                <div class="well well-consulta-rapida">
+                                    <p>Conheça também o <a href="http://arquivos.insper.edu.br/MapasDownload/mapas.html" target="_blank" title="Mapas das salas de aula">mapa das salas de aula</a>.</p>
+                                    <p>Em caso de dúvida sobre infraestrutura ou reserva, entre em contato com o Service Desk:</p>
+                                    <ul class="list-unstyled">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="helpdesk">helpdesk@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2550 ou, se estiver em sala de aula, basta digitar 1</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>2º andar, em frente ao elevador C</li>
+                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.</li>
+                                    </ul>
+                                </div>    
+                            </div>
                         </div>
-
-                        <div class="well well-consulta-rapida">
-                            <p>Conheça também o <a href="#" title="xxx">mapa das salas de aula</a>.</p>
-                            <p>Em caso de dúvida sobre infraestrutura ou reserva, entre em contato com o Service Desk:</p>
-                            <ul class="list-unstyled">
-                                <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
-                                 <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
+                        <!-- documentos, ferramentas e sistemas -->
+                        <div data-name="dfs">
+                            <h2 id="dfs">Documentos, ferramentas e sistemas</h2>
+                            <p>Todas as ferramentas e sistemas solicitam login e senha de acesso.</p>
+                            <h3 id="dfs-portal-professor">Portal do Professor</h3>
+                            <p>O Portal do Professor consolida os principais documentos, ferramentas e sistemas a que os professores devem ter acesso. Dentre eles:</p>
+                            <ul>
+                                <li>Manual do Corpo Docente</li>
+                                <li>Portfólio do Professor</li>
+                                <li>Blackboard</li>
+                                <li>WebMail</li>
+                                <li>Docente On-Line (lançamento de faltas)</li>
+                                <li>Portal de Sistemas (avaliação dos alunos)</li>
+                                <li>CUCA – Controle de Utilização de Casos e Simuladores</li>
                             </ul>
-                        </div>    
-                    </div>
+                            <p>O Portal também consolida <a href="http://portaldoprofessor.insper.edu.br/?page_id=64" title="" target="_blank">informações específicas</a> de cada programa, como modelos de provas e regulamentos, e os <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="" target="_blank">objetivos</a> das trilhas de aprendizagem de cada programa.</p>
+                            <div class="well well-consulta-rapida">
+                                Acesse: <a href="http://portaldoprofessor.insper.edu.br" title="Portal do Professor" target="_blank">http://portaldoprofessor.insper.edu.br</a>
+                            </div>
+                            <h3 id="dfs-manual-corpo-docente">Manual do Corpo Docente</h3>
+                            <p>O Manual explica de maneira detalhada cada um dos seguintes tópicos:</p>
+                            <ul>
+                                <li>Governança e modelo organizacional</li>
+                                <li>Tipos de docente</li>
+                                <li>Novos docentes</li>
+                                <li>Responsabilidades do corpo docente</li>
+                                <li>Desenvolvimento do corpo docente</li>
+                                <li>Avaliação do desempenho do corpo docente</li>
+                                <li>Reconhecimento</li>
+                                <li>Remuneração e benefícios</li>
+                                <li>Desligamento</li>
+                                <li>Áreas de interface permanente</li>
+                                <li>Outras áreas de interface</li>
+                                <li>Infraestrutura física e tecnológica</li>
+                            </ul>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/" target="_blank">Manual do Corpo Docente</a></p>
+                                Também disponível no: <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>
+                            </div>
+                            <h3 id="dfs-intranet-corporativa">Intranet Corporativa</h3>
+                            <p>A Intranet consolida informações de interesse geral de todo colaborador Insper, tais como:</p>
+                            <ul>
+                                <li>Calendário de feriados e recessos</li>
+                                <li>Metas institucionais</li>
+                                <li>Sindicatos</li>
+                                <li>CIPA</li>
+                                <li>Benefícios</li>
+                                <li>etc</li>
+                            </ul>
+                            <div class="well well-consulta-rapida">
+                                Acesse: <a href="http://corporativo.insper.edu.br/" title="Intranet Corporativa - Insper" target="_blank">http://corporativo.insper.edu.br/</a>.
+                            </div>
+                            <h3 id="dfs-portal-pessoas">Portal Pessoas</h3>
+                            <p>Permite consultar as seguintes informações:</p>
+                            <ul>
+                                <li>Dados cadastrais</li>
+                                <li>Dados de admissão</li>
+                                <li>Informe de rendimentos</li>
+                                <li>Demonstrativo de pagamento</li>
+                            </ul>
+                            <div class="well well-consulta-rapida">
+                                Acessem: <a href="http://portalrm.insper.edu.br/" title="Portal Pessoas" target="_blank">http://portalrm.insper.edu.br/</a> (utilize o navegador Internet Explorer).
+                            </div>
+                            <h3 id="dfs-webmail">WebMail</h3>
+                            <p>Possibilita acessar remotamente a caixa de e-mail do Insper.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="https://webmail.insper.edu.br/" title="WebMail" target="_blank">https://webmail.insper.edu.br/</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                            <h3 id="dfs-mudanca-senha">Mudança de senha</h3>
+                            <p>Altere sua senha de acesso à rede e a todos os sistemas internos do Insper.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href=" http://noc.insper.edu.br/servicosderedead/mudarsenhacolaborador.aspx" title="Veja como mudar a senha" target="_blank"> Mudança de senha</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a> e no <a href="http://noc.insper.edu.br/" target="_blank">NOC</a>.
+                            </div>
+                            <h3 id="dfs-portfolio-professor">Portfólio do Professor</h3>
+                            <p>Colabore com o acompanhamento e avaliação anual do corpo docente mantendo seu portfólio atualizado quanto à sua qualificação e desenvolvimento.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="http://portaldoprofessorapp.insper.edu.br/cadastro/" title="Portfólio do Professor" target="_blank">Portfólio do Professor</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                            <h3 id="dfs-docente-online">Docente-Online</h3>
+                            <p>Sistema para lançamento das faltas dos cursos de Graduação.</p>
+                            <p>Os professores da Pós-Graduação podem usar o Docente-Online para consultar as faltas dos alunos.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="https://insper.blackboard.com/" title="Blackboard - Insper" target="_blank">https://insper.blackboard.com/</a> aba "Docente-Online".</p>
+                                Também disponível no <a href="http://insper.blackboard.com" title="Blackboard" target="_blank">Blackboard</a>.
+                            </div>
+                            <h3 id="dfs-portal-sistema-noc">Portal de Sistemas (NOC)</h3>
+                            <p>O Portal de Sistemas, também conhecido como NOC, permite consultar as seguintes informações:</p>
+                            <ul>
+                                <li>Resultado das avaliações feitas pelos alunos nas diferentes disciplinas lecionadas.</li>
+                                <li>Book de alunos </li>
+                                <li>Calendário de Aulas</li>
+                            </ul>
+                            <p>No Portal de Sistemas também é possível atualizar o Portfólio do Professor e mudar a senha de acesso à rede e aos sistemas internos.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="http://noc.insper.edu.br/" title="Portal de Sistemas NOC" target="_blank">http://noc.insper.edu.br/</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                            <h3 id="dfs-biblioteca-telles">Biblioteca Telles</h3>
+                            <p>Acesse os diversos serviços oferecidos, dentre eles:</p>
+                            <ul>
+                                <li>Consulta ao acervo.</li>
+                                <li>Reserva e renovação.</li>
+                                <li>Suporte e treinamento.</li>
+                            </ul>
+                            <p>No Portal de Sistemas também é possível atualizar o Portfólio do Professor e mudar a senha de acesso à rede e aos sistemas internos.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="http://www.insper.edu.br/biblioteca-telles/" title="Biblioteca Telles" target="_blank">http://www.insper.edu.br/biblioteca-telles/</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                            <h3 id="dfs-blackboard">Blackboard</h3>
+                            <p>Além do ambiente virtual de apoio às disciplinas, a página do Blackboard também contém:</p>
+                            <ul>
+                                <li>Calendário unificado com as iniciativas de formação e aperfeiçoamento docente (cursos, workshops, treinamentos e eventos).</li>
+                                <li>Manuais de utilização dos recursos e tecnologias de aprendizagem (Blackboard, casos, simuladores, votadores eletrônicos e Catme).</li>
+                                <li>Acesso ao sistema Docente-Online.</li>
+                            </ul>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="https://insper.blackboard.com" title="Blackboard" target="_blank">https://insper.blackboard.com</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                            <h3 id="dfs-cuca">CUCA</h3>
+                            <p>O CUCA – Controle de Utilização de Casos é o sistema para solicitação, acompanhamento e cancelamento de casos e simuladores.</p>
+                            <div class="well well-consulta-rapida">
+                                <p>Acesse: <a href="http://cuca.insper.edu.br/" title="CUCA" target="_blank">http://cuca.insper.edu.br/</a>.</p>
+                                Também disponível no <a href="http://portaldoprofessor.insper.edu.br/?page_id=378" title="Portal do Professor" target="_blank">Portal do Professor</a>.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- footer -->
-        <footer role="contentinfo" id="footer">
-            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block img-responsive">
-        </footer>
     </div>
     <!-- menu-lateral small device -->
     <div class="menu-lateral-sd menu-l-sd-azul hidden-print">
         <p class="place">Você esta em:</p>
-        <h4></h4>
-        <h5><span>Encontre mais informações nas seções abaixo:</span></h5>
+        <h4>&nbsp;</h4>
+        <h5><span>Aonde ir e com quem falar</span></h5>
         <ul class="list-unstyled">
-            <li><a href="#" title="Item1">Item 1</a></li>
-            <li><a href="#" title="Item2">Item 2</a></li>
-            <li><a href="#" title="Item3">Item 3</a></li>
+            <li><a href="#aidcqf-lista-geral" title="Dependências e contatos úteis">Dependências e contatos úteis</a></li>
+        </ul>
+        <h5><span>Documentos, ferramentas e sistemas</span></h5>
+        <ul class="list-unstyled">
+            <li><a href="#dfs-portal-professor" title="Portal do Professor">Portal do Professor</a></li>
+            <li><a href="#dfs-manual-corpo-docente" title="Manual do Corpo Docente">Manual do Corpo Docente</a></li>
+            <li><a href="#dfs-intranet-corporativa" title="Intranet Corporativa">Intranet Corporativa</a></li>
+            <li><a href="#dfs-portal-pessoas" title="Portal de Pessoas">Portal de Pessoas</a></li>
+            <li><a href="#dfs-webmail" title="WebMail">WebMail</a></li>
+            <li><a href="#dfs-mudanca-senha" title="Mudança de senha">Mudança de senha</a></li>
+            <li><a href="#dfs-portfolio-professor" title="Portfólio do Professor">Portfólio do Professor</a></li>
+            <li><a href="#dfs-docente-online" title="Docente-Online">Docente-Online</a></li>
+            <li><a href="#dfs-portal-sistema-noc" title="Portal de Sistemas (NOC)">Portal de Sistemas (NOC)</a></li>
+            <li><a href="#dfs-biblioteca-telles" title="Biblioteca Telles">Biblioteca Telles</a></li>
+            <li><a href="#dfs-blackboard" title="Blackboard">Blackboard</a></li>
+            <li><a href="#dfs-cuca" title="CUCA">CUCA</a></li>
         </ul>
         <ul class="list-inline add-itens-mg-sd">
             <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>

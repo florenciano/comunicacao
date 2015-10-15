@@ -2,24 +2,6 @@
    Code project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/* Sticky footer styles
- *** temp ***
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 91px;
-}
-footer {
-  position: absolute;
-  bottom: 0;
-  /* Set the fixed height of the footer here */
-  height: 91px;
-}
-
 // // // // // // // // // // // // // // // // // // // // // // //
 // PRESETS
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -78,11 +60,11 @@ $vermelhoEscuro: #82292C;
 
 div[role="main"] {
 	.menu-global {
-		nav[role="navigation"] {
+		nav {
 			>.list-inline { margin-bottom: 0; }
-			.active-amarelo { border-top: 2px solid $amarelo; }
-			.active-verde { border-top: 2px solid $verde; }
-			.active-azul { border-top: 2px solid $azul; }
+			.active-amarelo { border-top: 3px solid $amarelo; }
+			.active-verde { border-top: 3px solid $verde; }
+			.active-azul { border-top: 3px solid $azul; }
 			li { 
 				padding: ($grid40/8) 0;
 				text-align: center;
@@ -107,16 +89,15 @@ div[role="main"] {
 	div[role="main"] {
 		.menu-global {
 			margin-top: $grid40;
-			nav[role="navigation"] {
-				.active-amarelo { border-bottom: 2px solid $amarelo; }
-				.active-verde { border-bottom: 2px solid $verde; }
-				.active-azul { border-bottom: 2px solid $azul; }
+			nav {
+				.active-amarelo { border-bottom: 3px solid $amarelo; }
+				.active-verde { border-bottom: 3px solid $verde; }
+				.active-azul { border-bottom: 3px solid $azul; }
 				li {
 					padding: .5em;
 					margin-bottom: 5px;
 					display: block;
 					width: 100%;
-					border-bottom: 1px solid #ddd;
 				}
 			}
 		}
@@ -208,6 +189,7 @@ div[role="main"] {
 		top: $grid40/4;
 		z-index: 999;
 		overflow-y: auto;
+		display: block;
 	}
 }
 
@@ -389,6 +371,10 @@ div[role="main"] {
     		padding-bottom: 5px;
     		color: #414042;
     		margin-top: $grid40;
+    		small {
+    			font-size: 87.5%;
+    			color: #414042;
+    		}
 		}
 		h3 { 
 			font-size: 1.25em;
@@ -403,8 +389,9 @@ div[role="main"] {
 		    margin-bottom: 0;
 		}
 		.container-h4 { margin-left: 1em }
+		.container-h5 { margin-left: 2em }
 		.well {
-			margin: ($grid40/2) 0 $grid40 0;
+			margin: ($grid40/2) 0 $grid40;
 			background-color: #fff;
    			-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
    			        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
@@ -416,7 +403,13 @@ div[role="main"] {
 		}
 		.well-contratacao { border-left: 5px solid #f0c40f; }
 		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
-		.well-consulta-rapida { border-left: 5px solid #3a99d9; margin-top: $grid40; }
+		.well-consulta-rapida { border-left: 5px solid #3a99d9; }
+		// caution
+		.well-caution {
+			background-color: #eee;
+			-webkit-box-shadow: none;
+					box-shadow: none;
+		}
 		li {
 			margin: 0 0 1em 0;
 			span {
@@ -461,13 +454,7 @@ div[role="main"] {
 div[role="main"] {
 	.content-text {
 		.table-consulta-rapida {
-			margin-top: $grid30;
-			// max-width: 870px;
-			caption { 
-				width: 90%;
-    			margin: 0 auto;
-				text-align: center;
-			}
+			// margin-top: $grid30;
 			thead > tr { background-color: #6bb3e3; }
 			thead > tr th { 
 				padding: 1em .25em;

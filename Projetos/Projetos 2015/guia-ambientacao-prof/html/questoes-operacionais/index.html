@@ -4,14 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Estudo em bootstrap">
-	<meta name="keywords" content="word1, word2, word3">
-	<meta name="author" content="Rodrigo Florenciano">
     <title>Guia de ambientação - Portal do Professor</title>
-    <!-- Bootstrap -->
     <link href="../assets/css/main.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -19,21 +13,26 @@
 </head>
 <body id="questoes-operacionais">
     <div class="container">
-        <header role="banner" id="top">
-            <img src="../assets/img/--header--.png" alt="{header}" class="center-block img-responsive">
-        </header>
-
         <div class="row">
             <div id="main" role="main">
                 <div class="breadcrumb visible-print-block">
                     DEA / Guia de Ambientação de novos docentes: ênfase em Ensino
                 </div>
                 <div class="menu-global clearfix hidden-print">
-                    <nav role="navigation">
+                    <nav>
                         <ul class="list-inline">
-                            <li class="col-xs-12 col-sm-4"><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
-                            <li class="col-xs-12 col-sm-4 active-verde"><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
-                            <li class="col-xs-12 col-sm-4"><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+                            <li class="col-xs-12 col-sm-4">
+                                <img src="../assets/img/ico-menu/amarelo.png" alt="ico-contratacao">
+                                <a href="../contratacao/" title="Da contratação à sala de aula">Da contratação à sala de aula</a>
+                            </li>
+                            <li class="col-xs-12 col-sm-4 active-verde">
+                                <img src="../assets/img/ico-menu/verde.png" alt="ico-operacionais">
+                                <a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer">Questões operacionais que você precisa conhecer</a>
+                            </li>
+                            <li class="col-xs-12 col-sm-4">
+                               <img src="../assets/img/ico-menu/azul.png" alt="ico-consulta">
+                                <a href="../consulta-rapida/" title="Consulta rápida">Consulta rápida</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -42,7 +41,7 @@
                         <div class="container-menu">
                             <h5 class="verde-programas active" id="iten0"><span>Programas</span></h5>
                             <ul>
-                                <li><a href="#graduacao-g" title="Graduação">Graduação</a></li>
+                                <li><a href="#graduacao" title="Graduação">Graduação</a></li>
                                 <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
                                 <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
                             </ul>
@@ -64,18 +63,17 @@
                         
                         <!-- graduacao -->
                         <div data-name="g">
-                            <h2 name="programas">Programas</h2>
-                            <!-- <p>Conheça detalhes do dia a dia operacional e procedimentos específicos de cada programa ou curso.</p> -->
-                            <h3 name="graduacao-g">Graduação</h3>
-                            <p>As páginas dos cursos de Administração e Economia e Engenharias do Portal do Professor contêm as seguintes informações, específicas dos cursos:</p>
+                            <h2 id="programas">Programas</h2>
+                            <h3 id="graduacao">Graduação</h3>
+                            <p>As páginas dos cursos de <a href="http://portaldoprofessor.insper.edu.br/?page_id=66" target="_blank">Administração e Economia</a> e <a href="http://portaldoprofessor.insper.edu.br/?page_id=1175" target="_blank">Engenharias</a> do Portal do Professor contêm as seguintes informações, específicas dos cursos:</p>
                             <ul>
                                 <li>Grades Horárias e Calendários: calendários acadêmicos do professor e do aluno</li>
-                                <li>Modelos de Arquivos: modelo de capa de provas, modelo de Plano de Ensino, regras de uso da marca</li>
-                                <li>Informações do Curso: ementas, quadro de disciplinas, carga horária dos cursos, atividade</li>
+                                <li>Modelos de Arquivos: modelo de capa de provas, modelo de Plano de Ensino, regras de uso da marca etc.</li>
+                                <li>•   Informações do Curso: ementas, quadro de disciplinas, carga horária dos cursos, atividade complementares etc.</li>
                                 <li>Manuais e Regulamentos: Manual de Procedimentos Acadêmicos do Professor, Manual do Aluno e Regimento da Faculdade</li>
                                 <li>Coordenação</li>
                             </ul>
-                            <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (<a href="$" title="xxx">Administração e Economia</a> e <a href="#" title="xxx">Engenharias</a>). Ele contém informações sobre:</p>
+                            <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (<a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2013/02/MANUAL-DE-PROCEDIMENTOS-ACAD%C3%8AMICOS-PROFESSOR-2014-1.pdf" target="_blank">Administração e Economia</a> e <a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2015/02/MANUAL-DE-PROCEDIMENTOS-ACAD%C3%8AMICOS-PROFESSOR-ENGENHARIA-2015-1.pdf" target="_blank">Engenharias</a>). Ele contém informações sobre:</p>
                             <ul>
                                 <li>Aulas, horários de atendimento e monitorias</li>
                                 <li>Troca de aulas, cancelamentos e reposições</li>
@@ -94,60 +92,59 @@
                             <div class="well well-questoes-operacionais">
                                 <p>O Apoio Acadêmico da Graduação é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
                                 <ul class="list-unstyled">
-                                    <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
-                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a href="apoioacademico">apoioacademico@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2727</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 18h.</li>
                                 </ul>
-                            </div>
-                            <div class="container-h4">
-                                <h4 name="graduacao-adm">ADM</h4>
-                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
-                                <h4 name="graduacao-eco">ECO</h4>
-                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
-                                <h4 name="graduacao-eco">Engenharias</h4>
-                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>    
                             </div>
                         </div>
 
                         <!-- pós-graduacao -->
-                        <div data-name="p">
-                            <h3 name="pos-graduacao">Pós-graduação</h3>
+                        <div data-name="pg">
+                            <h3 id="pos-graduacao">Pós-graduação</h3>
                             <div class="container-h4">
-                                <h4 name="pos-graduacao-ls">Lato Sensu</h4>
+                                <h4>Lato Sensu</h4>
                                 <p>A página dos cursos de <a href="http://portaldoprofessor.insper.edu.br/?page_id=249" title="Pós-Graduação Lato Sensu" target="_blank">Pós-Graduação Lato Sensu</a> do Portal do Professor contém as seguintes informações, específicas do programa:</p>
                                 <ul>
                                     <li>Cartilha de Plágio Acadêmico</li>
+                                    <li><a href="#">Calendário Professores Pós-Graduação Lato Sensu 2016</a></li>
+                                    <li><a href="#">Calendário de início e término de período letivo 2016</a></li>
                                     <li>Modelos de Arquivos: modelos de capas de prova e apresentações em Powerpoint</li>
                                     <li>Manual de Procedimentos</li>
                                 </ul>
-                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do Manual de Procedimentos Acadêmicos do Professor (não existe online). Ele contém informações sobre:</p>
+                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do <a href="#">Manual de Procedimentos Acadêmicos do Professor</a>. Ele contém informações sobre:</p>
                                 <ul>
+                                    <li>Informações sobre o processo de contratação de docentes na PGLS</li>
+                                    <li>Código de ética e conduta</li>
                                     <li>Sistema de avaliação e critério para aprovação</li>
-                                    <li>Controle de frequência</li>
-                                    <li>Procedimentos e prazos para:</li>
-                                    <ul>
-                                        <li>Plano de Aula</li>
-                                        <li>Prova Final e Parcial</li>
-                                        <li>Prova Substitutiva</li>
-                                        <li>Quizzes e trabalhos </li>
-                                        <li>Casos e simuladores</li>
-                                        <li>Faltas e atrasos</li>
-                                        <li>Cancelamento de aula</li>
-                                    </ul>
-                                    <li>Etc.</li>
+                                    <li>Controle de frequência - lista de presença</li>
+                                    <li>Eventos oferecidos especificamente aos docentes da PGLS</li>
+                                    <li>Procedimentos e prazos para:
+                                        <ul>
+                                            <li>Plano de Aula</li>
+                                            <li>Impressão de material didático</li>
+                                            <li>Casos e simuladores</li>
+                                            <li>Faltas e atrasos</li>
+                                            <li>Cancelamento de aula</li>
+                                            <li>Prova Final e Parcial</li>
+                                            <li>Prova Substitutiva</li>
+                                            <li>Processo de infração e notificação ao código de ética e conduta</li>
+                                        </ul>   
+                                    </li>
                                 </ul>
-                                <p>Confira <a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2013/02/Calend%C3%A1rio-Professores-2014.pdf" target="_blank">aqui</a> o calendário de eventos e prazos da PGLS.</p>
-                                <h5 name="pos-graduacao-c">Certificates</h5>
-                                <p>Lorem ipsum dolor sit.</p>
-                                
-                                <h5 name="pos-graduacao-mba">MBA</h5>
-                                <p>Lorem ipsum dolor sit.</p>
-                                
-                                <h5 name="pos-graduacao-d">Direito</h5>
-                                <p>Lorem ipsum dolor sit.</p>
-
-                                <h4 name="pos-graduacao-ss">Stricto Sensu</h4>
+                                <div class="well well-questoes-operacionais">
+                                    <p>O Apoio Acadêmico da PGLS é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
+                                    <ul class="list-unstyled">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="apoioacademico">apoioacademico@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2727</li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                        <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 18h.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-h4">
+                                <h4 id="programas-pgss">Stricto Sensu</h4>
                                 <p>A página dos cursos de <a href="http://portaldoprofessor.insper.edu.br/?page_id=301" target="_blank">Pós-Graduação Stricto Sensu</a> do Portal do Professor contém as seguintes informações, específicas do programa:</p>
                                 <ul>
                                     <li>Grades e Calendários</li>
@@ -157,65 +154,79 @@
                                     <li>Regulamento do programa</li>
                                     <li>Coordenação</li>
                                     <li>Dúvidas Frequentes</li>
+                                    <li>Manual de Procedimentos</li>
                                 </ul>
-                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do item <a href="http://portaldoprofessor.insper.edu.br/wp-content/uploads/2013/04/Duvidas_Frequentes_Mestrados.pdf" target="_blank">Dúvidas frequentes</a>. Ele contém informações sobre:</p>
+                                <p>Dentre os materiais disponíveis, recomendamos a leitura atenta do <a href="#">Manual de Procedimentos Acadêmicos do Professor</a>. Ele contém informações sobre:</p>
                                 <ul>
-                                    <li>Frequência dos alunos</li>
-                                    <li>Faltas e reposições</li>
-                                    <li>Solicitação de casos</li>
-                                    <li>Aplicação e regras do Exame</li>
-                                    <li>Entrega de notas</li>
+                                    <li>Código de ética e conduta</li>
+                                    <li>Sistema de avaliação e critério para aprovação</li>
+                                    <li>Controle de frequência – lista de presença</li>
+                                    <li>Procedimentos e prazos para:
+                                        <ul>
+                                            <li>Plano de Aula</li>
+                                            <li>Impressão de material didático</li>
+                                            <li>Casos e simuladores</li>
+                                            <li>Faltas e atrasos</li>
+                                            <li>Cancelamento de aula</li>
+                                            <li>Prova Final e Parcial</li>
+                                            <li>Prova Substitutiva ou Exame</li>
+                                            <li>Processo de infração e notificação ao código de ética e conduta</li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                                <div class="well well-questoes-operacionais">
-                                    <p>O Apoio Acadêmico do Mestrado é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
-                                    <ul class="list-unstyled">
-                                        <li><span class="glyphicon glyphicon-envelope"></span><a mailto="#">departamento@insper.edu.br</a></li>
-                                        <li><span class="glyphicon glyphicon-earphone"></span>5405-0000</li>
-                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar</li>
-                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
-                                    </ul>
-                                </div>
-                                    <h5 name="stricto-sensu-m">Mestrado</h5>
-                                    <p>Lorem ipsum dolor sit.</p>
-
-                                    <h5 name="stricto-sensu-d">Doutorado</h5>
-                                    <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                            <div class="well well-questoes-operacionais">
+                                <p>O Apoio Acadêmico do Mestrado é responsável por manter as informações do portal atualizadas. Em caso de dúvida, entre em contato:</p>
+                                <ul class="list-unstyled">
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a href="apoioacademicomestrado">apoioacademicomestrado@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2400</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das <strong>xx</strong>h às <strong>xx</strong>h.</li>
+                                </ul>
                             </div>
                         </div>
 
                         <!-- educação executiva -->
                         <div data-name="ee">
-                            <h3 name="educacao-executiva">Educação Executiva</h3>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <h3 id="educacao-executiva">Educação Executiva</h3>
                             <div class="container-h4">
-                                <h4 name="educacao-executiva-pa">Programas abertos</h4>
-                                <p>Lorem ipsum dolor sit.</p>
-                                <h4 name="educacao-executiva-pc">Programas customizados</h4>
-                                <p>Lorem ipsum dolor sit.</p>
+                                <h4>Programas abertos</h4>
+                                <div class="well well-questoes-operacionais">
+                                    <p>Em caso de dúvidas sobre o dia a dia operacional e procedimentos específicos de cada programa, por favor, entre em contato com o Operacional de Educação Executiva – Cursos de Curta e Média Duração:</p>
+                                    <ul class="list-unstyled">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="OperacionalCurtaDuracao">OperacionalCurtaDuracao@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                        <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das <strong>xx</strong>h às <strong>xx</strong>h.</li>
+                                    </ul>
+                                </div>
+                                <h4>Programas customizados</h4>
+                                <div class="well well-questoes-operacionais">
+                                    <p>Em caso de dúvidas sobre o dia a dia operacional e procedimentos específicos de cada programa, por favor, entre em contato com o Operacional de Educação Executiva – Customizados:</p>
+                                    <ul class="list-unstyled">
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="OperacionalCurtaDuracao">OperacionalCurtaDuracao@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                        <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das <strong>xx</strong>h às <strong>xx</strong>h.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- footer -->
-        <footer role="contentinfo" id="footer">
-            <img src="../assets/img/--footer--.png" alt="{footer}" class="center-block img-responsive">
-        </footer>
     </div>
     <!-- menu-lateral small device-->
     <div class="menu-lateral-sd menu-l-sd-verde hidden-print">
         <p class="place">Você esta em:</p>
-        <h4></h4>
+        <h4>&nbsp;</h4>
         <h5><span>Programas</span></h5>
         <ul class="list-unstyled">
-            <li><a href="#graduacao-g" title="Graduação">Graduação</a></li>
+            <li><a href="#graduacao" title="Graduação">Graduação</a></li>
             <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
             <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
         </ul>
         <ul class="list-inline add-itens-mg-sd">
-            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo">Da contratação à sala de aula</span></a></li>
+            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
             <li class=""><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
         </ul>
     </div>

@@ -8,12 +8,15 @@ $(function(){
 	// MENU LATERAL
 	// // // // // // // // // // // // // // // // // // // // // // //
 
+	// var global
+	var posTitle = $( ".first" ).offset().top; // title page
+	
 	// // pin menu-lateral in scrool
 	var menuLateral = $( ".menu-lateral" ),
 		itensMenuGlobal = $( ".add-itens-mg" ),
 		_heightX = $(window).height();
 	$( document ).bind( "ready scroll", function() {
-		if( $(this).scrollTop() >= 125 ) { // ----> alterar valor qdo for para o portalDoProfessor
+		if( $(this).scrollTop() >= posTitle ) {
 			menuLateral.addClass( "fixed-menu" );
 			itensMenuGlobal.fadeIn( 400 );
 		} else {
@@ -36,7 +39,6 @@ $(function(){
 			left: "0px"
 		}, 400);	
 	};
-	// Click button
 	btn.on( "click", function(e) { _show() });
 
 	// // hide menu-lateral-small-device
@@ -48,7 +50,7 @@ $(function(){
 			menu.css( "display","none" );
 		});	
 	};
-	// keyboard ESC
+	// tigger events
 	$( document ).on( "keyup", function (e) {
 		if($(bg).css( "display" ) !== "none") {
 			if(e.keyCode == 27) {
@@ -56,10 +58,9 @@ $(function(){
 			}
 		}	
 	});
-	// Click button
 	bg.on( "click", function() { _hide() });
 
-	// // Add title from menu global
+	// // Add title menu-lateral-small-device from menu-global
 	var t = $( "nav" ).find( "a" ),
 		r = $( ".menu-lateral-sd h4" );
 	function _replaceTitle(key) {
@@ -88,28 +89,28 @@ $(function(){
 
 		$( document ).bind( "ready scroll", function() {
 			var $this = $(this),
-				pos = $this.scrollTop();
+			pos = $this.scrollTop();
 
-				for (i in titles_big) {
-					if(titles_big[i] < pos && titles_big[i] > pos - _height){
-						titles_menu.removeClass( "active" );
-						$( "#iten" + i ).addClass( "active" );
-					}
-				};
-				for (i in titles_small) {
-					if(titles_small[i] < pos && titles_small[i] > pos - _height){
-						li_small.removeClass( "active" );
-						li_small.eq(i).addClass( "active" );
-					}
-				};
-				titles_menu.each(function() { // removed ".active" titles normal
-					if(!$(this).hasClass("active")) {
-						$(this).next().find( "a" ).removeClass( "active" );
-					}
-				});
-				if(pos < 100) { // removed ".active" when scroll beging window
+			for (i in titles_big) {
+				if(titles_big[i] < pos && titles_big[i] > pos - _height){
 					titles_menu.removeClass( "active" );
+					$( "#iten" + i ).addClass( "active" );
 				}
+			};
+			for (i in titles_small) {
+				if(titles_small[i] < pos && titles_small[i] > pos - _height){
+					li_small.removeClass( "active" );
+					li_small.eq(i).addClass( "active" );
+				}
+			};
+			titles_menu.each(function() { // removed ".active" titles normal
+				if(!$(this).hasClass("active")) {
+					$(this).next().find( "a" ).removeClass( "active" );
+				}
+			});
+			if(pos < posTitle) { // removed ".active" when scroll beging window
+				titles_menu.removeClass( "active" );
+			}
 		});
 	}
 	hightligthTitle();
@@ -119,7 +120,7 @@ $(function(){
 		linkMenu = $( ".menu-lateral .container-menu a" );
 	
 	function scrollAnchor (ancora) {
-        var link = $( ".content-text h3[name=" + ancora + "]" );
+        var link = $( ".content-text h3[id=" + ancora + "]" );
         $( "html, body" ).animate({
             scrollTop:  link.offset().top + 1
         }, "slow" );
