@@ -19,22 +19,6 @@ $vermelhoEscuro: #82292C;
 // typography
 //  default size: 16px // 
 
-/*
-// selection color
-#contratacao {
-	::-moz-selection { background-color: #F9E594; }
-	     ::selection { background-color: #F9E594; }
-}
-#questoes-operacionais {
-	::-moz-selection { background-color: #40E8C3; }
-	     ::selection { background-color: #40E8C3; }
-}
-#consulta-rapida {
-	::-moz-selection { background-color: #34BEF3; }
-	     ::selection { background-color: #34BEF3; }
-}
-*/
-
 .content { margin-top: $grid40; position: relative; }
 
 @media screen {
@@ -45,9 +29,16 @@ $vermelhoEscuro: #82292C;
 		height: .875em;
 		display: inline-block;
 		background: url("../img/link-blank.png") center center no-repeat;
-	 	margin-left: .25em;
+	 	margin-left: .12em;
 	 	background-size: 100%
 	}
+}
+
+// adjust text small
+.small-txt { font-size: .875em; }
+.small-txt-2 { font-size: .75em; }
+@media (min-width: 767px) {
+	.small-txt, .small-txt-2 { font-size: 1em; }
 }
 
 // MENU GLOBAL
@@ -214,10 +205,10 @@ div[role="main"] {
     border-top: 5px solid transparent;
     overflow: auto;
     z-index: 10001;
+    display: none;
     top: 0;
     left: -279px;
     height: 100%;
-    display: none;
 	-webkit-box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
         	box-shadow: 5px 0px 4px 2px rgba(0,0,0,.14),0px 0px 9px 10px rgba(0,0,0,.14);
 	.place {
@@ -340,7 +331,7 @@ div[role="main"] {
 		    position: fixed;
 		    right: 20px;
 		    top: 80%;
-		    z-index: 300;
+		    z-index: 1100;
 			button {
 		       	background-color: #fff;
 			    border: 1px solid #ea0863;
@@ -400,6 +391,7 @@ div[role="main"] {
 			.list-inline { margin-bottom: 0; }
 			ul + p { margin-top: 1em; }
 			li { padding-left: 2.25em; }
+			.last-p { margin-bottom: 0; }
 		}
 		.well-contratacao { border-left: 5px solid #f0c40f; }
 		.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
@@ -409,6 +401,8 @@ div[role="main"] {
 			background-color: #eee;
 			-webkit-box-shadow: none;
 					box-shadow: none;
+					padding-left: $grid40/2;
+					padding-right: $grid40/2;
 		}
 		li {
 			margin: 0 0 1em 0;

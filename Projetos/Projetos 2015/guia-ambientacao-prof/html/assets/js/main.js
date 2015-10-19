@@ -1,6 +1,6 @@
 $(function(){
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        ALL INSIDE PAGES:
+        // PAGES:
         // contratacao, questoes-operacionais e consulta-rapida //
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
@@ -8,13 +8,14 @@ $(function(){
 	// MENU LATERAL
 	// // // // // // // // // // // // // // // // // // // // // // //
 
-	// var global
-	var posTitle = $( ".first" ).offset().top; // title page
+	// var global function - title page
+	var posTitle = $( ".first" ).offset().top; 
 	
 	// // pin menu-lateral in scrool
+	// // // // // // // // // // // // // // // // // // // // // // //
 	var menuLateral = $( ".menu-lateral" ),
-		itensMenuGlobal = $( ".add-itens-mg" ),
-		_heightX = $(window).height();
+		itensMenuGlobal = $( ".add-itens-mg" );
+
 	$( document ).bind( "ready scroll", function() {
 		if( $(this).scrollTop() >= posTitle ) {
 			menuLateral.addClass( "fixed-menu" );
@@ -23,14 +24,16 @@ $(function(){
 			menuLateral.removeClass( "fixed-menu" );
 			itensMenuGlobal.fadeOut( 400 );
 		}
-		if($(".fixed-menu").css("display","block")) {
-			$( ".fixed-menu" ).css( "height",_heightX );
-		}
 	});
-	// // show menu-lateral-small-device
+
+	// // show/hide menu-lateral-small-device
+	// // // // // // // // // // // // // // // // // // // // // // //
 	var btn = $( "#btnMenu" ),
 		menu = $( ".menu-lateral-sd" ),
-		bg = $( ".bg-menu-lateral-sd" ); 
+		bg = $( ".bg-menu-lateral-sd" ),
+		heightDoc = $( document ).height();
+
+	bg.height(heightDoc);
 	
 	function _show() {
 		bg.css( "display","block" );
@@ -39,9 +42,6 @@ $(function(){
 			left: "0px"
 		}, 400);	
 	};
-	btn.on( "click", function(e) { _show() });
-
-	// // hide menu-lateral-small-device
 	function _hide() {
 		bg.css( "display","none" );
 		menu.animate({
@@ -51,16 +51,27 @@ $(function(){
 		});	
 	};
 	// tigger events
+	btn.on( "click", function() {
+		if(menu.css("display") == "none") {
+			_show();
+		} else {
+			_hide();
+		}
+	});
 	$( document ).on( "keyup", function (e) {
-		if($(bg).css( "display" ) !== "none") {
+		if(menu.css( "display" ) !== "none") {
 			if(e.keyCode == 27) {
 				_hide();
 			}
 		}	
 	});
-	bg.on( "click", function() { _hide() });
+	bg.on( "click", function() {
+		_hide();
+	});
 
+	
 	// // Add title menu-lateral-small-device from menu-global
+	// // // // // // // // // // // // // // // // // // // // // // //
 	var t = $( "nav" ).find( "a" ),
 		r = $( ".menu-lateral-sd h4" );
 	function _replaceTitle(key) {
@@ -71,7 +82,8 @@ $(function(){
 	if( $("body#consulta-rapida").length ) { _replaceTitle(2) };
 
 
-	// // high-ligth itens menu in scroll
+	// // high-ligth itens-menu in scroll
+	// // // // // // // // // // // // // // // // // // // // // // //
 	function hightligthTitle() {
 		var titles_big = [],
 			titles_small = [],
@@ -94,28 +106,26 @@ $(function(){
 			for (i in titles_big) {
 				if(titles_big[i] < pos && titles_big[i] > pos - _height){
 					titles_menu.removeClass( "active" );
-					$( "#iten" + i ).addClass( "active" );
+					titles_menu.eq(i).addClass( "active" );
 				}
 			};
 			for (i in titles_small) {
-				if(titles_small[i] < pos && titles_small[i] > pos - _height){
+				if(titles_small[i] < pos && titles_small[i] > pos - _height) {
 					li_small.removeClass( "active" );
 					li_small.eq(i).addClass( "active" );
 				}
 			};
-			titles_menu.each(function() { // removed ".active" titles normal
-				if(!$(this).hasClass("active")) {
-					$(this).next().find( "a" ).removeClass( "active" );
-				}
-			});
-			if(pos < posTitle) { // removed ".active" when scroll beging window
+			// removing ".active" when scroll window beging 
+			if(pos < posTitle) { 
 				titles_menu.removeClass( "active" );
-			}
+				li_small.removeClass( "active" );
+			};
 		});
 	}
-	hightligthTitle();
+	setTimeout(hightligthTitle(), 200);
 
-	// // scroll page
+	// // scroll page links-anchor
+	// // // // // // // // // // // // // // // // // // // // // // //
 	var linkMenu_sd = $( ".menu-lateral-sd .list-unstyled a" ),
 		linkMenu = $( ".menu-lateral .container-menu a" );
 	
@@ -137,7 +147,12 @@ $(function(){
 	btn_scrollAnchor(linkMenu_sd);
 	btn_scrollAnchor(linkMenu);
 
-	// // aply class 'active' on click in list small device
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// PAGE ALL
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// // aply class 'active' on click in list-menu-device
+	// // // // // // // // // // // // // // // // // // // // // // //
 	linkMenu_sd.on( "click", function(e) {
 		linkMenu_sd.removeClass( "active" );
 		$(this).addClass( "active" );
