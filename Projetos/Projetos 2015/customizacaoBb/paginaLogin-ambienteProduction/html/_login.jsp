@@ -36,7 +36,7 @@
       a img { border: none; }
       article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-      .icos-sprite, .icos-acrobat32x32, .icos-crhome42x42, .icos-firefox42x42, .icos-flash32x32, .icos-ie42x42, .icos-java52x32, .icos-macOSX62x52, .icos-safari42x42, .icos-windows62x52 { background: url('https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/icos-s7fb90a4ff8.png') no-repeat; }
+      .icos-sprite, .icos-acrobat32x32, .icos-crhome42x42, .icos-firefox42x42, .icos-flash32x32, .icos-ie42x42, .icos-java52x32, .icos-macOSX62x52, .icos-safari42x42, .icos-windows62x52 { background: url('https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/icos-s7fb90a4ff8.png') no-repeat; }
       .icos-acrobat32x32 { background-position: 0 -252px; }
       .icos-crhome42x42 { background-position: 0 -178px; }
       .icos-firefox42x42 { background-position: 0 -42px; }
@@ -49,19 +49,19 @@
 
       * { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
 
-      body { font: normal 14px/1.6875 "verdana", "arial", "sans-serif"; background: #e6e7e8 url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/bg_texture_insper.png") no-repeat center top; }
+      body { font: normal 14px/1.6875 "verdana", "arial", "sans-serif"; background: #e6e7e8 url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/bg_texture_insper.png") no-repeat center top; }
 
       .wrapper { background-color: #fff; margin: 0 auto; border: 1px solid #bcbec0; border-radius: 5px; box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); -moz-box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); -webkit-box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); width: 910px; height: 620px; position: absolute; left: 50%; margin-left: -455px; top: 50%; margin-top: -310px; }
 
       header[role="banner"] { margin-bottom: 20px; padding: 20px; }
       header[role="banner"] .logos h1 { display: inline-block; width: 200px; }
       header[role="banner"] .logos .right { float: right; margin-top: 24px; margin-right: 20px; }
-      header[role="banner"] .libraryInsperLogin { display: block; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/campus0.jpg") no-repeat 10px center; width: 100%; height: 150px; }
+      header[role="banner"] .libraryInsperLogin { display: block; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/campus0.jpg") no-repeat 10px center; width: 100%; height: 150px; }
       header[role="banner"] .libraryInsperLogin:before, header[role="banner"] .libraryInsperLogin:after { content: ""; display: table; }
       header[role="banner"] .libraryInsperLogin:after { clear: both; }
 
       .contentLogin { position: relative; margin-bottom: 160px; }
-      .contentLogin .titlePage { margin-top: 30px; background: #414042 url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/bg_texture_login.png") no-repeat center center; display: block; width: 100%; height: 120px; }
+      .contentLogin .titlePage { margin-top: 30px; background: #414042 url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/bg_texture_login.png") no-repeat center center; display: block; width: 100%; height: 120px; }
       .contentLogin .titlePage img { margin: 22px 0 0 80px; }
       .contentLogin .formLogin { width: 325px; background-color: #ffffff; position: relative; border-radius: 5px; box-shadow: 0 0 20px rgba(1, 1, 1, 0.3); -moz-box-shadow: 0 0 20px rgba(1, 1, 1, 0.3); -webkit-box-shadow: 0 0 20px rgba(1, 1, 1, 0.3); float: right; margin-top: -157px; margin-right: 80px; }
       .contentLogin .formLogin h4 { background-color: #c4161c; border-radius: 5px 5px 0px 0px; color: #fff; width: 100%; padding: 10px 10px 10px 20px; margin: 0; font: normal 14px "verdana", "arial", "sans-serif"; }
@@ -81,11 +81,11 @@
       .linksOut { position: absolute; width: 55%; bottom: -120px; text-align: center; font: normal 11px "verdana", "arial", "sans-serif"; }
       .linksOut a { color: #414042; text-decoration: none; }
       .linksOut a:hover { text-decoration: underline; }
-      .linksOut a.acessibility:after { content: ""; display: inline-block; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/ico_linkOut.png") no-repeat center center; width: 12px; height: 12px; margin: 0 2px 0 5px; }
+      .linksOut a.acessibility:after { content: ""; display: inline-block; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/ico_linkOut.png") no-repeat center center; width: 12px; height: 12px; margin: 0 2px 0 5px; }
 
       footer[role="contentinfo"] { clear: both; display: block; width: 90%; border-top: 1px solid #bcbec0; padding: 10px; margin: 0 auto; font: normal 10px "verdana", "arial", "sans-serif"; text-align: center; color: #414042; }
 
-      .bg-modal { display: none; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/bg-modal-ie.png") repeat center center; background: -webkit-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: -o-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: -moz-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); width: 100%; height: 100%; position: absolute; }
+      .bg-modal { display: none; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/bg-modal-ie.png") repeat center center; background: -webkit-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: -o-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: -moz-radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); background: radial-gradient(ellipse, rgba(1, 1, 1, 0.05) 30%, rgba(1, 1, 1, 0.5)); width: 100%; height: 100%; position: absolute; }
       .containerReqSistema, .perfilUsuario { background-color: #fff; padding: 20px; border: 1px solid #e6e7e8; font: normal 10px "verdana", "arial", "sans-serif"; border-radius: 5px; box-shadow: 0 0 80px rgba(1, 1, 1, 0.8); -moz-box-shadow: 0 0 80px rgba(1, 1, 1, 0.8); -webkit-box-shadow: 0 0 80px rgba(1, 1, 1, 0.8); }
       .containerReqSistema { display: none; width: 645px; height: 505px; position: absolute; top: 50%; left: 50%; margin-top: -252px; margin-left: -322px; }
 
@@ -130,11 +130,11 @@
       .perfilUsuario ul li .perfis a { display: block; height: 100%; width: 100%; text-decoration: none; font: bold 11px "verdana", "arial", "sans-serif"; color: #414042; }
       .perfilUsuario ul li .perfis a:hover { color: #fff; }
       .perfilUsuario ul li .perfis a span { padding-top: 50px; display: block; }
-      .perfilUsuario ul li .icoProfessor { background: url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/perfis/professor_target.png") no-repeat center 40%; }
-      .perfilUsuario ul li .icoAluno { background: url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/perfis/aluno_target.png") no-repeat center 40%; }
+      .perfilUsuario ul li .icoProfessor { background: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/professor_target.png") no-repeat center 40%; }
+      .perfilUsuario ul li .icoAluno { background: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/aluno_target.png") no-repeat center 40%; }
       .perfilUsuario ul li .perfis:hover, .perfilUsuario ul li .perfis:focus { background-color: #414042; transition: all 0.4s linear; -moz-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; }
-      .perfilUsuario ul li .perfis:hover .icoProfessor, .perfilUsuario ul li .perfis:focus .icoProfessor { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/perfis/professor_hover.png"); }
-      .perfilUsuario ul li .perfis:hover .icoAluno, .perfilUsuario ul li .perfis:focus .icoAluno { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/perfis/aluno_hover.png"); }
+      .perfilUsuario ul li .perfis:hover .icoProfessor, .perfilUsuario ul li .perfis:focus .icoProfessor { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/professor_hover.png"); }
+      .perfilUsuario ul li .perfis:hover .icoAluno, .perfilUsuario ul li .perfis:focus .icoAluno { background-image: url("https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/perfis/aluno_hover.png"); }
       .perfilUsuario .alert { display: none; background-color: #fcf8e3; border-color: #e8d7b5; padding: 10px; margin-top: 20px; line-height: 1.425em; font-size: 125%; }
       .perfilUsuario .alert, .perfilUsuario .alert a { color: #8a6d3b; }
       .perfilUsuario .alert a, .perfilUsuario .alert strong { font-weight: 700; }
@@ -147,7 +147,7 @@
 
     <!--[if lt IE 9]>
         <script src="html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script>window.html5 || document.write('<script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/js/libs/html5shiv.js"><\/script>')</script>
+        <script>window.html5 || document.write('<script src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/js/libs/html5shiv.js"><\/script>')</script>
     <![endif]-->
 </head>
 <body>
@@ -171,13 +171,13 @@
 <div class="wrapper" role="main">
     <header class="headerLogin" role="banner">
         <div class="logos">
-            <h1><img src="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/logoInsper.png" alt="Logo Insper" title="Insper" class="left"></h1>
-            <img src="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/NewlogoBlackboard.png" alt="Logo Blackboard" class="right">
+            <h1><img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/logoInsper.png" alt="Logo Insper" title="Insper" class="left"></h1>
+            <img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/NewlogoBlackboard.png" alt="Logo Blackboard" class="right">
         </div>
         <div class="libraryInsperLogin"></div>
     </header>
     <section class="contentLogin">
-        <div class="titlePage"><img src="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/titleForm.png" alt="Ambiente Virtual de Aprendizagem" title="Ambiente Virtual de Aprendizagem"></div>
+        <div class="titlePage"><img src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/titleForm.png" alt="Ambiente Virtual de Aprendizagem" title="Ambiente Virtual de Aprendizagem"></div>
 
         <div class="formLogin" id="loginInsper">
             <h4>Acesso ao ambiente</h4>
@@ -189,7 +189,7 @@
         </div>
 
         <div class="linksOut">
-            <a href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx" class="acessibility" target="_blank">Informa&#231;&#245;es de acessibilidade</a> | <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/requisitos-sistemas/" class="acessibility" id="requisitos" target="_blank">Requisitos do sistema</a>
+            <a href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx" class="acessibility" target="_blank">Informa&#231;&#245;es de acessibilidade</a> | <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/requisitos-sistemas/" class="acessibility" id="requisitos" target="_blank">Requisitos do sistema</a>
         </div>
     </section>
     <footer class="copyright" role="contentinfo">Copyright &#169; | Insper. Todos os Direitos Reservados</footer>
@@ -219,7 +219,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/js/main.js"></script>
+<script src="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/js/main.js"></script>
 </body>
 </html>
 

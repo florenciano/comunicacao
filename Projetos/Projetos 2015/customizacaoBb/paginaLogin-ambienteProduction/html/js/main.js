@@ -23,7 +23,7 @@ $(function(){
 	function replacementImgBanner () {
 		var numbTotalImg = 7;
 		var num = Math.ceil(Math.random() * numbTotalImg);
-		$( ".libraryInsperLogin" ).css( "background-image", "url(https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/img/campus" + num + ".jpg)" );
+		$( ".libraryInsperLogin" ).css( "background-image", "url(https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/campus" + num + ".jpg)" );
 	}
 
 	/////////////////////////////////////////////////////////////////////
