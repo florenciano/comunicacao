@@ -14,7 +14,7 @@ $(function(){
 				strokeColor: "rgba(0,180,180,0.75)",
 				highlightFill: "rgba(0,205,205,0.9)",
 				highlightStroke: "rgba(0,180,180,0.75)",
-				data: ["134","254","552","476","488","402","300","520","633","0","0","0",]
+				data: ["134","254","552","476","488","402","300","520","633","655","0","0",]
 			}
 		]
 	};
@@ -27,12 +27,12 @@ $(function(){
 
 	// configurações do gráfico
 	Chart.defaults.global = {
-		 scaleLineColor: "rgba(245,245,245,1)",
-		 scaleLineWidth: 1,
-		  scaleFontFamily: "'verdana', sans-serif",
-		  tooltipFillColor: "rgba(0,0,0,0.75)",
-		  tooltipFontFamily: "'verdana', sans-serif",
-		  animationSteps: 100
+		scaleLineColor: "rgba(245,245,245,1)",
+		scaleLineWidth: 1,
+		scaleFontFamily: "'verdana', sans-serif",
+		tooltipFillColor: "rgba(0,0,0,0.75)",
+		tooltipFontFamily: "'verdana', sans-serif",
+		animationSteps: 100
 	}
 
    /*
@@ -106,8 +106,8 @@ $(function(){
 			$(this).find( ".numbCase-topList" ).text( count );
 		});
 	}
-	countList_E();
-	countList_D();
+	setTimeout(countList_E(), 200);
+	setTimeout(countList_D(), 400);
 
 	/* 
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,9 +119,13 @@ $(function(){
 		vTotal.each( function(key, value) {
 			count += parseInt($(this).text());
 		});
-		vOne.text(count);
+		if(vOne.text(count) == NaN || vOne.text(count) == null || vOne.text(count) == undefined) {
+			vOne.text(0);
+		} else {
+			vOne.text(count);
+		}
 	}
-	sumGeral();
+	setTimeout(sumGeral(), 500);
 
 });
 

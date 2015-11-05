@@ -14,7 +14,7 @@ gerarRel.controller('topCasosMeses', ['$scope', function($scope) {
 		{ 'Julho' 	  :  300 },
 		{ 'Agosto' 	  :  520 },
 		{ 'Setembro'  :  633 },
-		{ 'Outubro'   :  0 },
+		{ 'Outubro'   :  655 },
 		{ 'Novembro'  :  0 },
 		{ 'Dezembro'  :  0 }
 	];
@@ -174,7 +174,21 @@ gerarRel.controller('topCasosMeses', ['$scope', function($scope) {
 		}
 	];
 	$scope.topCasosOut = [
-		
+		{
+			'nameCaso' : 	'A.R. Mineira: quanto vale a empresa?',
+			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ff/ff-p0005/',
+			'numbCaso' : 	'69'
+		},
+		{
+			'nameCaso' : 	'Burger King do Brasil: os desafios da expansão.',
+			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-mk/mk-p0002/',
+			'numbCaso' : 	'67'
+		},
+		{
+			'nameCaso' : 	'Zetrasoft: como melhorar o clima organizacional?',
+			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-cr/cr-p0004/',
+			'numbCaso': 	'55'
+		}
 	];
 	$scope.topCasosNov = [
 		
@@ -191,27 +205,27 @@ gerarRel.controller('top1-5', ['$scope', function($scope) {
 		{
 			'nameCaso' : 	'Cacau Show: marketing estratégico para o crescimento sustentável.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-mk/ae-p0021/',
-			'valueCaso': 	438
+			'valueCaso': 	489
 		},
 		{
 			'nameCaso' : 	'A.R. Mineira: quanto vale a empresa?',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ff/ff-p0005/',
-			'valueCaso': 	372
+			'valueCaso': 	441
 		},
 		{
 			'nameCaso' : 	'Burger King do Brasil: os desafios da expansão.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-mk/mk-p0002/',
-			'valueCaso': 	320
+			'valueCaso': 	387
 		},
 		{
 			'nameCaso' : 	'Zetrasoft: como melhorar o clima organizacional?',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-cr/cr-p0004/',
-			'valueCaso': 	316
+			'valueCaso': 	371
 		},
 		{
 			'nameCaso' : 	'Cadeados Papaiz.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-mk/mk-p0004/',
-			'valueCaso': 	232
+			'valueCaso': 	260
 		}
 	];
 }]);
@@ -222,27 +236,27 @@ gerarRel.controller('top6-10', ['$scope', function($scope) {
 		{
 			'nameCaso' : 	'Banco de Investimentos Garantia',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ae/ae-p0010/',
-			'valueCaso': 	180
+			'valueCaso': 	208
 		},
 		{
 			'nameCaso' : 	'Natura e o desenvolvimento de uma cadeia de fornecimento sustentável na Amazônia.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ae/ae-p0025/',
-			'valueCaso': 	179
+			'valueCaso': 	202
 		},
 		{
 			'nameCaso' : 	'Toddynho: Expansão com Prestígio.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-mk/mk-p0003/',
-			'valueCaso': 	171
-		},
-		{
-			'nameCaso' : 	'Sucesso e continuidade do Habibs',
-			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ae/ae-p0026/',
-			'valueCaso': 	126
+			'valueCaso': 	195
 		},
 		{
 			'nameCaso' : 	'Laboratório Stiefel Brasil: repensando o modelo de negócios.',
 			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-op/op-p0001/',
-			'valueCaso': 	122
+			'valueCaso': 	149
+		},
+		{
+			'nameCaso' : 	'Sucesso e continuidade do Habibs',
+			'linkCaso' : 	'http://www.insper.edu.br/casos/colecao-ae/ae-p0026/',
+			'valueCaso': 	143
 		}
 	];
 }]);
