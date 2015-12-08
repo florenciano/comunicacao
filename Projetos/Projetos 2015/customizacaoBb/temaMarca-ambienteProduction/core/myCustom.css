@@ -121,19 +121,6 @@ img.bannerImage {
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
 }
-/*#box_m_cont:hover {
-	height:110px;
-	background:url(images/_img/bg_manuais_hover.png) repeat-x bottom;
-	
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	
-	-webkit-transition:	all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
-}*/
-
 #box_m_texto {
 	color:#75393f;
 	font:bold 11px/15px arial, helvetica, sans-serif;
@@ -223,18 +210,6 @@ Manual Aluno
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
 }
-/*#box_ma_cont:hover {
-	height:110px;
-	background:url(images/_img/bg_manuais_hover.png) repeat-x bottom;
-	
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	
-	-webkit-transition:	all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
-}*/
 #box_ma_ico01 {
 	width:120px;
 	height:80px;
@@ -657,7 +632,6 @@ Módulo Caixinha 04
 /*********************************************************
 Módulo Caixinha 05
 *********************************************************/
-
 #box05 {
 	position: relative;
 	margin: 10px;

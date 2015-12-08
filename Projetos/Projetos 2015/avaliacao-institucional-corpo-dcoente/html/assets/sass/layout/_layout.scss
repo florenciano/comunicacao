@@ -346,7 +346,66 @@ div[role="main"] {
 // // // // // // // // // // // // // // // // // // // // // // //
 @media (min-width: 992px) {
 	div[role="main"] {
-		
+		// body...
 	}
 }
 
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PÁGINA INICIAL: ESCOLHA DO PERFIL
+// // // // // // // // // // // // // // // // // // // // // // //
+.container-index { 
+	margin-top: 5% !important; // sobrescrever a especificidade da class no bootstrap
+}
+div[role="main"] {
+	.txt-home {
+		p {
+			font-size: 125%;
+			margin: ($grid40/2) 0;
+			text-align: center;
+		}
+	}
+	.type-profile {
+		text-align: center;
+		margin-bottom: $grid40/2;
+		.itens {
+			margin: ($grid40/4) 0;
+			a {
+				display: block;
+				font-size: 125%;
+			}
+			// remove ico target '_blank'
+			.no-ico-link-index:after { display: none; }
+		}
+		.img-ico-profile {
+			display: block;
+			height: 95px; // w of img
+			width: 85px; // h of img
+			margin: 0 auto;
+		}
+	}
+}
+
+// Tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[roele="main"] {
+		.txt-home {
+			p { font-size: 150%; }
+		}
+		.type-profile {
+			.itens { margin: ($grid40/2) 0; }
+		}
+	}
+}
+
+// Desktop | large Desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media (min-width: 992px) {
+	div[role="main"] {
+		.type-profile {
+			.itens { @include make-md-column(6);}
+		}
+	}
+}
