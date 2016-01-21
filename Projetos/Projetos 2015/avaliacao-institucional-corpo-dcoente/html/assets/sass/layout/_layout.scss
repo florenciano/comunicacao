@@ -47,9 +47,10 @@ $cinza: #414042;
 // PRESET //
 // // // // // // // // // // // // // // // // // // // // // // //
 
-* {
-	@include transition(all .20s ease);
-}
+// * {
+// 	@include transition(all .20s ease);
+// }
+
 body { 
 	color: $cinza;
 	background: url("../img/crossword.png") left top repeat;

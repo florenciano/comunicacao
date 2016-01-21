@@ -144,8 +144,11 @@ $(function(){
 	    });
     };
 	
+	// M. don't like. Caesar the things which are Caesar's.
+	
 	btn_scrollAnchor(linkMenu_sd);
 	btn_scrollAnchor(linkMenu);
+	
 
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// PAGE ALL
