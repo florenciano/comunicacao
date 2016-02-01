@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+rei<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -30,44 +29,47 @@
                 <div class="breadcrumb visible-print-block">
                     DEA / Guia de Ambientação de novos docentes: ênfase em Ensino
                 </div>
-                <div class="content clearfix">
-                    <!-- menu lateral -->
-                    <div class="menu-lateral hidden-xs hidden-sm hidden-md hidden-print">
-                        <h4>Assuntos gerais</h4>
-                        <ul class="list-inline add-itens-mg">
-                            <li>
-                                <div class="ico-menu-amarelo add-itens-mg-ico">
-                                    <a href="../contratacao/" title="Da contratação à sala de aula" class="add-itens-mg-text">Da contratação à sala de aula</a>    
-                                </div>
-                                
+                <div class="menu-global clearfix hidden-print">
+                    <nav>
+                        <ul class="list-inline">
+                            <li class="col-xs-12 col-sm-4">
+                                <img src="../assets/img/ico-menu/amarelo.png" alt="ico-contratacao">
+                                <a href="../contratacao/" title="Da contratação à sala de aula">Da contratação à sala de aula</a>
                             </li>
-                            <li>
-                                <div class="ico-menu-azul add-itens-mg-ico">
-                                    <a href="../consulta-rapida/" title="Consulta rápida" class="add-itens-mg-text">Consulta rápida</a>     
-                                </div>
-                                
+                            <li class="col-xs-12 col-sm-4 active-verde">
+                                <img src="../assets/img/ico-menu/verde.png" alt="ico-operacionais">
+                                <a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer">Questões operacionais que você precisa conhecer</a>
+                            </li>
+                            <li class="col-xs-12 col-sm-4">
+                               <img src="../assets/img/ico-menu/azul.png" alt="ico-consulta">
+                                <a href="../consulta-rapida/" title="Consulta rápida">Consulta rápida</a>
                             </li>
                         </ul>
+                    </nav>
+                </div>
+                <div class="content clearfix">
+                    <div class="menu-lateral hidden-sm hidden-xs hidden-print">
                         <div class="container-menu">
-                            <h4>Conteúdo deste documento</h4>
-                            <div class="verde-programas container-menu-ico">
-                                <h5 id="iten0" class="container-menu-title"><a href="#programas" title="Programas">Programas</a></h5>    
-                            </div>
+                            <h5 class="verde-programas active" id="iten0"><a href="#programas" title="Programas">Programas</a></h5>
                             <ul>
                                 <li><a href="#graduacao" title="Graduação">Graduação</a></li>
                                 <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
                                 <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
                             </ul>
                         </div>
+                        <ul class="list-inline add-itens-mg">
+                            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
+                            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+                        </ul>
                     </div>
                     <!-- article beging here -->
-                    <div class="content-text col-lg-8 col-lg-offset-4 clearfix">
+                    <div class="content-text col-md-8 col-md-offset-4 clearfix">
                         <div class="button-menu-lateral hidden-print">
                             <button type="button" class="" id="btnMenu">
                                 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <h1 id="first">Questões operacionais que você precisa conhecer</h1>
+                        <h1 class="first">Questões operacionais que você precisa conhecer</h1>
                         <p>Conheça detalhes do dia a dia operacional e procedimentos específicos de cada programa ou curso.</p>
                         
                         <!-- graduacao -->
@@ -223,48 +225,27 @@
     </div>
     <!-- menu-lateral small device-->
     <div class="menu-lateral-sd menu-l-sd-verde hidden-print">
-        <h4>Assuntos gerais</h4>
-        <ul class="list-inline add-itens-mg-sd">
-            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
-            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
-        </ul>
-        <h4>Conteúdo deste documento</h4>
+        <p class="place">Você esta em:</p>
+        <h4>&nbsp;</h4>
         <h5><a href="#programas" title="Programas">Programas</a></h5>
         <ul class="list-unstyled">
             <li><a href="#graduacao" title="Graduação">Graduação</a></li>
             <li><a href="#pos-graduacao" title="Pós-Graduação">Pós-Graduação</a></li>
             <li><a href="#educacao-executiva" title="Educação Executiva">Educação Executiva</a></li>
         </ul>
+        <ul class="list-inline add-itens-mg-sd">
+            <li><a href="../contratacao/" title="Da contratação à sala de aula" class="ico-menu-amarelo"><span>Da contratação à sala de aula</span></a></li>
+            <li class=""><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+        </ul>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="contate col-md-offset-3 col-md-6 col-sm-12">
-                <h5 class="contate-title">Contato</h5>
-                <p>Para maiores informações entre em contato com o DEA</p>
-                <div class="contate-link">
-                    <a href="mailto:dea@insper.edu.br?subject=Contato - Guia de ambienta&ccedil;&atilde;o" class="contate-link_btn">Enviar e-mail</a>
-                </div>
-            </div>
-            <div class="logo col-md-3 col-sm-12">
-                <a href="http://www.insper.edu.br/" title="Insper: Ensino Superior em Negócios, Direito e Engenharia"><img src="../assets/img/header/logo-insper-footer.png" alt="Insper | Guia de ambientação"></a>
-                <address>
-                    Rua Quatá, 300 - Vila Olímpia<br>
-                    São Paulo/SP - Brasil<br>
-                    CEP: 04546-042<br>
-                    Tel: 11 4504-2400
-                </address>
-            </div>
-        </div>
-        <div class="all-right">
-            <p class="all-right-text">Todos os direitos reservados</p>
-        </div>
-    </footer>
     <div class="bg-menu-lateral-sd"></div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
+    <!-- plugins -->
     <!-- code project -->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/_search2.js"></script>
 </body>
 </html>

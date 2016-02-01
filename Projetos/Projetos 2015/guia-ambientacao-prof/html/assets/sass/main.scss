@@ -2,4 +2,8 @@
 @import "_bootstrap.scss";
 
 // import layout
-@import "layout/layout";
+@import "layout/_preset.scss";
+@import "layout/_mobile.scss";
+@import "layout/_tablet.scss";
+@import "layout/_desktop.scss";
+@import "layout/_print.scss";

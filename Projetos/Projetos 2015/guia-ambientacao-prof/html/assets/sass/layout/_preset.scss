@@ -1,0 +1,79 @@
+// // // // // // // // // // // // // // // // // // // // // //
+// PRESETS
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// VARIAVEIS
+// // // // // // // // // // // // // // // // // // // // // // //
+// 	grid
+$grid30: 1.875em; // 30 / 16 = 1,875
+$grid40: 2.5em; // 40 / 16
+$f-grid30: 30px;
+$f-grid30: 40px;
+// color
+@import "compass/css3";
+
+$amarelo: #f1c40f;
+$verde: #30bc9c;
+$azul: #34485d; //#3a99d9
+$vermelho : #ea0863; // #9b3336
+$vermelhoEscuro: #82292C;
+$cinza: #414042;
+
+// FUNCTION | MIXIN | RESET
+// // // // // // // // // // // // // // // // // // // // // // //
+.content { margin-top: $grid40; position: relative; }
+
+// inserindo ícone de 'target_blank'
+@media screen {
+	a[href^="http://"]:after,
+	a[href^="https://"]:after {
+		content: "";
+		width: .875em;
+		height: .875em;
+		display: inline-block;
+		background: url("../img/ui/link-blank.png") center center no-repeat;
+	 	margin-left: .12em;
+	 	background-size: 100%
+	}
+	.header a[href^="http://"]:after,
+	.header a[href^="https://"]:after {
+		background: none;
+		width: 0;
+		height: 0;
+	}
+	.footer a[href^="http://"]:after,
+	.footer a[href^="https://"]:after {
+		background: none;
+		width: 0;
+		height: 0;
+	}
+}
+// desabilitar a seleção do elemento
+@mixin unselectable($value) {
+	-moz-user-select: $value;
+	-webkit-user-select: $value;
+	-ms-user-select: $value;
+	user-select: $value;
+}
+// efeito de transição
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+	// insert transitin in all links
+	a {
+		@include transition(all .20s ease);
+	}
+
+// sprite icons - menu lateral
+@import "ico-menuzinho/amarelo/*.png";
+@include all-amarelo-sprites;
+
+@import "ico-menuzinho/verde/*.png";
+@include all-verde-sprites;
+
+@import "ico-menuzinho/azul/*.png";
+@include all-azul-sprites;

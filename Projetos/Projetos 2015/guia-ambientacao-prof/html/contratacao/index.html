@@ -6,59 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guia de ambientação - Portal do Professor</title>
     <link href="../assets/css/main.css" rel="stylesheet">
-    <link rel="favicon" href="favicon.png" size="16x16">
+    <link rel="icon" href="../favicon.png">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body id="contratacao">
-    <div class="container">
-
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo col-md-3 col-sm-12">
+                  <a href="http://www.insper.edu.br/" title="Insper: Ensino Superior em Negócios, Direito e Engenharia"><img src="../assets/img/header/logo-insper.png" alt="Insper | Guia de ambientação"></a>      
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <h1 class="title-project">Guia de ambientação<span> de novos professores</span></h1>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="contratacao">
         <div class="row">
             <div id="main" role="main">
                 <div class="breadcrumb visible-print-block">
                     DEA / Guia de Ambientação de novos docentes: ênfase em Ensino
                 </div>
-                <div class="menu-global clearfix hidden-print">
-                    <nav>
-                        <ul class="list-inline">
-                            <li class="col-xs-12 col-sm-4 active-amarelo">
-                                <img src="../assets/img/ico-menu/amarelo.png" alt="ico-contratacao">
-                                <a href="../contratacao/" title="Da contratação à sala de aula">Da contratação à sala de aula</a>
+                <div class="content clearfix">
+                    <!-- menu lateral -->
+                    <div class="menu-lateral hidden-xs hidden-sm hidden-md hidden-print">
+                        <h4>Assuntos gerais</h4>
+                        <ul class="list-inline add-itens-mg">
+                            <li>
+                                <div class="ico-menu-verde add-itens-mg-ico">
+                                    <a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="add-itens-mg-text add-itens-mg-text-verde">Questões operacionais que você precisa conhecer</a>    
+                                </div>
                             </li>
-                            <li class="col-xs-12 col-sm-4">
-                                <img src="../assets/img/ico-menu/verde.png" alt="ico-operacionais">
-                                <a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer">Questões operacionais que você precisa conhecer</a>
-                            </li>
-                            <li class="col-xs-12 col-sm-4">
-                               <img src="../assets/img/ico-menu/azul.png" alt="ico-consulta">
-                                <a href="../consulta-rapida/" title="Consulta rápida">Consulta rápida</a>
+                            <li>
+                                <div class="ico-menu-azul add-itens-mg-ico">
+                                    <a href="../consulta-rapida/" title="Consulta rápida" class="add-itens-mg-text">Consulta rápida</a>     
+                                </div>
+                                
                             </li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="content clearfix">
-                    <div class="menu-lateral hidden-sm hidden-xs hidden-print">
                         <div class="container-menu">
-                            <h5 class="amarelo-admissao" id="iten0"><span>Admissão, benefícios e afins (CLT)</span></h5>
+                            <h4>Conteúdo deste documento</h4>
+                            <div class="amarelo-admissao container-menu-ico">
+                                <h5 id="iten0" class="container-menu-title"><a href="#admissao" title="Admissão, benefícios e afins (CLT)">Admissão, benefícios e afins (CLT)</a></h5>    
+                            </div>
                             <ul>
                                 <li><a href="#admissao-pa" title="Processo admissional">Processo admissional</a></li>
                                 <li><a href="#admissao-da" title="Dados de acesso">Dados de acesso</a></li>
                                 <li><a href="#admissao-pfb" title="Pagamentos, férias e benefícios">Pagamentos, férias e benefícios</a></li>
                             </ul>
-                            <h5 class="amarelo-gestao-aprendizagem" id="iten1"><span>Gestão da Aprendizagem</span></h5>
+                            <div class="amarelo-gestao-aprendizagem container-menu-ico">
+                                <h5 class="container-menu-title" id="iten1"><a href="#gestao-aprendizagem" title="Gestão da Aprendizagem">Gestão da Aprendizagem</a></h5>
+                            </div>
                             <ul>
                                 <li><a href="#gestao-aprendizagem-paca" title="Princípio do Aprendizado Centrado no Aluno">Princípio do Aprendizado Centrado no Aluno</a></li>
                                 <li><a href="#gestao-aprendizagem-dcd" title="Desenvolvimento do corpo Docente">Desenvolvimento do corpo Docente</a></li>
                             </ul>
-                            <h5 class="amarelo-recurso" id="iten2"><span>Recursos didáticos e Tecnologias</span></h5>
+                            <div class="amarelo-recurso container-menu-ico">
+                                <h5 class="container-menu-title" id="iten2"><a href="#recurso-tecnologia-aprendizagem" title="Recursos didáticos e Tecnologias">Recursos didáticos e Tecnologias</a></h5>    
+                            </div>
                             <ul>
                                 <li><a href="#gestao-aprendizagem-esa" title="Estrutura das salas de aula">Estrutura das salas de aula</a></li>
                                 <li><a href="#recurso-tecnologia-aprendizagem-rta" title="Recursos e tecnologias de aprendizagem">Recursos e tecnologias de aprendizagem</a></li>
                                 <li><a href="#gestao-aprendizagem-bdab" title="Biblioteca Telles">Biblioteca Telles</a></li>
                             </ul>
-                            <h5 class="amarelo-ajudar" id="iten3"><span>Quem pode me ajudar?</span></h5>
+                            <div class="amarelo-ajudar container-menu-ico">
+                                <h5 class="container-menu-title" id="iten3"><a href="#quem-pode-me-ajudar" title="Quem pode me ajudar?">Quem pode me ajudar?</a></h5>    
+                            </div>
                             <ul>
                                 <li><a href="#quem-pode-me-ajudar-at" title="Atendimento ao Professor">Atendimento ao Professor</a></li>
                                 <li><a href="#quem-pode-me-ajudar-aa" title="Apoios Acadêmicos">Apoios Acadêmicos</a></li>
@@ -68,26 +83,24 @@
                                 <li><a href="#quem-pode-me-ajudar-nid" title="NID/SAVI">NID/SAVI</a></li>
                                 <li><a href="#quem-pode-me-ajudar-dp" title="Departamento Pessoal">Departamento Pessoal</a></li>
                             </ul>
-                            <h5 class="amarelo-gestao-corpo-docente" id="iten4"><span>Gestão Institucional do Corpo Docente</span></h5>
+                            <div class="amarelo-gestao-corpo-docente container-menu-ico">
+                                <h5 class="container-menu-title" id="iten4"><a href="#gestao-corpo-docente" title="Gestão Institucional do Corpo Docente">Gestão Institucional do Corpo Docente</a></h5>    
+                            </div>
                             <ul>
                                 <li><a href="#gestao-corpo-docente-v" title="Vínculo">Vínculo</a></li>
                                 <li><a href="#gestao-corpo-docente-qe" title="Qualificação e Engajamento">Qualificação e Engajamento</a></li>
                                 <li><a href="#gestao-corpo-docente-ac" title="Atualização do currículo">Atualização do currículo</a></li>
                             </ul>
                         </div>
-                        <ul class="list-inline add-itens-mg">
-                            <li><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
-                            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
-                        </ul>
                     </div>
                     <!-- article beging here -->
-                    <div class="content-text col-md-8 col-md-offset-4 clearfix">
+                    <div class="content-text col-lg-8 col-lg-offset-4 clearfix">
                         <div class="button-menu-lateral hidden-print">
                             <button type="button" class="" id="btnMenu">
                                 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <h1 class="first">Da contratação à sala de aula</h1>
+                        <h1 id="first">Da contratação à sala de aula</h1>
                         <p>Um guia rápido para você conhecer as principais esferas da prática docente no Insper.</p>
                         <!-- admissao -->
                         <div data-name="a">
@@ -96,7 +109,7 @@
                             <div class="well well-caution">
                                 <p><strong>Atenção!</strong></p>
                                 <p>Os docentes contratados fora do regime CLT têm procedimentos diferenciados de contratação e pagamento.</p>
-                                <p class="last-p">Consulte a <a href="../assets/pdf/circular-autonomos-2015.pdf" title="Circular Autonomos 2015" rel="help">Circular</a> que trata do processo de pagamento para prestadores de serviços autônomos.</p>
+                                <p class="last-p">Consulte a <a href="http://arquivos.insper.edu.br/portaldoprofessor/guia-de-ambientacao/assets/pdf/circular-autonomos-2015.pdf" title="Circular Autonomos 2015" rel="help" target="_blank">Circular</a> que trata do processo de pagamento para prestadores de serviços autônomos.</p>
                             </div>
                             <div class="well well-contratacao">
                                 <p>Em caso de dúvidas sobre documentação, data de pagamento etc., entre em contato com a área responsável pela contratação ou com o Departamento Pessoal:</p>
@@ -104,7 +117,7 @@
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dp@insper.edu.br">dp@insper.edu.br</a></li>
                                     <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2677/2682/2685</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, próximo aos elevadores</li>
-                                    <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
+                                    <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 9h às 19h.</li>
                                 </ul>
                             </div>
                             <h3 id="admissao-pa">Processo admissional</h3>
@@ -135,13 +148,12 @@
                                 <li>Informações relacionadas à área de Recursos Humanos como dados cadastrais, dados de admissão, informe de rendimentos e demonstrativo de pagamento estão disponíveis no <a href="https://portalrm.insper.edu.br/corpore.net/Login.aspx" title="Portal Pessoas - Insper" target="_blank">Portal de Pessoas</a> (utilize o navegador Internet Explorer). Para conhecer mais sobre o portal, leia as <a href="http://corporativo.insper.edu.br/wp-content/uploads/2012/11/Manual-do-Professor-Portal-de-Pessoas_vf_novembro20121.pdf" title="Orientações gerais do uso do Portal Pessoas" rel="help" target="_blank">orientações</a>.</li>
                             </ul>
                             <div class="well well-contratacao">
-                                <p>Para mais informações sobre remuneração e benefícios, acesse o <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/" title="Manual do Corpo Docente">Manual do Corpo Docente</a>.</p>
                                 <p>Em caso de dúvidas sobre o processo de admissão, benefícios e outros assuntos relacionados a Recursos Humanos, entre em contato com o Departamento Pessoal:</p>
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dp@insper.edu.br">dp@insper.edu.br</a></li>
                                     <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2677/2682/2685</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, próximo aos elevadores</li>
-                                    <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
+                                    <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 9h às 19h.</li>
                                 </ul>
                             </div>
                         </div>
@@ -186,7 +198,7 @@
                                 <p>Em caso de dúvidas sobre nossa visão educacional, entre em contato com o DEA – Desenvolvimento de Ensino e Aprendizagem:</p>
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2549/2762</li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2401</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.</li>
                                 </ul>
@@ -194,6 +206,9 @@
                             <h3 id="gestao-aprendizagem-dcd">Desenvolvimento do corpo docente</h3>
                             <p>O Insper possui um calendário permanente de iniciativas voltadas ao desenvolvimento pedagógico dos seus professores, cujas pautas são definidas a partir de necessidades identificadas nos sucessivos ciclos de gestão da aprendizagem junto às coordenações dos programas.</p>
                             <p>Dentre essas iniciativas, destacamos o Curso de Formação e Aperfeiçoamento de Docentes. Em formato híbrido (parte presencial, parte a distância), o curso é composto por módulos independentes com o objetivo de fortalecer o princípio do Aprendizado Centrado no Aluno em diferentes práticas pedagógicas. Todos os módulos são fortemente pautados no trabalho colaborativo e na troca de experiência entre os docentes participantes.</p>
+                            <div class="well well-contratacao">
+                                <p>Consulte o <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/calendario-formacao-docentes/index.html" title="Veja as principais iniciativas de formação e aperfeiçoamento oferecidas no ano" target="_blank">calendário</a> de Formação e Aperfeiçoamento do Corpo Docente e confira os principais eventos e cursos disponíveis. Algumas iniciativas são comuns a todo o corpo docente, outras são específicas de cada programa.</p>
+                            </div>
                             <p>Além de oferecer workshops, cursos e palestras, constantemente são promovidas ações de desenvolvimento do corpo docente por meio de instrumentos específicos para aprimorar a dinâmica da sala de aula. Dentre os instrumentos, destacam-se:</p>
                             <ul>
                                 <li><strong>VEP</strong>: para capturar o alinhamento das práticas pedagógicas da sala de aula com a visão educacional centrada no aluno, o Insper oferece ao professor o programa de Observação e Feedback de Aulas por meio do instrumento <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/wp-content/uploads/2013/08/Anexo-22-VEP-Vis%C3%A3o-Educacional-na-Pr%C3%A1tica.pdf" title="Conheça um pouco mais do VEP" rel="help" target="_blank">VEP</a>.</li>
@@ -201,12 +216,11 @@
                                 <li><strong>Programa de Mentoria</strong>: consiste em professores referências em didática (mentores) assistirem aulas de outros professores (mentorados), fornecendo feedback estruturado, pautado em um plano de ação.</li>
                                 <li><strong>Avaliação dos Alunos</strong>: no final do período letivo e, em alguns programas, também no meio do período, os alunos fazem uma avaliação de seus professores. Essa <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=146" target="_blank">avaliação de professores</a> engloba as seguintes dimensões: ensino; aprendizado centrado no aluno; aspectos operacionais; avaliação e feedback; e aspectos gerais.</li>
                             </ul>
-                            <p>Consulte o <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/calendario-formacao-docentes/index.html" title="Veja as principais iniciativas de formação e aperfeiçoamento oferecidas no ano" target="_blank">calendário</a> de Formação e Aperfeiçoamento do Corpo Docente e confira os principais eventos e cursos disponíveis. Algumas iniciativas são comuns a todo o corpo docente, outras são específicas de cada programa.</p>
                             <div class="well well-contratacao">
                                 <p>Para conhecer melhor as diferentes iniciativas de desenvolvimento, entre em contato com o DEA – Desenvolvimento de Ensino e Aprendizagem ou fale diretamente com seu coordenador.</p>
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2549/2672</li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2762</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.</li>
                                 </ul>
@@ -218,8 +232,14 @@
                             <h2 id="recurso-tecnologia-aprendizagem">Recursos didáticos e tecnologias</h2>
                             <p>Da infraestrutura das salas de aula, passando pelos recursos didáticos que subsidiam o processo de ensino e aprendizagem até o acervo e serviços da Biblioteca Telles, o Insper conta com uma série de iniciativas para apoiar o professor em sua prática docente. Conheça as principais.</p>
                             <h3 id="gestao-aprendizagem-esa">Estrutura das salas de aula</h3>
-                            <p>Todas as salas de aula são equipadas com notebook, telão, projetor, DVD/Blue-Ray Player, caixas de som e microfones. Algumas salas também possuem recursos automatizados para controlar os equipamentos.</p>
-                            <p>Somada à infraestrutura fixa das salas de aula, existe também o recurso de <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/" title="Conheça os que são os votadores eletrônicos" target="_blank">votadores eletrônicos</a> (clickers). Por meio de respostas simultâneas, o professor verifica o nível de compreensão dos alunos em tempo real, podendo adaptar a dinâmica da aula de acordo com o ritmo da turma, além de comparar o desempenho dos alunos ao longo das aulas, uma vez que os resultados das votações são armazenados.</p>
+                            <p>Todas as salas de aula são equipadas com computador, telão, projetor, DVD/Blu-Ray, sistema de som, microfone <em>headset</em>, apresentador de slides e lousas deslizantes. As salas anfiteatro também possuem lousas deslizantes elétricas e integração dos recursos de áudio e vídeo por meio de automação, a partir de um painel sensível ao toque.</p>
+                            <p>Somada à infraestrutura fixa das salas de aula, os seguintes recursos podem ser solicitados pontualmente:</p>
+                            <ul>
+                                <li>Visualizador/câmera de documentos: Permite exibir qualquer objeto/documento no sistema de projeção da sala de aula.</li>
+                                <li>Gravação de aulas: Uma câmera de vídeo (<em>Handycam</em>) e tripé são disponibilizados para que o próprio professor/assistente grave aulas, dinâmicas, atividades etc. Transmissão ao vivo: O Insper possui um canal na plataforma <a href="http://livestream.com/insper" target="_blank"><em>Livestream</em></a> para transmissão ao vivo de aulas e eventos a público externo.</li>
+                                <li>Videoconferência: Permite a comunicação com outras universidades, palestrantes etc. por meio de videoconferência IP ou Skype.</li>
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/" target="_blank">Votadores eletrônicos</a> (clickers): Por meio de respostas simultâneas, o professor verifica o nível de compreensão dos alunos em tempo real, podendo adaptar a dinâmica da aula de acordo com o ritmo da turma, além de comparar o desempenho dos alunos ao longo das aulas, uma vez que os resultados das votações são armazenados.</li>
+                            </ul>
                             <div class="well well-contratacao">
                                 <p>Para conhecer os recursos disponíveis em sala de aula ou tirar dúvidas, entre em contato com a equipe de Service Desk.</p>
                                 <ul class="list-unstyled">
@@ -244,25 +264,27 @@
                                     <p>Para conhecer melhor os recursos que apoiam a prática em sala de aula ou tirar dúvidas, entre em contato com a equipe DEA – Desenvolvimento de Ensino e Aprendizagem.</p>
                                     <ul class="list-unstyled">
                                         <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></li>
-                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2731/2733</li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2736</li>
                                         <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.</li>
                                     </ul>
                                 </div>
                             </div>
                             <h3 id="gestao-aprendizagem-bdab">Biblioteca Telles</h3>
-                            <p>A Biblioteca Telles é especializada em economia, negócios, direito, engenharia e áreas correlatas. Direcionada a serviços, tem como grande diferencial o atendimento personalizado.</p>
+                             <p>A Biblioteca Telles é especializada em economia, negócios, direito, engenharia e áreas correlatas. Direcionada a serviços, tem como grande diferencial o atendimento personalizado.</p>
                             <p>Oferece aos seus usuários um acervo de mais de 40 mil obras (entre elas revistas, DVD’s e livros), acesso a mais de 150 bases de dados com milhares de informações de empresas, setores, mercado financeiro, indicadores de países e macroeconômicos, além de mais de 70 mil títulos de revistas. Grande parte desse conteúdo pode ser acessado fora do <em>campus</em>.</p>
+                            <p>Dentre os serviços da Biblioteca Telles destacam-se:</p>
                             <ul>
-                                <li>Disponibilização de materiais para consulta, empréstimo e download. Inclusive, é possível consultar online o <a href="http://pergamum.insper.edu.br/biblioteca/index.php?word=&amp;x=19&amp;y=17" target="_blank">acervo físico</a>, as <a href="http://www.insper.edu.br/biblioteca-telles/recursos-de-busca/" target="_blank">bases de dados</a> a <a href="http://atoz.ebsco.com/Titles/SearchResults/8503?Find=**&amp;GetResourcesBy=TitleNameSearch&amp;x=15&amp;y=19" target="_blank">lista de Revistas disponíveis</a>, bem como fazer <a href="https://pergamum.insper.edu.br/biblioteca_s/php/login_usu.php?flag=index.php" target="_blank">reservas e renovações</a>.</li>
+                                <li>Disponibilização de materiais para consulta, empréstimo e download. É possível consultar online o <a href="http://pergamum.insper.edu.br/biblioteca/index.php?word=&amp;x=19&amp;y=17" target="_blank">acervo físico</a>, as <a href="http://www.insper.edu.br/biblioteca-telles/recursos-de-busca/" target="_blank">bases de dados</a> a <a href="http://search.ebscohost.com/login.aspx?authtype=ip,url,uid&profile=pfi" target="_blank">lista de Revistas disponíveis</a>, bem como fazer <a href="https://pergamum.insper.edu.br/biblioteca_s/php/login_usu.php?flag=index.php" target="_blank">reservas e renovações</a>.</li>
                                 <li>Serviço de orientação à pesquisa com uma equipe de bibliotecários especializados que orientam quanto à busca de informações, auxiliando na escolha de fontes apropriadas para o desenvolvimento de trabalhos e pesquisas. Veja a <a href="http://www.insper.edu.br/biblioteca-telles/elaboracao-de-trabalhos-academicos/" title="Portal Biblioteca Telles" target="_blank">página de elaboração de trabalhos</a>.</li>
-                                <li>Suporte à conscientização de plágios por meio de diversas ações, dentre elas a disponibilização de uma <a href="http://www.insper.edu.br/biblioteca-telles/elaboracao-de-trabalhos-academicos/redigindo-trabalhos/plagio/" title="Cartilha de plágio" target="_blank">cartilha</a> baseada nas melhores práticas de bibliotecas no Brasil e exterior e casos já julgados pelos Comitês de Ética para a escola.</li>
+                                <li>Suporte à conscientização sobre plágio por meio de diversas ações, dentre elas a disponibilização de uma <a href="http://www.insper.edu.br/biblioteca-telles/elaboracao-de-trabalhos-academicos/redigindo-trabalhos/plagio/" title="Cartilha de plágio" target="_blank">cartilha</a> baseada nas melhores práticas de bibliotecas no Brasil e exterior e casos já julgados pelos Comitês de Ética para a escola.</li>
                             </ul>
                             <div class="well well-contratacao">
                                 <p>Explore a <a href="http://www.insper.edu.br/biblioteca-telles/" title="Biblioteca Telles" target="_blank">página da Biblioteca</a> e conheça em detalhes todos os produtos e serviços disponíveis.</p>
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:biblioteca@insper.edu.br">biblioteca@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2400</li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2360</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>Andar térreo, ao lado do Atendimento ao Aluno e 1º andar</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.<br>Áreas de estudo: de segunda a sexta-feira, das 7h às 22h45 e sábado, das 8h às 17h.</li>
                                 </ul>
                             </div>
@@ -288,7 +310,7 @@
                             <div class="well well-contratacao">
                                 <p>Em caso de dúvida sobre os itens acima, entre em contato com a área:</p>
                                 <ul class="list-unstyled">
-                                    <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:atendimentoprofessor@insper.edu.br" class="small-txt">atendimentoprofessor@insper.edu.br</a></li>
+                                    <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:atendimentoprofessor@insper.edu.br">atendimentoprofessor@insper.edu.br</a></li>
                                     <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2347</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>7º andar, Sala Engenheiro Tufic Oadi Saddi (Lounge dos Professores)</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 7h às 16h.</li>
@@ -321,53 +343,57 @@
                                     <li>Subsidiar a análise gerencial de dados dos alunos por meio do acompanhamento de vários indicadores que dão um panorama geral do andamento da pós-graduação lato sensu. Os dados são analisados pela Coordenação Acadêmica e pelo Comitê Acadêmico da Pós Graduação Lato Sensu, à luz da missão da escola; a partir disso, recomendações são feitas à Coordenação Acadêmica da Pós-Graduação Lato Sensu.</li>
                                     <li>Alocar os Assistentes da Pós Graduação Lato Sensu (APGs) para acompanhar determinadas aulas/disciplinas.</li>
                                 </ul>
-                                <div class="container-h5">
-                                    <h5>Assistentes da Pós Graduação Lato Sensu (APGs)</h5>
-                                    <p>Dentre as principais atividades dos APGs estão:</p>
-                                    <ul>
-                                        <li>Acompanhar a infraestrutura e operacionalização das atividades dos programas, preparação de documentos importantes para o início dos programas – conferência de book de alunos, planilha de acompanhamento de frequência, plano de aulas dos professores, entre outros.</li>
-                                        <li>Analisar e dar andamento às solicitações dos professores, alunos, apoio e coordenação dos programas.</li>
-                                        <li>Coletar dados, por meio da ferramenta <a href="#">VEP (Visão Educacional na Prática)</a>, para auxiliar no processo de gestão de aprendizagem.</li>
-                                    </ul>
-                                </div>
+                                <p>Para auxiliar na operação, os programas contam com uma equipe de Assistentes da Pós Graduação Lato Sensu (APGs). Dentre as principais atividades dos APGs estão:</p>
+                                <ul>
+                                    <li>Acompanhar a infraestrutura e operacionalização das atividades dos programas, preparação de documentos importantes para o início dos programas – conferência de book de alunos, planilha de acompanhamento de frequência, plano de aulas dos professores, entre outros.</li>
+                                    <li>Analisar e dar andamento às solicitações dos professores, alunos, apoio e coordenação dos programas.</li>
+                                    <li>Coletar dados, por meio da ferramenta <a href="#gestao-aprendizagem-dcd">VEP (Visão Educacional na Prática)</a>, para auxiliar no processo de gestão de aprendizagem.</li>
+                                </ul>
                                 <div class="well well-contratacao">
-                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="../questoes-operacionais/#pos-graduacao" title="Procedimentos da Pós Graduação Lato Sensu">PGLS</a>, entre em contato com a área:</p>
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="contratacao/#pos-graduacao" title="Procedimentos da Pós Graduação Lato Sensu">PGLS</a>, entre em contato com a área:</p>
                                     <ul class="list-unstyled">
-                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:apoioacadposlatosensu@insper.edu.br" class="small-txt-2">apoioacadposlatosensu@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:apoioacadposlatosensu@insper.edu.br" class="">apoioacadposlatosensu@insper.edu.br</a></li>
                                         <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2704</li>
                                         <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 14h às 20h.</li>
                                     </ul>
                                 </div>
                                 <h4>Apoio Pós-Graduação Stricto Sensu</h4>
-                                <p>É a área de suporte às coordenações dos Mestrados em Administração, Mestrado em Economia e também do Doutorado. Além de coordenar processos acadêmicos periódicos, também orienta professores e alunos em questões operacionais e comportamentais, a fim de garantir o tratamento institucional dado a essas questões.</p>
+                                <p>É responsável por garantir a alocação eficiente dos recursos a serviço do ensino e a consistência da plataforma acadêmica, para que os cursos sejam entregues no nível almejado de qualidade. Dentre suas principais atividades estão:</p>
+                                <ul>
+                                    <li>Planejar, conduzir e controlar/monitorar os processos acadêmicos periódicos dos cursos de Mestrado em Administração, Mestrado em Economia</li>
+                                    <li>Interagir com os docentes na coleta de informações que viabilizam a realização dos processos acadêmicos em formato e prazos adequados.</li>
+                                    <li>Interagir com os alunos na orientação acerca dos procedimentos e regras acadêmicos da escola, de modo a atender à regulação educacional e às práticas organizacionais que apoiam o bom desempenho acadêmico.</li>
+                                    <li>Subsidiar a análise gerencial de dados dos alunos por meio do acompanhamento de vários indicadores que dão um panorama geral do andamento da pós-graduação stricto sensu. Os dados são analisados pela Coordenação Acadêmica e pelo Comitê Acadêmico da Pós Graduação Stricto Sensu.</li>
+                                </ul>
                                 <div class="well well-contratacao">
-                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="../questoes-operacionais/#programas-pgss" title="Procedimentos Pós Graduação Stricto Sensu">PGSS</a>, entre em contato com a área:</p>
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="?page_id=1596/#programas-pgss" title="Procedimentos Pós Graduação Stricto Sensu">PGSS</a>, entre em contato com a área:</p>
                                     <ul class="list-unstyled">
-                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:apoioacademicomestrado@insper.edu.br" class="small-txt-2">apoioacademicomestrado@insper.edu.br </a></li>
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:apoioacademicomestrado@insper.edu.br" class="">apoioacademicomestrado@insper.edu.br </a></li>
                                         <li><span class="glyphicon glyphicon-earphone"></span>4504-2711</li>
                                         <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 17h.</li>
                                     </ul>
                                 </div>
                                 <h4>Apoio Educação Executiva Programas Abertos</h4>
-                                <p>A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</p>
+                                <p>A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos dos programas.</p>
                                 <div class="well well-contratacao">
-                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="../questoes-operacionais/#educacao-executiva" title="Procedimentos da Educação Executiva - programas abertos">Educação Executiva – Programas Abertos</a>, entre em contato com a área:</p>
+                                    <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="?page_id=1596/#educacao-executiva" title="Procedimentos da Educação Executiva - programas abertos">Educação Executiva – Programas Abertos</a>, entre em contato com a área:</p>
                                     <ul class="list-unstyled">
-                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:OperacionalCurtaDuracao@insper.edu.br" class="small-txt-2">OperacionalCurtaDuracao@insper.edu.br</a></li>
+                                        <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:OperacionalCurtaDuracao@insper.edu.br" class="">OperacionalCurtaDuracao@insper.edu.br</a></li>
                                         <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2721</li>
                                         <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 11h às 20h.</li>
                                     </ul>
                                 </div>
                                 <h4>Apoio Educação Executiva Programas Customizados</h4>
-                                <p>A área é responsável pelo planejamento, condução, controle e monitoramento dos processos acadêmicos periódicos do programa.</p>
+                                <p>A área é responsável por organizar e administrar os programas de Educação Executiva customizados, abrangendo operação, normas e a realização dos programas.</p>
+                                <p>Para auxiliar docentes, alunos e coordenação acadêmica, os programas customizados contam com os Assistentes da Educação Executiva (AEEs). Eles atuam em sala de aula na organização e controle das operações dos programas.</p>
                                 <div class="well well-contratacao">
                                     <p>Em caso de dúvida sobre os procedimentos operacionais da <a href="#" title="Procedimentos Educação Executiva - programas customizados">Educação Executiva - Programas Customizados</a>, entre em contato com a área:</p>
                                     <ul class="list-unstyled">
                                         <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:Operacional_Corp@insper.edu.br" class="small-txt">Operacional_Corp@insper.edu.br</a></li>
-                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2643</li>
+                                        <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2628/2705/2643</li>
                                         <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                         <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 18h.</li>
                                     </ul>
@@ -411,7 +437,7 @@
                             </div>
                             <div class="well well-caution">
                                 <p><strong>Atenção!</strong></p>
-                                <p>A impressão de materiais didáticos pode ser solicitada diretamente ao <a href="#quem-pode-me-ajudar-at">Atendimento ao Professor</a> ou, em caso de programas da Educação Executiva, aos apoios dos programas <a href="#quem-pode-me-ajudar-aa-apoio-eepa">Abertos</a> e <a href="#quem-pode-me-ajudar-aa-apoio-eepc">Customizados</a>. </p>
+                                <p>A impressão de materiais didáticos pode ser solicitada diretamente ao <a href="#quem-pode-me-ajudar-at">Atendimento ao Professor</a> ou, em caso de programas da Educação Executiva, aos apoios dos programas <a href="#quem-pode-me-ajudar-aa-apoio-eepa">Abertos</a> e <a href="#quem-pode-me-ajudar-aa-apoio-eepc">Customizados</a>.</p>
                             </div>
                             <h3 id="quem-pode-me-ajudar-dea">DEA – Desenvolvimento de Ensino e Aprendizagem</h3>
                             <p>O propósito do DEA é apoiar o aprimoramento contínuo do aprendizado por meio de ações que consolidem a visão educacional do Insper.</p>
@@ -426,7 +452,7 @@
                                 <p>Saiba mais sobre o papel do DEA e suas iniciativas no <a href="http://www.insper.edu.br/portaldoprofessor/manual-docente/?page_id=112" title="Manual do Corpor Docente" target="_blank">Manual do Corpo Docente</a>.</p>
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dea@insper.edu.br">dea@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2549/2672</li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2401</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 7h às 22h e sábado, das 8h às 17h.</li>
                                 </ul>
@@ -461,8 +487,8 @@
                             <div class="well well-contratacao">
                                 <ul class="list-unstyled">
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:dp@insper.edu.br">dp@insper.edu.br</a></li>
-                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2677 / 2682 / 2685</li>
-                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
+                                    <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2677/2682/2685</li>
+                                    <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, próximo aos elevadores</li>
                                     <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 8h às 19h.</li>
                                 </ul>
                             </div>
@@ -509,7 +535,7 @@
                                     <li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:nidocente@insper.edu.br">nidocente@insper.edu.br</a></li>
                                     <li><span class="glyphicon glyphicon-earphone"></span>(11) 4504-2723</li>
                                     <li><span class="glyphicon glyphicon-map-marker"></span>8º andar, open space</li>
-                                    <li><span class="glyphicon glyphicon-map-time"></span>Horário de atendimento: de segunda a sexta-feira, das 9h30 às 18h30.</li>
+                                    <li><span class="glyphicon glyphicon-time"></span>Horário de atendimento: de segunda a sexta-feira, das 9h30 às 18h30.</li>
                                 </ul>
                             </div>
                         </div>
@@ -517,31 +543,34 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- menu-lateral small device-->
     <div class="menu-lateral-sd menu-l-sd-amarelo hidden-print">
-        <p class="place">Você esta em:</p>
-        <h4>&nbsp;</h4>
-        <h5 class=""><span>Admissão, benefícios e afins</span></h5>
+        <h4>Assuntos gerais</h4>
+        <ul class="list-inline add-itens-mg-sd">
+            <li><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
+            <li><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
+        </ul>
+        <h4>Conteúdo deste documento</h4>
+        <h5><a href="#admissao" title="Admissão, benefícios e afins (CLT)">Admissão, benefícios e afins (CLT)</a></h5>
         <ul class="list-unstyled">
             <li><a href="#admissao-pa" title="Processo admissional">Processo admissional</a></li>
             <li><a href="#admissao-da" title="Dados de acesso">Dados de acesso</a></li>
             <li><a href="#admissao-pfb" title="Pagamentos, férias e benefícios">Pagamentos, férias e benefícios</a></li>
         </ul>
-        <h5 class=""><span>Gestão da Aprendizagem</span></h5>
+        <h5 class=""><a href="#gestao-aprendizagem" title="Gestão da Aprendizagem">Gestão da Aprendizagem</a></h5>
         <ul class="list-unstyled">
             <li><a href="#gestao-aprendizagem-nqa" title="No que acreditamos">No que acreditamos</a></li>
             <li><a href="#gestao-aprendizagem-paca" title="Princípio do Aprendizado Centrado no Aluno">Princípio do Aprendizado Centrado no Aluno</a></li>
             <li><a href="#gestao-aprendizagem-dcd" title="Desenvolvimento do corpo Docente">Desenvolvimento do corpo Docente</a></li>
         </ul>
-        <h5 class=""><span>Recursos didáticos e Tecnologias</span></h5>
+        <h5 class=""><a href="#recurso-tecnologia-aprendizagem" title="Recursos didáticos e Tecnologias">Recursos didáticos e Tecnologias</a></h5>
         <ul class="list-unstyled">
             <li><a href="#gestao-aprendizagem-esa" title="Estrutura das salas de aula">Estrutura das salas de aula</a></li>
             <li><a href="#recurso-tecnologia-aprendizagem-rta" title="Recursos e tecnologias de aprendizagem">Recursos e tecnologias de aprendizagem</a></li>
             <li><a href="#gestao-aprendizagem-bdab" title="Biblioteca Telles">Biblioteca Telles</a></li>
         </ul>
-        <h5 class=""><span>Quem pode me ajudar?</span></h5>
+        <h5 class=""><a href="#quem-pode-me-ajudar" title="Quem pode me ajudar?">Quem pode me ajudar?</a></h5>
         <ul class="list-unstyled">
             <li><a href="#quem-pode-me-ajudar-at" title="Atendimento ao Professor">Atendimento ao Professor</a></li>
             <li><a href="#quem-pode-me-ajudar-aa" title="Apoios Acadêmicos">Apoios Acadêmicos</a></li>
@@ -551,24 +580,41 @@
             <li><a href="#quem-pode-me-ajudar-nid" title="NID/SAVI">NID/SAVI</a></li>
             <li><a href="#quem-pode-me-ajudar-dp" title="Departamento Pessoal">Departamento Pessoal</a></li>
         </ul>
-        <h5 class=""><span>Gestão Institucional do Corpo Docente</span></h5>
+        <h5 class=""><a href="#gestao-corpo-docente" title="Gestão Institucional do Corpo Docente">Gestão Institucional do Corpo Docente</a></h5>
         <ul class="list-unstyled">
             <li><a href="#gestao-corpo-docente-v" title="Vínculo">Vínculo</a></li>
             <li><a href="#gestao-corpo-docente-qe" title="Qualificação e Engajamento">Qualificação e Engajamento</a></li>
             <li><a href="#gestao-corpo-docente-ac" title="Atualização do currículo">Atualização do currículo</a></li>
         </ul>
-        <ul class="list-inline add-itens-mg-sd">
-            <li class=""><a href="../questoes-operacionais/" title="Questões operacionais que você precisa conhecer" class="ico-menu-verde"><span>Questões operacionais que você precisa conhecer</span></a></li>
-            <li class=""><a href="../consulta-rapida/" title="Consulta rápida" class="ico-menu-azul"><span>Consulta rápida</span></a></li>
-        </ul>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="contate col-md-offset-3 col-md-6 col-sm-12">
+                <h5 class="contate-title">Contato</h5>
+                <p>Para maiores informações entre em contato com o DEA</p>
+                <div class="contate-link">
+                    <a href="mailto:dea@insper.edu.br?subject=Contato - Guia de ambienta&ccedil;&atilde;o" class="contate-link_btn">Enviar e-mail</a>
+                </div>
+            </div>
+            <div class="logo col-md-3 col-sm-12">
+                <a href="http://www.insper.edu.br/" title="Insper: Ensino Superior em Negócios, Direito e Engenharia"><img src="../assets/img/header/logo-insper-footer.png" alt="Insper | Guia de ambientação"></a>
+                <address>
+                    Rua Quatá, 300 - Vila Olímpia<br>
+                    São Paulo/SP - Brasil<br>
+                    CEP: 04546-042<br>
+                    Tel: 11 4504-2400
+                </address>
+            </div>
+        </div>
+        <div class="all-right">
+            <p class="all-right-text">Todos os direitos reservados</p>
+        </div>
+    </footer>
     <div class="bg-menu-lateral-sd"></div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
-     <!-- plugins -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- code project -->
     <script src="../assets/js/main.js"></script>
 </body>

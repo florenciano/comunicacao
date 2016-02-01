@@ -1,0 +1,58 @@
+/* TABLET */
+@media screen and (min-width: $screen-sm) {
+	// HEADER
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// MENU
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// MENU-GLOBAL
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// MENU-LATERAL
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// MENU-LATERAL-SD
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// FOOTER
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// HOME
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// grafismo header
+	.header {
+		.container {
+			height: 105px; // h of image [UI]
+			background: url('../img/header/grafema-guia-ambientacao-sd.png') 100% center no-repeat;
+		}
+	}
+	// largura do texto descritivo
+	.options-home p {
+	    width: 80%;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// QUESTOES OPERACIONAIS
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// CONSULTA RAPIDA
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// comprimido dados da tabela
+	.content-text {
+		.table-consulta-rapida {
+			td { 
+				padding: 4px 2px;
+			}
+			p { margin: 0; }
+		}
+	}
+}

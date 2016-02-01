@@ -1,0 +1,166 @@
+/* DESKTOP */
+@media screen and (min-width: $screen-md) { 
+
+	// HEADER
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.header {
+		-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+							0 3px 1px -2px rgba(0,0,0,.2),
+							0 1px 5px 0 rgba(0,0,0,.12);
+		        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+		        			0 3px 1px -2px rgba(0,0,0,.2),
+		        			0 1px 5px 0 rgba(0,0,0,.12);
+	}
+	// FOOTER
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// contato
+	.contate-title { margin-top: 1.5em; }
+	.contate-link { margin: 2em auto; }
+	.contate-link_btn {
+		display: inline-block;
+    	padding: 1em 1.75em;
+	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// HOME
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// grafismo header
+	.header {
+		.container {
+			background: url('../img/header/grafema-guia-ambientacao-md.png') 100% 0 no-repeat;
+		}
+	}
+	// header
+	.logo { margin-top: 1.5em; }
+	.title-project {
+	    text-align: left;
+	    margin-top: 2.3684em; // 45px
+	    font-size: 1.4285em; // 20px
+	    font-weight: 700;
+	    span {
+	    	font-weight: 400;
+	    }
+	}
+	// largura do texto descritivo
+	.options-home {
+		float: left;
+	}
+	.options-home p {
+	    width: 100%;
+	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// CONTRATACAO
+	// // // // // // // // // // // // // // // // // // // // // // //
+	
+	// Subtitulos
+	.content-text {
+		h2 { margin-top: $grid40; }
+	}
+}
+
+
+@media screen and (min-width: $screen-lg) { // (1200px)
+	/* 
+		Devido ao tamanho do menu da página contratacao,
+		o menu lateral - dekstop ficara visivel apenas
+		em visualização large-desktop.
+
+		Para refazer esta ação eliminar deste breakpoint
+		os elementos: MENU LATERAL - DESKTOP e MENU-LATERAL - SD.
+	*/
+	// MENU LATERAL - DESKTOP
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.menu-lateral {
+		position: absolute;
+		top: 0;	
+		min-width: 320px;
+		width: 25%;
+		font-size: 0.875em;
+		// design
+		padding: 2em 1em;
+		background-color: #fff;
+		border: 1px solid #e3e3e3;
+		-webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
+		        box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
+        h4 {
+        	font-size: 1.25em;
+		    margin: 0;
+		    border-bottom: 1px solid #676767;
+		    padding-bottom: .25em
+        }
+		ul {
+			margin: 0;
+			list-style: none;
+			li {
+				margin: .5em 0;
+			    padding: 0;
+			    &:first-child { margin-top: 0; }
+			}
+		}
+		a { color: $cinza; }
+		// itens do menu global
+		.add-itens-mg {
+		    margin: 1em 0 2em 0;
+    		padding: 0;		
+		    li { 
+		    	margin: 0 0 1em 0;
+		    	padding: 0;
+		    	width: 100%;
+
+		    }
+		    li:last-child { margin-bottom: 0; }
+		}
+		// definindo o estilo dos container e os titulos do mg
+		.add-itens-mg-ico { height: 40px; } // h of image [UI]
+		.add-itens-mg-text {
+		    display: block;
+		    padding: 1em 0 0 4em;
+		}
+		.add-itens-mg-text-verde { padding-top: 0.25em; }
+		// @extend .add-itens-mg-sd;
+	}
+	// definindo o estilo dos containers e os titulo do titulos
+	.container-menu-ico {
+		display: block;
+		height: 30px; // h of image [UI]
+	    margin-right: -0.5em;
+	    margin-left: -0.5em;
+	}
+	.container-menu-title {
+		font-size: 1em;
+	    margin: 1em 0 0;
+	    padding: .5em 0 .5em 3em;
+	    white-space: nowrap;
+	    font-weight: 700;
+	}
+	// fixed menu in scroll
+	.fixed-menu { 
+		position: fixed;
+		top: 0.25em;
+		z-index: 999;
+		overflow-y: auto;
+		display: block;
+	}
+
+	// MENU-LATERAL-SD
+	// // // // // // // // // // // // // // // // // // // // // // //
+	
+	// // hide menu/components in medium devices
+	.menu-lateral-small-device,
+	.button-menu-lateral,
+	.bg-menu-lateral-sd { display: none; }
+
+	// FOOTER
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// body footer home
+	.styck-footer-body { margin-bottom: 220px }
+	.sticky-footer {
+	    position: absolute;
+	    bottom: 0;
+		width: 100%;
+		height: 220px;
+	}
+}
