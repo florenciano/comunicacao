@@ -69,18 +69,19 @@
 		em visualização large-desktop.
 
 		Para refazer esta ação eliminar deste breakpoint
-		os elementos: MENU LATERAL - DESKTOP e MENU-LATERAL - SD.
+		os elementos: MENU-LATERAL - DESKTOP e MENU-LATERAL - SD.
 	*/
 	// MENU LATERAL - DESKTOP
 	// // // // // // // // // // // // // // // // // // // // // // //
 	.menu-lateral {
 		position: absolute;
 		top: 0;	
-		min-width: 320px;
-		width: 25%;
+		width: 320px;
+		// max-width: 340px; // determinar largura fixa
+		margin-left: .5em;
 		font-size: 0.875em;
 		// design
-		padding: 2em 1em;
+		padding: 1em 1em 0;
 		background-color: #fff;
 		border: 1px solid #e3e3e3;
 		-webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
@@ -139,10 +140,9 @@
 	// fixed menu in scroll
 	.fixed-menu { 
 		position: fixed;
-		top: 0.25em;
+		top: 11em;
 		z-index: 999;
 		overflow-y: auto;
-		display: block;
 	}
 
 	// MENU-LATERAL-SD
@@ -152,6 +152,21 @@
 	.menu-lateral-small-device,
 	.button-menu-lateral,
 	.bg-menu-lateral-sd { display: none; }
+
+	// HEADER
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// fixed elem in scroll
+	.header-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1002;
+	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// HOME
+	// // // // // // // // // // // // // // // // // // // // // // //
 
 	// FOOTER
 	// // // // // // // // // // // // // // // // // // // // // // //

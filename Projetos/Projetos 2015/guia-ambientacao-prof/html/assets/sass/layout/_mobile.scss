@@ -2,7 +2,7 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 .header {
     background-color: #f3f3f3;
-    text-align: center;
+    // text-align: center;
     border-bottom: 3px solid #bcbec0;
     padding-bottom: 0.7142em; // 10 / 14
 }
@@ -309,7 +309,7 @@
 	// cor dos links do article
 	a {
 		color: $vermelho;
-		&:hover { color: $vermelhoEscuro; }
+		&:hover { color: adjust-lightness($vermelho, -10); }
 	}
 	h1 {
 		font-size: 2em;

@@ -12,111 +12,29 @@ $(function(){
 	// var global
 	var posTitle = $( "#first" ).offset().top; // <h1> = 152.9843
 
-	// // Effects accordion in (.container-menu)
-	// // fix bug colision theme [portaldoprofessor] footer page
-	// // // // // // // // // // // // // // // // // // // // // // //
-	var accordion = function () {
-		var menu, titles, process;
-
-		menu = $( ".container-menu" );
-		titles = menu.find( "h5" );
-
-		process = function (current) {
-			var ul, anim;
-
-			ul = current.next( "ul" ); 
-			ul.addClass( "unactive" ); // all "ul" class (.unactive)
-			ul.fadeOut( 1 );
-			
-			function _animate (el, classRemove, classAdd) {
-				el.animate({
-					opacity: "toggle",
-				    height: "toggle"
-				}, 100, function () {
-					el.removeClass( classRemove).addClass( classAdd );
-				});
-			}
-
-			anim = function () {
-				if (ul.hasClass( "active" )) {
-					_animate( ul, "active", "unactive" );
-				} else {
-					_animate( ul, "unactive", "active" );
-				}
-			};
-
-			// trigger event 'click' in item-menu
-			current.on( "click", function () {
-				if (!ul.hasClass( "active" )) {
-					$( ".container-menu h5 + ul.active" ).each(function () {
-						_animate( $(this), "active", "unactive" );
-					});
-					anim();
-				} else {
-					anim();
-				}
-			});
-		};
-		titles.each( function () { 
-			process( $(this) );
-		});
-	}
-	// accordion();
- 
-	// // fixed menu-lateral in scrool
+	// // fixed menu-lateral in scrool and (.header-fixed)
 	// // // // // // // // // // // // // // // // // // // // // // //
 	function fixedMenuTop () {
-		var menuLateral = $( ".menu-lateral" );
+		var menuLateral = $( ".menu-lateral" ),
+			_header = document.querySelectorAll('.header'),
+			headerHeigth = _header[0].offsetHeight; // 118
 
 		$( document ).bind( "ready scroll", function() {
-			// exec in view only large desktop
-			if (window.outerWidth > 1200) {
-				$(this).scrollTop() >= posTitle ? menuLateral.addClass( "fixed-menu" ) : menuLateral.removeClass( "fixed-menu" );
+			// exec only view in large desktop
+			if (window.outerWidth > 1024) {
+				// fixed menu-lateral
+				$(this).scrollTop() >= (posTitle - 20 - headerHeigth) ? menuLateral.addClass( "fixed-menu" ) : menuLateral.removeClass( "fixed-menu" );
+
+				// fixed header
+				if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) { // crossbrowser
+					_header[1].className = 'header header-fixed'; // headerUp
+				} else {
+					_header[1].className = 'header hidden'; // headerUp
+				}
 			}
 		});
 	}
 	fixedMenuTop();
-
-	// // high-ligth itens-menu in scroll
-	// // // // // // // // // // // // // // // // // // // // // // //
-	function hightligthTitle() {
-		var titles_big = [],
-			_height = $(window).height(),
-			titles_menu = $( ".menu-lateral h5" ),
-			i = 0;
-
-		$( ".content-text h2" ).each( function() {
-			titles_big.push( $(this).offset().top );
-		});
-
-		$( document ).bind( "ready scroll", function() { // durante o carregamento e scroll da página...
-			var $this = $(this),
-				pos = $this.scrollTop(),
-				count = 0;
-
-			for (i in titles_big) { // verifica todos os subtitles <h2> da pag
-				if (titles_big[i] < pos + 1) { // quantos estão abaixo da linha da rolagem
-					count ++ // add qtde total na var
-				}
-			};
-			
-			if (pos >= 230) { // pos 1º <h2>
-				titles_menu.removeClass( "active" ); // remove class
-				titles_menu.eq(count - 1).addClass( "active" ); // add class apenas no último titulo do menu
-			} else if (pos >= 180) { // pos <h1>
-				titles_menu.removeClass( "active" );
-				titles_menu.eq(0).addClass( "active" ); 
-			}
-
-			// removing ".active" when scroll window beging 
-			if (pos < posTitle) { 
-				titles_menu.removeClass( "active" );
-			};
-
-
-		});
-	}
-	// setTimeout(hightligthTitle(), 200);
 
 	// // show/hide menu-lateral-small-device
 	// // // // // // // // // // // // // // // // // // // // // // //
@@ -173,19 +91,5 @@ $(function(){
 		});
 	}
 	showHide_sd();
-	
-	// // Add title menu-lateral-small-device from menu-global
-	// // // // // // // // // // // // // // // // // // // // // // //
-	function addTitle_sd () {
-		var t = $( "nav" ).find( "a" ),
-			r = $( ".menu-lateral-sd h4" );
-		function _replaceTitle(key) {
-			$(r).text( t.eq(key).text() );
-		}
-		if( $( "#contratacao" ).length ) { _replaceTitle(0) };
-		if( $( "#questoes-operacionais" ).length ) { _replaceTitle(1) };
-		if( $( "#consulta-rapida" ).length ) { _replaceTitle(2) };
-	}
-	// setTimeout(addTitle_sd(), 400);
 
 });
