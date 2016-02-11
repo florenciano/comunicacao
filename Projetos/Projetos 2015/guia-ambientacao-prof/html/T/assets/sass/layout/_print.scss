@@ -1,0 +1,52 @@
+// // // // // // // // // // // // // // // // // // // // //
+// IMPRESSAO
+// // // // // // // // // // // // // // // // // // // // // // //
+@media print {
+
+	@page { margin: 1,5cm; }
+
+	body { line-height: 1.55em; }
+
+	img { max-width: 100%; }
+	
+	.breadcrumb {
+		display: block !important;
+	    border-bottom: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	    padding: 5px;
+	    margin: 1em 0 6em 0;
+	    font-size: .75em;
+	}
+
+	.content { margin-top: $grid40/2 }
+
+	div[role="main"] {
+		width: 100%;
+		margin: 0;
+		float: none !important;
+		p a,
+		li a { word-wrap: break-word; }
+		.content-text {
+			h2 {
+				border: none;
+				margin-bottom: 0;
+			}
+			.well { 
+				page-break-inside: avoid;
+				width: 90%;
+				margin: ($grid40/2) auto;
+				border-radius: 0;
+			}
+			.well-contratacao { border: 1px solid $amarelo; border-left-width: 5px; }
+			.well-questoes-operacionais { border: 1px solid $verde; border-left-width: 5px; }
+			.well-consulta-rapida { border: 1px solid $azul; border-left-width: 5px; }
+			li { margin: 0; }
+		}
+		table {
+			thead { 
+				font-weight: 700;
+				display: table-header-group;
+			}
+		}
+	}
+}
