@@ -77,7 +77,6 @@
 		position: absolute;
 		top: 0;	
 		width: 320px;
-		// max-width: 340px; // determinar largura fixa
 		margin-left: .5em;
 		font-size: 0.875em;
 		// design
@@ -121,8 +120,9 @@
 		    padding: 1em 0 0 4em;
 		}
 		.add-itens-mg-text-verde { padding-top: 0.25em; }
-		// @extend .add-itens-mg-sd;
 	}
+	// excection
+	.respiro { margin-top: .5em !important; }
 	// definindo o estilo dos containers e os titulo do titulos
 	.container-menu-ico {
 		display: block;
@@ -134,7 +134,7 @@
 		font-size: 1em;
 	    margin: 1em 0 0;
 	    padding: .5em 0 .5em 3em;
-	    white-space: nowrap;
+	    // white-space: nowrap;
 	    font-weight: 700;
 	}
 	// fixed menu in scroll
@@ -153,31 +153,9 @@
 	.button-menu-lateral,
 	.bg-menu-lateral-sd { display: none; }
 
-	// HEADER
-	// // // // // // // // // // // // // // // // // // // // // // //
-	// fixed elem in scroll
-	.header-fixed {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 1002;
-	}
 
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// HOME
 	// // // // // // // // // // // // // // // // // // // // // // //
 
-	// FOOTER
-	// // // // // // // // // // // // // // // // // // // // // // //
-	// body footer home: Desativado por ora
-	/*
-	.styck-footer-body { margin-bottom: 220px }
-	.sticky-footer {
-	    position: absolute;
-	    bottom: 0;
-		width: 100%;
-		height: 220px;
-	}
-	*/
 }

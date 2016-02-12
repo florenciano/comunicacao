@@ -23,7 +23,7 @@ $(function(){
 			// exec only view in large desktop
 			if (window.outerWidth > 1024) {
 				// fixed menu-lateral
-				$(this).scrollTop() >= (posTitle - 20 - headerHeigth) ? menuLateral.addClass( "fixed-menu" ) : menuLateral.removeClass( "fixed-menu" );
+				// $(this).scrollTop() >= (posTitle - 20 - headerHeigth) ? menuLateral.addClass( "fixed-menu" ) : menuLateral.removeClass( "fixed-menu" );
 
 				// fixed header
 				if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) { // crossbrowser
