@@ -18,14 +18,6 @@
 	margin: 0;
 	@include unselectable(none);
 }
-// fixed elem in scroll: view only desktop | large-desktop
-.header-fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1002;
-}
 
 .menu-global {
 	nav {
@@ -187,6 +179,17 @@
     padding: 0.625em 0;
     margin: 0;
     font-size: 0.875em;
+}
+
+// FOOTER
+// // // // // // // // // // // // // // // // // // // // // // //
+// fixed elem between in scroll
+.header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1002;
 }
 
 // BACKGROUND: MODAL
@@ -389,6 +392,7 @@
 		tbody {
 			td { width: 50%; }
 		}
+		img { width: 100%; }
 	}
 }
 // retirando border-radius de 'well'
