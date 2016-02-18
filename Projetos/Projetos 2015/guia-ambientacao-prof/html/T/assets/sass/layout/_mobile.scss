@@ -19,45 +19,6 @@
 	@include unselectable(none);
 }
 
-.menu-global {
-	nav {
-		>.list-inline { margin-bottom: 0; }
-		.active-amarelo { border-bottom: 3px solid $amarelo; }
-		.active-verde { border-bottom: 3px solid $verde; }
-		.active-azul { border-bottom: 3px solid $azul; }
-		li { 
-			padding: ($grid40/8) 0;
-			text-align: center;
-		}
-		a {
-			display: block;
-			margin-top: $grid40/8;
-			color: $cinza;
-			width: 100%;
-			text-decoration: none;
-			&:hover { text-decoration: underline; }
-		}
-		li:last-child {
-			span { border-right: none; }
-		}
-		a.ico-menu-verde { line-height: 1.3em; }
-	}
-}
-
-.menu-global {
-	nav {
-		.active-amarelo { border-bottom: 3px solid $amarelo; }
-		.active-verde { border-bottom: 3px solid $verde; }
-		.active-azul { border-bottom: 3px solid $azul; }
-		li {
-			padding: .5em;
-			margin-bottom: 5px;
-			display: block;
-			width: 100%;
-		}
-	}
-}
-
 // MENU LATERAL
 // // // // // // // // // // // // // // // // // // // // // // // 
 .menu-lateral-sd {
@@ -208,79 +169,58 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 // HOME
 // // // // // // // // // // // // // // // // // // // // // // //
-// sprite dos icones
 @import "home/*.png";
 @include all-home-sprites;
-.home-contratacao-a-pratica-docente,
-.home-questoes-operacionais,
-.home-consulta-rapida {
-	display: block;
-	width: 228px; // w of image [UI]
-	height: 228px; // h of image [UI]
-	margin: 0 auto;
-}
-// tres opções de escolha
-.options-home {
-	padding: 5em 0;
-	div { 
-		text-align: center;
-		margin-bottom: $grid30*2;
-		&:last-child { margin-bottom: 0; }
-	}
-	h2 {
-		margin-top: $grid40/2;
-		margin-bottom: $grid40/4;
-		font-size: 1.25em;
+// header
+.header-home {
+	text-align: center;
+	.header-home-title {
+		margin: 0 auto 1em;
 		font-weight: 700;
 	}
-	p { margin-bottom: $grid30; }
-	.btn-primary {
-		background-color: $cinza;
-		border-color: transparent;
-		font-size: 1em;
-		padding: 1em 1.75em;
-		border-radius: 0;
-		&:hover { background-color: adjust-lightness($cinza, -10); }
+}
+// article
+.section-boas-vindas,
+.section-contratacao,
+.section-consulta-rapida {
+	text-align: center;
+	.section-title {
+		border-bottom: none;
+	    font-weight: 400;
+	    font-size: 1.5em;
+	    margin: 0 0 1em 0;
 	}
 }
-// botões 'Ver detalhes'
-.btn-opt {
-	background-color: transparent;
-	border: 3px solid transparent;
-	font-size: 1em;
-	padding: 1em 1.75em;
-	border-radius: 0;
-	color: #fff;
+.section-icon {
+	width: 100px; // w of image [UI]
+	height: 100px; // h of image [UI]
+	display: block;
+	margin: 1em auto;
 }
-.btn-opt_amarelo { 
-	background-color: $amarelo;
-	&:hover, &:active, &:focus { 
-		background-color: #fff;
-		color: $amarelo;
-		border-color: $amarelo;
-		-webkit-box-shadow: none;
-	    		box-shadow: none;
-	}
+.section-text-contato {
+	@extend .section-text;
 }
-.btn-opt_verde { 
-	background-color: $verde;
-	&:hover, &:active, &:focus { 
-		background-color: #fff;
-		color: $verde;
-		border-color: $verde;
-		-webkit-box-shadow: none;
-	    		box-shadow: none;
-	}
+.section-text {
+    width: 84%;
+    margin: 0 auto;
+    font-size: 1.1428em;
+    line-height: 1.5714em;
 }
-.btn-opt_azul { 
-	background-color: $azul;
-	&:hover, &:active, &:focus { 
-		background-color: #fff;
-		color: $azul;
-		border-color: $azul;
-		-webkit-box-shadow: none;
-	    		box-shadow: none;
-	}
+.section-img {
+	max-width: 100%;
+	display: block;
+	margin: 1em auto;
+}
+// hr
+.divisor-section {
+   display: block;
+   margin: 3em auto 3em;
+   width: 80%;
+}
+// .section-contato = last section of page
+.section-contato {
+	text-align: center;
+	margin-bottom: 4em;
 }
 
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -338,6 +278,7 @@
 	    font-size: 1em;
 	    font-weight: 700;
 	    margin-bottom: 0;
+	    margin-top: 1.25em;
 	}
 	h5 {
 		font-weight: 700;
@@ -346,11 +287,11 @@
 	.container-h4 { margin-left: 1em }
 	.container-h5 { margin-left: 2em }
 	.well {
-		margin: ($grid40/2) 0 $grid40;
+		margin: 1em 0 1.5em 0;
 		background-color: #fff;
 			-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
 			        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-		padding: $grid40/4;
+		padding: .75em;
 		display: block;
 		.list-inline { margin-bottom: 0; }
 		ul + p { margin-top: 1em; }

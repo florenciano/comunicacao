@@ -3,80 +3,81 @@ $(function(){
         // PAGES:
         // contratacao, questoes-operacionais e consulta-rapida //
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	
-	// // // // // // // // // // // // // // // // // // // // // // //
-	// MENU LATERAL
-	// // // // // // // // // // // // // // // // // // // // // // //
 	"use strict";
 
-	// var global
-	var posTitle = $( "#first" ).offset().top; // ~ 152 <h1>
-
-	// // Fixar header quando rola a página. Somente em desktop
-	// // Tirar os alvos dos links âncoras debaixo do header
 	// // // // // // // // // // // // // // // // // // // // // // //
-	function fixedHeader_linksAnchor () {
+	// // 1. Fixar header quando rola a página. Somente em desktop
+	// // 2. Tirar os alvos dos links âncoras debaixo do header
+	// // // // // // // // // // // // // // // // // // // // // // //
+	
+	function init() {
 		
 		// // // // // // // // // // // // // // // // // // // // // // //
-		// // Fixar header quando rolar a página. Somente em desktop.
-		
+		// // 1.
+		// // // // // // // // // // // // // // // // // // // // // // //
 		var menuLateral = $( ".menu-lateral" ),
-			_header = document.querySelectorAll( '.header' ),
+			_header = document.querySelectorAll( ".header" ),
 			headerHeigth = _header[0].offsetHeight; // ~ 118
 
-			var breakPoint = 992; // Value = $screen-md [grid system bootstrap]
-			
-			function fixedHeader () {
-				console.log('a');
-				if (window.outerWidth >= breakPoint) {
-					/*
-					fixed menu-lateral. Disabled in older reviews
-					$(this).scrollTop() >= (posTitle - 20 - headerHeigth) ? menuLateral.addClass( "fixed-menu" ) : menuLateral.removeClass( "fixed-menu" );
-					*/
-					
-					if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) { // crossbrowser
-						_header[1].className = 'header header-fixed';
-					} else {
-						_header[1].className = 'header hidden';
-					}
+		var breakPoint = 992; // Value = $screen-md [grid system bootstrap]
+		
+		function fixedHeader () {
+			if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
+				if (window.innerWidth >= breakPoint) {
+					_header[1].className = "header header-fixed";
+				} else {
+					_header[1].className = "header hidden"; // elimina (.header) qdo breakpoint for < desktop
 				}
+			} else {
+				_header[1].className = "header hidden"; // elimina (.header) qdo em desktop rolar ao início
 			}
-		$( document ).on( "scroll", function() { fixedHeader() });
-		$( window ).bind( "ready resize", function() { fixedHeader() });
+		}
+
+		$( document ).bind( "ready scroll", function() { fixedHeader() });
+		$( window ).on( "resize", function() { fixedHeader() });
 
 		// // // // // // // // // // // // // // // // // // // // // // //
-		// // Tirar os alvos dos links âncoras debaixo do header.
+		// // 2.
+		// // // // // // // // // // // // // // // // // // // // // // //
+		var $linksMenuLateral = findEl( menuLateral ),
+			$linksContentText = findEl( $( ".content-text" ) );
 		
-		var linksMenuLateral = menuLateral.find('a[href*="#"]');
-		
-		linksMenuLateral.each( function () {
-			$(this).on( 'click', function (event) {
+		function findEl (elem) {
+			return elem.find( "a[href*='#']" );
+		}
+
+		$linksMenuLateral.each( function () { takeUnderHeader( $(this) ) });
+		$linksContentText.each( function () { takeUnderHeader( $(this) ) });
+
+		function takeUnderHeader (elem) {
+			elem.on( 'click', function (event) {
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			     	var target = $(this.hash);
-			     	target = target.length ? target : $( '[id=' + this.hash.slice(1) +']' );
+			     	target = target.length ? target : $( "[id=" + this.hash.slice(1) +"]" );
 			     	if (target.length) {
-			        	$( 'html, body' ).animate({
+			        	$( "html, body" ).animate({
 			        		scrollTop: target.offset().top - headerHeigth
 			        	}, 100);
 			        return false;
 			      }
 			    }
 			});
-		});
-
+		}
 	}
-	fixedHeader_linksAnchor();
+	
+	init();
 
-
+	// // // // // // // // // // // // // // // // // // // // // // //
 	// // show/hide menu-lateral-small-device
 	// // // // // // // // // // // // // // // // // // // // // // //
+	
 	function showHide_sd () {
 		var btn = $( "#btnMenu" ),
 			menu = $( ".menu-lateral-sd" ),
 			bg = $( ".bg-menu-lateral-sd" ),
 			heightDoc = $( document ).height();
 
-		bg.height(heightDoc);
+		bg.height( heightDoc );
 		
 		function _show() {
 			bg.css( "display","block" );
@@ -96,7 +97,7 @@ $(function(){
 
 		// trigger events in 'click' and 'keyup'
 		btn.on( "click", function() {
-			if (menu.css("display") == "none") {
+			if (menu.css( "display" ) == "none") {
 				_show();
 			} else {
 				_hide();
@@ -114,14 +115,13 @@ $(function(){
 		});
 
 		// click all link in (.menu-lateral-sd) hide
-		var linkAllMenu_sd = $( "a", menu );
+		var linkAllMenu_sd = menu.find( "a" );
 		
 		linkAllMenu_sd.each( function () {
-			$(this).on( "click", function () {
-				_hide();
-			} );
+			$(this).on( "click", _hide );
 		});
 	}
+	
 	showHide_sd();
 
 });
