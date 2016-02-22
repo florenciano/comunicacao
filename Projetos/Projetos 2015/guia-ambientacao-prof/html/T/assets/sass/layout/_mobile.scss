@@ -218,6 +218,10 @@
    width: 80%;
 }
 // .section-contato = last section of page
+.divisor-section-lineHorizontal {
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
 .section-contato {
 	text-align: center;
 	margin-bottom: 4em;
@@ -251,6 +255,7 @@
 	// cor dos links do article
 	a {
 		color: $vermelho;
+	    word-wrap: break-word; // fix bugs in small devices
 		&:hover { color: adjust-lightness($vermelho, -10); }
 	}
 	h1 {

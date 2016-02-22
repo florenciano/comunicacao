@@ -6,20 +6,57 @@ $(function(){
 	"use strict";
 
 	// // // // // // // // // // // // // // // // // // // // // // //
+	// // 0. Scroll na página qdo carregar vir de âncoras de outros arquivos
 	// // 1. Fixar header quando rola a página. Somente em desktop
 	// // 2. Tirar os alvos dos links âncoras debaixo do header
 	// // // // // // // // // // // // // // // // // // // // // // //
 	
 	function init() {
+		// // // // // // // // // // // // // // // // // // // // // // //
+		// // variaveis globais
+		var _header = document.querySelectorAll( ".header" ),
+			headerHeigth = _header[0].offsetHeight; // ~ 118
+
+		// // // // // // // // // // // // // // // // // // // // // // //
+		// // 0.
+		// // // // // // // // // // // // // // // // // // // // // // //
+		var _hostName = window.location.href, // pega a url completa da página
+			anchor = _hostName.substring(_hostName.indexOf("#")+1); // retire o conteudo da string a partir do #
 		
+		var _h2 = getElements( "h2" ), _h3 = getElements( "h3" );
+
+		// pegar todas as ocorrências do elemento dentro do article
+		function getElements (el) {
+			var context = document.querySelector( ".content-text" );
+			var get = context.getElementsByTagName ( el );
+			return get;
+		}
+
+		// pega o id de cada elemento 
+		function checkId (el) {
+			for (var i = 0; i < el.length; i++) {
+				var id = el[i].id;
+
+				// se existir pega a posição do elmento na página
+				if (id == anchor) {
+					var posTop = el[i].offsetTop;
+					// adiciona efeito de 'scroll' na página até o ponto desejado
+					$( "html, body" ).animate({
+		        		scrollTop: posTop
+		        	}, 100);
+		        	break;
+				}
+			}
+		}
+
+		checkId( _h2 ); // titulos
+		checkId( _h3 ); // subtitulos
+
 		// // // // // // // // // // // // // // // // // // // // // // //
 		// // 1.
 		// // // // // // // // // // // // // // // // // // // // // // //
 		var menuLateral = $( ".menu-lateral" ),
-			_header = document.querySelectorAll( ".header" ),
-			headerHeigth = _header[0].offsetHeight; // ~ 118
-
-		var breakPoint = 992; // Value = $screen-md [grid system bootstrap]
+			breakPoint = 992; // Value = $screen-md [grid system bootstrap]
 		
 		function fixedHeader () {
 			if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
@@ -78,20 +115,23 @@ $(function(){
 			heightDoc = $( document ).height();
 
 		bg.height( heightDoc );
-		
+
+		function __show (el) { el.css( "display","block" ) }
+		function __hide (el) { el.css( "display","none" ) }
+
 		function _show() {
-			bg.css( "display","block" );
-			menu.css( "display","block" );
+			__show(bg);
+			__show(menu);
 			menu.animate({
 				left: "0px"
 			}, 400);	
 		};
 		function _hide() {
-			bg.css( "display","none" );
+			__hide(bg);
 			menu.animate({
 				left: "-279px"
 			}, 400, function() {
-				menu.css( "display","none" );
+				__hide(menu);
 			});	
 		};
 

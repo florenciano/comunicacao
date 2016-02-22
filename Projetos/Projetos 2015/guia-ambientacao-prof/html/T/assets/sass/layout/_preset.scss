@@ -33,7 +33,8 @@ $cinza: #414042;
 		display: inline-block;
 		background: url("../img/ui/link-blank.png") center center no-repeat;
 	 	margin-left: .12em;
-	 	background-size: 100%
+	 	background-size: 100%;
+	 	white-space: nowrap; // teste
 	}
 	.header a[href^='http://']:after,
 	.header a[href^='https://']:after {

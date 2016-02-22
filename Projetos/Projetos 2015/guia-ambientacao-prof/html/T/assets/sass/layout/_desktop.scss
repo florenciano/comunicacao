@@ -4,6 +4,7 @@
 	// HEADER
 	// // // // // // // // // // // // // // // // // // // // // // //
 	.header {
+		padding-bottom: 0;
 		-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
 							0 3px 1px -2px rgba(0,0,0,.2),
 							0 1px 5px 0 rgba(0,0,0,.12);
@@ -82,9 +83,10 @@
 	.container-menu-title {
 		font-size: 1em;
 	    margin: 1em 0 0;
-	    padding: .5em 0 .5em 3em;
+	    padding: .755em 0 .5em 3em;
 	    // white-space: nowrap;
 	    font-weight: 700;
+	    height: 30px; // h of image [UI]
 	}
 	// fixed menu in scroll
 	.fixed-menu {
@@ -116,7 +118,7 @@
 	.logo { margin-top: 1.5em; }
 	.title-project {
 	    text-align: left;
-	    margin-top: 2.3684em; // 45px
+	    margin-top: 2.125em;
 	    font-size: 1.4285em; // 20px
 	    font-weight: 700;
 	    span {
@@ -137,6 +139,7 @@
 	
 	// Subtitulos
 	.content-text {
+	    padding-bottom: 4em;
 		h2 { margin-top: $grid40; }
 	}
 }
