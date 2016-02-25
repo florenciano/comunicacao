@@ -18,7 +18,6 @@ $azul: #34485d; //#3a99d9
 $vermelho : #ea0863; // #9b3336
 $vermelhoEscuro: #82292C;
 $cinza: #414042;
-$cinzaMedio: #bcbec0;
 
 // FUNCTION | MIXIN | RESET
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -26,25 +25,24 @@ $cinzaMedio: #bcbec0;
 
 // inserindo ícone de 'target_blank'
 @media screen {
-	a[href^='http://']:after,
-	a[href^='https://']:after {
+	a[href^="http://"]:after,
+	a[href^="https://"]:after {
 		content: "";
 		width: .875em;
 		height: .875em;
 		display: inline-block;
 		background: url("../img/ui/link-blank.png") center center no-repeat;
 	 	margin-left: .12em;
-	 	background-size: 100%;
-	 	white-space: nowrap; // teste
+	 	background-size: 100%
 	}
-	.header a[href^='http://']:after,
-	.header a[href^='https://']:after {
+	.header a[href^="http://"]:after,
+	.header a[href^="https://"]:after {
 		background: none;
 		width: 0;
 		height: 0;
 	}
-	.footer a[href^='http://']:after,
-	.footer a[href^='https://']:after {
+	.footer a[href^="http://"]:after,
+	.footer a[href^="https://"]:after {
 		background: none;
 		width: 0;
 		height: 0;
@@ -79,7 +77,3 @@ $cinzaMedio: #bcbec0;
 
 @import "ico-menuzinho/azul/*.png";
 @include all-azul-sprites;
-
-// gerando icones do menus global e lateral
-@import "ico-menu/*.png";
-@include all-ico-menu-sprites; // result: .ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul

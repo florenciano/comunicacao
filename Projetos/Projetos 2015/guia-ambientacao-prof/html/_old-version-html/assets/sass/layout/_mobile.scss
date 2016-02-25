@@ -19,6 +19,50 @@
 	@include unselectable(none);
 }
 
+// gerando icones do menus global e lateral
+@import "ico-menu/*.png";
+@include all-ico-menu-sprites; // result: .ico-menu-amarelo, .ico-menu-verde, .ico-menu-azul
+
+.menu-global {
+	nav {
+		>.list-inline { margin-bottom: 0; }
+		.active-amarelo { border-bottom: 3px solid $amarelo; }
+		.active-verde { border-bottom: 3px solid $verde; }
+		.active-azul { border-bottom: 3px solid $azul; }
+		li { 
+			padding: ($grid40/8) 0;
+			text-align: center;
+		}
+		a {
+			display: block;
+			margin-top: $grid40/8;
+			color: $cinza;
+			width: 100%;
+			text-decoration: none;
+			&:hover { text-decoration: underline; }
+		}
+		li:last-child {
+			span { border-right: none; }
+		}
+		a.ico-menu-verde { line-height: 1.3em; }
+	}
+}
+
+.menu-global {
+	// margin-top: $grid40;
+	nav {
+		.active-amarelo { border-bottom: 3px solid $amarelo; }
+		.active-verde { border-bottom: 3px solid $verde; }
+		.active-azul { border-bottom: 3px solid $azul; }
+		li {
+			padding: .5em;
+			margin-bottom: 5px;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
 // MENU LATERAL
 // // // // // // // // // // // // // // // // // // // // // // // 
 .menu-lateral-sd {
@@ -84,6 +128,9 @@
 				    top: 50%;
 	    		}
 		    }
+		    .ico-menu-verde { 
+    			span { margin-top: -1.2em; }
+			}
 	    }
 	}
 }
@@ -142,17 +189,6 @@
     font-size: 0.875em;
 }
 
-// FOOTER
-// // // // // // // // // // // // // // // // // // // // // // //
-// fixed elem between in scroll
-.header-fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1002;
-}
-
 // BACKGROUND: MODAL
 // // // // // // // // // // // // // // // // // // // // // // //
 .bg-menu-lateral-sd {
@@ -166,87 +202,83 @@
 	z-index: 1000;
 }
 
-// ÁNCORA INÍCIO DA PÁGINA
-// // // // // // // // // // // // // // // // // // // // // // //
-.anchor-top {
-	display: block;
-	margin: 2em 0 0;
-	text-align: right;
-}
-.anchor-top-link {
-	span {
-	    transform: translateY(1px);
-	}
-}
-.anchor-top-link:hover {
-	text-decoration: none;
-	span {
-	    transform: translateY(-3px);
-	}
-}
 
 // // // // // // // // // // // // // // // // // // // // // // //
 // HOME
 // // // // // // // // // // // // // // // // // // // // // // //
+// sprite dos icones
 @import "home/*.png";
 @include all-home-sprites;
-// header
-.header-home {
-	text-align: center;
-	.header-home-title {
-		margin: 0 auto 1em;
+.home-contratacao,
+.home-questoes-operacionais,
+.home-consulta-rapida {
+	display: block;
+	width: 228px; // w of image [UI]
+	height: 228px; // h of image [UI]
+	margin: 0 auto;
+}
+// tres opções de escolha
+.options-home {
+	padding: 5em 0;
+	div { 
+		text-align: center;
+		margin-bottom: $grid30*2;
+		&:last-child { margin-bottom: 0; }
+	}
+	h2 {
+		margin-top: $grid40/2;
+		margin-bottom: $grid40/4;
+		font-size: 1.25em;
 		font-weight: 700;
 	}
-}
-// article
-.section-boas-vindas,
-.section-contratacao,
-.section-consulta-rapida {
-	text-align: center;
-	.section-title {
-		border-bottom: none;
-	    font-weight: 400;
-	    font-size: 1.5em;
-	    margin: 0 0 1em 0;
+	p { margin-bottom: $grid30; }
+	.btn-primary {
+		background-color: $cinza;
+		border-color: transparent;
+		font-size: 1em;
+		padding: 1em 1.75em;
+		border-radius: 0;
+		&:hover { background-color: adjust-lightness($cinza, -10); }
 	}
 }
-.section-icon {
-	width: 100px; // w of image [UI]
-	height: 100px; // h of image [UI]
-	display: block;
-	margin: 1em auto;
+// botões 'Ver detalhes'
+.btn-opt {
+	background-color: transparent;
+	border: 3px solid transparent;
+	font-size: 1em;
+	padding: 1em 1.75em;
+	border-radius: 0;
+	color: #fff;
 }
-.section-text-contato {
-	@extend .section-text;
+.btn-opt_amarelo { 
+	background-color: $amarelo;
+	&:hover, &:active, &:focus { 
+		background-color: #fff;
+		color: $amarelo;
+		border-color: $amarelo;
+		-webkit-box-shadow: none;
+	    		box-shadow: none;
+	}
 }
-.section-text {
-    width: 84%;
-    margin: 0 auto;
-    font-size: 1.1428em;
-    line-height: 1.5714em;
+.btn-opt_verde { 
+	background-color: $verde;
+	&:hover, &:active, &:focus { 
+		background-color: #fff;
+		color: $verde;
+		border-color: $verde;
+		-webkit-box-shadow: none;
+	    		box-shadow: none;
+	}
 }
-.section-img {
-	max-width: 100%;
-	display: block;
-	margin: 1em auto;
-}
-// hr
-.divisor-section {
-	display: block;
-    margin: 4em auto 4em;
-    width: 80%;
-    height: 5px;
-    background-color: #bcbec0;
-    border: none;
-}
-// .section-contato = last section of page
-.divisor-section-lineHorizontal {
-	margin-top: 5em;
-	margin-bottom: 5em;
-}
-.section-contato {
-	text-align: center;
-	margin-bottom: 4em;
+.btn-opt_azul { 
+	background-color: $azul;
+	&:hover, &:active, &:focus { 
+		background-color: #fff;
+		color: $azul;
+		border-color: $azul;
+		-webkit-box-shadow: none;
+	    		box-shadow: none;
+	}
 }
 
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -277,7 +309,6 @@
 	// cor dos links do article
 	a {
 		color: $vermelho;
-	    word-wrap: break-word; // fix bugs in small devices
 		&:hover { color: adjust-lightness($vermelho, -10); }
 	}
 	h1 {
@@ -305,7 +336,6 @@
 	    font-size: 1em;
 	    font-weight: 700;
 	    margin-bottom: 0;
-	    margin-top: 1.25em;
 	}
 	h5 {
 		font-weight: 700;
@@ -314,11 +344,11 @@
 	.container-h4 { margin-left: 1em }
 	.container-h5 { margin-left: 2em }
 	.well {
-		margin: 1em 0 1.5em 0;
+		margin: ($grid40/2) 0 $grid40;
 		background-color: #fff;
 			-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
 			        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-		padding: .75em;
+		padding: $grid40/4;
 		display: block;
 		.list-inline { margin-bottom: 0; }
 		ul + p { margin-top: 1em; }
@@ -328,8 +358,8 @@
 		}
 		.last-p { margin-bottom: 0; }
 	}
-	.well-boas-vindas { border-left: 5px solid #f0c40f; } 
-	.well-contratacao-a-pratica-docente { border-left: 5px solid #30bc9c; }
+	.well-contratacao { border-left: 5px solid #f0c40f; }
+	.well-questoes-operacionais { border-left: 5px solid #30bc9c; }
 	.well-consulta-rapida { border-left: 5px solid #3a99d9; }
 	// caution
 	.well-caution {
@@ -360,12 +390,11 @@
 		tbody {
 			td { width: 50%; }
 		}
-		img { width: 100%; }
 	}
 }
 // retirando border-radius de 'well'
-.well-boas-vindas,
-.well-contratacao-a-pratica-docente,
+.well-contratacao,
+.well-questoes-operacionais,
 .well-consulta-rapida,
 .well-caution { border-radius: 0; }
 // // // // // // // // // // // // // // // // // // // // // // //

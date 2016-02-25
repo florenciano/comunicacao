@@ -23,31 +23,18 @@
 	// HOME
 	// // // // // // // // // // // // // // // // // // // // // // //
 
-	// Header Page [grafismo]
+	// grafismo header
 	.header {
 		.container {
-			height: 100px; // h of image [UI]
+			height: 105px; // h of image [UI]
 			background: url('../img/header/grafema-guia-ambientacao-sd.png') 100% center no-repeat;
 		}
 	}
-
-	// Header of article page
-	.header-home {
-		background: transparent url('../img/ui/header-home.png') 0 center no-repeat;
-		height: 170px; // h of image [UI]
-		display: block;
-		.header-home-title {
-			padding-top: 1.75em;
-			margin-bottom: 0;
-    		text-align: left;
-   		 	margin-left: 7em;
-		}
-		.header-home-text {
-			text-align: left;
-		    padding-right: 2em;
-		    margin-bottom: 0;
-		    margin: .5em 0 0 14em;
-		}
+	// largura do texto descritivo
+	.options-home p {
+	    width: 80%;
+	    margin-right: auto;
+	    margin-left: auto;
 	}
 
 	// // // // // // // // // // // // // // // // // // // // // // //
