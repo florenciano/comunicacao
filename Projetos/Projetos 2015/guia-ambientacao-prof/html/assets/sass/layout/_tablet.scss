@@ -2,6 +2,19 @@
 @media screen and (min-width: $screen-sm) {
 	// HEADER
 	// // // // // // // // // // // // // // // // // // // // // // //
+	.header { text-align: left; }
+	
+	// Header Page [grafismo]
+	.header {
+		.container {
+			// height: 100px;
+			background: url('../img/header/grafema-guia-ambientacao-sd.png') 100% center no-repeat;
+		}
+	}
+	.logo {
+		img { max-width: 8em; }
+	}
+	.title-project { font-size: 1.75em; }
 
 	// MENU
 	// // // // // // // // // // // // // // // // // // // // // // //
@@ -23,19 +36,13 @@
 	// HOME
 	// // // // // // // // // // // // // // // // // // // // // // //
 
-	// Header Page [grafismo]
-	.header {
-		.container {
-			height: 100px; // h of image [UI]
-			background: url('../img/header/grafema-guia-ambientacao-sd.png') 100% center no-repeat;
-		}
-	}
 
 	// Header of article page
 	.header-home {
-		background: transparent url('../img/ui/header-home.png') 0 center no-repeat;
+		background: transparent url('../img/ui/header-home.png') 5% center no-repeat;
 		height: 170px; // h of image [UI]
 		display: block;
+		margin-bottom: 2em;
 		.header-home-title {
 			padding-top: 1.75em;
 			margin-bottom: 0;
@@ -68,4 +75,13 @@
 			p { margin: 0; }
 		}
 	}
+	
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// DUVIDAS E SUGESTOES
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.iframe-sugestoes-duvidas {
+		min-height: 66em;
+	    max-height: 70em;
+	}
 }
+

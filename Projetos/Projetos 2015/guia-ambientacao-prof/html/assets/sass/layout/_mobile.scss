@@ -2,7 +2,7 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 .header {
     background-color: #f3f3f3;
-    // text-align: center;
+    text-align: center;
     border-bottom: 3px solid #bcbec0;
     padding-bottom: 0.7142em; // 10 / 14
 }
@@ -64,7 +64,7 @@
 		li { margin: .5em 1em 0 .5em; }
 	}
 	// itens: menu global
-	.add-itens-mg-sd {
+	.add-itens-mg-sd, .add-sugestoes-ico {
 	    margin: 0;
 	    padding: 1em 0;
 	    li { 
@@ -86,7 +86,11 @@
 		    }
 	    }
 	}
+	// .add-sugestoes-ico { margin-top: 1em; }
 }
+// ico Dúvidas e Sugestões
+.add-sugestoes-ico { border-top: 1px dotted $cinzaMedio; }
+
 .menu-l-sd-amarelo { border-color: $amarelo }
 .menu-l-sd-verde { border-color: $verde }
 .menu-l-sd-azul { border-color: $azul }
@@ -96,8 +100,32 @@
 .footer {
 	background-color: $cinza;
 	color: #fff;
-	text-align: center;
 	clear: both;
+	padding: 2em 0 0;
+	text-align: center;
+	.logo {
+		img { max-width: 14em; }
+	}
+}
+// menu navegação
+.menu-footer {
+    border-bottom: 1px dotted $cinzaMedio;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+.menu-footer-title {
+	margin: 1em auto;
+    font-size: 1.2em;
+    color: $cinzaMedio;
+}
+.menu-footer-title-amarelo { color: $amarelo; }
+.menu-footer-title-azul { color: $azul-claro; }
+.menu-footer-title-verde { color: $verde; }
+.menu-footer-list {
+	margin-bottom: 1em;
+}
+.menu-footer-link {
+	color: #fff;
 }
 // Dados de contato
 .contate p {
@@ -132,7 +160,8 @@
     	line-height: 1.625em;
 	}
 }
-// Todos os direitos reservados
+
+// // Todos os direitos reservados
 .all-right { 
 	background-color: #2D2D2D;
 }
@@ -142,8 +171,6 @@
     font-size: 0.875em;
 }
 
-// FOOTER
-// // // // // // // // // // // // // // // // // // // // // // //
 // fixed elem between in scroll
 .header-fixed {
 	position: fixed;
@@ -175,13 +202,15 @@
 }
 .anchor-top-link {
 	span {
-	    transform: translateY(1px);
+	    transform: translateY(2px);
+	    @include transition(all 0.4s ease);
 	}
 }
-.anchor-top-link:hover {
+.anchor-top-link:hover, .anchor-top-link:focus {
 	text-decoration: none;
 	span {
-	    transform: translateY(-3px);
+	    transform: translateY(-5px);
+	    @include transition(all 0.4s ease);
 	}
 }
 
@@ -198,7 +227,56 @@
 		font-weight: 700;
 	}
 }
-// article
+// link dos titulos
+.content-text {
+	.link-section {
+		color: #333;
+		text-decoration: none;
+		display: inline-block;
+		&:hover { color: #333; }
+	}
+}
+
+// seta scroll down
+@-webkit-keyframes slide {
+	0%, 100%   { bottom: 4em; }
+	50% { bottom: 2em; }
+}
+@-moz-keyframes slide {
+	0%, 100%   { bottom: 4em; }
+	50% { bottom: 2em; }
+}
+@-o-keyframes slide {
+	0%, 100%   { bottom: 4em; }
+	50% { bottom: 2em; }
+}
+@keyframes slide {
+	0%, 100%   { bottom: 4em; }
+	50% { bottom: 2em; }
+}
+.scroll-page {
+	display: block;
+	z-index: 200;
+	position: fixed;
+	bottom: 4em;
+	left: 50%;
+	margin-left: -24px; // ui
+
+	/* animation */
+	-webkit-animation: slide .6s 2; /* Safari 4+ */
+  	-moz-animation:    slide .6s 2; /* Fx 5+ */
+  	-o-animation:      slide .6s 2; /* Opera 12+ */
+  	animation:         slide .6s 2; /* IE 10+, Fx 29+ */
+  	animation-timing-function: ease-out;
+  	animation-delay: 4s;
+}
+.scroll-page-link { 
+	display: block;
+	border-radius: 2px;
+	opacity: .8;
+	&:hover { opacity: 1; }
+}
+
 .section-boas-vindas,
 .section-contratacao,
 .section-consulta-rapida {
@@ -214,7 +292,7 @@
 	width: 100px; // w of image [UI]
 	height: 100px; // h of image [UI]
 	display: block;
-	margin: 1em auto;
+	margin: 0 auto 1em;
 }
 .section-text-contato {
 	@extend .section-text;
@@ -234,20 +312,12 @@
 .divisor-section {
 	display: block;
     margin: 4em auto 4em;
-    width: 80%;
-    height: 5px;
+    width: 100%;
+    height: 1px;
     background-color: #bcbec0;
     border: none;
 }
-// .section-contato = last section of page
-.divisor-section-lineHorizontal {
-	margin-top: 5em;
-	margin-bottom: 5em;
-}
-.section-contato {
-	text-align: center;
-	margin-bottom: 4em;
-}
+.section-consulta-rapida { margin-bottom: 4em; }
 
 // // // // // // // // // // // // // // // // // // // // // // //
 // CONTRATACAO
@@ -325,8 +395,9 @@
 		li { 
 			padding-left: 2.25em;
 			margin-bottom: .75em;
+			&:last-child { margin-bottom: .25em; }
 		}
-		.last-p { margin-bottom: 0; }
+		.list-unstyled { margin-bottom: 0; }
 	}
 	.well-boas-vindas { border-left: 5px solid #f0c40f; } 
 	.well-contratacao-a-pratica-docente { border-left: 5px solid #30bc9c; }
@@ -338,6 +409,7 @@
 		padding-right: $grid40/2;
 		-webkit-box-shadow: none;
 				box-shadow: none;
+		p:last-child { margin-bottom: 0; }
 	}
 	ul { ul { padding-left: 1em; } }
 	li {
@@ -405,5 +477,21 @@
 		}
 		p { margin: 0; }
 	}
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// DUVIDAS E SUGESTOES
+// // // // // // // // // // // // // // // // // // // // // // //
+.iframe-sugestoes-duvidas {
+	display: block;
+	border: 0;
+	margin: 0;
+	min-height: 64em;
+    max-height: 70em;
+	width: 100%;
+	border: 1px solid #e3e3e3;
+	-webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
+        	box-shadow: 
+        	0px 3px 5px -2px rgba(0,0,0,0.1);
 }
 

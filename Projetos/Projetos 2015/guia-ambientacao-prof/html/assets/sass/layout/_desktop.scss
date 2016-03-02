@@ -52,7 +52,7 @@
 		}
 		a { color: $cinza; }
 		// itens do menu global
-		.add-itens-mg {
+		.add-itens-mg, .add-sugestoes-ico {
 		    margin: 1em 0 2em 0;
 			padding: 0;		
 		    li { 
@@ -62,6 +62,10 @@
 
 		    }
 		    li:last-child { margin-bottom: 0; }
+		}
+		.add-itens-mg-home { margin-bottom: 1em; }
+		.add-sugestoes-ico {
+			div { margin-top: 1em; }
 		}
 		// definindo o estilo dos container e os titulos do mg
 		.add-itens-mg-ico { height: 40px; } // h of image [UI]
@@ -104,10 +108,53 @@
 	.button-menu-lateral,
 	.bg-menu-lateral-sd { display: none; }
 
+	// FOOTER
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.footer {
+		padding: 1.5em 0 0;
+		.logo { margin: 0 auto;
+			img {
+			    margin: 0 auto;
+    			display: block;
+			}
+		}
+	}
+	// menu de navegação
+	.menu-footer {
+		border-bottom: none;
+	    margin: 0;
+	    padding: 0;
+	    text-align: left;
+	    li {
+	    	&:last-child { margin-bottom: 0; }
+	    }
+	}
+	.menu-footer-title { margin-top: 0; }
+	.menu-footer-topic { margin-bottom: 0; }
+	.menu-footer-link:hover, .menu-footer-link:focus {
+		color: #fff;
+	}
+	// endereço
+	.endereco-insper {
+		address {
+			text-align: left;
+			line-height: 1.5714;
+			font-size: .9285em;
+			margin-bottom: 0;
+		}
+	}
+	.all-right {
+		margin-top: 1.5em;
+	}
 
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// HOME
 	// // // // // // // // // // // // // // // // // // // // // // //
+	// seta scroll down
+	.scroll-page {
+		left: 50%; // old browser
+		left: calc(50% + 165px);
+	}
 
 	// Header Page [grafismo]
 	.header {
@@ -115,12 +162,15 @@
 			background: url('../img/header/grafema-guia-ambientacao-md.png') 100% 0 no-repeat;
 		}
 	}
-	.logo { margin-top: 1.5em; }
+	.logo { 
+		margin: 1em auto;
+		img { max-width: 10em; }
+	}
 	.title-project {
 	    text-align: left;
-	    margin-top: 2.125em;
-	    font-size: 1.4285em; // 20px
-	    font-weight: 700;
+	    font-size: 2em;
+    	font-weight: 400;
+    	padding: 1em 0;
 	    span {
 	    	font-weight: 400;
 	    }
@@ -128,9 +178,14 @@
 
 	// Header of article page
 	.header-home {
-		background-color: rgba(188,190,192,.3);
+		// background-color: rgba(188,190,192,.3);
 		margin-bottom: 4em;
+		border: 1px solid #e3e3e3;
+		background-position: 10% center;
+		.header-home-title { margin-left: 8em; }
+		.header-home-text { margin-left: 16em; }
 	}
+
 
 
 	// // // // // // // // // // // // // // // // // // // // // // //
@@ -141,6 +196,14 @@
 	.content-text {
 	    padding-bottom: 4em;
 		h2 { margin-top: $grid40; }
+	}
+	
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// DUVIDAS E SUGESTOES
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.iframe-sugestoes-duvidas {
+		min-height: 62em;
+	    max-height: 70em;
 	}
 }
 

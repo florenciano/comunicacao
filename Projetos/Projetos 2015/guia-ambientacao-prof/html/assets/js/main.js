@@ -23,7 +23,7 @@ $(function(){
 		var _hostName = window.location.href, // pega a url completa da página
 			anchor = _hostName.substring(_hostName.indexOf("#")+1); // retire o conteudo da string a partir do #
 		
-		var _h2 = getElements( "h2" ), _h3 = getElements( "h3" );
+		var _h2 = getElements( "h2" ), _h3 = getElements( "h3" ), _h4 = getElements( "h4" );
 
 		// pegar todas as ocorrências do elemento dentro do article
 		function getElements (el) {
@@ -51,6 +51,7 @@ $(function(){
 
 		checkId( _h2 ); // titulos
 		checkId( _h3 ); // subtitulos
+		checkId( _h4 ); // subtitulos2
 
 		// // // // // // // // // // // // // // // // // // // // // // //
 		// // 1.
