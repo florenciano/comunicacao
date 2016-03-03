@@ -33,6 +33,9 @@
 .invisible {
   visibility: hidden;
 }
+.visible {
+  visibility: visible;
+}
 .text-hide {
   @include text-hide;
 }

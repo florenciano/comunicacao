@@ -50,6 +50,12 @@ $cinzaMedio: #bcbec0;
 		width: 0;
 		height: 0;
 	}
+	a[href^='http://'].no-linkBlank:after,
+	a[href^='https://'].no-linkBlank:after {
+		background: none;
+		width: 0;
+		height: 0;
+	}
 }
 // desabilitar a seleção do elemento
 @mixin unselectable($value) {

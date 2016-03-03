@@ -239,26 +239,26 @@
 
 // seta scroll down
 @-webkit-keyframes slide {
-	0%, 100%   { bottom: 4em; }
-	50% { bottom: 2em; }
+	0%, 100%   { bottom: 1em; }
+	50% { bottom: 0em; }
 }
 @-moz-keyframes slide {
-	0%, 100%   { bottom: 4em; }
-	50% { bottom: 2em; }
+	0%, 100%   { bottom: 1em; }
+	50% { bottom: 0em; }
 }
 @-o-keyframes slide {
-	0%, 100%   { bottom: 4em; }
-	50% { bottom: 2em; }
+	0%, 100%   { bottom: 1em; }
+	50% { bottom: 0em; }
 }
 @keyframes slide {
-	0%, 100%   { bottom: 4em; }
-	50% { bottom: 2em; }
+	0%, 100%   { bottom: 1em; }
+	50% { bottom: 0em; }
 }
 .scroll-page {
 	display: block;
 	z-index: 200;
 	position: fixed;
-	bottom: 4em;
+	bottom: 1em;
 	left: 50%;
 	margin-left: -24px; // ui
 
@@ -276,7 +276,6 @@
 	opacity: .8;
 	&:hover { opacity: 1; }
 }
-
 .section-boas-vindas,
 .section-contratacao,
 .section-consulta-rapida {
