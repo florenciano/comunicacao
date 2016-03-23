@@ -65,7 +65,7 @@
 	}
 	// itens: menu global
 	.add-itens-mg-sd, .add-sugestoes-ico {
-	    margin: 0;
+	    margin: 1em 0 0;
 	    padding: 1em 0;
 	    li { 
 	    	margin: 0;
@@ -86,7 +86,6 @@
 		    }
 	    }
 	}
-	// .add-sugestoes-ico { margin-top: 1em; }
 }
 // ico Dúvidas e Sugestões
 .add-sugestoes-ico { border-top: 1px dotted $cinzaMedio; }
