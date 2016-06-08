@@ -49,7 +49,7 @@
 
       * { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
 
-      body { font: normal 14px/1.6875 "verdana", "arial", "sans-serif"; background: #e6e7e8 url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/bg_texture_insper.png") no-repeat center top; }
+      body { font: normal 14px/1.6875 "verdana", "arial", "sans-serif"; background: #e6e7e8 url("https://insper.blackboard.com/bbcswebdav/institution/DEA/page-login-bb/img/bg_texture_insper-2016.png") no-repeat center top; }
 
       .wrapper { background-color: #fff; margin: 0 auto; border: 1px solid #bcbec0; border-radius: 5px; box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); -moz-box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); -webkit-box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); width: 910px; height: 620px; position: absolute; left: 50%; margin-left: -455px; top: 50%; margin-top: -310px; }
 
