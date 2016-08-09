@@ -199,7 +199,28 @@
 	    padding-bottom: 4em;
 		h2 { margin-top: $grid40; }
 	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// PESQUISA
+	// // // // // // // // // // // // // // // // // // // // // // //
 	
+	// stickFooter
+	/* ********************************************************* */
+		/* Qdo a lista da tabela for pequena */
+	/* ********************************************************* */
+	html,body { height: 100% };
+	.container-pesq { min-height: 100% }
+	.main-pesq { overflow: auto; padding-bottom: 200px; } // heigth = footer
+	.footer-pesq { position: relative; margin-top: -160px; }
+
+	// adjust
+	.table-pesquisa {
+		.table-responsive {
+			margin-bottom: $grid40;
+		}
+	}
+
+
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// DUVIDAS E SUGESTOES
 	// // // // // // // // // // // // // // // // // // // // // // //

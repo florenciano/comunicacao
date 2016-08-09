@@ -441,6 +441,25 @@
 .well-contratacao-a-pratica-docente,
 .well-consulta-rapida,
 .well-caution { border-radius: 0; }
+
+// tabs (pesquisa)
+.ui-tabs-button { margin: $grid40 0 ($grid40/2); } // container
+.ui-tabs-anchor { // btns
+    border: 2px solid $verde;
+    padding: 1em 1.5em;
+    border-radius: 2px;
+    background-color: transparent;
+    color: $verde;
+}
+.ui-tabs-anchor + p { margin: 1em 0; }
+.ui-tabs-anchor:hover, .ui-tabs-anchor:focus { background-color: tint($verde, 95%); color: shade($verde, 10%); }
+.ui-state-active, // btn-active
+.ui-state-active:hover,
+.ui-state-active:focus {
+	background-color: $verde;
+	color: #ffffff;
+}
+.tabs-hidden { display: none; } // hidden list 'pesquisas abertas' on ready DOM
 // // // // // // // // // // // // // // // // // // // // // // //
 // QUESTOES OPERACIONAIS
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -452,7 +471,8 @@
 
 // conteúdo em geral
 .content-text {
-	.table-consulta-rapida {
+	.table-consulta-rapida,
+	.table-pesquisa {
 		thead > tr { background-color: #6bb3e3; }
 		thead > tr th { 
 			padding: 1em .25em;
@@ -468,6 +488,9 @@
 		    vertical-align: middle;
 		    text-align: center;
 		}
+	}
+	.table-pesquisa {
+		thead > tr { background-color: $verde; }
 	}
 }
 // comprimindo padding das tabela
