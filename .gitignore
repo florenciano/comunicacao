@@ -9,11 +9,15 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 *.psd
+*.pdf
+*.ai
+*.indd
+*.pptx
 TerritorioMarcaInsper/
 TerritorioMarcaInsper
 guidelinePWC/
-purposebrochure.pdf
 appComexTAI/
+workbook-design-ee/
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
