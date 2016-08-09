@@ -9,16 +9,19 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 *.psd
+<<<<<<< HEAD
 *.pdf
 *.ai
 *.indd
 *.pptx
 *.docx
+=======
+>>>>>>> parent of fb92f2b... add file type
 TerritorioMarcaInsper/
 TerritorioMarcaInsper
 guidelinePWC/
+purposebrochure.pdf
 appComexTAI/
-workbook-design-ee/
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
