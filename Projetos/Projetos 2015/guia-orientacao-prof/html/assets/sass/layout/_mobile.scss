@@ -493,13 +493,21 @@
 	.table-pesquisa {
 		thead > tr { background-color: $verde; }
 	}
+	.table-responsive {
+		// formatando iframe do google Docs
+		iframe {
+		    width: 100%;
+		    display: block;
+		    border: 1px solid #e3e3e3;
+		    height: 30em; // testing... 
+		    padding: 0;
+		}
+	}
 }
 // comprimindo padding das tabela
 .content-text {
 	.table-consulta-rapida {
-		td { 
-			padding: 4px 2px;
-		}
+		td { padding: 4px 2px; }
 		p { margin: 0; }
 	}
 }

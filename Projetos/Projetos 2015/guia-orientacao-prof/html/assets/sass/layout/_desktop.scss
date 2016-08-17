@@ -198,6 +198,9 @@
 	.content-text {
 	    padding-bottom: 4em;
 		h2 { margin-top: $grid40; }
+		.table-responsive {
+			iframe { height: 50em; }
+		}
 	}
 
 	// // // // // // // // // // // // // // // // // // // // // // //
