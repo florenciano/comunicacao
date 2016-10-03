@@ -1,0 +1,412 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Code project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PRESET & VARIABLES
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// GRID //
+$grid40: 40px;
+$grid30: 30px;
+
+// COLOR //
+$azul: rgb(192,0,38); // novo vermelho
+$verde: rgb(192,0,38); // novo vermelho também, ó é vermelho também!
+$roxo: rgb(140,70,170);
+$cinza: #414042;
+
+// MIXIN'S //
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    		transition: $transition;
+}
+@mixin gradient() {
+	background: -webkit-linear-gradient(top, $azul , $verde); // For Safari 5.1 to 6.0 //
+	background: -o-linear-gradient(top, $azul, $verde); // For Opera 11.1 to 12.0 //
+	background: -moz-linear-gradient(top, $azul, $verde); // For Firefox 3.6 to 15 //
+	background: linear-gradient(to bottom, $azul , $verde); // Standard syntax //
+}
+
+@mixin make_link() {
+	color: $azul;
+	&:visited { color: $azul; }
+	&:hover, &:active, &:focus { color: darken($azul, 7%); }
+	&[href^="http://"]:after,
+	&[href^="https://"]:after {
+		content: "";
+		width: .825em;
+		height: .825em;
+		background: url("../img/a/blank.png") center center no-repeat;
+	 	background-size: 100%;
+		display: inline-block;
+	 	margin-left: .25em;
+	}
+}
+
+// PRESET //
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// * {
+// 	@include transition(all .20s ease);
+// }
+
+body { 
+	color: $cinza;
+	background: url("../img/crossword.png") left top repeat;
+}
+.container { background: #ffffff; }
+
+table {
+	thead {
+		th { 
+			color: #ffffff;
+			background-color: $azul;
+		}
+	}
+}
+
+@import "icones/*.png" ;
+@include all-icones-sprites;
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// TP/TI/index.html
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	padding: ($grid40/2) ($grid40/4) ;
+	h1 {
+		color: $cinza;	
+		font-size: 2.25em;
+	    font-weight: 700;
+		line-height: 1.125em;
+		margin: 0;
+	}
+	a:not(.no-link-blank) { @include make_link() }
+	.txt { margin: ($grid40/2) 0; }
+	// section: strands
+	.itens {
+		@include make-md-column(4);
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: $grid40/2;
+		.img-ico {
+			display: block;
+			width: 120px; // larg da img
+			height: 150px; // alt da img
+			margin: 0 auto
+		}
+		> h2 {
+			color: $verde;
+			font-size: 1.8em;
+			margin: ($grid40/4) 0 ($grid40/2);
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+	.itens-tp {
+		@include make-md-column(6);
+		padding-left: 0;
+		padding-right: 0;
+	}
+	//section: steps
+	.steps {
+		.table, .table-responsive { margin-bottom: 0; }
+	}
+	footer {
+		h4 {
+			font-weight: 700;
+			font-size: 1em;
+			margin: 0;
+		}
+		p { margin: 0; }
+		li { 
+			@include make-sm-column(6);
+			margin-bottom: $grid40/2;
+			padding-bottom: $grid40/2;
+			border-bottom: 1px solid rgb(235,235,235);
+			&:last-child { border-bottom: none; }
+			a {
+				color: $cinza;
+				display: block;
+				padding-top: .25em;
+				&:before {
+					content: "";
+					width: 1.75em;
+					height: 1em;
+					background: url("../img/a/email.png") center center no-repeat;
+				 	margin-right: .25em;
+				 	display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+// Responsive: tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[role="main"] {
+		article {
+			width: 91.33%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		footer {
+			margin-top: $grid40;
+			li { 
+				padding-left: 0;
+				padding-right: 0;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+// Responsive: desktop | large desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	.container { 
+		-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+				box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+		border: 1px solid rgb(235,235,235);
+	}
+	div[role="main"] {
+		article {
+			width: 100%;
+		}
+		.txt, .container-table {
+			width: 75%;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		.itens {
+			padding-left: $grid40/4;
+			padding-right: $grid40/4;
+		}
+		footer {
+			width: 75%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// CRITERIOS DE EXCELENCIA EM ENSINO
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	header {
+		h2 {
+			font-size: 1.6em;
+			margin: ($grid40/2) 0 0;
+		}
+	}
+	// section: strands (cee)
+	.strands-cee {
+		.row-cee {
+			@include make-md-column(6);
+			padding-left: 0;
+			padding-right: 0;
+			.itens { 
+				@include make-sm-column(6);
+				@include make-md-column(6);
+			}
+		}
+	}
+	.table-criterio {
+		margin: $grid40/2 0;
+		table {
+			ul {
+				padding-left: $grid40/2;
+				margin-bottom: 0;
+				li {
+					margin-bottom: $grid40/4;
+					&:last-child{ margin-bottom: 0; }
+				}
+			}
+		}
+	}
+}
+
+// Tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[role="main"] {
+		header {
+			h2 { 
+				width: 91.33%;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		}
+	}
+
+}
+
+// Desktop | large desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	div[role="main"] {
+		header h2, .table-criterio table {
+				width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+		}
+		.table-criterio {
+			table {
+				tr {
+					td:first-child { width: 12em; }
+				}
+			}
+		}
+	}
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// SUBMETER RELATÓRIO DE AUTOAVALIAÇÃO DOCENTE: TUTORIAL
+// // // // // // // // // // // // // // // // // // // // // // //
+div[role="main"] {
+	.content {
+		.first-title{ margin-top: 0; }
+		h3 {
+			font-size: 1.25em;
+		    margin: $grid40 0 ($grid40/8);
+		    font-weight: 700;
+		}
+		figure {
+			margin: ($grid40/4) 0;
+			img {
+				// border: 1px solid rgb(235,235,235);
+				padding: 2px;
+				border-radius: 2px;
+			}
+			figcaption {
+				border: 1px solid $verde;
+				padding: ($grid40/4);
+			    border-radius: 2px;
+			    margin: ($grid40/8) 0 ($grid40/2);
+			    position: relative;
+			    padding-left: 3em;
+			    .number {
+		    	    font-size: 1.25em;
+				    width: 1.37em;
+				    height: 1.37em;
+				    display: block;
+				    text-align: center;
+				    background-color: $azul;
+				    color: #ffffff;
+				    border-radius: 50%;
+				    // position
+				    position: absolute;
+				    left: .5em;
+				    top: 50%;
+				    margin-top: -.675em;
+			    }
+			}
+		}
+		.caution {
+			color: #8a6d3b;
+		    background-color: #fcf8e3;
+		    border: 1px solid #faebcc;
+		    border-radius: 4px;
+		    padding: $grid40/4;
+		    margin-bottom: $grid40;
+		    p { margin: 0; }
+		}
+	}
+}
+
+// Tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[role="main"] {
+		.content {
+			figure figcaption {
+				width: 75%;
+				margin-left: 12.5%;
+				
+			}
+			.caution {
+				width: 60%;
+				margin-left: 20%;
+			}
+			figure {
+				img { 
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}
+
+// Desktop | large Desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	div[role="main"] {
+		// body...
+	}
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PÁGINA INICIAL: ESCOLHA DO PERFIL
+// // // // // // // // // // // // // // // // // // // // // // //
+.container-index { 
+	margin-top: 5% !important; // sobrescrever a especificidade da class no bootstrap
+}
+div[role="main"] {
+	.txt-home {
+		p {
+			font-size: 125%;
+			margin: ($grid40/2) 0;
+			text-align: center;
+		}
+	}
+	.type-profile {
+		text-align: center;
+		margin-bottom: $grid40/2;
+		.itens {
+			margin: ($grid40/4) 0;
+			a {
+				display: block;
+				font-size: 125%;
+			}
+			// remove ico target '_blank'
+			.no-ico-link-index:after { display: none; }
+		}
+		.img-ico-profile {
+			display: block;
+			height: 95px; // w of img
+			width: 85px; // h of img
+			margin: 0 auto;
+		}
+	}
+}
+
+// Tablet
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 768px) {
+	div[roele="main"] {
+		.txt-home {
+			p { font-size: 150%; }
+		}
+		.type-profile {
+			.itens { margin: ($grid40/2) 0; }
+		}
+	}
+}
+
+// Desktop | large Desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media (min-width: 992px) {
+	div[role="main"] {
+		.type-profile {
+			.itens { @include make-md-column(6);}
+		}
+	}
+}
