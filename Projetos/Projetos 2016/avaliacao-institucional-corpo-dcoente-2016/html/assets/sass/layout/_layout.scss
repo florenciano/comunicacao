@@ -11,10 +11,9 @@ $grid40: 40px;
 $grid30: 30px;
 
 // COLOR //
-$azul: rgb(192,0,38); // novo vermelho
-$verde: rgb(192,0,38); // novo vermelho também, ó é vermelho também!
-$roxo: rgb(140,70,170);
-$cinza: #414042;
+$vermelho: rgb(219,5,52);
+$amarelo: rgb(250,166,26); // amarelo gradient (UI)
+$cinza: rgb(65,65,65);
 
 // MIXIN'S //
 @mixin transition($transition) {
@@ -22,16 +21,15 @@ $cinza: #414042;
     		transition: $transition;
 }
 @mixin gradient() {
-	background: -webkit-linear-gradient(top, $azul , $verde); // For Safari 5.1 to 6.0 //
-	background: -o-linear-gradient(top, $azul, $verde); // For Opera 11.1 to 12.0 //
-	background: -moz-linear-gradient(top, $azul, $verde); // For Firefox 3.6 to 15 //
-	background: linear-gradient(to bottom, $azul , $verde); // Standard syntax //
+	background: -webkit-linear-gradient(top, $vermelho , $vermelho); // For Safari 5.1 to 6.0 //
+	background: -o-linear-gradient(top, $vermelho, $vermelho); // For Opera 11.1 to 12.0 //
+	background: -moz-linear-gradient(top, $vermelho, $vermelho); // For Firefox 3.6 to 15 //
+	background: linear-gradient(to bottom, $vermelho , $vermelho); // Standard syntax //
 }
-
 @mixin make_link() {
-	color: $azul;
-	&:visited { color: $azul; }
-	&:hover, &:active, &:focus { color: darken($azul, 7%); }
+	color: $vermelho;
+	&:visited { color: $vermelho; }
+	&:hover, &:active, &:focus { color: darken($vermelho, 7%); }
 	&[href^="http://"]:after,
 	&[href^="https://"]:after {
 		content: "";
@@ -44,64 +42,75 @@ $cinza: #414042;
 	}
 }
 
+// IMPORTS //
+@import "icones/*.png" ;
+@include all-icones-sprites;
+
 // PRESET //
 // // // // // // // // // // // // // // // // // // // // // // //
-
-// * {
-// 	@include transition(all .20s ease);
-// }
 
 body { 
 	color: $cinza;
 	background: url("../img/crossword.png") left top repeat;
 }
-.container { background: #ffffff; }
+
+.container { 
+	background: #ffffff;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+			box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+	border: 1px solid rgb(235,235,235);
+    margin: 2em auto;
+	border-radius: 5px;
+	padding: $grid40/2;
+}
 
 table {
 	thead {
 		th { 
 			color: #ffffff;
-			background-color: $azul;
+			background-color: $vermelho;
 		}
 	}
 }
 
-@import "icones/*.png" ;
-@include all-icones-sprites;
+ul {
+	li {
+		margin-bottom: 3px;
+	}
+}
 
 // // // // // // // // // // // // // // // // // // // // // // //
-// TP/TI/index.html
+// CRITERIOS DE EXCELENCIA EM ENSINO
 // // // // // // // // // // // // // // // // // // // // // // //
 
 div[role="main"] {
-	padding: ($grid40/2) ($grid40/4) ;
-	h1 {
+	.img-title {
+		display: block;
+	    max-width: 100%;
+	    height: auto;
+	}
+	.title-page {
 		color: $cinza;	
 		font-size: 2.25em;
-	    font-weight: 700;
-		line-height: 1.125em;
-		margin: 0;
+		margin: 1em 0 0;
 	}
 	a:not(.no-link-blank) { @include make_link() }
 	.txt { margin: ($grid40/2) 0; }
+	
 	// section: strands
 	.itens {
 		@include make-md-column(4);
 		padding-left: 0;
 		padding-right: 0;
-		margin-top: $grid40/2;
 		.img-ico {
 			display: block;
-			width: 120px; // larg da img
-			height: 150px; // alt da img
-			margin: 0 auto
+			width: 100px; // larg da img
+			height: 125px; // alt da img
 		}
 		> h2 {
-			color: $verde;
-			font-size: 1.8em;
-			margin: ($grid40/4) 0 ($grid40/2);
-			text-align: center;
-			font-weight: 700;
+			color: $vermelho;
+			font-size: 1.5em;
+			margin: ($grid40/4) 0;
 		}
 	}
 	.itens-tp {
@@ -109,101 +118,12 @@ div[role="main"] {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	
 	//section: steps
 	.steps {
 		.table, .table-responsive { margin-bottom: 0; }
 	}
-	footer {
-		h4 {
-			font-weight: 700;
-			font-size: 1em;
-			margin: 0;
-		}
-		p { margin: 0; }
-		li { 
-			@include make-sm-column(6);
-			margin-bottom: $grid40/2;
-			padding-bottom: $grid40/2;
-			border-bottom: 1px solid rgb(235,235,235);
-			&:last-child { border-bottom: none; }
-			a {
-				color: $cinza;
-				display: block;
-				padding-top: .25em;
-				&:before {
-					content: "";
-					width: 1.75em;
-					height: 1em;
-					background: url("../img/a/email.png") center center no-repeat;
-				 	margin-right: .25em;
-				 	display: inline-block;
-				}
-			}
-		}
-	}
-}
 
-// Responsive: tablet
-// // // // // // // // // // // // // // // // // // // // // // //
-@media (min-width: 768px) {
-	div[role="main"] {
-		article {
-			width: 91.33%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		footer {
-			margin-top: $grid40;
-			li { 
-				padding-left: 0;
-				padding-right: 0;
-				border-bottom: none;
-			}
-		}
-	}
-}
-
-// Responsive: desktop | large desktop
-// // // // // // // // // // // // // // // // // // // // // // //
-@media (min-width: 992px) {
-	.container { 
-		-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
-				box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
-		border: 1px solid rgb(235,235,235);
-	}
-	div[role="main"] {
-		article {
-			width: 100%;
-		}
-		.txt, .container-table {
-			width: 75%;
-		    margin-left: auto;
-		    margin-right: auto;
-		}
-		.itens {
-			padding-left: $grid40/4;
-			padding-right: $grid40/4;
-		}
-		footer {
-			width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-}
-
-
-// // // // // // // // // // // // // // // // // // // // // // //
-// CRITERIOS DE EXCELENCIA EM ENSINO
-// // // // // // // // // // // // // // // // // // // // // // //
-
-div[role="main"] {
-	header {
-		h2 {
-			font-size: 1.6em;
-			margin: ($grid40/2) 0 0;
-		}
-	}
 	// section: strands (cee)
 	.strands-cee {
 		.row-cee {
@@ -229,6 +149,68 @@ div[role="main"] {
 			}
 		}
 	}
+
+	// footer
+	footer {
+		margin: 2em 0;
+		h4 {
+			font-weight: 700;
+			font-size: 1em;
+			margin: 0;
+		}
+		p { margin: 0; }
+		ul { padding-left: $grid40; } // default metrics browser
+		li { 
+			@include make-sm-column(6);
+			margin-bottom: $grid40/2;
+			padding-bottom: $grid40/2;
+			a {
+				color: $cinza;
+				display: block;
+				padding-top: .25em;
+				&:before {
+					content: "";
+					width: 1.75em;
+					height: 1em;
+					background: url("../img/a/email.png") center center no-repeat;
+				 	margin-right: .25em;
+				 	display: inline-block;
+				}
+			}
+		}
+		.logo {
+			clear: both;
+			text-align: center;
+			a {
+				display: inline-block;
+    			margin: .25em;
+			}
+			img { max-width: 8em; }
+		}
+	}
+}
+
+// Desktop | large desktop
+// // // // // // // // // // // // // // // // // // // // // // //
+@media (min-width: 992px) {
+	div[role="main"] {
+		header h2, .table-criterio table {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+		}
+		.table-criterio {
+			table {
+				tr {
+					td:first-child { 
+						width: 12em;
+						vertical-align: middle;
+    					text-align: center;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Tablet
@@ -246,25 +228,22 @@ div[role="main"] {
 
 }
 
-// Desktop | large desktop
+// Mobile
 // // // // // // // // // // // // // // // // // // // // // // //
-@media (min-width: 992px) {
+@media (max-width: 767px) {
+	.container { margin: 0 auto; }
 	div[role="main"] {
-		header h2, .table-criterio table {
-				width: 75%;
-				margin-left: auto;
-				margin-right: auto;
-		}
-		.table-criterio {
-			table {
-				tr {
-					td:first-child { width: 12em; }
-				}
-			}
-		}
+		.img-title { display: none; } // hide banner
+		.title-page { // small size title page
+			font-size: 1.8em;
+			margin: 0;
+		} 
+		ul { padding-left: $grid40/2; } // reindent padding left of the bullet's
 	}
 }
 
+
+/*
 // // // // // // // // // // // // // // // // // // // // // // //
 // SUBMETER RELATÓRIO DE AUTOAVALIAÇÃO DOCENTE: TUTORIAL
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -284,7 +263,7 @@ div[role="main"] {
 				border-radius: 2px;
 			}
 			figcaption {
-				border: 1px solid $verde;
+				border: 1px solid $vermelho;
 				padding: ($grid40/4);
 			    border-radius: 2px;
 			    margin: ($grid40/8) 0 ($grid40/2);
@@ -296,7 +275,7 @@ div[role="main"] {
 				    height: 1.37em;
 				    display: block;
 				    text-align: center;
-				    background-color: $azul;
+				    background-color: $vermelho;
 				    color: #ffffff;
 				    border-radius: 50%;
 				    // position
@@ -350,7 +329,6 @@ div[role="main"] {
 		// body...
 	}
 }
-
 
 // // // // // // // // // // // // // // // // // // // // // // //
 // PÁGINA INICIAL: ESCOLHA DO PERFIL
@@ -410,3 +388,5 @@ div[role="main"] {
 		}
 	}
 }
+*/
+
