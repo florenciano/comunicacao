@@ -4,3 +4,35 @@
 //  PRESET
 /////////////////////////////////////////////////////////////////////
 
+// grid
+$grid40: 			2.5em; // 40px = default browser
+$grid20: 			$grid40/2;
+
+// color
+$cinza-insper3: 	rgb(65,65,65);
+$cinza-insper2: 	rgb(190,190,190);
+$cinza-insper1: 	rgb(230,230,230);
+
+/////////////////////////////////////////////////////////////////////
+.wrapper { padding: $grid20 / 4; }
+
+/* HEADER */
+
+.container-logos-page {
+	margin: 1em auto;
+}
+
+// definir a largura do logo
+.logos-page {
+	max-width: 75%;
+}
+
+// formating font style Title Page
+.title-page {
+	letter-spacing: -.02em;
+    margin: 0 auto 1em 0;
+    color: $cinza-insper3;
+
+}
+
+/*  SECTION CONTENT  */
