@@ -1,0 +1,24 @@
+// PRESET
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media screen {
+	
+	/* icon in link with proprietary '_blank' */
+	a[target="_blank"]:after {
+		content: "";
+		width: 1px; //define here
+		height: 1px; //define here
+		display: inline-block;
+		background: url("path-of-ico-here") center center no-repeat;
+	 	margin-left: 1px; //define here
+	 	background-size: 100%;
+	}
+
+	// insert transitin in all links
+	a { @include transition(all .20s ease);}
+
+	// // example sprite
+	// @import "ico-menuzinho/amarelo/*.png";
+	// @include all-amarelo-sprites;
+	
+}

@@ -1,0 +1,22 @@
+// // // // // // // // // // // // // // // // // // // // //
+// PRINT
+// // // // // // // // // // // // // // // // // // // // // // //
+@media print {
+
+	@page { margin: 1,5cm; }
+	body { line-height: 1.55em; }
+	img { max-width: 100%; }
+	div[role="main"] {
+		width: 100%;
+		margin: 0;
+		float: none !important;
+		p a,
+		li a { word-wrap: break-word; }
+		table {
+			thead { 
+				font-weight: 700;
+				display: table-header-group;
+			}
+		}
+	}
+}

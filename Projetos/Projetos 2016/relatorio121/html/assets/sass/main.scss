@@ -1,0 +1,19 @@
+//  import bootstrap
+@import "_bootstrap.scss"; // componentes
+
+// import helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// import layout
+@import "layout/preset";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/mobile";
+@import "layout/tablet";
+@import "layout/desktop";
+@import "layout/print";
+
+
+// import plugins (if there)
+@import "_plugins.scss";
