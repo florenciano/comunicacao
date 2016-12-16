@@ -1,7 +1,36 @@
+// // // // // // // // // // // // // // // // // // // // // // //
 // HEADER
 // // // // // // // // // // // // // // // // // // // // // // //
-.header {
-
-	background-color: $magenta;
+.container-header {
+	@include transition(all .20s ease);
 	
+	height: 80px; // height direction art
+	background: $colorPrimary url("../img/header/header-mobile.png") center center no-repeat;
+}	
+
+
+
+// TABLET
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media screen and (min-width: $screen-sm) {
+	
+	.container-header {
+		height: 150px; // height direction art
+		background: $colorPrimary url("../img/header/header-tablet.png") center center no-repeat;
+	}	
+}
+
+
+
+// DESKTOP
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media screen and (min-width: $screen-md) {
+	
+	.container-header {
+		height: 200px; // height direction art
+		background: $colorPrimary url("../img/header/header-desktop.png") center center no-repeat;
+	}	
+
 }

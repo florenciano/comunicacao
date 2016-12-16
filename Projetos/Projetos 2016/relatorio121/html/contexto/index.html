@@ -16,8 +16,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <p>Header</p>
+        <div class="container container-header">
         </div>
     </header>
     
@@ -26,7 +25,7 @@
             <div id="main" role="main">
                 <div class="content clearfix">
                     <!-- navigation  mobile-->
-                    <nav class="navbar navbar-default col-md-4">
+                    <nav class="navbar navbar-default my-navbar col-md-4">
                         <div class="container-fluid">
                             <div class="navbar-header"> <!-- menu hamburguer for mobile -->
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -39,26 +38,26 @@
                             </div>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="../">Sumário Executivo</a></li>
-                                    <li class="active"><a href="contexto/">Contexto <span class="sr-only">(current)</span></a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metodologia <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="metodologia/#objetivos">Objetivos</a></li>
-                                            <li><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                            <li><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                            <li><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                            <li><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                                    <li class="my-navbar-itens"><a href="../">Sumário Executivo</a></li>
+                                    <li class="my-navbar-itens active"><a href="../contexto/">Contexto</a></li>
+                                    <li class="my-navbar-itens">
+                                        <a href="javascript:void(0)" class="" role="button" data-toggle="collapse" data-target="#submenu" aria-expanded="false">Metodologia <span class="sr-only">(current)</span> <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu">
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#objetivos" class="link-my-navbar-collapse">Objetivos</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#design-thinking" class="link-my-navbar-collapse">Design Thinking</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#professores-entrevistados" class="link-my-navbar-collapse">Professores Entrevistados</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="link-my-navbar-collapse">Realização das Entrevistas Dialogadas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#equipe-envolvida" class="link-my-navbar-collapse">Equipe Envolvida</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="resultados/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resultados <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="resultados/#personas">Personas</a></li>
-                                            <li><a href="resultados/#percepcoes">Percepções</a></li>
+                                    <li class="my-navbar-itens">
+                                        <a href="javascript:void(0)" role="button" data-toggle="collapse" data-target="#submenu-resultados" aria-expanded="false">Resultados <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu-resultados">
+                                            <li class="itens-my-navbar-collapse"><a href="../resultados/#personas" class="link-my-navbar-collapse">Personas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../resultados/#percepcoes" class="link-my-navbar-collapse">Percepções</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="proximos-passos/">Próximos Passos</a></li>
+                                    <li class=""><a href="../proximos-passos/">Próximos Passos</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -75,15 +74,15 @@
                             <h3 class="title-l3-page">Escopo de Atuação do DEA</h3>
                             <p>O DEA dividiu-se em três frentes de trabalho em Ensino e Aprendizagem, as quais reportam diretamente ao Conselho Deliberativo do Insper:</p>
                             <ul class="list-page list-unstyled clearfix">
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Experiência de Aprendizagem</p></strong>
                                     <p>As ações de Inovação têm como objetivo principal apoiar os esforços de aprimoramento dos programas de ensino, de acordo com a demanda das coordenações acadêmicas em função dos resultados das avaliações de qualidade.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Apoio à Gestão e Desenvolvimento Docente</strong></p>
                                     <p>As ações de desenvolvimento do corpo docente decorrem das necessidades identificadas nas avaliações da qualidade, visando ao aprimoramento contínuo do professor por meio de cursos de formação, seminários, workshops e atendimento individual e personalizado ao docente.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Garantia da Qualidade</strong></p>
                                     <p>A Avaliação do processo de ensino e aprendizagem se dá de forma independente. Compara a prática frente aos padrões de excelência. Utiliza diferentes indicadores e formas de avaliação, seja pelo próprio DEA ou por especialistas externos ou internos ao Insper.</p>
                                 </li>
@@ -93,27 +92,27 @@
                             <h3 class="title-l3-page">Princípios de Atuação do DEA</h3>
                             <p>Nessa transição, estabeleceu-se seis princípios de atuação do DEA:</p>
                             <ul class="list-page list-unstyled clearfix">
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Foco no Aluno</p></strong>
                                     <p>O foco da atuação do DEA é a efetiva aprendizagem do aluno, objetivo que norteia todas as ações de desenvolvimento e inovação.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Gestão por Evidências</strong></p>
                                     <p>O DEA trabalha sempre com base em evidências, buscando avaliar a efetiva contribuição das ações de melhoria, desenvolvimento e inovação para o aprendizado do aluno.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Colaboração</strong></p>
                                     <p>A garantia da qualidade somente pode ser alcançada por meio de uma atuação colaborativa entre o DEA, as direções e coordenações acadêmicas e os professores, que compartilham dos mesmos objetivos de excelência no ensino.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Professor como Elemento-Chave</strong></p>
                                     <p>O professor é o elemento chave da gestão da aprendizagem com base em evidências e da adoção de inovações no ensino; nele são centradas todas as ações de desenvolvimento.</p>
                                 </li>
-                                <li class="item-list-page col-md-4">
+                                <li class="item-list-page col-sm-4">
                                     <p class="title-list-page"><strong>Melhoria Contínua</strong></p>
                                     <p>Metas sempre realísticas são definidas para o curto e médio prazos, mas elas são continuamente revisadas buscando níveis mais exigentes ao longo do tempo, visando à excelência.</p>
                                 </li>
-                                 <li class="item-list-pag col-md-4e">
+                                 <li class="item-list-pag col-sm-4">
                                     <p class="title-list-page"><strong>Construção do Conhecimento</strong></p>
                                     <p>Ênfase na pesquisa, análise, validação e registro das experiências de Ensino e Aprendizagem do Insper para construção do conhecimento em Educação de Excelência.</p>
                                 </li>
@@ -138,59 +137,58 @@
 
     <footer class="footer">
         <div class="container">    
-            <div class="row">
+            <div class="row container-footer-desk">
                     <div class="col-md-12">
-                        <div class="col-md-2">
-                            <p>Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA">dea@insper.edu.br</a></p>
+                        <div class="col-md-2 footer-col">
+                            <p class="footer-name-dea">Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA" class="footer-link-dea">dea@insper.edu.br</a></p>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="/">Sumário Executivo</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../" class="links-footer">Sumário Executivo</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="contexto/">Contexto</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../contexto/" class="links-footer">Contexto</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="metodologia/">Metodologia</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#objetivos">Objetivos</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#registros-entrevistas-dialogadas">Registros das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../metodologia/" class="links-footer">Metodologia</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#objetivos" class="links-footer">Objetivos</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#design-thinking" class="links-footer">Design Thinking</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#profesores-entrevistados" class="links-footer">Professores Entrevistados</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Realização das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Registros das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#equipe-envolvida" class="links-footer">Equipe Envolvida</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="resultados/">Resultados</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#personas">Personas</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#percepcoes">Percepções</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../resultados/" class="links-footer">Resultados</a></li>
+                                <li class="indent-links-footer"><a href="../resultados/#personas" class="links-footer">Personas</a></li>
+                                <li class="indent-links-footer"><a href="../resultados/#percepcoes" class="links-footer">Percepções</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="proximos-passos/">Próximos Passos</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../proximos-passos/" class="links-footer">Próximos Passos</a></li>
                             </ul>
                         </div>           
                     </div>
                 </div>
-                <hr>
                 <div class="row footer-signature">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <a href="#"><img src="../assets/img/footer/logoInsperFooter.png" alt="Insper"></a>
+                            <img src="../assets/img/footer/logoInsperFooter-white.png" alt="Insper">
                         </div>
                         <div class="span6">
-                            <p class="muted pull-right"><address>Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: 11 4504-2400</address></p>
+                            <p class="muted pull-right addres"><address class="address-footer-signature">Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: <span class="no-wrap">11 4504-2400</span></address></p>
                         </div>
                     </div>
                 </div>
+                <div class="row all-right">Todos os direitos reservados</div>
             </div>
-        <div class="all-right"></div>
     </footer>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

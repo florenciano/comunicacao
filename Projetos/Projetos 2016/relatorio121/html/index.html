@@ -16,8 +16,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <p>Header</p>
+        <div class="container container-header">
         </div>
     </header>
     
@@ -26,7 +25,7 @@
             <div id="main" role="main">
                 <div class="content clearfix">
                     <!-- navigation  mobile-->
-                    <nav class="navbar navbar-default col-md-4">
+                    <nav class="navbar navbar-default my-navbar col-md-4">
                         <div class="container-fluid">
                             <div class="navbar-header"> <!-- menu hamburguer for mobile -->
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -39,26 +38,26 @@
                             </div>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="/">Sumário Executivo <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="contexto/">Contexto</a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metodologia <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="metodologia/#objetivos">Objetivos</a></li>
-                                            <li><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                            <li><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                            <li><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                            <li><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                                    <li class="my-navbar-itens active"><a href="#">Sumário Executivo</a></li>
+                                    <li class="my-navbar-itens"><a href="contexto/">Contexto</a></li>
+                                    <li class="my-navbar-itens">
+                                        <a href="javascript:void(0)" class="" role="button" data-toggle="collapse" data-target="#submenu" aria-expanded="false">Metodologia <span class="sr-only">(current)</span> <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu">
+                                            <li class="itens-my-navbar-collapse"><a href="metodologia/#objetivos" class="link-my-navbar-collapse">Objetivos</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="metodologia/#design-thinking" class="link-my-navbar-collapse">Design Thinking</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="metodologia/#professores-entrevistados" class="link-my-navbar-collapse">Professores Entrevistados</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="metodologia/#realizacao-entrevistas-dialogadas" class="link-my-navbar-collapse">Realização das Entrevistas Dialogadas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="metodologia/#equipe-envolvida" class="link-my-navbar-collapse">Equipe Envolvida</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="resultados/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resultados <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="resultados/#personas">Personas</a></li>
-                                            <li><a href="resultados/#percepcoes">Percepções</a></li>
+                                    <li class="my-navbar-itens">
+                                        <a href="javascript:void(0)" role="button" data-toggle="collapse" data-target="#submenu-resultados" aria-expanded="false">Resultados <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu-resultados">
+                                            <li class="itens-my-navbar-collapse"><a href="resultados/#personas" class="link-my-navbar-collapse">Personas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="resultados/#percepcoes" class="link-my-navbar-collapse">Percepções</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="proximos-passos/">Próximos Passos</a></li>
+                                    <li class=""><a href="proximos-passos/">Próximos Passos</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -70,7 +69,17 @@
                                 <h1>Relatório - Interação one-to-one</h1>
                             </header>
                             <h2 class="title-l2-page">Sumário Executivo</h2>
-                           <p><mark>A topic sentence usually comes at the beginning of a paragraph; that is, it is usually the first sentence in a formal academic paragraph.  (Sometimes this is not true, but as you practice writing with this online lesson site, please keep to this rule unless you are instructed otherwise.)  Not only is a topic sentence the first sentence of a paragraph, but, more importantly, it is the most general sentence in a paragraph.  What does "most general" mean?  It means that there are not many details in the sentence, but that the sentence introduces an overall idea that you want to discuss later in the paragraph.</mark></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quas debitis culpa, distinctio officia libero. Iusto quasi accusamus similique quis aspernatur sint repellendus cumque aliquid aperiam esse vel odit, impedit. Odit officia rerum debitis, et! Fuga labore, cum id ipsa omnis odit doloribus libero, quos autem impedit. Porro.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit, architecto.</p>
+                            <ul>
+                                <li>Etiam posuere quam ac quam</li>
+                                <li>Fusce eget urna</li>
+                                <li>Integer lacinia</li>
+                                <li>In in enim a arcu imperdiet malesuada</li>
+                                <li>Proin in tellus sit</li>
+                                <li>Integer pellentesque quam vel velit</li>
+                            </ul>
+                            <p>Lorem ipsum dolor.</p>
                         </article>
                     </div>
                 </div>
@@ -80,59 +89,58 @@
 
     <footer class="footer">
         <div class="container">    
-            <div class="row">
+            <div class="row container-footer-desk">
                     <div class="col-md-12">
-                        <div class="col-md-2">
-                            <p>Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA">dea@insper.edu.br</a></p>
+                        <div class="col-md-2 footer-col">
+                            <p class="footer-name-dea">Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA" class="footer-link-dea">dea@insper.edu.br</a></p>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="/">Sumário Executivo</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="#" class="links-footer">Sumário Executivo</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="contexto/">Contexto</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="contexto/" class="links-footer">Contexto</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="metodologia/">Metodologia</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#objetivos">Objetivos</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#registros-entrevistas-dialogadas">Registros das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="metodologia/" class="links-footer">Metodologia</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#objetivos" class="links-footer">Objetivos</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#design-thinking" class="links-footer">Design Thinking</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#profesores-entrevistados" class="links-footer">Professores Entrevistados</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Realização das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Registros das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="metodologia/#equipe-envolvida" class="links-footer">Equipe Envolvida</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="resultados/">Resultados</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#personas">Personas</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#percepcoes">Percepções</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="resultados/" class="links-footer">Resultados</a></li>
+                                <li class="indent-links-footer"><a href="resultados/#personas" class="links-footer">Personas</a></li>
+                                <li class="indent-links-footer"><a href="resultados/#percepcoes" class="links-footer">Percepções</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="proximos-passos/">Próximos Passos</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="proximos-passos/" class="links-footer">Próximos Passos</a></li>
                             </ul>
                         </div>           
                     </div>
                 </div>
-                <hr>
                 <div class="row footer-signature">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <a href="#"><img src="assets/img/footer/logoInsperFooter.png" alt="Insper"></a>
+                            <img src="assets/img/footer/logoInsperFooter-white.png" alt="Insper">
                         </div>
                         <div class="span6">
-                            <p class="muted pull-right"><address>Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: 11 4504-2400</address></p>
+                            <p class="muted pull-right addres"><address class="address-footer-signature">Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: <span class="no-wrap">11 4504-2400</span></address></p>
                         </div>
                     </div>
                 </div>
+                <div class="row all-right">Todos os direitos reservados</div>
             </div>
-        <div class="all-right"></div>
     </footer>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

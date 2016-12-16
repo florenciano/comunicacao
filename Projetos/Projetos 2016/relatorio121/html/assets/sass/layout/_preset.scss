@@ -1,24 +1,83 @@
+// // // // // // // // // // // // // // // // // // // // // // //
 // PRESET
 // // // // // // // // // // // // // // // // // // // // // // //
 
-@media screen {
-	
-	/* icon in link with proprietary '_blank' */
-	a[target="_blank"]:after {
-		content: "";
-		width: 1px; //define here
-		height: 1px; //define here
-		display: inline-block;
-		background: url("path-of-ico-here") center center no-repeat;
-	 	margin-left: 1px; //define here
-	 	background-size: 100%;
+
+// LAYOUT
+// // // // // // // // // // // // // // // // // // // // // // //
+// evitando quebras de texto em dispositivos pequenos
+.no-wrap { white-space: nowrap; }
+
+// inserindo um respiro entre o fim do conteúdo e o começo do footer
+div[role="main"] {
+	padding-bottom: 4em;
+	background-color: #ffffff;
+}
+
+// style guide para imagens.
+// OBS: Incluir esta classe somente para as imagens do conteúdo 'article'
+.image-page {
+    margin: 1em auto;
+    background-color: #ffffff;
+    padding: 5px;
+    border: 1px solid $colorCinza-1;
+    // box-shadow
+	@include box-shadow-image();
+}
+
+// Title H1
+// // // // // // // // // // // // // // // // // // // // // // //
+.titlePrimary-page {
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-weight: 700;
+    color: darken($colorCinza-1, 60%);
+    font-size: 32px;
+}
+
+// Title H2
+// // // // // // // // // // // // // // // // // // // // // // //
+.title-l2-page {
+	letter-spacing: -1px;
+    margin: 2em 0 1em 0;
+    color: #ee2a5d;
+}
+
+// Title H3
+// // // // // // // // // // // // // // // // // // // // // // //
+.title-l3-page {
+    border-bottom: 1px solid $colorCinza-1;
+    padding-bottom: .25em;
+    margin: 2em 0 .5em 0;
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// NAVBAR
+// // // // // // // // // // // // // // // // // // // // // // //
+// Definindo a cor dos links para o 'navbar'
+.navbar {
+	a { color: $colorCinza-1; }
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// FOOTER
+// // // // // // // // // // // // // // // // // // // // // // //
+// Definindo a cor dos links para o 'footer'
+.footer {
+	a:not(.footer-link-dea) {
+		color: darken($colorCinza-1, 50%);
+		&:hover, { color: darken($colorCinza-1, 70%); }
+		&:visited, &:active { color: darken($colorCinza-1, 70%); }
 	}
+}
 
-	// insert transitin in all links
-	a { @include transition(all .20s ease);}
-
-	// // example sprite
-	// @import "ico-menuzinho/amarelo/*.png";
-	// @include all-amarelo-sprites;
-	
+// inserindo o ícone de nova janela                                                                              
+a[target="_blank"]:after {
+	content: "";
+	width: 12px; //define here
+	height: 12px; //define here
+	display: inline-block;
+	background: url("../img/link-blank.png") center center no-repeat;
+ 	margin-left: .25em; //define here
+ 	background-size: 100%;
 }

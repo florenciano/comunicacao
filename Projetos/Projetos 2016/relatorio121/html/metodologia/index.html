@@ -16,8 +16,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <p>Header</p>
+        <div class="container container-header">
         </div>
     </header>
     
@@ -26,7 +25,7 @@
             <div id="main" role="main">
                 <div class="content clearfix">
                     <!-- navigation  mobile-->
-                    <nav class="navbar navbar-default col-md-4">
+                    <nav class="navbar navbar-default my-navbar col-md-4">
                         <div class="container-fluid">
                             <div class="navbar-header"> <!-- menu hamburguer for mobile -->
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -39,26 +38,26 @@
                             </div>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="../">Sumário Executivo</a></li>
-                                    <li class=""><a href="contexto/">Contexto</a></li>
-                                    <li class="dropdown active">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metodologia <span class="sr-only">(current)</span> <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="metodologia/#objetivos">Objetivos</a></li>
-                                            <li><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                            <li><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                            <li><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                            <li><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                                    <li class="my-navbar-itens"><a href="../">Sumário Executivo</a></li>
+                                    <li class="my-navbar-itens"><a href="../contexto/">Contexto</a></li>
+                                    <li class="my-navbar-itens active">
+                                        <a href="javascript:void(0)" class="" role="button" data-toggle="collapse" data-target="#submenu" aria-expanded="false">Metodologia <span class="sr-only">(current)</span> <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu">
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#objetivos" class="link-my-navbar-collapse">Objetivos</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#design-thinking" class="link-my-navbar-collapse">Design Thinking</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#professores-entrevistados" class="link-my-navbar-collapse">Professores Entrevistados</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="link-my-navbar-collapse">Realização das Entrevistas Dialogadas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../metodologia/#equipe-envolvida" class="link-my-navbar-collapse">Equipe Envolvida</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="resultados/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resultados <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="resultados/#personas">Personas</a></li>
-                                            <li><a href="resultados/#percepcoes">Percepções</a></li>
+                                    <li class="my-navbar-itens">
+                                        <a href="javascript:void(0)" role="button" data-toggle="collapse" data-target="#submenu-resultados" aria-expanded="false">Resultados <span class="caret"></span></a>
+                                        <ul class="collapse my-navbar-collapse" id="submenu-resultados">
+                                            <li class="itens-my-navbar-collapse"><a href="../resultados/#personas" class="link-my-navbar-collapse">Personas</a></li>
+                                            <li class="itens-my-navbar-collapse"><a href="../resultados/#percepcoes" class="link-my-navbar-collapse">Percepções</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="proximos-passos/">Próximos Passos</a></li>
+                                    <li class=""><a href="../proximos-passos/">Próximos Passos</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -67,7 +66,7 @@
                     <div class="content-text clearfix col-md-8">
                         <article>
                             <header class="">
-                                <h1>Relatório - Interação one-to-one</h1>
+                                <h1 class="titlePrimary-page">Relatório - Interação one-to-one</h1>
                             </header>
                             <h2 class="title-l2-page">Metodologia</h2>
                             <section class="section-page" id="objetivos">
@@ -94,14 +93,14 @@
                                 <div class="container-image-page">
                                     <img src="../assets/img/content/metodologia-design-thinking.png" alt="Convite Interação one-to-one" class="image-page img-responsive center-block">
                                 </div>
-                                <div class="image-page">
+                                <div class="container-image-page">
                                     <img src="../assets/img/content/metodologia-design-thinking-2.png" alt="Convite Interação one-to-one" class="image-page img-responsive center-block">
                                 </div>
                                 <p>Além disso, em diversos momentos foram construídos protótipos validados diretamente com os envolvidos, os quais geravam feedbacks e aperfeiçoamentos ao longo de todo o desenrolar do projeto, conforme apresenta-se a seguir.</p>
                             </section>
                             
                             <section class="section-page" id="professores-entrevistados">
-                                <h3 class="title-l3-page" id=professores-entrevistados>Professores Entrevistados</h3>
+                                <h3 class="title-l3-page">Professores Entrevistados</h3>
                                 <p>Foram convidados para a Interação One-to-One 286 professores alocados em 2016 nos programas de Graduação, Pós-Graduação Lato Sensu, Pós-Graduação Stricto Senso e Educação Executiva, tanto professores de dedicação exclusiva, quanto professores de tempo parcial.</p>
                                 <p>A participação era voluntária e, em geral, os professores poderiam escolher horários no período do final da manhã (entre 10h e 12h) ou no final da tarde (entre 17h e 19h).</p>
                                 <p>Dentre os convidados, aceitaram o convite e foram entrevistados 109 professores, amostra que totaliza 38% do universo estudado. As entrevistas foram realizadas entre maio e outubro de 2016.</p>
@@ -109,21 +108,21 @@
                                 <div class="container-image-page">
                                     <div class="col-md-6">
                                         <p class="title-image-page"><strong>Distribuição de professores de dedicação exclusiva</strong></p>
-                                        <img src="" alt="Gráfico - Distribuição de professores de dedicação exclusiva" class="image-page img-responsive center-block">
+                                        <img src="../assets/img/content/grafico-distribuicao-prof-dedicao-exclusiva.png" alt="Gráfico - Distribuição de professores de dedicação exclusiva" class="image-page img-responsive center-block">
                                     </div>
                                     <div class="col-md-6">
                                         <p class="title-image-page"><strong>Distribuição de professores de tempo parcial</strong></p>
-                                        <img src="" alt="Gráfico - Distribuição de professores de tempo parcial" class="image-page img-responsive center-block">
+                                        <img src="../assets/img/content/grafico-distribuicao-prof-tempo-parcial.png" alt="Gráfico - Distribuição de professores de tempo parcial" class="image-page img-responsive center-block">
                                     </div>
                                 </div>    
                                 <p>Dentre os 109 entrevistados, 63 lecionam na Graduação, 63 na Pós-Graduação Lato Sensu, 23 em Stricto Senso e 30 na Educação Executiva, conforme representação a seguir:</p>
                                 <div class="container-image-page">
                                     <img src="../assets/img/content/distribuicao-professores-insper-nos-programas.png" alt="Gráfico - Distribuição de professores de todos os programas" class="image-page img-responsive center-block">
                                     <ul class="container-legend list-unstyled">
-                                        <li class="item-container-legend"><span class="name-legend">Grad</span> <strong>Graduações</strong> em Admistração, Economia e Engenharias.</li>
-                                        <li class="item-container-legend"><span class="item-name-legend">PGLS</span> <strong>Pós-Graduação Lato Sensu</strong>: Certificates, MBAs, APFs, LL.M, LL.C.s</li>
-                                        <li class="item-container-legend"><span class="item-name-legend">PGSS</span> <strong>Pós-Graduação Stricto Sensu</strong>: Mestrados Profissionais em Administração e Economia e Doutorado em Economia.</li>
-                                        <li class="item-container-legend"><span class="item-name-legend">Ed. Exec.</span> <strong>Educação Executiva</strong>: Cursos livres e programas customizados.</li>
+                                        <li class="item-container-legend"><span class="item-name-legend grad"></span> <strong>Graduações</strong> em Admistração, Economia e Engenharias.</li>
+                                        <li class="item-container-legend"><span class="item-name-legend pgls"></span> <strong>Pós-Graduação Lato Sensu</strong>: Certificates, MBAs, APFs, LL.M, LL.C.s</li>
+                                        <li class="item-container-legend"><span class="item-name-legend pgss"></span> <strong>Pós-Graduação Stricto Sensu</strong>: Mestrados Profissionais em Administração e Economia e Doutorado em Economia.</li>
+                                        <li class="item-container-legend"><span class="item-name-legend ed-exec"></span> <strong>Educação Executiva</strong>: Cursos livres e programas customizados.</li>
                                     </ul>
                                 </div>   
                             </section>
@@ -194,59 +193,58 @@
 
     <footer class="footer">
         <div class="container">    
-            <div class="row">
+            <div class="row container-footer-desk">
                     <div class="col-md-12">
-                        <div class="col-md-2">
-                            <p>Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA">dea@insper.edu.br</a></p>
+                        <div class="col-md-2 footer-col">
+                            <p class="footer-name-dea">Desenvolvimento de Ensino e Aprendizagem<br><a href="mailto:dea@insper.edu.br" title="Entre em contato com o DEA" class="footer-link-dea">dea@insper.edu.br</a></p>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="/">Sumário Executivo</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../" class="links-footer">Sumário Executivo</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="contexto/">Contexto</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../contexto/" class="links-footer">Contexto</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="metodologia/">Metodologia</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#objetivos">Objetivos</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#design-thinking">Design Thinking</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#profesores-entrevistados">Professores Entrevistados</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#realizacao-entrevistas-dialogadas">Realização das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#registros-entrevistas-dialogadas">Registros das Entrevistas Dialogadas</a></li>
-                                <li class="indent-links-footer"><a href="metodologia/#equipe-envolvida">Equipe Envolvida</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../metodologia/" class="links-footer">Metodologia</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#objetivos" class="links-footer">Objetivos</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#design-thinking" class="links-footer">Design Thinking</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#profesores-entrevistados" class="links-footer">Professores Entrevistados</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Realização das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#realizacao-entrevistas-dialogadas" class="links-footer">Registros das Entrevistas Dialogadas</a></li>
+                                <li class="indent-links-footer"><a href="../metodologia/#equipe-envolvida" class="links-footer">Equipe Envolvida</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="resultados/">Resultados</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#personas">Personas</a></li>
-                                <li class="indent-links-footer"><a href="resultados/#percepcoes">Percepções</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../resultados/" class="links-footer">Resultados</a></li>
+                                <li class="indent-links-footer"><a href="../resultados/#personas" class="links-footer">Personas</a></li>
+                                <li class="indent-links-footer"><a href="../resultados/#percepcoes" class="links-footer">Percepções</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
-                            <ul class="unstyled">
-                                <li><a href="proximos-passos/">Próximos Passos</a></li>
+                        <div class="col-md-2 footer-col">
+                            <ul class="unstyled container-links-footer">
+                                <li class="itens-links-footer"><a href="../proximos-passos/" class="links-footer">Próximos Passos</a></li>
                             </ul>
                         </div>           
                     </div>
                 </div>
-                <hr>
                 <div class="row footer-signature">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <a href="#"><img src="../assets/img/footer/logoInsperFooter.png" alt="Insper"></a>
+                            <img src="../assets/img/footer/logoInsperFooter-white.png" alt="Insper">
                         </div>
                         <div class="span6">
-                            <p class="muted pull-right"><address>Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: 11 4504-2400</address></p>
+                            <p class="muted pull-right addres"><address class="address-footer-signature">Rua Quatá, 300 – Vila Olímpia - São Paulo/SP - Brasil - <span class="no-wrap">CEP: 04546-042</span> - Tel: <span class="no-wrap">11 4504-2400</span></address></p>
                         </div>
                     </div>
                 </div>
+                <div class="row all-right">Todos os direitos reservados</div>
             </div>
-        <div class="all-right"></div>
     </footer>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -4,7 +4,22 @@
 
 @media screen and (min-width: $screen-md) { 
 
-	p {  }
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// PRESET
+	// // // // // // // // // // // // // // // // // // // // // // //
+
+	// background da página
+	body { background-color: $colorCinza-1; }
+
+	// definindo transições em todos os links
+	a { @include transition(all .20s ease);}
+
+	.titlePrimary-page { margin-top: 24px; }
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// PAGE: Resultados
+	// // // // // // // // // // // // // // // // // // // // // // //
+
 	
 }
 

@@ -1,5 +1,182 @@
 // // // // // // // // // // // // // // // // // // // // // // //
-// HOME
+// PAGE: Contexto
 // // // // // // // // // // // // // // // // // // // // // // //
 
-p { }
+// itens do escopo de atuação do DEA
+.title-list-page {
+    color: $colorPrimary;
+    margin: 2em 0 1em;
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PAGE: Metodologia
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// títulos dos gráficos
+.title-image-page {
+	margin: 2em 0 1em;
+    text-align: center;
+}
+
+// legenda da distribuição dos professores por programa
+.container-legend.list-unstyled { margin-top: 2em; }
+.item-container-legend { margin: 1em 0; }
+.item-name-legend {
+    background-color: transparent;
+    padding: .25em .5em;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+}
+.grad { 
+	background-color: #8fa1de;
+	border: 1px solid #3e58bd;
+} 
+.pgls { 
+	background-color: #ef9191;
+	border: 1px solid #F32422;
+} 
+.pgss { 
+	background-color: #8ed890;
+	border: 1px solid #40b142;
+} 
+.ed-exec { 
+	background-color: #FFFFA6;
+	border: 1px solid #d8d639;
+}
+
+// roteiro da Realização das Entrevistas Dialogadas
+.roteiro-entrevistas-dialogadas {
+    background-color: tint($colorPrimary, 95%);
+    border: 1px solid lighten($colorPrimary, 30%);
+    padding: 1em;
+}
+.title-roteiro-entrevistas-dialogadas { color: darken($colorPrimary, 5%); }
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PAGE: Resultados
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// Persona
+.container-persona {
+    border: 1px dotted $colorPrimary;
+    border-top-color: transparent;
+}
+.persona-image-description { margin: 1em 0; }
+.container-persona { margin: 2em 0; }
+
+// Título do persona
+.persona-name {
+    background-color: #ee2a5d;
+}
+.persona-name-title {
+    color: #fff;
+    padding: 1em;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+// Table Description
+// // // // // // // // // // // // // // // // // // // // // // //
+
+.container-persona-description {
+    width: 100%;
+    margin-top: 1em;
+    tr td:nth-child(1) {
+        font-weight: 700;
+        text-align: right;
+        width: 50%;
+        border-right: 1px solid $colorCinza-1;
+        padding-right: 1em;
+        vertical-align: middle;
+    }
+    tr td:nth-child(2) { padding-left: 1em; }
+    tr td {
+        padding: .5em;
+    }
+}
+
+// Imagem do persona
+// // // // // // // // // // // // // // // // // // // // // // //
+
+.persona-description {
+    border: 1px solid $colorSecundary;
+    color: $colorSecundary;
+    padding: .5em;
+}
+
+.persona-characteristic { margin: 1em 0; }
+.title-characteristic { margin: 0; }
+
+// Listas
+// Em geral elas recebem esta configuração
+// // // // // // // // // // // // // // // // // // // // // // //
+.persona-characteristic {
+    &>div { margin: 2em 0; }
+    ul { padding: 0; margin: 0; }
+    li { list-style: none; margin: .5em 0; }
+}
+// As exceções são tratadas aqui
+ul.container-persona-characteristic-goals,
+ul.container-persona-characteristic-frustations {
+    padding-left: 2em;
+}
+li.itens-persona-characteristic-goals,
+li.itens-persona-characteristic-frustations, {
+    list-style-type: disc;
+}
+
+// Progress
+// // // // // // // // // // // // // // // // // // // // // // //
+.progress {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 1px solid $colorCinza-1;
+    @include box-shadow(none);
+}
+
+// Persona Bloquote
+// // // // // // // // // // // // // // // // // // // // // // //
+
+.container-blockquote {
+    margin: 2em 0;
+    padding: 0;
+}
+.persona-cite {
+    border: none;
+    border-top: 1px dotted $colorPrimary;
+    border-bottom: 1px dotted $colorPrimary;
+    padding: 1em 0;
+    // ico apostrofe
+    background: transparent url("../img/content/quotes.png") .5em 1.5em no-repeat;
+}
+.persona-cite-phrase {
+    margin: 0 0 0 72px;
+}
+// avatar do persona
+.persona-avatar {
+    margin-top: 1em;
+    text-align: center;
+}
+.persona-avatar-image,
+.persona-avatar-name { display: block; }
+.persona-avatar-image {
+    margin: 0 auto;
+}
+.persona-avatar-name {
+    text-transform: uppercase;
+    font-size: 75%;
+    color: darken($colorCinza-1, 50%);
+    margin-top: 1em;
+}
+// hashtag
+.persona-avatar-hashtag {
+    color: #ee2a5d;
+    margin: .5em 0;
+    font-size: 75%;
+    span { 
+        margin: 0 .25em;
+        white-space: no-wrap;
+    }
+}

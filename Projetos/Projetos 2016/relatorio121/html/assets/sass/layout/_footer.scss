@@ -1,5 +1,127 @@
+// // // // // // // // // // // // // // // // // // // // // // //
 // FOOTER
-// // // // // // // // // // // // // // // // // // // // // // // 
+// // // // // // // // // // // // // // // // // // // // // // //
+// // footer all
 .footer {
+	background-color: $colorCinza-1;
+}
+// cada coluna do footer
+.footer-col {
+	margin-bottom: 0;
+    padding: 0;
+}
+// a coluna do link 'Sumário executivo'
+// Por ser a 1º ela recebe um border-top
+.footer-col:nth-child(2) {
+	border-top: 1px solid darken($colorCinza-1, 20%);
+}
+// coluna do nome e email DEA
+.footer-name-dea {
+	margin: 3em 0;
+    text-align: center;
+}
+	.footer-link-dea {
+		display: block;
+	    padding: .5em 0;
+	    font-size: 125%;
+	}
+// cada <ul> das colunas
+.container-links-footer {
+    margin: 0;
+    padding: 0;
+}
+// <li> das colunas
+.itens-links-footer {
+    border-bottom: 1px solid darken($colorCinza-1, 20%);
+}
+// <li> indentados de algumas colunas
+.indent-links-footer {
+    padding-left: 2em;
+    border-bottom: 1px dotted darken($colorCinza-1, 20%);
+}
+
+	.itens-links-footer,
+	.indent-links-footer { list-style: none; }
+
+// links
+.links-footer {
+	display: block;
+    padding: 1em 0;
+}
+// // linha da assinatura
+// container
+.footer-signature {
+	background-color: $colorPrimary;
+	color: #ffffff;
+    text-align: center;
+    padding: 2em 0;
+}
+// address
+.address-footer-signature {
+	margin: 0;
+}
+// copyright
+.all-right {
+	background-color: darken($colorPrimary, 20%);
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+// TABLET
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media screen and (min-width: $screen-sm) {
+	
+	// code body here...
+
+}
+
+
+// DESKTOP
+// // // // // // // // // // // // // // // // // // // // // // //
+
+@media screen and (min-width: $screen-md) {
+	
+	.footer { border-top: 2px solid darken($colorCinza-1, 20%); }
+	
+	// aumentando espaço entre a área dos links
+	.container-footer-desk { padding: 2em 0; }
+	
+	// nome e email DEA
+	.footer-name-dea {
+		margin: 0;
+		text-align: left;
+		padding: .5em .25em;
+	}
+	.footer-link-dea {
+		padding: 0;
+		font-size: 100%;
+	}
+
+	.footer-col { padding: 0 10px; } // resetando as configurações default do grid system
+	
+	// removendo as bordas do 'Sumário Executivo'
+	.footer-col:nth-child(2) { border-top: none;}
+	
+	// removendo as bordas do topo
+	.itens-links-footer { border-bottom: none; }
+
+	// ajustes o tamanho dos links do footer
+	.links-footer { padding: .5em 0; }
+
+	// ajustando os links dos subtópicos
+	.indent-links-footer {
+		border-bottom: none;
+		border-top: 1px dotted darken($colorCinza-1, 20%);
+		padding-left: .5em;
+		margin-left: 0;
+		font-size: 87.5%;
+		font-style: italic;
+	}
+
+	// posicionando endereço insper
+	.address-footer-signature { margin: 1em 0; }
 
 }

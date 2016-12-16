@@ -4,7 +4,16 @@
 
 @media screen and (min-width: $screen-sm) {
 	
-	p {  }
+	// // inserindo um respiro após o fim do conteúdo
+	// // com o início do footer
+	div[role="main"] {
+		background-color: #ffffff;
+	}
+
+	// // // // // // // // // // // // // // // // // // // // // // //
+	// Page: Resultados
+	// // // // // // // // // // // // // // // // // // // // // // //
+	.persona-avatar { margin-top: 0; }
 
 }
 
