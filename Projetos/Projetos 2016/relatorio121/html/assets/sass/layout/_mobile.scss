@@ -5,8 +5,20 @@
 // itens do escopo de atuação do DEA
 .title-list-page {
     color: $colorPrimary;
-    margin: 2em 0 1em;
+    margin: .5em 0;
 }
+
+// ícones para do escopo de atuação do DEA e princípios de atuação DEA
+.ico-list-page {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin-top: 2em;
+}
+.ico-atuacao-dea { margin-top: 1em; }
+
+// @import "icos/*.png";
+// @include all-icos-sprites;
 
 // // // // // // // // // // // // // // // // // // // // // // //
 // PAGE: Metodologia
