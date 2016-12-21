@@ -2,54 +2,58 @@
 // FOOTER
 // // // // // // // // // // // // // // // // // // // // // // //
 // // footer all
-.footer {
-	background-color: $colorCinza-1;
-}
+.footer { background-color: $colorCinza-1; }
 // cada coluna do footer
+
 .footer-col {
 	margin-bottom: 0;
     padding: 0;
 }
+
 // a coluna do link 'Sumário executivo'
 // Por ser a 1º ela recebe um border-top
-.footer-col:nth-child(2) {
-	border-top: 1px solid darken($colorCinza-1, 20%);
-}
+.footer-col:nth-child(2) { border-top: 1px solid darken($colorCinza-1, 20%); }
+
 // coluna do nome e email DEA
 .footer-name-dea {
 	margin: 3em 0;
     text-align: center;
 }
-	.footer-link-dea {
-		display: block;
-	    padding: .5em 0;
-	    font-size: 125%;
-	}
-// cada <ul> das colunas
+.footer-link-dea {
+	display: block;
+    padding: .5em 0;
+    font-size: 125%;
+}
+
+// ul
+// // // // // // // // // // // // // // // // // // // // // // //
 .container-links-footer {
     margin: 0;
     padding: 0;
 }
-// <li> das colunas
+// li
 .itens-links-footer {
     border-bottom: 1px solid darken($colorCinza-1, 20%);
 }
-// <li> indentados de algumas colunas
+// li - nível 1
 .indent-links-footer {
     padding-left: 2em;
     border-bottom: 1px dotted darken($colorCinza-1, 20%);
 }
-
-	.itens-links-footer,
-	.indent-links-footer { list-style: none; }
+// a
+.itens-links-footer,
+.indent-links-footer { list-style: none; }
+// ul li ul li
+.indent-l2-links-footer { padding-left: 3em; }
 
 // links
 .links-footer {
 	display: block;
     padding: 1em 0;
 }
+
 // // linha da assinatura
-// container
+// // // // // // // // // // // // // // // // // // // // // // //
 .footer-signature {
 	background-color: $colorPrimary;
 	color: #ffffff;
@@ -91,14 +95,10 @@
 	
 	// nome e email DEA
 	.footer-name-dea {
-		margin: 0;
-		text-align: left;
-		padding: .5em .25em;
+		margin: 1em 0;
+		padding: .5em .25em 2em;
 	}
-	.footer-link-dea {
-		padding: 0;
-		font-size: 100%;
-	}
+	.footer-link-dea { padding: 0; }
 
 	.footer-col { padding: 0 10px; } // resetando as configurações default do grid system
 	
@@ -120,6 +120,9 @@
 		font-size: 87.5%;
 		font-style: italic;
 	}
+
+	// ajustando os sublinks dos tópicos
+	.indent-l2-links-footer { padding-left: 1em; }
 
 	// posicionando endereço insper
 	.address-footer-signature { margin: 1em 0; }

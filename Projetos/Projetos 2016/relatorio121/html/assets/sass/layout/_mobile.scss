@@ -17,9 +17,6 @@
 }
 .ico-atuacao-dea { margin-top: 1em; }
 
-// @import "icos/*.png";
-// @include all-icos-sprites;
-
 // // // // // // // // // // // // // // // // // // // // // // //
 // PAGE: Metodologia
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -69,18 +66,17 @@
 // PAGE: Resultados
 // // // // // // // // // // // // // // // // // // // // // // //
 
-// Persona
+// Dashboard Persona
+// // // // // // // // // // // // // // // // // // // // // // //
 .container-persona {
     border: 1px dotted $colorPrimary;
     border-top-color: transparent;
+    margin: 2em 0;
 }
-.persona-image-description { margin: 1em 0; }
-.container-persona { margin: 2em 0; }
 
-// Título do persona
-.persona-name {
-    background-color: #ee2a5d;
-}
+// Nome do persona
+// // // // // // // // // // // // // // // // // // // // // // //
+.persona-name { background-color: #ee2a5d; }
 .persona-name-title {
     color: #fff;
     padding: 1em;
@@ -89,9 +85,8 @@
     text-align: center;
 }
 
-// Table Description
+// Descrição do persona - tabela
 // // // // // // // // // // // // // // // // // // // // // // //
-
 .container-persona-description {
     width: 100%;
     margin-top: 1em;
@@ -111,42 +106,102 @@
 
 // Imagem do persona
 // // // // // // // // // // // // // // // // // // // // // // //
-
 .persona-description {
     border: 1px solid $colorSecundary;
     color: $colorSecundary;
     padding: .5em;
 }
 
+// Cada seção do dashboard do persona
+// // // // // // // // // // // // // // // // // // // // // // //
 .persona-characteristic { margin: 1em 0; }
-.title-characteristic { margin: 0; }
 
-// Listas
+.title-characteristic { 
+    margin: 0;
+    font-size: 125%;
+}
+
+// Hashtag - Adjetives
+// // // // // // // // // // // // // // // // // // // // // // //
+.adjetives {
+    margin: 1em 0;
+    text-align: center;
+}
+.hashtag-adjetives {
+    text-transform: uppercase;
+    line-height: 3em;
+    span { 
+        border: 1px solid $colorPrimary;
+        padding: .25em .5em;
+        border-radius: 4px;
+    }
+}
+
+// Listas - Progress bar
 // Em geral elas recebem esta configuração
 // // // // // // // // // // // // // // // // // // // // // // //
 .persona-characteristic {
-    &>div { margin: 2em 0; }
     ul { padding: 0; margin: 0; }
-    li { list-style: none; margin: .5em 0; }
+    li { list-style: none; margin: 0; }
 }
-// As exceções são tratadas aqui
-ul.container-persona-characteristic-goals,
-ul.container-persona-characteristic-frustations {
-    padding-left: 2em;
-}
-li.itens-persona-characteristic-goals,
-li.itens-persona-characteristic-frustations, {
-    list-style-type: disc;
+// Referências obs: Para personalizar a lista add o elemento antes da classe
+li.itens-persona-characteristic-references {
+    margin: .5em 0; 
 }
 
 // Progress
-// // // // // // // // // // // // // // // // // // // // // // //
 .progress {
     margin-bottom: 0;
     border-radius: 0;
-    border: 1px solid $colorCinza-1;
+    border: 1px solid darken($colorCinza-1, 10%);
+    height: 32px;
     @include box-shadow(none);
 }
+.progress-bar {
+    line-height: 32px;
+    padding-left: .5em;
+    text-align: left;
+}
+
+// Referências
+// // // // // // // // // // // // // // // // // // // // // // //
+.list-reference { margin: 0; }
+// descrição
+.persona-references-description {
+    font-size: 87.5%;
+    text-align: center;
+}
+
+// Botão para visualizar a entrevista do persona
+// // // // // // // // // // // // // // // // // // // // // // //
+.container-enterview {
+    margin: 1em 0 6em;
+    text-align: center;
+}
+
+// Entrevista do persona
+// // // // // // // // // // // // // // // // // // // // // // //
+
+// Título da seção
+.title-l4-page {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: darken($colorCinza-1, 30%);
+}
+// Pergunta da entrevista
+.title-l5-page {
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// PAGE: Percepções
+// // // // // // // // // // // // // // // // // // // // // // //
 
 // Persona Bloquote
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -163,8 +218,21 @@ li.itens-persona-characteristic-frustations, {
     // ico apostrofe
     background: transparent url("../img/content/quotes.png") .5em 1.5em no-repeat;
 }
+.persona-cite_book {
+     border-bottom: transparent;
+}
+// modelo padrão dos tesxtos da citação
 .persona-cite-phrase {
     margin: 0 0 0 72px;
+}
+// modelo usado quando só tem texto
+.persona-cite-phrase_only {
+    margin: 0;
+}
+// modelo usado no book
+.persona-cite-phrase_book {
+    text-align: left;
+    font-size: 0.875em;
 }
 // avatar do persona
 .persona-avatar {
@@ -189,6 +257,6 @@ li.itens-persona-characteristic-frustations, {
     font-size: 75%;
     span { 
         margin: 0 .25em;
-        white-space: no-wrap;
+        white-space: nowrap;
     }
 }

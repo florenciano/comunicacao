@@ -25,6 +25,9 @@ div[role="main"] {
 	@include box-shadow-image();
 }
 
+// Ocultar elementos para ser visualizados por meio de scripts
+.ocultar { display: none; } 
+
 // Title H1
 // // // // // // // // // // // // // // // // // // // // // // //
 .titlePrimary-page {
