@@ -40,6 +40,7 @@
 .navbar-default .navbar-nav>li>a {
 	color: darken($colorCinza-1, 70%);
 }
+.navbar-nav>li>a { padding-left: 1em; }
 
 // cor do link do menu 'active'
 .navbar-default .navbar-nav>.active>a,
@@ -62,9 +63,9 @@
 // li
 .itens-my-navbar-collapse {
     list-style: none;
-    padding-left: 2em;
+    padding-left: 1em;
     border-bottom: 1px dotted darken($colorCinza-1, 20%);
-    // &:last-child { border-bottom: none; }
+    &:last-child { border-bottom: none; }
 }
 // a
 .link-my-navbar-collapse {
@@ -77,11 +78,13 @@
     }
 }
 // ul li ul
-.sublist-my-navbar-collapse{ padding-left: 0; }
+.sublist-my-navbar-collapse{ 
+	padding-left: 0;
+}
 // ul li ul li
 .sublist-itens-my-navbar { padding-left: 3em; }
-// ul li ul li a
-.sublist-link-my-navbar { font-style: normal; }
+.sublistTopic-itens-my-navbar { padding-left: 2em; }
+
 
 // TABLET
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -116,6 +119,17 @@
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: 0;
 	}
+
+	// Ajustando todo o conteúdo da sublista
+	// container
+	.my-navbar-collapse { margin: 0; }
+	// principais tópicos
+	.itens-my-navbar-collapse { padding-left: 0; }
+	// links
+	.link-my-navbar-collapse { padding-left: 1em; }
+	// sublist nível 2
+	.sublist-itens-my-navbar { padding: 0 1em !important; }
+
 
 	// cada item do menu com 100% largura
 	.navbar-nav>li { width: 100%; }
