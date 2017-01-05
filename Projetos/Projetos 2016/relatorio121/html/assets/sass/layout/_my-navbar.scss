@@ -9,6 +9,12 @@
 	border-color: $colorPrimary;
 }
 
+// retirando os paddings laterais do menu 
+.navbar-collapse {
+	// padding-left: 0;
+	// padding-right: 0;
+}
+
 // colocando borda nos itens do menu principal
 .my-navbar-itens,
 .navbar-default .navbar-collapse,
@@ -59,11 +65,11 @@
 // ajustando os subitens
 // // // // // // // // // // // // // // // // // // // // // // //
 // ul
-.my-navbar-collapse { padding: 0; }
+.my-navbar-collapse { margin: 0; }
 // li
 .itens-my-navbar-collapse {
     list-style: none;
-    padding-left: 1em;
+    padding-left: 0;
     border-bottom: 1px dotted darken($colorCinza-1, 20%);
     &:last-child { border-bottom: none; }
 }
@@ -73,14 +79,10 @@
 	font-style: italic;
     display: block;
     padding: .75em 0;
-    &:hover {
-    	text-decoration: none;
-    }
+    &:hover { text-decoration: none; }
 }
 // ul li ul
-.sublist-my-navbar-collapse{ 
-	padding-left: 0;
-}
+.sublist-my-navbar-collapse{  padding-left: 0; }
 // ul li ul li
 .sublist-itens-my-navbar { padding-left: 3em; }
 .sublistTopic-itens-my-navbar { padding-left: 2em; }
@@ -113,6 +115,11 @@
 		margin-left: 10px; // glutter grid system
 		margin-right: 10px; // glutter grid system
 	}
+
+	// container da sublista
+	.container-collapse { background-color: rgb(250,250,250); }
+	// container nível 2 da sublista
+	.subcontainer-collapse { background-color: rgb(255,255,255); }
 
 	// Texto 'Menu'
 	.navbar>.container .navbar-brand,

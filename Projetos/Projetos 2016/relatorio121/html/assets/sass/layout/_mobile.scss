@@ -20,7 +20,6 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 // PAGE: Metodologia
 // // // // // // // // // // // // // // // // // // // // // // //
-
 // títulos dos gráficos
 .title-image-page {
 	margin: 2em 0 1em;
@@ -203,7 +202,7 @@ li.itens-persona-characteristic-references {
 // PAGE: Percepções
 // // // // // // // // // // // // // // // // // // // // // // //
 
-// Persona Bloquote
+// Persona Bloquote Default [v1]
 // // // // // // // // // // // // // // // // // // // // // // //
 
 .container-blockquote {
@@ -222,13 +221,9 @@ li.itens-persona-characteristic-references {
      border-bottom: transparent;
 }
 // modelo padrão dos tesxtos da citação
-.persona-cite-phrase {
-    margin: 0 0 0 72px;
-}
+.persona-cite-phrase { margin: 0 0 0 72px; }
 // modelo usado quando só tem texto
-.persona-cite-phrase_only {
-    margin: 0;
-}
+.persona-cite-phrase_only { margin: 0; }
 // modelo usado no book
 .persona-cite-phrase_book {
     text-align: left;
@@ -241,9 +236,7 @@ li.itens-persona-characteristic-references {
 }
 .persona-avatar-image,
 .persona-avatar-name { display: block; }
-.persona-avatar-image {
-    margin: 0 auto;
-}
+.persona-avatar-image { margin: 0 auto; }
 .persona-avatar-name {
     text-transform: uppercase;
     font-size: 75%;
@@ -260,3 +253,40 @@ li.itens-persona-characteristic-references {
         white-space: nowrap;
     }
 }
+
+// Persona Bloquote Percepções
+// // // // // // // // // // // // // // // // // // // // // // //
+// quotes
+.persona-cite-percepecoes  { background-position: center .5em; }
+// frase
+.persona-content-percepcoes {
+    border-left: none;
+    margin-top: 2em;
+}
+.cite-phrase-percepcoes {
+    margin: 0;
+    text-align: center;
+}
+// cada coluna de persona citada
+.persona-talking-percepcoes { margin-bottom: 1em; }
+// nome do persona
+.avatar-name-percepcoes {
+    text-transform: initial;
+    font-size: 100%;
+    margin-top: .25em;
+}
+// ícone do persona
+@import "content/icos-persona/*.png";
+@include all-icos-persona-sprites;
+.ico-persona-percepcoes {
+    width: 80px; // tamanho do ícone
+    height: 80px; // tamanho do ícone
+    display: block;
+    margin: 0 auto;
+}
+// texto de cada persona
+.persona-avatar-text-percepcoes {
+    text-align: left;
+    font-style: italic;
+}
+.persona-avatar-text-percepcoes:nth-child(1) { margin-top: 1em; }

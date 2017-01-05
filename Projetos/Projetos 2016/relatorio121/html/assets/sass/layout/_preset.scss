@@ -25,9 +25,6 @@ div[role="main"] {
 	@include box-shadow-image();
 }
 
-// Ocultar elementos para ser visualizados por meio de scripts
-.ocultar { display: none; } 
-
 // Title H1
 // // // // // // // // // // // // // // // // // // // // // // //
 .titlePrimary-page {
@@ -83,4 +80,12 @@ a[target="_blank"]:after {
 	background: url("../img/link-blank.png") center center no-repeat;
  	margin-left: .25em; //define here
  	background-size: 100%;
+}
+
+// // // // // // // // // // // // // // // // // // // // // // //
+// GENERAL
+// // // // // // // // // // // // // // // // // // // // // // //
+// animando o conteúdo das classes 'section-page' 
+.section-page {
+	@include transition(all .20s ease);
 }

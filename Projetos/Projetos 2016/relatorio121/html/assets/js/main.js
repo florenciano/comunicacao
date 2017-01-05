@@ -7,13 +7,23 @@ $(function(){
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// PAGE: Resultados - Persona - Dedicação Exclusiva
 	// // // // // // // // // // // // // // // // // // // // // // //
+    $.fn.extend({
+        toggleText: function(a, b){
+            return this.text(this.text() == b ? a : b);
+        }
+    });
+
+    var showText = "Ocultar a entrevista de ",
+        hideText = "Veja a entrevista de ";
 
 	// Ver Entrevista do persona Rick
     var verEntrevistaRick = $("#btn-enterview-rick"),
     	conteudoEntrevistaRick = $("#personas-enterview-rick");
 
     verEntrevistaRick.on("click", function(){
-        conteudoEntrevistaRick.fadeToggle("slow");
+        conteudoEntrevistaRick.fadeToggle(400, function() {
+            verEntrevistaRick.toggleText(showText + "Rick", hideText + "Rick");
+        });
     });
 
     // Ver Entrevista do persona Barbara
@@ -21,7 +31,9 @@ $(function(){
     	conteudoEntrevistaBarbara = $("#personas-enterview-barbara");
 
     verEntrevistaBarbara.on("click", function(){
-        conteudoEntrevistaBarbara.fadeToggle("slow");
+        conteudoEntrevistaBarbara.fadeToggle(400, function() {
+            verEntrevistaBarbara.toggleText(showText + "Barbara", hideText + "Barbara");
+        });
     });
 
     // Ver Entrevista do persona John
@@ -29,7 +41,9 @@ $(function(){
     	conteudoEntrevistaJohn = $("#personas-enterview-john");
 
     verEntrevistaJohn.on("click", function(){
-        conteudoEntrevistaJohn.fadeToggle("slow");
+        conteudoEntrevistaJohn.fadeToggle(400, function() {
+            verEntrevistaJohn.toggleText(showText + "John", hideText + "John");
+        });
     });
 
 });
