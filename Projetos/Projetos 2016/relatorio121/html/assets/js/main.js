@@ -7,43 +7,53 @@ $(function(){
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// PAGE: Resultados - Persona - Dedicação Exclusiva
 	// // // // // // // // // // // // // // // // // // // // // // //
-    $.fn.extend({
-        toggleText: function(a, b){
-            return this.text(this.text() == b ? a : b);
-        }
-    });
-
-    var showText = "Ocultar a entrevista de ",
-        hideText = "Veja a entrevista de ";
-
-	// Ver Entrevista do persona Rick
-    var verEntrevistaRick = $("#btn-enterview-rick"),
-    	conteudoEntrevistaRick = $("#personas-enterview-rick");
-
-    verEntrevistaRick.on("click", function(){
-        conteudoEntrevistaRick.fadeToggle(400, function() {
-            verEntrevistaRick.toggleText(showText + "Rick", hideText + "Rick");
+    
+    // Mostra e oculta a seção da entrevista dos personas
+    function showHide (idBtn, idEl, Name) {
+        
+        // prototype objeto global
+        $.fn.extend({
+            toggleText: function(a, b){
+                return this.text(this.text() == b ? a : b);
+            }
         });
-    });
 
-    // Ver Entrevista do persona Barbara
-    var verEntrevistaBarbara = $("#btn-enterview-barbara"),
-    	conteudoEntrevistaBarbara = $("#personas-enterview-barbara");
+        // textos que vão ser aplicados no botão
+        var showText = "Ocultar a entrevista de ",
+            hideText = "Veja a entrevista de ";
 
-    verEntrevistaBarbara.on("click", function(){
-        conteudoEntrevistaBarbara.fadeToggle(400, function() {
-            verEntrevistaBarbara.toggleText(showText + "Barbara", hideText + "Barbara");
+        // toggle conteúdo da entrevista
+        idBtn.on("click", function(){
+            idEl.fadeToggle(400, function(){
+                idBtn.toggleText(showText + Name, hideText + Name);
+            });
         });
-    });
 
-    // Ver Entrevista do persona John
-    var verEntrevistaJohn = $("#btn-enterview-john"),
-    	conteudoEntrevistaJohn = $("#personas-enterview-john");
+    };
 
-    verEntrevistaJohn.on("click", function(){
-        conteudoEntrevistaJohn.fadeToggle(400, function() {
-            verEntrevistaJohn.toggleText(showText + "John", hideText + "John");
-        });
-    });
+    /* Professores de Dedicação Exclusiva */
+
+    // Rick 
+    var verEntrevistaRick = $("#btn-enterview-rick"), conteudoEntrevistaRick = $("#personas-enterview-rick");
+    showHide(verEntrevistaRick, conteudoEntrevistaRick, "Rick");
+    // Barbara 
+    var verEntrevistaBarbara = $("#btn-enterview-barbara"), conteudoEntrevistaBarbara = $("#personas-enterview-barbara");
+    showHide(verEntrevistaBarbara, conteudoEntrevistaBarbara, "Barbara");
+    // John 
+    var verEntrevistaJohn = $("#btn-enterview-john"), conteudoEntrevistaJohn = $("#personas-enterview-john");
+    showHide(verEntrevistaJohn, conteudoEntrevistaJohn, "John");
+
+    /* Professores de Tempo Parcial */
+
+    // Vincent 
+    var verEntrevistaVincent = $("#btn-enterview-vincent"), conteudoEntrevistaVincent = $("#personas-enterview-vincent");
+    showHide(verEntrevistaVincent, conteudoEntrevistaVincent, "Vincent");
+    // Allan 
+    var verEntrevistaAllan = $("#btn-enterview-allan"), conteudoEntrevistaAllan = $("#personas-enterview-allan");
+    showHide(verEntrevistaAllan, conteudoEntrevistaAllan, "Allan");
+     // Michael 
+    var verEntrevistaMichael = $("#btn-enterview-michael"), conteudoEntrevistaMichael = $("#personas-enterview-michael");
+    showHide(verEntrevistaMichael, conteudoEntrevistaMichael, "Michael");
+
 
 });
