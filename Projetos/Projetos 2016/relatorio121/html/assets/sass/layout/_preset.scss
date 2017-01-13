@@ -13,9 +13,9 @@
     bottom: 0;
     z-index: 1000;
     height: 2px;
-	background: -moz-linear-gradient(left,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
-	background: -webkit-linear-gradient(left,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
-	background: linear-gradient(to right,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
+	background: -moz-linear-gradient(left,  $colorPrimary 66%, darken($colorPrimary, 5%) 83%, darken($colorPrimary, 20%) 100%);
+	background: -webkit-linear-gradient(left,  $colorPrimary 66%, darken($colorPrimary, 5%) 83%, darken($colorPrimary, 20%) 100%);
+	background: linear-gradient(to right,  $colorPrimary 66%, darken($colorPrimary, 5%) 83%, darken($colorPrimary, 20%) 100%);
 }
 
 // evitando quebras de texto em dispositivos pequenos

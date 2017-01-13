@@ -128,10 +128,11 @@
         padding: .5em;
     }
 }
+// {DL}
 .description-persona {}
 .description-persona-terms {
     margin-bottom: .25em;
-    padding-bottom: .25em;
+    padding-bottom: 2px;
     border-bottom: 1px solid $colorCinza-1;
 }
 .description-persona-definition { margin: 0 0 1em; }
@@ -250,7 +251,7 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
     border-top: 1px dotted $colorPrimary;
     border-bottom: 1px dotted $colorPrimary;
     padding: 1em 0;
-    font-style: 1.25em; // 16px
+    font-size: 1.25em; // 16px
     // ico apostrofe
     background: transparent url("../img/content/quotes.png") .5em 1.5em no-repeat;
 }

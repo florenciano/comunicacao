@@ -6,11 +6,11 @@ $(function(){
 
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// PAGE: Resultados - Persona - Dedicação Exclusiva
+    //       Resultados - Persona - Tempo Parcial
+    // Mostrar e ocultar a seção da entrevista dos personas
 	// // // // // // // // // // // // // // // // // // // // // // //
-    
-    // Mostra e oculta a seção da entrevista dos personas
+
     function showHide (idBtn, idEl, Name) {
-        
         // prototype objeto global
         $.fn.extend({
             toggleText: function(a, b){
@@ -28,11 +28,9 @@ $(function(){
                 idBtn.toggleText(showText + Name, hideText + Name);
             });
         });
-
-    };
+    }
 
     /* Professores de Dedicação Exclusiva */
-
     // Rick 
     var verEntrevistaRick = $("#btn-enterview-rick"), conteudoEntrevistaRick = $("#personas-enterview-rick");
     showHide(verEntrevistaRick, conteudoEntrevistaRick, "Rick");
@@ -44,7 +42,6 @@ $(function(){
     showHide(verEntrevistaJohn, conteudoEntrevistaJohn, "John");
 
     /* Professores de Tempo Parcial */
-
     // Vincent 
     var verEntrevistaVincent = $("#btn-enterview-vincent"), conteudoEntrevistaVincent = $("#personas-enterview-vincent");
     showHide(verEntrevistaVincent, conteudoEntrevistaVincent, "Vincent");
@@ -62,38 +59,27 @@ $(function(){
     // de acordo com o avanço do scroll.
     // <div class="progressBar" id="progressBar"></div>
     // // // // // // // // // // // // // // // // // // // // // // //
-
+    
     function readingPosition() {
-        var $progress = $( "#progressBar" );
+        var progress = document.getElementById('progressBar');
+        if(progress) { // se a página tiver o elem no DOM
+            function setValues() {
+                var max = document.body.clientHeight - window.innerHeight, // tamanho da tela comparado com o total da pág.
+                    value = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0, // quantos pixels já rodou pra baixo
+                    average = (value / max) * 100; // valor já rodado em porcentagem
+                return average.toString() + "%"; // volta em string e em %
+            }
+            progress.style.width = setValues();
 
-        function setValues() {
-             // altura do documento - altura da janela
-            var getMax = $( document ).innerHeight() - $( window ).innerHeight();
+            document.addEventListener("scroll", function(){
+                progress.style.width = setValues();
+            });
 
-            // posição do scroll da tela
-            var getValue = $( window ).scrollTop(); 
-
-            // valores convertidos em uma escala de 100%
-            var x, y = (getValue / getMax )* 100;
-
-            return x = y.toString() + "%";
-        };
-
-        $progress.css("width", setValues());
-        
-        // seta no progress a quantidade já rolada da tela
-        $( document ).on( "scroll", function() {
-            $progress.css("width", setValues()); 
-        });
-
-        // ao modificar a largura da janela, reconfigurar os valores e atuáliza-los
-        $( window ).on( "resize", function() {
-            $progress.css("width", setValues());
-        });
-        
+            window.addEventListener("resize", function(){
+                progress.style.width = setValues();
+            });
+        }
     }
-
-    readingPosition()
-
+    readingPosition();
 
 });
