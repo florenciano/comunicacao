@@ -56,4 +56,44 @@ $(function(){
     showHide(verEntrevistaMichael, conteudoEntrevistaMichael, "Michael");
 
 
+    // // // // // // // // // // // // // // // // // // // // // // //
+    // PAGE: ALL
+    // Mostra um display no inferior da página
+    // de acordo com o avanço do scroll.
+    // <div class="progressBar" id="progressBar"></div>
+    // // // // // // // // // // // // // // // // // // // // // // //
+
+    function readingPosition() {
+        var $progress = $( "#progressBar" );
+
+        function setValues() {
+             // altura do documento - altura da janela
+            var getMax = $( document ).innerHeight() - $( window ).innerHeight();
+
+            // posição do scroll da tela
+            var getValue = $( window ).scrollTop(); 
+
+            // valores convertidos em uma escala de 100%
+            var x, y = (getValue / getMax )* 100;
+
+            return x = y.toString() + "%";
+        };
+
+        $progress.css("width", setValues());
+        
+        // seta no progress a quantidade já rolada da tela
+        $( document ).on( "scroll", function() {
+            $progress.css("width", setValues()); 
+        });
+
+        // ao modificar a largura da janela, reconfigurar os valores e atuáliza-los
+        $( window ).on( "resize", function() {
+            $progress.css("width", setValues());
+        });
+        
+    }
+
+    readingPosition()
+
+
 });

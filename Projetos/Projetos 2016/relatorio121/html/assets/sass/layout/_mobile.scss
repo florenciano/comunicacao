@@ -17,6 +17,14 @@
 }
 .ico-atuacao-dea { margin-top: 1em; }
 
+// itens da formação educacional dos integrantes do DEA
+.school-education {
+
+}
+.school-education-itens:nth-child(even) {
+    margin: .5em 0;
+}
+
 // // // // // // // // // // // // // // // // // // // // // // //
 // PAGE: Metodologia
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -64,6 +72,24 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 // PAGE: Resultados
 // // // // // // // // // // // // // // // // // // // // // // //
+// Nome de cada persona que aparece nos textos da página
+.name-persona {
+    padding: 0 .25em;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.name-rick {
+    background-color: rgba($colorSecundary,.1); // AZUL
+    border-color: rgba($colorSecundary,.5);
+}
+.name-barbara {
+    background-color: rgba($colorQuintenary,.1); // VERDE
+    border-color: rgba($colorQuintenary,.5);
+}
+.name-john {
+    background-color: rgba($colorQuartenary,.1); // AMARELO
+    border-color: rgba($colorQuartenary,.5);
+}
 
 // Dashboard Persona
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -92,7 +118,7 @@
     tr td:nth-child(1) {
         font-weight: 700;
         text-align: right;
-        width: 50%;
+        width: 40%; // largura da coluna
         border-right: 1px solid $colorCinza-1;
         padding-right: 1em;
         vertical-align: middle;
@@ -102,6 +128,13 @@
         padding: .5em;
     }
 }
+.description-persona {}
+.description-persona-terms {
+    margin-bottom: .25em;
+    padding-bottom: .25em;
+    border-bottom: 1px solid $colorCinza-1;
+}
+.description-persona-definition { margin: 0 0 1em; }
 
 // Imagem do persona
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -144,8 +177,10 @@
     li { list-style: none; margin: 0; }
 }
 // Referências obs: Para personalizar a lista add o elemento antes da classe
-li.itens-persona-characteristic-references {
-    margin: .5em 0; 
+li.itens-persona-characteristic-references { margin: .5em 0; }
+// Rótulo da barra = representa os nomes dos itens que vem da bara de progresso
+.persona-characteristic-label {
+    margin-bottom: .25em;
 }
 
 // Progress
@@ -165,10 +200,11 @@ li.itens-persona-characteristic-references {
 // Referências
 // // // // // // // // // // // // // // // // // // // // // // //
 .list-reference { margin: 0; }
-// descrição
 .persona-references-description {
     font-size: 87.5%;
     text-align: center;
+    // cagando regra. Saiba o momento certo para isto!
+    em { color: rgb(150,150,150); }
 }
 
 // Botão para visualizar a entrevista do persona
@@ -214,6 +250,7 @@ li.itens-persona-characteristic-references {
     border-top: 1px dotted $colorPrimary;
     border-bottom: 1px dotted $colorPrimary;
     padding: 1em 0;
+    font-style: 1.25em; // 16px
     // ico apostrofe
     background: transparent url("../img/content/quotes.png") .5em 1.5em no-repeat;
 }
@@ -253,22 +290,31 @@ li.itens-persona-characteristic-references {
         white-space: nowrap;
     }
 }
+.personaDEA-avatar-hashtag {
+    @extend .persona-avatar-hashtag;
+    margin: 0;
+    font-size: 100%;
+    span { margin: 0 .25em 0 0; }
+}
 
 // Persona Bloquote Percepções
 // // // // // // // // // // // // // // // // // // // // // // //
 // quotes
-.persona-cite-percepecoes  { background-position: center .5em; }
+.persona-cite-percepecoes  { background-position: center 1em; }
 // frase
 .persona-content-percepcoes {
     border-left: none;
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 .cite-phrase-percepcoes {
     margin: 0;
     text-align: center;
 }
 // cada coluna de persona citada
-.persona-talking-percepcoes { margin-bottom: 1em; }
+.persona-talking-percepcoes { 
+    margin-bottom: 1em;
+    p:last-child { margin-bottom: 0; } // apagando a margim bottom do último parágrafo
+}
 // nome do persona
 .avatar-name-percepcoes {
     text-transform: initial;

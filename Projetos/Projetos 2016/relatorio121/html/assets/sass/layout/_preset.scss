@@ -5,6 +5,19 @@
 
 // LAYOUT
 // // // // // // // // // // // // // // // // // // // // // // //
+// indicador da posição de leitura da página.
+// Use quando a página for longa
+.progressBar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 2px;
+	background: -moz-linear-gradient(left,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
+	background: -webkit-linear-gradient(left,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
+	background: linear-gradient(to right,  rgba($colorPrimary,.1) 33%, rgba($colorPrimary,1) 100%);
+}
+
 // evitando quebras de texto em dispositivos pequenos
 .no-wrap { white-space: nowrap; }
 
@@ -24,6 +37,7 @@ div[role="main"] {
     // box-shadow
 	@include box-shadow-image();
 }
+.image-book { padding: 2px; }
 
 // Title H1
 // // // // // // // // // // // // // // // // // // // // // // //
