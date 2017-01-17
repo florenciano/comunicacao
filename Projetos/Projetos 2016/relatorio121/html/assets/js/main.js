@@ -55,9 +55,8 @@ $(function(){
 
     // // // // // // // // // // // // // // // // // // // // // // //
     // PAGE: ALL
-    // Mostra um display no inferior da página
-    // de acordo com o avanço do scroll.
-    // <div class="progressBar" id="progressBar"></div>
+    // Mostra um display no inferior da página de acordo com o avanço do scroll.
+    // Marcação necessária 'immediately after body' <div class="progressBar" id="progressBar"></div>
     // // // // // // // // // // // // // // // // // // // // // // //
     
     function readingPosition() {
