@@ -51,6 +51,15 @@ $(function(){
      // Michael 
     var verEntrevistaMichael = $("#btn-enterview-michael"), conteudoEntrevistaMichael = $("#personas-enterview-michael");
     showHide(verEntrevistaMichael, conteudoEntrevistaMichael, "Michael");
+     // Tomas 
+    var verEntrevistaTomas = $("#btn-enterview-tomas"), conteudoEntrevistaTomas = $("#personas-enterview-tomas");
+    showHide(verEntrevistaTomas, conteudoEntrevistaTomas, "Tomas");
+     // Charles 
+    var verEntrevistaCharles = $("#btn-enterview-charles"), conteudoEntrevistaCharles = $("#personas-enterview-charles");
+    showHide(verEntrevistaCharles, conteudoEntrevistaCharles, "Charles");
+     // Arthur 
+    var verEntrevistaArthur = $("#btn-enterview-arthur"), conteudoEntrevistaArthur = $("#personas-enterview-arthur");
+    showHide(verEntrevistaArthur, conteudoEntrevistaArthur, "Arthur");
 
 
     // // // // // // // // // // // // // // // // // // // // // // //

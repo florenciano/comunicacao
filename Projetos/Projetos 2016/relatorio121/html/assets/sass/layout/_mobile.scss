@@ -112,7 +112,7 @@
 
 // Descrição do persona - tabela
 // // // // // // // // // // // // // // // // // // // // // // //
-.container-persona-description {
+.container-persona-description { // DEPRECIATE
     width: 100%;
     margin-top: 1em;
     tr td:nth-child(1) {
@@ -180,21 +180,19 @@
 // Referências obs: Para personalizar a lista add o elemento antes da classe
 li.itens-persona-characteristic-references { margin: .5em 0; }
 // Rótulo da barra = representa os nomes dos itens que vem da bara de progresso
-.persona-characteristic-label {
-    margin-bottom: .25em;
-}
+.persona-characteristic-label { margin-bottom: 0; }
 
 // Progress
 .progress {
     margin-bottom: 0;
     border-radius: 0;
     border: 1px solid darken($colorCinza-1, 10%);
-    height: 32px;
+    height: 28px;
     @include box-shadow(none);
 }
 .progress-bar {
-    line-height: 32px;
-    padding-left: .5em;
+    line-height: 28px;
+    text-indent: .5em;
     text-align: left;
 }
 
