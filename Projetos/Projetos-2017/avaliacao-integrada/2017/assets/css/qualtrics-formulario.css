@@ -1,0 +1,28 @@
+/*
+	Estilizando o formulário do Qualtrics:
+	Avaliação Institucional do Corpo Docente 2016-2017
+*/
+
+/* Formatando texto */
+.skin .QuestionText {
+	line-height: 1em;
+}
+
+/* botões de voltar e avançar */
+.Skin #Buttons #NextButton, .Skin #Buttons #PreviousButton {
+	background-color: #db0534;
+}
+
+.Skin label.MultipleAnswer.q-checked, .Skin label.SingleAnswer.q-checked {
+	background: #db0534;
+	border-color: #bc0434;
+}
+
+/* Mudando a cor dos links */
+a {
+	color: #db0534;
+}
+
+.Skin .ProgressBarContainer {
+	border-left-color: #db0534;
+}

@@ -35,7 +35,7 @@ div[role="main"] {
     padding: 5px;
     border: 1px solid $colorCinza-1;
     // box-shadow
-	@include box-shadow-image();
+	wnclude box-shadow-image();
 }
 .image-book { padding: 2px; }
 
@@ -104,3 +104,5 @@ a[target="_blank"]:after {
 // GENERAL
 // // // // // // // // // // // // // // // // // // // // // // //
 
+/* // subtítulos de listas alphabetics
+.itens-list-alphabetic-lowercase { font-weight: 700; } */
