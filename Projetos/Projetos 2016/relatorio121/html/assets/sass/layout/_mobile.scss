@@ -78,6 +78,22 @@
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
 }
+.newName-persona { 
+    color: rgba(80, 80, 80, 1);
+    &:before {
+        content: "«";
+        color: rgba(120,120,120,1);
+        font-weight: 400;
+        margin-right: 1px;
+    }
+    &:after {
+        content: "»";
+        color: rgba(120,120,120,1);
+        font-weight: 400;
+        margin-left: 1px;
+    }
+
+}
 .name-rick {
     background-color: rgba($colorSecundary,.1); // AZUL
     border-color: rgba($colorSecundary,.5);
@@ -90,6 +106,32 @@
     background-color: rgba($colorQuartenary,.1); // AMARELO
     border-color: rgba($colorQuartenary,.5);
 }
+// // Professores de Tempo Parcial
+.name-vincent {
+    background-color: rgba(115,25,150,.1); 
+    border-color: rgba(115,25,150,.2);
+}
+.name-allan {
+    background-color: rgba($colorQuintenary,.1); 
+    border-color: rgba($colorQuintenary,.2);
+}
+.name-ben {
+    background-color: rgba(255,120,50,.1); 
+    border-color: rgba(255,120,50,.2);
+}
+.name-tomas {
+    background-color: rgba(255,50,165,.2); 
+    border-color: rgba(255,50,165,.3);
+}
+.name-joseph {
+    background-color: rgba(145,55,40,.1); 
+    border-color: rgba(145,55,40,.2);
+}
+.name-james {
+    background-color: rgba(5,155,135,.2); 
+    border-color: rgba(5,155,135,.3);
+}
+
 
 // Tabela dos tipos de persona
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -139,11 +181,12 @@
 
 // Cada seção do dashboard do persona
 // // // // // // // // // // // // // // // // // // // // // // //
-.persona-characteristic { margin: 1em 0; }
+.persona-characteristic { margin: 1.5em 0; }
 
 .title-characteristic { 
+    color: rgba(100,100,100,1);
     margin: 0;
-    font-size: 125%;
+    font-size: 1.125em;
 }
 
 // Hashtag - Adjetives
@@ -197,6 +240,10 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
     // cagando regra. Saiba o momento certo para isto!
     em { color: rgb(150,150,150); }
 }
+.persona-references {
+    margin-top: 1em;
+    .image-page { margin-top: 0; }
+}
 
 // Botão para visualizar a entrevista do persona
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -220,7 +267,8 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
     font-weight: 700;
     text-align: left;
     line-height: 1.5em;
-    margin-bottom: 1em;
+    margin: 2.5em 0 .5em;
+    color: rgba(100, 100, 100, 1);
 }
 
 // // // // // // // // // // // // // // // // // // // // // // //
@@ -239,7 +287,7 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
     border-top: 1px dotted $colorPrimary;
     border-bottom: 1px dotted $colorPrimary;
     padding: 1em 0;
-    font-size: 1.25em; // 16px
+    font-size: 1.125em; // ~16px
     // ico apostrofe
     background: transparent url("../img/content/quotes.png") .5em 1.5em no-repeat;
 }
@@ -253,7 +301,7 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
 // modelo usado no book
 .persona-cite-phrase_book {
     text-align: left;
-    font-size: 0.875em;
+    font-size: 0.975em;
 }
 // avatar do persona
 .persona-avatar {
@@ -325,3 +373,47 @@ li.itens-persona-characteristic-references { margin: .5em 0; }
     font-style: italic;
 }
 .persona-avatar-text-percepcoes:nth-child(1) { margin-top: 1em; }
+
+// Persona Bloquote Percepções V2
+// // // // // // // // // // // // // // // // // // // // // // //
+// container
+.newContainer-blockquote {
+    background-color: rgb(250,250,250);  // change color
+    border: 1px solid rgb(240,240,240);  // change color
+    padding: 1em 1em 2em;
+    margin: 2em 0;
+}
+// bloco de citação
+.newBlockquote-persona {
+    font-style: italic;
+    color: $colorPrimary;
+    text-align: center;
+    border-left: none;
+    margin-bottom: .5em;
+}
+// lista dos ícones - abaixo da citação
+.iconesNames-persona { text-align: center; }
+// cards
+.container-cards-persona {
+
+}
+// cards item 
+.cards-persona-item {
+    margin: 1em 0;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.15);
+}
+// cards text
+.cards-persona-text {
+    margin-top: 2em;
+}
+.blockquote-persona-item {
+    border-left: none;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+}
+   

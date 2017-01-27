@@ -2,8 +2,6 @@ $(function(){
 	
 	"use strict";
 
-	console.log(true);
-
 	// // // // // // // // // // // // // // // // // // // // // // //
 	// PAGE: Resultados - Persona - Dedicação Exclusiva
     //       Resultados - Persona - Tempo Parcial
@@ -26,6 +24,7 @@ $(function(){
         idBtn.on("click", function(){
             idEl.fadeToggle(400, function(){
                 idBtn.toggleText(showText + Name, hideText + Name);
+                readingPosition();
             });
         });
     }
@@ -48,18 +47,18 @@ $(function(){
     // Allan 
     var verEntrevistaAllan = $("#btn-enterview-allan"), conteudoEntrevistaAllan = $("#personas-enterview-allan");
     showHide(verEntrevistaAllan, conteudoEntrevistaAllan, "Allan");
-     // Michael 
-    var verEntrevistaMichael = $("#btn-enterview-michael"), conteudoEntrevistaMichael = $("#personas-enterview-michael");
-    showHide(verEntrevistaMichael, conteudoEntrevistaMichael, "Michael");
+     // Ben 
+    var verEntrevistaBen = $("#btn-enterview-Ben"), conteudoEntrevistaBen = $("#personas-enterview-Ben");
+    showHide(verEntrevistaBen, conteudoEntrevistaBen, "Ben");
      // Tomas 
     var verEntrevistaTomas = $("#btn-enterview-tomas"), conteudoEntrevistaTomas = $("#personas-enterview-tomas");
     showHide(verEntrevistaTomas, conteudoEntrevistaTomas, "Tomas");
-     // Charles 
-    var verEntrevistaCharles = $("#btn-enterview-charles"), conteudoEntrevistaCharles = $("#personas-enterview-charles");
-    showHide(verEntrevistaCharles, conteudoEntrevistaCharles, "Charles");
-     // Arthur 
-    var verEntrevistaArthur = $("#btn-enterview-arthur"), conteudoEntrevistaArthur = $("#personas-enterview-arthur");
-    showHide(verEntrevistaArthur, conteudoEntrevistaArthur, "Arthur");
+     // Joseph 
+    var verEntrevistaJoseph = $("#btn-enterview-Joseph"), conteudoEntrevistaJoseph = $("#personas-enterview-Joseph");
+    showHide(verEntrevistaJoseph, conteudoEntrevistaJoseph, "Joseph");
+     // James 
+    var verEntrevistaJames = $("#btn-enterview-James"), conteudoEntrevistaJames = $("#personas-enterview-James");
+    showHide(verEntrevistaJames, conteudoEntrevistaJames, "James");
 
 
     // // // // // // // // // // // // // // // // // // // // // // //

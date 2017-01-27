@@ -35,7 +35,7 @@ div[role="main"] {
     padding: 5px;
     border: 1px solid $colorCinza-1;
     // box-shadow
-	wnclude box-shadow-image();
+	@include box-shadow-image();
 }
 .image-book { padding: 2px; }
 
@@ -104,5 +104,7 @@ a[target="_blank"]:after {
 // GENERAL
 // // // // // // // // // // // // // // // // // // // // // // //
 
-/* // subtítulos de listas alphabetics
-.itens-list-alphabetic-lowercase { font-weight: 700; } */
+// Cor primária no tipografia
+.color-primary { color: $colorPrimary; }
+// eliminando margens abaixo da tabela
+.table-noMargin { margin-bottom: 0; }
