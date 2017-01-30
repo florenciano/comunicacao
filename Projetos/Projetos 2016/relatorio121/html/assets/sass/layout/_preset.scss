@@ -106,5 +106,9 @@ a[target="_blank"]:after {
 
 // Cor primária no tipografia
 .color-primary { color: $colorPrimary; }
+
 // eliminando margens abaixo da tabela
 .table-noMargin { margin-bottom: 0; }
+
+// evitando órfãs e quebra de texto composto
+.no-wrap { white-space: nowrap; }

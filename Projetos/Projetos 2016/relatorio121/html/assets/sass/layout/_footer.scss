@@ -12,7 +12,7 @@
 
 // a coluna do link 'Sumário executivo'
 // Por ser a 1º ela recebe um border-top
-.footer-col:nth-child(2) { border-top: 1px solid darken($colorCinza-1, 20%); }
+// .footer-col:nth-child(2) { border-top: 1px solid darken($colorCinza-1, 20%); }
 
 // coluna do nome e email DEA
 .footer-name-dea {
@@ -35,7 +35,7 @@
 // links
 .links-footer {
 	display: block;
-    padding: 1em 0;
+    padding: 1em;
 }
 
 // li
@@ -44,15 +44,15 @@
     padding-left: 0;
     border-bottom: 1px dotted darken($colorCinza-1, 20%);
 }
-.sublist-links-footer { padding-left: 1em; }
+.sublist-links-footer { 
+	padding-left: 2em;
+	font-style: italic;
+}
+.links-no-border { border-bottom: none; }
 
 // a
 .itens-links-footer,
 .indent-links-footer { list-style: none; }
-// ul li ul li
-.indent-l2-links-footer { padding-left: 0; }
-// ul li ul li a
-.sublist-l2-links-footer { padding-left: 2em; }
 
 // // linha da assinatura
 // // // // // // // // // // // // // // // // // // // // // // //
