@@ -33,9 +33,9 @@ $(function(){
     // Rick 
     var verEntrevistaRick = $("#btn-enterview-rick"), conteudoEntrevistaRick = $("#personas-enterview-rick");
     showHide(verEntrevistaRick, conteudoEntrevistaRick, "Rick");
-    // Barbara 
-    var verEntrevistaBarbara = $("#btn-enterview-barbara"), conteudoEntrevistaBarbara = $("#personas-enterview-barbara");
-    showHide(verEntrevistaBarbara, conteudoEntrevistaBarbara, "Barbara");
+    // Alberto 
+    var verEntrevistaAlberto = $("#btn-enterview-alberto"), conteudoEntrevistaAlberto = $("#personas-enterview-alberto");
+    showHide(verEntrevistaAlberto, conteudoEntrevistaAlberto, "Alberto");
     // John 
     var verEntrevistaJohn = $("#btn-enterview-john"), conteudoEntrevistaJohn = $("#personas-enterview-john");
     showHide(verEntrevistaJohn, conteudoEntrevistaJohn, "John");
