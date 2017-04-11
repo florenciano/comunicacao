@@ -50,6 +50,12 @@ body {
 	background: url("../img/crossword.png") left top repeat;
 }
 
+a { @include make_link() }
+a.not-link-blank {
+	&[href^="http://"]:after,
+	&[href^="https://"]:after { display: none; }
+}
+
 .container { 
 	background: #ffffff;
 	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
@@ -74,10 +80,12 @@ ul {
 }
 
 // // // // // // // // // // // // // // // // // // // // // // //
-// CRITERIOS DE EXCELENCIA EM ENSINO
+// CONTENT
 // // // // // // // // // // // // // // // // // // // // // // //
 
 div[role="main"] {
+	// index
+	.type-profile { margin: 2em 0 6em 0; }
 	.img-title {
 		display: block;
 	    max-width: 100%;
@@ -88,19 +96,16 @@ div[role="main"] {
 		font-size: 2.25em;
 		margin: 1em 0 0;
 	}
-	a:not(.no-link-blank) { @include make_link() }
-	.txt { margin: ($grid40/2) 0; }
+	.txt { 
+		margin: ($grid40/2) 0;
+		text-align: center;
+	}
 	
 	// section: strands
 	.itens {
 		@include make-md-column(4);
 		padding-left: 0;
 		padding-right: 0;
-		.img-ico {
-			display: block;
-			width: 100px; // larg da img
-			height: 125px; // alt da img
-		}
 		> h2 {
 			color: $vermelho;
 			font-size: 1.5em;
@@ -111,6 +116,12 @@ div[role="main"] {
 		@include make-md-column(6);
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.img-ico {
+		display: block;
+		margin: 0 auto;
+		width: 65px; // larg da img
+		height: 81px; // alt da img
 	}
 	
 	//section: steps
