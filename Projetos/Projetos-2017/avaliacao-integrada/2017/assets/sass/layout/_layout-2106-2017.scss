@@ -7,9 +7,6 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 
 
-/* Critérios de Excelência em Ensino */
-// // // // // // // // // // // // // // // // // // // // // // //
-
 div[role="main"] {
 	
 	// Título da página
@@ -30,3 +27,18 @@ div[role="main"] {
 
 }
 
+/* Critérios de Excelência em Ensino */
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	// título da página
+	.title-page-intern { margin: 1.5em 0; }
+
+	// strands (seção ícones)
+	.strands { margin: 1em 0; }
+
+	// tirando o alinhamento centralizado dos ícones
+	.ico-center {
+		margin: 0;
+	}
+}

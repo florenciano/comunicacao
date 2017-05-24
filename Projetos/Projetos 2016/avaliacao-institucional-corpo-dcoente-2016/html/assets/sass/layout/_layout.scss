@@ -7,7 +7,7 @@
 // // // // // // // // // // // // // // // // // // // // // // //
 
 // GRID //
-$grid40: 40px;
+$grid40: 40px;	
 $grid30: 30px;
 
 // COLOR //
@@ -94,7 +94,7 @@ div[role="main"] {
 		font-size: 2.25em;
 		margin: 1em 0 0;
 	}
-	a:not(.no-link-blank) { @include make_link() }
+	a:not(.not-link-blank) { @include make_link() }
 	.txt { margin: ($grid40/2) 0; }
 	
 	// section: strands

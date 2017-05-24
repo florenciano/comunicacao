@@ -27,6 +27,23 @@
     <!-- Custom Fonts -->
     <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <style>
+    #legend { text-align: center; }
+    .bar-legend > span {
+        display: inline-block;
+        margin: 0 1em 1em 0;
+    }
+    .bar-legend > span:last-child { margin-right: 0; }
+    .bar-legend > span > i {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: .5em;
+        margin-top: -3px;
+        vertical-align: middle;
+    }
+    </style>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -121,7 +138,7 @@
                                     <a href="../gestao-formacao-corpo-docente/avaliacao-desenvolvimento-individual.html">Avaliação de Desenvolvimento Individual</a>
                                 </li>
                                 <li>
-                                    <a href="../gestao-formacao-corpo-docente/workshops-institucionais.html" class="active">Workshops Institucionais</a>
+                                    <a href="../gestao-formacao-corpo-docente/workshops-institucionais.html">Workshops Institucionais</a>
                                 </li>
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/grupos-focais.html">Grupos Focais</a>
@@ -133,7 +150,7 @@
                                     <a href="../gestao-formacao-corpo-docente/planejamento-corpo-docente.html">Planejamento do Corpo Docente</a>
                                 </li>
                                 <li>
-                                    <a href="../gestao-formacao-corpo-docente/processo-seletivo-docente.html">Processo Seletivo Docente</a>
+                                    <a href="../gestao-formacao-corpo-docente/processo-seletivo-docente.html" class="active">Processo Seletivo Docente</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -166,115 +183,20 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <h1 class="page-header">Workshops Institucionais</h1>
+                <h1 class="page-header">Processo Seletivo Docente</h1>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, dolorum, qui sit amet incidunt pariatur iusto similique iure. Ullam temporibus quisquam consequatur laborum ea quibusdam dignissimos amet cupiditate quo sunt?</p>
             </div>
-            <h3><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/calendario-formacao-docentes/graduacao/principios-integradores/" title="Veja como foi o evento">Príncipios Integradores da Graduação</a></h3>
-            <p class="text-muted"><i class="fa fa-calendar"></i> 03/04/2017 <small>|</small> <i class="fa fa-clock-o"></i> 9h às 12h</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas obcaecati sit commodi necessitatibus officia, ut et excepturi ea ex maxime, voluptas architecto rerum, dolore quisquam suscipit enim doloremque at molestias iure. Repudiandae?</p>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Participantes</h3>
-                        </div>
-                        <div class="panel-body">
-                           <div id="workshop-principios-integradores-graduacao"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            Gostaram
-                        </div>
-                        <div class="panel-body">
-                            <ul class="unstyled-list">
-                                <li>Compartilhar com os colegas</li>
-                                <li>Compartilhar questões faz com que não nos sintamos sozinhos</li>
-                                <li>Construção coletiva muito boa</li>
-                                <li>Aprendizado</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            Gostaria
-                        </div>
-                        <div class="panel-body">
-                            <ul class="unstyled-list">
-                                <li>Encontros mais frequentes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            Não gostei
-                        </div>
-                        <div class="panel-body">
-                            <ul class="unstyled-list">
-                                <p>&nbsp;</p>
-                            </ul>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Aula Teste</div>
+                            <div class="panel-body">
+                                <div id="dados-aula-teste"></div>
+                                <div id="legend" class="bar-legend"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <h3><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/calendario-formacao-docentes/graduacao/workshop-design-thinking/" title="Veja como foi o evento">Design Thinking</a></h3>
-            <p class="text-muted"><i class="fa fa-calendar"></i> 29/11/2016 <small>|</small> <i class="fa fa-clock-o"></i> 9h às 12h30</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus velit, atque! Sit odio ad mollitia libero quisquam, vitae sapiente eos, dolor, pariatur minus magnam at sequi fugit ex reiciendis? Aliquid.</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <blockquote class="blockquote-reverse">
-                        <p class="text-muted">O workshop de hoje foi incrível! Talvez um dos melhores que tive a oportunidade de estar presente... Valeu!!!! Literalmente eu sai da caixinha para entrar nessa atividade... E FOI MUUUITO BOM! detalhe: já saí com ideias para implementar, no próximo semestre, numa das disciplinas que ministro, algumas das ações discutidas ao longo das apresentações das equipes!!! Um parabéns/obrigado especial ao Victor, que comandou tudo de maneira nota dez!</p>
-                        <footer>Participante do Workshop</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Participantes</h3>
-                        </div>
-                        <div class="panel-body">
-                           <div id="workshop-design-thinking"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Gostei
-                        </div>
-                        <div class="panel-body">
-                           <div id="workshop-design-thinking-gostei"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Gostaria
-                        </div>
-                        <div class="panel-body">
-                           <div id="workshop-design-thinking-gostaria"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Não gostei
-                        </div>
-                        <div class="panel-body">
-                           <div id="workshop-design-thinking-nao-gostei"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
@@ -294,7 +216,7 @@
     <!-- Morris Charts JavaScript -->
     <script src="../../vendor/raphael/raphael.min.js"></script>
     <script src="../../vendor/morrisjs/morris.min.js"></script>
-    <script src="../../data/gestao-formacao-corpo-docente/morris-workshop-institucionais.js"></script>
+    <script src="../../data/gestao-formacao-corpo-docente/morris-processo-seletivo-docente.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../../dist/js/sb-admin-2.js"></script>
