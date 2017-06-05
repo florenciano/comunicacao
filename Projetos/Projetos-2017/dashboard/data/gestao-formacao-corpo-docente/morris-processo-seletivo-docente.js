@@ -53,7 +53,7 @@ $(function() {
         resize: true,
         hideHover: 'auto'
     });
-    console.log(graf.options);
+    // console.log(graf.options);
 
     /*
         Criando legenda abaixo do gráfico
