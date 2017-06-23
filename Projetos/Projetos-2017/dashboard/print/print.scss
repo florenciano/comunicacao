@@ -1,0 +1,60 @@
+/* CSS para impressão */
+@media print {
+	
+	// RESET ALL
+	* {
+		background:transparent !important;
+		color:#000;
+		text-shadow:none !important;
+		filter:none !important;
+		-ms-filter:none !important;
+		float: none !important;
+	}
+
+	@page { margin: 1cm; }
+
+
+	body {
+		margin:0;
+		padding:0;
+		line-height: 1.4em;
+	}
+
+	img { max-width: 100%; }
+
+	a, a:visited { text-decoration: underline; }
+	a:after, a[href^="javascript:"]:after, a[href^="#"]:after { 
+		content: " (" attr(href) ")";
+		font-style: italic;
+	    font-size: .625em;
+	}
+	p a { word-wrap: break-word; }
+
+	p { widows: 3; } // viúva
+	p { orphans: 3; } // órfã
+
+	#wrapper { 
+		width: 100%; 
+		margin: 0; 
+		float: none !important; 
+	}
+
+	.print { display: block; }
+	.no-print { display: none; }
+	.page-break { page-break-before: always; }
+
+	// Timeline - resetando: definindo a largura de cada etapa
+	.timeline, .timeline-panel, .time-inverted {
+		width: 100% !important;
+	}
+	// Tirando os ícones e as setas indicativas de cada etapa
+	.timeline-badge { display: none; }
+	.timeline > li > .timeline-panel:after,
+	.timeline > li > .timeline-panel:before { display: none; }
+
+	/***************************************************************
+		GESTAO CORPO DOCENTE 
+	***************************************************************/
+	/* Nome da página... */
+
+}

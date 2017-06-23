@@ -30,24 +30,6 @@
     <!-- CSS para impressão -->
     <link rel="stylesheet" type="text/css" href="../../print/print.css" media="print" />
 
-    <style>
-    /* legenda do gráfico: foi produzida em js */
-    #legend { text-align: center; }
-    .bar-legend > span {
-        display: inline-block;
-        margin: 0 1em 1em 0;
-    }
-    .bar-legend > span:last-child { margin-right: 0; }
-    .bar-legend > span > i {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        margin-right: .5em;
-        margin-top: -3px;
-        vertical-align: middle;
-    }
-    </style>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,7 +40,9 @@
 </head>
 
 <body>
+
     <div id="wrapper">
+
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -71,6 +55,7 @@
                 <a class="navbar-brand" href="index.html">DEA - Dashboard 1.0</a>
             </div>
             <!-- /.navbar-header -->
+
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -91,8 +76,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- <li>
-                                    <a href="../gestao-formacao-corpo-docente/interacao-121.html">Interação 121</a>
+                                <li>
+                                    <a href="../gestao-formacao-corpo-docente/interacao121.html" class="active">Interação 121</a>
                                 </li>
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/avaliacao-desenvolvimento-individual.html">Avaliação de Desenvolvimento Individual</a>
@@ -108,9 +93,9 @@
                                 </li>
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/planejamento-corpo-docente.html">Planejamento do Corpo Docente</a>
-                                </li> -->
+                                </li>
                                 <li>
-                                    <a href="../gestao-formacao-corpo-docente/processo-seletivo-docente.html" class="active">Processo Seletivo Docente</a>
+                                    <a href="../gestao-formacao-corpo-docente/processo-seletivo-docente.html">Processo Seletivo Docente</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -118,7 +103,7 @@
                         <li>
                             <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Avaliação do Aprendizado<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <!-- <li>
+                                <li>
                                     <a href="../avaliacao-aprendizado/politica-gestao-aprendizagem.html">Política da Gestão da Aprendizagem - Book</a>
                                 </li>
                                 <li>
@@ -129,7 +114,7 @@
                                 </li>
                                 <li>
                                     <a href="../avaliacao-aprendizado/assurance-of-learning-indireto.html">Assurance of Learning indireto</a>
-                                </li> -->
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -143,27 +128,24 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <h1 class="page-header">Processo Seletivo Docente</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sint doloribus, nobis, maiores, exercitationem ex expedita culpa, cum quis fugit velit perspiciatis recusandae! Fuga alias, pariatur, necessitatibus corrupti quos dignissimos.</p>
-                <p><a class="btn btn-primary" href="../../projetos/processo-seletivo-docente/" role="button">Veja Detalhes</a></p>
-                <p>&nbsp;</p>
-            </div>
-            <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Aula Teste</div>
-                        <div class="panel-body">
-                            <div id="dados-aula-teste" class="text-center"></div>
-                            <div id="legend" class="bar-legend"></div>
-                        </div>
+               <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Interação 121</h1>
                     </div>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, soluta ipsa harum qui illo architecto neque eum ratione vitae. Commodi iusto sed quas soluta eligendi illo obcaecati possimus facilis consectetur?</p>
                 </div>
-                
+                <p>Visando alinhar o entendimento dos Critérios de Excelência em Ensino e da Proposta de Valor das iniciativas de aprimoramento contínuo do corpo docente do Insper, o DEA – área responsável pelo Desenvolvimento de Ensino e Aprendizagem no Insper – conduziu conversas individuais com os professores da escola ao longo de 2016.</p>
+                <p>As percepções docentes, registradas de modo anônimo, passaram por uma análise qualitativa que permitiu segmentar o corpo docente em dois grandes grupos, professores de dedicação exclusiva e professores de tempo parcial, cada qual subdividido em diferentes “personas” de acordo com o perfil, as opiniões e necessidades de cada grupo docente.</p>
+                <p>De modo geral, os professores do Insper concordam com os Critérios de Excelência em Ensino e com o princípio do Aprendizado Centrado no Aluno (ACA), mas gostariam de orientações práticas em relação a como atender a essas expectativas em turmas grandes e tempo escasso – realidade da maioria dos entrevistados.</p>
+                <p>Segundo os entrevistados, é necessário melhorar o alinhamento de expectativas entre Insper-professores-alunos, preparando não apenas o corpo docente, mas também os alunos para a autonomia da aprendizagem, algo ainda novo para a grande maioria dos envolvidos. Já existem iniciativas nessa linha nas Engenharias, as quais poderiam ser de algum modo replicado nos demais cursos.</p>
+                <p>Os professores também pedem maior clareza do que o Insper entende por “evidências de aprendizagem”, bem como solicitam auxílio para sua coleta e análise, as quais – segundo o corpo docente – foram cobradas na Avaliação Institucional Docente realizada entre 2015 e 2016.</p>
+                <p>Aliás, quanto ao processo de Avaliação Institucional Docente, os professores entendem a sua importância. Entretanto, por se tratar de uma avaliação de desempenho, entendem que o pedido de autoavaliação ao final de 2015 deveria ter reforçado com maior clareza o seu propósito. Como foi feito, houve uma percepção negativa pelo aspecto “burocrático”. Nesse sentido, os professores pedem mais simplicidade e maior qualidade no processo como um todo, sobretudo no feedback institucional, de modo que seja realmente uma iniciativa voltada ao aprimoramento contínuo docente.</p>
+                <p>Por fim, ainda sobre aprimoramento contínuo docente, os professores pedem maior integração entre docentes, coordenações e DEA, clarificando os papeis e responsabilidades de cada um. Especificamente ao DEA, solicitam uma assessoria mais individualizada e holística, a ser realizada desde o momento do ingresso do professor no Insper, de modo a ajudar o corpo docente a efetivar o princípio do Aprendizado Centrado no Aluno no dia a dia em sala de aula.</p>
+                <p>Assim, com base nessas conclusões, o DEA relacionou uma série de recomendações para melhoria do processo de Ensino e Aprendizagem na Instituição.</p>
             </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
+
     </div>
     <!-- /#wrapper -->
 
@@ -179,10 +161,11 @@
     <!-- Morris Charts JavaScript -->
     <script src="../../vendor/raphael/raphael.min.js"></script>
     <script src="../../vendor/morrisjs/morris.min.js"></script>
-    <script src="../../data/gestao-formacao-corpo-docente/morris-processo-seletivo-docente.js"></script>
+    <!-- <script src="../../data/morris-data.js"></script> -->
 
     <!-- Custom Theme JavaScript -->
     <script src="../../dist/js/sb-admin-2.js"></script>
 
 </body>
+
 </html>

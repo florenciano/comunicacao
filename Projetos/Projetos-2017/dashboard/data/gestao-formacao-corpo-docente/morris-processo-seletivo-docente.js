@@ -48,12 +48,13 @@ $(function() {
         ykeys: ['a', 'b', 'c', 'd', 'e', 'f'],
         labels: ['PGLS: MBA', 'PGLS: Direito', 'PGLS: Cert.', 'PGLS: APF', 'Mestrado', 'Graduação'],
         ymax: 40, // valor máximo da escala
+        numLines: 9,
         xLabelMargin: 10, // ajuda a mostrar mais labels in axisX
         stacked: true,
         resize: true,
         hideHover: 'auto'
     });
-    // console.log(graf.options);
+    // console.log(graf.options.barColors[0] + " !important");
 
     /*
         Criando legenda abaixo do gráfico
@@ -62,7 +63,8 @@ $(function() {
     */
     graf.options.labels.forEach( function(index, i) {
         var legendItem = $("<span></span>").text(index).prepend("<i>&nbsp;</i>");
-        legendItem.find("i").css("background-color", graf.options.barColors[i]);
+        // legendItem.find("i").css("background-color", graf.options.barColors[i]);
+        legendItem.find("i").addClass("fa fa-square").css("color", graf.options.barColors[i]);
         $("#legend").append(legendItem);
     });
 

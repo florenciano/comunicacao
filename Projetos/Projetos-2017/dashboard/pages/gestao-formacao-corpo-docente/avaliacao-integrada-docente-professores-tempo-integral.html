@@ -26,6 +26,9 @@
 
     <!-- Custom Fonts -->
     <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- CSS para impressão -->
+    <link rel="stylesheet" type="text/css" href="../../print/print.css" media="print" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,11 +38,8 @@
     <![endif]-->
 
 </head>
-
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -117,6 +117,9 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <!-- <li>
+                                    <a href="../gestao-formacao-corpo-docente/interacao-121.html">Interação 121</a>
+                                </li>
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/avaliacao-desenvolvimento-individual.html">Avaliação de Desenvolvimento Individual</a>
                                 </li>
@@ -131,7 +134,7 @@
                                 </li>
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/planejamento-corpo-docente.html">Planejamento do Corpo Docente</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="../gestao-formacao-corpo-docente/processo-seletivo-docente.html">Processo Seletivo Docente</a>
                                 </li>
@@ -141,7 +144,7 @@
                         <li>
                             <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Avaliação do Aprendizado<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
+                                <!-- <li>
                                     <a href="../avaliacao-aprendizado/politica-gestao-aprendizagem.html">Política da Gestão da Aprendizagem - Book</a>
                                 </li>
                                 <li>
@@ -152,7 +155,7 @@
                                 </li>
                                 <li>
                                     <a href="../avaliacao-aprendizado/assurance-of-learning-indireto.html">Assurance of Learning indireto</a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -178,7 +181,7 @@
                                 Quesito Planejamento
                             </div>
                             <div class="panel-body">
-                                <div id="histograma-planejamento"></div>
+                                <div id="histograma-planejamento" class="text-center"></div>
                             </div>
                         </div>
                     </div>
@@ -190,20 +193,20 @@
                                 Quesito Dinâmicas
                             </div>
                             <div class="panel-body">
-                                <div id="histograma-dinamicas"></div>
+                                <div id="histograma-dinamicas" class="text-center"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.histograma - left -->
-                <div class="row">
+                <div class="row page-break">
                     <div class="col-md-offset-1 col-md-10">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Quesito Planejamento
+                                Quesito Avaliação
                             </div>
                             <div class="panel-body">
-                                <div id="histograma-avaliacao"></div>
+                                <div id="histograma-avaliacao" class="text-center"></div>
                             </div>
                         </div>
                     </div>
@@ -215,100 +218,105 @@
                                 Quesito Dinâmicas
                             </div>
                             <div class="panel-body">
-                                <div id="histograma-feedback"></div>
+                                <div id="histograma-feedback" class="text-center"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.histograma rigth -->
-                <div class="row">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i> Cronograma
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <ul class="timeline">
-                                <li>
-                                    <div class="timeline-badge success"><i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Reuniões<br><small>Até 31/janeiro</small></h4>
+                <div class="row page-break">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-clock-o fa-tasks"></i> Etapas do Projeto
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="timeline">
+                                    <li>
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Atualização do currículo Lattes e organização de materiais de ensino.</p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões<br><small>Até 31/janeiro</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Atualização do currículo Lattes e organização de materiais de ensino.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-badge success"><i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Atualização Cadastral<br><small>Até 20/março</small></h4>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Corpo Docente com relator de pesquisa.</p>
-                                            <p>Corpo Docente com DEA, para desenvolvimento em Ensino.</p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Atualização Cadastral<br><small>Até 20/março</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Corpo Docente com relator de pesquisa.</p>
+                                                <p>Corpo Docente com DEA, para desenvolvimento em Ensino.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-badge success"><i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Reuniões de Coordenações<br><small>Entre 20 até 28/março</small></h4>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Reuniões das Coordenações Acadêmicas para Parecer de avaliação.</p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões de Coordenações<br><small>Entre 20 até 28/março</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Reuniões das Coordenações Acadêmicas para Parecer de avaliação.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-badge success"><i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Comitê de Avaliação<br><small>7 e 10/abril</small></h4>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Reuniões sobre Pesquisa, Ensino e Contribuicões Institucionais.</p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Comitê de Avaliação<br><small>7 e 10/abril</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Reuniões sobre Pesquisa, Ensino e Contribuicões Institucionais.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-badge warning"><i class="fa fa-gear"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Reuniões de Feedback<br><small>Até maio</small></h4>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-badge warning"><i class="fa fa-edit"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Feedback de ensino e CI com diretorias acadêmicas.</p>
-                                            <p>Feedback de Pesquisa e CI com coordenações de Pesquisa.</p>
-                                            <hr>
-                                            <p><button type="button" class="btn btn-primary">Veja detalhes</button></p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões de Feedback<br><small>Até maio</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Feedback de ensino e CI com diretorias acadêmicas.</p>
+                                                <p>Feedback de Pesquisa e CI com coordenações de Pesquisa.</p>
+                                                <div class="details no-print">
+                                                    <hr>
+                                                    <p><button type="button" class="btn btn-primary">Veja detalhes</button></p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-badge danger"><i class="fa fa-times"></i>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h4 class="timeline-title">Encontro com o Presidente<br><small>Maio e junho</small></h4>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge danger"><i class="fa fa-square-o"></i>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Bate papo com Marcos Lisboa para alinhar expectativas mútuas.</p>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Encontro com o Presidente<br><small>Maio e junho</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Bate papo com Marcos Lisboa para alinhar expectativas mútuas.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.panel-body -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>    
                     </div>
+                    
                 </div>
             </div>
             <!-- /.container-fluid -->
@@ -336,5 +344,4 @@
     <script src="../../dist/js/sb-admin-2.js"></script>
 
 </body>
-
 </html>

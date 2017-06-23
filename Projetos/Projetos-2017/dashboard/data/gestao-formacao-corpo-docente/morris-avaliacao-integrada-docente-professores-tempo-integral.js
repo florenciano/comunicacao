@@ -31,6 +31,7 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         ymax: 40, // valor máximo da escala
+        numLines: 9,
         xLabelMargin: 10, // ajuda a mostrar mais labels in axisX
         labels: ['Status 2016', 'Meta 2017'],
         hideHover: 'auto',
@@ -63,6 +64,7 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         ymax: 40,
+        numLines: 9,
         xLabelMargin: 10,
         labels: ['Status 2016', 'Meta 2017'],
         hideHover: 'auto',
@@ -95,6 +97,7 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         ymax: 40,
+        numLines: 9,
         xLabelMargin: 10,
         labels: ['Status 2016', 'Meta 2017'],
         hideHover: 'auto',
@@ -127,6 +130,7 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         ymax: 40,
+        numLines: 9,
         xLabelMargin: 10,
         labels: ['Status 2016', 'Meta 2017'],
         hideHover: 'auto',
