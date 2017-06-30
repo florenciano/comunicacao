@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DEA - Dashboard</title>
+    <link rel="icon" type="image/png" href="../../../img/favicon.png" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../../dist/css/sb-admin-2.css" rel="stylesheet">
+    
+    <!-- Morris Charts CSS -->
+    <link href="../../../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="../../../layout/layout.css" rel="stylesheet" type="text/css">
+    
+    <!-- CSS para impressão -->
+    <link rel="stylesheet" type="text/css" href="../../../print/print.css" media="print" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">DEA - Dashboard 1.0</a>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="../../../index.html" class=""><i class="fa fa-dashboard fa-fw"></i> Página inicial</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-fw"></i> Gestão e Formação de Corpo Docente <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level in">
+                                <li>
+                                    <a href="javascript:void(0)">Avaliação Integrada Docente<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level in">
+                                        <li>
+                                            <a href="../avaliacao-integrada-docente-professores-dedicacao-exclusiva.html">Professores de Dedicação Exclusiva</a>
+                                        </li>
+                                        <li class="active"><a href="../detalhes-de-ensino/" class="link-ident-menu">Detalhes de Ensino</a></li>
+                                        <li>
+                                            <a href="../../gestao-formacao-corpo-docente/avaliacao-integrada-docente-professores-tempo-parcial.html">Professores de Tempo Parcial</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <a href="../../gestao-formacao-corpo-docente/interacao-121.html">Interação 121</a>
+                                </li><!--
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/avaliacao-desenvolvimento-individual.html">Avaliação de Desenvolvimento Individual</a>
+                                </li>
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/workshops-institucionais.html">Workshops Institucionais</a>
+                                </li>
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/grupos-focais.html">Grupos Focais</a>
+                                </li>
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/preparacao-aluno-para-ACA.html">Preparação aluno para ACA</a>
+                                </li>
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/planejamento-corpo-docente.html">Planejamento do Corpo Docente</a>
+                                </li> -->
+                                <li>
+                                    <a href="../../gestao-formacao-corpo-docente/processo-seletivo-docente.html">Processo Seletivo Docente</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Avaliação do Aprendizado<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <!-- <li>
+                                    <a href="../../avaliacao-aprendizado/politica-gestao-aprendizagem.html">Política da Gestão da Aprendizagem - Book</a>
+                                </li>
+                                <li>
+                                    <a href="../../avaliacao-aprendizado/alinhamento-institucional-gestao-aprendizagem.html">Alinhamento Institucional para Gestão de Aprendizagem</a>
+                                </li>
+                                <li>
+                                    <a href="../../avaliacao-aprendizado/assurance-of-learning.html">Assurance of Learning</a>
+                                </li>
+                                <li>
+                                    <a href="../../avaliacao-aprendizado/assurance-of-learning-indireto.html">Assurance of Learning indireto</a>
+                                </li> -->
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <h1 class="page-header">Avaliação Integrada Docente de Dedicação Exclusiva</h1>
+                <h4>Histograma</h4>
+                <p class="text-muted">Cada professor tem seu desempenho de 2016 avaliado pelo rubric dos Critérios de Excelência em Ensino (<strong>Planejamento</strong>, <strong>Dinâmicas</strong>, <strong>Avaliação</strong> e <strong>Feedback</strong>). Cada critério tem cinco níveis de proficiência, que vai de 1 a 5. Após diagnóstico, metas relacionadas aos critérios são estabelecidas para 2017.</p>
+                <p>&nbsp;</p>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Quesito Planejamento
+                            </div>
+                            <div class="panel-body">
+                                <div id="histograma-planejamento" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Quesito Dinâmicas
+                            </div>
+                            <div class="panel-body">
+                                <div id="histograma-dinamicas" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.histograma - left -->
+                <div class="row page-break">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Quesito Avaliação
+                            </div>
+                            <div class="panel-body">
+                                <div id="histograma-avaliacao" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Quesito Dinâmicas
+                            </div>
+                            <div class="panel-body">
+                                <div id="histograma-feedback" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.histograma rigth -->
+                <div class="row page-break">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-clock-o fa-tasks"></i> Etapas do Projeto
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="timeline">
+                                    <li>
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões<br><small>Até 31/janeiro</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Atualização do currículo Lattes e organização de materiais de ensino.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Atualização Cadastral<br><small>Até 20/março</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Corpo Docente com relator de pesquisa.</p>
+                                                <p>Corpo Docente com DEA, para desenvolvimento em Ensino.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões de Coordenações<br><small>Entre 20 até 28/março</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Reuniões das Coordenações Acadêmicas para Parecer de avaliação.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Comitê de Avaliação<br><small>7 e 10/abril</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Reuniões sobre Pesquisa, Ensino e Contribuicões Institucionais.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Reuniões de Feedback<br><small>Até maio</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Feedback de ensino e CI com diretorias acadêmicas.</p>
+                                                <p>Feedback de Pesquisa e CI com coordenações de Pesquisa.</p>
+                                                <!-- <div class="details no-print">
+                                                    <hr>
+                                                    <p><button type="button" class="btn btn-primary">Veja detalhes</button></p>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-check-square-o"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Encontro com o Presidente<br><small>Maio e junho</small></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Bate papo com Marcos Lisboa para alinhar expectativas mútuas.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>    
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../../../vendor/raphael/raphael.min.js"></script>
+    <script src="../../../vendor/morrisjs/morris.min.js"></script>
+    <script src="../../../data/gestao-formacao-corpo-docente/morris-avaliacao-integrada-docente-professores-tempo-integral.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../../../dist/js/sb-admin-2.js"></script>
+
+</body>
+</html>

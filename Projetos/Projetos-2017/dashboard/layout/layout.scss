@@ -1,0 +1,21 @@
+/* ******************************************************************
+	// Customizando a interface do Dashboard
+
+	// Use este documento somente em caso de customização de 
+	// conteúdos exclusivo do DEA.
+****************************************************************** */
+/* Iframe Embed */
+iframe {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	// alinhamento centralizo no conteiner
+	margin: 0 auto;
+	border: 0;
+}
+
+/* Menu Dashboard */
+// Terceiro nível de Menu
+.sidebar .nav-third-level li .link-ident-menu {
+	padding-left: 72px;
+}

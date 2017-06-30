@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* ******************************************************************
+	// Customizando a interface do Dashboard
+
+	// Use este documento somente em caso de customização de 
+	// conteúdos exclusivo do DEA.
+****************************************************************** */
+/* Iframe Embed */
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 0; }
+
+/* Menu Dashboard */
+.sidebar .nav-third-level li .link-ident-menu {
+  padding-left: 72px; }
