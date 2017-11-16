@@ -42,14 +42,6 @@ $laranja: #faa61a;
     -webkit-box-sizing: $boxSize;
 }
 
-@mixin radius($radT,$radR,$radB,$radL) {
-    border-radius: $radT $radR $radB $radL;
-    -o-border-radius: $radT $radR $radB $radL;
-    -ms-border-radius: $radT $radR $radB $radL;
-    -moz-border-radius: $radT $radR $radB $radL;
-    -webkit-border-radius: $radT $radR $radB $radL;
-}
-
 @mixin transition($transition) {
     transition: $transition;
     -o-transition: $transition;
@@ -75,16 +67,22 @@ body {
 
 img { max-width: 100% }
 
+a:not(.modalReadMore-close-btn) { 
+    color: $azulClaro;
+    &:hover, &:focus {
+        color: darken($azulClaro, 7%);
+    }
+ }
+
 ::selection {
     background-color: $laranja;
     color: #ffffff;
 }
 
-// deletar isto
-.testTouchOver:hover, .testTouchOverEffects {
-    color: red;
-    background-color: orange !important; 
+.modalReadMore {
+    display: none;
 }
+
 /////////////////////////////////////////////////////////////////////
 // Content
 /////////////////////////////////////////////////////////////////////
@@ -93,6 +91,136 @@ header,
 footer {
     background-color: $verdeClaro;
     color: #ffffff;
+}
+.row > div {
+    padding: 0;
+}
+
+/* HEADER */
+.titleHeader, .ilustraHeader, .footer, .ilustraFooter { padding: 0 1.65em !important; }
+.titleHeader {
+    text-align: center;
+}
+.titleHeader-title {
+    margin: 2em 0 0 0;
+}
+.titleHeader-subtitle {
+    margin: -.375em 0 0 0;
+    font-weight: 400;
+    font-size: 1.66em;
+}
+.titleHeader-paragraph {
+    line-height: 1.45em;
+    font-size: .925em;
+    text-align: left;
+    margin-top: 3.33em;
+}
+.ilustraHeader {
+    text-align: center;
+}
+
+/* CONTENT */
+// Container
+.description, .description-readMore {
+    width: 75%;
+}
+.description {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 6em auto 1.65em;
+}
+// Text
+.description-title {
+    font-size: 1.165em;
+    text-transform: uppercase;
+    color: $verdeClaro;
+    margin: 1em 0;
+}
+.description-text {
+    line-height: 1.5em;
+    color: $cinzaEscuro;
+}
+// Read More
+.description-readMore {
+    margin: 0 auto;
+}
+.description-readMore-btn {
+    background-color: $verdeClaro;
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 2px;
+    &:hover, &:focus {
+        background-color: $verdeEscuro
+    }
+}
+// Ilustra
+.diagrama {
+    margin: 2em auto;
+    text-align: center;
+}
+
+/* MODAL */
+// Container
+.modalReadMore {
+    @extend .description;
+    width: calc(100% - 4em);
+    width: -moz-calc(100% - 4em);
+    position: relative;
+    padding: 1.66em !important;
+    margin: 0 2em 2em;
+}
+.modalReadMore-column {
+    padding: 0 1.66em 0 0 !important;
+}
+// Close
+.modalReadMore-close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+.modalReadMore-close-btn {
+    background-color: $verdeClaro;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    padding: 0.725em 1.25em;
+    border-radius: 4px;
+    &:hover, &:focus {
+        background-color: $verdeEscuro;
+    }
+}
+
+// Title
+.modalReadMore-title {
+    margin: 0;
+    color: #414042;
+}
+// Subtitle
+.modalReadMore-subtitle {
+    color: $verdeClaro;
+    margin-bottom: 0;
+    font-size: 1em;
+    margin-top: 2.5em
+}
+// Text
+.modalReadMore-text {
+    @extend .titleHeader-paragraph ;
+    margin: 0 0 .5em 0;
+}
+// List
+.list {
+    list-style-image: url("../img/bullet.png");
+    padding-left: 2em;
+    margin: 0;
+}
+.list-item {
+    margin: 0 0 .75em 0;
 }
 
 .wrapper,
@@ -107,18 +235,49 @@ footer {
     }
 }
 
+/* FOOTER */
+// Title
+.footer-title {
+    margin: 5.5em 0 0 0;
+    font-size: 1.33em;
+}
+// Link DEA
+.footer-text-link {
+    margin: 0;
+}
+.footer-link {
+    color: #fff !important;
+}
+// Text
+.footer p:nth-child(3) {
+    margin-top: 3.33em;
+}
+.footer-text {
+    @extend .titleHeader-paragraph;
+    margin: .5em 0;
+}
+// Logo
+.footer-link-logo {
+    margin-top: 1.66em;
+    display: inline-block;
+}
+// Ilustra
+.ilustraFooter {
+    text-align: center;
+    margin-top: 1em;
+}
 /*  $Media Queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (max-width: 960px) {
-    // .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:20px}
-    // .row .row > div:last-child{ margin-bottom:0 !important }
-    body { color: red; }
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:20px}
+    .row .row > div:last-child{ margin-bottom:0 !important }
+
 }
 
 
 /* Media query for mobile and tablets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) {
 
     .row { margin-bottom: 0 !important }
     .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 {
@@ -129,12 +288,35 @@ footer {
     }
     .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ width:100%; margin-bottom:20px }
     .row .row > div:last-child { margin-bottom: 0 !important }
-    
-    body { 
-        @include font(normal, 11px);
-        color: orange;
+    body {
+        color: red !important;
     }
 
+    /* HEADER */
+    .ilustraHeader, .ilustraFooter {
+        display: none;
+    }
+    .titleHeader {
+        text-align: left;
+    }
+    .titleHeader-title {
+        margin-top: .5em;
+    }
+    .description {
+        width: 100%;
+        margin: 0 0 1em 0;
+    }
+    .description-readMore {
+        width: 100%;
+        padding-left: 1em;
+    }
+    /* FOOTER */
+    .footer-title {
+        margin-top: 1em;
+    }
+    .footer p:nth-child(3) {
+        margin-top: 2em;
+    }
 
 }
 /* $Helper classes

@@ -1,0 +1,82 @@
+/* ********************************************************
+	BUG FIXES
+*********************************************************/
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+img[src^="assets/img/example"] {
+  max-width: 100%; }
+
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54); }
+
+.intro-section {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.center {
+  align-items: baseline;
+  justify-content: center; }
+
+.mdl-card {
+  width: 100%; }
+
+/* ********************************************************
+	LAYOUT DA BUDEGA
+*********************************************************/
+/* HEADER */
+.header-logo-image {
+  display: block;
+  margin: 0 auto; }
+
+.introd {
+  padding: 0 2rem;
+  text-align: center; }
+
+.text-introduction {
+  font-size: 1.25rem; }
+
+/* CARDS */
+.card {
+  padding: 1rem; }
+
+.card-data-evento {
+  letter-spacing: -.05rem;
+  color: #616161;
+  font-size: 2rem;
+  margin-bottom: .25rem; }
+
+.card-nome-evento {
+  font-size: 1.5rem;
+  color: #f44336;
+  line-height: 1.65rem;
+  margin-bottom: .5rem; }
+
+.nome-evento-concluido {
+  color: #616161; }
+
+.card-dataLocal-evento {
+  padding: .25em;
+  color: rgba(0, 0, 0, 0.54);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 1em; }
+
+.card-descricao-evento {
+  font-size: 1.125rem;
+  line-height: 1.45rem; }
+
+.card-linkDetalhes-evento {
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  margin-top: .5em; }
+  .card-linkDetalhes-evento:hover, .card-linkDetalhes-evento:focus {
+    background-color: #f44336;
+    color: #fff; }
+
+/*# sourceMappingURL=layout.css.map */

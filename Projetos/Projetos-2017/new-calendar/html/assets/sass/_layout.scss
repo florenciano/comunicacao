@@ -1,0 +1,103 @@
+/* ********************************************************
+	BUG FIXES
+*********************************************************/
+.wrapper  {
+    width: 100%;
+    max-width: 1200px;
+    
+    margin: 0 auto;
+}
+// img
+img[src^="assets/img/example"] {
+	max-width: 100%;
+}
+
+// estilizando icones
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+
+// width for container
+.intro-section {
+	max-width: 960px;
+	margin: 0 auto;
+}
+// alinhando conteúdo no centro
+.center {
+	align-items: baseline; // alinhar verticalmente no top
+	justify-content: center;
+}
+.mdl-card { width: 100%; }
+
+/* ********************************************************
+	LAYOUT DA BUDEGA
+*********************************************************/
+
+/* HEADER */
+.header-logo-image {
+	display: block;
+    margin: 0 auto;
+}
+
+// texto de introdução
+.introd {
+	padding: 0 2rem;
+    text-align: center;
+}
+.text-introduction {
+	font-size: 1.25rem;
+}
+
+/* CARDS */
+.card {
+	padding: 1rem;
+}
+
+.card-data-evento {
+	letter-spacing: -.05rem;
+    color: #616161;
+    font-size: 2rem;
+    margin-bottom: .25rem;
+}
+
+.card-nome-evento {
+    font-size: 1.5rem;
+    color: #f44336;
+    line-height: 1.65rem;
+    margin-bottom: .5rem;
+}
+.nome-evento-concluido {
+	color: #616161;
+}
+.card-dataLocal-evento {
+    padding: .25em;
+    color: rgba(0, 0, 0, 0.54);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 1em;
+}
+
+.card-imagem-evento {
+	
+}
+
+.card-descricao-evento {
+	font-size: 1.125rem;
+    line-height: 1.45rem;
+}
+
+.card-linkDetalhes-evento {
+	border: 1px solid rgb(244, 67, 54);
+    border-radius: 4px;
+    margin-top: .5em;
+    &:hover, &:focus {
+	    background-color: rgb(244, 67, 54);
+    	color: #fff;
+    }
+}
+// .linkDetalhes-evento-concluido {
+// 	border-color: #616161;
+// 	color: rgb(97, 97, 97);
+// 	&:hover, &:focus {
+// 		background-color: rgb(97, 97, 97) !important;
+// 	}
+// }
