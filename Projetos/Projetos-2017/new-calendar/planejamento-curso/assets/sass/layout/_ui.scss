@@ -1,0 +1,54 @@
+/********************************************************************
+ * Customização do material
+ ********************************************************************/
+
+$cor-brand: rgb(196,22,28);
+$cor-brand-dark: darken($cor-brand, 3%);
+
+// cor do body
+body { background-color: #f5f5f5; }
+.container { background-color: #FFF; }
+
+// cor dos link
+a { color: $cor-brand;
+	&:hover, &:focus { color: $cor-brand-dark; }
+}
+
+/* imagem header */
+.respiro-lg { margin-bottom: 4em; }
+.respiro-sm { margin-bottom: 2em; }
+
+ /* lista em parágrafos */
+.lead-list { margin-bottom: 0; }
+
+/* lista das turmas */
+// default
+.container-list {
+	li {
+		// font-size: 1.25em;
+	 //    margin-bottom: .5em;
+	}
+}
+// Nomes dos títulos das etapas
+.title-list {
+	font-weight: 500;
+    display: block;
+}
+
+/* Botão manifestar interesse */
+.btn-manifestar-interesse {
+	background-color: $cor-brand;
+	color: #fff;
+	&:hover, &:focus { 
+		background-color: $cor-brand-dark;
+		color: #fff;
+	}
+}
+
+
+@media (min-width: 992px) {
+	// distância do título para a imagem
+	.featurette-heading {
+	    margin-top: 100px;
+	}
+}
