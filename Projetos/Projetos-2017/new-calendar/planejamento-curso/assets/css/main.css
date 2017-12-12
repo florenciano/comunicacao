@@ -5884,11 +5884,11 @@ body {
 .cover-image {
   width: 100%;
   height: 515px;
-  background: url("../img/banner-logo.png") top left no-repeat, url("../img/banner-min.jpg") center center no-repeat;
+  background: url("../img/banner-logo.png") top left no-repeat, url("../img/banner.jpg") center center no-repeat;
   position: relative; }
 
 .inner-cover {
-  background-color: rgba(1, 175, 235, 0.85);
+  background-color: rgba(255, 160, 0, 0.85);
   color: #fff;
   padding: 0.5em 1em;
   position: absolute;
@@ -5918,7 +5918,7 @@ body {
   background-color: transparent; }
 
 .section-quando {
-  background: #00afeb;
+  background: #ffa000;
   padding: 3em 1em;
   color: #fff; }
 
@@ -5936,7 +5936,7 @@ body {
   display: block; }
 
 .itens-list-turma-data {
-  color: #00506c; }
+  color: #805000; }
 
 .p-quero-participar {
   margin: 2em; }
@@ -6034,7 +6034,7 @@ body {
     bottom: 0; }
 
   .section-quando {
-    background: url("../img/grafismo-quando-t-l.png") top left no-repeat, url("../img/grafismo-quando-t-r.png") bottom right no-repeat, #00afeb; }
+    background: url("../img/grafismo-quando-t-l.png") top left no-repeat, url("../img/grafismo-quando-t-r.png") bottom right no-repeat, #ffa000; }
 
   .line-divider {
     margin: 2em 0; } }
