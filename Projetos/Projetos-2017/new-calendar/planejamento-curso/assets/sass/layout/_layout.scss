@@ -1,0 +1,183 @@
+/********************************************************************
+ * Customização do material
+ ********************************************************************/
+
+// VARIABLES
+$cor-brand: rgb(196,22,28); // red Insper
+$cor-brand-dark: darken($cor-brand, 3%);
+
+$cor-graf-1: #00afeb; // azul
+$cor-graf-2: #01afa5; // verde1
+$cor-graf-3: #00a57d; // verde2
+$cor-graf-4: #ff02a5; // magenta
+
+// MARGINS
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 1em; }
+.mb-2 { margin-bottom: 2em; }
+.mb-3 { margin-bottom: 3em; }
+.mb-4 { margin-bottom: 4em; }
+.mb-5 { margin-bottom: 5em; }
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 1em; }
+.mt-2 { margin-top: 2em; }
+.mt-3 { margin-top: 3em; }
+.mt-4 { margin-top: 4em; }
+.mt-5 { margin-top: 5em; }
+// PADDINS
+.pb-0 { padding-bottom: 0; }
+.pb-1 { padding-bottom: 1em; }
+.pb-2 { padding-bottom: 2em; }
+.pb-3 { padding-bottom: 3em; }
+.pb-4 { padding-bottom: 4em; }
+.pb-5 { padding-bottom: 5em; }
+.pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 1em; }
+.pt-2 { padding-top: 2em; }
+.pt-3 { padding-top: 3em; }
+.pt-4 { padding-top: 4em; }
+.pt-5 { padding-top: 5em; }
+
+/////////////////////////////////////////////////////////////////
+// RESET
+/////////////////////////////////////////////////////////////////
+
+body { background-color: #f5f5f5; }
+.container { background-color: #fff; }
+
+/////////////////////////////////////////////////////////////////
+// COVER
+/////////////////////////////////////////////////////////////////
+.container-cover { padding: 0; }
+.cover-image {
+	width: 100%;
+	height: 515px;
+	background: url('../img/banner-logo.png') top left no-repeat, url('../img/banner-min.jpg') center center no-repeat;
+    // background-size: cover;
+    // position
+    position: relative;
+}
+.inner-cover {
+    background-color: rgba(1,175,235,0.85); // $cor-graf-1
+    color: #fff;
+    padding: 0.5em 1em;
+    // position
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+// Textos dos boxes
+.title-curso {
+    font-size: 1.25em;
+    margin: .5em 0 0;
+    padding: 0;
+}
+.title-modulo {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+.title-modulo-small { color: #fff !important; }
+
+
+/////////////////////////////////////////////////////////////////
+// UI
+/////////////////////////////////////////////////////////////////
+
+// lista numerada nas colunas
+.list-aprenderei { padding-left: 1.125em; }
+
+// linha divisória
+.line-diviser { margin: 2em 0; }
+// container sem o branco
+.container-transparent { background-color: transparent; }
+
+/////////////////////////////////////////////////////////////////
+//	SECTION QUANDO
+/////////////////////////////////////////////////////////////////
+.section-quando {
+	background: $cor-graf-1;
+	// properties
+	padding: 3em 1em;
+	color: #fff;
+}
+.nome-turma {
+    margin-top: 2em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    font-weight: 700;
+}
+.itens-list-turma { margin: 1em 0; }
+.itens-list-turma-nome {
+	font-weight: 500;
+    display: block;
+}
+.itens-list-turma-data { color: darken($cor-graf-1, 25%); }
+
+/////////////////////////////////////////////////////////////////
+//	BUTTON MANIFESTAR INTERESSE
+/////////////////////////////////////////////////////////////////
+
+.p-quero-participar { margin: 2em; }
+.btn-quero-participar{
+	padding: 1em 2em;
+	font-size: 1em;
+	background-color: $cor-brand;
+	color: #fff;
+	&:hover, &:focus { 
+		background-color: $cor-brand-dark;
+		color: #fff;
+	}
+}
+/////////////////////////////////////////////////////////////////
+//	FOOTER
+/////////////////////////////////////////////////////////////////
+// nothing...
+
+/* large dekstop */
+@media (min-width: 992px) {
+	// MARGINS
+	.mb-md-0 { margin-bottom: 0; }
+	.mb-md-1 { margin-bottom: 1em; }
+	.mb-md-2 { margin-bottom: 2em; }
+	.mb-md-3 { margin-bottom: 3em; }
+	.mb-md-4 { margin-bottom: 4em; }
+	.mb-md-5 { margin-bottom: 5em; }
+	.mt-md-0 { margin-top: 0; }
+	.mt-md-1 { margin-top: 1em; }
+	.mt-md-2 { margin-top: 2em; }
+	.mt-md-3 { margin-top: 3em; }
+	.mt-md-4 { margin-top: 4em; }
+	.mt-md-5 { margin-top: 5em; }
+	// PADDINGS
+	.pb-md-0 { padding-bottom: 0; }
+	.pb-md-1 { padding-bottom: 1em; }
+	.pb-md-2 { padding-bottom: 2em; }
+	.pb-md-3 { padding-bottom: 3em; }
+	.pb-md-4 { padding-bottom: 4em; }
+	.pb-md-5 { padding-bottom: 5em; }
+	.pt-md-0 { padding-top: 0; }
+	.pt-md-1 { padding-top: 1em; }
+	.pt-md-2 { padding-top: 2em; }
+	.pt-md-3 { padding-top: 3em; }
+	.pt-md-4 { padding-top: 4em; }
+	.pt-md-5 { padding-top: 5em; }
+
+	.text-center-md { text-align: center; }
+	.text-left-md { text-align: left; }
+
+	/////////////////////////////////////////////////////////////////
+	//	COVER
+	/////////////////////////////////////////////////////////////////
+	.inner-cover { bottom: 0; }
+
+	/////////////////////////////////////////////////////////////////
+	//	SECTION QUANDO
+	/////////////////////////////////////////////////////////////////
+	.section-quando {
+		background: url('../img/grafismo-quando-t-l.png') top left no-repeat, url('../img/grafismo-quando-t-r.png') bottom right no-repeat, $cor-graf-1;
+	}
+
+	// linha divisória antes do footer
+	.line-divider { margin: 2em 0; }
+}
