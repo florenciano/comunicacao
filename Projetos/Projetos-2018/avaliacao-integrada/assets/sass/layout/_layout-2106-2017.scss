@@ -1,0 +1,44 @@
+// // // // // // // // // // // // // // // // // // // // // // //
+// AVALIACAO INTEGRADA DO DOCENTE 2016-2017
+// Algumas regras adicionais necessárias para customizção
+// // // // // // // // // // // // // // // // // // // // // // //
+
+/* Index */
+// // // // // // // // // // // // // // // // // // // // // // //
+
+
+div[role="main"] {
+	
+	// Título da página
+	.title-page-2016-2017 { 
+		text-align: center;
+		margin: 1.52em 0;
+	}
+	
+	// Sprite dos ícones
+	@import "icons/*.png";
+	@include all-icons-sprites;
+	.icones-tipos-criterios {
+		content: "";
+	    display: inline-block;
+	    width: 66px; // tamanho do ícone [img]
+	    height: 81px; // tamanho do ícone [img]
+	}
+
+}
+
+/* Critérios de Excelência em Ensino */
+// // // // // // // // // // // // // // // // // // // // // // //
+
+div[role="main"] {
+	// título da página
+	.title-page-intern { margin: 1.5em 0; }
+
+	// strands (seção ícones)
+	.strands { margin: 1em 0; }
+
+	// tirando o alinhamento centralizado dos ícones
+	.ico-center {
+		margin: 0;
+	}
+}
