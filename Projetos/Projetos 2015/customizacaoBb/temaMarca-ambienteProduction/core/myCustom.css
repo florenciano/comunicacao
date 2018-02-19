@@ -92,6 +92,15 @@ img.bannerImage {
 	height: 7em;
 }
 
+/* Tela submit fixed | Item 6 - criar exercício */
+.submitStepBottom  .submitStepFixed {
+	h3 { padding: 10px 0 5px; }
+	.taskbuttondiv_wrapper { height: 50px; }
+	p#bottom_submitButtonRow {
+	    padding: 0 10px 0 0;
+    	margin: 0;
+	}
+}
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 

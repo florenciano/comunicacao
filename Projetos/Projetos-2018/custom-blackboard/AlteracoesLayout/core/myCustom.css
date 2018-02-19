@@ -1,0 +1,909 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	RETIRANDO ESTILOS INADEQUADOS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+* {
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Centralizando imagem do banner da tela de início
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.vtbegenerated img {
+	display: inline-block;
+	margin: 0 auto;
+}
+.vtbegenerated p { margin-bottom: 0;}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Corrigingo bugs em testes/provas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+
+.vtbegenerated {
+  overflow-x: inherit !important;
+  overflow-y: inherit !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Acrescentando os estilos "inadequados" em regras específicas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+.portlet {
+	-webkit-box-shadow: 0px 0px 20px rgba(0,0,0,.3) !important;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.3) !important;
+}
+
+div.dbThreadCheckbox {
+	border-bottom: 1px solid #bcbec0 !important;
+}
+
+.selectItems div.u_floatThis-left {	max-width: 300px; }
+
+/* aplicando background nos heads das áreas de conteúdo */
+.pageTitle { background: #E6E7E8 !important; }
+.pageTitle > * { background-color: #e6e7e8 !important; }
+
+/* 	box pontuação de prova */
+#dataCollectionContainer {
+	margin: 0;
+}
+.stepTitleRight {
+	right: 2px;
+	top: -6px;
+	/*top: -92px;*/
+}
+.rumble_top {
+	margin-bottom: 18px;
+	font-size: 125%;
+}
+/* 	FÓRUM DE DISCUSSÃO */
+.messageCollectionContainer {
+	float: left;
+	width: 75%;
+}
+div.contentAreaNav { 
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+/* Retirando aquele pixel a mais embaixo dos botões que são menus */
+.actionBar .sub a .chevron {
+	height: 15px;
+	width: 15px;
+}
+/* Corrigindo tamanho do logo */
+img.bannerImage {
+	height: 50px;
+	margin-top: 10px;
+}
+/* texto com tamanho diferentes nos botões: corrigindo  */
+.rumble_top { font-size: 100%; }
+
+.inventory>tbody tr td,
+.inventory>tbody tr th {
+	vertical-align: middle;
+}
+
+/* Fazendo os previews das imgs maiores: carômetro; 
+.inventory>tbody tr:hover .profileCardAvatarThumb img {
+	width: 7em;
+	height: 7em;
+}
+*/
+.profileCardAvatarThumb img:hover {
+	width: 7em;
+	height: 7em;
+}
+
+/* Tela submit fixed | Item 6 - criar exercício */
+/* Title */
+.submitStepBottom .submittitle {
+	padding: 10px 5px;
+}
+/* Container Button */
+.submitStepBottom .taskbuttondiv_wrapper {
+	height: 40px;
+}
+/* p dos buttons */
+.submitStepBottom .taskbuttondiv_wrapper .taskbuttondiv {
+	margin: 0 !important;
+	padding: 0 10px 0 0 !important;
+}
+
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Manuais da zug [manter temporariamente]
+	Eles serão substituidos pelos novos manuais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
+#box_manuais{
+	margin:auto;
+	background:#f3f1f2;
+	width:420px;
+	height:auto;
+}
+#box_m_cont{
+	margin: 5px 10px;
+	width:120px;
+	height:110px;
+	float:left;
+	
+	color:#75393f;
+	font:bold 11px/15px arial, helvetica, sans-serif;
+	text-align:center;
+	
+	-webkit-transition:	all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/*#box_m_cont:hover {
+	height:110px;
+	background:url(images/_img/bg_manuais_hover.png) repeat-x bottom;
+	
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	
+	-webkit-transition:	all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}*/
+
+#box_m_texto {
+	color:#75393f;
+	font:bold 11px/15px arial, helvetica, sans-serif;
+}
+#box_m_texto:hover {
+	background:transparent !important;
+	border:0 none !important;
+	color:#532126;
+	padding:0;
+	text-decoration:underline;
+}
+
+#box_m_ico01, #box_m_ico02, #box_m_ico03, 
+#box_m_ico04, #box_m_ico05, #box_m_ico06, 
+#box_m_ico07, #box_m_ico08, #box_m_ico09,#box_m_ico10, #box_m_ico11, #box_m_ico12 {
+	width:120px;
+	height:60px;
+}
+#box_m_ico01{
+	background:url(images/_img/ico01.png) no-repeat center;
+}
+#box_m_ico02{
+	background:url(images/_img/ico02.png) no-repeat center;
+}
+#box_m_ico03{
+	background:url(images/_img/ico03.png) no-repeat center;
+}
+#box_m_ico04{
+	background:url(images/_img/ico04.png) no-repeat center;
+}
+#box_m_ico05{
+	background:url(images/_img/ico05.png) no-repeat center;
+}
+#box_m_ico06{
+	background:url(images/_img/ico06.png) no-repeat center;
+}
+#box_m_ico07{
+	background:url(images/_img/ico07.png) no-repeat center;
+}
+#box_m_ico08{
+	background:url(images/_img/ico08.png) no-repeat center;
+}
+#box_m_ico09{
+	background:url(images/_img/ico09.png) no-repeat center;
+}
+#box_m_ico10{
+	background:url(images/_img/ico10.png) no-repeat center;
+}
+#box_m_ico11{
+	background:url(images/_img/ico11.png) no-repeat center;
+}
+#box_m_ico12{
+	background:url(images/_img/ico12.png) no-repeat center;
+}
+#box_m_txt{
+	margin:auto;
+	width:110px;
+}
+.manu_novo{
+	color:#aa0211;
+	font:bold 11px/15px arial, helvetica, sans-serif;
+	text-align:center;
+}
+
+/*********************************************************
+Manual Aluno
+*********************************************************/
+
+#box_manuais_alunos{
+	margin:-50px 0 0 0;
+	background:#f3f1f2;
+	width:420px;
+	height:140px;
+	background:url(images/_img/bg_alunos.jpg);
+}
+#box_ma_cont{
+	margin: 25px 25px;
+	width:120px;
+	height:110px;
+	
+	color:#75393f;
+	font:bold 11px/15px arial, helvetica, sans-serif;
+	text-align:center;
+	
+	-webkit-transition:	all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/*#box_ma_cont:hover {
+	height:110px;
+	background:url(images/_img/bg_manuais_hover.png) repeat-x bottom;
+	
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	
+	-webkit-transition:	all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}*/
+#box_ma_ico01 {
+	width:120px;
+	height:80px;
+}
+#box_ma_ico01{
+	background:url(images/_img/ico09.png) no-repeat center;
+}
+#box_ma_txt{
+	margin:auto;
+	width:110px;
+}
+
+/*********************************************************
+Módulo Calendário
+*********************************************************/
+
+#box_calendario{
+	margin:15px auto;
+	background:#f3f1f2;
+	width:420px;
+	height:auto;
+	background:#f6f6f6;
+}
+#box_ca_img{
+	margin: auto 15px;
+	width:146px; height:120px;
+	float:left;
+	background:url(images/_img/calendario.png);
+}
+#box_ca_mes {
+	width:120px; height:auto;
+	margin:6px auto;
+	color:#FFF;
+	padding:3px;
+	font:bold 17px arial, helvetica, sans-serif;
+	text-align:center;
+}
+#box_ca_dia{
+	margin:10px auto;
+	width:110px;
+	color:#000;
+	bottom:0;
+	font:bold 55px arial, helvetica, sans-serif;
+	text-align:center;
+
+}
+#box_ca_cont {
+	margin:auto 0px;
+	width:230px; height:120px;
+	float:left;
+	font:12px/13px arial, helvetica, sans-serif;
+	color:#333333;
+}
+/*********************************************************
+Módulo Atencao
+*********************************************************/
+#box_atencao {
+	/*margin:auto;div.contentAreaNav*/
+	margin: auto;
+	width:420px;
+	background:url(images/_img/bg_top.png) no-repeat top;
+}
+#content_atencao {
+	margin:0px auto 0;
+	width:300px;
+	min-height: 150px;
+	padding-top: 50px;
+}
+#content_atencao h1 {
+	color:#aa0211;
+	text-align:center;
+	text-transform: uppercase;
+	font:bold 30px helvetica, geneva, arial, sans-serif;
+}
+#content_atencao p {
+	color:#3b3b3b;
+	font:normal 13px/18px arial, helvetica, sans-serif;
+}
+#content_atencao_ass {
+	width:300px;
+	padding-bottom: 10px;
+}
+#content_atencao_txt {
+	margin:15px 0 15px 100px;
+	color:#3b3b3b;
+	font:bold 13px/18px arial, helvetica, sans-serif;
+}
+
+
+/*********************************************************
+Módulo Comunidades
+*********************************************************/
+
+#mod_com {
+	/*background:#ffcccb;*/
+	background:#ffa255;
+	/*margin: -10px -12px;*/
+	width:auto;
+	/*background:url(images/_img/modulo_comunidades.png) no-repeat;*/
+	height:219px;
+	overflow:scroll hidden;
+}
+#mod_com img {
+	/*margin:-3px;*/
+	margin: -6px -15px -10px;
+}
+#mod_com:hover {
+	border:0 none !important;
+	color:#532126;
+	padding:3px;
+}
+
+/*********************************************************
+Módulo Caixinha 01
+*********************************************************/
+#box01 {
+	position: relative;
+	margin: 10px;
+	padding: 0;
+	text-align: left;
+	width:auto;
+	background-color: #ede6c9;
+}
+ 	
+#content01 {
+	padding:50px 60px;
+}
+
+#content01 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content01 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content01 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content01 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content01 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content01 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+		
+/* ---=== border code follows ===--- */
+/*
+	tlc = top left corner
+	trc = top right corner
+	blc = bottom left corner
+	brc = bottom right corner
+	lb = left border
+	rb = right border
+	tb = top border
+	bb = bottom border 
+*/
+
+#tlc01, #trc01, #blc01, #brc01 {
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+#tlc01 {
+	background-image:url(images/_img/box01/box1_TE.jpg);
+	background-position: 0% 0%;
+}
+
+#trc01 {
+	background-image:url(images/_img/box01/box1_TD.jpg);
+	background-position: 100% 0%;
+}
+	
+#blc01 {
+	background-image:url(images/_img/box01/box1_RE.jpg);
+	background-position: 0% 100%;
+}
+
+#brc01 {
+	background-image:url(images/_img/box01/box1_RD.jpg);
+	background-position: 100% 100%;
+}
+
+#tb01, #bb01 {
+	background-color: transparent;
+	background-repeat: repeat-x;
+}
+			
+#tb01 {
+	background-image:url(images/_img/box01/box1_MT.jpg);
+	background-position: 0% 0%;
+}
+
+#bb01 {
+	background-image:url(images/_img/box01/box1_MR.jpg);
+	background-position: 50% 100%;
+}
+	
+#rb01 {
+	background-image:url(images/_img/box01/box1_MD.jpg);
+	background-position: 100% 0%;
+	background-repeat: repeat-y;
+}
+
+#lb01 {
+	background-image:url(images/_img/box01/box1_ME.jpg);
+	background-position: 0% 100%;
+	background-repeat: repeat-y;
+}
+			
+/*********************************************************
+Módulo Caixinha 02
+*********************************************************/
+#box02 {
+	position: relative;
+	
+	padding: 0;
+	text-align: left;
+	width:auto;
+	
+}
+
+#top02 {
+	background:url(images/_img/box02/box2_T.jpg) no-repeat;
+	height:30px;
+}
+#inf02 {
+	background:url(images/_img/box02/box2_R.jpg) no-repeat;
+	height:30px;
+}
+
+#content02 {
+	padding:10px;
+	margin: 10px 10px 10px 40px;
+	border: 1px solid #dcdcdc;
+	background-color: #f4f2f3;
+}
+#content02 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content02 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content02 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content02 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content02 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content02 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+
+/*********************************************************
+Módulo Caixinha 03
+*********************************************************/
+#box03 {
+	position: relative;
+	text-align: left;
+	width:auto;	
+}
+
+#inf03 {
+	background:url(images/_img/box03/box3_R2.jpg) repeat-x;
+	background-position: 0% 0%;
+	height:59px;
+	width:auto;
+}
+#inf03_p01{
+	background:url(images/_img/box03/box3_R1.png) no-repeat;
+	height:59px;
+	background-position: 0% 0%;
+}
+#inf03_p03{
+	background:url(images/_img/box03/box3_R3.png) no-repeat;
+	height:59px;
+	background-position: 100% 100%;
+}
+
+#content03 {
+	padding:15px;
+	background-color: #efefed;
+}
+#content03 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content03 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content03 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content03 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content03 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content03 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+
+/*********************************************************
+Módulo Caixinha 04
+*********************************************************/
+#box04 {
+	position: relative;
+	margin: 10px;
+	padding: 0;
+	text-align: left;
+	width:auto;
+	background-color: #f7f3e7;
+	background:url(images/_img/box04/box4_bg.jpg);
+}
+ 	
+#content04 {
+	padding:20px 30px 10px 80px;
+}
+
+#content04 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content04 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content04 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content04 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content04 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content04 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+		
+#tlc04, #blc04 {
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+#tlc04 {
+	background-image:url(images/_img/box04/box4_TE.jpg);
+	background-position: 0% 0%;
+}
+
+	
+#blc04 {
+	background-image:url(images/_img/box04/RE.jpg);
+	background-position: 0% 100%;
+}
+
+
+#tb04, #bb04 {
+	background-color: transparent;
+	background-repeat: repeat-x;
+}
+			
+#tb04 {
+	background-image:url(images/_img/box04/box4_top_bg.jpg);
+	background-position: 0% 0%;
+}
+
+#lb04 {
+	background-image:url(images/_img/box04/box4_ME.jpg);
+	/*background-position: 0% 100%;*/
+	background-repeat: repeat-y;
+}
+			
+/*********************************************************
+Módulo Caixinha 05
+*********************************************************/
+
+#box05 {
+	position: relative;
+	margin: 10px;
+	padding: 0;
+	text-align: left;
+	width:auto;
+	background-color: #f9f3db;
+}
+ 	
+#content05 {
+	padding:50px 60px 80px;
+}
+
+#content05 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content05 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content05 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content05 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content05 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content05 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+		
+/* ---=== border code follows ===--- */
+/*
+	tlc = top left corner
+	trc = top right corner
+	blc = bottom left corner
+	brc = bottom right corner
+	lb = left border
+	rb = right border
+	tb = top border
+	bb = bottom border 
+*/
+
+#tlc05, #trc05, #blc05, #brc05 {
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+#tlc05 {
+	background-image:url(images/_img/box05/box1_TE.jpg);
+	background-position: 0% 0%;
+}
+
+#trc05 {
+	background-image:url(images/_img/box05/box1_TD.jpg);
+	background-position: 100% 0%;
+}
+	
+#blc05 {
+	background-image:url(images/_img/box05/box1_RE.jpg);
+	background-position: 0% 100%;
+}
+
+#brc05 {
+	background-image:url(images/_img/box05/box1_RD.jpg);
+	background-position: 100% 100%;
+}
+
+#tb05, #bb05 {
+	background-color: transparent;
+	background-repeat: repeat-x;
+}
+			
+#tb05 {
+	background-image:url(images/_img/box05/box1_MT.jpg);
+	background-position: 0% 0%;
+}
+
+#bb05 {
+	background-image:url(images/_img/box05/box1_MR.jpg);
+	background-position: 50% 100%;
+}
+	
+#rb05 {
+	background-image:url(images/_img/box05/box1_MD.jpg);
+	background-position: 100% 0%;
+	background-repeat: repeat-y;
+}
+
+#lb05 {
+	background-image:url(images/_img/box05/box1_ME.jpg);
+	background-position: 0% 100%;
+	background-repeat: repeat-y;
+}
+
+
+/*********************************************************
+Módulo Caixinha 06
+*********************************************************/
+#box06 {
+	position: relative;
+	margin: 10px;
+	padding: 0;
+	text-align: left;
+	width:auto;
+	background-color: #ede6c9;
+}
+ 	
+#content06 {
+	padding:50px 60px;
+}
+
+#content06 h1 {
+	color:#aa0211;
+	font:bold 18px helvetica, geneva, arial, sans-serif;
+}
+		
+#content06 p {
+	color:#3b3b3b;
+	font: normal 12px/15px arial, helvetica, sans-serif;
+}
+#content06 p a:hover {
+	color:#000000 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+#content06 p a:active {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content06 p a:link {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+#content06 p a:visited {
+	color:#AA0211;
+	font-weight:bold !important;
+	text-decoration:underline;
+}
+		
+/* ---=== border code follows ===--- */
+/*
+	tlc = top left corner
+	trc = top right corner
+	blc = bottom left corner
+	brc = bottom right corner
+	lb = left border
+	rb = right border
+	tb = top border
+	bb = bottom border 
+*/
+
+#tlc06, #trc06, #blc06, #brc06 {
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+#tlc06 {
+	background-image:url(images/_img/box06/box6_TE.jpg);
+	background-position: 0% 0%;
+}
+
+#trc06 {
+	background-image:url(images/_img/box06/box6_TD.jpg);
+	background-position: 100% 0%;
+}
+	
+#blc06 {
+	background-image:url(images/_img/box06/box6_RE.jpg);
+	background-position: 0% 100%;
+}
+
+#brc06 {
+	background-image:url(images/_img/box06/box6_RD.jpg);
+	background-position: 100% 100%;
+}
+
+#tb06, #bb06 {
+	background-color: transparent;
+	background-repeat: repeat-x;
+}
+			
+#tb06 {
+	background-image:url(images/_img/box06/box6_MT.jpg);
+	background-position: 0% 0%;
+}
+
+#bb06 {
+	background-image:url(images/_img/box06/box6_MR.jpg);
+	background-position: 50% 100%;
+}
+	
+#rb06 {
+	background-image:url(images/_img/box06/box6_MD.jpg);
+	background-position: 100% 0%;
+	background-repeat: repeat-y;
+}
+
+#lb06 {
+	background-image:url(images/_img/box06/box6_ME.jpg);
+	background-position: 0% 100%;
+	background-repeat: repeat-y;
+}
+
+/*************************************************************/
+
+#addupload {
+    color: #333333;
+	text-decoration: none;
+	padding:4px;
+	background:url(images/_img/bg_links.png) bottom repeat-x;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+
+#addupload:hover {
+    border: 1px solid #666666;
+}

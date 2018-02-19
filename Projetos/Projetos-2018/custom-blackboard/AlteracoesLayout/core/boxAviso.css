@@ -1,0 +1,61 @@
+/* container do aviso */
+#boxAviso {
+	position: relative;
+	margin: 10px;
+	padding: 0;
+	text-align: left;
+	width: auto;
+	background-color: #f1f1f1;
+}
+
+/* border de imagens */
+.topLevel1 {
+	background: url("images/boxAviso/topLevel1.png") repeat-x 0 100%;
+	height: 83px;
+	width: 100%;
+}
+.topLevel2 {
+	background: url("images/boxAviso/alfinete.png") no-repeat center 100%;
+	height: 83px;
+	width: 100%;
+}
+
+.bottomLevel1 {
+	background: url("images/boxAviso/bottomLevel1.png") repeat-x 0 0;
+	height: 25px;
+	width: 100%;
+}
+.bottomLevel2 {
+	background: url("images/boxAviso/bottomLevel2.png") no-repeat 100% 0;
+	height: 25px;
+	width: 100%;
+}
+
+/* estilos tipográficos */
+.middleContent { 
+	font-family: verdana, "sans-serif";
+	padding: 0 20px;
+	line-height: 1.125em;
+}
+.middleContent h1 {
+	font-size: 16px;
+	color: #414042;
+	margin: 0;
+	padding: 0;
+}
+.middleContent p {
+	font-size: 12px;
+	color: #414042;
+	margin: .625em 0;
+}
+.middleContent p a {
+	color: #c10046;
+	text-decoration: none;
+	/*border-bottom: 1px dotted #414042;*/
+}
+.middleContent p a:active,
+.middleContent p a:visited
+{
+	
+}
+.middleContent p a:hover { }
