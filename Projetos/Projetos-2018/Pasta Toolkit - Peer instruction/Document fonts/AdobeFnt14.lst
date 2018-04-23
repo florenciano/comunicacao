@@ -1,0 +1,151 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Prelo-Black
+FamilyName:Prelo
+StyleName:Black
+MenuName:Prelo Black
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Prelo-Black
+WritingScript:Roman
+OutlineFileName:\DSType - Prelo-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:64788
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Prelo-BookItalic
+FamilyName:Prelo
+StyleName:Book Italic
+MenuName:Prelo Book Italic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Prelo-Book Italic
+WritingScript:Roman
+OutlineFileName:\DSType - Prelo-Book Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:66152
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Prelo-Book
+FamilyName:Prelo
+StyleName:Book
+MenuName:Prelo Book
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Prelo-Book
+WritingScript:Roman
+OutlineFileName:\DSType - Prelo-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:62476
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Prelo-SemiBoldItalic
+FamilyName:Prelo
+StyleName:SemiBold Italic
+MenuName:Prelo SemiBold Italic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Prelo-SemiBold Italic
+WritingScript:Roman
+OutlineFileName:\DSType - Prelo-SemiBold Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:65688
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Prelo-SemiBold
+FamilyName:Prelo
+StyleName:SemiBold
+MenuName:Prelo SemiBold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Prelo-SemiBold
+WritingScript:Roman
+OutlineFileName:\DSType - Prelo-SemiBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:63472
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PreloSlab-SemiBold
+FamilyName:Prelo Slab
+StyleName:SemiBold
+MenuName:Prelo Slab SemiBold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PreloSlab-SemiBold
+WritingScript:Roman
+OutlineFileName:\DSType - PreloSlab-SemiBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:62136
+FileModTime:1385467562
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:218640
+FileModTime:1454338631
+DesignSize:110
+%EndFont
+

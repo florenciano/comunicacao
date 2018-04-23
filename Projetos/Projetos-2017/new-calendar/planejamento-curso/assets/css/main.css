@@ -6038,5 +6038,73 @@ body {
 
   .line-divider {
     margin: 2em 0; } }
+/********************************************************************
+ * Customização para impressão
+ ********************************************************************/
+@media print {
+  img {
+    display: none; }
+
+  p, ul li, ol li {
+    font-size: 12px; }
+
+  section {
+    padding: 0; }
+
+  .container {
+    padding: 0;
+    margin: 0; }
+
+  .cover-image {
+    height: 2em;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+
+  .title-curso {
+    display: none; }
+
+  .inner-cover {
+    position: relative;
+    padding: 0;
+    margin: 0; }
+
+  .title-modulo {
+    font-size: 16px;
+    padding: 0;
+    margin: 0; }
+
+  .text-center {
+    text-align: left; }
+
+  h3, .h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: 700; }
+
+  h4, .h4 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-weight: 700; }
+
+  .col-md-4.mb-4.mb-md-0 {
+    margin-bottom: 0; }
+
+  .section-quando {
+    padding: 0; }
+
+  .nome-turma {
+    margim: 0; }
+
+  .p-quero-participar {
+    margin: 0 0 11px; }
+    .p-quero-participar a {
+      padding: 0; }
+
+  .line-diviser {
+    margin: .5em 0; } }
 
 /*# sourceMappingURL=main.css.map */
